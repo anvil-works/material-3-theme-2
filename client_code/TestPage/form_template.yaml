@@ -3,11 +3,7 @@ layout:
   properties: {navigation_rail_collapse_to: Navigation drawer}
 is_package: true
 components_by_slot:
-  slot_1:
-  - name: image_1
-    properties: {height: 682}
-    type: Image
-    layout_properties: {}
+  slot_1: []
   slot_2:
   - name: navigation_link_1
     properties: {text: Home, icon: 'fa:home', badge: true, selected: true, material_icon: house}
@@ -23,6 +19,11 @@ components_by_slot:
     type: form:Divider
     layout_properties: {}
   - name: navigation_link_2
-    properties: {text: Log out, icon: 'fa:sign-out', material_icon: logout, navigate_to: AnotherPage}
+    properties: {text: Log out, icon: 'fa:sign-out', material_icon: logout, navigate_to: Home}
     type: form:NavigationLink
     layout_properties: {}
+slots:
+  content:
+    index: 0
+    set_layout_properties: {}
+    target: {type: slot, name: slot_1}

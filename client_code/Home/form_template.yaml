@@ -6,3 +6,8 @@ components_by_slot:
     properties: {text: This is another page}
     type: Label
     layout_properties: {}
+  content:
+  - name: image_1
+    properties: {height: 383}
+    type: Image
+    layout_properties: {}
