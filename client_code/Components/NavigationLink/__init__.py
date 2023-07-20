@@ -20,9 +20,19 @@ class NavigationLink(NavigationLinkTemplate):
       open_form(self.navigate_to)
       self.selected = True
 
-  url = component_property('navigation-link', 'href')
+  @url.setter
+  def url(self, value):
+    if value:
+      self.dom_nodes['navigation-link'].href = value
 
-  text = component_property('navigation-link-text', 'innerHTML')
+  @property
+  def text(self):
+    return self.dom_nodes['navigation-link-text'].innerHTML
+    
+  @text.setter
+  def text(self, value):
+    if value:
+      self.dom_nodes['navigation-link-text'].innerHTML = value
 
   @property
   def icon(self):
