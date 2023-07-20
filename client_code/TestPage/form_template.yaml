@@ -13,10 +13,6 @@ components_by_slot:
     - name: button_1
       properties: {}
       type: form:Components.Button
-  - name: flow_panel_1
-    properties: {}
-    type: FlowPanel
-    layout_properties: {}
   - name: switch_1
     properties: {enabled_background_color: 'theme:Error', enabled: true}
     type: form:Components.Switch
