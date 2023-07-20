@@ -18,7 +18,7 @@ components_by_slot:
     type: FlowPanel
     layout_properties: {}
   - name: switch_1
-    properties: {}
+    properties: {enabled_background_color: 'theme:Error', enabled: true}
     type: form:Components.Switch
     layout_properties: {}
 components: []
