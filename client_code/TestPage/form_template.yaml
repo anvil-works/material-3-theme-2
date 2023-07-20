@@ -14,7 +14,7 @@ components_by_slot:
       properties: {}
       type: form:Components.Button
   - name: switch_1
-    properties: {enabled_background_color: 'theme:Error', enabled: true}
+    properties: {enabled_background_color: '', enabled: true, disabled_background_color: 'theme:Error'}
     type: form:Components.Switch
     layout_properties: {}
 components: []
