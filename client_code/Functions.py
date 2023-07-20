@@ -21,7 +21,7 @@ def color_property(dom_node_name, style_prop):
 
   return property(getter, setter)
 
-def component_property(dom_node_name, style_prop):
+def style_property(dom_node_name, style_prop):
   def getter(self):
     return self.dom_nodes[dom_node_name].style[style_prop]
 
@@ -30,3 +30,4 @@ def component_property(dom_node_name, style_prop):
       self.dom_nodes[dom_node_name].style[style_prop] = value
 
   return property(getter, setter)
+
