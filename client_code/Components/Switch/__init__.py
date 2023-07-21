@@ -48,6 +48,3 @@ class Switch(SwitchTemplate):
   @enabled.setter
   def enabled(self, value):
     self.dom_nodes['switch-input'].checked = value
-
-  disabled_background = color_property('switch-slider', 'backgroundColor')
-
