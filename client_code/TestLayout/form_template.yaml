@@ -1,6 +1,6 @@
 layout:
   type: form:StandardPageLayout
-  properties: {navigation_rail_collapse_to: Bottom app bar}
+  properties: {navigation_rail_collapse_to: Navigation drawer}
 is_package: true
 components_by_slot:
   slot_1: []
