@@ -3,8 +3,9 @@ is_package: true
 components_by_slot:
   slot_1:
   - name: checkbox_1
-    properties: {selected: true, disabled: true}
+    properties: {selected: false, disabled: false, error: false}
     type: form:Components.Checkbox
+    layout_properties: {}
   - name: label_1
     properties: {}
     type: Label
