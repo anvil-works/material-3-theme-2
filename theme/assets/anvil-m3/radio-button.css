@@ -5,19 +5,6 @@
   column-gap: 24px;
 }
 
-input.anvil-m3-radiobutton:after {
-  font-size: 18px !important;
-  font-family: 'Material Symbols Outlined';
-  content: "radio_button_unchecked";
-  -webkit-font-feature-settings: 'liga' 1;
-  -moz-font-feature-settings: 'liga' 1;
-  font-feature-settings: 'liga' 1;
-  color: var(--anvil-m3-on-surface-variant);
-/*   color: green; */
-  display: none;
-  margin-top: -4px;
-}
-
 input.anvil-m3-radiobutton {
   -webkit-appearance: none;
   appearance: none;
@@ -27,6 +14,24 @@ input.anvil-m3-radiobutton {
 /*   border: 2px solid var(--anvil-m3-on-surface-variant); */
 }
 
+input.anvil-m3-radiobutton:after {
+  font-size: 18px !important;
+  font-family: 'Material Symbols Outlined';
+  content: "radio_button_unchecked";
+  -webkit-font-feature-settings: 'liga' 1;
+  -moz-font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga' 1;
+  color: var(--anvil-m3-on-surface-variant);
+
+  margin-top: -4px;
+}
+
+input.anvil-m3-radiobutton:checked {
+/*   background-color: var(--anvil-m3-primary); */
+  border: 0px;
+}
+
+
 input.anvil-m3-radiobutton:checked:after {
   display: block !important;
   
@@ -34,7 +39,28 @@ input.anvil-m3-radiobutton:checked:after {
   content: "radio_button_checked";
 }
 
-input.anvil-m3-radiobutton:checked {
-/*   background-color: var(--anvil-m3-primary); */
-  border: 0px;
+
+
+.anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover {
+  background-color: var(--anvil-m3-dark-overlay-1);
+}
+
+.anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover:has(input.anvil-m3-radiobutton:checked) {
+  background-color: var(--anvil-m3-primary-overlay-2);
+}
+
+.anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover:has(input.anvil-m3-radiobutton:disabled) {
+  background-color: transparent;
+}
+
+.anvil-m3-radiobutton-container:focus .anvil-m3-radiobutton-hover {
+  background-color: var(--anvil-m3-dark-overlay-2);
+}
+
+.anvil-m3-radiobutton-container:focus .anvil-m3-radiobutton-hover:has(input.anvil-m3-radiobutton:checked) {
+  background-color: var(--anvil-m3-primary-overlay-3);
+}
+
+.anvil-m3-radiobutton-container:focus .anvil-m3-radiobutton-hover:has(input.anvil-m3-radiobutton:disabled) {
+  background-color: transparent;
 }
