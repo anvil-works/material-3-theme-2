@@ -2,6 +2,10 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_1:
+  - name: radio_button_1
+    properties: {}
+    type: form:Components.RadioButton
+    layout_properties: {}
   - name: checkbox_1
     properties: {selected: false, disabled: false, error: false}
     type: form:Components.Checkbox

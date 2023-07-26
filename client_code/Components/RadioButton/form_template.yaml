@@ -13,7 +13,10 @@ container:
       \ </label> -->\n\n<div anvil-name=\"anvil-m3-radio-button-container\" class=\"\
       anvil-m3-radio-button-container\">\n  <div class=\"anvil-m3-radio-button-hover\"\
       >\n    <input class=\"anvil-m3-radio-button\" anvil-name=\"anvil-m3-radio-button\"\
-      \ type=\"radio\">\n  </div>\n  \n  <label class=\"anvil-m3-radio-button-label\"\
+      \ type=\"radio\">\n  </div>\n  <span anvil-name=\"anvil-m3-radio-button-unchecked\"\
+      \ class=\"material-symbols-outlined\">radio_button_unchecked</span>\n  <span\
+      \ anvil-name=\"anvil-m3-radio-button-checked\" class=\"material-symbols-outlined\"\
+      >radio_button_checked</span>\n  <label class=\"anvil-m3-radio-button-label\"\
       \ anvil-name=\"anvil-m3-radio-button-label\"></label>\n</div>"}
 components: []
 is_package: true
@@ -23,3 +26,4 @@ properties:
   description: radio button group name}
 - {name: checked, type: boolean, default_value: false, description: selected radio group button}
 - {name: adjacent_label, type: string, default_value: '', description: Optional adjacent radio button label}
+- {name: disabled, type: boolean, default_value: false}
