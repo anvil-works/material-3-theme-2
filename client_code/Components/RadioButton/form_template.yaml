@@ -13,11 +13,11 @@ container:
       \ </label> -->\n\n<div anvil-name=\"anvil-m3-radio-button-container\" class=\"\
       anvil-m3-radio-button-container\">\n  <div class=\"anvil-m3-radio-button-hover\"\
       >\n    <input class=\"anvil-m3-radio-button\" anvil-name=\"anvil-m3-radio-button\"\
-      \ type=\"radio\">\n  </div>\n  <span anvil-name=\"anvil-m3-radio-button-unchecked\"\
-      \ class=\"material-symbols-outlined\">radio_button_unchecked</span>\n  <span\
+      \ type=\"radio\" style=\"display:none\">\n    <span anvil-name=\"anvil-m3-radio-button-unchecked\"\
+      \ class=\"material-symbols-outlined\">radio_button_unchecked</span>\n    <span\
       \ anvil-name=\"anvil-m3-radio-button-checked\" class=\"material-symbols-outlined\"\
-      >radio_button_checked</span>\n  <label class=\"anvil-m3-radio-button-label\"\
-      \ anvil-name=\"anvil-m3-radio-button-label\"></label>\n</div>"}
+      >radio_button_checked</span>\n    <label class=\"anvil-m3-radio-button-label\"\
+      \ anvil-name=\"anvil-m3-radio-button-label\"></label>\n  </div>\n</div>"}
 components: []
 is_package: true
 custom_component: true
