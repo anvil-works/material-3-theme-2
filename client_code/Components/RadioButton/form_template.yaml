@@ -1,13 +1,20 @@
 container:
   type: HtmlTemplate
-  properties: {html: "<!-- <label anvil-name=\"anvil-m3-switch\" class=\"anvil-m3-switch\"\
-      >\n  <input class=\"anvil-m3-switch-input\" anvil-name=\"anvil-m3-switch-input\"\
-      \ type=\"checkbox\">\n  <span class=\"anvil-m3-switch-slider\" anvil-name=\"\
-      anvil-m3-switch-slider\">\n    <span anvil-name=\"anvil-m3-enabled-switch-icon\"\
-      \ class=\"anvil-m3-enabled-switch-icon\"></span>\n    <span anvil-name=\"anvil-m3-disabled-switch-icon\"\
-      \ class=\"anvil-m3-disabled-switch-icon\"></span>\n  </span>\n</label>\n -->\n\
-      \n\n <label anvil-name=\"anvil-m3-radio-button\" class=\"anvil-m3-switch\">\n\
-      \   \n </label>"}
+  properties: {html: "<!-- \n<div anvil-name=\"anvil-m3-checkbox-container\" class=\"\
+      anvil-m3-checkbox-container\">\n  <div class=\"anvil-m3-checkbox-hover\">\n\
+      \    <input class=\"anvil-m3-checkbox\" anvil-name=\"anvil-m3-checkbox\" type=\"\
+      checkbox\">\n  </div>\n  <label class=\"anvil-m3-checkbox-label\" anvil-name=\"\
+      anvil-m3-checkbox-label\"></label>\n</div>\n -->\n\n\n<!--  <label anvil-name=\"\
+      anvil-m3-radio-button\" class=\"anvil-m3-radio-button\">\n  <input anvil-name=\"\
+      anvil-m3-radio-button-input\" class=\"anvil-m3-radio-button-input\" type=\"\
+      radio\">\n    <span anvil-name=\"anvil-m3-radio-button-unchecked\" class=\"\
+      material-symbols-outlined\">radio_button_unchecked</span>\n    <span anvil-name=\"\
+      anvil-m3-radio-button-checked\" class=\"material-symbols-outlined\">radio_button_checked</span>\n\
+      \ </label> -->\n\n<div anvil-name=\"anvil-m3-radio-button-container\" class=\"\
+      anvil-m3-radio-button-container\">\n  <div class=\"anvil-m3-radio-button-hover\"\
+      >\n    <input class=\"anvil-m3-radio-button\" anvil-name=\"anvil-m3-radio-button\"\
+      \ type=\"radio\">\n  </div>\n  \n  <label class=\"anvil-m3-radio-button-label\"\
+      \ anvil-name=\"anvil-m3-radio-button-label\"></label>\n</div>"}
 components: []
 is_package: true
 custom_component: true
