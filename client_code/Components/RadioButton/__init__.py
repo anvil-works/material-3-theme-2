@@ -1,5 +1,6 @@
 from ._anvil_designer import RadioButtonTemplate
 from anvil import *
+from ...Functions import checked_property, innerText_property, disabled_property, name_property
 
 # <div anvil-name="anvil-m3-radiobutton-container" class="anvil-m3-radiobutton-container">
 #   <div class="anvil-m3-radiobutton-hover">
@@ -13,10 +14,10 @@ class RadioButton(RadioButtonTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    enabled = not disabled_property('anvil-m3-radiobutton')
-    selected = checked_property('anvil-m3-radiobutton')
-    group_name = name_property('anvil-m3-radiobutton')
-    label = innerText_property('anvil-m3-radiobutton-label')
+  enabled = not disabled_property('anvil-m3-radiobutton')
+  selected = checked_property('anvil-m3-radiobutton')
+  group_name = name_property('anvil-m3-radiobutton')
+  label = innerText_property('anvil-m3-radiobutton-label')
 
     # Any code you write here will run before the form opens.
 

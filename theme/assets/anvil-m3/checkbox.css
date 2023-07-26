@@ -8,7 +8,7 @@
 input.anvil-m3-checkbox:after {
   font-size: 18px !important;
   font-family: 'Material Symbols Outlined';
-  content: "done";
+  content: "radio_button_checked";
   -webkit-font-feature-settings: 'liga' 1;
   -moz-font-feature-settings: 'liga' 1;
   font-feature-settings: 'liga' 1;
