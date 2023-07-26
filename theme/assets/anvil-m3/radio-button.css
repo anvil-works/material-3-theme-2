@@ -1,7 +1,36 @@
-.anvil-m3-radio-button-checked {
-  color: var(--anvil-m3-primary);
+.anvil-m3-radiobutton-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 24px;
 }
 
-.anvil-m3-radio-button-unchecked {
-  color: var(--anvil-m3-on-surface-variant); 
+input.anvil-m3-radiobutton:after {
+  font-size: 18px !important;
+  font-family: 'Material Symbols Outlined';
+  content: "done";
+  -webkit-font-feature-settings: 'liga' 1;
+  -moz-font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga' 1;
+  color: var(--anvil-m3-on-primary);
+  display: none;
+  margin-top: -4px;
+}
+
+input.anvil-m3-radiobutton {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 2px solid var(--anvil-m3-on-surface-variant);
+}
+
+input.anvil-m3-radiobutton:checked:after {
+  display: block !important;
+}
+
+input.anvil-m3-radiobutton:checked {
+  background-color: var(--anvil-m3-primary);
+  border: 0px;
 }
