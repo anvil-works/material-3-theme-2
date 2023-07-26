@@ -1,0 +1,13 @@
+container:
+  type: HtmlTemplate
+  properties: {html: "<center style=\"font-style:italic; color:#888; margin: 3em;\"\
+      >\n  (Insert your custom HTML here)\n</center>\n<div anvil-slot=\"default\"\
+      ></div>"}
+components: []
+is_package: true
+custom_component: true
+properties:
+- {name: group_name, type: string, default_value: '', default_binding_prop: true,
+  description: radio button group name}
+- {name: checked, type: boolean, default_value: false, description: selected radio group button}
+- {name: adjacent_label, type: string, default_value: '', description: Optional adjacent radio button label}
