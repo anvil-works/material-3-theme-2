@@ -1,0 +1,7 @@
+.anvil-m3-radio-button-checked {
+  color: var(--anvil-m3-primary);
+}
+
+.anvil-m3-radio-button-unchecked {
+  color: var(--anvil-m3-on-surface-variant); 
+}

@@ -24,4 +24,9 @@ class RadioButton(RadioButtonTemplate):
   def checked(self, value):
     self._checked = value
     if value:
-      self.dom_nodes['anvil-m3-radio-button-unchecked'].style
+      self.dom_nodes['anvil-m3-radio-button-unchecked'].style.display= "none"
+      self.dom_nodes['anvil-m3-radio-button-checked'].style.display= "inline"
+    else:
+      self.dom_nodes['anvil-m3-radio-button-checked'].style.display= "none"
+      self.dom_nodes['anvil-m3-radio-button-unchecked'].style.display= "inline"
+      

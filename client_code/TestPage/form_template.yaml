@@ -3,7 +3,7 @@ is_package: true
 components_by_slot:
   slot_1:
   - name: radio_button_1
-    properties: {}
+    properties: {checked: true}
     type: form:Components.RadioButton
     layout_properties: {}
   - name: checkbox_1

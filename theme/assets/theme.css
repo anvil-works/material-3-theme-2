@@ -3,6 +3,7 @@
 @import './_/theme/anvil-m3/switch.css';
 @import './_/theme/anvil-m3/navigation-link.css';
 @import './_/theme/anvil-m3/card.css';
+@import './_/theme/anvil-m3/radio-button.css';
 
 :root {
   --anvil-m3-primary: %color:Primary%;
