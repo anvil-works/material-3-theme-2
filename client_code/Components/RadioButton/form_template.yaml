@@ -13,3 +13,4 @@ properties:
   description: radio button group name}
 - {name: selected, type: boolean, default_value: false, description: selected radio group button}
 - {name: enabled, type: boolean, default_value: true}
+- {name: label, type: string, default_value: ''}

@@ -8,38 +8,53 @@
 input.anvil-m3-radiobutton {
   -webkit-appearance: none;
   appearance: none;
-  width: 18px;
-  height: 18px;
-/*   border-radius: 2px; */
-/*   border: 2px solid var(--anvil-m3-on-surface-variant); */
-}
-
-input.anvil-m3-radiobutton:after {
+  width: 20px;
+  height: 20px;
   font-size: 18px !important;
   font-family: 'Material Symbols Outlined';
-  content: "radio_button_unchecked";
   -webkit-font-feature-settings: 'liga' 1;
   -moz-font-feature-settings: 'liga' 1;
   font-feature-settings: 'liga' 1;
   color: var(--anvil-m3-on-surface-variant);
-
-  margin-top: -4px;
+  margin-top: -8px;
+  margin-right: -1px;
 }
 
-input.anvil-m3-radiobutton:checked {
-/*   background-color: var(--anvil-m3-primary); */
-  border: 0px;
+input.anvil-m3-radiobutton:after {
+  content: "radio_button_unchecked";
 }
-
 
 input.anvil-m3-radiobutton:checked:after {
   display: block !important;
-  
   color: var(--anvil-m3-primary);
   content: "radio_button_checked";
 }
 
 
+
+/*Disabled states*/
+
+input.anvil-m3-radiobutton:disabled input.anvil-m3-radiobutton:disabled:checked{
+/*   color: var(--anvil-m3-on-disabled); */
+}
+/* 
+input.anvil-m3-radiobutton:disabled:checked input.anvil-m3-radiobutton:disabled:checked {
+  color: var(--anvil-m3-on-disabled);
+}
+
+input.anvil-m3-radiobutton:disabled:after  {
+  color: var(--anvil-m3-surface);
+}
+ */
+
+.anvil-m3-radiobutton-hover {
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover {
   background-color: var(--anvil-m3-dark-overlay-1);
