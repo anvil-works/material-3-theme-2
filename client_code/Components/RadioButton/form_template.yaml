@@ -1,8 +1,13 @@
 container:
   type: HtmlTemplate
-  properties: {html: "<center style=\"font-style:italic; color:#888; margin: 3em;\"\
-      >\n  (Insert your custom HTML here)\n</center>\n<div anvil-slot=\"default\"\
-      ></div>"}
+  properties: {html: "<!-- <label anvil-name=\"anvil-m3-switch\" class=\"anvil-m3-switch\"\
+      >\n  <input class=\"anvil-m3-switch-input\" anvil-name=\"anvil-m3-switch-input\"\
+      \ type=\"checkbox\">\n  <span class=\"anvil-m3-switch-slider\" anvil-name=\"\
+      anvil-m3-switch-slider\">\n    <span anvil-name=\"anvil-m3-enabled-switch-icon\"\
+      \ class=\"anvil-m3-enabled-switch-icon\"></span>\n    <span anvil-name=\"anvil-m3-disabled-switch-icon\"\
+      \ class=\"anvil-m3-disabled-switch-icon\"></span>\n  </span>\n</label>\n -->\n\
+      \n\n <label anvil-name=\"anvil-m3-radio-button\" class=\"anvil-m3-switch\">\n\
+      \   \n </label>"}
 components: []
 is_package: true
 custom_component: true
