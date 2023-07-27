@@ -18,6 +18,7 @@ input.anvil-m3-radiobutton {
   color: var(--anvil-m3-on-surface-variant);
   margin-top: -8px;
   margin-right: -1px;
+  cursor: pointer;
 }
 
 input.anvil-m3-radiobutton:after {
@@ -29,23 +30,6 @@ input.anvil-m3-radiobutton:checked:after {
   color: var(--anvil-m3-primary);
   content: "radio_button_checked";
 }
-
-
-
-/*Disabled states*/
-
-input.anvil-m3-radiobutton:disabled input.anvil-m3-radiobutton:disabled:checked{
-/*   color: var(--anvil-m3-on-disabled); */
-}
-/* 
-input.anvil-m3-radiobutton:disabled:checked input.anvil-m3-radiobutton:disabled:checked {
-  color: var(--anvil-m3-on-disabled);
-}
-
-input.anvil-m3-radiobutton:disabled:after  {
-  color: var(--anvil-m3-surface);
-}
- */
 
 .anvil-m3-radiobutton-hover {
   border-radius: 40px;
@@ -66,6 +50,7 @@ input.anvil-m3-radiobutton:disabled:after  {
 
 .anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover:has(input.anvil-m3-radiobutton:disabled) {
   background-color: transparent;
+  cursor: default;
 }
 
 .anvil-m3-radiobutton-container:focus .anvil-m3-radiobutton-hover {
@@ -78,4 +63,18 @@ input.anvil-m3-radiobutton:disabled:after  {
 
 .anvil-m3-radiobutton-container:focus .anvil-m3-radiobutton-hover:has(input.anvil-m3-radiobutton:disabled) {
   background-color: transparent;
+
+input.anvil-m3-radiobutton:disabled input.anvil-m3-radiobutton:disabled:checked{
+/*   color: var(--anvil-m3-on-disabled); */
+  color: pink;
+  border: 1px solid green;
 }
+/* 
+input.anvil-m3-radiobutton:disabled:checked input.anvil-m3-radiobutton:disabled:checked {
+  color: var(--anvil-m3-on-disabled);
+}
+
+input.anvil-m3-radiobutton:disabled:after  {
+  color: var(--anvil-m3-surface);
+}
+ */

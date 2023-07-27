@@ -2,6 +2,46 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_1:
+  - name: column_panel_2
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {}
+    components:
+    - name: card_1
+      properties: {appearance: elevated}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'KNSUVO,IFKIJO'}
+      components:
+      - name: image_1
+        properties: {source: 'https://lh3.googleusercontent.com/2OrUzHCRSI-V46Z1qJBh90usG6OkKwCbXN80FbrjkWoQz4VfoJjNAoQHLHPQRZWH7dI_m5I1gi48h6xMJ5pK6kkdXmUnXPe4VqwvEdo4QeWRjLV9Oew=w2400-rj',
+          display_mode: zoom_to_fill}
+        type: Image
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: column_panel_1
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {slot: anvil-m3-card-slot}
+        components:
+        - name: label_2
+          properties: {text: Play relaxing songs, font: '', font_size: 26}
+          type: Label
+          layout_properties: {grid_position: 'XNUAFY,VOQMUO'}
+        - name: label_3
+          properties: {text: from your recent favorites, font_size: 12}
+          type: Label
+          layout_properties: {grid_position: 'HNLGUH,JQHBBX'}
+        - name: flow_panel_1
+          properties: {align: right}
+          type: FlowPanel
+          layout_properties: {grid_position: 'ZCXRFR,WWXQAR'}
+          components:
+          - name: button_1
+            properties: {}
+            type: form:Components.Button
+    - name: button_2
+      properties: {material_icon: ' ', text: ''}
+      type: form:Components.Button
+      layout_properties: {grid_position: 'QRRMFH,DBVGAV'}
   - name: flow_panel_3
     properties: {}
     type: FlowPanel
@@ -52,44 +92,4 @@ components_by_slot:
     properties: {}
     type: Label
     layout_properties: {}
-  - name: column_panel_2
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {}
-    components:
-    - name: card_1
-      properties: {appearance: elevated}
-      type: form:Components.Card
-      layout_properties: {grid_position: 'KNSUVO,IFKIJO'}
-      components:
-      - name: image_1
-        properties: {source: 'https://lh3.googleusercontent.com/2OrUzHCRSI-V46Z1qJBh90usG6OkKwCbXN80FbrjkWoQz4VfoJjNAoQHLHPQRZWH7dI_m5I1gi48h6xMJ5pK6kkdXmUnXPe4VqwvEdo4QeWRjLV9Oew=w2400-rj',
-          display_mode: zoom_to_fill}
-        type: Image
-        layout_properties: {slot: anvil-m3-card-slot}
-      - name: column_panel_1
-        properties: {}
-        type: ColumnPanel
-        layout_properties: {slot: anvil-m3-card-slot}
-        components:
-        - name: label_2
-          properties: {text: Play relaxing songs, font: '', font_size: 26}
-          type: Label
-          layout_properties: {grid_position: 'XNUAFY,VOQMUO'}
-        - name: label_3
-          properties: {text: from your recent favorites, font_size: 12}
-          type: Label
-          layout_properties: {grid_position: 'HNLGUH,JQHBBX'}
-        - name: flow_panel_1
-          properties: {align: right}
-          type: FlowPanel
-          layout_properties: {grid_position: 'ZCXRFR,WWXQAR'}
-          components:
-          - name: button_1
-            properties: {}
-            type: form:Components.Button
-    - name: button_2
-      properties: {material_icon: ' ', text: ''}
-      type: form:Components.Button
-      layout_properties: {grid_position: 'QRRMFH,DBVGAV'}
 components: []
