@@ -49,7 +49,7 @@ components_by_slot:
     components:
     - name: radio_button_1
       properties: {group_name: status, selected: true, label: 'enabled, selected',
-        enabled: false}
+        enabled: true}
       type: form:Components.RadioButton
       layout_properties: {}
     - name: radio_button_2

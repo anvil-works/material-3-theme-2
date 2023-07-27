@@ -36,7 +36,7 @@ input.anvil-m3-radiobutton:checked:after {
   color: var(--anvil-m3-primary);
   content: "radio_button_checked";
   
-  border: 2px dashed goldenrod;
+  border: 2px dotted goldenrod;
 }
 
 .anvil-m3-radiobutton-hover {
@@ -46,19 +46,27 @@ input.anvil-m3-radiobutton:checked:after {
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  border: 1px dashed red;
 }
 
 .anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover {
-  background-color: var(--anvil-m3-dark-overlay-1);
+/*   background-color: var(--anvil-m3-dark-overlay-1);  */
+  background: pink;
 }
-
 .anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover:has(input.anvil-m3-radiobutton:checked) {
-  background-color: var(--anvil-m3-primary-overlay-2);
+/*   background-color: var(--anvil-m3-primary-overlay-2); */
+  background: green;
 }
 
-.anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover:has(input.anvil-m3-radiobutton:disabled) {
-  background-color: transparent;
-  cursor: default;
+.anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover:has(input.anvil-m3-radiobutton:disabled, input.anvil-m3-radiobutton:checked:disabled) {
+/*   background-color: transparent; */
+/*   background:blue
+  cursor: auto; */
+}
+
+.anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover input.anvil-m3-radiobutton:disabled {
+  background: cyan;
 }
 
 /* this will legit never happen */
