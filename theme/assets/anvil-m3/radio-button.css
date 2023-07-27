@@ -3,6 +3,8 @@
   justify-content: flex-start;
   align-items: center;
   column-gap: 24px;
+  
+  border: 1px solid green;
 }
 
 input.anvil-m3-radiobutton {
@@ -19,17 +21,22 @@ input.anvil-m3-radiobutton {
   margin-top: -8px;
   margin-right: -1px;
   cursor: pointer;
-  
   display: block;
+  
+  border: 1px solid blue;
 }
 
 input.anvil-m3-radiobutton:after {
   content: "radio_button_unchecked";
+
+  border: 2px dashed blue;
 }
 
 input.anvil-m3-radiobutton:checked:after {
   color: var(--anvil-m3-primary);
   content: "radio_button_checked";
+  
+  border: 2px dashed goldenrod;
 }
 
 .anvil-m3-radiobutton-hover {
@@ -54,7 +61,8 @@ input.anvil-m3-radiobutton:checked:after {
   cursor: default;
 }
 
-.anvil-m3-radiobutton-container:focus .anvil-m3-radiobutton-hover {
+/* this will legit never happen */
+/* .anvil-m3-radiobutton-container:focus .anvil-m3-radiobutton-hover { 
   background-color: var(--anvil-m3-dark-overlay-2);
 }
 
@@ -63,13 +71,13 @@ input.anvil-m3-radiobutton:checked:after {
 }
 
 .anvil-m3-radiobutton-container:focus .anvil-m3-radiobutton-hover:has(input.anvil-m3-radiobutton:disabled) {
-  background-color: transparent;
+  background-color: transparent; */
 
-input.anvil-m3-radiobutton:disabled input.anvil-m3-radiobutton:disabled:checked{
+/* input.anvil-m3-radiobutton:disabled input.anvil-m3-radiobutton:disabled:checked{ */
 /*   color: var(--anvil-m3-on-disabled); */
-  color: pink;
-  border: 1px solid green;
-}
+/*   color: pink; */
+/*   border: 1px solid green; */
+/* } */
 /* 
 input.anvil-m3-radiobutton:disabled:checked input.anvil-m3-radiobutton:disabled:checked {
   color: var(--anvil-m3-on-disabled);

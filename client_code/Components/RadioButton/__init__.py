@@ -18,3 +18,5 @@ class RadioButton(RadioButtonTemplate):
   @enabled.setter
   def enabled(self, value):
     self.dom_nodes['anvil-m3-radiobutton'].disabled = not value
+
+  # create event listener and add that when anywhere in the container is clicked, it changes it to selected
