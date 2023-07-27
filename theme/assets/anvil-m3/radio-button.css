@@ -19,6 +19,8 @@ input.anvil-m3-radiobutton {
   margin-top: -8px;
   margin-right: -1px;
   cursor: pointer;
+  
+  display: block;
 }
 
 input.anvil-m3-radiobutton:after {
@@ -26,7 +28,6 @@ input.anvil-m3-radiobutton:after {
 }
 
 input.anvil-m3-radiobutton:checked:after {
-  display: block !important;
   color: var(--anvil-m3-primary);
   content: "radio_button_checked";
 }
