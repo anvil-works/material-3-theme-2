@@ -39,6 +39,10 @@ input.anvil-m3-radiobutton:checked:after {
   border: 2px dotted goldenrod;
 }
 
+input.anvil-m3-radiobutton:disabled {
+  cursor: not-allowed !important;
+}
+
 .anvil-m3-radiobutton-hover {
   border-radius: 40px;
   width: 40px;
@@ -60,13 +64,13 @@ input.anvil-m3-radiobutton:checked:after {
 }
 
 .anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover:has(input.anvil-m3-radiobutton:disabled, input.anvil-m3-radiobutton:checked:disabled) {
-/*   background-color: transparent; */
+
 /*   background:blue
   cursor: auto; */
 }
 
-.anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover input.anvil-m3-radiobutton:disabled {
-  background: cyan;
+.anvil-m3-radiobutton-container:hover .anvil-m3-radiobutton-hover:has(input.anvil-m3-radiobutton:disabled){
+    background-color: transparent;
 }
 
 /* this will legit never happen */
