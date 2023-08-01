@@ -6,6 +6,7 @@ import anvil.designer
 class TextField(TextFieldTemplate):
   def __init__(self, **properties):
     self._label_text = properties.get('label_text', '')
+    self._trailing_icon = properties.get('trailing_icon', '')
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.dom_nodes['text-field-input'].addEventListener("keydown", self.on_key_down)
