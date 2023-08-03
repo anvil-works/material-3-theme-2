@@ -14,10 +14,7 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<!-- <button anvil-name=\"button\" class=\"button\">\n  <i anvil-name=\"\
-      button-icon\" class=\"material-symbols-outlined hidden\"></i><span anvil-name=\"\
-      button-text\">Button</span>\n</button> -->\n\n\n<div anvil anvil-slot=\"anvil-m3-card-slot\"\
-      \ anvil-name=\"anvil-m3-card\" class=\"anvil-m3-card\" tabindex=\"0\">\n   \
-      \ <p anvil-if-slot-empty=\"anvil-m3-card-slot\" style=\"color: #BBB\"><i>Insert\
-      \ Card Content</i></p>\n</div>", visible: true}
+  properties: {html: "<div anvil-slot=\"anvil-m3-card-slot\" anvil-name=\"anvil-m3-card\"\
+      \ class=\"anvil-m3-card\" tabindex=\"0\">\n    <p anvil-if-slot-empty=\"anvil-m3-card-slot\"\
+      \ style=\"color: #BBB\"><i>Insert Card Content</i></p>\n</div>", visible: true}
 custom_component_container: true
