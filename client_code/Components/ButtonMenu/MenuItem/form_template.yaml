@@ -734,10 +734,12 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-menuItem-container\" class=\"anvil-m3-menuItem-container\"\
-      \ tabindex=0>\n  <i anvil-name=\"anvil-m3-menuItem-leadingIcon\" class=\"material-symbols-outlined\
-      \ anvil-m3-menuItem-leadingIcon hidden\"></i>\n  <div anvil-name=\"anvil-m3-menuItem-itemText\"\
-      \ class=\"anvil-m3-menuItem-itemText\" ></div>\n  <i anvil-name=\"anvil-m3-menuItem-trailingIcon\"\
-      \ class=\"material-symbols-outlined anvil-m3-menuItem-trailingIcon hidden\"\
-      ></i>\n  <div anvil-name=\"anvil-m3-menuItem-itemText\" class=\"anvil-m3-menuItem-itemText\
-      \ hidden\" ></div>\n</div>"}
+  properties: {html: "<!-- <div anvil-name=\"anvil-m3-menuItem-container\" class=\"\
+      anvil-m3-menuItem-container\" tabindex=0>\n  <i anvil-name=\"anvil-m3-menuItem-leadingIcon\"\
+      \ class=\"material-symbols-outlined anvil-m3-menuItem-leadingIcon hidden\"></i>\n\
+      \  <div anvil-name=\"anvil-m3-menuItem-itemText\" class=\"anvil-m3-menuItem-itemText\"\
+      \ ></div>\n  <i anvil-name=\"anvil-m3-menuItem-trailingIcon\" class=\"material-symbols-outlined\
+      \ anvil-m3-menuItem-trailingIcon hidden\"></i>\n  <div anvil-name=\"anvil-m3-menuItem-itemText\"\
+      \ class=\"anvil-m3-menuItem-itemText hidden\" ></div>\n</div> -->\n\n<!-- <div\
+      \ anvil-name=\"anvil-m3-menuItem-container\" class=\"anvil-m3-menuItem-container\"\
+      \ tabindex=0>\n  \n</div> -->"}
