@@ -7,3 +7,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def toggle_menu(self, **event_args):
+    """toggle the menu visibility"""
+    pass
