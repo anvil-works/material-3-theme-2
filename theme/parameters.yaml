@@ -290,3 +290,4 @@ color_scheme:
   - {name: Error Overlay 2, color: 'rgba(179, 38, 30, 0.12)'}
   - {name: Dark Overlay 3, color: 'rgba(29, 25, 43, 0.16)'}
   - {name: On Error Container, color: '#410E0B'}
+  - {name: Surface Container, color: '#F3EDF7'}
