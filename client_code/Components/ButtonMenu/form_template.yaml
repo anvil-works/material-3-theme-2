@@ -1,0 +1,12 @@
+container:
+  type: HtmlTemplate
+  properties: {html: "<!-- <center style=\"font-style:italic; color:#888; margin:\
+      \ 3em;\">\n  (Insert your custom HTML here)\n</center> -->\n<div anvil-slot=\"\
+      default\">asdf</div>"}
+components:
+- name: button_1
+  properties: {}
+  type: form:Components.Button
+  layout_properties: {slot: default}
+is_package: true
+custom_component: true
