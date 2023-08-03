@@ -8,10 +8,6 @@ components:
   type: form:Components.Button
   layout_properties: {slot: button}
   event_bindings: {click: toggle_menu_visibility}
-- name: divider_1
-  properties: {}
-  type: form:Components.Divider
-  layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: menu_item_2
   properties: {leading_icon: 3g_mobiledata, value: fdsa, text: teegee}
   type: form:Components.ButtonMenu.MenuItem
