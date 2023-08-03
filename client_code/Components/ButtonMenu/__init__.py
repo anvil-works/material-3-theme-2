@@ -23,16 +23,3 @@ class ButtonMenu(ButtonMenuTemplate):
       classes.toggle('anvil-m3-buttonMenu-items-hidden', value)
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
-
-  def _anvil_get_design_info_(self, as_layout=False):
-    di = super()._anvil_get_design_info_(as_layout)
-    di['interactions'] = [{
-      "type": "whole_component",
-      "title": "Edit text",
-      "icon": "edit",
-      "default": True,
-      "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-radiobutton-label'])
-      }
-    }]
-    return di 
