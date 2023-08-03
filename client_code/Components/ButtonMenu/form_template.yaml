@@ -8,10 +8,6 @@ components:
   type: form:Components.Button
   layout_properties: {slot: button}
   event_bindings: {click: toggle_menu_visibility}
-- name: menu_item_1
-  properties: {leading_icon: 13mp, value: asdf, text: hiya, trailing_text: eh}
-  type: form:Components.ButtonMenu.MenuItem
-  layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: divider_1
   properties: {}
   type: form:Components.Divider
@@ -31,6 +27,6 @@ container:
       \ when being used in a parent component -->\n  <div anvil-slot=\"button\" internal></div>\
       \ \n  \n  <div anvil-slot=\"anvil-m3-buttomMenu-slot\" anvil-name=\"anvil-m3-buttonMenu-items-container\"\
       \ \n    class=\"anvil-m3-buttonMenu-items-container x-anvil-m3-buttonMenu-items-hidden\"\
-      >\n      <p anvil-if-slot-empty=\"anvil-m3-card-slot\" style=\"color: #BBB\"\
-      ><i>Menu items go here</i></p>\n  </div>\n</div>"}
+      >\n<!--       <p anvil-if-slot-empty=\"anvil-m3-card-slot\" style=\"color: #BBB;\
+      \ grid-column: 0 / span 2;\"><i>Menu items go here</i></p> -->\n  </div>\n</div>"}
 custom_component_container: true
