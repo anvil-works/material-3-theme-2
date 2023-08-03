@@ -15,6 +15,7 @@
   z-index: 1;
 
   display: grid;
+  grid-template-columns: minmax(0, 24px) 1fr;
 }
 
 .anvil-m3-buttonMenu-items-hidden {
