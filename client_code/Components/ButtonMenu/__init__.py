@@ -9,9 +9,5 @@ class ButtonMenu(ButtonMenuTemplate):
     # Any code you write here will run before the form opens.
 
   def toggle_menu_visibility(self, **event_args):
-    classes = self.dom_nodes['anvil-m3-buttonMenu-items-container']
-    
-    self._disabled = value
-    card = self.dom_nodes['anvil-m3-card']
-    classes = card.classList
-    classes.toggle('anvil-m3-disabled', value)
+    classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
+    classes.toggle('anvil-m3-buttonMenu-items-hidden')
