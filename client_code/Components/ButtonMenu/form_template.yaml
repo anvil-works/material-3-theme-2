@@ -1,9 +1,10 @@
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-slot=\"button\"></div>\n<div anvil anvil-slot=\"\
-      anvil-m3-menu-slot\" anvil-name=\"anvil-m3-menu-container\" class=\"anvil-m3-menu-container\"\
-      >\n    <p anvil-if-slot-empty=\"anvil-m3-card-slot\" style=\"color: #BBB\"><i>Insert\
-      \ Menu Items</i></p>\n</div>"}
+  properties: {html: "<!-- the following div needs marker where it prevents exposure\
+      \ of the slot when being used in a parent component -->\n<div anvil-slot=\"\
+      button\" internal></div> \n\n<div anvil-slot=\"anvil-m3-menu-slot\" anvil-name=\"\
+      anvil-m3-menu-container\" class=\"anvil-m3-menu-container\">\n    <p anvil-if-slot-empty=\"\
+      anvil-m3-card-slot\" style=\"color: #BBB\"><i>Menu items go here</i></p>\n</div>"}
 components:
 - name: button_1
   properties: {}
