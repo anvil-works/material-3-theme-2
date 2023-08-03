@@ -3,17 +3,17 @@ container:
   properties: {html: "<div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"anvil-m3-buttonMenu-container\"\
       >\n  <!-- the following div needs marker where it prevents exposure of the slot\
       \ when being used in a parent component -->\n  <div anvil-slot=\"button\" internal></div>\
-      \ \n  \n  <div anvil-slot=\"anvil-m3-buttomMenu-slot\" anvil-name=\"anvil-m3-buttomMenu-items-container\"\
-      \ class=\"anvil-m3-buttomMenu-items-container\">\n  <!--     <p anvil-if-slot-empty=\"\
-      anvil-m3-card-slot\" style=\"color: #BBB\"><i>Menu items go here</i></p> -->\n\
-      \    <div>stuff</div>\n    <div>more stuff</div>\n    <div>more stuff</div>\n\
-      \  </div>\n</div>"}
+      \ \n  \n  <div anvil-slot=\"anvil-m3-buttomMenu-slot\" anvil-name=\"anvil-m3-buttonMenu-items-container\"\
+      \ class=\"anvil-m3-buttonMenu-items-container anvil-m3-buttonMenu-items-hidden\"\
+      >\n  <!--     <p anvil-if-slot-empty=\"anvil-m3-card-slot\" style=\"color: #BBB\"\
+      ><i>Menu items go here</i></p> -->\n    <div>stuff</div>\n    <div>more stuff</div>\n\
+      \    <div>more stuff</div>\n  </div>\n</div>"}
 components:
 - name: menu_button
   properties: {}
   type: form:Components.Button
   layout_properties: {slot: button}
-  event_bindings: {click: toggle_menu}
+  event_bindings: {click: toggle_menu_visibility}
 is_package: true
 custom_component: true
 custom_component_container: true
