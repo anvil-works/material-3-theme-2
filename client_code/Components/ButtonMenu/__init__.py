@@ -1,12 +1,21 @@
 from ._anvil_designer import ButtonMenuTemplate
 from anvil import *
 from anvil.js.window import document
+import random
 
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     # TODO: needs an event handler to close when not focused
-    
+    result_str = ''.join(random.choice(letters) for i in range(length))
+
+  @property
+  def id(self):
+    return self._id
+  @id.setter
+  def id(self, value):
+    self._id = value
+  
   @property
   def text(self):
     return self._text
