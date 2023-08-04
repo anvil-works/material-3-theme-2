@@ -30,7 +30,7 @@ class MenuItem(MenuItemTemplate):
   @text.setter
   def text(self, value):
     self._text = value
-    self.dom_nodes["anvil-m3-menuItem-text"].innerText = value
+    self.dom_nodes["anvil-m3-menuItem-labelText"].innerText = value
 
   @property
   def trailing_icon(self):
