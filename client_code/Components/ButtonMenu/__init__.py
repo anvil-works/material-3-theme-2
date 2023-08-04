@@ -20,6 +20,9 @@ class ButtonMenu(ButtonMenuTemplate):
   @appearance.setter
   def appearance(self, value):
     self.menu_button.appearance = value
+
+  # get all the child components in the menu container
+  
   
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
@@ -30,3 +33,5 @@ class ButtonMenu(ButtonMenuTemplate):
       classes.toggle('anvil-m3-buttonMenu-items-hidden', value)
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
+
+  

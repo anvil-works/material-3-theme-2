@@ -16,6 +16,14 @@ components:
   properties: {leading_icon: 3g_mobiledata, value: fdsa, text: teegee}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
+- name: menu_item_1
+  properties: {}
+  type: form:Components.ButtonMenu.MenuItem
+  layout_properties: {slot: anvil-m3-buttomMenu-slot}
+- name: menu_item_4
+  properties: {}
+  type: form:Components.ButtonMenu.MenuItem
+  layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: menu_item_3
   properties: {value: fdsasdf, text: fghjfgh, trailing_icon: addchart}
   type: form:Components.ButtonMenu.MenuItem
