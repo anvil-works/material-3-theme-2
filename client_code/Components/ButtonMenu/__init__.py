@@ -35,6 +35,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
 
   def set_visibility(self, value = None):
+    print("do something")
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
     if value:
       classes.toggle('anvil-m3-buttonMenu-items-hidden', value)
@@ -73,9 +74,11 @@ class ButtonMenu(ButtonMenuTemplate):
     # plus a whole bunch of methods called _on_select() etc
   def _on_select(self):
     print("on_select called")
+    self.set_visibility(True)
 
   def _on_deselect(self):
     print("on_deselect called")
+    self.set_visibility(False)
 
   def _on_select_descendant(self):
     print("_on_select_descendant called")
