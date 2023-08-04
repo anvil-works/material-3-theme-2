@@ -1,4 +1,4 @@
-/* ButtonMenu */
+/***** ButtonMenu *****/
 .anvil-m3-buttonMenu-container {
   display: inline-block;
   position: relative;
@@ -23,7 +23,7 @@
   overflow: hidden;
 }
 
-/* MenuItems */
+/***** MenuItems *****/
 .anvil-m3-menuItem-container {
   display: flex;
   align-items: center;
@@ -78,6 +78,16 @@
   color: var(--anvil-m3-on-surface-variant);
 }
 
-.anvil-m3-menuItem-disabled:hover {
-  background-color: blue;
+/* DISABLED */
+.anvil-m3-menuItem-disabled {
+  cursor: default !important;
 }
+.anvil-m3-menuItem-disabled .anvil-m3-menuItem-core {
+  color: var(--anvil-m3-on-surface);
+  opacity: .38;
+}
+.anvil-m3-menuItem-disabled .anvil-m3-menuItem-aux {
+  color: var(--anvil-m3-on-surface);
+  opacity: .38;
+}
+
