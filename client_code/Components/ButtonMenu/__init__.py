@@ -51,8 +51,7 @@ class ButtonMenu(ButtonMenuTemplate):
     # print(event.target)
     if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
       print("outside")
-  # !elem.contains(event.target);
-      self.set_visibility(false)
+      self.set_visibility(False)
 
 
 
