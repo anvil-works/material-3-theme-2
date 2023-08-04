@@ -25,15 +25,17 @@ components:
   properties: {trailing_text: ctrl + Y, text: jflkds sjf flsdkf lkasfj asdlkjf fjksdlfj sfd}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
+  event_bindings: {click: menu_item_1_click}
 - name: menu_item_4
   properties: {trailing_icon: ' ', text: hgfdhgdf hjflsa fjlsd fjdkjfls jfj sldj fjlkalskdjf ;fl;asld fdlkjs fjld jfdks,
     enabled: false, hide_leading_icon: true}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: menu_item_5
-  properties: {trailing_icon: ' ', text: networks! WOW!, leading_icon: network_wifi}
+  properties: {trailing_icon: theater_comedy, text: networks! WOW!, leading_icon: network_wifi}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
+  event_bindings: {click: menu_item_5_click}
 - name: menu_item_3
   properties: {value: '', text: fghjfgh, trailing_icon: brightness_3, trailing_text: B,
     leading_icon: free_breakfast, hide_leading_icon: true, enabled: true}
