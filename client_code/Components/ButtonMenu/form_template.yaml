@@ -18,7 +18,7 @@ components:
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: menu_item_1
-  properties: {trailing_text: ctrl + Y, text: gfdsgsdfg}
+  properties: {trailing_text: ctrl + Y, text: jflkds sjf flsdkf lkasfj asdlkjf fjksdlfj sfd}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: menu_item_4
