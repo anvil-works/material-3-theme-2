@@ -35,8 +35,6 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
 
   def set_visibility(self, value = None):
-    print("do something")
-    print(value)
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
     if value:
       classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
@@ -45,7 +43,6 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def closeOnLoseFocus(self, event):
     if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
-      print("outside")
       self.set_visibility(False)
 
 
@@ -67,7 +64,11 @@ class ButtonMenu(ButtonMenuTemplate):
     design_info["interactions"] = [
       {
         "type": "on_selection",
-        "callbacks": {"onSelect": self._on_select, "onDeselect": self._on_deselect, "onSelectDescendent": self._on_select_descendant, "onDeselectDescendant": self._on_deselect_descendant, "onSelectOther": self._on_select_other}
+        "callbacks": {
+          "onSelect": self._on_select, 
+          "onDeselect": self._on_deselect, 
+          "onSelectDescendent": self._on_select_descendant, 
+          "onDeselectDescendant": self._on_deselect_descendant, "onSelectOther": self._on_select_other}
       }
     ]
     return design_info
@@ -75,7 +76,6 @@ class ButtonMenu(ButtonMenuTemplate):
     # plus a whole bunch of methods called _on_select() etc
   def _on_select(self):
     print("on_select called")
-    self.set_visibility(True)
 
   def _on_deselect(self):
     print("on_deselect called")
@@ -83,18 +83,10 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _on_select_descendant(self):
     print("_on_select_descendant called")
+    self.set_visibility(True)
 
   def _on_deselect_descendant(self):
     print("_on_deselect_descendant called")
 
   def _on_select_other(self):
     print("_on_select_other called")
-
-  def menu_item_1_click(self, **event_args):
-    print("clicked the first one!")
-
-  def menu_item_5_click(self, **event_args):
-    print("clicked another one")
-
-
-  
