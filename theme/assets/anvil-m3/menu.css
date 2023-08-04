@@ -39,8 +39,10 @@
   display: flex;
   align-items: center;
   width: 100%;
+  min-width: 0px;
   height: 48px;
   padding: 0 12px;
+  overflow: hidden;
 }
 
 .anvil-m3-menuItem-container:hover{
@@ -67,9 +69,9 @@
 }
 
 .anvil-m3-menuItem-trailingText {
-  
+  flex: 0 0 auto;
 }
 
 .anvil-m3-menuItem-trailingIcon {
-  
+  flex: 0 0 auto;
 }
