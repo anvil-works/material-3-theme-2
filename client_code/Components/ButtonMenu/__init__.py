@@ -69,7 +69,16 @@ class ButtonMenu(ButtonMenuTemplate):
           "onDeselect": self._on_deselect, 
           "onSelectDescendent": self._on_select_descendant, 
           # "onDeselectDescendant": self._on_deselect_descendant, 
-          "onSelectOther": self._on_select_other
+          # "onSelectOther": self._on_select_other
+        }
+      },
+      {
+      "type": "whole_component",
+      "title": "Edit button text",
+      "icon": "edit",
+      "callbacks": 
+        {
+          "execute": lambda: anvil.designer.start_inline_editing(self.menu_button, "text", self.dom_nodes['anvil-m3-button-text'])
         }
       }
     ]
@@ -85,8 +94,8 @@ class ButtonMenu(ButtonMenuTemplate):
   def _on_select_descendant(self):
     self.set_visibility(True)
 
-  def _on_deselect_descendant(self):
-    print("_on_deselect_descendant called")
+  # def _on_deselect_descendant(self):
+  #   print("_on_deselect_descendant called")
 
-  def _on_select_other(self):
-    print("_on_select_other called")
+  # def _on_select_other(self):
+  #   print("_on_select_other called")
