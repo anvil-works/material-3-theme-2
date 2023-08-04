@@ -14,7 +14,7 @@ components:
   event_bindings: {click: toggle_menu_visibility}
 - name: menu_item_2
   properties: {leading_icon: 3g_mobiledata, value: '', text: teegee, trailing_icon: opacity,
-    trailing_text: rewq, hide_leading_icon: true}
+    trailing_text: rewq, hide_leading_icon: false}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: divider_1
@@ -27,12 +27,12 @@ components:
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: menu_item_4
   properties: {trailing_icon: ' ', text: hgfdhgdf hjflsa fjlsd fjdkjfls jfj sldj fjlkalskdjf ;fl;asld fdlkjs fjld jfdks,
-    enabled: false}
+    enabled: false, hide_leading_icon: true}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: menu_item_3
   properties: {value: '', text: fghjfgh, trailing_icon: brightness_3, trailing_text: B,
-    leading_icon: free_breakfast}
+    leading_icon: free_breakfast, hide_leading_icon: true}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 container:
