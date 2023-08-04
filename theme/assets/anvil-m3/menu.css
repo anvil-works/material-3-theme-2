@@ -39,7 +39,8 @@
   display: flex;
   align-items: center;
   width: 100%;
-  min-width: 0px;
+  max-width: 280px;
+  min-width: 112px;
   height: 48px;
   padding: 0 12px;
   overflow: hidden;
@@ -57,8 +58,10 @@
 
 .anvil-m3-menuItem-content {
   display: flex;
-  max-width: 100%;
-  flex: 1 1 auto;
+  align-items: center;
+/*   max-width: 100%; */
+/*   flex: 1 1 auto; */
+  flex-grow: 1;
 }
 
 .anvil-m3-menuItem-text {
@@ -66,12 +69,16 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  flex-grow: 1;
+  padding-right: 12px;
 }
 
 .anvil-m3-menuItem-trailingText {
-  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .anvil-m3-menuItem-trailingIcon {
-  flex: 0 0 auto;
+/*   min-width: 24px; */
+  font-size: 24px !important;
+/*   margin-right: 12px; */
 }
