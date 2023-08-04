@@ -34,4 +34,13 @@ class ButtonMenu(ButtonMenuTemplate):
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
 
+  def _anvil_get_design_info_(self, as_layout=False):
+    design_info = super()._anvil_get_design_info_(as_layout)
+    design_info["interactions"] = [
+        {"type": "on_selection", {"onSelect": self._on_select, "onDeselect": self._on_deselect, "onSelectDescendent": self._on_select_descendant, "onDeselectDescendant": self._on_deselect_descendant, "onSelectOther": self._on_select_other}}
+    ]
+    return design_info
+
+    # plus a whole bunch of methods called _on_select() etc
+
   
