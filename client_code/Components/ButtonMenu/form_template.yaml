@@ -26,7 +26,8 @@ components:
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: menu_item_4
-  properties: {trailing_icon: ' ', text: hgfdhgdf hjflsa fjlsd fjdkjfls jfj sldj fjlkalskdjf ;fl;asld fdlkjs fjld jfdks}
+  properties: {trailing_icon: ' ', text: hgfdhgdf hjflsa fjlsd fjdkjfls jfj sldj fjlkalskdjf ;fl;asld fdlkjs fjld jfdks,
+    enabled: false}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: menu_item_3

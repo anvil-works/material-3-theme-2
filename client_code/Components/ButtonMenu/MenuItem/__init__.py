@@ -1,9 +1,9 @@
 # <div anvil-name="anvil-m3-menuItem-container" class="anvil-m3-menuItem-container" tabindex=0>
-#   <i anvil-name="anvil-m3-menuItem-leadingIcon" class="material-symbols-outlined anvil-m3-menuItem-leadingIcon"></i>
+#   <div anvil-name="anvil-m3-menuItem-leadingIcon" class="anvil-m3-menuItem-leadingIcon material-symbols-outlined "></div>
 #   <div anvil-name="anvil-m3-menuItem-content" class="anvil-m3-menuItem-content">
 #     <div anvil-name="anvil-m3-menuItem-text" class="anvil-m3-menuItem-text"></div>
 #     <div anvil-name="anvil-m3-menuItem-trailingText" class="anvil-m3-menuItem-trailingText"></div>
-#     <i anvil-name="anvil-m3-menuItem-trailingIcon" class="material-symbols-outlined anvil-m3-menuItem-trailingIcon"></i>
+#     <div anvil-name="anvil-m3-menuItem-trailingIcon" class="anvil-m3-menuItem-trailingIcon material-symbols-outlined"></div>
 #   </div>
 # </div>
 
@@ -48,7 +48,21 @@ class MenuItem(MenuItemTemplate):
     self._trailing_text = value
     self.dom_nodes["anvil-m3-menuItem-trailingText"].innerText = value 
   
-  # hide_leading_icon
+  @property 
+  def hide_leading_icon(self):
+    return self._hide_leading_icon
+  @hide_leading_icon.setter
+  def hide_leading_icon(self, value):
+    self._hide_leading_icon = value
+    self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.toggle("anvil-m3-menuItem-hideLeadingIcon", value)
+  # anvil-m3-menuItem-hideLeadingIcon
+
+  @property
+  def enabled(self):
+    return self._enabled
+  @enabled.setter
+  def enabled(self, value):
+    self._enabled = value
 
   def handle_click(self, event):
     event.preventDefault()
