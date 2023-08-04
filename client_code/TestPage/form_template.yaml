@@ -1,40 +1,157 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_3:
-  - name: column_panel_1
-    properties: {border: 1px dotted lightgreen}
-    type: ColumnPanel
-    layout_properties: {}
-    components:
-    - name: checkbox_1
-      properties: {text: Check me}
-      type: form:Components.Checkbox
-      layout_properties: {grid_position: 'MPDHDU,FVXXKM'}
-    - name: checkbox_2
-      properties: {text: text}
-      type: form:Components.Checkbox
-      layout_properties: {grid_position: 'MPDHDU,WXSZAQ'}
-    - name: checkbox_3
-      properties: {text: text}
-      type: form:Components.Checkbox
-      layout_properties: {grid_position: 'MPDHDU,TSXWSC'}
-    - name: check_box_2
-      properties: {text: check_box_2}
-      type: CheckBox
-      layout_properties: {grid_position: 'SKPKEB,RSIYJQ'}
+  slot_1:
   - name: flow_panel_1
     properties: {}
     type: FlowPanel
     layout_properties: {}
     components:
-    - name: checkbox_4
+    - name: card_3
       properties: {}
-      type: form:Components.Checkbox
-  - name: button_1
-    properties: {appearance: tonal}
+      type: form:Components.Card
+      components:
+      - name: radio_button_8
+        properties: {group: c, name: nothing 1, value: '0', group_name: qwer}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_qwer_click}
+      - name: menu_item_1
+        properties: {}
+        type: form:Components.ButtonMenu.MenuItem
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: radio_button_9
+        properties: {group: c, name: nothing 2, enabled: false, value: '9', group_name: qwer}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_qwer_click}
+      - name: name
+        properties: {group: c, name: nothing 3, selected: true, value: '8', group_name: qwer}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_qwer_click}
+      - name: divider_1
+        properties: {}
+        type: form:Components.Divider
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: flow_panel_4
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-slot}
+        components:
+        - name: label_4
+          properties: {text: 'Selecting in group asdf:'}
+          type: Label
+          layout_properties: {}
+        - name: label_7
+          properties: {}
+          type: Label
+    - name: card_1
+      properties: {}
+      type: form:Components.Card
+      components:
+      - name: navigation_link_1
+        properties: {}
+        type: form:Components.NavigationLink
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: radio_button_1
+        properties: {group: a, text: 1 a, selected: true, value: a, group_name: a1}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_a1_click}
+      - name: radio_button_2
+        properties: {group: a, text: 2 a, value: b, group_name: a1}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_a1_click}
+      - name: radio_button_3
+        properties: {group: a, text: ffdsa, value: c, group_name: a1}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_a1_click}
+      - name: text_field_1
+        properties: {}
+        type: form:Components.TextField
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: checkbox_2
+        properties: {}
+        type: form:Components.Checkbox
+        layout_properties: {slot: anvil-m3-card-slot}
+      - name: flow_panel_2
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-slot}
+        components:
+        - name: label_2
+          properties: {text: 'Selected in group 1:'}
+          type: Label
+          layout_properties: {}
+        - name: label_5
+          properties: {}
+          type: Label
+      event_bindings: {}
+    - name: card_2
+      properties: {}
+      type: form:Components.Card
+      components:
+      - name: radio_button_4
+        properties: {group: b, text: 1 b, value: '1', group_name: t2}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_t2_click}
+      - name: radio_button_5
+        properties: {group: b, text: 2 b, value: '2', group_name: t2}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_t2_click}
+      - name: radio_button_6
+        properties: {group: b, text: asdfasdf, enabled: false, group_name: t2}
+        type: form:Components.RadioButton
+        layout_properties: {slot: anvil-m3-card-slot}
+        event_bindings: {click: group_t2_click}
+      - name: flow_panel_3
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-slot}
+        components:
+        - name: label_3
+          properties: {text: 'Selected in group 2:'}
+          type: Label
+          layout_properties: {}
+        - name: label_6
+          properties: {}
+          type: Label
+    - name: divider_2
+      properties: {}
+      type: form:Components.Divider
+  - name: checkbox_1
+    properties: {selected: false, disabled: false, error: false}
+    type: form:Components.Checkbox
+    layout_properties: {}
+  - name: label_1
+    properties: {}
+    type: Label
+    layout_properties: {}
+  - name: button_3
+    properties: {}
     type: form:Components.Button
     layout_properties: {}
-    event_bindings: {click: button_1_click}
+  - name: button_2
+    properties: {appearance: elevated, material_icon: 18_up_rating}
+    type: form:Components.Button
+    layout_properties: {}
+  - name: button_1
+    properties: {text: button_1}
+    type: Button
+    layout_properties: {}
+  - name: card_4
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
+  - name: button_menu_1
+    properties: {text: click to open! or close!, appearance: tonal}
+    type: form:Components.ButtonMenu
+    layout_properties: {}
+    components: []
 components: []
 event_bindings: {show: form_show}
