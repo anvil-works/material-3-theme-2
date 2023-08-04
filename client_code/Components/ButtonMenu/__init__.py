@@ -115,3 +115,8 @@ class ButtonMenu(ButtonMenuTemplate):
 
 #  a container must implement add_component() and get_components()
 # _anvil_enable_drop_mode_().
+  def add_component(self, component):
+    pass
+
+  def get_components():
+    pass
