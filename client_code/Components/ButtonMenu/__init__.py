@@ -30,10 +30,6 @@ class ButtonMenu(ButtonMenuTemplate):
   @menuOpen.setter
   def menuOpen(self, value):
     self._menuOpen = value or False
-    if value:
-      document.addEventListener("click", self.closeOnLoseFocus)
-    else:
-      document.removeEventListener("click", self.closeOnLoseFocus)
   
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
@@ -53,7 +49,13 @@ class ButtonMenu(ButtonMenuTemplate):
       self.set_visibility(False)
 
 
-
+# 
+    # print("menu is")
+    # print(value)
+    # if self._menuOpen:
+    #   document.addEventListener("click", self.closeOnLoseFocus)
+    # else:
+    #   document.removeEventListener("click", self.closeOnLoseFocus) 
 
 
 
@@ -64,8 +66,8 @@ class ButtonMenu(ButtonMenuTemplate):
     design_info = super()._anvil_get_design_info_(as_layout)
     design_info["interactions"] = [
       {
-        "type": "whole_component",
-        "on_selection": {"onSelect": self._on_select, "onDeselect": self._on_deselect, "onSelectDescendent": self._on_select_descendant, "onDeselectDescendant": self._on_deselect_descendant, "onSelectOther": self._on_select_other}
+        "type": "on_selection",
+        "callbacks": {"onSelect": self._on_select, "onDeselect": self._on_deselect, "onSelectDescendent": self._on_select_descendant, "onDeselectDescendant": self._on_deselect_descendant, "onSelectOther": self._on_select_other}
       }
         # {"type": "on_selection", {"onSelect": self._on_select, "onDeselect": self._on_deselect, "onSelectDescendent": self._on_select_descendant, "onDeselectDescendant": self._on_deselect_descendant, "onSelectOther": self._on_select_other}}
     ]
