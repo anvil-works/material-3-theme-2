@@ -26,10 +26,12 @@ class ButtonMenu(ButtonMenuTemplate):
     return self._menuOpen
   @menuOpen.setter
   def menuOpen(self, value):
-    self._menuOpen = value
+    self._menuOpen = value or False
   
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
+    # return classes.contains(className)
+    self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
 
   def set_visibility(self, value = None):
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
@@ -38,6 +40,15 @@ class ButtonMenu(ButtonMenuTemplate):
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
 
+
+
+
+
+
+
+
+
+  
   def _anvil_get_design_info_(self, as_layout=False):
     design_info = super()._anvil_get_design_info_(as_layout)
     design_info["interactions"] = [
