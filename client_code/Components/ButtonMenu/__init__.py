@@ -39,12 +39,25 @@ class ButtonMenu(ButtonMenuTemplate):
     design_info["interactions"] = [
       {
         "type": "whole_component",
-        
+        "on_selection": {"onSelect": self._on_select, "onDeselect": self._on_deselect, "onSelectDescendent": self._on_select_descendant, "onDeselectDescendant": self._on_deselect_descendant, "onSelectOther": self._on_select_other}
       }
         # {"type": "on_selection", {"onSelect": self._on_select, "onDeselect": self._on_deselect, "onSelectDescendent": self._on_select_descendant, "onDeselectDescendant": self._on_deselect_descendant, "onSelectOther": self._on_select_other}}
     ]
     return design_info
 
     # plus a whole bunch of methods called _on_select() etc
+  def _on_select(self):
+    print("on_select called")
 
+  def _on_deselect(self):
+    print("on_deselect called")
+
+  def _on_select_descendant(self):
+    print("_on_select_descendant called")
+
+  def _on_deselect_descendant(self):
+    print("_on_deselect_descendant called")
+
+  def _on_select_other(self):
+    print("_on_select_other called")
   
