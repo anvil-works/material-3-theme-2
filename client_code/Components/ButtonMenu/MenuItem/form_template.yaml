@@ -362,8 +362,8 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
-- {name: text, type: string, default_value: ''}
-- {name: value, type: string, default_value: ''}
+  description: Left Icon
+- {name: text, type: string, default_value: '', description: Display Text for item}
 - name: trailing_icon
   type: enum
   options: [' ', 10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
@@ -726,8 +726,9 @@ properties:
     work_off, work_outline, workspace_premium, workspaces, workspaces_filled, workspaces_outline,
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map]
-- {name: trailing_text, type: string, default_value: ''}
-- {name: hide_leading_icon, type: boolean, default_value: true}
+  description: Right Icon
+- {name: trailing_text, type: string, default_value: '', description: Right Text. Will be to the left of the trailing icon if both exist}
+- {name: hide_leading_icon, type: boolean, default_value: false, description: Option to hide or show the leading icon. This will affect the spacing to the left of the text}
 is_package: true
 events:
 - {name: click, default_event: true}
@@ -735,12 +736,11 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<!-- <div anvil-name=\"anvil-m3-menuItem-container\" class=\"\
-      anvil-m3-menuItem-container\" tabindex=0>\n  <i anvil-name=\"anvil-m3-menuItem-leadingIcon\"\
-      \ class=\"material-symbols-outlined anvil-m3-menuItem-leadingIcon hidden\"></i>\n\
-      \  <div anvil-name=\"anvil-m3-menuItem-itemText\" class=\"anvil-m3-menuItem-itemText\"\
-      \ ></div>\n  <i anvil-name=\"anvil-m3-menuItem-trailingIcon\" class=\"material-symbols-outlined\
-      \ anvil-m3-menuItem-trailingIcon hidden\"></i>\n  <div anvil-name=\"anvil-m3-menuItem-itemText\"\
-      \ class=\"anvil-m3-menuItem-itemText hidden\" ></div>\n</div> -->\n\n<!-- <div\
-      \ anvil-name=\"anvil-m3-menuItem-container\" class=\"anvil-m3-menuItem-container\"\
-      \ tabindex=0>\n  \n</div> -->\n<div> hel</div> <div> asdfasdfasdf</div>"}
+  properties: {html: "<div anvil-name=\"anvil-m3-menuItem-container\" class=\"anvil-m3-menuItem-container\"\
+      \ tabindex=0>\n  <i anvil-name=\"anvil-m3-menuItem-leadingIcon\" class=\"material-symbols-outlined\
+      \ anvil-m3-menuItem-leadingIcon\"></i>\n  <div anvil-name=\"anvil-m3-menuItem-content\"\
+      \ class=\"anvil-m3-menuItem-content\">\n    <div anvil-name=\"anvil-m3-menuItem-text\"\
+      \ class=\"anvil-m3-menuItem-text\"></div>\n    <div anvil-name=\"anvil-m3-menuItem-trailingText\"\
+      \ class=\"anvil-m3-menuItem-trailingText\"></div>\n    <i anvil-name=\"anvil-m3-menuItem-trailingIcon\"\
+      \ class=\"material-symbols-outlined anvil-m3-menuItem-trailingIcon\"></i>\n\
+      \  </div>\n</div>"}
