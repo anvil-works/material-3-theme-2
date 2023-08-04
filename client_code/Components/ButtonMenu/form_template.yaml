@@ -12,42 +12,13 @@ components:
   type: form:Components.Button
   layout_properties: {slot: button}
   event_bindings: {click: toggle_menu_visibility}
-- name: menu_item_2
-  properties: {leading_icon: 3g_mobiledata, value: '', text: teegee, trailing_icon: opacity,
-    trailing_text: rewq, hide_leading_icon: false, enabled: false}
-  type: form:Components.ButtonMenu.MenuItem
-  layout_properties: {slot: anvil-m3-buttomMenu-slot}
-- name: divider_1
-  properties: {}
-  type: form:Components.Divider
-  layout_properties: {slot: anvil-m3-buttomMenu-slot}
-- name: menu_item_1
-  properties: {trailing_text: ctrl + Y, text: jflkds sjf flsdkf lkasfj asdlkjf fjksdlfj sfd}
-  type: form:Components.ButtonMenu.MenuItem
-  layout_properties: {slot: anvil-m3-buttomMenu-slot}
-  event_bindings: {click: menu_item_1_click}
-- name: menu_item_4
-  properties: {trailing_icon: ' ', text: hgfdhgdf hjflsa fjlsd fjdkjfls jfj sldj fjlkalskdjf ;fl;asld fdlkjs fjld jfdks,
-    enabled: false, hide_leading_icon: true}
-  type: form:Components.ButtonMenu.MenuItem
-  layout_properties: {slot: anvil-m3-buttomMenu-slot}
-- name: menu_item_5
-  properties: {trailing_icon: theater_comedy, text: networks! WOW!, leading_icon: network_wifi}
-  type: form:Components.ButtonMenu.MenuItem
-  layout_properties: {slot: anvil-m3-buttomMenu-slot}
-  event_bindings: {click: menu_item_5_click}
-- name: menu_item_3
-  properties: {value: '', text: fghjfgh, trailing_icon: brightness_3, trailing_text: B,
-    leading_icon: free_breakfast, hide_leading_icon: true, enabled: true}
-  type: form:Components.ButtonMenu.MenuItem
-  layout_properties: {slot: anvil-m3-buttomMenu-slot}
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"anvil-m3-buttonMenu-container\"\
       >\n  <!-- the following div needs marker where it prevents exposure of the slot\
       \ when being used in a parent component -->\n  <div anvil-slot=\"button\" internal></div>\
       \ \n  \n  <div anvil-slot=\"anvil-m3-buttomMenu-slot\" anvil-name=\"anvil-m3-buttonMenu-items-container\"\
-      \ \n    class=\"anvil-m3-buttonMenu-items-container anvil-m3-buttonMenu-items-hidden\"\
-      >\n<!--       <p anvil-if-slot-empty=\"anvil-m3-card-slot\" style=\"color: #BBB;\
-      \ grid-column: 0 / span 2;\"><i>Menu items go here</i></p> -->\n  </div>\n</div>"}
+      \ \n    class=\"anvil-m3-buttonMenu-items-container x-anvil-m3-buttonMenu-items-hidden\"\
+      >\n      <p anvil-if-slot-empty=\"anvil-m3-card-slot\" style=\"color: #BBB;\
+      \ grid-column: 0 / span 2;\"><i>Menu items go here</i></p>\n  </div>\n</div>"}
 custom_component_container: true
