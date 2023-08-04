@@ -63,6 +63,8 @@ class MenuItem(MenuItemTemplate):
   @enabled.setter
   def enabled(self, value):
     self._enabled = value
+    self.dom_nodes["anvil-m3-menuItem-container"].classList.toggle("anvil-m3-menuItem-container", value)
+    
 
   def handle_click(self, event):
     event.preventDefault()
