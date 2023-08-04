@@ -1,12 +1,3 @@
-# <div anvil-name="anvil-m3-menuItem-container" class="anvil-m3-menuItem-container" tabindex=0>
-#   <div anvil-name="anvil-m3-menuItem-leadingIcon" class="anvil-m3-menuItem-leadingIcon material-symbols-outlined "></div>
-#   <div anvil-name="anvil-m3-menuItem-content" class="anvil-m3-menuItem-content">
-#     <div anvil-name="anvil-m3-menuItem-text" class="anvil-m3-menuItem-text"></div>
-#     <div anvil-name="anvil-m3-menuItem-trailingText" class="anvil-m3-menuItem-trailingText"></div>
-#     <div anvil-name="anvil-m3-menuItem-trailingIcon" class="anvil-m3-menuItem-trailingIcon material-symbols-outlined"></div>
-#   </div>
-# </div>
-
 from ._anvil_designer import MenuItemTemplate
 from anvil import *
 
@@ -63,7 +54,7 @@ class MenuItem(MenuItemTemplate):
   @enabled.setter
   def enabled(self, value):
     self._enabled = value
-    self.dom_nodes["anvil-m3-menuItem-container"].classList.toggle("anvil-m3-menuItem-container", value)
+    self.dom_nodes["anvil-m3-menuItem-container"].classList.toggle("anvil-m3-menuItem-disabled", not value)
     
 
   def handle_click(self, event):

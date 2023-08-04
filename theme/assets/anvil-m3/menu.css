@@ -24,17 +24,6 @@
 }
 
 /* MenuItems */
-/*
-<div anvil-name="anvil-m3-menuItem-container" class="anvil-m3-menuItem-container" tabindex=0>
-  <div anvil-name="anvil-m3-menuItem-leadingIcon" class="anvil-m3-menuItem-leadingIcon material-symbols-outlined "></div>
-  <div anvil-name="anvil-m3-menuItem-content" class="anvil-m3-menuItem-content">
-    <div anvil-name="anvil-m3-menuItem-text" class="anvil-m3-menuItem-text"></div>
-    <div anvil-name="anvil-m3-menuItem-trailingText" class="anvil-m3-menuItem-trailingText"></div>
-    <div anvil-name="anvil-m3-menuItem-trailingIcon" class="anvil-m3-menuItem-trailingIcon material-symbols-outlined"></div>
-  </div>
-</div>
-*/
-
 .anvil-m3-menuItem-container {
   display: flex;
   align-items: center;
@@ -50,9 +39,10 @@
   min-width: 24px;
   font-size: 24px !important;
   margin-right: 12px;
+  display: block;
 }
 
-.anvil-m3-menuItem-leadingIcon .anvil-m3-menuItem-hideLeadingIcon {
+.anvil-m3-menuItem-leadingIcon.anvil-m3-menuItem-hideLeadingIcon {
   display: none;
 }
 
@@ -86,4 +76,8 @@
 
 .anvil-m3-menuItem-aux {
   color: var(--anvil-m3-on-surface-variant);
+}
+
+.anvil-m3-menuItem-disabled:hover {
+  background-color: blue;
 }
