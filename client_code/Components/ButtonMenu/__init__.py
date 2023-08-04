@@ -13,6 +13,13 @@ class ButtonMenu(ButtonMenuTemplate):
   def text(self, value):
     self._text = value
     self.menu_button.text = value
+    
+  @property
+  def appearance(self):
+    return self._appearance
+  @appearance.setter
+  def appearance(self, value):
+    self.menu_button.appearance = value
   
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
