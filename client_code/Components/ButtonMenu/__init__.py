@@ -65,24 +65,24 @@ class ButtonMenu(ButtonMenuTemplate):
       {
         "type": "on_selection",
         "callbacks": {
-          "onSelect": self._on_select, 
+          # "onSelect": self._on_select, 
           "onDeselect": self._on_deselect, 
           "onSelectDescendent": self._on_select_descendant, 
-          "onDeselectDescendant": self._on_deselect_descendant, "onSelectOther": self._on_select_other}
+          # "onDeselectDescendant": self._on_deselect_descendant, 
+          "onSelectOther": self._on_select_other
+        }
       }
     ]
     return design_info
 
     # plus a whole bunch of methods called _on_select() etc
-  def _on_select(self):
-    print("on_select called")
+  # def _on_select(self):
+  #   print("on_select called")
 
   def _on_deselect(self):
-    print("on_deselect called")
     self.set_visibility(False)
 
   def _on_select_descendant(self):
-    print("_on_select_descendant called")
     self.set_visibility(True)
 
   def _on_deselect_descendant(self):
