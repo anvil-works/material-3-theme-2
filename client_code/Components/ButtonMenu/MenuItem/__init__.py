@@ -22,11 +22,32 @@ class MenuItem(MenuItemTemplate):
   @leading_icon.setter
   def leading_icon(self, value):
     self._leading_icon = value
-    self.dom_nodes[""]
-  # leading_icon
-  # text
-  # trailing_icon
-  # trailling_text
+    self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerText = value
+
+  @property
+  def text(self):
+    return self._text
+  @text.setter
+  def text(self, value):
+    self._text = value
+    self.dom_nodes["anvil-m3-menuItem-text"].innerText = value
+
+  @property
+  def trailing_icon(self):
+    return self._trailing_icon
+  @trailing_icon.setter
+  def trailing_icon(self, value):
+    self._trailing_icon = value
+    self.dom_nodes["anvil-m3-menuItem-trailingIcon"].innerText = value 
+    
+  @property
+  def trailing_text(self):
+    return self._trailing_text
+  @trailing_text.setter
+  def trailing_text(self, value):
+    self._trailing_text = value
+    self.dom_nodes["anvil-m3-menuItem-trailingText"].innerText = value 
+  
   # hide_leading_icon
 
   def handle_click(self, event):

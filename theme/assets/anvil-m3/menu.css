@@ -1,3 +1,4 @@
+/* ButtonMenu */
 .anvil-m3-buttonMenu-container {
   display: inline-block;
   position: relative;
@@ -21,3 +22,28 @@
   height: 1px;
   overflow: hidden;
 }
+
+/* MenuItems */
+/*
+# <div anvil-name="anvil-m3-menuItem-container" class="anvil-m3-menuItem-container" tabindex=0>
+#   <i anvil-name="anvil-m3-menuItem-leadingIcon" class="material-symbols-outlined anvil-m3-menuItem-leadingIcon"></i>
+#   <div anvil-name="anvil-m3-menuItem-content" class="anvil-m3-menuItem-content">
+#     <div anvil-name="anvil-m3-menuItem-text" class="anvil-m3-menuItem-text"></div>
+#     <div anvil-name="anvil-m3-menuItem-trailingText" class="anvil-m3-menuItem-trailingText"></div>
+#     <i anvil-name="anvil-m3-menuItem-trailingIcon" class="material-symbols-outlined anvil-m3-menuItem-trailingIcon"></i>
+#   </div>
+# </div>
+*/
+
+.anvil-m3-menuItem-container {
+  display: flex;
+  width: 100%;
+  padding: 0 12px;
+}
+
+.anvil-m3-menuItem-leadingIcon {
+  width: 24px;
+  font-size: 24px;
+  padding-right: 12px;
+}
+
