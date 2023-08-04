@@ -41,9 +41,32 @@
   padding: 0 12px;
 }
 
+.anvil-m3-menuItem-container:hover{
+  background: pink;
+}
+
 .anvil-m3-menuItem-leadingIcon {
   width: 24px;
   font-size: 24px;
-  padding-right: 12px;
+  margin-right: 12px;
 }
 
+.anvil-m3-menuItem-content {
+  display: flex;
+  width: 100%;
+}
+
+.anvil-m3-menuItem-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.anvil-m3-menuItem-trailingText {
+  
+}
+
+.anvil-m3-menuItem-trailingIcon {
+  
+}
