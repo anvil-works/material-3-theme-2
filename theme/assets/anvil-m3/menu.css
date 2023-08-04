@@ -81,13 +81,18 @@
 /* DISABLED */
 .anvil-m3-menuItem-disabled {
   cursor: default !important;
+  background-color: var(--anvil-m3-surface-container) !important;
 }
 .anvil-m3-menuItem-disabled .anvil-m3-menuItem-core {
-  color: var(--anvil-m3-on-surface);
-  opacity: .38;
+  color: var(--anvil-m3-on-surface) !important;
+  opacity: .38 !important;
 }
 .anvil-m3-menuItem-disabled .anvil-m3-menuItem-aux {
-  color: var(--anvil-m3-on-surface);
-  opacity: .38;
+  color: var(--anvil-m3-on-surface) !important;
+  opacity: .38 !important;
 }
 
+/* hover */
+.anvil-m3-menuItem-container:hover {
+  background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-on-surface);
+}
