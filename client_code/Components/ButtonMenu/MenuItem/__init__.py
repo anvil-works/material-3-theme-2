@@ -22,7 +22,7 @@ class MenuItem(MenuItemTemplate):
   @leading_icon.setter
   def leading_icon(self, value):
     self._leading_icon = value
-    self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerText = value or " "
+    self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerHTML = value or " "
 
   @property
   def text(self):

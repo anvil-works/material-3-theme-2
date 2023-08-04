@@ -46,9 +46,10 @@
 }
 
 .anvil-m3-menuItem-leadingIcon {
-  width: 24px;
+  width: 28px;
   font-size: 24px;
   margin-right: 12px;
+  background: cyan;
 }
 
 .anvil-m3-menuItem-content {
