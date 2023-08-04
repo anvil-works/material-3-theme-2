@@ -1,10 +1,13 @@
 from ._anvil_designer import ButtonMenuTemplate
 from anvil import *
+from anvil.js.window import document
 
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     # TODO: needs an event handler to close when not focused
+    
+
 
   @property
   def text(self):
@@ -27,6 +30,10 @@ class ButtonMenu(ButtonMenuTemplate):
   @menuOpen.setter
   def menuOpen(self, value):
     self._menuOpen = value or False
+    if value:
+      document.addEventListener("click", self.closeOnLoseFocus)
+    else:
+      document.removeEventListener("click", self.closeOnLoseFocus)
   
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
@@ -40,6 +47,11 @@ class ButtonMenu(ButtonMenuTemplate):
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
 
+  def closeOnLoseFocus(self, event):
+    print(event.target)
+
+  # !elem.contains(event.target);
+    # self.set_visibility(false)
 
 
 
