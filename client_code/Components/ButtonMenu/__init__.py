@@ -21,8 +21,12 @@ class ButtonMenu(ButtonMenuTemplate):
   def appearance(self, value):
     self.menu_button.appearance = value
 
-  # get all the child components in the menu container
-  
+  @property
+  def menuOpen(self):
+    return self._menuOpen
+  @menuOpen.setter
+  def menuOpen(self, value):
+    self._menuOpen = value
   
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
@@ -60,4 +64,12 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _on_select_other(self):
     print("_on_select_other called")
+
+  def menu_item_1_click(self, **event_args):
+    print("clicked the first one!")
+
+  def menu_item_5_click(self, **event_args):
+    print("clicked another one")
+
+
   
