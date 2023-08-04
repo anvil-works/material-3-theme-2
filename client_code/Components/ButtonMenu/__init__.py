@@ -99,3 +99,6 @@ class ButtonMenu(ButtonMenuTemplate):
 
   # def _on_select_other(self):
   #   print("_on_select_other called")
+
+#  a container must implement add_component() and get_components()
+# _anvil_enable_drop_mode_().
