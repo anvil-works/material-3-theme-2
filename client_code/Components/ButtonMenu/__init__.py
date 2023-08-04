@@ -39,7 +39,7 @@ class ButtonMenu(ButtonMenuTemplate):
     print(value)
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
     if value:
-      classes.toggle('anvil-m3-buttonMenu-items-hidden', value)
+      classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
 
