@@ -13,19 +13,21 @@ components:
   layout_properties: {slot: button}
   event_bindings: {click: toggle_menu_visibility}
 - name: menu_item_2
-  properties: {leading_icon: 3g_mobiledata, value: '', text: teegee}
+  properties: {leading_icon: 3g_mobiledata, value: '', text: teegee, trailing_icon: opacity,
+    trailing_text: rewq, hide_leading_icon: true}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: menu_item_1
-  properties: {}
+  properties: {trailing_text: ctrl + Y, text: gfdsgsdfg}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: menu_item_4
-  properties: {}
+  properties: {trailing_icon: man_2, text: hgfdhgdf}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 - name: menu_item_3
-  properties: {value: '', text: fghjfgh, trailing_icon: addchart}
+  properties: {value: '', text: fghjfgh, trailing_icon: brightness_3, trailing_text: B,
+    leading_icon: free_breakfast}
   type: form:Components.ButtonMenu.MenuItem
   layout_properties: {slot: anvil-m3-buttomMenu-slot}
 container:
