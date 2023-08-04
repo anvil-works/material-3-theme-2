@@ -743,7 +743,4 @@ container:
       anvil-m3-menuItem-text\" class=\"anvil-m3-menuItem-text\"></div>\n    <div anvil-name=\"\
       anvil-m3-menuItem-trailingText\" class=\"anvil-m3-menuItem-trailingText\"></div>\n\
       \    <div anvil-name=\"anvil-m3-menuItem-trailingIcon\" class=\"anvil-m3-menuItem-trailingIcon\
-      \ material-symbols-outlined\"></div>\n  </div>\n</div>\n\n\n<div class=\"container\"\
-      >\n  <div class=\"icon\"></div>\n  <div class=\"content\">\n    <div class=\"\
-      text\"></div>\n    <div class=\"trailing_text\"></div>\n    <div class=\"trailing_icon\"\
-      ></div>\n  </div>\n</div>"}
+      \ material-symbols-outlined\"></div>\n  </div>\n</div>"}
