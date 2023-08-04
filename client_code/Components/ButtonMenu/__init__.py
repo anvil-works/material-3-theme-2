@@ -36,6 +36,7 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def set_visibility(self, value = None):
     print("do something")
+    print(value)
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
     if value:
       classes.toggle('anvil-m3-buttonMenu-items-hidden', value)
