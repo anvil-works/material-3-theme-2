@@ -63,7 +63,7 @@
   overflow: hidden;
 }
 
-.anvil-m3-menuItem-text {
+.anvil-m3-menuItem-labelText {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -78,4 +78,12 @@
 
 .anvil-m3-menuItem-trailingIcon {
   font-size: 24px !important;
+}
+
+.anvil-m3-menuItem-labelText {
+  color: var(--anvil-m3-on-surface);
+}
+
+.anvil-m3-menuItem-icon {
+  color: var(--anvil-m3-on-surface);
 }
