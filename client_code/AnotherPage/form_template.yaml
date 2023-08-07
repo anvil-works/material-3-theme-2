@@ -18,6 +18,6 @@ components_by_slot:
       layout_properties: {}
       components:
       - name: button_menu_2
-        properties: {}
+        properties: {text: outside menu}
         type: form:Components.ButtonMenu
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
