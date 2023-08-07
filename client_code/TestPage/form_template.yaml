@@ -44,6 +44,10 @@ components_by_slot:
       properties: {}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_11
+      properties: {}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_10
       properties: {}
       type: form:Components.ButtonMenu.MenuItem
@@ -96,10 +100,6 @@ components_by_slot:
         - name: label_7
           properties: {}
           type: Label
-      - name: menu_item_11
-        properties: {}
-        type: form:Components.ButtonMenu.MenuItem
-        layout_properties: {slot: anvil-m3-card-slot}
     - name: card_1
       properties: {}
       type: form:Components.Card
