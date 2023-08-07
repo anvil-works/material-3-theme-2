@@ -71,7 +71,7 @@ class ButtonMenu(ButtonMenuTemplate):
       {
         "type": "on_selection",
         "callbacks": {
-        
+          "onSelect": self.
           "onSelectDescendent": self._on_select_descendant, 
           "onSelectOther": self._on_select_other
         }
