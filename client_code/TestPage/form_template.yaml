@@ -7,13 +7,13 @@ components_by_slot:
     type: form:Components.ButtonMenu
     layout_properties: {}
     components:
-    - name: menu_item_4
-      properties: {}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_2
       properties: {text: Bold, leading_icon: ' ', trailing_icon: ' ', hide_leading_icon: true,
         trailing_text: ⌘B}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_4
+      properties: {}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: divider_3
