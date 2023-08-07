@@ -62,11 +62,6 @@ class ButtonMenu(ButtonMenuTemplate):
     #   document.addEventListener("click", self.closeOnLoseFocus)
     # else:
     #   document.removeEventListener("click", self.closeOnLoseFocus) 
-
-
-
-
-
   
   def _anvil_get_design_info_(self, as_layout=False):
     design_info = super()._anvil_get_design_info_(as_layout)
@@ -74,11 +69,11 @@ class ButtonMenu(ButtonMenuTemplate):
       {
         "type": "on_selection",
         "callbacks": {
-          # "onSelect": self._on_select, 
+          # "onSelect": self._on_select,  
           # "onDeselect": self._on_deselect, 
           "onSelectDescendent": self._on_select_descendant, 
-          "onDeselectDescendant": self._on_deselect_descendant, 
-          # "onSelectOther": self._on_select_other
+          # "onDeselectDescendant": self._on_deselect_descendant, 
+          "onSelectOther": self._on_select_other
         }
       },
       # { # TODO: get this to work so you can edit the text in the button
@@ -109,14 +104,5 @@ class ButtonMenu(ButtonMenuTemplate):
   def _on_deselect_descendant(self):
     self.set_visibility(False)
 
-  # def _on_select_other(self):
-  #   print("_on_select_other called")
-
-#  a container must implement add_component() and get_components()
-# _anvil_enable_drop_mode_().
-    
-  # def add_component(self, component):
-  #   pass
-
-  # def get_components():
-  #   pass
+  def _on_select_other(self):
+    self.set_visibility(False)
