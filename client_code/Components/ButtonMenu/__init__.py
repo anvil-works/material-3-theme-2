@@ -80,9 +80,6 @@ class ButtonMenu(ButtonMenuTemplate):
   
   def _on_select_descendant(self):
     self.set_visibility(True)
-
-  def _on_deselect_descendant(self):
-    self.set_visibility(False)
-
+    
   def _on_select_other(self):
     self.set_visibility(False)
