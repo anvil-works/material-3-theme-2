@@ -4,6 +4,7 @@ properties:
   type: enum
   options: [elevated, filled, tonal, outlined]
   description: Style of Button
+  default_value: elevated
 is_package: true
 custom_component: true
 components:
