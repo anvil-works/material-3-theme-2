@@ -8,7 +8,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: menu_item_2
-      properties: {text: Bold, leading_icon: ' ', trailing_icon: 18mp, hide_leading_icon: true}
+      properties: {text: Bold, leading_icon: ' ', trailing_icon: ' ', hide_leading_icon: true}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: divider_3
