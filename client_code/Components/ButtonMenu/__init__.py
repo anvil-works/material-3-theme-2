@@ -73,7 +73,7 @@ class ButtonMenu(ButtonMenuTemplate):
           "onSelectOther": self._on_select_other
         }
       },
-    # Interactions we want to add: Edit the  
+    # Interactions we want to add: Edit the button text 
     ]
     return design_info
 
