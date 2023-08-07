@@ -76,9 +76,3 @@ class ButtonMenu(ButtonMenuTemplate):
       },
     ]
     return design_info
-
-  def _on_select_descendant(self):
-    self.set_visibility(True)
-
-  def _on_select_other(self):
-    self.set_visibility(False)
