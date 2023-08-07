@@ -43,7 +43,9 @@ class ButtonMenu(ButtonMenuTemplate):
   def enabled(self):
     return self._enabled
   @enabled.setter
-  def 
+  def enabled(self, value):
+    self._enabled = value
+    //
   
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
