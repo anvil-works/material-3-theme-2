@@ -94,8 +94,8 @@ class ButtonMenu(ButtonMenuTemplate):
     ]
     return design_info
 
-  def _anvil_enable_drop_mode_(self, dropping_object):
-    pass
+  # def _anvil_enable_drop_mode_(self, dropping_object):
+  #   return []
 
     # plus a whole bunch of methods called _on_select() etc
   # def _on_select(self):
@@ -115,8 +115,9 @@ class ButtonMenu(ButtonMenuTemplate):
 
 #  a container must implement add_component() and get_components()
 # _anvil_enable_drop_mode_().
-  def add_component(self, component):
-    pass
+    
+  # def add_component(self, component):
+  #   pass
 
-  def get_components():
-    pass
+  # def get_components():
+  #   pass
