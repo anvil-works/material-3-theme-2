@@ -64,7 +64,7 @@ class ButtonMenu(ButtonMenuTemplate):
   #     self.set_visibility(False)
 
   def noFocus(self, event):
-    
+    # document.activeElement
 
 
   def _anvil_get_design_info_(self, as_layout=False):
