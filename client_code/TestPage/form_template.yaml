@@ -68,6 +68,10 @@ components_by_slot:
       properties: {text: Item 3, leading_icon: content_paste, trailing_text: ⌘V, enabled: false}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: divider_5
+      properties: {}
+      type: form:Components.Divider
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_15
       properties: {text: Item 4, leading_icon: cloud, trailing_icon: arrow_right}
       type: form:Components.ButtonMenu.MenuItem
