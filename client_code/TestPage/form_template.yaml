@@ -16,13 +16,13 @@ components_by_slot:
       properties: {text: Italic, trailing_text: ⌘I}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: divider_3
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_5
       properties: {text: wirjs±}
       type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: divider_3
+      properties: {}
+      type: form:Components.Divider
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: flow_panel_1
     properties: {}
