@@ -81,6 +81,9 @@ components_by_slot:
         properties: {text: Item 4, leading_icon: cloud, trailing_icon: arrow_right}
         type: form:Components.ButtonMenu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: button_menu_2
+      properties: {}
+      type: form:Components.ButtonMenu
   - name: flow_panel_1
     properties: {}
     type: FlowPanel
