@@ -30,3 +30,12 @@ components_by_slot:
     properties: {text: not in a panel}
     type: form:Components.ButtonMenu
     layout_properties: {}
+    components:
+    - name: label_1
+      properties: {text: LABEL!, align: center, bold: true, underline: true}
+      type: Label
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_2
+      properties: {text: item 1, hide_leading_icon: true}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
