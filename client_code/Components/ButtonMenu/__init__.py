@@ -57,7 +57,7 @@ class ButtonMenu(ButtonMenuTemplate):
 
 
 
-  def _on_select_descendant(self):
+  def _on_select(self):
     print("selecting. should be open now")
     self.set_visibility(True)
     
@@ -76,7 +76,7 @@ class ButtonMenu(ButtonMenuTemplate):
         "type": "on_selection",
         "callbacks": {
           "onSelect": self._on_select,
-          "onSelectDescendent": self._on_select_descendant, 
+          # "onSelectDescendent": self._on_select_descendant, 
           "onSelectOther": self._on_select_other
         }
       },
