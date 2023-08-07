@@ -20,6 +20,10 @@ components_by_slot:
       properties: {text: Underline, hide_leading_icon: true, trailing_text: ⌘U}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_6
+      properties: {}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: divider_3
       properties: {}
       type: form:Components.Divider
