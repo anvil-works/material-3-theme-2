@@ -11,3 +11,7 @@ components_by_slot:
     properties: {height: 205}
     type: GoogleMap
     layout_properties: {}
+    components:
+    - name: button_menu_1
+      properties: {}
+      type: form:Components.ButtonMenu
