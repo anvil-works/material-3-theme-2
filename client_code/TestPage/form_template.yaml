@@ -2,6 +2,10 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_1:
+  - name: flow_panel_5
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
   - name: button_menu_1
     properties: {appearance: filled, text: Format}
     type: form:Components.ButtonMenu
