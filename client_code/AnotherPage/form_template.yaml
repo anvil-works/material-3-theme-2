@@ -6,3 +6,7 @@ components_by_slot:
     properties: {}
     type: FlowPanel
     layout_properties: {}
+    components:
+    - name: button_menu_1
+      properties: {}
+      type: form:Components.ButtonMenu
