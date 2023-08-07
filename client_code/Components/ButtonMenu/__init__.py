@@ -73,7 +73,7 @@ class ButtonMenu(ButtonMenuTemplate):
           "onSelectOther": self._on_select_other
         }
       },
-# 
+    # 
     ]
     return design_info
 
