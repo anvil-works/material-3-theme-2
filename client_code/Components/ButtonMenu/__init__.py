@@ -7,8 +7,7 @@ class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     # TODO: needs an event handler to close when not focused
-    # self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
-  
+    self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
   @property
   def id(self):
     return self._id
@@ -41,6 +40,7 @@ class ButtonMenu(ButtonMenuTemplate):
   
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
+    # return classes.contains(className)
     self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
 
   def set_visibility(self, value = None):
@@ -69,17 +69,40 @@ class ButtonMenu(ButtonMenuTemplate):
       {
         "type": "on_selection",
         "callbacks": {
+          # "onSelect": self._on_select,  
+          # "onDeselect": self._on_deselect, 
           "onSelectDescendent": self._on_select_descendant, 
-          "onSelectOther": self._on_select_other
+          # "onDeselectDescendant": self._on_deselect_descendant, 
+          # "onSelectOther": self._on_select_other
         }
-      }
-      # Interactions we want to add: Edit the button text
-      # Enable/Disable
+      },
+      # { # TODO: get this to work so you can edit the text in the button
+      # "type": "whole_component",
+      # "title": "Edit button text",
+      # "icon": "edit",
+      # "callbacks": 
+      #   {
+      #     "execute": lambda: anvil.designer.start_inline_editing(self.menu_button, "text", self.menu_button.dom_nodes['anvil-m3-button-text'])
+      #   }
+      # }
     ]
     return design_info
-  
+
+  # def _anvil_enable_drop_mode_(self, dropping_object):
+  #   return []
+
+    # plus a whole bunch of methods called _on_select() etc
+  # def _on_select(self):
+  #   print("on_select called")
+
+  def _on_deselect(self):
+    self.set_visibility(False)
+
   def _on_select_descendant(self):
     self.set_visibility(True)
-    
-  def _on_select_other(self):
+
+  def _on_deselect_descendant(self):
     self.set_visibility(False)
+
+  # def _on_select_other(self):
+  #   print("_on_select_other called")
