@@ -65,9 +65,10 @@ class ButtonMenu(ButtonMenuTemplate):
   #   if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
   #     self.set_visibility(False)
 
-  def noFocus(self, event):
+  def checkFocus(self, event):
     # document.activeElement
     # var descendants = theElement.querySelectorAll("*");
+    
     pass
 
 
