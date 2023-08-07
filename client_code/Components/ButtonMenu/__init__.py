@@ -73,33 +73,13 @@ class ButtonMenu(ButtonMenuTemplate):
           "onSelectOther": self._on_select_other
         }
       },
-      # { # TODO: get this to work so you can edit the text in the button
-      # "type": "whole_component",
-      # "title": "Edit button text",
-      # "icon": "edit",
-      # "callbacks": 
-      #   {
-      #     "execute": lambda: anvil.designer.start_inline_editing(self.menu_button, "text", self.menu_button.dom_nodes['anvil-m3-button-text'])
-      #   }
-      # }
+      # Interactions we want to add: Edit the button text
+      # Enable/Disable
     ]
     return design_info
-
-  # def _anvil_enable_drop_mode_(self, dropping_object):
-  #   return []
-
-    # plus a whole bunch of methods called _on_select() etc
-  # def _on_select(self):
-  #   print("on_select called")
-
-  def _on_deselect(self):
-    self.set_visibility(False)
-
+  
   def _on_select_descendant(self):
     self.set_visibility(True)
-
-  def _on_deselect_descendant(self):
-    self.set_visibility(False)
-
+    
   def _on_select_other(self):
     self.set_visibility(False)
