@@ -74,7 +74,7 @@ class ButtonMenu(ButtonMenuTemplate):
         }
       },
       # Interactions we want to add: Edit the button text
-      # 
+      # Enable/Disable
     ]
     return design_info
 
