@@ -39,7 +39,7 @@ class ButtonMenu(ButtonMenuTemplate):
   def menuOpen(self, value):
     self._menuOpen = value or False
     if value:
-      self.dom_nodes['anvil-m3-buttonMenu-container'].addEventListener('click')
+      self.dom_nodes['anvil-m3-buttonMenu-container'].addEventListener('focus')
 
   @property
   def enabled(self):
