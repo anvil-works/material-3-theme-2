@@ -62,6 +62,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self.set_visibility(True)
 
   def _on_select_other(self):
+    print("closing menu")
     self.set_visibility(False)
 
   def _anvil_get_design_info_(self, as_layout=False):
