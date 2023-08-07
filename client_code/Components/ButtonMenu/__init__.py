@@ -70,10 +70,7 @@ class ButtonMenu(ButtonMenuTemplate):
       {
         "type": "on_selection",
         "callbacks": {
-          # "onSelect": self._on_select,  
-          # "onDeselect": self._on_deselect, 
           "onSelectDescendent": self._on_select_descendant, 
-          # "onDeselectDescendant": self._on_deselect_descendant, 
           "onSelectOther": self._on_select_other
         }
       },
