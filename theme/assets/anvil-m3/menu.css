@@ -23,6 +23,7 @@
   opacity: 0;
   height: 1px;
   overflow: hidden;
+  z-index: 0;
 }
 
 /***** MenuItems *****/
