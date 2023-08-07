@@ -65,6 +65,7 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def noFocus(self, event):
     # document.activeElement
+    var descendants = theElement.querySelectorAll("*");
 
 
   def _anvil_get_design_info_(self, as_layout=False):
