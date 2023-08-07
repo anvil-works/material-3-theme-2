@@ -44,6 +44,10 @@ components_by_slot:
       properties: {}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_10
+      properties: {}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: flow_panel_1
     properties: {}
     type: FlowPanel
