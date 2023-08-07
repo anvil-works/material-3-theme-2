@@ -39,7 +39,7 @@ class ButtonMenu(ButtonMenuTemplate):
   def menuOpen(self, value):
     self._menuOpen = value or False
     if value:
-      se
+      self.dom_nodes
 
   @property
   def enabled(self):
