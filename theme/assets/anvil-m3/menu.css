@@ -17,7 +17,7 @@
 }
 
 .anvil-m3-buttonMenu-items-hidden {
-  display: 
+  display: n ;
   pointer-events: none;
   opacity: 0;
   height: 1px;
