@@ -57,7 +57,7 @@ components_by_slot:
       type: form:Components.Divider
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_12
-      properties: {}
+      properties: {text: Item 1}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_13
