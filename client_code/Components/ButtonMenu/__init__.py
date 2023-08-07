@@ -72,7 +72,7 @@ class ButtonMenu(ButtonMenuTemplate):
           "onSelectDescendent": self._on_select_descendant, 
           "onSelectOther": self._on_select_other
         }
-      },
+      }
       # Interactions we want to add: Edit the button text
       # Enable/Disable
     ]
