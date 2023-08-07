@@ -17,8 +17,9 @@ container:
   properties: {html: "<div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"anvil-m3-buttonMenu-container\"\
       >\n  <!-- the following div needs marker where it prevents exposure of the slot\
       \ when being used in a parent component -->\n  <div anvil-slot=\"button\" internal></div>\
-      \ \n  \n  <div anvil-slot=\"anvil-m3-buttomMenu-slot\" anvil-name=\"anvil-m3-buttonMenu-items-container\"\
+      \ \n  \n  <div anvil-slot=\"anvil-m3-buttonMenu-slot\" anvil-name=\"anvil-m3-buttonMenu-items-container\"\
       \ \n    class=\"anvil-m3-buttonMenu-items-container anvil-m3-buttonMenu-items-hidden\"\
-      >\n      <p anvil-if-slot-empty=\"anvil-m3-card-slot\" style=\"color: #BBB;\
-      \ grid-column: 0 / span 2;\"><i>Menu items go here</i></p>\n  </div>\n</div>"}
+      >\n<!--       <p anvil-if-slot-empty=\"anvil-m3-buttonMenu-slot\" style=\"color:\
+      \ #BBB; grid-column: 0 / span 2;\"><i>Menu items go here</i></p> -->\n  </div>\n\
+      </div>"}
 custom_component_container: true
