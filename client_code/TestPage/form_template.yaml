@@ -20,13 +20,13 @@ components_by_slot:
       properties: {text: Underline, hide_leading_icon: true, trailing_text: ⌘U}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: divider_4
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_6
       properties: {trailing_text: ⌘+Shift+X, text: Strikethrough, hide_leading_icon: true}
       type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: divider_4
+      properties: {}
+      type: form:Components.Divider
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_7
       properties: {text: Single Spacing}
