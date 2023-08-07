@@ -68,7 +68,7 @@ class ButtonMenu(ButtonMenuTemplate):
   def checkFocus(self, event):
     # document.activeElement
     # var descendants = theElement.querySelectorAll("*");
-    print(event.target, event.)
+    print(event.target)
     pass
 
 
