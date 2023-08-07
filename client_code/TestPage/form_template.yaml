@@ -82,8 +82,9 @@ components_by_slot:
         type: form:Components.ButtonMenu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: button_menu_2
-      properties: {}
+      properties: {appearance: tonal}
       type: form:Components.ButtonMenu
+      layout_properties: {}
   - name: flow_panel_1
     properties: {}
     type: FlowPanel
