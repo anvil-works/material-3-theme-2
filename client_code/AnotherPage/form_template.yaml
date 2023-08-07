@@ -16,3 +16,8 @@ components_by_slot:
       properties: {text: test buttonMenu}
       type: form:Components.ButtonMenu
       layout_properties: {}
+      components:
+      - name: button_menu_2
+        properties: {}
+        type: form:Components.ButtonMenu
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
