@@ -28,6 +28,10 @@ components_by_slot:
       properties: {}
       type: form:Components.Divider
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_11
+      properties: {}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_7
       properties: {text: Single Spacing}
       type: form:Components.ButtonMenu.MenuItem
@@ -41,10 +45,6 @@ components_by_slot:
       type: form:Components.Divider
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_9
-      properties: {}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_11
       properties: {}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
