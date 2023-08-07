@@ -40,7 +40,9 @@ class ButtonMenu(ButtonMenuTemplate):
     self._menuOpen = value or False
 
   @property
-  def enabled(self)
+  def enabled(self):
+    return self._enabled
+  @
   
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
