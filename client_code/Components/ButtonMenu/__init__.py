@@ -62,6 +62,7 @@ class ButtonMenu(ButtonMenuTemplate):
   # def closeOnLoseFocus(self, event):
   #   if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
   #     self.set_visibility(False)
+  
 
 
   def _anvil_get_design_info_(self, as_layout=False):
