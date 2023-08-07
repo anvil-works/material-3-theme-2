@@ -47,7 +47,6 @@ class ButtonMenu(ButtonMenuTemplate):
     self._enabled = value
     self.menu_button.enabled = value
     
-  
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
     # return classes.contains(className)
@@ -64,12 +63,6 @@ class ButtonMenu(ButtonMenuTemplate):
   #   if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
   #     self.set_visibility(False)
 
-   
-  def _on_select_descendant(self):
-    self.set_visibility(True)
-
-  def _on_select_other(self):
-    self.set_visibility(False)
 
   def _anvil_get_design_info_(self, as_layout=False):
     design_info = super()._anvil_get_design_info_(as_layout)
@@ -83,3 +76,9 @@ class ButtonMenu(ButtonMenuTemplate):
       },
     ]
     return design_info
+   
+  def _on_select_descendant(self):
+    self.set_visibility(True)
+
+  def _on_select_other(self):
+    self.set_visibility(False)
