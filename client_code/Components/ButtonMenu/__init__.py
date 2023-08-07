@@ -77,10 +77,7 @@ class ButtonMenu(ButtonMenuTemplate):
       # Enable/Disable
     ]
     return design_info
-    
-  def _on_deselect(self):
-    self.set_visibility(False)
-
+  
   def _on_select_descendant(self):
     self.set_visibility(True)
 
