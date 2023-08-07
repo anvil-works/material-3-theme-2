@@ -45,7 +45,6 @@ class ButtonMenu(ButtonMenuTemplate):
   @enabled.setter
   def enabled(self, value):
     self._enabled = value
-    # disable the button from beingh pressed
     self.menu_button.enabled = value
     
   
