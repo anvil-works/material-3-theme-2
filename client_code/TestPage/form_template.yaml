@@ -52,6 +52,10 @@ components_by_slot:
       properties: {trailing_icon: arrow_right, hide_leading_icon: true, text: List options}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: divider_2
+      properties: {}
+      type: form:Components.Divider
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: flow_panel_1
     properties: {}
     type: FlowPanel
