@@ -38,6 +38,8 @@ class ButtonMenu(ButtonMenuTemplate):
   @menuOpen.setter
   def menuOpen(self, value):
     self._menuOpen = value or False
+
+  
   
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
