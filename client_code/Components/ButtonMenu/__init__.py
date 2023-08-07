@@ -72,8 +72,8 @@ class ButtonMenu(ButtonMenuTemplate):
           # "onSelect": self._on_select,  
           # "onDeselect": self._on_deselect, 
           "onSelectDescendent": self._on_select_descendant, 
-          "onDeselectDescendant": self._on_deselect_descendant, 
-          # "onSelectOther": self._on_select_other
+          # "onDeselectDescendant": self._on_deselect_descendant, 
+          "onSelectOther": self._on_select_other
         }
       },
       # { # TODO: get this to work so you can edit the text in the button
