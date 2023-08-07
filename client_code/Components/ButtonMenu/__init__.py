@@ -73,8 +73,15 @@ class ButtonMenu(ButtonMenuTemplate):
           "onSelectOther": self._on_select_other
         }
       },
-      # Interactions we want to add: Edit the button text
-      # 
+      # { # TODO: get this to work so you can edit the text in the button
+      # "type": "whole_component",
+      # "title": "Edit button text",
+      # "icon": "edit",
+      # "callbacks": 
+      #   {
+      #     "execute": lambda: anvil.designer.start_inline_editing(self.menu_button, "text", self.menu_button.dom_nodes['anvil-m3-button-text'])
+      #   }
+      # }
     ]
     return design_info
 
