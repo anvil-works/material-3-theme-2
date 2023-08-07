@@ -7,8 +7,7 @@ class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     # TODO: needs an event handler to close when not focused
-    # self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
-  
+    self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
   @property
   def id(self):
     return self._id
@@ -73,8 +72,8 @@ class ButtonMenu(ButtonMenuTemplate):
           # "onSelect": self._on_select,  
           # "onDeselect": self._on_deselect, 
           "onSelectDescendent": self._on_select_descendant, 
-          # "onDeselectDescendant": self._on_deselect_descendant, 
-          "onSelectOther": self._on_select_other
+          "onDeselectDescendant": self._on_deselect_descendant, 
+          # "onSelectOther": self._on_select_other
         }
       },
       # { # TODO: get this to work so you can edit the text in the button
@@ -105,5 +104,5 @@ class ButtonMenu(ButtonMenuTemplate):
   def _on_deselect_descendant(self):
     self.set_visibility(False)
 
-  def _on_select_other(self):
-    self.set_visibility(False)
+  # def _on_select_other(self):
+  #   print("_on_select_other called")
