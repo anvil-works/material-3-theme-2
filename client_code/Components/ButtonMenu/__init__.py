@@ -73,7 +73,8 @@ class ButtonMenu(ButtonMenuTemplate):
           "onSelectDescendent": self._on_select_descendant, 
           "onSelectOther": self._on_select_other
         }
-      },]
+      },
+    ]
     return design_info
 
   def _on_select_descendant(self):
