@@ -12,12 +12,11 @@ components_by_slot:
       type: form:Components.ButtonMenu
       layout_properties: {}
       components: []
+    - name: menu_item_1
+      properties: {text: item 1 in menu 2}
+      type: form:Components.ButtonMenu.MenuItem
   - name: button_menu_2
     properties: {text: outside menu, appearance: filled}
     type: form:Components.ButtonMenu
     layout_properties: {}
-    components:
-    - name: menu_item_1
-      properties: {text: item 1 in menu 2}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    components: []
