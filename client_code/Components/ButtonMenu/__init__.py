@@ -95,7 +95,7 @@ class ButtonMenu(ButtonMenuTemplate):
     return design_info
 
   def _anvil_enable_drop_mode_(self, dropping_object):
-    
+    pass
 
     # plus a whole bunch of methods called _on_select() etc
   # def _on_select(self):
