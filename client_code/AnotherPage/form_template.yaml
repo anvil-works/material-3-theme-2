@@ -8,5 +8,6 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: button_menu_1
-      properties: {}
+      properties: {text: test menu}
       type: form:Components.ButtonMenu
+      layout_properties: {}
