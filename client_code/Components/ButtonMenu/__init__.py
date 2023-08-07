@@ -77,14 +77,7 @@ class ButtonMenu(ButtonMenuTemplate):
       # Enable/Disable
     ]
     return design_info
-
-  # def _anvil_enable_drop_mode_(self, dropping_object):
-  #   return []
-
-    # plus a whole bunch of methods called _on_select() etc
-  # def _on_select(self):
-  #   print("on_select called")
-
+    
   def _on_deselect(self):
     self.set_visibility(False)
 
