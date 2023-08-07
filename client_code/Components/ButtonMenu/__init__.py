@@ -105,5 +105,5 @@ class ButtonMenu(ButtonMenuTemplate):
   def _on_deselect_descendant(self):
     self.set_visibility(False)
 
-  # def _on_select_other(self):
-  #   print("_on_select_other called")
+  def _on_select_other(self):
+    print("_on_select_other called")
