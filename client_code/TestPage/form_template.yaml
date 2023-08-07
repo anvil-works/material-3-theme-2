@@ -11,16 +11,16 @@ components_by_slot:
       properties: {text: asdfasdf, leading_icon: 20mp, trailing_icon: 18mp}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_3
-      properties: {text: asdfasdf}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: divider_3
       properties: {}
       type: form:Components.Divider
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_4
       properties: {}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_5
+      properties: {text: wirjs±}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: flow_panel_1
@@ -46,6 +46,10 @@ components_by_slot:
         type: form:Components.RadioButton
         layout_properties: {slot: anvil-m3-card-slot}
         event_bindings: {click: group_qwer_click}
+      - name: menu_item_3
+        properties: {text: asdfasdf}
+        type: form:Components.ButtonMenu.MenuItem
+        layout_properties: {slot: anvil-m3-card-slot}
       - name: name
         properties: {group: c, name: nothing 3, selected: true, value: '8', group_name: qwer}
         type: form:Components.RadioButton
