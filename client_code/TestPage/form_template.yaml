@@ -2,80 +2,6 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_1:
-  - name: button_menu_1
-    properties: {appearance: elevated, text: Format, enabled: true}
-    type: form:Components.ButtonMenu
-    components:
-    - name: menu_item_2
-      properties: {text: Bold, leading_icon: ' ', trailing_icon: ' ', hide_leading_icon: true,
-        trailing_text: ⌘B}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_4
-      properties: {text: Italic, trailing_text: ⌘I, hide_leading_icon: true}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_5
-      properties: {text: Underline, hide_leading_icon: true, trailing_text: ⌘U}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_6
-      properties: {trailing_text: ⌘+Shift+X, text: Strikethrough, hide_leading_icon: true}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: divider_4
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_7
-      properties: {text: Single Spacing}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_8
-      properties: {text: '1.15'}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_11
-      properties: {text: Double Spacing, leading_icon: check}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: divider_3
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_9
-      properties: {text: Numbered Lists, trailing_icon: arrow_right, hide_leading_icon: true}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_10
-      properties: {trailing_icon: arrow_right, hide_leading_icon: true, text: List options}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: divider_2
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_12
-      properties: {text: Item 1, leading_icon: content_cut, trailing_text: ⌘X}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_13
-      properties: {text: Item 2, leading_icon: content_copy, trailing_text: ⌘C}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_14
-      properties: {text: Item 3, leading_icon: content_paste, trailing_text: ⌘V, enabled: false}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: divider_5
-      properties: {}
-      type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_15
-      properties: {text: Item 4, leading_icon: cloud, trailing_icon: arrow_right}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    layout_properties: {}
   - name: flow_panel_5
     properties: {}
     type: FlowPanel
@@ -220,5 +146,79 @@ components_by_slot:
         properties: {text: button_4}
         type: Button
         layout_properties: {slot: anvil-m3-card-slot}
+  - name: button_menu_1
+    properties: {appearance: elevated, text: Format, enabled: true}
+    type: form:Components.ButtonMenu
+    components:
+    - name: menu_item_2
+      properties: {text: Bold, leading_icon: ' ', trailing_icon: ' ', hide_leading_icon: true,
+        trailing_text: ⌘B}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_4
+      properties: {text: Italic, trailing_text: ⌘I, hide_leading_icon: true}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_5
+      properties: {text: Underline, hide_leading_icon: true, trailing_text: ⌘U}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_6
+      properties: {trailing_text: ⌘+Shift+X, text: Strikethrough, hide_leading_icon: true}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: divider_4
+      properties: {}
+      type: form:Components.Divider
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_7
+      properties: {text: Single Spacing}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_8
+      properties: {text: '1.15'}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_11
+      properties: {text: Double Spacing, leading_icon: check}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: divider_3
+      properties: {}
+      type: form:Components.Divider
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_9
+      properties: {text: Numbered Lists, trailing_icon: arrow_right, hide_leading_icon: true}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_10
+      properties: {trailing_icon: arrow_right, hide_leading_icon: true, text: List options}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: divider_2
+      properties: {}
+      type: form:Components.Divider
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_12
+      properties: {text: Item 1, leading_icon: content_cut, trailing_text: ⌘X}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_13
+      properties: {text: Item 2, leading_icon: content_copy, trailing_text: ⌘C}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_14
+      properties: {text: Item 3, leading_icon: content_paste, trailing_text: ⌘V, enabled: false}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: divider_5
+      properties: {}
+      type: form:Components.Divider
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_15
+      properties: {text: Item 4, leading_icon: cloud, trailing_icon: arrow_right}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
