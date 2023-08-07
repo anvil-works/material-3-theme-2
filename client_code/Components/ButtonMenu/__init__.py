@@ -38,6 +38,7 @@ class ButtonMenu(ButtonMenuTemplate):
   @menuOpen.setter
   def menuOpen(self, value):
     self._menuOpen = value or False
+    # if it's open, 
 
   @property
   def enabled(self):
