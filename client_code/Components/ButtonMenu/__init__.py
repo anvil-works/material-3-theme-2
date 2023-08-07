@@ -64,11 +64,7 @@ class ButtonMenu(ButtonMenuTemplate):
   #   if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
   #     self.set_visibility(False)
 
-
-
-  def _on_select(self):
-    self.set_visibility(True)
-    
+   
   def _on_select_descendant(self):
     self.set_visibility(True)
 
