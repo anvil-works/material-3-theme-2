@@ -3,7 +3,7 @@ is_package: true
 components_by_slot:
   slot_1:
   - name: button_menu_1
-    properties: {appearance: filled, text: Format, enabled: true}
+    properties: {appearance: filled, text: Format, enabled: false}
     type: form:Components.ButtonMenu
     components:
     - name: menu_item_2
