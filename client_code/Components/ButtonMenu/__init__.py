@@ -82,5 +82,5 @@ class ButtonMenu(ButtonMenuTemplate):
     self.set_visibility(True)
 
   def _on_select_other(self):
-    print(f"Something else selected!")
+    print("Something else selected!")
     self.set_visibility(False)
