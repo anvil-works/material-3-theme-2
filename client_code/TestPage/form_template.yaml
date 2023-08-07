@@ -32,6 +32,10 @@ components_by_slot:
       properties: {}
       type: form:Components.Divider
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_8
+      properties: {}
+      type: form:Components.ButtonMenu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: flow_panel_1
     properties: {}
     type: FlowPanel
@@ -73,9 +77,6 @@ components_by_slot:
         type: FlowPanel
         layout_properties: {slot: anvil-m3-card-slot}
         components:
-        - name: menu_item_8
-          properties: {}
-          type: form:Components.ButtonMenu.MenuItem
         - name: label_4
           properties: {text: 'Selecting in group asdf:'}
           type: Label
