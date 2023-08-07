@@ -5,7 +5,7 @@ properties:
   options: [elevated, filled, tonal, outlined]
   description: Style of Button
   default_value: elevated
-- {name: enabled, type: boolean, default_value: false}
+- {name: enabled, type: boolean, default_value: true}
 is_package: true
 custom_component: true
 components:
