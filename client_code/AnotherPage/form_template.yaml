@@ -41,6 +41,6 @@ components_by_slot:
       type: Label
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_2
-      properties: {text: menu_item 1, hide_leading_icon: true}
+      properties: {text: menu item 1, hide_leading_icon: true}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
