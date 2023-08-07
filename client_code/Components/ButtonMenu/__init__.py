@@ -56,14 +56,13 @@ class ButtonMenu(ButtonMenuTemplate):
       self.set_visibility(False)
 
 
-# 
-    # print("menu is")
-    # print(value)
-    # if self._menuOpen:
-    #   document.addEventListener("click", self.closeOnLoseFocus)
-    # else:
-    #   document.removeEventListener("click", self.closeOnLoseFocus) 
-  
+
+  def _on_select_descendant(self):
+    self.set_visibility(True)
+
+  def _on_select_other(self):
+    self.set_visibility(False)
+
   def _anvil_get_design_info_(self, as_layout=False):
     design_info = super()._anvil_get_design_info_(as_layout)
     design_info["interactions"] = [
