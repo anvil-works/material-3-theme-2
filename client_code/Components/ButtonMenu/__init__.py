@@ -46,7 +46,7 @@ class ButtonMenu(ButtonMenuTemplate):
   def enabled(self, value):
     self._enabled = value
     # disable the button from beingh pressed
-    
+    self.menu_button.enabled = False
     
   
   def toggle_menu_visibility(self, **event_args):
