@@ -21,7 +21,7 @@ components_by_slot:
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_6
-      properties: {trailing_text: ⌘+Shift+X, text: Strikethrough}
+      properties: {trailing_text: ⌘+Shift+X, text: Strikethrough, hide_leading_icon: true}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_7
