@@ -26,3 +26,7 @@ components_by_slot:
       properties: {text: item 1 in menu 2}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: column_panel_1
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
