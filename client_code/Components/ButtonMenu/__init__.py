@@ -8,6 +8,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self.init_components(**properties)
     # TODO: needs an event handler to close when not focused
     self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
+    
   @property
   def id(self):
     return self._id
