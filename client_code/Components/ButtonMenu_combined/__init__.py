@@ -143,6 +143,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     document.body.appendChild(shield)
     shield.addEventListener('click', self.remove_shield)
 
-  def remove_shield(self):
-    document.dom_nodes['anvil-m3-menu-clickShield']
+  def remove_shield(self, event):
+    print("go away")
     
