@@ -90,6 +90,5 @@ class ButtonMenu(ButtonMenuTemplate):
   #   pass
 
   def set_menu_visibility(self, **event_args):
-    """This method is called when the component is clicked"""
-    pass
+    self.set_visibility
 
