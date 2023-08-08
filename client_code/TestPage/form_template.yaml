@@ -19,5 +19,6 @@ components_by_slot:
       properties: {text: i am an item!, leading_icon: person}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_1_click}
 components: []
 event_bindings: {show: form_show}
