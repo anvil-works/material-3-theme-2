@@ -92,5 +92,6 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def attach_hidden_menu(self, **event_args):
     # create menu component
+    self.
 
 
