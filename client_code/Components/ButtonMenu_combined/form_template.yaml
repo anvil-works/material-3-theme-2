@@ -13,7 +13,7 @@ components:
   properties: {}
   type: form:Components.Button
   layout_properties: {slot: button}
-  event_bindings: {click: toggle_menu_visibility}
+  event_bindings: {click: toggle_menu_visibility, show: get}
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"anvil-m3-buttonMenu-container\"\
