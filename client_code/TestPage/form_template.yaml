@@ -6,10 +6,6 @@ components_by_slot:
     properties: {appearance: elevated, text: Format, enabled: true}
     type: form:Components.ButtonMenu
     components:
-    - name: button_1
-      properties: {}
-      type: form:Components.Button
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_2
       properties: {text: Bold, leading_icon: ' ', trailing_icon: ' ', hide_leading_icon: true,
         trailing_text: ⌘B}
