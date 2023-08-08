@@ -11,5 +11,6 @@ class Menu(MenuTemplate):
     return self._visible
 
   @visible.setter
-  def visible(self, value)
-    return self.
+  def visible(self, value):
+    self._visible = value
+    
