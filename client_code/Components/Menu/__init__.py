@@ -1,3 +1,4 @@
+
 from ._anvil_designer import MenuTemplate
 from anvil import *
 
