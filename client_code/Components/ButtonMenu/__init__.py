@@ -86,7 +86,7 @@ class ButtonMenu(ButtonMenuTemplate):
   #   print("Something else selected! Close the menu!")
   #   self.set_visibility(False)
 
-  def toggle_menu_visibility(self, **event_args):
-    """This method is called when the component is clicked"""
-    pass
+  # def toggle_menu_visibility(self, **event_args):
+  #   """This method is called when the component is clicked"""
+  #   pass
 
