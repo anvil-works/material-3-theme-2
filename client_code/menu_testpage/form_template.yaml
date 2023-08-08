@@ -57,7 +57,7 @@ components_by_slot:
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
     - name: menu_item_12
-      properties: {}
+      properties: {text: GAH I GIVE UP}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
 components: []
