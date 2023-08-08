@@ -2,7 +2,7 @@ from ._anvil_designer import ButtonMenuTemplate
 from anvil import *
 from anvil.js.window import document
 import random, string
-import Menu
+from Menu import Menu
 
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
