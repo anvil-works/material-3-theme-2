@@ -9,4 +9,5 @@ class menu_testpage(menu_testpageTemplate):
 
   def menu_item_1_click(self, **event_args):
     print(self.menu_item_1.text)
+    print("halp")
 
