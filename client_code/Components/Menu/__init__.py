@@ -17,7 +17,6 @@ class Menu(MenuTemplate):
   @visible.setter
   def visible(self, value):
     self._visible = value
-    # anvil-m3-menu-hidden
     self.dom_nodes['anvil-m3-menu-items-container'].classList.toggle('anvil-m3-menu-hidden', not value)
 
 
