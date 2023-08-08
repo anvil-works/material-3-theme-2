@@ -88,3 +88,8 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def _on_select_other(self):
     print("Something else selected! Close the menu!")
     self.set_visibility(False)
+
+  def get_button_position(self, **event_args):
+    """This method is called when the form is shown on the page"""
+    pass
+
