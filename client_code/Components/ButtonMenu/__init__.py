@@ -91,7 +91,6 @@ class ButtonMenu(ButtonMenuTemplate):
   #   pass
 
   def attach_hidden_menu(self, **event_args):
-    """This method is called when the form is shown on the page"""
-    pass
+    
 
 
