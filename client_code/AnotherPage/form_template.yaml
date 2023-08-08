@@ -45,6 +45,6 @@ components_by_slot:
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_4
-      properties: {text: menut item, leading_icon: 22mp}
+      properties: {text: menut item, leading_icon: account_balance_wallet}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
