@@ -58,7 +58,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
     self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
-    self.get_button_position() #TODO: Will really only need to get this if it's 
+    self.get_button_position() #TODO: Will really only need to get this if visible is true
     # self.printPosition()
 
   def set_visibility(self, value = None):
