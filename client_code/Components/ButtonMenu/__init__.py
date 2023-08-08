@@ -7,8 +7,7 @@ import random, string
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    # TODO: needs an event handler to close when not focused
-    # self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
+    # TODO: needs an event handler to close when not focuse
   
   @property
   def text(self):
