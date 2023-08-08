@@ -1,6 +1,10 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_1: []
+  slot_1:
+  - name: menu_1
+    properties: {}
+    type: form:Components.Menu
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
