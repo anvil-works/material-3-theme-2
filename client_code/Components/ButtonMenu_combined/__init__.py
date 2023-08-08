@@ -74,7 +74,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self._menuSize = value
 
   def toggle_menu_visibility(self, **event_args):
-    
     self.set_visibility()
     
     self.get_button_position() #TODO: Will really only need to get this if visible is true
