@@ -7,6 +7,6 @@ class ButtonMenu(Container):
 
   @property
   def _anvil_dom_element_(self):
-    self.
+    return self.
 
   
