@@ -10,6 +10,7 @@ class ButtonMenu(Container):
     return self.dom_element
 
   def add_component(self, component, index=None, **layout_properties):
+    
     pass
     # when componenet is added, gets put into the child
 
