@@ -42,11 +42,6 @@ class ButtonMenu(ButtonMenuTemplate):
     self._enabled = value
     self.menu_button.enabled = value
     
-  # def toggle_menu_visibility(self, **event_args):
-  #   self.set_visibility()
-  #   # return classes.contains(className)
-  #   self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
-
   """ Functions """
   def set_visibility(self, value = None):
     self.menu.set_or_toggle_visibility(value)
@@ -82,10 +77,6 @@ class ButtonMenu(ButtonMenuTemplate):
   def _on_select_other(self):
   #   print("Something else selected! Close the menu!")
     self.set_visibility(False)
-
-  # def toggle_menu_visibility(self, **event_args):
-  #   """This method is called when the component is clicked"""
-  #   pass
 
   def set_menu_visibility(self, **event_args):
     self.set_visibility()
