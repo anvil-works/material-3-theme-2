@@ -1,8 +1,8 @@
-from ._anvil_designer import TestPage_copyTemplate
+from ._anvil_designer import menu_testpageTemplate
 from anvil import *
 import plotly.graph_objects as go
 
-class TestPage_copy(TestPage_copyTemplate):
+class menu_testpage(menu_testpageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
