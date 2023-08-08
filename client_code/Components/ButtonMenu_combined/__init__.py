@@ -32,7 +32,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self._menuOpen = value or False
     self.dom_nodes['anvil-m3-buttonMenu-container']
     if value:
-      # check if 
+      # check if the eventlistener is there. 
     else:
       self.dom_nodes['anvil-m3-buttonMenu-container'].removeEventListener('focus', self.checkFocus)
 
