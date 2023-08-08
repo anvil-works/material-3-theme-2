@@ -10,4 +10,8 @@ class TestPage(TestPageTemplate):
   def menu_item_1_click(self, **event_args):
     alert("YOU CLICKED THE ITEM! IT'S A PERSON!")
 
+  def menu_item_2_click(self, **event_args):
+    pass
+
+
   
