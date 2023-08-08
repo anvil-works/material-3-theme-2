@@ -1,3 +1,8 @@
+properties:
+- {name: prop, type: string, default_value: '', default_binding_prop: true}
+is_package: true
+custom_component: true
+components: []
 container:
   type: HtmlTemplate
   properties: {html: "<!-- <div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"\
@@ -9,7 +14,4 @@ container:
       anvil-m3-menu-slot\" anvil-name=\"anvil-m3-menu-items-container\" class=\"anvil-m3-menu-items-container\"\
       >\n  <p anvil-if-slot-empty=\"anvil-m3-menu-slot\" style=\"color: #BBB;\"><i>Menu\
       \ items go here</i></p>\n</div>"}
-components: []
-is_package: true
-custom_component: true
 custom_component_container: true
