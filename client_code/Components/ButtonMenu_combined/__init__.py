@@ -95,7 +95,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
   def get_button_position(self):
     rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
-    
+    coordinates
     """This method is called when the form is shown on the page"""
     pass
 
