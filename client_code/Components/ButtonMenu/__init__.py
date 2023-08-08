@@ -94,10 +94,3 @@ class ButtonMenu(ButtonMenuTemplate):
   # def toggle_menu_visibility(self, **event_args):
   #   """This method is called when the component is clicked"""
   #   pass
-
-  def attach_hidden_menu(self, **event_args):
-    menu = Menu(visible=False)
-    self.menuComponent = menu
-    self.add_component(menu)
-
-
