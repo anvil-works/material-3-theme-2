@@ -96,7 +96,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
   def get_button_position(self):
     rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
-    position = {
+    self.position = {
       "top": rect.top,
       "right": rect.right,
       "bottom": rect.bottom,
