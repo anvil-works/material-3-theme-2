@@ -6,9 +6,5 @@ components_by_slot:
     properties: {text: asdf}
     type: form:Components.ButtonMenu
     layout_properties: {}
-  - name: divider_1
-    properties: {}
-    type: form:Components.Divider
-    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
