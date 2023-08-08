@@ -24,8 +24,6 @@ class Menu(MenuTemplate):
     # classes = self.dom_nodes['anvil-m3-menu-items-container'].classList
     if value is not None:
       self.visible = value
-      # classes.toggle('anvil-m3-menu-hidden', not value)
     else:
       currVal = self.visible
       self.visible = not currVal
-      # classes.toggle('anvil-m3-menu-hidden')
