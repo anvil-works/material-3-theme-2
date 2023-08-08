@@ -15,6 +15,7 @@ components_by_slot:
     - name: image_1
       properties: {}
       type: Image
+      layout_properties: {width: 210}
   - name: column_panel_1
     properties: {}
     type: ColumnPanel
