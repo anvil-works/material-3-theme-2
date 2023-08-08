@@ -28,5 +28,13 @@ components_by_slot:
       properties: {}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
+    - name: menu_item_5
+      properties: {}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-menu-slot}
+    - name: menu_item_6
+      properties: {}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-menu-slot}
 components: []
 event_bindings: {show: form_show}
