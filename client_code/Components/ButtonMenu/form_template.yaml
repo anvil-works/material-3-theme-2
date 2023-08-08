@@ -22,8 +22,8 @@ components:
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"anvil-m3-buttonMenu-container\"\
-      >\n  <!-- the following div needs marker where it prevents exposure of the slot\
-      \ when being used in a parent component -->\n  <div anvil-slot=\"anvil-m3-buttonMenu-button\"\
-      \ internal> </div>\n  <div anvil-slot=\"anvil-m3-buttonMenu-menu\" internal>\
-      \ </div>\n</div>"}
+      >\n  <!-- the \"internal\" div needs marker where it prevents exposure of the\
+      \ slot when being used in a parent component -->\n  <div anvil-slot=\"anvil-m3-buttonMenu-button\"\
+      \ internal> </div>\n  <div anvil-slot=\"anvil-m3-buttonMenu-menu\"> </div>\n\
+      </div>"}
 custom_component_container: true
