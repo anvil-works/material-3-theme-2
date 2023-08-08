@@ -137,4 +137,5 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
 
   def openMenu(self):
+    #creating shield
     
