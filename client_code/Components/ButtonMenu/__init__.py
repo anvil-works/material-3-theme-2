@@ -47,7 +47,7 @@ class ButtonMenu(ButtonMenuTemplate):
   #   self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
 
   def set_visibility(self, value = None):
-    classes = self.menu_button.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
+    # classes = self.menu_button.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
     if value is not None:
       classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
     else:
