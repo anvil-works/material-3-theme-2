@@ -136,4 +136,5 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     print("*****")
 
 
-  def open
+  def openMenu(self):
+    
