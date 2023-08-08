@@ -97,7 +97,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
     position = {
       "top": rect.top,
-      "right": rect, right,
+      "right": rect.right,
     }
     """This method is called when the form is shown on the page"""
     pass
