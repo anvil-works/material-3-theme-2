@@ -8,5 +8,5 @@ class TestPage(TestPageTemplate):
     self.init_components(**properties)
 
   def menu_item_1_click(self, **event_args):
-    alert("")
+    alert("YOU CLICKE")
 
