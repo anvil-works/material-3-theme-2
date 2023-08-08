@@ -7,7 +7,8 @@ class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     # TODO: needs an event handler to close when not focused
-  
+
+  """"""
   @property
   def text(self):
     return self._text
