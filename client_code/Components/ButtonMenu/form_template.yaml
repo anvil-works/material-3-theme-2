@@ -15,7 +15,7 @@ components:
   type: form:Components.Button
   layout_properties: {slot: button}
   event_bindings: {click: set_menu_visibility}
-- name: main_menu
+- name: menu
   properties: {visible: false}
   type: form:Components.Menu
   layout_properties: {slot: button}
