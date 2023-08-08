@@ -8,7 +8,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: menu_item_1
-      properties: {text: asdf, leading_icon: 19mp}
+      properties: {text: 19mp whatever what means, leading_icon: 19mp}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
     - name: menu_item_2
