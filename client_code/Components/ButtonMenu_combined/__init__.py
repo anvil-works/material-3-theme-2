@@ -52,7 +52,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def position(self):
     return self._position;
   @position.setter
-  def position(self, value = {"x1": 0, "x2": 0, "y1": 0}:
+  def position(self, value = {"x1": 0, "x2": 0, "y1": 0, "y2": 0}:
     self._position = value
 
   def toggle_menu_visibility(self, **event_args):
