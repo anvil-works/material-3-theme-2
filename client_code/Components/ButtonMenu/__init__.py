@@ -86,5 +86,5 @@ class ButtonMenu(ButtonMenuTemplate):
   #   pass
 
   def set_menu_visibility(self, **event_args):
-    self.set_menu_visibility()
+    self.set_visibility()
 
