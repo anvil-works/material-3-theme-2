@@ -57,6 +57,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self._position = value
 
   
+  
 
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
