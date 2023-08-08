@@ -10,6 +10,11 @@ components_by_slot:
     properties: {}
     type: form:Components.Divider
     layout_properties: {}
+  - name: button_1
+    properties: {appearance: outlined, text: shields up}
+    type: form:Components.Button
+    layout_properties: {}
+    event_bindings: {click: button_1_click}
   - name: button_menu_combined_1
     properties: {text: ButtonMenu_Combined}
     type: form:Components.ButtonMenu_combined

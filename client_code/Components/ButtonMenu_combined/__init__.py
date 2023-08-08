@@ -140,4 +140,5 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     #creating shield
     shield = document.createElement("div")
     shield.classList.toggle("anvil-m3-menu-clickShield", True)
+    document.body.appendChild(shield)
     
