@@ -1,4 +1,3 @@
-
 from ._anvil_designer import ButtonMenuTemplate
 from anvil import *
 from anvil.js.window import document
