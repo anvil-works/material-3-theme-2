@@ -59,7 +59,7 @@ class MenuItem(MenuItemTemplate):
     self._enabled = value
     self.dom_nodes["anvil-m3-menuItem-container"].classList.toggle("anvil-m3-menuItem-disabled", not value)
 
-  """ Methods """
+  """ Functions """
   def handle_click(self, event):
     event.preventDefault() #TODO: make sure this doesn't prevent the menu from closing
     self.raise_event("click")
