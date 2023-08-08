@@ -12,6 +12,6 @@ container:
       >\n      <p anvil-if-slot-empty=\"anvil-m3-buttonMenu-slot\" style=\"color:\
       \ #BBB;\"><i>Menu items go here</i></p>\n  </div>\n</div> -->\n\n<div anvil-slot=\"\
       anvil-m3-menu-slot\" anvil-name=\"anvil-m3-menu-items-container\" class=\"anvil-m3-menu-items-container\"\
-      >\n  <p anvil-if-slot-empty=\"anvil-m3-menu-slot\" style=\"color: #BBB;\"><i>Menu\
-      \ items go here</i></p>\n</div>"}
+      >\n  <p anvil-if-slot-empty=\"anvil-m3-menu-slot\" style=\"color: #BBB; \"><i>Insert\
+      \ Menu Items</i></p>\n</div>"}
 custom_component_container: true
