@@ -1,5 +1,6 @@
 from ._anvil_designer import ButtonMenu_combinedTemplate
 from anvil import *
+from anvil.js import window
 from anvil.js.window import document
 import random, string
 
