@@ -26,4 +26,4 @@ class Menu(MenuTemplate):
     if value:
       classes.toggle('anvil-m3-menu-hidden', not value)
     else:
-      classes.toggle('anvil-m3-buttonMenu-items-hidden')
+      classes.toggle('anvil-m3-menu-hidden')
