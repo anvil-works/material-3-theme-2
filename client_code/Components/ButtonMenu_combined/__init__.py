@@ -99,6 +99,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       "top": rect.top,
       "right": rect.right,
       "bottom": rect.bottom,
+      ""
     }
     """This method is called when the form is shown on the page"""
     pass
