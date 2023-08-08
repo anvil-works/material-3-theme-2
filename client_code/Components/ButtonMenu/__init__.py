@@ -53,6 +53,7 @@ class ButtonMenu(ButtonMenuTemplate):
       # classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
     else:
       pass
+      
       # classes.toggle('anvil-m3-buttonMenu-items-hidden')
 
   # def closeOnLoseFocus(self, event):
