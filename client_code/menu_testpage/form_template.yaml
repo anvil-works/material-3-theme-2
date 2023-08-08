@@ -7,27 +7,9 @@ components_by_slot:
     type: form:Components.Menu
     layout_properties: {}
     components:
-    - name: menu_item_1
-      properties: {text: 19mp whatever what means, leading_icon: 19mp}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-menu-slot}
-      event_bindings: {click: menu_item_1_click}
-    - name: menu_item_2
-      properties: {leading_icon: assessment, text: assessment}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-menu-slot}
     - name: divider_1
       properties: {}
       type: form:Components.Divider
-      layout_properties: {slot: anvil-m3-menu-slot}
-    - name: menu_item_3
-      properties: {trailing_icon: bloodtype, hide_leading_icon: true, text: BLOOD}
-      type: form:Components.ButtonMenu.MenuItem
-      layout_properties: {slot: anvil-m3-menu-slot}
-    - name: menu_item_4
-      properties: {trailing_icon: arrow_right, text: There's more!, hide_leading_icon: true,
-        enabled: false}
-      type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
 components: []
 event_bindings: {show: form_show}
