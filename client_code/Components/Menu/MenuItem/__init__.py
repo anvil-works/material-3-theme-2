@@ -69,7 +69,7 @@ class MenuItem(MenuItemTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-button-text'])
+        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-menuItem-labelText'])
       }
     }]
     return di
