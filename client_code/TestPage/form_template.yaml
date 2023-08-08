@@ -47,6 +47,10 @@ components_by_slot:
       properties: {}
       type: form:Components.Divider
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_1
+      properties: {}
+      type: form:Components.Menu
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_9
       properties: {text: Numbered Lists, trailing_icon: arrow_right, hide_leading_icon: true}
       type: form:Components.ButtonMenu.MenuItem
@@ -85,10 +89,6 @@ components_by_slot:
     type: FlowPanel
     layout_properties: {}
     components:
-    - name: menu_1
-      properties: {}
-      type: form:Components.Menu
-      layout_properties: {width: 345}
     - name: button_menu_2
       properties: {appearance: tonal, text: Tabs}
       type: form:Components.ButtonMenu
