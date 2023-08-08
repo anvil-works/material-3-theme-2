@@ -5,7 +5,8 @@
   top: 100%;
   min-width: 112px;
   max-width: 280px;
-  min-height: 1
+  min-height: 24px;
+  
   border-radius: 4px;
   padding: 8px 0;
   background-color: var(--anvil-m3-surface-container);
