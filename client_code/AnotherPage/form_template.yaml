@@ -12,6 +12,9 @@ components_by_slot:
       type: form:Components.ButtonMenu
       layout_properties: {}
       components: []
+    - name: image_1
+      properties: {}
+      type: Image
   - name: column_panel_1
     properties: {}
     type: ColumnPanel
