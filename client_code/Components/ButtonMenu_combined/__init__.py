@@ -60,7 +60,8 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def windowSize(self):
     return self._windowSize;
   @windowSize.setter
-  def windowSize(self, value)
+  def windowSize(self, value);
+    se
 
   def toggle_menu_visibility(self, **event_args):
     self.set_visibility()
