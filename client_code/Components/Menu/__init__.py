@@ -10,6 +10,7 @@ class Menu(MenuTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  
   @property
   def visible(self):
     return self._visible
