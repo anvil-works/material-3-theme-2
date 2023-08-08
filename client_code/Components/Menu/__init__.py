@@ -7,4 +7,7 @@ class Menu(MenuTemplate):
     self.init_components(**properties)
 
   @property
-  def visible(self)
+  def visible(self):
+    return self._visible
+
+  @
