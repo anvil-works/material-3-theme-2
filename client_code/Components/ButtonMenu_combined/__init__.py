@@ -119,6 +119,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     print(self.position["left"])
     print()
     
-    print(self.windowSize["bottom"])
+    print(self.windowSize["width"])
     print(self.position["left"])
     print("*****")
