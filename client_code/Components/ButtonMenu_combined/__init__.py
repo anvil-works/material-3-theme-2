@@ -35,7 +35,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       self.dom_nodes['anvil-m3-buttonMenu-container'].removeEventListener('focus', self.checkFocus)
       self.dom_nodes['anvil-m3-buttonMenu-container'].addEventListener('focus', self.checkFocus)
     else:
-      
+      self.dom_nodes['anvil-m3-buttonMenu-container'].removeEventListener('focus', self.checkFocus)
 
   @property
   def enabled(self):
