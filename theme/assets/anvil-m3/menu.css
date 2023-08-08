@@ -1,7 +1,7 @@
 /***** Menu *****/
 .anvil-m3-menu-items-container { 
   /* copy of .anvil-m3-buttonMenu-items-container */
-  position: absolute;
+  position: relative;
   top:0;
 /*   top: 100%; */
   min-width: 112px;
