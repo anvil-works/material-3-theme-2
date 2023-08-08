@@ -24,7 +24,7 @@ components_by_slot:
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
     - name: menu_item_4
-      properties: {trailing_icon: arrow_right}
+      properties: {trailing_icon: arrow_right, text: next thing!}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
 components: []
