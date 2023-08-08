@@ -15,7 +15,7 @@ class TestPage(TestPageTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the component is clicked"""
-    self.button_menu_combined_1.openMenu()
+    self.button_menu_combined_1.place_shield()
 
 
   

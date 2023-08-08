@@ -136,9 +136,13 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     print("*****")
 
 
-  def openMenu(self):
+  def place_shield(self):
     #creating shield
     shield = document.createElement("div")
     shield.classList.toggle("anvil-m3-menu-clickShield", True)
     document.body.appendChild(shield)
+    shield.addEventListener('click', self.remove_shield)
+
+  def remove_shield(self):
+    document.dom_nodes['anvil-m3-menu-clickShield']
     
