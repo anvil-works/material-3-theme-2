@@ -138,4 +138,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
   def openMenu(self):
     #creating shield
+    shield = document.createElement("div")
+    shield.style = {height: 100vh; width: 100vw; }
     
