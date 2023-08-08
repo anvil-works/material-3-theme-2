@@ -45,7 +45,7 @@ components_by_slot:
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
     - name: menu_item_9
-      properties: {}
+      properties: {text: is this long enough}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
     - name: menu_item_10
