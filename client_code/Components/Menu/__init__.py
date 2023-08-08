@@ -27,3 +27,22 @@ class Menu(MenuTemplate):
     else:
       currVal = self.visible
       self.visible = not currVal
+
+  def _anvil_get_design_info_(self, as_layout=False):
+    design_info = super()._anvil_get_design_info_(as_layout)
+    design_info["interactions"] = [
+      {
+        "type": "on_selection",
+        "callbacks": {
+          "onSelectDescendent": self._on_select_descendant, 
+          "onSelectOther": self._on_select_other
+        }
+      },
+    ]
+    return design_info
+
+  def _on_select_descendant(self):
+    print("I did something on select")
+
+  def _on_select_other(self):
+    print("something happened on deselect")

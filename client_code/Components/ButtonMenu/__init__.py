@@ -71,11 +71,9 @@ class ButtonMenu(ButtonMenuTemplate):
     return design_info
    
   def _on_select_descendant(self):
-  #   print("Selected! Open")
     self.set_visibility(True)
 
   def _on_select_other(self):
-  #   print("Something else selected! Close the menu!")
     self.set_visibility(False)
 
   def set_menu_visibility(self, **event_args):
