@@ -33,7 +33,8 @@ class ButtonMenu(ButtonMenuTemplate):
     # self.dom_nodes['anvil-m3-buttonMenu-container']
     # if value:
     #   self.dom_nodes['anvil-m3-buttonMenu-container'].addEventListener('focus', self.checkFocus)
-  @property 
+  @property menuComponent
+  
 
   @property
   def enabled(self):
