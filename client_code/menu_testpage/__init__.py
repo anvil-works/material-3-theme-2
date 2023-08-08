@@ -11,3 +11,7 @@ class menu_testpage(menu_testpageTemplate):
     print(self.menu_item_1.text)
     print("halp")
 
+  def menu_item_12_click(self, **event_args):
+    pass
+
+

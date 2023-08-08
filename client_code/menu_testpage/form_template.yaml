@@ -60,5 +60,6 @@ components_by_slot:
       properties: {text: GAH I GIVE UP}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
+      event_bindings: {click: menu_item_12_click}
 components: []
 event_bindings: {show: form_show}
