@@ -7,4 +7,8 @@ components:
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: menu_1
+    properties: {}
+    type: form:Components.Menu
+    layout_properties: {grid_position: 'UCKSZY,VVZNUW'}
