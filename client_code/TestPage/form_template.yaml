@@ -16,7 +16,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: menu_item_1
-      properties: {}
+      properties: {text: i am an item!}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
 components: []
