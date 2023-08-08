@@ -13,4 +13,4 @@ class Menu(MenuTemplate):
   @visible.setter
   def visible(self, value):
     self._visible = value
-    
+    # anvil-m3-menu-hidden
