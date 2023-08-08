@@ -7,7 +7,7 @@ class MenuItem(MenuItemTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    # self.dom_nodes['button'].addEventListener("click", self.handle_click)
+    self.dom_nodes['button'].addEventListener("click", self.handle_click)
 
   @property
   def leading_icon(self):
