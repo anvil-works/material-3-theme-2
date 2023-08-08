@@ -24,12 +24,12 @@ class ButtonMenu(ButtonMenuTemplate):
   def appearance(self, value):
     self.menu_button.appearance = value
 
-  @property
-  def menuOpen(self):
-    return self._menuOpen
-  @menuOpen.setter
-  def menuOpen(self, value):
-    self._menuOpen = value or False
+  # @property
+  # def menuOpen(self):
+  #   return self._menuOpen
+  # @menuOpen.setter
+  # def menuOpen(self, value):
+  #   self._menuOpen = value or False
     # self.dom_nodes['anvil-m3-buttonMenu-container']
     # if value:
     #   self.dom_nodes['anvil-m3-buttonMenu-container'].addEventListener('focus', self.checkFocus)
