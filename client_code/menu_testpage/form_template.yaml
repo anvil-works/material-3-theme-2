@@ -33,11 +33,11 @@ components_by_slot:
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
     - name: menu_item_6
-      properties: {}
+      properties: {text: i'm tired}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
     - name: menu_item_7
-      properties: {}
+      properties: {text: of this}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
     - name: menu_item_8
