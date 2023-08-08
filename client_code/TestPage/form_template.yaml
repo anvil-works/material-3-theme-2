@@ -21,7 +21,7 @@ components_by_slot:
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
       event_bindings: {click: menu_item_1_click}
     - name: menu_item_2
-      properties: {text: I too am an item}
+      properties: {text: I too am an item, leading_icon: people}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
 components: []
