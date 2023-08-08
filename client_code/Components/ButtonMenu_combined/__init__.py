@@ -55,7 +55,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   @position.setter
   def position(self, value = {"top": 0, "left": 0, "bottom": 0, "right": 0}):
     self._position = value
-    self.windowSize
+    self.windowSize = window.
 
   @property
   def windowSize(self):
