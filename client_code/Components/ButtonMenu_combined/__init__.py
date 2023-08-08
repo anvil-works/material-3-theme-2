@@ -134,3 +134,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     print(self.menuSize["width"])
     print(self.menuSize["height"])
     print("*****")
+
+
+  def openMenu(self):
+    #
