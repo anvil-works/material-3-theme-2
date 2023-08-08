@@ -6,6 +6,7 @@ class ButtonMenu(Container):
     self.dom_element = document.createElement("div")
 
   @property
-  def _anvil_dom_element_(sef)
+  def _anvil_dom_element_(self):
+    self.
 
   
