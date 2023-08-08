@@ -92,7 +92,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.set_visibility(True)
 
   def _on_select_other(self):
-    print("Something else selected! Close the menu!")
     self.set_visibility(False)
 
   def get_button_position(self):
