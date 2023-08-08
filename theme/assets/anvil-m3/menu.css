@@ -14,7 +14,11 @@
 }
 
 .anvil-m3-menu-hidden {
-  display: none;
+/*   display: none; */
+    pointer-events: none;
+  opacity: 0;
+  height: 1px;
+  overflow: hidden;
 }
 
 /***** MenuItems *****/
