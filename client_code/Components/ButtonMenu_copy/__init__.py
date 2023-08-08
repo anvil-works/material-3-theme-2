@@ -47,12 +47,12 @@ class ButtonMenu_copy(ButtonMenu_copyTemplate):
     # return classes.contains(className)
     self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
 
-  def set_visibility(self, value = None):
-    classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
-    if value:
-      classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
-    else:
-      classes.toggle('anvil-m3-buttonMenu-items-hidden')
+  # def set_visibility(self, value = None):
+  #   classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
+  #   if value:
+  #     classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
+  #   else:
+  #     classes.toggle('anvil-m3-buttonMenu-items-hidden')
 
   # def closeOnLoseFocus(self, event):
   #   if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
