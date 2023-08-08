@@ -103,5 +103,8 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       "left": rect.left
     }
     print(position["top"])
+    print(position["right"])
+    print(position["top"])
+    print(position["top"])
     self.position = position
 
