@@ -12,7 +12,7 @@ components_by_slot:
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
     - name: menu_item_2
-      properties: {}
+      properties: {leading_icon: assessment}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
     - name: divider_1
