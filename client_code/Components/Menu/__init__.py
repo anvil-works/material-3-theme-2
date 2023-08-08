@@ -28,5 +28,5 @@ class Menu(MenuTemplate):
       # classes.toggle('anvil-m3-menu-hidden', not value)
     else:
       currVal = self.visible
-      
+      self.visible = currVal
       # classes.toggle('anvil-m3-menu-hidden')
