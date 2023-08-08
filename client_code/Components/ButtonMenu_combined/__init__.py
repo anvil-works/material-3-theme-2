@@ -104,4 +104,4 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     }
     self.position = position
 
-  def
+  def 
