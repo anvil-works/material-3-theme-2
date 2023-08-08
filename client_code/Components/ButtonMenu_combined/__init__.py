@@ -63,7 +63,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     print(event.target)
     pass
 
-
   def _anvil_get_design_info_(self, as_layout=False):
     design_info = super()._anvil_get_design_info_(as_layout)
     design_info["interactions"] = [
