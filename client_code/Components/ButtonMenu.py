@@ -3,6 +3,6 @@ from anvil.js import document
 
 class ButtonMenu(Container):
   def __init__(self, **properties):
-    pass
+    self.dom
 
   
