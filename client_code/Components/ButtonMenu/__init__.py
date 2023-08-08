@@ -97,7 +97,7 @@ class ButtonMenu(ButtonMenuTemplate):
   #   pass
 
   def attach_hidden_menu(self, **event_args):
-    menu
+    menu = Comp
     pass
 
 
