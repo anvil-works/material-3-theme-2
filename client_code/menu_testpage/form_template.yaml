@@ -11,5 +11,9 @@ components_by_slot:
       properties: {text: asdf, leading_icon: 19mp}
       type: form:Components.ButtonMenu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
+    - name: divider_1
+      properties: {}
+      type: form:Components.Divider
+      layout_properties: {slot: anvil-m3-menu-slot}
 components: []
 event_bindings: {show: form_show}
