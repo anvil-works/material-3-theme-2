@@ -97,3 +97,8 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     """This method is called when the form is shown on the page"""
     pass
 
+  def menu_button_show(self, **event_args):
+    """This method is called when the form is shown on the page"""
+    pass
+
+
