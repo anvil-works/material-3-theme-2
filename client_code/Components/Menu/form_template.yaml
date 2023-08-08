@@ -11,3 +11,4 @@ container:
       \ style=\"color: #BBB;\"><i>Menu items go here</i></p>\n</div>"}
 components: []
 is_package: true
+custom_component: true
