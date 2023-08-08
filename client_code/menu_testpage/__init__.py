@@ -7,6 +7,8 @@ class menu_testpage(menu_testpageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  
+
   def menu_item_1_click(self, **event_args):
-    
+    text
 
