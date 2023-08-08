@@ -9,7 +9,7 @@ class ButtonMenu(Container):
   def _anvil_dom_element_(self):
     return self.dom_element
 
-  def add_component(self, component, index=None, ):
+  def add_component(self, component, index=None, **properties):
     pass
 
   def get_components(self):
