@@ -102,7 +102,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       "left": rect.left
     }
     print(positionp["top"])
-    self.position = 
+    self.position = position
     """This method is called when the form is shown on the page"""
     pass
 
