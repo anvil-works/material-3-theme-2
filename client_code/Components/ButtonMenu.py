@@ -11,7 +11,7 @@ class ButtonMenu(Container):
 
   def add_component(self, component, index=None, **layout_properties):
     pass
-    # when componenet is added, 
+    # when componenet is added, gets put into the menu
 
   def get_components(self):
     pass
