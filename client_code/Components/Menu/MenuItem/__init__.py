@@ -61,7 +61,7 @@ class MenuItem(MenuItemTemplate):
     self.raise_event("click")
 
   
-    def _anvil_get_design_info_(self, as_layout=False):
+  def _anvil_get_design_info_(self, as_layout=False):
     di = super()._anvil_get_design_info_(as_layout)
     di['interactions'] = [{
       "type": "whole_component",
