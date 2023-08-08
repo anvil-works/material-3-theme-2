@@ -31,7 +31,7 @@ class ButtonMenu(ButtonMenuTemplate):
   @menuOpen.setter
   def menuOpen(self, value):
     self._menuOpen = value or False
-    self.dom_nodes['anvil-m3-buttonMenu-container']
+    # self.dom_nodes['anvil-m3-buttonMenu-container']
     # if value:
     #   self.dom_nodes['anvil-m3-buttonMenu-container'].addEventListener('focus', self.checkFocus)
 
