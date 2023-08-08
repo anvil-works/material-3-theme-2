@@ -12,6 +12,10 @@ components_by_slot:
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
       event_bindings: {click: menu_item_1_click}
+    - name: menu_item_13
+      properties: {}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-menu-slot}
     - name: divider_1
       properties: {}
       type: form:Components.Divider
