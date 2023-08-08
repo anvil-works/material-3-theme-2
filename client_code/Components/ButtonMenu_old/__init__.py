@@ -1,9 +1,9 @@
-from ._anvil_designer import ButtonMenuTemplate
+from ._anvil_designer import ButtonMenu_oldTemplate
 from anvil import *
 from anvil.js.window import document
 import random, string
 
-class ButtonMenu(ButtonMenuTemplate):
+class ButtonMenu_old(ButtonMenu_oldTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     # TODO: needs an event handler to close when not focused
