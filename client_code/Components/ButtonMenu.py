@@ -12,6 +12,6 @@ class ButtonMenu(Container):
   def add_component(self):
     pass
 
-  def get_compon
+  def get_components(self)
 
   
