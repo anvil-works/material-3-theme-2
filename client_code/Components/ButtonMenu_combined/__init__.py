@@ -34,7 +34,9 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     if value:
       # check if the eventlistener is there. do nothing if so.
       # else add it.
+      pass
     else:
+      pass
       self.dom_nodes['anvil-m3-buttonMenu-container'].removeEventListener('focus', self.checkFocus)
 
   @property
