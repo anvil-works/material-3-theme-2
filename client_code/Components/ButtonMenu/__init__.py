@@ -59,30 +59,30 @@ class ButtonMenu(ButtonMenuTemplate):
   #   if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
   #     self.set_visibility(False)
 
-  def checkFocus(self, event):
-    # document.activeElement
-    # var descendants = theElement.querySelectorAll("*");
-    print(event.target)
-    pass
+  # def checkFocus(self, event):
+  #   # document.activeElement
+  #   # var descendants = theElement.querySelectorAll("*");
+  #   print(event.target)
+  #   pass
 
 
-  def _anvil_get_design_info_(self, as_layout=False):
-    design_info = super()._anvil_get_design_info_(as_layout)
-    design_info["interactions"] = [
-      {
-        "type": "on_selection",
-        "callbacks": {
-          "onSelectDescendent": self._on_select_descendant, 
-          "onSelectOther": self._on_select_other
-        }
-      },
-    ]
-    return design_info
+  # def _anvil_get_design_info_(self, as_layout=False):
+  #   design_info = super()._anvil_get_design_info_(as_layout)
+  #   design_info["interactions"] = [
+  #     {
+  #       "type": "on_selection",
+  #       "callbacks": {
+  #         "onSelectDescendent": self._on_select_descendant, 
+  #         "onSelectOther": self._on_select_other
+  #       }
+  #     },
+  #   ]
+  #   return design_info
    
-  def _on_select_descendant(self):
-    print("Selected! Open")
-    self.set_visibility(True)
+  # def _on_select_descendant(self):
+  #   print("Selected! Open")
+  #   self.set_visibility(True)
 
-  def _on_select_other(self):
-    print("Something else selected! Close the menu!")
-    self.set_visibility(False)
+  # def _on_select_other(self):
+  #   print("Something else selected! Close the menu!")
+  #   self.set_visibility(False)
