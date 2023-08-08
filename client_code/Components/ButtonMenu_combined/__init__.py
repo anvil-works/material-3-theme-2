@@ -1,9 +1,9 @@
-from ._anvil_designer import ButtonMenu_copyTemplate
+from ._anvil_designer import ButtonMenu_combinedTemplate
 from anvil import *
 from anvil.js.window import document
 import random, string
 
-class ButtonMenu_copy(ButtonMenu_copyTemplate):
+class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     # TODO: needs an event handler to close when not focused
