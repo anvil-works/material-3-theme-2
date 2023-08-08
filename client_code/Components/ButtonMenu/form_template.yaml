@@ -14,7 +14,7 @@ components:
   properties: {text: Button, appearance: elevated, enabled: true}
   type: form:Components.Button
   layout_properties: {slot: button}
-  event_bindings: {}
+  event_bindings: {click: set_menu_visibility}
 - name: menu_1
   properties: {visible: false}
   type: form:Components.Menu
