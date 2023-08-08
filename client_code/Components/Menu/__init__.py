@@ -18,4 +18,4 @@ class Menu(MenuTemplate):
   def visible(self, value):
     self._visible = value
     # anvil-m3-menu-hidden
-    self.dom_nodes['anvil-m3-menu-items-container'].classList.toggle
+    self.dom_nodes['anvil-m3-menu-items-container'].classList.toggle('')
