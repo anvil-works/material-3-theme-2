@@ -15,6 +15,10 @@ components:
   type: form:Components.Button
   layout_properties: {slot: button}
   event_bindings: {}
+- name: menu_1
+  properties: {}
+  type: form:Components.Menu
+  layout_properties: {slot: button}
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"anvil-m3-buttonMenu-container\"\
