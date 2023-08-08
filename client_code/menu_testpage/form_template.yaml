@@ -53,7 +53,7 @@ components_by_slot:
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
     - name: menu_item_11
-      properties: {}
+      properties: {text: madness!}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-menu-slot}
     - name: menu_item_12
