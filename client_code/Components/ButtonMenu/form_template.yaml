@@ -10,7 +10,7 @@ is_package: true
 custom_component: true
 components:
 - name: menu_button
-  properties: {text: Button, appearance: elevated}
+  properties: {text: Button, appearance: elevated, enabled: false}
   type: form:Components.Button
   layout_properties: {slot: button}
   event_bindings: {click: toggle_menu_visibility}
