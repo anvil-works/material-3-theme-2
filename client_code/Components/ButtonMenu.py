@@ -10,7 +10,7 @@ class ButtonMenu(Container):
     return self.dom_element
 
   def add_component(self, component, index=None, **layout_properties):
-    pass
+    pass 
 
   def get_components(self):
     pass
