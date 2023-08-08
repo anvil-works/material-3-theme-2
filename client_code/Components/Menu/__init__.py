@@ -1,3 +1,6 @@
+# <div anvil-slot="anvil-m3-menu-slot" anvil-name="anvil-m3-menu-items-container" class="anvil-m3-menu-items-container">
+#   <p anvil-if-slot-empty="anvil-m3-menu-slot" style="color: #BBB;"><i>Menu items go here</i></p>
+# </div>
 
 from ._anvil_designer import MenuTemplate
 from anvil import *
