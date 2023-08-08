@@ -94,7 +94,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.set_visibility(False)
 
   def get_button_position(self):
-    self.menu_button
+    self.menu_button.dom_nodes
     """This method is called when the form is shown on the page"""
     pass
 
