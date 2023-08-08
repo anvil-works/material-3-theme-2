@@ -58,11 +58,11 @@ class ButtonMenu_copy(ButtonMenu_copyTemplate):
   #   if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
   #     self.set_visibility(False)
 
-  def checkFocus(self, event):
-    # document.activeElement
-    # var descendants = theElement.querySelectorAll("*");
-    print(event.target)
-    pass
+  # def checkFocus(self, event):
+  #   # document.activeElement
+  #   # var descendants = theElement.querySelectorAll("*");
+  #   print(event.target)
+  #   pass
 
 
   def _anvil_get_design_info_(self, as_layout=False):
