@@ -43,17 +43,17 @@ class ButtonMenu(ButtonMenuTemplate):
     self._enabled = value
     self.menu_button.enabled = value
     
-  def toggle_menu_visibility(self, **event_args):
-    self.set_visibility()
-    # return classes.contains(className)
-    self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
+  # def toggle_menu_visibility(self, **event_args):
+  #   self.set_visibility()
+  #   # return classes.contains(className)
+  #   self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
 
-  def set_visibility(self, value = None):
-    classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
-    if value is not None:
-      classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
-    else:
-      classes.toggle('anvil-m3-buttonMenu-items-hidden')
+  # def set_visibility(self, value = None):
+  #   classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
+  #   if value is not None:
+  #     classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
+  #   else:
+  #     classes.toggle('anvil-m3-buttonMenu-items-hidden')
 
   # def closeOnLoseFocus(self, event):
   #   if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
