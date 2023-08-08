@@ -60,18 +60,18 @@ class ButtonMenu(ButtonMenuTemplate):
   #   pass
 
 
-  # def _anvil_get_design_info_(self, as_layout=False):
-  #   design_info = super()._anvil_get_design_info_(as_layout)
-  #   design_info["interactions"] = [
-  #     {
-  #       "type": "on_selection",
-  #       "callbacks": {
-  #         "onSelectDescendent": self._on_select_descendant, 
-  #         "onSelectOther": self._on_select_other
-  #       }
-  #     },
-  #   ]
-  #   return design_info
+  def _anvil_get_design_info_(self, as_layout=False):
+    design_info = super()._anvil_get_design_info_(as_layout)
+    design_info["interactions"] = [
+      {
+        "type": "on_selection",
+        "callbacks": {
+          "onSelectDescendent": self._on_select_descendant, 
+          "onSelectOther": self._on_select_other
+        }
+      },
+    ]
+    return design_info
    
   # def _on_select_descendant(self):
   #   print("Selected! Open")
