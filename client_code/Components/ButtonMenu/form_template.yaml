@@ -14,7 +14,7 @@ components:
   properties: {text: Button, appearance: elevated, enabled: true}
   type: form:Components.Button
   layout_properties: {slot: button}
-  event_bindings: {show: attach_hidden_menu}
+  event_bindings: {}
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"anvil-m3-buttonMenu-container\"\
