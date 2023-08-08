@@ -39,7 +39,7 @@ components_by_slot:
       properties: {}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_2
-      properties: {text: a menu item, hide_leading_icon: true}
-      type: form:Components.ButtonMenu.MenuItem
+    - name: menu_item_4
+      properties: {}
+      type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
