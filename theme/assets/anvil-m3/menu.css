@@ -1,5 +1,5 @@
 /***** Menu *****/
-.anvil-m3-menu-items-container { 
+.anvil-m3-menu-items-container { /* copy of .anvil-m3-buttonMenu-items-container*/
   
   position: absolute;
   top: 100%;
