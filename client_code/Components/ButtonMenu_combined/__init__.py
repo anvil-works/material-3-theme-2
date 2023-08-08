@@ -58,7 +58,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.windowSize = {"width": window.innerWidth, "height": window.innerHeight}
     menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
     offsetWidth
-    self.menuSize = {"width": window.innerWidth, "height": window.innerHeight}
+    self.menuSize = {"width": menuNode.offsetWidth, "height": menuNode.innerHeight}
 
   @property
   def windowSize(self):
