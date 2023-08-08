@@ -59,7 +59,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.set_visibility()
     self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
     self.get_button_position()
-    self.printPosition()
+    # self.printPosition()
 
   def set_visibility(self, value = None):
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
