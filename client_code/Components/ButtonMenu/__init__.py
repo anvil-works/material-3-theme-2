@@ -99,7 +99,7 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def attach_hidden_menu(self, **event_args):
     menu = Menu(visible=False)
-    self.add_component(menu)
     self.menuComponent = menu
+    self.add_component(menu)
 
 
