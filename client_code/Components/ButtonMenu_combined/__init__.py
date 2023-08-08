@@ -59,10 +59,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
 
-  # def closeOnLoseFocus(self, event):
-  #   if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
-  #     self.set_visibility(False)
-
   def checkFocus(self, event):
     # document.activeElement
     # var descendants = theElement.querySelectorAll("*");
