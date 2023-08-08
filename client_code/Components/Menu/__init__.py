@@ -10,4 +10,6 @@ class Menu(MenuTemplate):
   def visible(self):
     return self._visible
 
-  @
+  @visible.setter
+  def visible(self, value)
+    return self.
