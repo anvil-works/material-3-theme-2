@@ -3,6 +3,6 @@ from anvil.js import document
 
 class ButtonMenu(Container):
   def __init__(self, **properties):
-    self.dom_element = document.createElement
+    self.dom_element = document.createElement(div)
 
   
