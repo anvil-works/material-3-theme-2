@@ -58,7 +58,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
   @property
   def windowSize(self):
-    return self._windowSize;
+    return self._windowSize
   @windowSize.setter
   def windowSize(self, value);
     self._windowSize = value
