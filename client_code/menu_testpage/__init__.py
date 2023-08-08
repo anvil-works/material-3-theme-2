@@ -8,5 +8,5 @@ class menu_testpage(menu_testpageTemplate):
     self.init_components(**properties)
 
   def menu_item_1_click(self, **event_args):
-    self
+    self.
 
