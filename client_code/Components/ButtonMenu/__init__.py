@@ -47,7 +47,7 @@ class ButtonMenu(ButtonMenuTemplate):
   #   self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
 
   def set_visibility(self, value = None):
-    self.main_menu.set_or_toggle_visibility(value)
+    self.menu.set_or_toggle_visibility(value)
 
   # def closeOnLoseFocus(self, event):
   #   if not self.dom_nodes['anvil-m3-buttonMenu-items-container'].contains(event.target):
