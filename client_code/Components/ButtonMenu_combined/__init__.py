@@ -108,7 +108,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     return design_info
 
   def _on_select_descendant(self):
-    print("Selected! Open")
     self.set_visibility(True)
 
   def _on_select_other(self):
