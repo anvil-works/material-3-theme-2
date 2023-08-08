@@ -37,7 +37,7 @@ class ButtonMenu(ButtonMenuTemplate):
   def menuComponent(self):
     return self._menuComponent
   @menuComponent.setter
-  def menuComponent(self, value)
+  def menuComponent(self, value):
     self._menuComponent = value
   
   @property
