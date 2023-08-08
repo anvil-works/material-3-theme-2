@@ -24,21 +24,21 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def appearance(self, value):
     self.menu_button.appearance = value
 
-  @property
-  def menuOpen(self):
-    return self._menuOpen
-  @menuOpen.setter
-  def menuOpen(self, value):
-    self._menuOpen = value or False
-    self.dom_nodes['anvil-m3-buttonMenu-container']
-    if value:
-      # check if the eventlistener is there. do nothing if so.
-      # else add it.
-      pass
-    else:
-      # remove event listener
-      pass
-      # self.dom_nodes['anvil-m3-buttonMenu-container'].removeEventListener('focus', self.checkFocus)
+  # @property
+  # def menuOpen(self):
+  #   return self._menuOpen
+  # @menuOpen.setter
+  # def menuOpen(self, value):
+  #   self._menuOpen = value or False
+  #   self.dom_nodes['anvil-m3-buttonMenu-container']
+  #   if value:
+  #     # check if the eventlistener is there. do nothing if so.
+  #     # else add it.
+  #     pass
+  #   else:
+  #     # remove event listener
+  #     pass
+  #     # self.dom_nodes['anvil-m3-buttonMenu-container'].removeEventListener('focus', self.checkFocus)
 
   @property
   def enabled(self):
