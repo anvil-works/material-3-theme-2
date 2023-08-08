@@ -1,5 +1,5 @@
 properties:
-- {name: prop, type: string, default_value: '', default_binding_prop: true}
+- {name: visible, type: string, default_value: '', default_binding_prop: true}
 is_package: true
 custom_component: true
 components: []
