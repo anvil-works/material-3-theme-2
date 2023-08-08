@@ -7,7 +7,7 @@ import random, string
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    
+    menu
     # TODO: needs an event handler to close when not focused
   
   @property
