@@ -1,6 +1,8 @@
 from ._anvil_designer import MenuItemTemplate
 from anvil import *
 
+import anvil.designer
+
 class MenuItem(MenuItemTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
