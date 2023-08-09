@@ -138,7 +138,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     print(self.menuSize["height"])
     print("*****")
 
-
   def place_shield(self):
     #creating shield
     # shield = document.createElement("div")
