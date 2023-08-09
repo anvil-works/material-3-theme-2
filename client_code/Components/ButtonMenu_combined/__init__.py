@@ -78,9 +78,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def toggle_menu_visibility(self, **event_args):
     self.get_button_position() #TODO: Will really only need to get this if visible is true
     self.printPosition()
-    
     self.set_visibility()
-    
     self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
 
   def set_visibility(self, value = None):
@@ -89,12 +87,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
-
-  def checkFocus(self, event):
-    # document.activeElement
-    # var descendants = theElement.querySelectorAll("*");
-    print(event.target)
-    pass
 
   def _anvil_get_design_info_(self, as_layout=False):
     design_info = super()._anvil_get_design_info_(as_layout)
@@ -145,5 +137,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
   def remove_shield(self, event):
     print("go away")
+    if document.children.contains()
     document.body.removeChild(self.shield)
     
