@@ -2,39 +2,22 @@ layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
   slot_3:
-  - name: column_panel_1
-    properties: {border: 1px dotted lightgreen}
-    type: ColumnPanel
-    layout_properties: {}
-    components:
-    - name: checkbox_1
-      properties: {text: Check me}
-      type: form:Components.Checkbox
-      layout_properties: {grid_position: 'MPDHDU,FVXXKM'}
-    - name: checkbox_2
-      properties: {text: text}
-      type: form:Components.Checkbox
-      layout_properties: {grid_position: 'MPDHDU,WXSZAQ'}
-    - name: checkbox_3
-      properties: {text: text}
-      type: form:Components.Checkbox
-      layout_properties: {grid_position: 'MPDHDU,TSXWSC'}
-    - name: check_box_2
-      properties: {text: check_box_2}
-      type: CheckBox
-      layout_properties: {grid_position: 'SKPKEB,RSIYJQ'}
-  - name: flow_panel_1
-    properties: {}
-    type: FlowPanel
-    layout_properties: {}
-    components:
-    - name: checkbox_4
-      properties: {}
-      type: form:Components.Checkbox
   - name: button_1
     properties: {appearance: tonal}
     type: form:Components.Button
     layout_properties: {}
     event_bindings: {click: button_1_click}
+  - name: button_2
+    properties: {appearance: elevated}
+    type: form:Components.Button
+    layout_properties: {}
+  - name: button_3
+    properties: {appearance: outlined}
+    type: form:Components.Button
+    layout_properties: {}
+  - name: button_4
+    properties: {}
+    type: form:Components.Button
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
