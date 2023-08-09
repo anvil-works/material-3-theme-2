@@ -63,10 +63,8 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
     self.menuSize = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
 
-  @property
   def windowSize(self):
     return self._windowSize
-  @windowSize.setter
   def windowSize(self, value):
     self._windowSize = value
     
