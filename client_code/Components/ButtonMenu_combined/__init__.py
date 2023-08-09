@@ -80,8 +80,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def toggle_menu_visibility(self, **event_args):
     self.get_button_position() #TODO: Will really only need to get this if visible is true
     self.printPosition()
-    self.set_visibility()
-    self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
+    self.menuOpen = self.set_visibility()
     if self.menuOpen:
       self.place_shield()
 
@@ -89,10 +88,10 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
     if value is not None:
       classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
-      
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
-
+    return not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
+    
   def _anvil_get_design_info_(self, as_layout=False):
     design_info = super()._anvil_get_design_info_(as_layout)
     design_info["interactions"] = [
