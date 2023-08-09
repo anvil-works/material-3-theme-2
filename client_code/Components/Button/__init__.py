@@ -12,9 +12,8 @@ class Button(ButtonTemplate):
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-button'].addEventListener("click", self.handle_click)
 
-  def handle_click(self, event):
-    event.preventDefault()
-    self.raise_event("click")
+  def handle_click(self, e):
+    self.raise_event("click", keys={"meta": e.metaKey, "shift": e.shiftKey, "ctrl": e.ctrlKey, "alt": e.altKey})
 
   def _anvil_get_design_info_(self, as_layout=False):
     di = super()._anvil_get_design_info_(as_layout)

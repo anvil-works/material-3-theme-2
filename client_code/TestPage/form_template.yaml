@@ -6,7 +6,7 @@ components_by_slot:
     properties: {appearance: tonal}
     type: form:Components.Button
     layout_properties: {}
-    event_bindings: {click: button_1_click}
+    event_bindings: {}
   - name: button_2
     properties: {appearance: elevated}
     type: form:Components.Button
