@@ -23,5 +23,9 @@ components_by_slot:
     properties: {text: hello, enabled: false}
     type: form:Components.Checkbox
     layout_properties: {}
+  - name: button_5
+    properties: {text: button_5}
+    type: Button
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
