@@ -85,7 +85,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       self.place_shield()
       # listen for children
       
-
   def set_visibility(self, value = None):
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
     if value is not None:
