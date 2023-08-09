@@ -83,6 +83,8 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.menuOpen = self.set_visibility()
     if self.menuOpen:
       self.place_shield()
+      # listen for children
+      
 
   def set_visibility(self, value = None):
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
@@ -144,4 +146,5 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       document.body.removeChild(self.shield)
       self.toggle_menu_visibility()
     
-    
+
+  # detect if the child was clicked and if so, close the menu
