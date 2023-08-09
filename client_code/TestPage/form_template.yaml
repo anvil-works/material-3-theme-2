@@ -19,5 +19,9 @@ components_by_slot:
     properties: {italic: false}
     type: form:Components.Button
     layout_properties: {}
+  - name: checkbox_1
+    properties: {text: hello, enabled: false}
+    type: form:Components.Checkbox
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
