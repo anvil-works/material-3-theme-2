@@ -1,7 +1,7 @@
 from ._anvil_designer import ButtonTemplate
 from anvil import *
 import anvil.js
-from ...Functions import color_property, style_property
+from ...Functions import color_property, style_property, underline_property, italic_property
 
 import anvil.designer
 
@@ -96,6 +96,8 @@ class Button(ButtonTemplate):
   font_size = style_property('anvil-m3-button-text', 'fontSize')
   icon_size = style_property('anvil-m3-button-icon', 'fontSize')
   underline = underline_property('anvil-m3-button-text')
+  italic = italic_property('anvil-m3-button-text')
+  # align = style_property('anvil-m3-button', 'justifyContent')
   # TODO: Add background color property
 
 

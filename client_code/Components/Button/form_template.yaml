@@ -372,6 +372,12 @@ properties:
 - {name: font_family, type: string, default_value: ''}
 - {name: font_size, type: string, default_value: ''}
 - {name: icon_size, type: string, default_value: ''}
+- name: align
+  type: enum
+  options: [left, right, center]
+  description: Align this component’s text
+- {name: underline, type: boolean, default_value: false}
+- {name: italic, type: boolean, default_value: false}
 is_package: true
 data_bindings: []
 events:

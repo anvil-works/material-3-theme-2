@@ -3,21 +3,29 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: button_1
-    properties: {appearance: tonal}
+    properties: {appearance: tonal, align: left, underline: false}
     type: form:Components.Button
     layout_properties: {}
     event_bindings: {}
   - name: button_2
-    properties: {appearance: elevated}
+    properties: {appearance: elevated, align: center}
     type: form:Components.Button
     layout_properties: {}
   - name: button_3
-    properties: {appearance: outlined}
+    properties: {appearance: outlined, underline: false}
     type: form:Components.Button
     layout_properties: {}
   - name: button_4
-    properties: {}
+    properties: {italic: false}
     type: form:Components.Button
+    layout_properties: {}
+  - name: button_5
+    properties: {text: button_5, align: left}
+    type: Button
+    layout_properties: {}
+  - name: checkbox_1
+    properties: {align: center}
+    type: form:Components.Checkbox
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}
