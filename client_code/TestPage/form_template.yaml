@@ -19,13 +19,5 @@ components_by_slot:
     properties: {italic: false}
     type: form:Components.Button
     layout_properties: {}
-  - name: button_5
-    properties: {text: button_5, align: left}
-    type: Button
-    layout_properties: {}
-  - name: checkbox_1
-    properties: {align: center}
-    type: form:Components.Checkbox
-    layout_properties: {}
 components: []
 event_bindings: {show: form_show}

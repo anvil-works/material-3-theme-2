@@ -386,9 +386,10 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<button anvil-name=\"anvil-m3-button\" class=\"anvil-m3-button\"\
-      >\n  <i anvil-name=\"anvil-m3-button-icon\" class=\"material-symbols-outlined\"\
-      \ style=\"display: none;\"></i>\n  <span anvil-name=\"anvil-m3-button-text\"\
-      ></span>\n</button>"}
+  properties: {html: "<div anvil-name=\"anvil-m3-button-container\" style=\"display:flex\"\
+      >\n  <button anvil-name=\"anvil-m3-button\" class=\"anvil-m3-button\">\n   \
+      \ <i anvil-name=\"anvil-m3-button-icon\" class=\"material-symbols-outlined\"\
+      \ style=\"display: none;\"></i>\n    <span anvil-name=\"anvil-m3-button-text\"\
+      ></span>\n  </button>\n</div>\n"}
   event_bindings: {show: form_show}
 custom_component_container: false
