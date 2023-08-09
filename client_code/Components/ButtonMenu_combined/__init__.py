@@ -82,7 +82,8 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.printPosition()
     self.set_visibility()
     self.menuOpen = not self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList.contains('anvil-m3-buttonMenu-items-hidden')
-    
+    if self.menuOpen:
+      self.place_shield()
 
   def set_visibility(self, value = None):
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
@@ -139,10 +140,8 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.shield.addEventListener('click', self.remove_shield)
 
   def remove_shield(self, event):
-    print("go away")
-    if document.children.length > 0:
-      print("YES")
-      if document.children.namedItem(self.shield.id):
-        print("DOUBLE YES")
-    document.body.removeChild(self.shield)
+    if document.contains(self.shield):
+      document.body.removeChild(self.shield)
+      self.toggle_menu_visibility()
+    
     
