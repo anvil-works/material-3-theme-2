@@ -1,7 +1,7 @@
 from ._anvil_designer import ButtonTemplate
 from anvil import *
 import anvil.js
-from ...Functions import color_property, style_property, underline_property, italic_property
+from ...Functions import color_property, style_property, underline_property, italic_property, enabled_property
 
 import anvil.designer
 
@@ -56,18 +56,6 @@ class Button(ButtonTemplate):
     self.dom_nodes['anvil-m3-button-text'].innerHTML = value or ""
 
   @property
-  def enabled(self):
-    return self._enabled
-
-  @enabled.setter
-  def enabled(self, value):
-    self._enabled = value
-    if value:
-      self.dom_nodes['anvil-m3-button'].removeAttribute("disabled")
-    else:
-      self.dom_nodes['anvil-m3-button'].setAttribute("disabled", " ")
-
-  @property
   def appearance(self):
     return self._appearance
 
@@ -98,6 +86,7 @@ class Button(ButtonTemplate):
   underline = underline_property('anvil-m3-button-text')
   italic = italic_property('anvil-m3-button-text')
   align = style_property('anvil-m3-button-container', 'justifyContent')
+  enabled = enabled_property('anvil-m3-button')
   # TODO: Add background color property
 
 
