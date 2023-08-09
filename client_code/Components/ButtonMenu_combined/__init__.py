@@ -8,8 +8,10 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     # TODO: needs an event handler to close when not focused
-    # self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
+    self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
+    self.dom_nodes['anvil-m3-buttonMenu-container'].id = self.id
     self.shield = document.createElement("div")
+    self.shield.id = f'shield-{self.id}'
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     self.menuOpen = False
 
@@ -137,7 +139,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
   def remove_shield(self, event):
     print("go away")
-    if document.children.find( child => child === self.shield):
+    if document.body.children.index(self.shield) > 0:
       print("YES")
     document.body.removeChild(self.shield)
     
