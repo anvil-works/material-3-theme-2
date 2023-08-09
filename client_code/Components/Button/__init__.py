@@ -1,7 +1,7 @@
 from ._anvil_designer import ButtonTemplate
 from anvil import *
 import anvil.js
-from ...Functions import color_property, style_property, underline_property, italic_property, enabled_property
+from ...Functions import color_property, style_property, underline_property, italic_property, enabled_property, bold_property, visible_property
 
 import anvil.designer
 
@@ -89,6 +89,7 @@ class Button(ButtonTemplate):
   align = style_property('anvil-m3-button-container', 'justifyContent')
   enabled = enabled_property('anvil-m3-button')
   visible = visible_property('anvil-m3-button-container', 'flex')
+  border = style_property('anvil-m3-button-container', 'border')
   # TODO: Add background color property
 
 
