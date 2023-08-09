@@ -139,7 +139,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
   def remove_shield(self, event):
     print("go away")
-    if document.body.children.index(self.shield) > 0:
+    if document.children.length > 0:
       print("YES")
     document.body.removeChild(self.shield)
     
