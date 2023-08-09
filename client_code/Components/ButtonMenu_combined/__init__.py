@@ -141,5 +141,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     print("go away")
     if document.children.length > 0:
       print("YES")
+      if document.children.namedItem(self.shield.id):
+        print("DOUBLE YES")
     document.body.removeChild(self.shield)
     
