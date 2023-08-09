@@ -137,6 +137,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
   def remove_shield(self, event):
     print("go away")
-    if document.children.contains()
+    if document.children.find( child => child === self.shield):
+      print("YES")
     document.body.removeChild(self.shield)
     
