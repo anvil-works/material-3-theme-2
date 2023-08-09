@@ -363,22 +363,24 @@ properties:
     wrap_text, wrong_location, wysiwyg, yard, youtube_searched_for, zoom_in, zoom_in_map,
     zoom_out, zoom_out_map, '']
   description: The icon to display on this componnent. A material icon name.
-- {name: text, type: string, default_value: '', description: Text for the Button}
-- {name: enabled, type: boolean, default_value: true, description: True if this component should allow user interaction}
+- {name: text, type: string, default_value: '', description: The text displayed on this component.}
+- {name: enabled, type: boolean, default_value: true, description: True if this component should allow user interaction.}
 - name: appearance
   type: enum
   options: [' ', elevated, filled, tonal, outlined]
-- {name: text_color, type: color, default_value: '', description: The color of the component's text}
-- {name: icon_color, type: color, default_value: '', description: The color of the component's icon}
+  description: The look and feel of this component.
+- {name: text_color, type: color, default_value: '', description: The color of the component's text.}
+- {name: icon_color, type: color, default_value: '', description: The color of the component's icon.}
 - {name: font, type: string, default_value: '', description: The font family to use for this component.}
-- {name: font_size, type: string, default_value: '', description: The height of the text displayed on this component in pixels}
-- {name: icon_size, type: string, default_value: ''}
+- {name: font_size, type: number, description: The height of the text displayed on this component in pixels.}
+- {name: icon_size, type: number, description: The size of the component's icon in pixels.}
 - name: align
   type: enum
   options: [left, right, center]
-  description: Align this component’s text
-- {name: underline, type: boolean, default_value: false}
-- {name: italic, type: boolean, default_value: false}
+  description: The position of this button in the available space.
+- {name: underline, type: boolean, default_value: false, description: Display this component's text underlined.}
+- {name: italic, type: boolean, default_value: false, description: Display this component's text in italics.}
+- {name: bold, type: boolean, default_value: false, description: Display this component's text in bold.}
 is_package: true
 data_bindings: []
 events:
