@@ -88,6 +88,7 @@ class Button(ButtonTemplate):
   underline = underline_property('anvil-m3-button-text')
   align = style_property('anvil-m3-button-container', 'justifyContent')
   enabled = enabled_property('anvil-m3-button')
+  visible = visible_property('anvil-m3-button-container', 'flex')
   # TODO: Add background color property
 
 
