@@ -15,7 +15,6 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     self.menuOpen = False
 
-  
   @property
   def text(self):
     return self._text
@@ -84,6 +83,8 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     if self.menuOpen:
       self.place_shield()
       # listen for children
+      menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+      menuNode.addEventListener('click', self.childClicked)
       
   def set_visibility(self, value = None):
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
@@ -138,12 +139,19 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     #creating shield
     # shield = document.createElement("div")
     document.body.appendChild(self.shield)
-    self.shield.addEventListener('click', self.remove_shield)
-
-  def remove_shield(self, event):
+    self.shield.addEventListener('click', self.remove_shield_handler)
+    
+  def remove_shield_handler(self, event):
+    self.remove_shield()
+    
+  def remove_shield(self):
     if document.contains(self.shield):
       document.body.removeChild(self.shield)
       self.toggle_menu_visibility()
     
-
+  def childClicked(self, event):
+    print("child clicked")
+    print(event)
+    print(event.target)
+    self.remove_shield()
   # detect if the child was clicked and if so, close the menu
