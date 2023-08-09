@@ -11,7 +11,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     # self.id = ''.join(random.choice(string.ascii_lowercase) for i in range(10))
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
-    self.menuOpen = false
+    self.menuOpen = False
 
   
   @property
