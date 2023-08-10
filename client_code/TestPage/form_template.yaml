@@ -106,47 +106,6 @@ components_by_slot:
     type: GridPanel
     layout_properties: {}
     components:
-    - name: button_menu_combined_2
-      properties: {text: bottom left, appearance: outlined}
-      type: form:Components.ButtonMenu_combined
-      layout_properties: {col_xs: 0, row: QNFVWQ, width_xs: 3}
-      components:
-      - name: menu_item_17
-        properties: {text: sdfgsdfgsdfg}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_22
-        properties: {text: ggfdsgdfgdfgs}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_25
-        properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_24
-        properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_23
-        properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_18
-        properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_20
-        properties: {}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_21
-        properties: {}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_19
-        properties: {}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: flow_panel_1
       properties: {align: right}
       type: FlowPanel
@@ -184,5 +143,46 @@ components_by_slot:
           properties: {}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
+  - name: button_menu_combined_2
+    properties: {text: bottom left, appearance: outlined}
+    type: form:Components.ButtonMenu_combined
+    layout_properties: {}
+    components:
+    - name: menu_item_17
+      properties: {text: sdfgsdfgsdfg}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_22
+      properties: {text: ggfdsgdfgdfgs}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_25
+      properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_24
+      properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_23
+      properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_18
+      properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_20
+      properties: {}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_21
+      properties: {}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_19
+      properties: {}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
 components: []
 event_bindings: {show: form_show}
