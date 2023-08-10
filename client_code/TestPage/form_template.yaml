@@ -53,24 +53,24 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: button_menu_combined_3
-      properties: {text: in flow, appearance: filled}
+      properties: {text: Line Spacing, appearance: filled}
       type: form:Components.ButtonMenu_combined
       layout_properties: {}
       components:
       - name: menu_item_4
-        properties: {text: item 1}
+        properties: {text: Single}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_5
-        properties: {text: item 2}
+        properties: {text: '1.15'}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_6
-        properties: {text: item 3}
+        properties: {text: Double}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_7
-        properties: {text: item 4}
+        properties: {text: 'Custom: 1.2', leading_icon: check}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_13
