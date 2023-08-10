@@ -1,60 +1,56 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_1:
-  - name: button_menu_1
-    properties: {text: ButtonMenu}
-    type: form:Components.ButtonMenu
-    layout_properties: {}
-  - name: divider_1
-    properties: {}
-    type: form:Components.Divider
-    layout_properties: {}
-  - name: button_1
-    properties: {appearance: outlined, text: shields up}
-    type: form:Components.Button
-    layout_properties: {}
-    event_bindings: {click: button_1_click}
+  slot_1: []
+  slot_3:
   - name: button_menu_combined_1
     properties: {text: ButtonMenu_Combined}
     type: form:Components.ButtonMenu_combined
     layout_properties: {}
     components:
-    - name: menu_item_1
-      properties: {text: i am an item!, leading_icon: person}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_1_click}
     - name: menu_item_2
       properties: {text: I too am an item, leading_icon: people}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
       event_bindings: {click: menu_item_2_click}
-  - name: flow_panel_1
+    - name: menu_item_3
+      properties: {}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: menu_item_1
+      properties: {text: i am an item!, leading_icon: person}
+      type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_1_click}
+  - name: flow_panel_2
     properties: {align: right}
     type: FlowPanel
     layout_properties: {}
     components:
-    - name: image_1
-      properties: {height: '300'}
-      type: Image
+    - name: button_menu_combined_3
+      properties: {text: menu in a flow panel}
+      type: form:Components.ButtonMenu_combined
       layout_properties: {}
-  slot_3:
-  - name: button_menu_combined_2
-    properties: {appearance: filled, text: Button outside a container}
-    type: form:Components.ButtonMenu_combined
-    layout_properties: {}
-  - name: button_menu_combined_3
-    properties: {}
-    type: form:Components.ButtonMenu_combined
-    layout_properties: {}
-  - name: flow_panel_2
-    properties: {}
-    type: FlowPanel
-    layout_properties: {}
-    components:
+      components:
+      - name: menu_item_4
+        properties: {text: item 1}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_5
+        properties: {text: item 2}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_6
+        properties: {text: item 3}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_7
+        properties: {text: item 4}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: image_2
-      properties: {}
+      properties: {height: '150'}
       type: Image
+      layout_properties: {width: 0}
 components: []
 event_bindings: {show: form_show}

@@ -12,12 +12,3 @@ class TestPage(TestPageTemplate):
 
   def menu_item_2_click(self, **event_args):
     alert("YOU CLICKED THE ITEM! IT'S PEOPLE!")
-
-  def button_1_click(self, **event_args):
-    """This method is called when the component is clicked"""
-    self.button_menu_combined_1.place_shield()
-
-
-  
-
-  
