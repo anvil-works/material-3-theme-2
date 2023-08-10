@@ -1,7 +1,6 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_1: []
   slot_3:
   - name: button_menu_combined_1
     properties: {text: Font Face}
@@ -186,6 +185,10 @@ components_by_slot:
       properties: {text: Subscript, trailing_text: ⌘.}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: divider_4
+        properties: { }
+        type: form:Components.Divider
+        layout_properties: { slot: anvil-m3-buttonMenu-slot }
     - name: menu_item_20
       properties: {text: Paragraph Styles, trailing_icon: arrow_right}
       type: form:Components.Menu.MenuItem
