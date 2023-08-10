@@ -30,5 +30,14 @@ components_by_slot:
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
       event_bindings: {click: menu_item_2_click}
+  - name: flow_panel_1
+    properties: {align: right}
+    type: FlowPanel
+    layout_properties: {}
+    components:
+    - name: image_1
+      properties: {height: '300'}
+      type: Image
+      layout_properties: {}
 components: []
 event_bindings: {show: form_show}
