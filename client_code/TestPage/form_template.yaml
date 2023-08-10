@@ -73,20 +73,24 @@ components_by_slot:
         properties: {text: 'Custom: 1.2', leading_icon: check}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: divider_2
+        properties: {}
+        type: form:Components.Divider
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_13
-        properties: {text: long text so it's longer than the button}
+        properties: {text: Add space before paragraph, hide_leading_icon: true, trailing_icon: arrow_right}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_14
-        properties: {text: sdfasdfasdf longest it can be}
+        properties: {text: Add space after paragraph, hide_leading_icon: true}
         type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: divider_3
+        properties: {}
+        type: form:Components.Divider
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_15
-        properties: {text: fdsfsdfasdf}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      - name: menu_item_16
-        properties: {text: fdsadf}
+        properties: {text: Custom spacing..., hide_leading_icon: true, enabled: false}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: image_2
@@ -117,7 +121,7 @@ components_by_slot:
       layout_properties: {col_xs: 6, row: QNFVWQ, width_xs: 6}
       components:
       - name: button_menu_combined_4
-        properties: {text: right}
+        properties: {text: Trail Type}
         type: form:Components.ButtonMenu_combined
         components:
         - name: menu_item_26
@@ -148,29 +152,30 @@ components_by_slot:
           properties: {text: 35t4t}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        layout_properties: {}
   - name: image_1_copy_1
     properties: {height: 639}
     type: Image
     layout_properties: {}
   - name: button_menu_combined_2
-    properties: {text: bottom left, appearance: outlined}
+    properties: {text: Format, appearance: outlined}
     type: form:Components.ButtonMenu_combined
     layout_properties: {}
     components:
     - name: menu_item_17
-      properties: {text: sdfgsdfgsdfg}
+      properties: {text: Bold, trailing_text: ⌘B}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_22
-      properties: {text: ggfdsgdfgdfgs}
+      properties: {text: Italic, trailing_text: ⌘I}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_25
-      properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
+      properties: {text: Underline, trailing_text: ⌘U}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_24
-      properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
+      properties: {text: Strikethrough}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_23
