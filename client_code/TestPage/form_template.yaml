@@ -48,7 +48,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: button_menu_combined_3
-      properties: {text: in flow}
+      properties: {text: in flow, appearance: filled}
       type: form:Components.ButtonMenu_combined
       layout_properties: {}
       components:
@@ -97,5 +97,92 @@ components_by_slot:
       properties: {}
       type: DatePicker
       layout_properties: {grid_position: 'PKBSLT,YRDZNT'}
+    - name: image_1
+      properties: {height: 639}
+      type: Image
+      layout_properties: {grid_position: 'DNEJHM,JHEQFU'}
+  - name: grid_panel_1
+    properties: {}
+    type: GridPanel
+    layout_properties: {}
+    components:
+    - name: button_menu_combined_2
+      properties: {text: bottom left, appearance: outlined}
+      type: form:Components.ButtonMenu_combined
+      layout_properties: {col_xs: 0, row: QNFVWQ, width_xs: 3}
+      components:
+      - name: menu_item_17
+        properties: {}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_22
+        properties: {}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_25
+        properties: {}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_24
+        properties: {}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_23
+        properties: {}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_18
+        properties: {}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_20
+        properties: {}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_21
+        properties: {}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_19
+        properties: {}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+    - name: flow_panel_1
+      properties: {align: right}
+      type: FlowPanel
+      layout_properties: {col_xs: 9, row: QNFVWQ, width_xs: 7}
+      components:
+      - name: button_menu_combined_4
+        properties: {text: right}
+        type: form:Components.ButtonMenu_combined
+        components:
+        - name: menu_item_26
+          properties: {}
+          type: form:Components.Menu.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_27
+          properties: {}
+          type: form:Components.Menu.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_28
+          properties: {}
+          type: form:Components.Menu.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_33
+          properties: {}
+          type: form:Components.Menu.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_32
+          properties: {}
+          type: form:Components.Menu.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_31
+          properties: {}
+          type: form:Components.Menu.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
+        - name: menu_item_29
+          properties: {}
+          type: form:Components.Menu.MenuItem
+          layout_properties: {slot: anvil-m3-buttonMenu-slot}
 components: []
 event_bindings: {show: form_show}

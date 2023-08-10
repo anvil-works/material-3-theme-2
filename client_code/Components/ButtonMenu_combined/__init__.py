@@ -72,8 +72,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       # position: button position - top right bottom left
       # menuSize - width height
       # windowSize -width height
-
-      print(self.windowSize['width'])
+      
       menuLeft = self.position['left']
       menuRight = self.position['left'] + self.menuSize['width']
       print("positionings")
@@ -82,7 +81,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       print(self.windowSize['width'])
 
       if self.windowSize['width'] < menuRight:
-        menuNode.style.left = f"{math.floor(self.windowSize(['width']) - (self.menuSize['width'] + 5))}px"
+        menuNode.style.right = '5px'
       else:
         menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
       
