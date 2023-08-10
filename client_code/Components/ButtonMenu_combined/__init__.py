@@ -42,7 +42,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def position(self):
     return self._position;
   @position.setter
-  def position(self, value = {"top": 0, "left": 0, "bottom": 0, "right": 0}):
+  def position(self, value = {"top": 0, "left": 0, "bottom": 0, "right": 0, "height": 0, "width": 0}):
     self._position = value
     self.windowSize = {"width": window.innerWidth, "height": window.innerHeight}
     menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
@@ -70,12 +70,9 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       self.get_button_position()
       self.printPosition()
       self.place_shield()
-      # position: button position - top right bottom left
-      # menuSize - width height
-      # windowSize -width height
       
       menuLeft = self.position['left']
-      menuRight = self.position['left'] + self.menuSize['width']
+      menuRight = menuLeft + self.menuSize['width']
 
       if self.windowSize['width'] < menuRight:
         menuNode.style.right = '5px'
@@ -83,7 +80,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
         menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
 
       menuTop = self.position['bottom']
-      menuBottom = self.position['bottom'] + self.menuSize['height']
+      menuBottom = menuTop + self.menuSize['height']
       
       print("positionings")
       print(self.position['top'])
@@ -92,16 +89,15 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       print(menuBottom)
       print(self.menuSize['height'])
 
-      if self.windowSize['height'] < menuBottom: #not tall enough!
-        # check if theres more space in the top of the bottom
+      if (self.windowSize['height'] - self.position['height']) < self.menuSize['height']: #menu too tall!
         spaceAtTop = self.position['top']
-        spaceAtBottom = self.windowSize['height'] - self.position['bottom']
+        spaceAtBottom = self.windowSize['height'] - (spaceAtTop + self.position['height'])
         print("top and bottom spacing")
         print(spaceAtTop)
         print(spaceAtBottom)
 
         if spaceAtTop > spaceAtBottom:
-          menuNode.style.bottom = f"{math.floor(self.windowSize['height'] - (self.position['top'] - 5))}px"
+          menuNode.style.bottom = f"{math.floor(spaceAtBottom)}px"
           menuNode.style.height = f"{math.floor(spaceAtTop - 7)}px"
         else:
           menuNode.style.top = f"{math.floor(menuTop + 5)}px"
@@ -109,10 +105,10 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
           
         
         # 
-      else: #don't adjust height
+      else: #menu fits
         menuNode.style.top = f"{math.floor(menuTop) + 5}px"
     else:
-      menuNode.style.removeAttribute("style")
+      menuNode.removeAttribute("style")
       
   def set_visibility(self, value = None):
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
@@ -147,7 +143,9 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       "top": rect.top,
       "right": rect.right,
       "bottom": rect.bottom,
-      "left": rect.left
+      "left": rect.left,
+      "height": rect.bottom - rect.top,
+      "width": rect.right - rect.left,
     }
 
   def printPosition(self):
