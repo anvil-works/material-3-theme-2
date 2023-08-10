@@ -2,7 +2,7 @@ from ._anvil_designer import ButtonMenu_combinedTemplate
 from anvil import *
 from anvil.js import window
 from anvil.js.window import document
-import random, string
+import random, string, math
 
 class ButtonMenu_combined(ButtonMenu_combinedTemplate):
   def __init__(self, **properties):
@@ -82,9 +82,9 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       print(self.windowSize['width'])
 
       if self.windowSize['width'] < menuRight:
-        menuNode.style.right = '5px'
-        
-  
+        menuNode.style.left = f"{math.floor(self.windowSize(['width']) - (self.menuSize['width'] + 5))}px"
+      else:
+        menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
       
   def set_visibility(self, value = None):
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
