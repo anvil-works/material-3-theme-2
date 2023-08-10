@@ -39,5 +39,22 @@ components_by_slot:
       properties: {height: '300'}
       type: Image
       layout_properties: {}
+  slot_3:
+  - name: button_menu_combined_2
+    properties: {appearance: filled, text: Button outside a container}
+    type: form:Components.ButtonMenu_combined
+    layout_properties: {}
+  - name: button_menu_combined_3
+    properties: {}
+    type: form:Components.ButtonMenu_combined
+    layout_properties: {}
+  - name: flow_panel_2
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
+    components:
+    - name: image_2
+      properties: {}
+      type: Image
 components: []
 event_bindings: {show: form_show}
