@@ -92,7 +92,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       print(menuBottom)
       print(self.menuSize['height'])
 
-      if self.windowSize['height'] < menuBottom: #width needs to be adjusted and position might need to be moved
+      if self.windowSize['height'] < menuBottom: #not tall enough!
         # check if theres more space in the top of the bottom
         spaceAtTop = self.position['top']
         spaceAtBottom = self.windowSize['height'] - self.position['bottom']
@@ -109,10 +109,10 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
           
         
         # 
-      else:
+      else: #don't adjust height
         menuNode.style.top = f"{math.floor(menuTop) + 5}px"
     else:
-      menuNode.style.height = "unset";
+      menuNode.style.removeAttribute("style")
       
   def set_visibility(self, value = None):
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList

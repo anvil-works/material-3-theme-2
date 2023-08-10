@@ -140,9 +140,13 @@ components_by_slot:
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
         - name: menu_item_29
-          properties: {}
+          properties: {text: 35t4t}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
+  - name: image_1_copy_1
+    properties: {height: 639}
+    type: Image
+    layout_properties: {}
   - name: button_menu_combined_2
     properties: {text: bottom left, appearance: outlined}
     type: form:Components.ButtonMenu_combined
@@ -173,15 +177,15 @@ components_by_slot:
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_20
-      properties: {}
+      properties: {text: ffdsadf}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_21
-      properties: {}
+      properties: {text: aaafdsf}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_19
-      properties: {}
+      properties: {text: fbfdsoiuwrjf}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
 components: []
