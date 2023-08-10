@@ -100,12 +100,13 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
         print(spaceAtBottom)
 
         if spaceAtTop > spaceAtBottom:
-          pass
+          menuNode.style.bottom = f"{math.floor(self.windowSize['height'] - (self.position['top'] - 5))}px"
+          menuNode.style.height = f"{}px"
         else:
-          menuNode.style
+          menuNode.style.top = f"{math.floor(menuTop + 5)}px"
           
         
-        menuNode.style.bottom = f"{math.floor(self.windowSize['height'] - self.position['top'])+ 5}px"
+        # 
       else:
         menuNode.style.top = f"{math.floor(menuTop) + 5}px"
       
