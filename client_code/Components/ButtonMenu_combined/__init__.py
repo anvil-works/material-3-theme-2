@@ -106,7 +106,13 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
         
         # 
       else: #menu fits
-        menuNode.style.top = f"{math.floor(menuTop) + 5}px"
+        # menuNode.style.top = f"{math.floor(menuTop) + 5}px"
+        if self.windowSize['height'] < menuBottom:
+          #goes passedmenuNode.style.bottom = f"{math.floor(self.windowSize['height'] - (self.position['top'] - 5))}px"
+          pass
+          menuNode.style.bottom = f"{math.floor(self.windowSize['height'] - (self.position['top'] - 5))}px"
+        else:
+          menuNode.style.top = f"{math.floor(menuTop + 5)}px"
     else:
       menuNode.removeAttribute("style")
       
