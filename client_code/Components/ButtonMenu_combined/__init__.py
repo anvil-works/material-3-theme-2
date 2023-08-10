@@ -91,7 +91,13 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       print(menuBottom)
       print(self.menuSize['height'])
 
-      if self.windowSize['height'] < menuBottom:
+      if self.windowSize['height'] < menuBottom: #width needs to be adjusted and position might need to be moved
+        # check if theres more space in the top of the bottom
+        spaceAtTop = self.position['top']
+        spaceAtBottom = self.windowSize['height'] - self.position['bottom']
+        print("top and bottom spacing")
+        print(spaceAtTop)
+        print(spaceAtBottom)
         menuNode.style.bottom = f"{math.floor(self.windowSize['height'] - self.position['top'])+ 5}px"
       else:
         menuNode.style.top = f"{math.floor(menuTop) + 5}px"
