@@ -4,44 +4,39 @@ components_by_slot:
   slot_1: []
   slot_3:
   - name: button_menu_combined_1
-    properties: {text: no panel}
+    properties: {text: Font}
     type: form:Components.ButtonMenu_combined
     layout_properties: {}
     components:
     - name: menu_item_2
-      properties: {text: I too am an item, leading_icon: people}
+      properties: {text: Arial, leading_icon: people, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
       event_bindings: {click: menu_item_2_click}
     - name: menu_item_3
-      properties: {text: eethgfh}
+      properties: {text: Droid Sans, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_10
-      properties: {text: lklhjklhjkl}
+      properties: {text: Lusitana, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_12
-      properties: {text: hdfghdfgh}
+      properties: {text: Amarante, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_8
-      properties: {text: hgfhdfgh}
+      properties: {text: Arial, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_11
-      properties: {text: hgfhdfjghkhjkl}
+      properties: {text: Arvo, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_9
-      properties: {text: hgfdhfghd}
+      properties: {text: Droid Sans, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_1
-      properties: {text: i am an item!, leading_icon: person}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-      event_bindings: {click: menu_item_1_click}
   - name: flow_panel_2
     properties: {align: right}
     type: FlowPanel
