@@ -112,11 +112,11 @@ components_by_slot:
       layout_properties: {col_xs: 0, row: QNFVWQ, width_xs: 3}
       components:
       - name: menu_item_17
-        properties: {}
+        properties: {text: sdfgsdfgsdfg}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_22
-        properties: {}
+        properties: {text: ggfdsgdfgdfgs}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_25
@@ -150,7 +150,7 @@ components_by_slot:
     - name: flow_panel_1
       properties: {align: right}
       type: FlowPanel
-      layout_properties: {col_xs: 9, row: QNFVWQ, width_xs: 7}
+      layout_properties: {col_xs: 6, row: QNFVWQ, width_xs: 6}
       components:
       - name: button_menu_combined_4
         properties: {text: right}
