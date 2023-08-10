@@ -120,19 +120,19 @@ components_by_slot:
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_25
-        properties: {}
+        properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_24
-        properties: {}
+        properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_23
-        properties: {}
+        properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_18
-        properties: {}
+        properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_20
@@ -157,27 +157,27 @@ components_by_slot:
         type: form:Components.ButtonMenu_combined
         components:
         - name: menu_item_26
-          properties: {}
+          properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
         - name: menu_item_27
-          properties: {}
+          properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
         - name: menu_item_28
-          properties: {}
+          properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
         - name: menu_item_33
-          properties: {}
+          properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
         - name: menu_item_32
-          properties: {}
+          properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
         - name: menu_item_31
-          properties: {}
+          properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
           type: form:Components.Menu.MenuItem
           layout_properties: {slot: anvil-m3-buttonMenu-slot}
         - name: menu_item_29
