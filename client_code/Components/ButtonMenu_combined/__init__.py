@@ -62,8 +62,9 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
   def toggle_menu_visibility(self, **event_args):
     self.menuOpen = self.set_visibility()
+    menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    
     if self.menuOpen:
-      menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
       menuNode.addEventListener('click', self.childClicked)
 
       self.get_button_position()
@@ -101,15 +102,17 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
 
         if spaceAtTop > spaceAtBottom:
           menuNode.style.bottom = f"{math.floor(self.windowSize['height'] - (self.position['top'] - 5))}px"
-          menuNode.style.height = f"{}px"
+          menuNode.style.height = f"{math.floor(spaceAtTop - 7)}px"
         else:
           menuNode.style.top = f"{math.floor(menuTop + 5)}px"
+          menuNode.style.height = f"{math.floor(spaceAtBottom - 7)}px"
           
         
         # 
       else:
         menuNode.style.top = f"{math.floor(menuTop) + 5}px"
-      
+    else:
+      menuNode.style.height = "unset";
       
   def set_visibility(self, value = None):
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
