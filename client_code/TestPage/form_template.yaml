@@ -175,27 +175,19 @@ components_by_slot:
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_24
-      properties: {text: Strikethrough}
+      properties: {text: Strikethrough, trailing_text: ⌘+Shift+X}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_23
-      properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
+      properties: {text: Superscript, trailing_text: '⌘,'}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_18
-      properties: {text: gfdgsdfgsdfgsdfgs  sdfgs}
+      properties: {text: Subscript, trailing_text: ⌘.}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_20
-      properties: {text: ffdsadf}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_21
-      properties: {text: aaafdsf}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-buttonMenu-slot}
-    - name: menu_item_19
-      properties: {text: fbfdsoiuwrjf}
+      properties: {text: Paragraph Styles, trailing_icon: arrow_right}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
 components: []
