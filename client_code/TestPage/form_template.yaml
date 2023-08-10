@@ -4,7 +4,7 @@ components_by_slot:
   slot_1: []
   slot_3:
   - name: button_menu_combined_1
-    properties: {text: Font}
+    properties: {text: Font Face}
     type: form:Components.ButtonMenu_combined
     layout_properties: {}
     components:
@@ -17,26 +17,36 @@ components_by_slot:
       properties: {text: Droid Sans, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_3_click}
     - name: menu_item_10
       properties: {text: Lusitana, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
+      layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_10_click}
+    - name: divider_1
+      properties: {}
+      type: form:Components.Divider
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: menu_item_12
       properties: {text: Amarante, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_12_click}
     - name: menu_item_8
       properties: {text: Arial, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_8_click}
     - name: menu_item_11
       properties: {text: Arvo, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_11_click}
     - name: menu_item_9
       properties: {text: Droid Sans, hide_leading_icon: true}
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      event_bindings: {click: menu_item_9_click}
   - name: flow_panel_2
     properties: {align: right}
     type: FlowPanel
