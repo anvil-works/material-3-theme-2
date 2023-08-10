@@ -85,14 +85,16 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       menuBottom = self.position['bottom'] + self.menuSize['height']
       
       print("positionings")
+      print(self.position['top'])
+      print(self.position['bottom'])
       print(menuTop)
       print(menuBottom)
       print(self.menuSize['height'])
 
       if self.windowSize['height'] < menuBottom:
-        menuNode.style.bottom = '5px'
+        menuNode.style.bottom = f"{math.floor(self.windowSize['height'] - self.position['top'])+ 5}px"
       else:
-        menuNode.style.top = f"{math.floor(menuTop)}px"
+        menuNode.style.top = f"{math.floor(menuTop) + 5}px"
       
       
   def set_visibility(self, value = None):
