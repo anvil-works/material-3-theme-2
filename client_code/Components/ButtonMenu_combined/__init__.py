@@ -75,15 +75,20 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       
       menuLeft = self.position['left']
       menuRight = self.position['left'] + self.menuSize['width']
-      print("positionings")
-      print(menuLeft)
-      print(menuRight)
-      print(self.windowSize['width'])
 
       if self.windowSize['width'] < menuRight:
         menuNode.style.right = '5px'
       else:
         menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
+
+      menuTop = self.position['bottom']
+      menuBottom = self.position['bottom'] + self.menuSize['height']
+      
+      print("positionings")
+      print(menuTop)
+      print(menuBottom)
+      print(self.menuSize['height'])
+      
       
   def set_visibility(self, value = None):
     classes = self.dom_nodes['anvil-m3-buttonMenu-items-container'].classList
