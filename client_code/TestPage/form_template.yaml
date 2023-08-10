@@ -4,7 +4,7 @@ components_by_slot:
   slot_1: []
   slot_3:
   - name: button_menu_combined_1
-    properties: {text: ButtonMenu_Combined}
+    properties: {text: no panel}
     type: form:Components.ButtonMenu_combined
     layout_properties: {}
     components:
@@ -48,7 +48,7 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: button_menu_combined_3
-      properties: {text: menu in a flow panel}
+      properties: {text: in flow}
       type: form:Components.ButtonMenu_combined
       layout_properties: {}
       components:
@@ -69,19 +69,19 @@ components_by_slot:
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_13
-        properties: {}
+        properties: {text: long text so it's longer than the button}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_14
-        properties: {}
+        properties: {text: sdfasdfasdf longest it can be}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_15
-        properties: {}
+        properties: {text: fdsfsdfasdf}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
       - name: menu_item_16
-        properties: {}
+        properties: {text: fdsadf}
         type: form:Components.Menu.MenuItem
         layout_properties: {slot: anvil-m3-buttonMenu-slot}
     - name: image_2
