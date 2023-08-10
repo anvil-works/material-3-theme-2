@@ -72,6 +72,18 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
       # position: button position - top right bottom left
       # menuSize - width height
       # windowSize -width height
+
+      print(self.windowSize['width'])
+      menuLeft = self.position['left']
+      menuRight = self.position['left'] + self.menuSize['width']
+      print("positionings")
+      print(menuLeft)
+      print(menuRight)
+      print(self.windowSize['width'])
+
+      if self.windowSize['width'] < menuRight:
+        menuNode.style.right = '5px'
+        
   
       
   def set_visibility(self, value = None):
