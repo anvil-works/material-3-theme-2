@@ -1,6 +1,10 @@
 layout: {type: 'form:TestLayout'}
 is_package: true
 components_by_slot:
-  slot_3: []
+  slot_3:
+  - name: radio_button_1
+    properties: {}
+    type: form:Components.RadioButton
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
