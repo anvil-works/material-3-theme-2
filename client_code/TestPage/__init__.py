@@ -7,6 +7,10 @@ class TestPage(TestPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  def radio_button_1_click(self, **event_args):
+    pass
+
+
   
 
   
