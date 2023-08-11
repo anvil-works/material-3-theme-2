@@ -3,15 +3,15 @@ is_package: true
 components_by_slot:
   slot_3:
   - name: radio_button_1
-    properties: {}
+    properties: {group_name: a}
     type: form:Components.RadioButton
     layout_properties: {}
   - name: radio_button_2
-    properties: {}
+    properties: {group_name: a}
     type: form:Components.RadioButton
     layout_properties: {}
   - name: radio_button_3
-    properties: {}
+    properties: {group_name: a}
     type: form:Components.RadioButton
     layout_properties: {}
 components: []
