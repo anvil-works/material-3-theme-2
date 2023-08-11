@@ -8,7 +8,7 @@ class TestPage(TestPageTemplate):
     self.init_components(**properties)
 
   def radio_button_1_click(self, **event_args):
-    self.label_1.text = self
+    self.label_1.text = self.text
     
   def radio_button_2_click(self, **event_args):
     pass
