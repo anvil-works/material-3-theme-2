@@ -19,11 +19,11 @@ components_by_slot:
     type: form:Components.Divider
     layout_properties: {}
   - name: radio_button_4
-    properties: {}
+    properties: {group_name: b}
     type: form:Components.RadioButton
     layout_properties: {}
   - name: radio_button_5
-    properties: {}
+    properties: {group_name: b}
     type: form:Components.RadioButton
     layout_properties: {}
   - name: radio_button_6
