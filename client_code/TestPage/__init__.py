@@ -10,10 +10,10 @@ class TestPage(TestPageTemplate):
   def radio_button_1_click(self, **event_args):
     pass
     
-  def radio_button_1_click(self, **event_args):
+  def radio_button_2_click(self, **event_args):
     pass
     
-  def radio_button_1_click(self, **event_args):
+  def radio_button_2_click(self, **event_args):
     pass
 
 
