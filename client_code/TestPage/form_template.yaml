@@ -27,7 +27,7 @@ components_by_slot:
     type: form:Components.RadioButton
     layout_properties: {}
   - name: radio_button_6
-    properties: {}
+    properties: {group_name: b}
     type: form:Components.RadioButton
     layout_properties: {}
 components: []
