@@ -6,6 +6,7 @@ components_by_slot:
     properties: {group_name: a}
     type: form:Components.RadioButton
     layout_properties: {}
+    event_bindings: {click: radio_button_1_click}
   - name: radio_button_2
     properties: {group_name: a}
     type: form:Components.RadioButton
