@@ -14,5 +14,13 @@ components_by_slot:
     properties: {group_name: a}
     type: form:Components.RadioButton
     layout_properties: {}
+  - name: divider_1
+    properties: {}
+    type: form:Components.Divider
+    layout_properties: {}
+  - name: radio_button_4
+    properties: {}
+    type: form:Components.RadioButton
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
