@@ -6,5 +6,13 @@ components_by_slot:
     properties: {}
     type: form:Components.RadioButton
     layout_properties: {}
+  - name: radio_button_2
+    properties: {}
+    type: form:Components.RadioButton
+    layout_properties: {}
+  - name: radio_button_3
+    properties: {}
+    type: form:Components.RadioButton
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
