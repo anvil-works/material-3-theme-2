@@ -1,5 +1,6 @@
 from ._anvil_designer import CheckboxTemplate
 from anvil import *
+from anvil import HtmlTemplate
 from ...Functions import enabled_property, style_property, visible_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property
 import anvil.designer
 
@@ -52,7 +53,7 @@ class Checkbox(CheckboxTemplate):
       self.raise_event("click")
 
   enabled = enabled_property('anvil-m3-checkbox')
-  visible = visible_property('anvil-m3-checkbox-container', 'inline-flex')
+  visible = HtmlTemplate.visible
   underline = underline_property('anvil-m3-checkbox-label')
   italic = italic_property('anvil-m3-checkbox-label')
   bold = bold_property('anvil-m3-checkbox-label')

@@ -1,5 +1,6 @@
 from ._anvil_designer import TextTemplate
 from anvil import *
+from anvil import HtmlTemplate
 import anvil.designer
 from ...Functions import visible_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property
 
@@ -30,7 +31,7 @@ class Text(TextTemplate):
     }]
     return di
 
-  visible = visible_property('anvil-m3-text-container', 'flex')
+  visible = HtmlTemplate.visible
   underline = underline_property('anvil-m3-text')
   italic = italic_property('anvil-m3-text')
   bold = bold_property('anvil-m3-text')

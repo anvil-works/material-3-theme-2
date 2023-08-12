@@ -1,5 +1,6 @@
 from ._anvil_designer import RadioButtonTemplate
 from anvil import *
+from anvil import HtmlTemplate
 from anvil.js.window import document
 import anvil.designer
 from ...Functions import checked_property, name_property, innerText_property, enabled_property, style_property, visible_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property
@@ -11,7 +12,7 @@ class RadioButton(RadioButtonTemplate):
     self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self.handle_click)
 
   # Properties 
-  visible = visible_property('anvil-m3-radiobutton-container', 'inline-flex')
+  visible = HtmlTemplate.visible
   group_name = name_property('anvil-m3-radiobutton-input')
   value = value_property('anvil-m3-radiobutton-input')
   enabled = enabled_property('anvil-m3-radiobutton-input')
