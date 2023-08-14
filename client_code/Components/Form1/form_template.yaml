@@ -5,3 +5,5 @@ container:
       ></div>"}
 components: []
 is_package: true
+custom_component: true
+custom_component_container: true
