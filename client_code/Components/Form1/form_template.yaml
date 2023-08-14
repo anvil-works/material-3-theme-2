@@ -2,7 +2,7 @@ container:
   type: HtmlTemplate
   properties: {html: "<center style=\"font-style:italic; color:#888; margin: 3em;\"\
       >\n  (Insert your custom HTML here)\n</center>\n<div anvil-slot=\"default\"\
-      \ style=></div>"}
+      \ style=\"width: 100px; height: 100px\"></div>"}
 components: []
 is_package: true
 custom_component: true
