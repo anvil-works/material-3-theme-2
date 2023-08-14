@@ -28,5 +28,9 @@ components_by_slot:
     properties: {}
     type: Link
     layout_properties: {}
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
