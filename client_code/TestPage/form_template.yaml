@@ -33,6 +33,10 @@ components_by_slot:
     type: form:Components.Card
     layout_properties: {}
     components: []
+  - name: radio_button_1
+    properties: {}
+    type: form:Components.RadioButton
+    layout_properties: {}
   - name: form1_1
     properties: {}
     type: form:Components.Form1
