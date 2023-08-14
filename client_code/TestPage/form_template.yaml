@@ -42,6 +42,10 @@ components_by_slot:
     type: form:Components.Form1
     layout_properties: {}
     components:
+    - name: text_2
+      properties: {}
+      type: form:Components.Text
+      layout_properties: {slot: anvil-m3-link}
     - name: text_1
       properties: {}
       type: form:Components.Text
