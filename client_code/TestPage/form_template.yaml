@@ -41,10 +41,6 @@ components_by_slot:
     properties: {}
     type: form:Components.Form1
     layout_properties: {}
-    components:
-    - name: switch_1
-      properties: {}
-      type: form:Components.Switch
-      layout_properties: {slot: default}
+    components: []
 components: []
 event_bindings: {show: form_show}
