@@ -42,5 +42,9 @@ components_by_slot:
     type: form:Components.Form1
     layout_properties: {}
     components: []
+  - name: button_1
+    properties: {}
+    type: form:Components.Button
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
