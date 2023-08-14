@@ -377,7 +377,11 @@ is_package: true
 events:
 - {name: event, default_event: true, description: clicked}
 custom_component: true
-components: []
+components:
+- name: label_1
+  properties: {}
+  type: Label
+  layout_properties: {slot: anvil-m3-link}
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-link-container\" style=\"height:100px;\
