@@ -33,9 +33,9 @@ components_by_slot:
     type: form:Components.Card
     layout_properties: {}
     components: []
-  - name: heading_2
+  - name: form1_1
     properties: {}
-    type: form:Components.Heading
+    type: form:Components.Form1
     layout_properties: {}
 components: []
 event_bindings: {show: form_show}
