@@ -32,5 +32,10 @@ components_by_slot:
     properties: {}
     type: form:Components.Card
     layout_properties: {}
+    components:
+    - name: heading_1
+      properties: {}
+      type: form:Components.Heading
+      layout_properties: {slot: anvil-m3-card-slot}
 components: []
 event_bindings: {show: form_show}
