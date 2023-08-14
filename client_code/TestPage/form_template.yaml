@@ -41,5 +41,10 @@ components_by_slot:
     properties: {}
     type: form:Components.Form1
     layout_properties: {}
+    components:
+    - name: divider_1
+      properties: {}
+      type: form:Components.Divider
+      layout_properties: {slot: anvil-m3-link}
 components: []
 event_bindings: {show: form_show}
