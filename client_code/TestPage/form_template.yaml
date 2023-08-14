@@ -37,6 +37,10 @@ components_by_slot:
       properties: {}
       type: form:Components.Heading
       layout_properties: {slot: anvil-m3-card-slot}
+  - name: heading_2
+    properties: {}
+    type: form:Components.Heading
+    layout_properties: {}
   - name: link_5
     properties: {}
     type: Link
