@@ -11,7 +11,7 @@ class RadioButton(RadioButtonTemplate):
     self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self.handle_click)
 
   # Properties 
-  visible = visible_property('anvil-m3-radiobutton-container', 'inline-flex')
+  # visible = visible_property('anvil-m3-radiobutton-container', 'inline-flex')
   group_name = name_property('anvil-m3-radiobutton-input')
   value = value_property('anvil-m3-radiobutton-input')
   enabled = enabled_property('anvil-m3-radiobutton-input')
