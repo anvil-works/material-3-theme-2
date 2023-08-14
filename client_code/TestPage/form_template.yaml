@@ -42,6 +42,10 @@ components_by_slot:
     type: form:Components.Form1
     layout_properties: {}
     components:
+    - name: divider_1
+      properties: {}
+      type: form:Components.Divider
+      layout_properties: {slot: default}
     - name: form1_2
       properties: {}
       type: form:Components.Form1
