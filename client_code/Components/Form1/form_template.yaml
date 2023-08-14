@@ -1,12 +1,13 @@
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-link-container\">\n  <a href=\"javascript:void(0)\"\
-      \ onclick=\"\" anvil-name=\"anvil-m3-link\" class=\"anvil-m3-link\">\n    <span\
-      \ anvil-name=\"anvil-m3-link-icon\" class=\"material-symbols-outlined anvil-m3-link-icon\"\
-      ></span>\n    <div anvil-slot=\"anvil-m3-link\"></div>\n  </a>\n</div>\n<!--\
-      \ \n<div anvil anvil-slot=\"anvil-m3-card-slot\" anvil-name=\"anvil-m3-card\"\
-      \ class=\"anvil-m3-card\" tabindex=\"0\">\n    <p anvil-if-slot-empty=\"anvil-m3-card-slot\"\
-      \ style=\"color: #BBB\"><i>Insert Card Content</i></p>\n</div> -->"}
+  properties: {html: "<div anvil-name=\"anvil-m3-link-container\" class=\"anvil-m3-link-container\"\
+      >\n  <a href=\"javascript:void(0)\" onclick=\"\" anvil-name=\"anvil-m3-link\"\
+      \ class=\"anvil-m3-link\">\n    <span anvil-name=\"anvil-m3-link-icon\" class=\"\
+      material-symbols-outlined anvil-m3-link-icon\"></span>\n    <div anvil-slot=\"\
+      anvil-m3-link\"></div>\n  </a>\n</div>\n<!-- \n<div anvil anvil-slot=\"anvil-m3-card-slot\"\
+      \ anvil-name=\"anvil-m3-card\" class=\"anvil-m3-card\" tabindex=\"0\">\n   \
+      \ <p anvil-if-slot-empty=\"anvil-m3-card-slot\" style=\"color: #BBB\"><i>Insert\
+      \ Card Content</i></p>\n</div> -->"}
 components: []
 is_package: true
 custom_component: true
