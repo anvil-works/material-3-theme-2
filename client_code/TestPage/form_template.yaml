@@ -42,6 +42,10 @@ components_by_slot:
     type: form:Components.Form1
     layout_properties: {}
     components:
+    - name: heading_1
+      properties: {}
+      type: form:Components.Heading
+      layout_properties: {slot: anvil-m3-link}
     - name: divider_1
       properties: {}
       type: form:Components.Divider
