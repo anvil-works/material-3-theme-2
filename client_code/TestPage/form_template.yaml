@@ -41,21 +41,5 @@ components_by_slot:
     properties: {}
     type: form:Components.Link
     layout_properties: {}
-  - name: link_6
-    properties: {}
-    type: form:Components.Link
-    layout_properties: {}
-  - name: switch_1
-    properties: {}
-    type: form:Components.Switch
-    layout_properties: {}
-  - name: text_1
-    properties: {}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: link_7
-    properties: {}
-    type: Link
-    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
