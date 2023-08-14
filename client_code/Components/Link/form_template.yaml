@@ -380,7 +380,7 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-link-container\" style=\"height:100px;\
+  properties: {html: "<div anvil-name=\"anvil-m3-link-container\" \n  style=\"height:100px;\
       \ width: 100px; background: pink\"\n  >\n  <a href=\"javascript:void(0)\" onclick=\"\
       \" anvil-name=\"anvil-m3-link\" class=\"anvil-m3-link\">\n    <span anvil-name=\"\
       anvil-m3-link-icon\" class=\"material-symbols-outlined anvil-m3-link-icon\"\
