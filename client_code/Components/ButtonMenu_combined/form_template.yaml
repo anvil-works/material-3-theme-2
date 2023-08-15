@@ -1,5 +1,6 @@
 properties:
-- {name: text, type: string, default_value: '', default_binding_prop: true, description: Text on Button}
+- {name: text, type: string, default_value: '', default_binding_prop: true, description: Text on Button,
+  group: Attributes}
 - name: appearance
   type: enum
   options: [elevated, filled, tonal, outlined]
