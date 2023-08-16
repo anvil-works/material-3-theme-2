@@ -180,7 +180,7 @@ class ButtonMenu_combined(ButtonMenu_combinedTemplate):
     def attemptSelect():
       if not self.hoverIndex is None:
         self.children[self.hoverIndex].raise_event("click")
-      # event.preventDefault();
+      event.preventDefault();
     
     if (event.key is " "): #space key as " " is stupid
       attemptSelect()
