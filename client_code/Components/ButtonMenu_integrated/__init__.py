@@ -36,6 +36,7 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     document.addEventListener('keydown', self.handle_keyboard_events)
     self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
+    
   def on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self.handle_keyboard_events)
     self.shield.removeEventListener('click', self.remove_shield_handler)
