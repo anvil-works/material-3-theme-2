@@ -21,16 +21,15 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
-    self.shield.style = "background-color:green; opacity:0.3"
     self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
 
     # todo: ask why we do this again? 
     self.handle_keyboard_events = self.handle_keyboard_events
     self.remove_shield_handler = self.remove_shield_handler
     self.child_clicked = self.child_clicked
-    # NOTE: these might get changed to "x-anvil-page-added" and "x-anvil-page-removed" in the future
-    self.add_event_handler("x-anvil-propagate-page-added", self.on_mount)
-    self.add_event_handler("x-anvil-propagate-page-removed", self.on_cleanup)
+
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
     document.addEventListener('keydown', self.handle_keyboard_events)
