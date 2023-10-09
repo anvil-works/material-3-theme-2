@@ -113,7 +113,7 @@ components_by_slot:
     properties: {visible: true, enabled: true, include_placeholder: true, font: Times New Roman}
     type: form:Components.DropdownMenu
     layout_properties: {}
-    event_bindings: {change: dropdown_menu_1_change}
+    event_bindings: {}
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image

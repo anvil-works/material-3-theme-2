@@ -10,18 +10,22 @@ class DropdownMenu(DropdownMenuTemplate):
 
     # Any code you write here will run before the form opens.
 
-    self.menuNode = self.dom_nodes['anvil-m3-menu-items-container']
+    # self.menuNode = self.dom_nodes['anvil-m3-menu-items-container']
+    textFieldNode = self.text_field.dom_nodes['anvil-m3-text-field'];
     
+    self.handle_box_click = self.handle_box_click
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
-    pass
+    textFieldNode.addEventListener('click', self.handle_box_click)
+  # click event listener on box to toggle open or closed menu
+  
     # document.addEventListener('keydown', self.handle_keyboard_events)
     # self.shield.addEventListener('click', self.remove_shield_handler)
     # self.menuNode.addEventListener('click', self.child_clicked)
   def on_cleanup(self, **event_args):
-    pass
+    textFieldNode.removeEventListener('click', self.handle_box_click)
     # document.removeEventListener('keydown', self.handle_keyboard_events)
     # self.shield.removeEventListener('click', self.remove_shield_handler)
     # self.menuNode.removeEventListener('click', self.child_clicked)
@@ -47,7 +51,7 @@ class DropdownMenu(DropdownMenuTemplate):
     # this should maybe change the font of the menuItems too
 
   def handle_box_click(self):
-    pass
+    self.set_menu_visibility()
 
   def set_menu_visibility(self, value = None):
     if (value is None):

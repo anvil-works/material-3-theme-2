@@ -59,7 +59,7 @@ container:
   properties: {html: "<div anvil-name=\"anvil-m3-dropdownMenu-container\" class=\"\
       anvil-m3-dropdownMenu-container\">\n  <!-- the \"internal\" div needs marker\
       \ where it prevents exposure of the slot when being used in a parent component\
-      \ -->\n  <div anvil-slot=\"anvil-m3-dropdownMenu-textfield\" internal> </div>\n\
-      \  <div anvil-slot=\"anvil-m3-menu-items-container\" class=\"anvil-m3-menu-items-container\
-      \ anvil-m3-menu-hidden\"> </div>\n</div>"}
+      \ -->\n  <div anvil-slot=\"anvil-m3-dropdownMenu-textfield\" class=\"anvil-m3-dropdownMenu-textfield\"\
+      \ internal> </div>\n  <div anvil-slot=\"anvil-m3-menu-items-container\" class=\"\
+      anvil-m3-menu-items-container anvil-m3-menu-hidden\"> </div>\n</div>"}
 custom_component_container: true
