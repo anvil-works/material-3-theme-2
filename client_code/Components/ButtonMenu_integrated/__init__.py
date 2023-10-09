@@ -24,6 +24,7 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     self.shield.style = "background-color:green; opacity:0.3"
     self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
 
+    # todo: ask why we do this again? 
     self.handle_keyboard_events = self.handle_keyboard_events
     self.remove_shield_handler = self.remove_shield_handler
     self.child_clicked = self.child_clicked
@@ -156,6 +157,7 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
       document.body.style.removeProperty("overflow")
     
   def child_clicked(self, event):
+    print("child clicked")
     # do the click action. The child should handle this
     self.remove_shield()
     self.set_visibility(False)
@@ -167,6 +169,7 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
         self.itemIndices.add(i)
    
   def handle_keyboard_events(self, event):
+    print("keyboard event here")
     if not self.open:
       return
 
