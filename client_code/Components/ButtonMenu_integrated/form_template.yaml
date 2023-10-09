@@ -1,12 +1,13 @@
 properties:
 - {name: text, type: string, default_value: '', default_binding_prop: true, description: Text on Button}
+- {name: enabled, type: boolean, default_value: true}
+- {name: visible, type: boolean, default_value: true}
 - name: appearance
   type: enum
+  important: true
   options: [elevated, filled, tonal, outlined]
   description: Style of Button
   default_value: elevated
-- {name: enabled, type: boolean, default_value: true}
-- {name: visible, type: boolean, default_value: true}
 is_package: true
 data_bindings: []
 custom_component: true

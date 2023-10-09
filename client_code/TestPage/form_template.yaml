@@ -55,7 +55,7 @@ components_by_slot:
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
       event_bindings: {click: menu_item_9_click}
   - name: button_menu_integrated_6
-    properties: {text: Menu, appearance: outlined}
+    properties: {text: Menu, appearance: tonal}
     type: form:Components.ButtonMenu_integrated
     layout_properties: {}
     components:
@@ -139,7 +139,7 @@ components_by_slot:
       layout_properties: {grid_position: 'TWWPKN,NLMBAM'}
       components:
       - name: button_menu_integrated_3
-        properties: {text: Line Spacing, appearance: filled, enabled: true, visible: true}
+        properties: {text: Line Spacing, appearance: elevated, enabled: true, visible: true}
         type: form:Components.ButtonMenu_integrated
         layout_properties: {}
         components:

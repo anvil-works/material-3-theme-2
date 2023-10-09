@@ -55,6 +55,7 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
   @appearance.setter
   def appearance(self, value):
     self.menu_button.appearance = value
+    self._appearance = value
 
   @property
   def enabled(self):
