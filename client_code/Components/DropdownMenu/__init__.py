@@ -3,7 +3,7 @@ from anvil import HtmlTemplate
 from anvil import *
 from anvil.js.window import document
 import anvil.designer
-# from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property
+from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
@@ -40,6 +40,7 @@ class DropdownMenu(DropdownMenuTemplate):
   
   
   visible = HtmlTemplate.visible
+  align = style_property('anvil-m3-dropdownMenu-component', 'justifyContent')
   
   @property
   def enabled(self):

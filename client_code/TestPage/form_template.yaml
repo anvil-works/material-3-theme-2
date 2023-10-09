@@ -110,7 +110,8 @@ components_by_slot:
     type: DropDown
     layout_properties: {}
   - name: dropdown_menu_1
-    properties: {visible: true, enabled: true, include_placeholder: true, font: Times New Roman}
+    properties: {visible: true, enabled: true, include_placeholder: true, font: Times New Roman,
+      align: right}
     type: form:Components.DropdownMenu
     layout_properties: {}
     event_bindings: {}
