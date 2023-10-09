@@ -1,5 +1,9 @@
 from ._anvil_designer import NavigationLinkTemplate
 from anvil import *
+import anvil.server
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 import anvil.js
 from ...Functions import color_property, style_property, href_property, innerHTML_property
 import anvil.designer

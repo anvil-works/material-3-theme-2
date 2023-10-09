@@ -99,21 +99,77 @@ components_by_slot:
     properties: {}
     type: form:Components.Card
     layout_properties: {}
+    components: []
+  - name: text_field_1
+    properties: {trailing_icon: arrow_drop_down}
+    type: form:Components.TextField
+    layout_properties: {}
+  - name: drop_down_1
+    properties:
+      items: ['']
+      include_placeholder: true
+      placeholder: has placeholder and binding
+    type: DropDown
+    layout_properties: {}
+    data_bindings:
+    - {property: items, code: 'self.item[''items'']', writeback: false}
+  - name: drop_down_2
+    properties:
+      items: [asdf, fdsa, '1234', '!!!!']
+    type: DropDown
+    layout_properties: {}
+    data_bindings: []
+  - name: flow_panel_3
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
+    components:
+    - name: dropdown_menu_1
+      properties:
+        align: right
+        appearance: ''
+        visible: true
+        enabled: true
+        include_placeholder: true
+        items: [selection 1, selection 2, selection 3]
+      type: form:Components.DropdownMenu
+      layout_properties: {}
+  - name: dropdown_menu_2
+    properties:
+      align: right
+      enabled: true
+      appearance: outlined
+      items: ['']
+    type: form:Components.DropdownMenu
+    layout_properties: {}
+    data_bindings:
+    - {property: items, code: 'self.item[''items'']', writeback: false}
+  - name: flow_panel_4
+    properties: {}
+    type: FlowPanel
+    layout_properties: {}
     components:
     - name: text_field_1
-      properties: {appearance: outlined, supporting_text: asdf, leading_icon: ' ',
-        enabled: true}
+      properties: {appearance: outlined, supporting_text: asdf}
       type: form:Components.TextField
-      layout_properties: {slot: anvil-m3-card-slot}
-  - name: text_3
-    properties: {text: text_3}
-    type: form:Components.Text
-    layout_properties: {}
-  - name: checkbox_1
-    properties: {}
-    type: form:Components.Checkbox
-    layout_properties: {}
-    event_bindings: {change: checkbox_1_change}
+    - name: button_1
+      properties: {text: show menu}
+      type: form:Components.Button
+      layout_properties: {}
+      event_bindings: {click: button_1_click}
+    - name: floating_menu
+      properties: {visible: false}
+      type: form:Components.Menu
+      components:
+      - name: menu_item_35
+        properties: {text: menu item 1}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-menu-slot}
+      - name: menu_item_36
+        properties: {text: menu item 2}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-menu-slot}
+      layout_properties: {}
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image

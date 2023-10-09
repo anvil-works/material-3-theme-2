@@ -1,23 +1,24 @@
-from ._anvil_designer import ButtonMenu_integratedTemplate
+from ._anvil_designer import DropdownMenu_integratedTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
+from ...Functions import style_property # underline_property, italic_property, , color_property, innerText_property, bold_property, font_size_property
 from anvil.js import window
 from anvil.js.window import document
 import random, string, math
 import anvil.designer
 from ..Menu.MenuItem import MenuItem
 
-class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
+class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
     self.open = False
     self.window_size = {}
     self.menu_size = {}
-    self.button_positioning = {}
+    self.dropdown_field_positioning = {}
 
     self.hoverIndex = None
     self.itemIndices = set()
@@ -25,11 +26,10 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
-    self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    self.dropdown_field = self.dom_nodes['anvil-m3-dropdownMenu-container']
+    self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
 
-    # This is here for because the cleanup uses object identity to figure out which event handler to actually remove. 
-    # calling self.foo creates a new function each time so the addEventListener and removeEventListener are looking for two different functions
-    # To not have to do this, Stu is considering creating a add_event_listener() and remove_event_listener() to anvil.js
+    self.toggle_menu_visibility = self.toggle_menu_visibility
     self.handle_keyboard_events = self.handle_keyboard_events
     self.remove_shield_handler = self.remove_shield_handler
     self.child_clicked = self.child_clicked
@@ -38,30 +38,34 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
+    # self.dropdown_field.addEventListener('click', self.toggle_menu_visibility)
     document.addEventListener('keydown', self.handle_keyboard_events)
     self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
   def on_cleanup(self, **event_args):
+    # self.dom_nodes['anvil-m3-dropdownMenu-textfield'].removeEventListener('click', self.toggle_menu_visibility)
     document.removeEventListener('keydown', self.handle_keyboard_events)
     self.shield.removeEventListener('click', self.remove_shield_handler)
     self.menuNode.removeEventListener('click', self.child_clicked)
   
   visible = HtmlTemplate.visible
+  align = style_property('anvil-m3-dropdownMenu-component', 'justifyContent')
   
-  @property
-  def text(self):
-    return self._text
-  @text.setter
-  def text(self, value):
-    self._text = value
-    self.menu_button.text = value
+  # @property
+  # def text(self):
+  #   return self._text
+  # @text.setter
+  # def text(self, value):
+  #   self._text = value
+  #   self.menu_button.text = value
 
   @property
   def appearance(self):
     return self._appearance
   @appearance.setter
   def appearance(self, value):
-    self.menu_button.appearance = value
+    self.text_field.appearance = value
+  #   self.menu_button.appearance = value
     self._appearance = value
 
   @property
@@ -70,23 +74,23 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
   @enabled.setter
   def enabled(self, value):
     self._enabled = value
-    self.menu_button.enabled = value
-
-  def toggle_menu_visibility(self, **event_args):
+    self.text_field.enabled = value
+    
+  def toggle_menu_visibility(self, event):
     self.set_visibility()
 
   def set_visibility(self, value = None):
     classes = self.menuNode.classList
     if value is not None:
-      classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
+      classes.toggle('anvil-m3-dropdownMenu-items-hidden', not value)
     else:
-      classes.toggle('anvil-m3-buttonMenu-items-hidden')
+      classes.toggle('anvil-m3-dropdownMenu-items-hidden')
       
-    self.open = not classes.contains('anvil-m3-buttonMenu-items-hidden')
+    self.open = not classes.contains('anvil-m3-dropdownMenu-items-hidden')
     if self.open:
       if not anvil.designer.in_designer:
         self.place_shield()
-      self.get_button_measurements()
+      self.get_dropdown_measurements()
       self.update_menu_placement()
 
       self.get_hover_index_information()
@@ -97,11 +101,11 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
       self.clear_hover_styles()
     
   def update_menu_placement(self):
-    menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self.window_size = {"width": window.innerWidth, "height": window.innerHeight}
     self.menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
     # horizontal placement
-    menuLeft = self.button_positioning['left']
+    menuLeft = self.dropdown_field_positioning['left']
     menuRight = menuLeft + self.menu_size['width']
     if self.window_size['width'] < menuRight:
       menuNode.style.right = '5px'
@@ -109,17 +113,17 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
       menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
       
     # vertical placement
-    menuTop = self.button_positioning['bottom']
+    menuTop = self.dropdown_field_positioning['bottom']
     menuBottom = menuTop + self.menu_size['height']
 
     ## menu too tall!
-    if (self.window_size['height'] - self.button_positioning['height']) < self.menu_size['height']: 
-      spaceAtTop = self.button_positioning['top']
-      spaceAtBottom = self.window_size['height'] - (spaceAtTop + self.button_positioning['height'])
+    if (self.window_size['height'] - self.dropdown_field_positioning['height']) < self.menu_size['height']: 
+      spaceAtTop = self.dropdown_field_positioning['top']
+      spaceAtBottom = self.window_size['height'] - (spaceAtTop + self.dropdown_field_positioning['height'])
 
       # put at the top and set container height
       if spaceAtTop > spaceAtBottom:
-        menuNode.style.bottom = f"{math.floor(self.window_size['height'] - (self.button_positioning['top'] - 5))}px"
+        menuNode.style.bottom = f"{math.floor(self.window_size['height'] - (self.dropdown_field_positioning['top'] - 5))}px"
         menuNode.style.height = f"{math.floor(spaceAtTop - 7)}px"
         
       # put at the bottom and set container height
@@ -131,14 +135,14 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     else: 
       # default placement is out of bounds
       if self.window_size['height'] < menuBottom:
-        menuNode.style.bottom = f"{math.floor(self.window_size['height'] - (self.button_positioning['top'] - 5))}px"
+        menuNode.style.bottom = f"{math.floor(self.window_size['height'] - (self.dropdown_field_positioning['top'] - 5))}px"
       # fits in default position
       else:
         menuNode.style.top = f"{math.floor(menuTop + 5)}px"
     
-  def get_button_measurements(self):
-    rect = self.menu_button.dom_nodes['anvil-m3-button'].getBoundingClientRect()
-    self.button_positioning = {
+  def get_dropdown_measurements(self):
+    rect = self.text_field.dom_nodes['text-field'].getBoundingClientRect()
+    self.dropdown_field_positioning = {
       "top": rect.top,
       "right": rect.right,
       "bottom": rect.bottom,
@@ -253,14 +257,14 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
       "callbacks": {
         "execute": self.toggle_enabled
       }
-    },{
-      "type": "whole_component",
-      "title": "Edit text",
-      "icon": "edit",
-      "default": True,
-      "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self.menu_button, "text", self.menu_button.dom_nodes['anvil-m3-button-text'])
-      }
+    # },{
+    #   "type": "whole_component",
+    #   "title": "Edit text",
+    #   "icon": "edit",
+    #   "default": True,
+    #   "callbacks": {
+    #     "execute": lambda: anvil.designer.start_inline_editing(self.menu_button, "text", self.menu_button.dom_nodes['anvil-m3-button-text'])
+    #   }
     }]
     return design_info
 
