@@ -21,6 +21,7 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
+    self.shield.style = "background-color:green; opacity:0.3"
     self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
 
     self.handle_keyboard_events = self.handle_keyboard_events
