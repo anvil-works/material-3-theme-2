@@ -134,12 +134,12 @@
 }
 
 /***** DropdownMenu *****/
-.anvil-m3-dopdownMenu-container {
+.anvil-m3-dropdownMenu-items-container {
   display: inline-block;
   position: relative;
 }
 
-.anvil-m3-dopdownMenu-items-container {
+.anvil-m3-dropdownMenu-items-container {
   position: fixed;
   min-width: 112px;
   max-width: 280px;

@@ -25,7 +25,7 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
 
     # self.handle_keyboard_events = self.handle_keyboard_events
     self.remove_shield_handler = self.remove_shield_handler
-    # self.child_clicked = self.child_clicked
+    self.child_clicked = self.child_clicked
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
@@ -36,12 +36,12 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
 
     # document.addEventListener('keydown', self.handle_keyboard_events)
     self.shield.addEventListener('click', self.remove_shield_handler)
-    # self.menuNode.addEventListener('click', self.child_clicked)
+    self.menuNode.addEventListener('click', self.child_clicked)
   def on_cleanup(self, **event_args):
     self.text_field.dom_nodes['text-field'].removeEventListener('click', self.handle_box_click)
     # document.removeEventListener('keydown', self.handle_keyboard_events)
     self.shield.removeEventListener('click', self.remove_shield_handler)
-    # self.menuNode.removeEventListener('click', self.child_clicked)
+    self.menuNode.removeEventListener('click', self.child_clicked)
 
 
   visible = HtmlTemplate.visible
@@ -54,6 +54,16 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
   def enabled(self, value):
     self._enabled = value
     self.text_field.enabled = value
+      # self.get_hover_index_information()
+
+  def handle_box_click(self, event):
+    # todo: figure out how to get it to now do the textfield interactions
+    event.preventDefault()
+    event.stopPropagation()
+    self.toggle_menu_visibility()
+
+  def toggle_menu_visibility(self, **event_args):
+      self.set_visibility()
 
   def set_visibility(self, value = None):
     classes = self.menuNode.classList
@@ -70,20 +80,11 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
       # self.update_menu_placement()
 
       # self.get_hover_index_information()
-
-  def handle_box_click(self, event):
-    # todo: figure out how to get it to now do the textfield interactions
-    event.preventDefault()
-    event.stopPropagation()
-    self.toggle_menu_visibility()
-
-  def toggle_menu_visibility(self, value = None):
-    if (value is None):
-      value = not self.menu.visible
-    self.menu.visible = value
-    if value:
-      if not anvil.designer.in_designer:
-        self.place_shield()
+        
+    else:
+      self.menuNode.removeAttribute("style")
+      self.hoverIndex = None
+      # self.clear_hover_styles()
 
   def place_shield(self):
     if not document.contains(self.shield):
@@ -100,7 +101,10 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
       document.body.style.removeProperty("overflow")
 
 
-
+  def child_clicked(self, event):
+    # do the click action. The child should handle this
+    self.remove_shield()
+    self.set_visibility(False)
 
 
 # DESIGNER INTERACTIONS

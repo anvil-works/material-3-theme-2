@@ -110,7 +110,7 @@ components_by_slot:
     type: DropDown
     layout_properties: {}
   - name: dropdown_menu_integrated_1
-    properties: {align: right}
+    properties: {align: right, enabled: true, visible: true}
     type: form:Components.DropdownMenu_integrated
     layout_properties: {}
     components:
