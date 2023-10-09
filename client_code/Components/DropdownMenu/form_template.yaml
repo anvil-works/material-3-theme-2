@@ -1,4 +1,10 @@
-properties: []
+properties:
+- name: align
+  type: enum
+  default_binding_prop: true
+  important: true
+  options: [left, center, right]
+  description: The position of this dropdown in the available space
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}
