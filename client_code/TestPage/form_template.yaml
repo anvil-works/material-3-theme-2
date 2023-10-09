@@ -115,6 +115,7 @@ components_by_slot:
     type: form:Components.DropdownMenu
     layout_properties: {}
     event_bindings: {}
+    components: []
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image

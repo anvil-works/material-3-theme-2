@@ -41,18 +41,20 @@ components:
     placeholder: Select Item, supporting_text: ' '}
   type: form:Components.TextField
   layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
-- name: menu
-  properties: {visible: true}
-  type: form:Components.Menu
-  layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
-  components: []
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-dropdownMenu-component\"  style=\"\
       display:flex\">\n  <div anvil-name=\"anvil-m3-dropdownMenu-container\" class=\"\
-      anvil-m3-dropdownMenu-container\">\n    <!-- the \"internal\" div needs marker\
-      \ where it prevents exposure of the slot when being used in a parent component\
-      \ -->\n    <div anvil-slot=\"anvil-m3-dropdownMenu-textfield\" class=\"anvil-m3-dropdownMenu-textfield\"\
-      \ internal> </div>\n    <div anvil-slot=\"anvil-m3-menu-items-container\" class=\"\
-      anvil-m3-menu-items-container anvil-m3-menu-hidden\"> </div>\n  </div>\n</div>"}
+      anvil-m3-dropdownMenu-container\" >\n    <div anvil-slot=\"anvil-m3-dropdownMenu-textfield\"\
+      \ class=\"anvil-m3-dropdownMenu-textfield\" anvil-slot-internal> </div>\n  \
+      \  \n    <div anvil-slot=\"anvil-m3-dropdownMenu-slot\" anvil-name=\"anvil-m3-dropdownMenu-items-container\"\
+      \ \n        class=\"anvil-m3-dropdownMenu-items-container anvil-m3-dropdownMenu-items-hidden\"\
+      >\n          <p anvil-if-slot-empty=\"anvil-m3-dropdownMenu-slot\" style=\"\
+      color: #BBB;\"><i>Menu items go here</i></p>\n    </div>\n    \n  </div>\n</div>\n\
+      \n<!-- \n\n<div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"anvil-m3-buttonMenu-container\"\
+      >\n  <div anvil-slot=\"button\" anvil-slot-internal></div> \n  \n  <div anvil-slot=\"\
+      anvil-m3-buttonMenu-slot\" anvil-name=\"anvil-m3-buttonMenu-items-container\"\
+      \ \n    class=\"anvil-m3-buttonMenu-items-container anvil-m3-buttonMenu-items-hidden\"\
+      >\n      <p anvil-if-slot-empty=\"anvil-m3-buttonMenu-slot\" style=\"color:\
+      \ #BBB;\"><i>Menu items go here</i></p>\n  </div>\n</div> -->"}
 custom_component_container: true
