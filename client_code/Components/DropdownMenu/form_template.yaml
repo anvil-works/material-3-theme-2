@@ -5,6 +5,7 @@ properties:
   important: true
   options: [left, center, right]
   description: The position of this dropdown in the available space
+- {name: prop, type: string, default_value: '', important: true}
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}
