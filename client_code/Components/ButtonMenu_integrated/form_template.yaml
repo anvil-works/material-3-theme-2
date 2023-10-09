@@ -12,7 +12,7 @@ data_bindings: []
 custom_component: true
 components:
 - name: menu_button
-  properties: {}
+  properties: {appearance: elevated}
   type: form:Components.Button
   layout_properties: {slot: button}
   event_bindings: {click: toggle_menu_visibility}
