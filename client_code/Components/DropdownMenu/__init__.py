@@ -9,7 +9,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-  
+
+    self.menuNode = self.dom_nodes['anvil-m3-menu-items-container']
+    
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
@@ -44,3 +46,10 @@ class DropdownMenu(DropdownMenuTemplate):
     self.text_field.font = value
     # this should maybe change the font of the menuItems too
 
+  def handle_box_click(self):
+    pass
+
+  def set_menu_visibility(self, value = None):
+    if (value is None):
+      value = not self.menu.visible
+    self.menu.visible = value

@@ -45,6 +45,15 @@ components:
   properties: {visible: false}
   type: form:Components.Menu
   layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
+  components:
+  - name: menu_item_1
+    properties: {text: select 1}
+    type: form:Components.Menu.MenuItem
+    layout_properties: {slot: anvil-m3-menu-slot}
+  - name: menu_item_2
+    properties: {text: select 2!}
+    type: form:Components.Menu.MenuItem
+    layout_properties: {slot: anvil-m3-menu-slot}
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-dropdownMenu-container\" class=\"\
