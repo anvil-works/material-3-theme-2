@@ -45,9 +45,10 @@ container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-dropdownMenu-component\"  style=\"\
       display:flex\">\n  <div anvil-name=\"anvil-m3-dropdownMenu-container\" class=\"\
-      anvil-m3-dropdownMenu-container\" >\n    <div anvil-slot=\"anvil-m3-dropdownMenu-textfield\"\
-      \ class=\"anvil-m3-dropdownMenu-textfield\" anvil-slot-internal> </div>\n  \
-      \  \n    <div anvil-slot=\"anvil-m3-dropdownMenu-slot\" anvil-name=\"anvil-m3-dropdownMenu-items-container\"\
+      anvil-m3-dropdownMenu-container\" >\n  <!-- could put shield over this to prevent\
+      \ typing??? -->\n    <div anvil-slot=\"anvil-m3-dropdownMenu-textfield\" class=\"\
+      anvil-m3-dropdownMenu-textfield\" anvil-slot-internal> </div>\n    \n    <div\
+      \ anvil-slot=\"anvil-m3-dropdownMenu-slot\" anvil-name=\"anvil-m3-dropdownMenu-items-container\"\
       \ \n        class=\"anvil-m3-dropdownMenu-items-container anvil-m3-dropdownMenu-items-hidden\"\
       >\n          <p anvil-if-slot-empty=\"anvil-m3-dropdownMenu-slot\" style=\"\
       color: #BBB;\"><i>Menu items go here</i></p>\n    </div>\n    \n  </div>\n</div>\n\
