@@ -109,6 +109,10 @@ components_by_slot:
       items: [asdf, fdsa, '1234', '!!!!']
     type: DropDown
     layout_properties: {}
+  - name: dropdown_menu_1
+    properties: {}
+    type: form:Components.DropdownMenu
+    layout_properties: {}
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image
