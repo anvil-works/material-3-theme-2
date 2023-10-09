@@ -5,7 +5,32 @@ properties:
   important: true
   options: [left, center, right]
   description: The position of this dropdown in the available space
-- {name: prop, type: string, default_value: '', important: true}
+- {name: background, type: color, default_value: '', important: true, description: background color of the component}
+- {name: bold, type: boolean, default_value: false, important: true, description: Display this component’s text in bold}
+- {name: border, type: string, default_value: '', important: true, description: The border of this component. Can take any valid CSS border value}
+- {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction}
+- {name: font, type: string, default_value: '', important: true, description: The font family to use for this component}
+- {name: font_size, type: number, important: true, description: The height of text displayed on this component in pixels}
+- {name: text_color, type: color, default_value: '', important: true, description: Component's Input Text Color}
+- {name: include_placeholder, type: boolean, default_value: true, important: true,
+  description: Whether to add a placeholder item to the list with value None}
+- {name: italic, type: boolean, default_value: false, important: true, description: Display this component’s text in italics}
+- name: items
+  type: text[]
+  default_value: []
+  important: true
+  description: The items to display in this dropdown
+- {name: placeholder, type: string, default_value: '', important: true, description: The text to be displayed when the selected_value is None}
+- name: appearance
+  type: enum
+  important: true
+  options: []
+  description: Textfield's appearance
+- {name: selected_value, type: object, important: true, description: The value of the currently selected item. Can only be set at runtime}
+- {name: underline, type: boolean, default_value: false, important: true, description: Display this component’s text underlined}
+- {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed}
+- {name: width, type: string, default_value: '', important: true, description: 'The
+    width of this DropDown, or “default” to have the width set by the container'}
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}
