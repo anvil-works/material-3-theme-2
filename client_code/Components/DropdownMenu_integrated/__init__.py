@@ -231,7 +231,7 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
     self.open = False
     self.window_size = {}
     self.menu_size = {}
-    self.dropdown_positioning = {}
+    self.dropdown_field_positioning = {}
 
     self.hoverIndex = None
     self.itemIndices = set()
@@ -239,8 +239,9 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
     
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
+    self.dropdown_field = self.dom_nodes['anvil-m3-dropdownMenu-container']
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
-    self.dropdown = self.dom_nodes['anvil-m3-dropdownMenu-container']
+    print(self.menuNode)
 
     self.toggle_menu_visibility = self.toggle_menu_visibility
     self.handle_keyboard_events = self.handle_keyboard_events
@@ -251,7 +252,7 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
-    self.dropdown.addEventListener('click', self.toggle_menu_visibility)
+    self.dropdown_field.addEventListener('click', self.toggle_menu_visibility)
     document.addEventListener('keydown', self.handle_keyboard_events)
     self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
@@ -316,7 +317,7 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
     self.window_size = {"width": window.innerWidth, "height": window.innerHeight}
     self.menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
     # horizontal placement
-    menuLeft = self.dropdown_positioning['left']
+    menuLeft = self.dropdown_field_positioning['left']
     menuRight = menuLeft + self.menu_size['width']
     if self.window_size['width'] < menuRight:
       menuNode.style.right = '5px'
@@ -324,17 +325,17 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
       menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
       
     # vertical placement
-    menuTop = self.dropdown_positioning['bottom']
+    menuTop = self.dropdown_field_positioning['bottom']
     menuBottom = menuTop + self.menu_size['height']
 
     ## menu too tall!
-    if (self.window_size['height'] - self.dropdown_positioning['height']) < self.menu_size['height']: 
-      spaceAtTop = self.dropdown_positioning['top']
-      spaceAtBottom = self.window_size['height'] - (spaceAtTop + self.dropdown_positioning['height'])
+    if (self.window_size['height'] - self.dropdown_field_positioning['height']) < self.menu_size['height']: 
+      spaceAtTop = self.dropdown_field_positioning['top']
+      spaceAtBottom = self.window_size['height'] - (spaceAtTop + self.dropdown_field_positioning['height'])
 
       # put at the top and set container height
       if spaceAtTop > spaceAtBottom:
-        menuNode.style.bottom = f"{math.floor(self.window_size['height'] - (self.dropdown_positioning['top'] - 5))}px"
+        menuNode.style.bottom = f"{math.floor(self.window_size['height'] - (self.dropdown_field_positioning['top'] - 5))}px"
         menuNode.style.height = f"{math.floor(spaceAtTop - 7)}px"
         
       # put at the bottom and set container height
@@ -346,14 +347,14 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
     else: 
       # default placement is out of bounds
       if self.window_size['height'] < menuBottom:
-        menuNode.style.bottom = f"{math.floor(self.window_size['height'] - (self.dropdown_positioning['top'] - 5))}px"
+        menuNode.style.bottom = f"{math.floor(self.window_size['height'] - (self.dropdown_field_positioning['top'] - 5))}px"
       # fits in default position
       else:
         menuNode.style.top = f"{math.floor(menuTop + 5)}px"
     
   def get_dropdown_measurements(self):
     rect = self.text_field.dom_nodes['text-field'].getBoundingClientRect()
-    self.dropdown_positioning = {
+    self.dropdown_field_positioning = {
       "top": rect.top,
       "right": rect.right,
       "bottom": rect.bottom,
