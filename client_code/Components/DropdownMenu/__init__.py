@@ -10,6 +10,21 @@ class DropdownMenu(DropdownMenuTemplate):
 
     # Any code you write here will run before the form opens.
   
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+
+  def on_mount(self, **event_args):
+    pass
+    # document.addEventListener('keydown', self.handle_keyboard_events)
+    # self.shield.addEventListener('click', self.remove_shield_handler)
+    # self.menuNode.addEventListener('click', self.child_clicked)
+  def on_cleanup(self, **event_args):
+    pass
+    # document.removeEventListener('keydown', self.handle_keyboard_events)
+    # self.shield.removeEventListener('click', self.remove_shield_handler)
+    # self.menuNode.removeEventListener('click', self.child_clicked)
+  
+  
   visible = HtmlTemplate.visible
   
   @property
@@ -28,3 +43,4 @@ class DropdownMenu(DropdownMenuTemplate):
     self._font = value
     self.text_field.font = value
     # this should maybe change the font of the menuItems too
+
