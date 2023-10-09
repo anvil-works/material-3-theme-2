@@ -11,7 +11,7 @@ components_by_slot:
     type: form:Components.Text
     layout_properties: {}
   - name: button_menu_integrated_1
-    properties: {text: Font Face, visible: true, enabled: true}
+    properties: {text: Font Face, visible: true, enabled: true, appearance: filled}
     type: form:Components.ButtonMenu_integrated
     layout_properties: {}
     components:
@@ -55,7 +55,7 @@ components_by_slot:
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
       event_bindings: {click: menu_item_9_click}
   - name: button_menu_integrated_6
-    properties: {text: Menu}
+    properties: {text: Menu, appearance: outlined}
     type: form:Components.ButtonMenu_integrated
     layout_properties: {}
     components:
@@ -214,7 +214,7 @@ components_by_slot:
       layout_properties: {col_xs: 6, row: QNFVWQ, width_xs: 6}
       components:
       - name: button_menu_integrated_4
-        properties: {text: Trail Type}
+        properties: {text: Trail Type, appearance: elevated}
         type: form:Components.ButtonMenu_integrated
         components:
         - name: menu_item_26
