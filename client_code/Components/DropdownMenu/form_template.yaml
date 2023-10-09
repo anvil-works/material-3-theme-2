@@ -36,12 +36,12 @@ events:
 - {name: change, default_event: true, description: when an item is selected}
 custom_component: true
 components:
-- name: text_field_1
+- name: text_field
   properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: Label,
     placeholder: Select Item, supporting_text: ' '}
   type: form:Components.TextField
   layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
-- name: menu_1
+- name: menu
   properties: {}
   type: form:Components.Menu
   layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
