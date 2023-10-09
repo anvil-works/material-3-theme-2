@@ -133,6 +133,11 @@
   overflow: hidden;
 }
 
+/***** DropdownMenu *****/
+.anvil-m3-dropdownMenu-container {
+  display: inline-block;
+  position: relative;
+}
 
 /* SHEILD */
 .anvil-m3-menu-clickShield {

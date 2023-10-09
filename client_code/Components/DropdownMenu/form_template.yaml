@@ -37,7 +37,7 @@ events:
 custom_component: true
 components:
 - name: text_field_1
-  properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: label_text,
+  properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: Label,
     placeholder: Select Item, supporting_text: ' '}
   type: form:Components.TextField
   layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
