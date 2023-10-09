@@ -9,18 +9,22 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.open = False
+    self.window_size = {}
+    self.menu_size = {}
+    self.button_positioning = {}
 
-    # Any code you write here will run before the form opens.
-
-    # self.menuNode = self.dom_nodes['anvil-m3-menu-items-container']
-    # self.text_field = self.text_field
-    # textFieldNode = self.text_field.dom_nodes['text-field'];
-
-    self.handle_box_click = self.handle_box_click
-    self.remove_shield_handler = self.remove_shield_handler
-
+    self.hoverIndex = None
+    self.itemIndices = set()
+    self.children = None
+    
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
+    self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
+
+    self.handle_keyboard_events = self.handle_keyboard_events
+    self.remove_shield_handler = self.remove_shield_handler
+    self.child_clicked = self.child_clicked
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
@@ -50,23 +54,29 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
     self._enabled = value
     self.text_field.enabled = value
 
-  @property
-  def font(self):
-    return self._font
-  @font.setter
-  def font(self, value):
-    self._font = value
-    self.text_field.font = value
-    # this should maybe change the font of the menuItems too
+  def set_visibility(self, value = None):
+    classes = self.menuNode.classList
+    if value is not None:
+      classes.toggle('anvil-m3-dropdownMenu-items-hidden', not value)
+    else:
+      classes.toggle('anvil-m3-dropdownMenu-items-hidden')
+      
+    self.open = not classes.contains('anvil-m3-dropdownMenu-items-hidden')
+    if self.open:
+      if not anvil.designer.in_designer:
+        self.place_shield()
+      # self.get_button_measurements()
+      # self.update_menu_placement()
+
+      # self.get_hover_index_information()
 
   def handle_box_click(self, event):
     # todo: figure out how to get it to now do the textfield interactions
     event.preventDefault()
     event.stopPropagation()
+    self.toggle_menu_visibility()
 
-    self.set_menu_visibility()
-
-  def set_menu_visibility(self, value = None):
+  def toggle_menu_visibility(self, value = None):
     if (value is None):
       value = not self.menu.visible
     self.menu.visible = value

@@ -134,9 +134,30 @@
 }
 
 /***** DropdownMenu *****/
-.anvil-m3-dropdownMenu-container {
+.anvil-m3-dopdownMenu-container {
   display: inline-block;
   position: relative;
+}
+
+.anvil-m3-dopdownMenu-items-container {
+  position: fixed;
+  min-width: 112px;
+  max-width: 280px;
+  min-height: 24px;
+  max-height: 100vh;
+  border-radius: 4px;
+  padding: 8px 0;
+  background-color: var(--anvil-m3-surface-container);
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30); /* level 2*/
+  overflow-y: auto;
+  z-index: 9;
+}
+
+.anvil-m3-dropdownMenu-items-hidden {
+  pointer-events: none;
+  opacity: 0;
+/*   height: 1px; */
+  overflow: hidden;
 }
 
 /* SHEILD */
