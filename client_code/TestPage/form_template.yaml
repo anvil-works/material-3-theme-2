@@ -100,6 +100,15 @@ components_by_slot:
     type: form:Components.Card
     layout_properties: {}
     components: []
+  - name: text_field_1
+    properties: {trailing_icon: arrow_drop_down}
+    type: form:Components.TextField
+    layout_properties: {}
+  - name: drop_down_1
+    properties:
+      items: [asdf, fdsa, '1234', '!!!!']
+    type: DropDown
+    layout_properties: {}
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image
