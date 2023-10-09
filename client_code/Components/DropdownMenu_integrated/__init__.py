@@ -3,6 +3,7 @@ from anvil import HtmlTemplate
 from anvil import *
 from anvil.js.window import document
 import anvil.designer
+from ..Menu.MenuItem import MenuItem
 from ...Functions import underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property
 
 class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
@@ -22,9 +23,9 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
 
-    self.handle_keyboard_events = self.handle_keyboard_events
+    # self.handle_keyboard_events = self.handle_keyboard_events
     self.remove_shield_handler = self.remove_shield_handler
-    self.child_clicked = self.child_clicked
+    # self.child_clicked = self.child_clicked
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
@@ -91,9 +92,63 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
 
   def remove_shield_handler(self, event):
     self.remove_shield()
-    self.set_menu_visibility(False)
+    self.set_visibility(False)
 
   def remove_shield(self):
     if document.contains(self.shield):
       document.body.removeChild(self.shield)
       document.body.style.removeProperty("overflow")
+
+
+
+
+
+# DESIGNER INTERACTIONS
+  def _anvil_get_design_info_(self, as_layout=False):
+    design_info = super()._anvil_get_design_info_(as_layout)
+    design_info["interactions"] = [
+      {
+        "type": "designer_events",
+        "callbacks": {
+          "onSelectDescendent": self._on_select_descendent,
+          "onSelectOther": self._on_select_other
+        }
+      },
+      {
+      "type": "whole_component",
+      "title": "Visible",
+      "icon": "add", #TODO: eye icon
+      "callbacks": {
+        "execute": self.toggle_visible
+      }
+    }, {
+      "type": "whole_component",
+      "title": "Enable",
+      "icon": "add", #TODO: power icon
+      "callbacks": {
+        "execute": self.toggle_enabled
+      }
+    # },{
+    #   "type": "whole_component",
+    #   "title": "Edit text",
+    #   "icon": "edit",
+    #   "default": True,
+    #   "callbacks": {
+    #     "execute": lambda: anvil.designer.start_inline_editing(self.menu_button, "text", self.menu_button.dom_nodes['anvil-m3-button-text'])
+    #   }
+    }]
+    return design_info
+
+  def _on_select_descendent(self):
+    self.set_visibility(True)
+
+  def _on_select_other(self):
+    self.set_visibility(False)
+
+  def toggle_visible(self):
+    self.visible = not self.visible
+    anvil.designer.update_component_properties(self, {'visible': self.visible})
+
+  def toggle_enabled(self):
+    self.enabled = not self.enabled
+    anvil.designer.update_component_properties(self, {'enabled': self.enabled})
