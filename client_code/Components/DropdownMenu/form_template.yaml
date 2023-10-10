@@ -52,6 +52,10 @@ events:
 - {name: change, default_event: true, description: when an item is selected}
 custom_component: true
 components:
+- name: button_1
+  properties: {}
+  type: form:Components.Button
+  layout_properties: {slot: anvil-m3-dropdownMenu-slot}
 - name: menu
   properties: {}
   type: form:Components.Menu

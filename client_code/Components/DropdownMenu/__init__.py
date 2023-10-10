@@ -19,6 +19,8 @@ class DropdownMenu(DropdownMenuTemplate):
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
+    self.open = False
+    
     self.selection_field.dom_nodes['text-field-input'].style.caretColor = 'transparent'
 
 
@@ -51,15 +53,22 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.placeholder = value
     
   def on_mount(self, **event_args):
-    pass
+    self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
     
   def on_cleanup(self, **event_args):
-    pass
+    self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self.handle_component_click)
 
   def handle_component_click(self, event):
-    # will toggle menu visibility
-    pass
-    
+    print("clicked")
+    self.set_menu_visibility()
+
+  def set_menu_visibility(self, value = None):
+    # does toggle if nothing given
+    if (value is None):
+      value = not self.open
+    self.open = value
+    self.menu.visible = self.open
+
 
 # <div anvil-name="anvil-m3-dropdownMenu-component"  style="display:flex">
 #   <div anvil-name="anvil-m3-dropdownMenu-container" class="anvil-m3-dropdownMenu-container" >
