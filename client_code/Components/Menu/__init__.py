@@ -42,7 +42,9 @@ class Menu(MenuTemplate):
     return design_info
 
   def _on_select_descendant(self):
-    print("I did something on select")
+    pass
+    # print("I did something on select")
 
   def _on_select_other(self):
-    print("something happened on deselect")
+    pass
+    # print("something happened on deselect")

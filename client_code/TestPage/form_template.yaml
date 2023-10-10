@@ -109,19 +109,27 @@ components_by_slot:
       items: [asdf, fdsa, '1234', '!!!!']
     type: DropDown
     layout_properties: {}
-  - name: dropdown_menu_integrated_1
-    properties: {align: right, enabled: true, visible: true, appearance: outlined}
-    type: form:Components.DropdownMenu_integrated
+  - name: flow_panel_3
+    properties: {}
+    type: FlowPanel
     layout_properties: {}
     components:
-    - name: menu_item_32
-      properties: {text: help}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-dropdownMenu-slot}
-    - name: menu_item_34
-      properties: {text: help 2}
-      type: form:Components.Menu.MenuItem
-      layout_properties: {slot: anvil-m3-dropdownMenu-slot}
+    - name: dropdown_menu_integrated_1
+      properties: {align: right, enabled: true, visible: true, appearance: outlined}
+      type: form:Components.DropdownMenu_integrated
+      components:
+      - name: menu_item_32
+        properties: {text: help}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-dropdownMenu-slot}
+      - name: menu_item_34
+        properties: {text: help 2}
+        type: form:Components.Menu.MenuItem
+        layout_properties: {slot: anvil-m3-dropdownMenu-slot}
+    - name: dropdown_menu_1
+      properties: {align: left, appearance: outlined}
+      type: form:Components.DropdownMenu
+      layout_properties: {}
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image
