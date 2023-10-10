@@ -124,18 +124,6 @@ components_by_slot:
     type: FlowPanel
     layout_properties: {}
     components:
-    - name: dropdown_menu_integrated_1
-      properties: {align: right, enabled: true, visible: true, appearance: outlined}
-      type: form:Components.DropdownMenu_integrated
-      components:
-      - name: menu_item_32
-        properties: {text: help}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-dropdownMenu-slot}
-      - name: menu_item_34
-        properties: {text: help 2}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-dropdownMenu-slot}
     - name: dropdown_menu_1
       properties: {align: right, appearance: outlined, visible: true, enabled: true,
         include_placeholder: true}
