@@ -71,7 +71,24 @@ components_by_slot:
     properties: {}
     type: form:Components.Card
     layout_properties: {}
-    components: []
+    components:
+    - name: column_panel_2
+      properties: {}
+      type: ColumnPanel
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: heading_1
+        properties: {}
+        type: form:Components.Heading
+        layout_properties: {grid_position: 'MOHNKT,UGCEML'}
+      - name: text_2
+        properties: {}
+        type: form:Components.Text
+        layout_properties: {grid_position: 'RMAAVR,ONMOSQ'}
+      - name: radio_button_5
+        properties: {}
+        type: form:Components.RadioButton
+        layout_properties: {grid_position: 'RMAAVR,NLFKIC'}
   - name: text_field_1
     properties: {trailing_icon: arrow_drop_down}
     type: form:Components.TextField
