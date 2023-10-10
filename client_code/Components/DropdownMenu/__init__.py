@@ -23,7 +23,7 @@ class DropdownMenu(DropdownMenuTemplate):
     # self.hoverIndex = None
     # self.itemIndices = set()
     # self.children = None
-    
+    self.child_clicked = self.child_clicked
     self.handle_component_click = self.handle_component_click
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
@@ -75,29 +75,29 @@ class DropdownMenu(DropdownMenuTemplate):
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
     self.shield.addEventListener('click', self.remove_shield_handler)
+    self.menuNode.addEventListener('click', self.child_clicked)
     
   def on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self.handle_component_click)
     self.shield.removeEventListener('click', self.remove_shield_handler)
+    self.menuNode.removeEventListener('click', self.child_clicked)
 
   def handle_component_click(self, event):
     print("clicked")
     self.set_menu_visibility()
 
   def set_menu_visibility(self, value = None):
-    print(value)
+    print("*** trying to set visibility to: " + value)
     if (value is None):
       value = not self.menu.visible
-    print(value)
+    print("supposed to actually set visibility to: " + value)
     self.menu.visible = value
     if value:
       if not anvil.designer.in_designer:
         self.place_shield()
       self.get_button_measurements()
       self.update_menu_placement()
-    else:
-      self.remove_shield()
-
+    
   def update_menu_placement(self):
     menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self.window_size = {"width": window.innerWidth, "height": window.innerHeight}
@@ -155,7 +155,7 @@ class DropdownMenu(DropdownMenuTemplate):
       document.body.style.overflow = "hidden"
     
   def remove_shield_handler(self, event):
-    # self.remove_shield()
+    self.remove_shield()
     self.set_menu_visibility(False)
     
   def remove_shield(self):
@@ -166,7 +166,7 @@ class DropdownMenu(DropdownMenuTemplate):
   def child_clicked(self, event):
     # do the click action. The child should handle this
     self.remove_shield()
-    self.set_visibility(False)
+    self.set_menu_visibility(False)
 
 # <div anvil-name="anvil-m3-dropdownMenu-component"  style="display:flex">
 #   <div anvil-name="anvil-m3-dropdownMenu-container" class="anvil-m3-dropdownMenu-container" >
