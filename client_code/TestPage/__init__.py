@@ -95,14 +95,8 @@ class TestPage(TestPageTemplate):
   def menu_item_20_click(self, **event_args):
     print("do nothing")
 
-  def switch_3_change(self, **event_args):
-    """This method is called when the state of the component is changed"""
-    print('switched')
-
-  def checkbox_1_change(self, **event_args):
-    """This method is called when the component is checked or unchecked"""
-    print('checked')
-
+  def button_1_click(self, **event_args):
+    self.floating_menu.visible = not self.floating_menu.visible
 
 
 
