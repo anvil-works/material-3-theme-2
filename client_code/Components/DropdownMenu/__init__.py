@@ -40,7 +40,7 @@ class DropdownMenu(DropdownMenuTemplate):
     
   @property
   def placeholder(self):
-    return self.placeholder_
+    return self._placeholder
   @placeholder.setter
   def placeholder(self, value):
     self._placeholder = value
