@@ -139,6 +139,11 @@
   position: relative;
 }
 
+.anvil-m3-dropdownMenu-items-container {
+  position: relative;
+  z-index: 999;
+}
+
 /* SHEILD */
 .anvil-m3-menu-clickShield {
   position: fixed;

@@ -43,7 +43,7 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
     self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
   def on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-dropdownMenu-textfield'].removeEventListener('click', self.toggle_menu_visibility)
+    # self.dom_nodes['anvil-m3-dropdownMenu-textfield'].removeEventListener('click', self.toggle_menu_visibility)
     document.removeEventListener('keydown', self.handle_keyboard_events)
     self.shield.removeEventListener('click', self.remove_shield_handler)
     self.menuNode.removeEventListener('click', self.child_clicked)

@@ -22,6 +22,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.dom_nodes['text-field-input'].style.caretColor = 'transparent'
     
     self.shield = document.createElement("div")
+    self.shield.style = "opacity: .3; background-color: green"
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
 
   #properties
@@ -72,6 +73,8 @@ class DropdownMenu(DropdownMenuTemplate):
     if value:
       if not anvil.designer.in_designer:
         self.place_shield()
+    else:
+      self.remove_shield()
   
   def place_shield(self):
     if not document.contains(self.shield):
