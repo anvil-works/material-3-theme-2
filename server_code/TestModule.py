@@ -14,6 +14,6 @@ import anvil.server
 def get_jobs():
   rows = app_tables.jobs.search()
   return {
-    'items': [(row['Title'], row) for row in rows],
+    'items': [(row['Titles'], row) for row in rows],
     'selected': rows[1]
   }

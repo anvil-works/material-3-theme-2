@@ -11,7 +11,7 @@ from anvil.tables import app_tables
 class TestPage(TestPageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    self.drop_down_1.item = anvil.server.call('get_jobs')
+    self.item = anvil.server.call('get_jobs')
     
     self.init_components(**properties)
     # self.selecty_items = [(cat['Items'], cat) for cat in app_tables.test.search()]
