@@ -18,7 +18,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
     self.window_size = {}
     self.menu_size = {}
-    self.button_positioning = {}
+    self.box_positioning = {}
 
     self.hoverIndex = None
     self.itemIndices = set()
@@ -34,8 +34,10 @@ class DropdownMenu(DropdownMenuTemplate):
     self.shield = document.createElement("div")
     self.shield.style = "opacity: .3; background-color: green"
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
+    
     self.container = self.dom_nodes['anvil-m3-dropdownMenu-container']
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
+    self.selectionField = self.dom_nodes['anvil-m3-dropdownMenu-textfield']
 
     # find menu position
     # remove menu from current nest
@@ -92,8 +94,61 @@ class DropdownMenu(DropdownMenuTemplate):
     if value:
       if not anvil.designer.in_designer:
         self.place_shield()
+      self.get_button_measurements()
+      self.update_menu_placement()
     else:
       self.remove_shield()
+
+  def update_menu_placement(self):
+    # menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    self.window_size = {"width": window.innerWidth, "height": window.innerHeight}
+    self.menu_size = {"width": self.menuNode.offsetWidth, "height": self.menuNode.offsetHeight}
+    # horizontal placement
+    menuLeft = self.box_positioning['left']
+    menuRight = menuLeft + self.menu_size['width']
+    if self.window_size['width'] < menuRight:
+      self.menuNode.style.right = '5px'
+    else:
+      self.menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
+      
+    # vertical placement
+    menuTop = self.box_positioning['bottom']
+    menuBottom = menuTop + self.menu_size['height']
+
+    ## menu too tall!
+    if (self.window_size['height'] - self.box_positioning['height']) < self.menu_size['height']: 
+      spaceAtTop = self.box_positioning['top']
+      spaceAtBottom = self.window_size['height'] - (spaceAtTop + self.box_positioning['height'])
+
+      # put at the top and set container height
+      if spaceAtTop > spaceAtBottom:
+        menuNode.style.bottom = f"{math.floor(self.window_size['height'] - (self.box_positioning['top'] - 5))}px"
+        menuNode.style.height = f"{math.floor(spaceAtTop - 7)}px"
+        
+      # put at the bottom and set container height
+      else:
+        menuNode.style.top = f"{math.floor(menuTop + 5)}px"
+        menuNode.style.height = f"{math.floor(spaceAtBottom - 7)}px"
+
+    ## menu fits
+    else: 
+      # default placement is out of bounds
+      if self.window_size['height'] < menuBottom:
+        menuNode.style.bottom = f"{math.floor(self.window_size['height'] - (self.box_positioning['top'] - 5))}px"
+      # fits in default position
+      else:
+        menuNode.style.top = f"{math.floor(menuTop + 5)}px"
+    
+  def get_button_measurements(self):
+    rect = self.selection_field.dom_nodes['text-field-input'].getBoundingClientRect()
+    self.box_positioning = {
+      "top": rect.top,
+      "right": rect.right,
+      "bottom": rect.bottom,
+      "left": rect.left,
+      "height": rect.bottom - rect.top,
+      "width": rect.right - rect.left,
+    }
   
   def place_shield(self):
     if not document.contains(self.shield):
@@ -109,15 +164,13 @@ class DropdownMenu(DropdownMenuTemplate):
       document.body.removeChild(self.shield)
       document.body.style.removeProperty("overflow")
 
-
 # <div anvil-name="anvil-m3-dropdownMenu-component"  style="display:flex">
 #   <div anvil-name="anvil-m3-dropdownMenu-container" class="anvil-m3-dropdownMenu-container" >
 #   <!-- could put shield over this to prevent typing??? -->
-#     <div anvil-slot="anvil-m3-dropdownMenu-textfield" class="anvil-m3-dropdownMenu-textfield" anvil-slot-internal> </div>
+#     <div anvil-slot="anvil-m3-dropdownMenu-textfield" anvil-name="anvil-m3-dropdownMenu-textfield" class="anvil-m3-dropdownMenu-textfield" anvil-slot-internal> </div>
     
 #     <div anvil-slot="anvil-m3-dropdownMenu-slot" anvil-name="anvil-m3-dropdownMenu-items-container" 
-#         class="anvil-m3-dropdownMenu-items-container anvil-m3-dropdownMenu-items-hidden" anvil-slot-internal>
-#           <p anvil-if-slot-empty="anvil-m3-dropdownMenu-slot" style="color: #BBB;"><i>No items to select</i></p>
+#         class="anvil-m3-menu-items-container" anvil-slot-internal>
 #     </div>
 #   </div>
 # </div>
