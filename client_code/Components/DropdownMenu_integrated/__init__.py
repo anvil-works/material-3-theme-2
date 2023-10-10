@@ -272,13 +272,14 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
   #   self._text = value
   #   self.menu_button.text = value
 
-  # @property
-  # def appearance(self):
-  #   return self._appearance
-  # @appearance.setter
-  # def appearance(self, value):
+  @property
+  def appearance(self):
+    return self._appearance
+  @appearance.setter
+  def appearance(self, value):
+    self.text_field.appearance = value
   #   self.menu_button.appearance = value
-  #   self._appearance = value
+    self._appearance = value
 
   @property
   def enabled(self):

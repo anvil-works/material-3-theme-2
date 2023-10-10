@@ -24,7 +24,7 @@ properties:
 - name: appearance
   type: enum
   important: true
-  options: []
+  options: ['', outlined]
   description: Textfield's appearance
 - {name: selected_value, type: object, important: true, description: The value of the currently selected item. Can only be set at runtime}
 - {name: underline, type: boolean, default_value: false, important: true, description: Display this component’s text underlined}
