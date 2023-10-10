@@ -24,7 +24,6 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     self.dropdown_field = self.dom_nodes['anvil-m3-dropdownMenu-container']
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
-    print(self.menuNode)
 
     self.toggle_menu_visibility = self.toggle_menu_visibility
     self.handle_keyboard_events = self.handle_keyboard_events
