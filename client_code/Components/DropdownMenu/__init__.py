@@ -15,6 +15,16 @@ from ..Menu.MenuItem import MenuItem
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
+
+    self.window_size = {}
+    self.menu_size = {}
+    self.button_positioning = {}
+
+    self.hoverIndex = None
+    self.itemIndices = set()
+    self.children = None
+
+    
     self.handle_component_click = self.handle_component_click
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
@@ -24,6 +34,8 @@ class DropdownMenu(DropdownMenuTemplate):
     self.shield = document.createElement("div")
     self.shield.style = "opacity: .3; background-color: green"
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
+    self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
+    # 
 
     # find menu position
     # remove menu from current nest
