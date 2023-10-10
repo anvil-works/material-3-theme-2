@@ -57,9 +57,9 @@ components:
   type: form:Components.Menu
   layout_properties: {slot: anvil-m3-dropdownMenu-slot}
   components:
-  - name: button_1
-    properties: {}
-    type: form:Components.Button
+  - name: menu_item_1
+    properties: {text: test test this will go away}
+    type: form:Components.Menu.MenuItem
     layout_properties: {slot: anvil-m3-menu-slot}
 - name: selection_field
   properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: Label,
@@ -75,9 +75,9 @@ container:
       anvil-m3-dropdownMenu-textfield\" anvil-slot-internal> </div>\n    \n    <div\
       \ anvil-slot=\"anvil-m3-dropdownMenu-slot\" anvil-name=\"anvil-m3-dropdownMenu-items-container\"\
       \ \n        class=\"anvil-m3-dropdownMenu-items-container\" anvil-slot-internal>\n\
-      \          <p anvil-if-slot-empty=\"anvil-m3-dropdownMenu-slot\" style=\"color:\
-      \ #BBB;\"><i>No items to select</i></p>\n    </div>\n  </div>\n</div>\n\n<!--\
-      \ \n\n<div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"anvil-m3-buttonMenu-container\"\
+      <!--           <p anvil-if-slot-empty=\"anvil-m3-dropdownMenu-slot\" style=\"\
+      color: #BBB;\"><i>No items to select</i></p> -->\n    </div>\n  </div>\n</div>\n\
+      \n<!-- \n\n<div anvil-name=\"anvil-m3-buttonMenu-container\" class=\"anvil-m3-buttonMenu-container\"\
       >\n  <div anvil-slot=\"button\" anvil-slot-internal></div> \n  \n  <div anvil-slot=\"\
       anvil-m3-buttonMenu-slot\" anvil-name=\"anvil-m3-buttonMenu-items-container\"\
       \ \n    class=\"anvil-m3-buttonMenu-items-container anvil-m3-buttonMenu-items-hidden\"\
