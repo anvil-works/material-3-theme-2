@@ -53,7 +53,7 @@ events:
 custom_component: true
 components:
 - name: text_field
-  properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: this is fake,
+  properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: false, label_text: this is fake,
     placeholder: your life is a lie, supporting_text: ' '}
   type: form:Components.TextField
   layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
