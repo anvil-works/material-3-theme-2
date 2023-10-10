@@ -19,6 +19,30 @@ class DropdownMenu(DropdownMenuTemplate):
   visible = HtmlTemplate.visible
   align = style_property('anvil-m3-dropdownMenu-component', 'justifyContent')
   
+  @property
+  def enabled(self):
+    return self._enabled
+  @enabled.setter
+  def enabled(self, value):
+    self._enabled = value
+    self.selection_field.enabled = value
+
+  @property
+  def include_placeholder(self):
+    return self._include_placeholder
+  @include_placeholder.setter
+  def include_placeholder(self, value):
+    self._include_placeholder = value
+    
+  @property
+  def placeholder(self):
+    return self.placeholder_
+  @placeholder.setter
+  def placeholder(self, value):
+    self._placeholder = value
+    # todo: what to do about this 
+    self.selection_field.placeholder = value
+    
   def on_mount(self, **event_args):
     pass
     
