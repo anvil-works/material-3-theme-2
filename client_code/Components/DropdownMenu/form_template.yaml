@@ -81,5 +81,5 @@ container:
       anvil-m3-buttonMenu-slot\" anvil-name=\"anvil-m3-buttonMenu-items-container\"\
       \ \n    class=\"anvil-m3-buttonMenu-items-container anvil-m3-buttonMenu-items-hidden\"\
       >\n      <p anvil-if-slot-empty=\"anvil-m3-buttonMenu-slot\" style=\"color:\
-      \ #BBB;\"><i>Menu items go here</i></p>\n  </div>\n</div> -->"}
+      \ #BBB;\"><i>Menu items go here</i></p>\n  </div>\n</div> -->", visible: true}
 custom_component_container: true

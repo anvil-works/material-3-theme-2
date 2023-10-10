@@ -20,10 +20,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menu_size = {}
     self.box_positioning = {}
 
-    self.hoverIndex = None
-    self.itemIndices = set()
-    self.children = None
-
+    # self.hoverIndex = None
+    # self.itemIndices = set()
+    # self.children = None
     
     self.handle_component_click = self.handle_component_click
     self.add_event_handler("x-anvil-page-added", self.on_mount)
@@ -44,7 +43,6 @@ class DropdownMenu(DropdownMenuTemplate):
     # but menu but on document with the same position as before
     self.container.removeChild(self.menuNode)
     document.body.appendChild(self.menuNode) 
-    print(self.menuNode.style)
 
   #properties
   visible = HtmlTemplate.visible
@@ -87,9 +85,10 @@ class DropdownMenu(DropdownMenuTemplate):
     self.set_menu_visibility()
 
   def set_menu_visibility(self, value = None):
+    print(value)
     if (value is None):
       value = not self.menu.visible
-    self.open = value
+    print(value)
     self.menu.visible = value
     if value:
       if not anvil.designer.in_designer:
@@ -100,16 +99,16 @@ class DropdownMenu(DropdownMenuTemplate):
       self.remove_shield()
 
   def update_menu_placement(self):
-    # menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
+    menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self.window_size = {"width": window.innerWidth, "height": window.innerHeight}
-    self.menu_size = {"width": self.menuNode.offsetWidth, "height": self.menuNode.offsetHeight}
+    self.menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
     # horizontal placement
     menuLeft = self.box_positioning['left']
     menuRight = menuLeft + self.menu_size['width']
     if self.window_size['width'] < menuRight:
-      self.menuNode.style.right = '5px'
+      menuNode.style.right = '5px'
     else:
-      self.menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
+      menuNode.style.left = f"{math.floor(menuLeft) + 5}px"
       
     # vertical placement
     menuTop = self.box_positioning['bottom']
@@ -156,13 +155,18 @@ class DropdownMenu(DropdownMenuTemplate):
       document.body.style.overflow = "hidden"
     
   def remove_shield_handler(self, event):
-    self.remove_shield()
+    # self.remove_shield()
     self.set_menu_visibility(False)
     
   def remove_shield(self):
     if document.contains(self.shield):
       document.body.removeChild(self.shield)
       document.body.style.removeProperty("overflow")
+
+  def child_clicked(self, event):
+    # do the click action. The child should handle this
+    self.remove_shield()
+    self.set_visibility(False)
 
 # <div anvil-name="anvil-m3-dropdownMenu-component"  style="display:flex">
 #   <div anvil-name="anvil-m3-dropdownMenu-container" class="anvil-m3-dropdownMenu-container" >
