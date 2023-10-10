@@ -41,7 +41,8 @@ class DropdownMenu(DropdownMenuTemplate):
     # remove menu from current nest
     # but menu but on document with the same position as before
     self.container.removeChild(self.menuNode)
-    document.body.appendChild(self.menuNode) #need to make sure this is over the click shield somehowwww
+    document.body.appendChild(self.menuNode) 
+    print(self.menuNode.style)
 
   #properties
   visible = HtmlTemplate.visible
