@@ -36,17 +36,12 @@ class DropdownMenu(DropdownMenuTemplate):
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     self.container = self.dom_nodes['anvil-m3-dropdownMenu-container']
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
-    # if self.container.contains(self.menuNode):
-      # print("MAKE IT GO AWAYYYYY")
-    self.container.removeChild(self.menuNode)
-    # if not document.contains(self.shield):
-    
-    # 
 
     # find menu position
     # remove menu from current nest
     # but menu but on document with the same position as before
-  # document.body.removeChild(self.shield)
+    self.container.removeChild(self.menuNode)
+    document.body.appendChild(self.menuNode) #need to make sure this is over the click shield somehowwww
 
   #properties
   visible = HtmlTemplate.visible
