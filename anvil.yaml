@@ -25,6 +25,9 @@ db_schema:
     - name: Titles
       admin_ui: {order: 0, width: 200}
       type: string
+    - name: ID
+      admin_ui: {order: -1, width: 200}
+      type: number
     title: Jobs
   people:
     client: search
@@ -33,11 +36,26 @@ db_schema:
     - name: Name
       admin_ui: {order: 0, width: 200}
       type: string
-    - name: Random Number
-      admin_ui: {width: 200, order: 1}
+    - name: ID
+      admin_ui: {order: -1, width: 200}
       type: number
     - name: Job
       admin_ui: {width: 200, order: 2}
       type: link_single
       target: jobs
+    - name: blah
+      admin_ui: {width: 200, order: 3}
+      type: link_multiple
+      target: another_category
     title: People
+  another_category:
+    client: none
+    server: full
+    columns:
+    - name: string
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: ID
+      admin_ui: {order: -1, width: 200}
+      type: number
+    title: Another Category
