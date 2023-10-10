@@ -38,7 +38,7 @@ class DropdownMenu_integrated(DropdownMenu_integratedTemplate):
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
-    self.dropdown_field.addEventListener('click', self.toggle_menu_visibility)
+    # self.dropdown_field.addEventListener('click', self.toggle_menu_visibility)
     document.addEventListener('keydown', self.handle_keyboard_events)
     self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
