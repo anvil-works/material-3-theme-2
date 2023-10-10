@@ -25,6 +25,11 @@ class DropdownMenu(DropdownMenuTemplate):
     self.shield.style = "opacity: .3; background-color: green"
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
 
+    # find menu position
+    # remove menu from current nest
+    # but menu but on document with the same position as before
+  # document.body.removeChild(self.shield)
+
   #properties
   visible = HtmlTemplate.visible
   align = style_property('anvil-m3-dropdownMenu-component', 'justifyContent')
