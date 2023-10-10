@@ -19,6 +19,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
+    self.selection_field.dom_nodes['text-field-input'].style.caretColor = 'transparent'
+
+
   #properties
   visible = HtmlTemplate.visible
   align = style_property('anvil-m3-dropdownMenu-component', 'justifyContent')
