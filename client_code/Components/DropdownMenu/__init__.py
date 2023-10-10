@@ -18,11 +18,11 @@ class DropdownMenu(DropdownMenuTemplate):
     self.handle_component_click = self.handle_component_click
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
-
-    self.open = False
     
     self.selection_field.dom_nodes['text-field-input'].style.caretColor = 'transparent'
-
+    
+    self.shield = document.createElement("div")
+    self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
 
   #properties
   visible = HtmlTemplate.visible
@@ -54,22 +54,38 @@ class DropdownMenu(DropdownMenuTemplate):
     
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
+    self.shield.addEventListener('click', self.remove_shield_handler)
     
   def on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self.handle_component_click)
+    self.shield.removeEventListener('click', self.remove_shield_handler)
 
   def handle_component_click(self, event):
     print("clicked")
     self.set_menu_visibility()
 
   def set_menu_visibility(self, value = None):
-    print(value)
-    # does toggle if nothing given
     if (value is None):
-      value = not self.open
-    print(value)
+      value = not self.menu.visible
     self.open = value
     self.menu.visible = value
+    if value:
+      if not anvil.designer.in_designer:
+        self.place_shield()
+  
+  def place_shield(self):
+    if not document.contains(self.shield):
+      document.body.appendChild(self.shield)
+      document.body.style.overflow = "hidden"
+    
+  def remove_shield_handler(self, event):
+    self.remove_shield()
+    self.set_menu_visibility(False)
+    
+  def remove_shield(self):
+    if document.contains(self.shield):
+      document.body.removeChild(self.shield)
+      document.body.style.removeProperty("overflow")
 
 
 # <div anvil-name="anvil-m3-dropdownMenu-component"  style="display:flex">

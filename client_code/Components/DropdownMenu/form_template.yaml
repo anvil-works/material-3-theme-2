@@ -53,7 +53,7 @@ events:
 custom_component: true
 components:
 - name: menu
-  properties: {visible: true}
+  properties: {visible: false}
   type: form:Components.Menu
   layout_properties: {slot: anvil-m3-dropdownMenu-slot}
   components:
