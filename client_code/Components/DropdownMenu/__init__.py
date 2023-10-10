@@ -87,10 +87,12 @@ class DropdownMenu(DropdownMenuTemplate):
     self.set_menu_visibility()
 
   def set_menu_visibility(self, value = None):
-    print("*** trying to set visibility to: " + value)
+    print("*** trying to set visibility to: ")
+    print(value)
     if (value is None):
       value = not self.menu.visible
-    print("supposed to actually set visibility to: " + value)
+    print("supposed to actually set visibility to: ")
+    print(value)
     self.menu.visible = value
     if value:
       if not anvil.designer.in_designer:
