@@ -19,7 +19,7 @@ native_deps: {head_html: '<link rel="preconnect" href="https://fonts.googleapis.
     />'}
 db_schema:
   jobs:
-    client: none
+    client: search
     server: full
     columns:
     - name: Titles

@@ -108,10 +108,11 @@ components_by_slot:
     properties:
       items: ['']
       include_placeholder: true
-      placeholder: has placeholder
+      placeholder: has placeholder and binding
     type: DropDown
     layout_properties: {}
-    data_bindings: []
+    data_bindings:
+    - {property: items, code: 'self.item[''items'']', writeback: false}
   - name: drop_down_2
     properties:
       items: [asdf, fdsa, '1234', '!!!!']

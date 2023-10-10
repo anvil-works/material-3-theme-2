@@ -23,7 +23,8 @@ unique_ids:
   modules:
     Components: '1689356081598516648538000.70355'
     Functions: '1688130464429152915327683.20825'
-  server_modules: {}
+  server_modules:
+    TestModule: '1696934771505893542874780.1255'
   assets:
     anvil-m3/radiobutton.css: '1690464669843320825384936.8927'
     anvil-m3/button.css: '1689852840093884237320513.6318'
