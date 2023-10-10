@@ -106,7 +106,7 @@ components_by_slot:
     layout_properties: {}
   - name: drop_down_1
     properties:
-      items: [asdf, fdsa, '1234', '!!!!']
+      items: ['']
       include_placeholder: true
       placeholder: has placeholder
     type: DropDown
@@ -114,11 +114,11 @@ components_by_slot:
     data_bindings: []
   - name: drop_down_2
     properties:
-      items: ['']
+      items: [asdf, fdsa, '1234', '!!!!']
     type: DropDown
     layout_properties: {}
     data_bindings:
-    - {property: items, code: 'self.item[''item'']', writeback: false}
+    - {property: items, code: 'self.item['''']', writeback: false}
   - name: flow_panel_3
     properties: {}
     type: FlowPanel
