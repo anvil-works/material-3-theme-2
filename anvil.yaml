@@ -17,4 +17,12 @@ native_deps: {head_html: '<link rel="preconnect" href="https://fonts.googleapis.
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />'}
-db_schema: {}
+db_schema:
+  test:
+    client: none
+    server: full
+    columns:
+    - name: Items
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: Test

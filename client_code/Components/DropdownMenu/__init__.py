@@ -1,5 +1,8 @@
 from ._anvil_designer import DropdownMenuTemplate
 from anvil import *
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from ...Functions import style_property # underline_property, italic_property, , color_property, innerText_property, bold_property, font_size_property
 from anvil.js import window

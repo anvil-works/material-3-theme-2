@@ -1,5 +1,8 @@
 from ._anvil_designer import SwitchTemplate
 from anvil import *
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 from anvil.js.window import jQuery
 from anvil.js import window
 from ...Functions import theme_color_to_css, enabled_property

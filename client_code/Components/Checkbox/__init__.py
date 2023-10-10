@@ -1,5 +1,8 @@
 from ._anvil_designer import CheckboxTemplate
 from anvil import *
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from ...Functions import enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property
 import anvil.designer
