@@ -11,4 +11,33 @@ from ..Menu.MenuItem import MenuItem
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
+    self.handle_component_click = self.handle_component_click
+    self.add_event_handler("x-anvil-page-added", self.on_mount)
+    self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
+
+  #properties
+  visible = HtmlTemplate.visible
+  align = style_property('anvil-m3-dropdownMenu-component', 'justifyContent')
+  
+  def on_mount(self, **event_args):
+    pass
     
+  def on_cleanup(self, **event_args):
+    pass
+
+  def handle_component_click(self, event):
+    # will toggle menu visibility
+    pass
+    
+
+# <div anvil-name="anvil-m3-dropdownMenu-component"  style="display:flex">
+#   <div anvil-name="anvil-m3-dropdownMenu-container" class="anvil-m3-dropdownMenu-container" >
+#   <!-- could put shield over this to prevent typing??? -->
+#     <div anvil-slot="anvil-m3-dropdownMenu-textfield" class="anvil-m3-dropdownMenu-textfield" anvil-slot-internal> </div>
+    
+#     <div anvil-slot="anvil-m3-dropdownMenu-slot" anvil-name="anvil-m3-dropdownMenu-items-container" 
+#         class="anvil-m3-dropdownMenu-items-container anvil-m3-dropdownMenu-items-hidden" anvil-slot-internal>
+#           <p anvil-if-slot-empty="anvil-m3-dropdownMenu-slot" style="color: #BBB;"><i>No items to select</i></p>
+#     </div>
+#   </div>
+# </div>
