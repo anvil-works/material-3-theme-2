@@ -190,6 +190,8 @@ class DropdownMenu(DropdownMenuTemplate):
     self.create_menu_items()
 
   def create_menu_items(self):
+    if self.include_placeholder:
+      pass
     for item in self.items:
       selection = MenuItem()
       if type(item) is list:
@@ -197,8 +199,7 @@ class DropdownMenu(DropdownMenuTemplate):
       else:
         selection.text = item
         selection.hide_leading_icon = True
-        selection.handle_click = lambda: print(item)
+        # selection.handle_click = lambda a: print(a)
 
-      
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
     

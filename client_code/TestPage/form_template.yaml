@@ -136,6 +136,7 @@ components_by_slot:
         enabled: true
         include_placeholder: true
         items: [selection 1, selection 2, selection 3, selection 4, selection 5]
+        placeholder: ''
       type: form:Components.DropdownMenu
       layout_properties: {}
   - name: dropdown_menu_2
@@ -144,6 +145,7 @@ components_by_slot:
       enabled: true
       appearance: outlined
       items: ['']
+      placeholder: ''
     type: form:Components.DropdownMenu
     layout_properties: {}
     data_bindings:
