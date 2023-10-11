@@ -8,6 +8,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from anvil import HtmlTemplate
 
 class Menu(MenuTemplate):
   def __init__(self, **properties):
@@ -15,14 +16,16 @@ class Menu(MenuTemplate):
     self.init_components(**properties)
 
   """ Properties """
-  @property
-  def visible(self):
-    return self._visible
+  visible = HtmlTemplate.visible
+  
+  # @property
+  # def visible(self):
+  #   return self._visible
 
-  @visible.setter
-  def visible(self, value):
-    self._visible = value
-    self.dom_nodes['anvil-m3-menu-items-container'].classList.toggle('anvil-m3-menu-hidden', not value)
+  # @visible.setter
+  # def visible(self, value):
+  #   self._visible = value
+  #   self.dom_nodes['anvil-m3-menu-items-container'].classList.toggle('anvil-m3-menu-hidden', not value)
 
   """ Functions """
   def set_or_toggle_visibility(self, value = None):

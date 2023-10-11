@@ -125,12 +125,11 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: dropdown_menu_1
-      properties: {align: right, appearance: outlined, visible: true, enabled: true,
-        include_placeholder: true}
+      properties: {align: right, appearance: '', visible: true, enabled: true, include_placeholder: true}
       type: form:Components.DropdownMenu
       layout_properties: {}
   - name: dropdown_menu_2
-    properties: {align: right, enabled: true}
+    properties: {align: right, enabled: true, appearance: outlined}
     type: form:Components.DropdownMenu
     layout_properties: {}
   - name: flow_panel_4

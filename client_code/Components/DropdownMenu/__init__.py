@@ -38,12 +38,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self.selectionField = self.dom_nodes['anvil-m3-dropdownMenu-textfield']
 
-    # find menu position
-    # remove menu from current nest
-    # but menu but on document with the same position as before
-    self.container.removeChild(self.menuNode)
-    document.body.appendChild(self.menuNode) 
-
   #properties
   visible = HtmlTemplate.visible
   align = style_property('anvil-m3-dropdownMenu-component', 'justifyContent')
@@ -55,6 +49,15 @@ class DropdownMenu(DropdownMenuTemplate):
   def enabled(self, value):
     self._enabled = value
     self.selection_field.enabled = value
+    
+  @property
+  def appearance(self):
+    return self._appearance
+  @appearance.setter
+  def appearance(self, value):
+    self._appearance = value
+    self.selection_field.appearance = value
+    
 
   @property
   def include_placeholder(self):
