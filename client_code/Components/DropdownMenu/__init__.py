@@ -79,6 +79,8 @@ class DropdownMenu(DropdownMenuTemplate):
      return self._selected_value
   @selected_value.setter
   def selected_value(self, value):
+    print("**selected v:")
+    print(value)
     self._selected_value = value
   
   @property
@@ -181,9 +183,10 @@ class DropdownMenu(DropdownMenuTemplate):
       document.body.removeChild(self.shield)
       document.body.style.removeProperty("overflow")
 
+  
   def child_clicked(self, event):
-    # do the click action. The child should handle this
-    
+    event.preventDefault()
+    event.stopPropagation()
     self.remove_shield()
     self.set_menu_visibility(False)
 
@@ -203,6 +206,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.create_menu_items()
 
   def create_menu_items(self):
+    value = None
     if self.include_placeholder:
       pass
     for item in self.items:
@@ -212,7 +216,6 @@ class DropdownMenu(DropdownMenuTemplate):
       else:
         selection.text = item
         selection.hide_leading_icon = True
-        # selection.handle_click = lambda a: print(a)
-
+        
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
     
