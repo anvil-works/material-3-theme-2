@@ -14,6 +14,7 @@ from ..Menu.MenuItem import MenuItem
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
+    self.placeholder = ""
     self.init_components(**properties)
 
     self.window_size = {}
@@ -23,6 +24,7 @@ class DropdownMenu(DropdownMenuTemplate):
     # self.hoverIndex = None
     # self.itemIndices = set()
     # self.children = None
+    
     self.child_clicked = self.child_clicked
     self.handle_component_click = self.handle_component_click
     self.add_event_handler("x-anvil-page-added", self.on_mount)
@@ -66,20 +68,23 @@ class DropdownMenu(DropdownMenuTemplate):
     self._items = value
     
   @property
-  def include_placeholder(self):
-    return self._include_placeholder
-  @include_placeholder.setter
-  def include_placeholder(self, value):
-    self._include_placeholder = value
-    
-  @property
   def placeholder(self):
     return self._placeholder
   @placeholder.setter
   def placeholder(self, value):
     self._placeholder = value
-    # todo: what to do about this 
-    self.selection_field.placeholder = value
+    
+  @property
+  def include_placeholder(self):
+    return self._include_placeholder
+  @include_placeholder.setter
+  def include_placeholder(self, value):
+    self._include_placeholder = value
+    if value:
+      self.selection_field.placeholder = self.placeholder
+    else:
+      self.selection_field.placeholder = None
+    
     
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
