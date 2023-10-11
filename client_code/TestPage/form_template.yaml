@@ -129,9 +129,15 @@ components_by_slot:
       type: form:Components.DropdownMenu
       layout_properties: {}
   - name: dropdown_menu_2
-    properties: {align: right, enabled: true, appearance: outlined}
+    properties:
+      align: right
+      enabled: true
+      appearance: outlined
+      items: ['']
     type: form:Components.DropdownMenu
     layout_properties: {}
+    data_bindings:
+    - {property: items, code: 'self.item[''items'']', writeback: false}
   - name: flow_panel_4
     properties: {}
     type: FlowPanel

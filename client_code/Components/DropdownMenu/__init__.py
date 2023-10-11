@@ -31,7 +31,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.dom_nodes['text-field-input'].style.caretColor = 'transparent'
     
     self.shield = document.createElement("div")
-    self.shield.style = "opacity: .3; background-color: green"
+    # self.shield.style = "opacity: .3; background-color: green"
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     
     self.container = self.dom_nodes['anvil-m3-dropdownMenu-container']
@@ -58,6 +58,12 @@ class DropdownMenu(DropdownMenuTemplate):
     self._appearance = value
     self.selection_field.appearance = value
     
+  @property
+  def items(self):
+    return self._items
+  @items.setter
+  def items(self, value):
+    self._items = value
 
   @property
   def include_placeholder(self):
@@ -86,16 +92,11 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menuNode.removeEventListener('click', self.child_clicked)
 
   def handle_component_click(self, event):
-    print("clicked")
     self.set_menu_visibility()
 
   def set_menu_visibility(self, value = None):
-    print("*** trying to set visibility to: ")
-    print(value)
     if (value is None):
       value = not self.menu.visible
-    print("supposed to actually set visibility to: ")
-    print(value)
     self.menu.visible = value
     if value:
       if not anvil.designer.in_designer:
@@ -183,3 +184,8 @@ class DropdownMenu(DropdownMenuTemplate):
 #     </div>
 #   </div>
 # </div>
+
+  def form_show(self, **event_args):
+    """This method is called when the form is shown on the page"""
+    pass
+    
