@@ -217,5 +217,8 @@ class DropdownMenu(DropdownMenuTemplate):
         selection.text = item
         selection.hide_leading_icon = True
         
+        selection.add_event_handler('click', lambda item: self.selected_value = item)
+        
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
-    
+
+  # def set_selection(self, display, value):
