@@ -31,7 +31,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.dom_nodes['text-field-input'].style.caretColor = 'transparent'
     
     self.shield = document.createElement("div")
-    # self.shield.style = "opacity: .3; background-color: green"
+    self.shield.style = "opacity: .3; background-color: green"
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     
     self.container = self.dom_nodes['anvil-m3-dropdownMenu-container']
@@ -64,7 +64,7 @@ class DropdownMenu(DropdownMenuTemplate):
   @items.setter
   def items(self, value):
     self._items = value
-
+    
   @property
   def include_placeholder(self):
     return self._include_placeholder
@@ -92,7 +92,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menuNode.removeEventListener('click', self.child_clicked)
 
   def handle_component_click(self, event):
-    print(self.items)
     self.set_menu_visibility()
 
   def set_menu_visibility(self, value = None):
@@ -187,6 +186,7 @@ class DropdownMenu(DropdownMenuTemplate):
 # </div>
 
   def form_show(self, **event_args):
-    """ create the items """
-    pass
-    
+    print(self.items)
+
+  def create_menu_items(self):
+    (self.menu)
