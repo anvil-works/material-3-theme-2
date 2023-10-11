@@ -1,6 +1,6 @@
 /***** Menu *****/
 .anvil-m3-menu-items-container { 
-  position: absolute;
+  position: fixed;
   min-width: 112px;
   max-width: 280px;
   min-height: 24px;
