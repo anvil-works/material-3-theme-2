@@ -73,7 +73,14 @@ class DropdownMenu(DropdownMenuTemplate):
   @placeholder.setter
   def placeholder(self, value):
     self._placeholder = value
-    
+
+  @property
+  def selected_value(self):
+     return self._selected_value
+  @selected_value.setter
+  def selected_value(self, value):
+    self._selected_value = value
+  
   @property
   def include_placeholder(self):
     return self._include_placeholder
@@ -176,6 +183,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def child_clicked(self, event):
     # do the click action. The child should handle this
+    
     self.remove_shield()
     self.set_menu_visibility(False)
 
