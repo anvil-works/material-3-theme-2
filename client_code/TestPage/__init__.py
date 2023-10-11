@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import plotly.graph_objects as go
 from anvil.tables import app_tables
+from ..Components.Menu.MenuItem import MenuItem
 
 
 class TestPage(TestPageTemplate):
@@ -97,6 +98,7 @@ class TestPage(TestPageTemplate):
 
   def button_1_click(self, **event_args):
     self.floating_menu.visible = not self.floating_menu.visible
+    item = menuItem()
 
 
 

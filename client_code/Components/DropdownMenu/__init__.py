@@ -187,6 +187,11 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def form_show(self, **event_args):
     print(self.items)
+    self.create_menu_items()
 
   def create_menu_items(self):
-    (self.menu)
+    for item in self.items:
+      selection = MenuItem()
+      selection.text = "blah blah"
+      self.menu.add_component(selection)
+    

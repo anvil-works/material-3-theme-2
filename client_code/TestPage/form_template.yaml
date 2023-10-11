@@ -100,10 +100,17 @@ components_by_slot:
     type: form:Components.Card
     layout_properties: {}
     components: []
-  - name: text_field_1
-    properties: {trailing_icon: arrow_drop_down}
-    type: form:Components.TextField
+  - name: flow_panel_5
+    properties: {}
+    type: FlowPanel
     layout_properties: {}
+    components:
+    - name: text_field_1
+      properties: {trailing_icon: arrow_drop_down}
+      type: form:Components.TextField
+    - name: menu_1
+      properties: {}
+      type: form:Components.Menu
   - name: drop_down_1
     properties:
       items: ['']
@@ -131,7 +138,7 @@ components_by_slot:
         visible: true
         enabled: true
         include_placeholder: true
-        items: [selection 1, selection 2, selection 3]
+        items: [selection 1, selection 2, selection 3, selection 4, selection 5]
       type: form:Components.DropdownMenu
       layout_properties: {}
   - name: dropdown_menu_2

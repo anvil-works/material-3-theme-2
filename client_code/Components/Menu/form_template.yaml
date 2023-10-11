@@ -1,6 +1,7 @@
 properties:
 - {name: visible, type: boolean, default_value: true, default_binding_prop: true}
 is_package: true
+events: []
 custom_component: true
 components: []
 container:
