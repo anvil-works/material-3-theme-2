@@ -185,6 +185,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   
   def child_clicked(self, event):
+    print("()@£*$)*(QU£ROIFHJASDO*)")
     print(event)
     
     self.remove_shield()
@@ -210,9 +211,10 @@ class DropdownMenu(DropdownMenuTemplate):
         selection.text = item
         selection.hide_leading_icon = True
 
-        def something(): 
-          print("teehee")
-  
-        selection.add_event_handler('click', something)
+      def something(**e): 
+        print("teehee")
+
+      print("EVENT HANDLER AFTER ME")
+      selection.add_event_handler('click', something)
         
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
