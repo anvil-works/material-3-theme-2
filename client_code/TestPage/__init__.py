@@ -98,12 +98,6 @@ class TestPage(TestPageTemplate):
 
   def button_1_click(self, **event_args):
     self.floating_menu.visible = not self.floating_menu.visible
-    item = menuItem()
-
-
-
-
-
 
 
 

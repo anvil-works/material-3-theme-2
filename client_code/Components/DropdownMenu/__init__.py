@@ -192,6 +192,13 @@ class DropdownMenu(DropdownMenuTemplate):
   def create_menu_items(self):
     for item in self.items:
       selection = MenuItem()
-      selection.text = "blah blah"
-      self.menu.add_component(selection)
+      if type(item) is list:
+        selection.text = item[0]
+      else:
+        selection.text = item
+        selection.hide_leading_icon = True
+        selection.handle_click = lambda: print(item)
+
+      
+      self.menu.add_component(selection, slot="anvil-m3-menu-slot")
     

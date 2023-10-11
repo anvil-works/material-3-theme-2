@@ -108,9 +108,6 @@ components_by_slot:
     - name: text_field_1
       properties: {trailing_icon: arrow_drop_down}
       type: form:Components.TextField
-    - name: menu_1
-      properties: {}
-      type: form:Components.Menu
   - name: drop_down_1
     properties:
       items: ['']
