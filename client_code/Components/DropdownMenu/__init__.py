@@ -185,22 +185,15 @@ class DropdownMenu(DropdownMenuTemplate):
 
   
   def child_clicked(self, event):
-    event.preventDefault()
-    event.stopPropagation()
+    print(event)
+    
     self.remove_shield()
     self.set_menu_visibility(False)
-
-# <div anvil-name="anvil-m3-dropdownMenu-component"  style="display:flex">
-#   <div anvil-name="anvil-m3-dropdownMenu-container" class="anvil-m3-dropdownMenu-container" >
-#   <!-- could put shield over this to prevent typing??? -->
-#     <div anvil-slot="anvil-m3-dropdownMenu-textfield" anvil-name="anvil-m3-dropdownMenu-textfield" class="anvil-m3-dropdownMenu-textfield" anvil-slot-internal> </div>
     
-#     <div anvil-slot="anvil-m3-dropdownMenu-slot" anvil-name="anvil-m3-dropdownMenu-items-container" 
-#         class="anvil-m3-menu-items-container" anvil-slot-internal>
-#     </div>
-#   </div>
-# </div>
-
+  # def set_selection(self, display, value):
+  def set_selection(self, event):
+    print("DO SOMETHING")
+    
   def form_show(self, **event_args):
     print(self.items)
     self.create_menu_items()
@@ -217,8 +210,6 @@ class DropdownMenu(DropdownMenuTemplate):
         selection.text = item
         selection.hide_leading_icon = True
         
-        selection.add_event_handler('click', lambda item: self.selected_value = item)
+        # selection.add_event_handler('click', print("TEEHEE"))
         
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
-
-  # def set_selection(self, display, value):
