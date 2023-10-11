@@ -125,7 +125,13 @@ components_by_slot:
     layout_properties: {}
     components:
     - name: dropdown_menu_1
-      properties: {align: right, appearance: '', visible: true, enabled: true, include_placeholder: true}
+      properties:
+        align: right
+        appearance: ''
+        visible: true
+        enabled: true
+        include_placeholder: true
+        items: [selection 1, selection 2, selection 3]
       type: form:Components.DropdownMenu
       layout_properties: {}
   - name: dropdown_menu_2

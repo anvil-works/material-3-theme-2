@@ -92,6 +92,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menuNode.removeEventListener('click', self.child_clicked)
 
   def handle_component_click(self, event):
+    print(self.items)
     self.set_menu_visibility()
 
   def set_menu_visibility(self, value = None):
@@ -186,6 +187,6 @@ class DropdownMenu(DropdownMenuTemplate):
 # </div>
 
   def form_show(self, **event_args):
-    """This method is called when the form is shown on the page"""
+    """ create the items """
     pass
     
