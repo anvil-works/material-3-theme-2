@@ -82,6 +82,7 @@ class DropdownMenu(DropdownMenuTemplate):
     print("**selected v:")
     print(value)
     self._selected_value = value
+    self.selection_field.label_text = value
   
   @property
   def include_placeholder(self):
@@ -185,15 +186,8 @@ class DropdownMenu(DropdownMenuTemplate):
 
   
   def child_clicked(self, event):
-    # print("()@£*$)*(QU£ROIFHJASDO*)")
-    # print(event)
-    
     self.remove_shield()
     self.set_menu_visibility(False)
-    
-  # def set_selection(self, display, value):
-  def set_selection(self, event):
-    print("DO SOMETHING")
     
   def form_show(self, **event_args):
     print(self.items)
@@ -206,16 +200,17 @@ class DropdownMenu(DropdownMenuTemplate):
       
     for item in self.items:
       selection = MenuItem()
-      
+      value = None
       if type(item) is list:
         selection.text = item[0]
       else:
         selection.text = item
         selection.hide_leading_icon = True
-
+        value = item
+        
       def something(**e): 
         print("teehee")
+        self.selected_value = value
 
-      print("EVENT HANDLER AFTER ME")
       selection.add_event_handler('click', something)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")

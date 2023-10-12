@@ -65,10 +65,7 @@ class MenuItem(MenuItemTemplate):
 
   """ Functions """
   def handle_click(self, event):
-    print("HALLLLO")
-    print(self.get_event_handlers("click"))
     event.preventDefault() #TODO: make sure this doesn't prevent the menu from closing
-    
     self.raise_event("click")
 
   def _anvil_get_design_info_(self, as_layout=False):
