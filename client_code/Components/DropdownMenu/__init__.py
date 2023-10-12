@@ -202,11 +202,10 @@ class DropdownMenu(DropdownMenuTemplate):
     self.create_menu_items()
 
   def create_menu_items(self):
-    value = None
-    
     if self.include_placeholder:
       p = MenuItem()
       p.text = self.placeholder
+      p.hide_leading_icon = True
       def handle_select_placeholder(**e):
         self.selected_value = None
         
@@ -215,11 +214,11 @@ class DropdownMenu(DropdownMenuTemplate):
       
     for item in self.items:
       selection = MenuItem()
+      selection.hide_leading_icon = True
       if type(item) is list:
         selection.text = item[0]
       else:
         selection.text = item
-        selection.hide_leading_icon = True
         
       def handle_selection_click(value = item, **e): 
         self.selected_value = value

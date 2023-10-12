@@ -136,7 +136,7 @@ components_by_slot:
         enabled: true
         include_placeholder: true
         items: [selection 1, selection 2, selection 3, selection 4, selection 5]
-        placeholder: hold the place
+        placeholder: Make a selection. This one is None
         label_text: label text herrooo
       type: form:Components.DropdownMenu
       layout_properties: {}
