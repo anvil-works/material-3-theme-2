@@ -203,8 +203,10 @@ class DropdownMenu(DropdownMenuTemplate):
     value = None
     if self.include_placeholder:
       pass
+      
     for item in self.items:
       selection = MenuItem()
+      
       if type(item) is list:
         selection.text = item[0]
       else:
