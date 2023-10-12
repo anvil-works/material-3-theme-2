@@ -119,7 +119,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menuNode.removeEventListener('click', self.child_clicked)
 
   def handle_keyboard_events(self, event):
-    if not elf.menu.visible:
+    if not self.menu.visible:
       return
     action_keys = set(["ArrowUp", "ArrowDown", "Tab", "Escape", " ", "Enter"])
     if event.key not in action_keys:
@@ -152,15 +152,15 @@ class DropdownMenu(DropdownMenuTemplate):
         self.hoverIndex = -1
       while True:
         self.hoverIndex += 1
-        if self.hoverIndex in self.itemIndices:
-          break;
+        # if self.hoverIndex in self.itemIndices:
+        #   break;
     else:
       if self.hoverIndex is None or self.hoverIndex is 0:
         self.hoverIndex = len(self.children)
       while True:
         self.hoverIndex -= 1
-        if self.hoverIndex in self.itemIndices:
-          break; 
+        # if self.hoverIndex in self.itemIndices:
+        #   break; 
     self.update_hover_styles();
 
   def clear_hover_styles(self):
@@ -192,9 +192,8 @@ class DropdownMenu(DropdownMenuTemplate):
       self.clear_hover_styles()
 
   def get_hover_index_information(self):
-    self.children = self.menu.get_components()#[1:]
-    for child in self.children:
-      print(child)
+    self.children = self.menu.get_components()
+    
     
     # for i in range(0, len(self.children)):
     #   if isinstance(self.children[i], MenuItem):
