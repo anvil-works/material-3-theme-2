@@ -119,7 +119,12 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def handle_keyboard_events(self, event):
     activeElement = document.activeElement
+    print("!@£")
     print(activeElement)
+    print("AAA")
+    print(self.selection_field.dom_nodes['text-field-input'])
+    if activeElement is self.selection_field.dom_nodes['text-field']:
+      print("please")
     # if self.selection_field.dom_nodes['text-field-input'].hasFocus():
     #   print("FOCUSED")
     # else:
