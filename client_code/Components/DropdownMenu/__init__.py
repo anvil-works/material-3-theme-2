@@ -103,11 +103,6 @@ class DropdownMenu(DropdownMenuTemplate):
   @include_placeholder.setter
   def include_placeholder(self, value):
     self._include_placeholder = value
-    if value:
-      self.selection_field.placeholder = self.placeholder
-    else:
-      self.selection_field.placeholder = None
-    
     
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
@@ -207,6 +202,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def create_menu_items(self):
     value = None
+    
     if self.include_placeholder:
       pass
       
