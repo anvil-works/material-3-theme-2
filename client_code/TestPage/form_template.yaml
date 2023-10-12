@@ -137,7 +137,7 @@ components_by_slot:
         include_placeholder: true
         items: [selection 1, selection 2, selection 3, selection 4, selection 5]
         placeholder: hold the place
-        label_text: Label here
+        label_text: label text herrooo
       type: form:Components.DropdownMenu
       layout_properties: {}
       event_bindings: {change: dropdown_menu_1_change}

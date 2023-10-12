@@ -209,6 +209,8 @@ class DropdownMenu(DropdownMenuTemplate):
       p.text = self.placeholder
       def handle_select_placeholder(**e):
         self.selected_value = None
+        
+      p.add_event_handler('click', handle_select_placeholder)
       self.menu.add_component(p, slot="anvil-m3-menu-slot")
       
     for item in self.items:
