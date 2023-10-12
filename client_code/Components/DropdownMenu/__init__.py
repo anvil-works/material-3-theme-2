@@ -128,7 +128,8 @@ class DropdownMenu(DropdownMenuTemplate):
       self.update_menu_placement()
     
   def update_menu_placement(self):
-    menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
+    # menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
+    menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
     self.window_size = {"width": window.innerWidth, "height": window.innerHeight}
     self.menu_size = {"width": menuNode.offsetWidth, "height": menuNode.offsetHeight}
     # horizontal placement
@@ -177,6 +178,8 @@ class DropdownMenu(DropdownMenuTemplate):
       "height": rect.bottom - rect.top,
       "width": rect.right - rect.left,
     }
+
+    print(self.box_positioning)
   
   def place_shield(self):
     if not document.contains(self.shield):

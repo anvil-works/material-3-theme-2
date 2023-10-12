@@ -156,34 +156,24 @@ components_by_slot:
       items: ['']
       placeholder: select to set to none
       include_placeholder: true
-      label_text: ''
+      label_text: Job Title
     type: form:Components.DropdownMenu
     layout_properties: {}
     data_bindings:
     - {property: items, code: 'self.item[''items'']', writeback: false}
     event_bindings: {change: dropdown_menu_2_change}
   - name: flow_panel_4
-    properties: {}
+    properties: {align: right}
     type: FlowPanel
     layout_properties: {}
     components:
-    - name: button_1
-      properties: {text: show menu}
-      type: form:Components.Button
-      layout_properties: {}
-      event_bindings: {click: button_1_click}
-    - name: floating_menu
-      properties: {visible: false}
-      type: form:Components.Menu
-      components:
-      - name: menu_item_35
-        properties: {text: menu item 1}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-menu-slot}
-      - name: menu_item_36
-        properties: {text: menu item 2}
-        type: form:Components.Menu.MenuItem
-        layout_properties: {slot: anvil-m3-menu-slot}
+    - name: dropdown_menu_3
+      properties:
+        items: [l;askdfj ;aosidjf ;aow9jf;lk ajsd f09auw 4;lkajs df, asd;fj a;lskdjf ;alskdjf0pa9uw4j;lkajwd flk ja,
+          as;dkfj 0a8u2j4;lkajw dfkl;aj sdf, asdkfjh p9284u ;oflajkwdflk;djs foiua weo,
+          'asd;fkj ap908wu4;olakjwdflkj ', asdifuy 0p24j;lkajsd f asdf, asdkljfh p04uwaisdf asdfiuh p9082u34 ;oi 4jti]
+        label_text: smol
+      type: form:Components.DropdownMenu
       layout_properties: {}
   - name: image_3
     properties: {height: 488, visible: true}
