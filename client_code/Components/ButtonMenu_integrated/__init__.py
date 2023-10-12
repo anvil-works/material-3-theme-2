@@ -27,9 +27,9 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
 
-    self.handle_keyboard_events = self.handle_keyboard_events
-    self.remove_shield_handler = self.remove_shield_handler
-    self.child_clicked = self.child_clicked
+    # self.handle_keyboard_events = self.handle_keyboard_events
+    # self.remove_shield_handler = self.remove_shield_handler
+    # self.child_clicked = self.child_clicked
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)

@@ -27,19 +27,19 @@ class DropdownMenu(DropdownMenuTemplate):
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     self.menuNode = self.dom_nodes['anvil-m3-buttonMenu-items-container']
 
-    self.handle_keyboard_events = self.handle_keyboard_events
-    self.remove_shield_handler = self.remove_shield_handler
-    self.child_clicked = self.child_clicked
+    # self.handle_keyboard_events = self.handle_keyboard_events
+    # self.remove_shield_handler = self.remove_shield_handler
+    # self.child_clicked = self.child_clicked
 
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
 
   def on_mount(self, **event_args):
-    document.addEventListener('keydown', self.handle_keyboard_events)
+    # document.addEventListener('keydown', self.handle_keyboard_events)
     self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
   def on_cleanup(self, **event_args):
-    document.removeEventListener('keydown', self.handle_keyboard_events)
+    # document.removeEventListener('keydown', self.handle_keyboard_events)
     self.shield.removeEventListener('click', self.remove_shield_handler)
     self.menuNode.removeEventListener('click', self.child_clicked)
 
