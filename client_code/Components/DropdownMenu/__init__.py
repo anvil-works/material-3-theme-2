@@ -21,12 +21,14 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menu_size = {}
     self.box_positioning = {}
 
-    # self.hoverIndex = None
-    # self.itemIndices = set()
-    # self.children = None
+    self.hoverIndex = None
+    self.itemIndices = set()
+    self.children = None
     
+    self.handle_keyboard_events = self.handle_keyboard_events
     self.child_clicked = self.child_clicked
     self.handle_component_click = self.handle_component_click
+    
     self.add_event_handler("x-anvil-page-added", self.on_mount)
     self.add_event_handler("x-anvil-page-removed", self.on_cleanup)
     
@@ -104,15 +106,76 @@ class DropdownMenu(DropdownMenuTemplate):
     self._include_placeholder = value or ""
     
   def on_mount(self, **event_args):
+    document.addEventListener('keydown', self.handle_keyboard_events)
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
     self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
     
   def on_cleanup(self, **event_args):
+    document.removeEventListener('keydown', self.handle_keyboard_events)
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self.handle_component_click)
     self.shield.removeEventListener('click', self.remove_shield_handler)
     self.menuNode.removeEventListener('click', self.child_clicked)
 
+  def handle_keyboard_events(self, event):
+    if not self.menu.visible:
+      return
+
+    else:
+      print("open")
+
+    # action_keys = set(["ArrowUp", "ArrowDown", "Tab", "Escape", " ", "Enter"])
+    # if event.key not in action_keys:
+    #   #TODO: eventually want to use this to jump somewhere in the list
+    #   return
+    
+    # if event.key is "ArrowUp" or event.key is "ArrowDown":
+    #   self.iterate_hover(event.key is "ArrowDown")
+    #   return
+      
+    # # if event.key is "Tab":
+    # #   pass
+    # hover = self.hoverIndex #holding value for situation like alerts where it awaits 
+    # self.remove_shield()
+    # self.set_visibility(False)
+    
+    # def attemptSelect():
+    #   event.preventDefault();
+    #   if not hover is None:
+    #     self.children[hover].raise_event("click")
+    
+    # if (event.key is " "): #space key as " " is stupid
+    #   attemptSelect()
+    # if (event.key is "Enter"):
+    #   attemptSelect()
+      
+  def iterate_hover(self, inc = True):
+    if inc:
+      if self.hoverIndex is None or self.hoverIndex is (len(self.children) - 1):
+        self.hoverIndex = -1
+      while True:
+        self.hoverIndex += 1
+        if self.hoverIndex in self.itemIndices:
+          break;
+    else:
+      if self.hoverIndex is None or self.hoverIndex is 0:
+        self.hoverIndex = len(self.children)
+      while True:
+        self.hoverIndex -= 1
+        if self.hoverIndex in self.itemIndices:
+          break; 
+    self.update_hover_styles();
+
+  def clear_hover_styles(self):
+    if self.children is not None:
+      for child in self.children:
+        if isinstance(child, MenuItem):
+          child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
+
+  def update_hover_styles(self):
+    self.clear_hover_styles()
+    self.children[self.hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
+    
   def handle_component_click(self, event):
     self.set_menu_visibility()
 
