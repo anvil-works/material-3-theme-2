@@ -72,7 +72,6 @@ class DropdownMenu(DropdownMenuTemplate):
   @property
   def label_text(self):
     return self._label_text
-
   @label_text.setter
   def label_text(self, value):
     self._label_text = value
@@ -103,7 +102,7 @@ class DropdownMenu(DropdownMenuTemplate):
     return self._include_placeholder
   @include_placeholder.setter
   def include_placeholder(self, value):
-    self._include_placeholder = value
+    self._include_placeholder = value or ""
     
   def on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
@@ -125,7 +124,7 @@ class DropdownMenu(DropdownMenuTemplate):
     if value:
       if not anvil.designer.in_designer:
         self.place_shield()
-      self.get_button_measurements()
+      self.get_textfield_measurements()
       self.update_menu_placement()
     
   def update_menu_placement(self):
@@ -168,7 +167,7 @@ class DropdownMenu(DropdownMenuTemplate):
       else:
         menuNode.style.top = f"{math.floor(menuTop + 5)}px"
     
-  def get_button_measurements(self):
+  def get_textfield_measurements(self):
     rect = self.selection_field.dom_nodes['text-field-input'].getBoundingClientRect()
     self.box_positioning = {
       "top": rect.top,
@@ -200,6 +199,9 @@ class DropdownMenu(DropdownMenuTemplate):
     
   def form_show(self, **event_args):
     self.create_menu_items()
+    if anvil.designer.in_designer:
+      if not self.label_text:
+        self.label_text = anvil.designer.get_design_name(self)
 
   def create_menu_items(self):
     if self.include_placeholder:
