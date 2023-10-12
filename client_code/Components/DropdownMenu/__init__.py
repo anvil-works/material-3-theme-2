@@ -33,7 +33,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.dom_nodes['text-field-input'].style.caretColor = 'transparent'
     
     self.shield = document.createElement("div")
-    self.shield.style = "opacity: .3; background-color: green"
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
     
     self.container = self.dom_nodes['anvil-m3-dropdownMenu-container']
@@ -96,6 +95,7 @@ class DropdownMenu(DropdownMenuTemplate):
       self.selection_field.dom_nodes['text-field-input'].value = value[0]
     else:
       self.selection_field.dom_nodes['text-field-input'].value = value
+    self.raise_event("change")
   
   @property
   def include_placeholder(self):
@@ -197,7 +197,6 @@ class DropdownMenu(DropdownMenuTemplate):
       document.body.removeChild(self.shield)
       document.body.style.removeProperty("overflow")
 
-  
   def child_clicked(self, event):
     event.stopPropagation()
     self.remove_shield()

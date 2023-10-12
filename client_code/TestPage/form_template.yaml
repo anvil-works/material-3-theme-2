@@ -140,6 +140,14 @@ components_by_slot:
         label_text: Label here
       type: form:Components.DropdownMenu
       layout_properties: {}
+      event_bindings: {change: dropdown_menu_1_change}
+    - name: heading_1
+      properties: {}
+      type: form:Components.Heading
+  - name: heading_2
+    properties: {align: right}
+    type: form:Components.Heading
+    layout_properties: {}
   - name: dropdown_menu_2
     properties:
       align: right
@@ -152,6 +160,7 @@ components_by_slot:
     layout_properties: {}
     data_bindings:
     - {property: items, code: 'self.item[''items'']', writeback: false}
+    event_bindings: {change: dropdown_menu_2_change}
   - name: flow_panel_4
     properties: {}
     type: FlowPanel
