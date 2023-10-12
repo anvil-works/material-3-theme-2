@@ -82,7 +82,7 @@ class DropdownMenu(DropdownMenuTemplate):
     print("**selected v:")
     print(value)
     self._selected_value = value
-    self.selection_field.label_text = value
+    self.selection_field.dom_nodes['text-field-input'].value = value
   
   @property
   def include_placeholder(self):
@@ -200,17 +200,17 @@ class DropdownMenu(DropdownMenuTemplate):
       
     for item in self.items:
       selection = MenuItem()
-      value = None
       if type(item) is list:
         selection.text = item[0]
       else:
+        print(item)
         selection.text = item
         selection.hide_leading_icon = True
         value = item
         
-      def something(**e): 
-        print("teehee")
-        self.selected_value = value
-
-      selection.add_event_handler('click', something)
+        def handle_selection_click(value = value, **e): 
+          print(value)
+          self.selected_value = value
+          
+        selection.add_event_handler('click', handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
