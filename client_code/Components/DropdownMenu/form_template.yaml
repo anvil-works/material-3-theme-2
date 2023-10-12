@@ -47,6 +47,7 @@ properties:
 - {name: width, type: string, default_value: '', important: false, description: 'The
     width of this DropDown, or “default” to have the width set by the container',
   group: Style}
+- {name: label_text, type: string, default_value: '', important: true, group: Attributes}
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}

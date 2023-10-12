@@ -69,6 +69,15 @@ class DropdownMenu(DropdownMenuTemplate):
   @items.setter
   def items(self, value):
     self._items = value
+ 
+  @property
+  def label_text(self):
+    return self._label_text
+
+  @label_text.setter
+  def label_text(self, value):
+    self._label_text = value
+    self.selection_field.label_text = value or ""
     
   @property
   def placeholder(self):
@@ -82,10 +91,11 @@ class DropdownMenu(DropdownMenuTemplate):
      return self._selected_value
   @selected_value.setter
   def selected_value(self, value):
-    print("**selected v:")
-    print(value)
     self._selected_value = value
-    self.selection_field.dom_nodes['text-field-input'].value = value
+    if type(value) is list:
+      self.selection_field.dom_nodes['text-field-input'].value = value[0]
+    else:
+      self.selection_field.dom_nodes['text-field-input'].value = value
   
   @property
   def include_placeholder(self):
@@ -212,5 +222,5 @@ class DropdownMenu(DropdownMenuTemplate):
       def handle_selection_click(value = item, **e): 
         self.selected_value = value
           
-        selection.add_event_handler('click', handle_selection_click)
+      selection.add_event_handler('click', handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
