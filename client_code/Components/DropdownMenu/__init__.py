@@ -119,10 +119,10 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menuNode.removeEventListener('click', self.child_clicked)
 
   def handle_keyboard_events(self, event):
-    activeElement = document.activeElement
-
-    if activeElement is self.selection_field.dom_nodes['text-field']:
+    if document.activeElement is self.selection_field.dom_nodes['text-field']:
       print("please")
+    else:
+      print("nop")
     # if self.selection_field.dom_nodes['text-field-input'].hasFocus():
     #   print("FOCUSED")
     # else:
