@@ -40,6 +40,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self.selectionField = self.dom_nodes['anvil-m3-dropdownMenu-textfield']
 
+    if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways. 
+      self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
+
   #properties
   visible = HtmlTemplate.visible
   align = style_property('anvil-m3-dropdownMenu-component', 'justifyContent')
@@ -203,12 +206,10 @@ class DropdownMenu(DropdownMenuTemplate):
       if type(item) is list:
         selection.text = item[0]
       else:
-        print(item)
         selection.text = item
         selection.hide_leading_icon = True
         
         def handle_selection_click(value = item, **e): 
-          print(value, item)
           self.selected_value = value
           
         selection.add_event_handler('click', handle_selection_click)
