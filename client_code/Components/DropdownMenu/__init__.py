@@ -147,6 +147,7 @@ class DropdownMenu(DropdownMenuTemplate):
     #   attemptSelect()
       
   def iterate_hover(self, inc = True):
+    print("Hi")
     if inc:
       if self.hoverIndex is None or self.hoverIndex is (len(self.children) - 1):
         self.hoverIndex = -1
