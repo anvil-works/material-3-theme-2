@@ -154,8 +154,8 @@ components_by_slot:
       enabled: true
       appearance: outlined
       items: ['']
-      placeholder: hold the place!!!
-      include_placeholder: false
+      placeholder: select to set to none
+      include_placeholder: true
       label_text: ''
     type: form:Components.DropdownMenu
     layout_properties: {}

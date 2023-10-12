@@ -107,7 +107,10 @@ class TestPage(TestPageTemplate):
   def dropdown_menu_2_change(self, **event_args):
     """This method is called when an item is selected"""
     print(self.dropdown_menu_2.selected_value)
-    self.heading_2.text = self.dropdown_menu_2.selected_value[0]
+    if self.dropdown_menu_2.selected_value is None:
+      self.heading_2.text = ""
+    else:
+      self.heading_2.text = self.dropdown_menu_2.selected_value[0]
 
 
 
