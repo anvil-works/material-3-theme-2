@@ -90,7 +90,6 @@ class DropdownMenu(DropdownMenuTemplate):
   @selected_value.setter
   def selected_value(self, value):
     self._selected_value = value
-    print(value)
     if type(value) is list:
       self.selection_field.dom_nodes['text-field-input'].value = value[0]
     else:
@@ -178,8 +177,6 @@ class DropdownMenu(DropdownMenuTemplate):
       "height": rect.bottom - rect.top,
       "width": rect.right - rect.left,
     }
-
-    print(self.box_positioning)
   
   def place_shield(self):
     if not document.contains(self.shield):

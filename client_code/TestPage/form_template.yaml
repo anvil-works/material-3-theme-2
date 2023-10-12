@@ -163,7 +163,7 @@ components_by_slot:
     - {property: items, code: 'self.item[''items'']', writeback: false}
     event_bindings: {change: dropdown_menu_2_change}
   - name: flow_panel_4
-    properties: {align: right}
+    properties: {align: center}
     type: FlowPanel
     layout_properties: {}
     components:
@@ -173,8 +173,9 @@ components_by_slot:
           as;dkfj 0a8u2j4;lkajw dfkl;aj sdf, asdkfjh p9284u ;oflajkwdflk;djs foiua weo,
           'asd;fkj ap908wu4;olakjwdflkj ', asdifuy 0p24j;lkajsd f asdf, asdkljfh p04uwaisdf asdfiuh p9082u34 ;oi 4jti]
         label_text: smol
+        include_placeholder: ''
       type: form:Components.DropdownMenu
-      layout_properties: {}
+      layout_properties: {width: 231}
   - name: image_3
     properties: {height: 488, visible: true}
     type: Image
