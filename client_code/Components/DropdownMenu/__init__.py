@@ -185,7 +185,21 @@ class DropdownMenu(DropdownMenuTemplate):
         self.place_shield()
       self.get_textfield_measurements()
       self.update_menu_placement()
+      self.get_hover_index_information()
+    else:
+      self.menuNode.removeAttribute("style")
+      self.hoverIndex = None
+      self.clear_hover_styles()
+
+  def get_hover_index_information(self):
+    self.children = self.menu.get_components()#[1:]
+    for child in self.children:
+      print(child)
     
+    # for i in range(0, len(self.children)):
+    #   if isinstance(self.children[i], MenuItem):
+    #     self.itemIndices.add(i)
+  
   def update_menu_placement(self):
     # menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     menuNode = self.menu.dom_nodes['anvil-m3-menu-items-container']
