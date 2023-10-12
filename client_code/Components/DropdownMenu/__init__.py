@@ -41,6 +41,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self.selectionField = self.dom_nodes['anvil-m3-dropdownMenu-textfield']
 
+
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways. 
       self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
 
@@ -119,10 +120,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def handle_keyboard_events(self, event):
     activeElement = document.activeElement
-    print("!@£")
-    print(activeElement)
-    print("AAA")
-    print(self.selection_field.dom_nodes['text-field-input'])
+
     if activeElement is self.selection_field.dom_nodes['text-field']:
       print("please")
     # if self.selection_field.dom_nodes['text-field-input'].hasFocus():
