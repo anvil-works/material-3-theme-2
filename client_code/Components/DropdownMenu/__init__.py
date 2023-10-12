@@ -189,11 +189,11 @@ class DropdownMenu(DropdownMenuTemplate):
 
   
   def child_clicked(self, event):
+    print("clicking child")
     self.remove_shield()
     self.set_menu_visibility(False)
     
   def form_show(self, **event_args):
-    print(self.items)
     self.create_menu_items()
 
   def create_menu_items(self):
