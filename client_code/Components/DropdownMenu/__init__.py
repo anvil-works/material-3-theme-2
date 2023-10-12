@@ -206,10 +206,9 @@ class DropdownMenu(DropdownMenuTemplate):
         print(item)
         selection.text = item
         selection.hide_leading_icon = True
-        value = item
         
-        def handle_selection_click(value = value, **e): 
-          print(value)
+        def handle_selection_click(value = item, **e): 
+          print(value, item)
           self.selected_value = value
           
         selection.add_event_handler('click', handle_selection_click)
