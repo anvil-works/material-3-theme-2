@@ -39,7 +39,7 @@ components_by_slot:
       layout_properties: {grid_position: 'XZUXBG,RRCIKQ'}
       event_bindings: {change: switch_3_change}
   - name: button_menu_integrated_1
-    properties: {text: Font Face, visible: true, enabled: true}
+    properties: {text: face font, visible: true, enabled: true}
     type: form:Components.ButtonMenu_integrated
     layout_properties: {}
     components:

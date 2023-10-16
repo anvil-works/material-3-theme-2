@@ -255,7 +255,7 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
       "icon": "edit",
       "default": True,
       "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self.menu_button, "text", self.menu_button.dom_nodes['anvil-m3-button-text'])
+        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.menu_button.dom_nodes['anvil-m3-button-text'])
       }
     }]
     return design_info
