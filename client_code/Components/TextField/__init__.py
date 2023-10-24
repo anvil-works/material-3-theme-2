@@ -17,9 +17,8 @@ class TextField(TextFieldTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def _anvil_get_design_info_(self, as_layout=False):
-    di = super()._anvil_get_design_info_(as_layout)
-    di['interactions'] = [{
+  def _anvil_get_interactions_(self):
+    return [{
       "type": "whole_component",
       "title": "Edit text",
       "icon": "edit",
@@ -28,7 +27,6 @@ class TextField(TextFieldTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.dom_nodes['label-text'])
       }
     }]
-    return di
 
   def on_key_down(self, e):
     if e.key == "Enter":

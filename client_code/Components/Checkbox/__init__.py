@@ -28,26 +28,25 @@ class Checkbox(CheckboxTemplate):
     if anvil.designer.in_designer and not self.text:
       self.text = anvil.designer.get_design_name(self)
 
-  def _anvil_get_design_info_(self, as_layout=False):
-    di = super()._anvil_get_design_info_(as_layout)
-    di['interactions'] = [{
-      "type": "whole_component",
-      "title": "Toggle",
-      "icon": "edit",
-      "default": True,
-      "callbacks": {
-        "execute": self.toggle_checked 
-      }
-    },
-    {
-      "type": "region",
-      "bounds": self.dom_nodes['anvil-m3-checkbox-label'],
-      "callbacks": {
-        "doubleClick": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
-      }
-    }       
+  def _anvil_get_interactions_(self):
+    return [
+      {
+        "type": "whole_component",
+        "title": "Toggle",
+        "icon": "edit",
+        "default": True,
+        "callbacks": {
+          "execute": self.toggle_checked 
+        }
+      },
+      {
+        "type": "region",
+        "bounds": self.dom_nodes['anvil-m3-checkbox-label'],
+        "callbacks": {
+          "doubleClick": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
+        }
+      }       
     ]
-    return di
 
   def toggle_checked(self):
     self.checked = not self.checked

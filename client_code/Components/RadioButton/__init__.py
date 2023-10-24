@@ -29,59 +29,65 @@ class RadioButton(RadioButtonTemplate):
   selected = checked_property('anvil-m3-radiobutton-input')
 
   # Class Functions
-  def _anvil_get_design_info_(self, as_layout=False):
-    di = super()._anvil_get_design_info_(as_layout)
-    di['interactions'] = [
+  def _anvil_get_interactions_(self):
+    return [
       {
-      "type": "whole_component_multi",
-      "title": "Align",
-      "options": [{
-        "name": "Left Align",
-        "id": "left",
-        "icon" : "align-left",
-      },{
-        "name": "Left Center",
-        "id": "center",
-        "icon" : "align-center",
-      },{
-        "name": "Left Right",
-        "id": "right",
-        "icon" : "align-right",
-      }],
-      "callbacks": {
-        "execute": self.setAlignment
-      }
-    },
+        "type": "whole_component_multi",
+        "title": "Align",
+        "options": [
+          {
+            "name": "Left Align",
+            "id": "left",
+            "icon" : "align-left",
+          },
+          {
+            "name": "Left Center",
+            "id": "center",
+            "icon" : "align-center",
+          },
+          {
+            "name": "Left Right",
+            "id": "right",
+            "icon" : "align-right",
+          }
+        ],
+        "callbacks": {
+          "execute": self.setAlignment
+        }
+      },
       {
-      "type": "whole_component",
-      "title": "Visible",
-      "icon": "add", #TODO: eye icon
-      "callbacks": {
-        "execute": self.toggle_visible
+        "type": "whole_component",
+        "title": "Visible",
+        "icon": "add", #TODO: eye icon
+        "callbacks": {
+          "execute": self.toggle_visible
+        }
+      },
+      {
+        "type": "whole_component",
+        "title": "Enable",
+        "icon": "add", #TODO: power icon
+        "callbacks": {
+          "execute": self.toggle_enabled
+        }
+      },
+      {
+        "type": "whole_component",
+        "title": "Edit text",
+        "icon": "edit",
+        "default": True,
+        "callbacks": {
+          "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-radiobutton-label'])
+        },   
+      },
+      {
+        "type": "region",
+        "bounds": self.dom_nodes['anvil-m3-radiobutton-hover'],
+        "callbacks": {
+          "doubleClick": self.toggle_selected
+        }
       }
-    }, {
-      "type": "whole_component",
-      "title": "Enable",
-      "icon": "add", #TODO: power icon
-      "callbacks": {
-        "execute": self.toggle_enabled
-      }
-    },{
-      "type": "whole_component",
-      "title": "Edit text",
-      "icon": "edit",
-      "default": True,
-      "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-radiobutton-label'])
-      },   
-    },{
-      "type": "region",
-      "bounds": self.dom_nodes['anvil-m3-radiobutton-hover'],
-      "callbacks": {
-        "doubleClick": self.toggle_selected
-      }
-    } ]
-    return di 
+    ]
 
   # todo: interaction bold, italic, underline
   def toggle_selected(self):
@@ -101,9 +107,8 @@ class RadioButton(RadioButtonTemplate):
     anvil.designer.update_component_properties(self, {'align': self.align})
 
   
-  # def _anvil_get_design_info_(self, as_layout=False):
-  #   di = super()._anvil_get_design_info_(as_layout)
-  #   di['interactions'] = [{
+  # def _anvil_get_interactions_(self):
+  #   return [{
   #     "type": "whole_component",
   #     "title": "Toggle",
   #     "icon": "edit",
@@ -120,7 +125,6 @@ class RadioButton(RadioButtonTemplate):
   #     }
   #   }       
   #   ]
-  #   return di
 
     
   def handle_click(self, event):

@@ -18,9 +18,8 @@ class Text(TextTemplate):
     if anvil.designer.in_designer and not self.text:
       self.text = anvil.designer.get_design_name(self)
 
-  def _anvil_get_design_info_(self, as_layout=False):
-    di = super()._anvil_get_design_info_(as_layout)
-    di['interactions'] = [{
+  def _anvil_get_interactions_(self):
+    return [{
       "type": "whole_component",
       "title": "Edit text",
       "icon": "edit",
@@ -29,7 +28,6 @@ class Text(TextTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-text'])
       }
     }]
-    return di
 
   visible = HtmlTemplate.visible
   underline = underline_property('anvil-m3-text')

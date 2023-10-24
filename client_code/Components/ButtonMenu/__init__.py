@@ -57,9 +57,8 @@ class ButtonMenu(ButtonMenuTemplate):
   #   pass
 
 
-  def _anvil_get_design_info_(self, as_layout=False):
-    design_info = super()._anvil_get_design_info_(as_layout)
-    design_info["interactions"] = [
+  def _anvil_get_interactions_(self):
+    return [
       {
         "type": "designer_events",
         "callbacks": {
@@ -68,7 +67,6 @@ class ButtonMenu(ButtonMenuTemplate):
         }
       },
     ]
-    return design_info
    
   def _on_select_descendant(self):
     self.set_visibility(True)

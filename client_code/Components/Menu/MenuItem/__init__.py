@@ -64,9 +64,8 @@ class MenuItem(MenuItemTemplate):
     event.preventDefault() #TODO: make sure this doesn't prevent the menu from closing
     self.raise_event("click")
 
-  def _anvil_get_design_info_(self, as_layout=False):
-    di = super()._anvil_get_design_info_(as_layout)
-    di['interactions'] = [{
+  def _anvil_get_interactions_(self):
+    return [{
       "type": "whole_component",
       "title": "Edit text",
       "icon": "edit",
@@ -75,4 +74,3 @@ class MenuItem(MenuItemTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-menuItem-labelText'])
       }
     }]
-    return di

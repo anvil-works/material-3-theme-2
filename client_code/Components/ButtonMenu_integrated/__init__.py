@@ -222,40 +222,36 @@ class ButtonMenu_integrated(ButtonMenu_integratedTemplate):
     self.children[self.hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
     
 # DESIGNER INTERACTIONS
-  def _anvil_get_design_info_(self, as_layout=False):
-    design_info = super()._anvil_get_design_info_(as_layout)
-    design_info["interactions"] = [
+  def _anvil_get_interactions_(self):
+    return [
       {
         "type": "designer_events",
-        "callbacks": {
-          "onSelectDescendent": self._on_select_descendent,
-          "onSelectOther": self._on_select_other
-        }
+        "callbacks": {"onSelectDescendent": self._on_select_descendent, "onSelectOther": self._on_select_other},
       },
       {
-      "type": "whole_component",
-      "title": "Visible",
-      "icon": "add", #TODO: eye icon
-      "callbacks": {
-        "execute": self.toggle_visible
-      }
-    }, {
-      "type": "whole_component",
-      "title": "Enable",
-      "icon": "add", #TODO: power icon
-      "callbacks": {
-        "execute": self.toggle_enabled
-      }
-    },{
-      "type": "whole_component",
-      "title": "Edit text",
-      "icon": "edit",
-      "default": True,
-      "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self.menu_button, "text", self.menu_button.dom_nodes['anvil-m3-button-text'])
-      }
-    }]
-    return design_info
+        "type": "whole_component",
+        "title": "Visible",
+        "icon": "add",  # TODO: eye icon
+        "callbacks": {"execute": self.toggle_visible},
+      },
+      {
+        "type": "whole_component",
+        "title": "Enable",
+        "icon": "add",  # TODO: power icon
+        "callbacks": {"execute": self.toggle_enabled},
+      },
+      {
+        "type": "whole_component",
+        "title": "Edit text",
+        "icon": "edit",
+        "default": True,
+        "callbacks": {
+          "execute": lambda: anvil.designer.start_inline_editing(
+            self.menu_button, "text", self.menu_button.dom_nodes["anvil-m3-button-text"]
+          )
+        },
+      },
+    ]
 
   def _on_select_descendent(self):
     self.set_visibility(True)
