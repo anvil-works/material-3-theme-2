@@ -1,0 +1,82 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+    layout_properties: {grid_position: 'XSWOOJ,FCHTQP'}
+    components:
+    - name: flow_panel_1
+      properties: {}
+      type: FlowPanel
+      components:
+      - name: linear_panel_2
+        properties: {}
+        type: LinearPanel
+        layout_properties: {width: 427}
+        components:
+        - name: text_1
+          properties: {text: Dropdowns Component, font_size: 25, text_color: 'rgb(103,
+              80, 164)'}
+          type: form:Components.Text
+          layout_properties: {}
+        - name: text_2
+          properties: {text: Description. Properties. Link to docs. Etc}
+          type: form:Components.Text
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
+    components:
+    - name: flow_panel_2
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: column_panel_1
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {width: 578}
+        components:
+        - name: flow_panel_3
+          properties: {}
+          type: FlowPanel
+          layout_properties: {grid_position: 'YFXULF,CLTAUS'}
+          components:
+          - name: dropdown_menu_1
+            properties: {}
+            type: form:Components.DropdownMenu
+          - name: dropdown_menu_2
+            properties: {}
+            type: form:Components.DropdownMenu
+    - name: flow_panel_3_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: icon_button_1_copy_2
+        properties: {enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_2_copy_2
+        properties: {appearance: Filled, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_1_copy_1_copy_1
+        properties: {appearance: Filled tonal, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: icon_button_2_copy_1_copy_1
+        properties: {appearance: Outlined, enabled: false}
+        type: form:Components.IconButton
+        layout_properties: {}
+      - name: text_3_copy_1
+        properties: {text: Disabled Buttons}
+        type: form:Components.Text
