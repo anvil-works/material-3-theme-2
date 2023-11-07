@@ -82,6 +82,10 @@ components_by_slot:
       type: form:Components.Menu.MenuItem
       layout_properties: {slot: anvil-m3-buttonMenu-slot}
       event_bindings: {click: menu_item_9_click}
+  - name: button_1
+    properties: {}
+    type: form:Components.Button
+    layout_properties: {}
   - name: button_menu_integrated_6
     properties: {text: Menu}
     type: form:Components.ButtonMenu_integrated
