@@ -147,19 +147,19 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.underline_display = value
     
   @property
-  def display_font(self):
-    return self._display_font
-  @display_font.setter
-  def display_font(self, value):
-    self._display_font = value
-    self.selection_field.display_font = value
+  def selected_font(self):
+    return self._selected_font
+  @selected_font.setter
+  def selected_font(self, value):
+    self._selected_font = value
+    self.selection_field.selected_font = value
     
   @property
-  def display_font_size(self):
-    return self._display_font_size
-  @display_font_size.setter
-  def display_font_size(self, value):
-    self._display_font_size = value
+  def selected_font_size(self):
+    return self._selected_font_size
+  @selected_font_size.setter
+  def selected_font_size(self, value):
+    self._selected_font_size = value
     self.selection_field.display_font_size = value
     
   @property
