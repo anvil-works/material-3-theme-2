@@ -1,4 +1,4 @@
-from client_code.utils import gen_id
+from ..utils import gen_id
 from ._anvil_designer import CheckboxTemplate
 from anvil import *
 import anvil.server
