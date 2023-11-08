@@ -5,17 +5,17 @@ container:
       >\n    <svg anvil-name=\"anvil-m3-progressindicator-indeterminate\" class=\"\
       anvil-m3-progressindicator-circular\" style=\"transform: scaleX(-1)\">\n   \
       \   <path class=\"anvil-m3-progressindicator-arc anvil-m3-indefinate\" d=\"\
-      M 42 23 A 18 18 358 1 1 42 22\"></path>\n    <svg anvil-name=\"anvil-m3-progressindicator-determinate\"\
-      \ class=\"anvil-m3-progressindicator-circular anvil-m3-progressindicator-hidden\"\
-      >\n      <path anvil-name=\"anvil-m3-progressindicator-arc\" class=\"anvil-m3-progressindicator-arc\"\
-      \ d=\"M 6.031219015765174 22.94032554970835 A 18 18 -79646.6250000492 1 1 8.374645858507604\
-      \ 32.93578804319722\">\n      </path>\n    </svg> \n  </div>\n</div>"}
+      M 42 23 A 18 18 358 1 1 42 22\"></path>\n    </svg>\n    <svg anvil-name=\"\
+      anvil-m3-progressindicator-determinate\" class=\"anvil-m3-progressindicator-circular\
+      \ anvil-m3-progressindicator-hidden\">\n      <path anvil-name=\"anvil-m3-progressindicator-arc\"\
+      \ class=\"anvil-m3-progressindicator-arc\" d=\"M 24.0 6.0 A 18 18 0.0 0 1 25.7970014996429\
+      \ 6.089925024995534\">\n      </path>\n    </svg> \n  </div>\n</div>"}
 components: []
 is_package: true
 custom_component: true
 properties:
 - {name: visible, type: boolean, default_value: false, default_binding_prop: true,
-  important: true}
+  important: true, designerHint: visible}
 - name: type
   type: enum
   important: true

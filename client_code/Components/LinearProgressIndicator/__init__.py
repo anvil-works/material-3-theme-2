@@ -24,13 +24,7 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
   type = property_with_callback("type", update_determinance)
 
   def update_progress(self, value):
-    v = 0
-    if value is None:
-      v = 0
-    elif value in range(0, 100):
-      v = value
-    elif value >= 100:
-      v = 100
+    v = max(min(value or 0, 100), 0)
     self.dom_nodes['anvil-m3-progressindicator-indicator'].setAttribute("x2", f"{v}%")
     
   progress = property_with_callback("progress", update_progress)

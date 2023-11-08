@@ -1,0 +1,85 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+    layout_properties: {grid_position: 'XSWOOJ,FCHTQP'}
+    components:
+    - name: flow_panel_1
+      properties: {}
+      type: FlowPanel
+      components:
+      - name: linear_panel_2
+        properties: {}
+        type: LinearPanel
+        layout_properties: {width: 427}
+        components:
+        - name: text_1
+          properties: {text: ProgressIndicator Components, font_size: 25, text_color: 'rgb(103,
+              80, 164)'}
+          type: form:Components.Text
+          layout_properties: {}
+        - name: text_2
+          properties: {text: Description. Properties. Link to docs. Etc}
+          type: form:Components.Text
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
+    components:
+    - name: flow_panel_2
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: column_panel_1
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {width: 578}
+        components:
+        - name: text_3
+          properties: {text: Indeterminate}
+          type: form:Components.Text
+          layout_properties: {grid_position: 'HJLVQL,QGOPQU'}
+        - name: circular_progress_indicator
+          properties: {visible: true, type: indeterminate}
+          type: form:Components.CircularProgressIndicator
+          layout_properties: {grid_position: 'KTGWGP,OENKJQ'}
+        - name: linear_progress_indicator
+          properties: {visible: true}
+          type: form:Components.LinearProgressIndicator
+          layout_properties: {grid_position: 'FGXMBK,JSORRS'}
+    - name: text_3_copy_1
+      properties: {text: Determinate}
+      type: form:Components.Text
+      layout_properties: {slot: anvil-m3-card-slot}
+    - name: button_1
+      properties: {text: Make Progress Go, appearance: filled}
+      type: form:Components.Button
+      layout_properties: {slot: anvil-m3-card-slot}
+      event_bindings: {click: button_1_click}
+    - name: circular_progress_indicator_determinate
+      properties: {visible: true, type: determinate, progress: 0}
+      type: form:Components.CircularProgressIndicator
+      layout_properties: {slot: anvil-m3-card-slot}
+    - name: linear_progress_indicator_determinate
+      properties: {visible: true, type: determinate, progress: 47.75}
+      type: form:Components.LinearProgressIndicator
+      layout_properties: {slot: anvil-m3-card-slot}
+  - name: card_2
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'YQVVVU,UMEILI'}
+    components:
+    - name: text_4
+      properties: {text: 'TODO: smooth out determinate progress transition'}
+      type: form:Components.Text
+      layout_properties: {slot: anvil-m3-card-slot}

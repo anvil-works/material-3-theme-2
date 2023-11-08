@@ -30,7 +30,7 @@ is_package: true
 custom_component: true
 properties:
 - {name: visible, type: boolean, default_value: false, default_binding_prop: true,
-  important: true}
+  important: true, designerHint: visible}
 - name: type
   type: enum
   important: true

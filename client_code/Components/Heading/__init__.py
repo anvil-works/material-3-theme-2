@@ -13,6 +13,7 @@ from ...Functions import underline_property, italic_property, style_property, co
 
 class Heading(HeadingTemplate):
   def __init__(self, **properties):
+    self._props = properties
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 

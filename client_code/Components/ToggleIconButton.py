@@ -3,7 +3,7 @@ from .IconButton import IconButton
 import anvil.designer
 from ..Functions import property_with_callback, theme_color_to_css
 
-icon_button_properties = getattr(IconButton, "_anvil_properties_", [])
+# icon_button_properties = getattr(IconButton, "_anvil_properties_", [])
 
 selected_property = {"name": "selected", "type": "boolean", "group": "Attributes", "important": True, "default_value": False}
 selected_border_property = {"name": "selected_border", "type": "string", "group": "Toggled Style" , "description": "Border style when component is in the selected state. Accepts any valid CSS border value."}
@@ -11,7 +11,7 @@ selected_background_property = {"name": "selected_background", "type": "color", 
 selected_icon_color_property = {"name": "selected_icon_color", "type": "color", "group": "Toggled Style" , "description": "Icon color when component is in the selected state."}
 
 class ToggleIconButton(IconButton):
-  _anvil_properties_ = [selected_property, selected_border_property, selected_background_property, selected_icon_color_property, *icon_button_properties]
+  _anvil_properties_ = [selected_property, selected_border_property, selected_background_property, selected_icon_color_property, *IconButton._anvil_properties_]
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)

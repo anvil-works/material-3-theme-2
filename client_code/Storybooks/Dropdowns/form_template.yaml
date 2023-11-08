@@ -35,6 +35,10 @@ components:
     type: form:Components.Card
     layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
     components:
+    - name: heading_1
+      properties: {text: With Label}
+      type: form:Components.Heading
+      layout_properties: {slot: anvil-m3-card-slot}
     - name: flow_panel_2
       properties: {}
       type: FlowPanel
@@ -119,6 +123,103 @@ components:
           include_placeholder: ''
           placeholder: Placeholder Text
           label_text: Dropdown Label 4
+          appearance: outlined
+          allow_none: true
+        type: form:Components.DropdownMenu
+        layout_properties: {width: 273}
+  - name: card_1_copy_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'XELRDD,LWQQOV'}
+    components:
+    - name: heading_1_copy_1
+      properties: {text: Without Label}
+      type: form:Components.Heading
+      layout_properties: {slot: anvil-m3-card-slot}
+    - name: flow_panel_2_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: column_panel_1_copy_1
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {width: 578}
+        components:
+        - name: flow_panel_4_copy_2
+          properties: {}
+          type: FlowPanel
+          layout_properties: {grid_position: 'FGNTIC,MORUZE'}
+          components:
+          - name: text_3_copy_2
+            properties: {text: 'No allow_none, no placeholder'}
+            type: form:Components.Text
+            layout_properties: {width: 268.1875}
+          - name: text_5_copy_2
+            properties: {text: 'no allow_none, placeholder'}
+            type: form:Components.Text
+            layout_properties: {}
+        - name: flow_panel_3_copy_2
+          properties: {}
+          type: FlowPanel
+          layout_properties: {grid_position: 'YFXULF,CLTAUS'}
+          components:
+          - name: dropdown_menu_1_copy_1
+            properties:
+              items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
+                dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
+                dropdown item 9]
+              label_text: ''
+              allow_none: false
+              enabled: true
+              visible: true
+            type: form:Components.DropdownMenu
+            layout_properties: {width: 273}
+          - name: dropdown_menu_2_copy_1
+            properties:
+              items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
+                dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
+                dropdown item 9]
+              placeholder: Placeholder text
+              label_text: ''
+              appearance: outlined
+              allow_none: false
+            type: form:Components.DropdownMenu
+            layout_properties: {width: 273}
+    - name: flow_panel_4_copy_1_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: text_3_copy_1_copy_1
+        properties: {text: 'allow_none, no placeholder'}
+        type: form:Components.Text
+        layout_properties: {width: 268.1875}
+      - name: text_5_copy_1_copy_1
+        properties: {text: 'allow_none, placeholder'}
+        type: form:Components.Text
+        layout_properties: {}
+    - name: flow_panel_3_copy_1_copy_2
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: dropdown_menu_3_copy_2
+        properties:
+          items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
+            dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
+          include_placeholder: ''
+          label_text: ''
+          allow_none: true
+        type: form:Components.DropdownMenu
+        layout_properties: {width: 273}
+      - name: dropdown_menu_4_copy_2
+        properties:
+          items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
+            dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
+          include_placeholder: ''
+          placeholder: Placeholder Text
+          label_text: ''
           appearance: outlined
           allow_none: true
         type: form:Components.DropdownMenu

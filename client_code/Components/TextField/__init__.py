@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property
+from ...Functions import property_with_callback, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property
 import anvil.designer
 
 # Todo: region interactions
@@ -57,7 +57,11 @@ class TextField(TextFieldTemplate):
   label_font_size = font_size_property('label-text')
   label_font = style_property('label-text', 'fontFamily')
   label_text_color = color_property('label-text', 'color')
-  label_text = innerText_property('label-text')
+  
+  # label_text = innerText_property('label-text')
+  def set_label(self, value):
+    self.dom_nodes['label-text'].innerText = value or ""
+  label_text = property_with_callback("label_text", set_label)
     
   italic_display = italic_property('text-field-input')
   bold_display = bold_property('text-field-input')

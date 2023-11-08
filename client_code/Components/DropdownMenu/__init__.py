@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import style_property # underline_property, italic_property, , color_property, innerText_property, bold_property, font_size_property
+from ...Functions import style_property, property_with_callback # underline_property, italic_property, , color_property, innerText_property, bold_property, font_size_property
 from anvil.js import window
 from anvil.js.window import document
 import random, string, math
@@ -14,6 +14,7 @@ from ..Menu.MenuItem import MenuItem
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
+    self._props = properties
     self.placeholder = ""
     self.init_components(**properties)
 
@@ -42,10 +43,14 @@ class DropdownMenu(DropdownMenuTemplate):
           
     self.shield = document.createElement("div")
     self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
+    
+    if not self.label_text and self.placeholder:
+      self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
 
     self.menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways. 
       self.menuNode.classList.toggle("anvil-m3-menu-hidden", True)
+    
 
   #properties
   visible = HtmlTemplate.visible
@@ -177,13 +182,17 @@ class DropdownMenu(DropdownMenuTemplate):
   def items(self, value):
     self._items = value
 
-  @property
-  def label_text(self):
-    return self._label_text
-  @label_text.setter
-  def label_text(self, value):
-    self._label_text = value
+  # @property
+  # def label_text(self):
+  #   return self._label_text
+  # @label_text.setter
+  # def label_text(self, value):
+  #   self._label_text = value
+    
+  def update_label_text(self, value):
     self.selection_field.label_text = value or ""
+
+  label_text = property_with_callback("label_text", update_label_text)
     
   @property
   def placeholder(self):
@@ -349,12 +358,16 @@ class DropdownMenu(DropdownMenuTemplate):
       value = not self.menu.visible
     self.menu.visible = value
     if value:
+      if not self.label_text and self.placeholder:
+        self.selection_field.dom_nodes['label-text'].innerText = ""
       if not anvil.designer.in_designer:
         self.place_shield()
         self.selection_field.trailing_icon = "arrow_drop_up"
       self.get_textfield_measurements()
       self.update_menu_placement()
     else:
+      if not self.label_text and self.placeholder and self.selected_value is None:
+        self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
       self.selection_field.trailing_icon = "arrow_drop_down"
       self.menuNode.removeAttribute("style")
       if self.selected_value is None:
@@ -478,20 +491,6 @@ class DropdownMenu(DropdownMenuTemplate):
   def _anvil_get_interactions_(self):
     return [
       {
-    #   "type": "whole_component",
-    #   "title": "Visible",
-    #   "icon": "add", #TODO: eye icon
-    #   "callbacks": {
-    #     "execute": self.toggle_visible
-    #   }
-    # }, {
-    #   "type": "whole_component",
-    #   "title": "Enable",
-    #   "icon": "add", #TODO: power icon
-    #   "callbacks": {
-    #     "execute": self.toggle_enabled
-    #   }
-    # },{
       "type": "whole_component",
       "title": "Edit Label",
       "icon": "edit",
@@ -500,11 +499,3 @@ class DropdownMenu(DropdownMenuTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "label_text", self.selection_field.dom_nodes['label-text'])
       }
     }]
-
-  # def toggle_visible(self):
-  #   self.visible = not self.visible
-  #   anvil.designer.update_component_properties(self, {'visible': self.visible})
-
-  # def toggle_enabled(self):
-  #   self.enabled = not self.enabled
-  #   anvil.designer.update_component_properties(self, {'enabled': self.enabled})
