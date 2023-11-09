@@ -227,7 +227,7 @@ class ButtonMenu(ButtonMenuTemplate):
         "default": True,
         "callbacks": {
           "execute": lambda: anvil.designer.start_inline_editing(
-            self.menu_button, "text", self.menu_button.dom_nodes["anvil-m3-button-text"]
+            self, "text", self.menu_button.dom_nodes["anvil-m3-button-text"]
           )
         },
       },
