@@ -30,8 +30,39 @@ components:
         - name: text_2
           properties: {text: Description. Properties. Link to docs. Etc}
           type: form:Components.Text
+    - name: card_1_copy_1_copy_1
+      properties: {align: left, visible: true, enabled: false}
+      type: form:Components.Card
+      components:
+      - name: flow_panel_2_copy_1
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-slot}
+        components:
+        - name: card_content_container_1_copy_1
+          properties: {}
+          type: form:Components.Card.CardContentContainer
+          layout_properties: {width: 354.703125}
+          components:
+          - name: text_4_copy_1
+            properties: {font_size: 25, text: Play relaxing songs}
+            type: form:Components.Text
+            layout_properties: {slot: anvil-m3-card-content-container-slot}
+          - name: text_5_copy_1
+            properties: {text: From your recent favourites, font_size: null, text_color: 'theme:Outline'}
+            type: form:Components.Text
+            layout_properties: {slot: anvil-m3-card-content-container-slot}
+          - name: flow_panel_3_copy_1
+            properties: {align: right}
+            type: FlowPanel
+            layout_properties: {slot: anvil-m3-card-content-container-slot}
+            components:
+            - name: button_1_copy_1
+              properties: {appearance: filled, text: Get started}
+              type: form:Components.Button
+              layout_properties: {}
   - name: card_1_copy_1
-    properties: {align: left, visible: true, enabled: false}
+    properties: {align: left, visible: true, enabled: false, appearance: filled}
     type: form:Components.Card
     layout_properties: {grid_position: 'XELRDD,LWQQOV'}
     components:
@@ -43,7 +74,7 @@ components:
       - name: card_content_container_1
         properties: {}
         type: form:Components.Card.CardContentContainer
-        layout_properties: {width: 337.703125}
+        layout_properties: {width: 354.703125}
         components:
         - name: text_4
           properties: {font_size: 25, text: Play relaxing songs}
@@ -59,5 +90,38 @@ components:
           layout_properties: {slot: anvil-m3-card-content-container-slot}
           components:
           - name: button_1
-            properties: {}
+            properties: {appearance: outlined, text: Get started}
             type: form:Components.Button
+            layout_properties: {}
+  - name: card_1_copy_1_copy_2
+    properties: {align: left, visible: true, enabled: false, appearance: outlined}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'PUDKOF,BCDONW'}
+    components:
+    - name: flow_panel_2_copy_2
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: card_content_container_1_copy_2
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {width: 354.703125}
+        components:
+        - name: text_4_copy_2
+          properties: {font_size: 25, text: Play relaxing songs}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_5_copy_2
+          properties: {text: From your recent favourites, font_size: null, text_color: 'theme:Outline'}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: flow_panel_3_copy_2
+          properties: {align: right}
+          type: FlowPanel
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+          components:
+          - name: button_1_copy_2
+            properties: {appearance: tonal, text: Get started}
+            type: form:Components.Button
+            layout_properties: {}
