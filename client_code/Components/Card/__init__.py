@@ -24,7 +24,7 @@ class Card(CardTemplate):
   def handle_click(self, event):
     self.raise_event("click")
 
-  align = style_property('anvil-m3-card-component', 'justifyContent')
+  align = style_property('anvil-m3-card-component', 'justifyContent', 'align')
   visible = HtmlTemplate.visible
   
   def set_appearance(self, value):
