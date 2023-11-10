@@ -66,6 +66,11 @@ components:
       properties: {}
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
+      components:
+      - name: text_4_copy_1
+        properties: {font_size: 30, text: Glass Souls' World Tour}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
   - name: card_1
     properties: {appearance: outlined, visible: true}
     type: form:Components.Card
