@@ -10,12 +10,12 @@ components:
   components:
   - name: card_2
     properties: {appearance: filled, image_position: None}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'BNPIAK,OYNGHJ'}
     components:
     - name: card_content_container_1_copy_1_copy_1_copy_1_copy_1_copy_1
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:Components.Card_1.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_4_copy_1_copy_1_copy_1_copy_1_copy_1
@@ -37,12 +37,12 @@ components:
           layout_properties: {}
   - name: card_2_copy_1
     properties: {image_position: Top, appearance: elevated}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'VIBINJ,ZNNOFA'}
     components:
     - name: card_content_container_1_copy_1_copy_1_copy_1_copy_1
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:Components.Card_1.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_4_copy_1_copy_1_copy_1_copy_1
@@ -61,15 +61,15 @@ components:
         - name: button_1_copy_1_copy_1_copy_1_copy_1
           properties: {appearance: filled, text: Get started}
           type: form:Components.Button
-          layout_properties: {}
+          layout_properties: {width: 159.078125}
   - name: card_2_copy_1_copy_1
     properties: {image_position: Bottom}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'NFGVJN,HIPKTI'}
     components:
     - name: card_content_container_1_copy_1_copy_1_copy_1
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:Components.Card_1.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_4_copy_1_copy_1_copy_1
@@ -91,12 +91,12 @@ components:
           layout_properties: {}
   - name: card_2_copy_1_copy_1_copy_1
     properties: {image_position: Left}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'JWJILF,QDGNMK'}
     components:
     - name: card_content_container_1_copy_1_copy_1_copy_2
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:Components.Card_1.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_4_copy_1_copy_1_copy_2
@@ -118,12 +118,12 @@ components:
           layout_properties: {}
   - name: card_2_copy_1_copy_1_copy_1_copy_1
     properties: {image_position: Right}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'CIQCXF,OARAJQ'}
     components:
     - name: card_content_container_1_copy_1_copy_1
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:Components.Card_1.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_4_copy_1_copy_1
@@ -145,7 +145,7 @@ components:
           layout_properties: {}
   - name: card_2_copy_1_copy_1_copy_1_copy_1_copy_1
     properties: {image_position: Full}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'XWFHVN,SWAZFE'}
     components:
     - name: flow_panel_5
@@ -159,7 +159,7 @@ components:
         layout_properties: {width: 345}
     - name: card_content_container_7_copy_1
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:Components.Card_1.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_7_copy_1_copy_1_copy_1_copy_1_copy_1
@@ -190,7 +190,7 @@ components:
           type: form:Components.Text
     - name: card_1_copy_1_copy_1
       properties: {align: left, visible: true, enabled: false}
-      type: form:Components.Card
+      type: form:Components.Card_1
       components:
       - name: flow_panel_2_copy_1
         properties: {}
@@ -199,7 +199,7 @@ components:
         components:
         - name: card_content_container_1_copy_1
           properties: {}
-          type: form:Components.Card.CardContentContainer
+          type: form:Components.Card_1.CardContentContainer
           layout_properties: {width: 354.703125}
           components:
           - name: text_4_copy_1
@@ -221,7 +221,7 @@ components:
               layout_properties: {}
   - name: card_1_copy_1
     properties: {align: left, visible: true, enabled: false, appearance: filled}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'XELRDD,LWQQOV'}
     components:
     - name: flow_panel_2
@@ -231,7 +231,7 @@ components:
       components:
       - name: card_content_container_1
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_1.CardContentContainer
         layout_properties: {width: 354.703125}
         components:
         - name: text_4
@@ -253,7 +253,7 @@ components:
             layout_properties: {}
   - name: card_1_copy_1_copy_2
     properties: {align: left, visible: true, enabled: false, appearance: outlined}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'PUDKOF,BCDONW'}
     components:
     - name: flow_panel_2_copy_2
@@ -263,7 +263,7 @@ components:
       components:
       - name: card_content_container_1_copy_2
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_1.CardContentContainer
         layout_properties: {width: 354.703125}
         components:
         - name: text_4_copy_2
@@ -289,7 +289,7 @@ components:
     layout_properties: {grid_position: 'KOBVZC,GQLCYD'}
   - name: card_3
     properties: {}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'NPDSAZ,IKGDVY GDEIWS,HZZRAT'}
     components:
     - name: column_panel_1
@@ -309,7 +309,7 @@ components:
         components:
         - name: card_content_container_1_copy_2_copy_1
           properties: {}
-          type: form:Components.Card.CardContentContainer
+          type: form:Components.Card_1.CardContentContainer
           layout_properties: {width: 262.5}
           components:
           - name: text_4_copy_2_copy_1
@@ -331,7 +331,7 @@ components:
               layout_properties: {}
   - name: card_1
     properties: {}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'NPDSAZ,IKGDVY YHGVRV,LTPAQW'}
     components:
     - name: image_1
@@ -341,7 +341,7 @@ components:
       layout_properties: {slot: anvil-m3-card-slot}
     - name: card_content_container_2
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:Components.Card_1.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_3

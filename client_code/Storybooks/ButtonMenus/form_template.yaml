@@ -32,7 +32,7 @@ components:
           type: form:Components.Text
   - name: card_1_copy_1
     properties: {visible: true}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'XELRDD,LWQQOV'}
     components:
     - name: flow_panel_2_copy_1
@@ -144,7 +144,7 @@ components:
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: card_1_copy_1_copy_1
     properties: {visible: true}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'YWLDED,AJTCVA'}
     components:
     - name: flow_panel_2_copy_1_copy_1
@@ -181,12 +181,12 @@ components:
             layout_properties: {}
   - name: card_1
     properties: {visible: true}
-    type: form:Components.Card
+    type: form:Components.Card_1
     layout_properties: {grid_position: 'SQJHYW,WXXCHI'}
     components:
     - name: card_content_container_1
       properties: {}
-      type: form:Components.Card.CardContentContainer
+      type: form:Components.Card_1.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_3
