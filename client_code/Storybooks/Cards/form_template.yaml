@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: card_2
-    properties: {}
+    properties: {appearance: elevated, image_position: None}
     type: form:Components.Card
     layout_properties: {grid_position: 'BNPIAK,OYNGHJ'}
     components:

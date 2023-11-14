@@ -36,6 +36,8 @@ class Card(CardTemplate):
 
   def set_image_position(self, value):
     self.dom_nodes['anvil-m3-card-image'].style = ""
+    self.dom_nodes['anvil-m3-card'].style = ""
+      self.dom_nodes['anvil-m3-card-content'].style = ""
     if value is "None":
       self.dom_nodes['anvil-m3-card-image'].style = "display: none;"
     elif value is "Top":
@@ -51,7 +53,7 @@ class Card(CardTemplate):
       self.dom_nodes['anvil-m3-card'].style = "flex-direction: row-reverse;"
       
     elif value is "Full":
-      pass
+      self.dom_nodes['anvil-m3-card-content'].style = "display: none;"
       
       
   image_position = property_with_callback("image_position", set_image_position)
