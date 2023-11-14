@@ -9,26 +9,26 @@ components:
   layout_properties: {slot: default}
   components:
   - name: card_1
-    properties: {visible: true}
+    properties: {visible: true, appearance: outlined}
     type: form:Components.Card
     layout_properties: {grid_position: 'JIQVBL,NPSSPN'}
   - name: card_1_copy_1
-    properties: {visible: true, image_position: Top}
+    properties: {visible: true, image_position: Top, appearance: outlined}
     type: form:Components.Card
     layout_properties: {grid_position: 'ZXZWOE,IMRXEG'}
   - name: card_1_copy_1_copy_1
-    properties: {visible: true, image_position: Bottom}
+    properties: {visible: true, image_position: Bottom, appearance: outlined}
     type: form:Components.Card
     layout_properties: {grid_position: 'IICECP,PSMLUQ'}
   - name: card_1_copy_1_copy_1_copy_1
-    properties: {visible: true, image_position: Left}
+    properties: {visible: true, image_position: Left, appearance: outlined}
     type: form:Components.Card
     layout_properties: {grid_position: 'RMHJYP,YJQKGB'}
   - name: card_1_copy_1_copy_1_copy_1_copy_1
-    properties: {visible: true, image_position: Right}
+    properties: {visible: true, image_position: Right, appearance: outlined}
     type: form:Components.Card
     layout_properties: {grid_position: 'FWWFFS,IODMGO'}
   - name: card_1_copy_1_copy_1_copy_1_copy_1_copy_1
-    properties: {visible: true, image_position: Full}
+    properties: {visible: true, image_position: Full, appearance: outlined}
     type: form:Components.Card
     layout_properties: {grid_position: 'NAZJAX,YEJSKP'}

@@ -25,27 +25,40 @@ class Card(CardTemplate):
     self.dom_nodes['anvil-m3-card-content'].classList.toggle('bottom-image', False)
     self.dom_nodes['anvil-m3-card-content'].classList.toggle('left-image', False)
     self.dom_nodes['anvil-m3-card-content'].classList.toggle('right-image', False)
+    self.dom_nodes['anvil-m3-card-image'].classList.toggle('none-image', False)
+    self.dom_nodes['anvil-m3-card-image'].classList.toggle('top-image', False)
+    self.dom_nodes['anvil-m3-card-image'].classList.toggle('bottom-image', False)
+    self.dom_nodes['anvil-m3-card-image'].classList.toggle('left-image', False)
+    self.dom_nodes['anvil-m3-card-image'].classList.toggle('right-image', False)
     
     if value is "None":
       self.dom_nodes['anvil-m3-card-image'].style = "display: none;"
       self.dom_nodes['anvil-m3-card-content'].classList.toggle('none-image', True)
+      self.dom_nodes['anvil-m3-card-image'].classList.toggle('none-image', True)
     elif value is "Top":
       self.dom_nodes['anvil-m3-card-shadow'].style = "flex-direction: column;"
       self.dom_nodes['anvil-m3-card-image'].style = "width: 100%;"
       self.dom_nodes['anvil-m3-card-content'].classList.toggle('top-image', True)
+      self.dom_nodes['anvil-m3-card-image'].classList.toggle('top-image', True)
     elif value is "Bottom":
       self.dom_nodes['anvil-m3-card-shadow'].style = "flex-direction: column-reverse;"
       self.dom_nodes['anvil-m3-card-image'].style = "width: 100%;"
       self.dom_nodes['anvil-m3-card-content'].classList.toggle('bottom-image', True)
+      self.dom_nodes['anvil-m3-card-image'].classList.toggle('bottom-image', True)
     elif value is "Left":
       self.dom_nodes['anvil-m3-card-shadow'].style = "flex-direction: row;"
       self.dom_nodes['anvil-m3-card-image'].style = "height: 100%;"
+      self.dom_nodes['anvil-m3-card-content'].classList.toggle('left-image', True)
+      self.dom_nodes['anvil-m3-card-image'].classList.toggle('left-image', True)
     elif value is "Right":
       self.dom_nodes['anvil-m3-card-shadow'].style = "flex-direction: row-reverse;"
       self.dom_nodes['anvil-m3-card-image'].style = "height: 100%;"
+      self.dom_nodes['anvil-m3-card-content'].classList.toggle('right-image', True)
+      self.dom_nodes['anvil-m3-card-image'].classList.toggle('right-image', True)
     elif value is "Full":
       self.dom_nodes['anvil-m3-card-content'].style = "display: none;"
-      # self.dom_nodes['anvil-m3-card-image'].style = "width: 100%; height: 100%;"
+      self.dom_nodes['anvil-m3-card-content'].classList.toggle('full-image', True)
+      self.dom_nodes['anvil-m3-card-image'].classList.toggle('full-image', True)
   image_position = property_with_callback("image_position", set_image_position)
   
   def set_appearance(self, value):
