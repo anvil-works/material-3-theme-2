@@ -5,8 +5,6 @@ properties:
   options: [elevated, filled, outlined]
   default_value: elevated
 - {name: enabled, type: boolean, default_value: false, designer_hint: enabled}
-- {name: interactive, type: boolean, default_value: false, description: 'Dictates
-    if components will have interaction states (hover, focus, etc.)'}
 - name: align
   type: enum
   important: true
@@ -14,6 +12,12 @@ properties:
   default_value: left
   designer_hint: align-horizontal
 - {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible}
+- {name: image, type: string, important: true, default_value: ''}
+- name: image_position
+  type: enum
+  important: true
+  options: [None, Top, Left, Right, Bottom, Full]
+  default_value: None
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is clicked}
@@ -21,8 +25,13 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-card-component\" style=\"display:flex;\
-      \ padding-left: 1px\">\n  <div anvil-slot=\"anvil-m3-card-slot\" anvil-name=\"\
-      anvil-m3-card\" class=\"anvil-m3-card\">\n      <p anvil-if-slot-empty=\"anvil-m3-card-slot\"\
-      \ style=\"color: #BBB\"><i>Insert Card Content</i></p>\n  </div>\n</div>", visible: true}
+  properties: {html: "<div anvil-name=\"anvil-m3-card-component\" style=\"display:\
+      \ flex; padding-left: 1px\" class=\"anvil-m3-card\">\n  \n  <div anvil-slot=\"\
+      anvil-m3-card-image-slot\" anvil-name=\"anvil-m3-card-image-container\" class=\"\
+      anvil-m3-card-image-container\">\n      <p anvil-if-slot-empty=\"anvil-m3-card-slot\"\
+      \ style=\"color: #BBB\"><i>Insert Card Content</i></p>\n  </div>\n  \n  <div\
+      \ anvil-slot=\"anvil-m3-card-content-slot\" anvil-name=\"anvil-m3-card-content\"\
+      \ class=\"anvil-m3-card-content\">\n      <p anvil-if-slot-empty=\"anvil-m3-card-slot\"\
+      \ style=\"color: #BBB\"><i>Insert Card Content</i></p>\n  </div>\n  \n</div>",
+    visible: true}
 custom_component_container: true
