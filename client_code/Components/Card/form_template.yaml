@@ -18,6 +18,7 @@ properties:
   important: true
   options: [None, Top, Left, Right, Bottom, Full]
   default_value: None
+- {name: prop, type: string, default_value: '', important: true}
 is_package: true
 events:
 - {name: click, default_event: true, description: When the component is clicked}

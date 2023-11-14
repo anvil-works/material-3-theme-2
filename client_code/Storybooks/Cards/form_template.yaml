@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: card_2
-    properties: {appearance: elevated, image_position: None}
+    properties: {appearance: filled, image_position: None}
     type: form:Components.Card
     layout_properties: {grid_position: 'BNPIAK,OYNGHJ'}
     components:
@@ -36,7 +36,7 @@ components:
           type: form:Components.Button
           layout_properties: {}
   - name: card_2_copy_1
-    properties: {image_position: Top, appearance: elevated}
+    properties: {image_position: Top, appearance: filled}
     type: form:Components.Card
     layout_properties: {grid_position: 'VIBINJ,ZNNOFA'}
     components:
