@@ -13,76 +13,150 @@ components:
     type: form:Components.Card
     layout_properties: {grid_position: 'BNPIAK,OYNGHJ'}
     components:
-    - name: card_content_container_3
+    - name: card_content_container_1_copy_1_copy_1_copy_1_copy_1_copy_1
       properties: {}
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
-      - name: text_7
-        properties: {text: No Image}
+      - name: text_4_copy_1_copy_1_copy_1_copy_1_copy_1
+        properties: {font_size: 25, text: Play relaxing songs}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_5_copy_1_copy_1_copy_1_copy_1_copy_1
+        properties: {text: From your recent favourites, font_size: null, text_color: 'theme:Outline'}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: flow_panel_3_copy_1_copy_1_copy_1_copy_1_copy_1
+        properties: {align: right}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        components:
+        - name: button_1_copy_1_copy_1_copy_1_copy_1_copy_1
+          properties: {appearance: filled, text: Get started}
+          type: form:Components.Button
+          layout_properties: {}
   - name: card_2_copy_1
     properties: {image_position: Top, appearance: elevated}
     type: form:Components.Card
     layout_properties: {grid_position: 'VIBINJ,ZNNOFA'}
     components:
-    - name: card_content_container_4
+    - name: card_content_container_1_copy_1_copy_1_copy_1_copy_1
       properties: {}
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
-      - name: text_7_copy_1
-        properties: {text: Image on Top}
+      - name: text_4_copy_1_copy_1_copy_1_copy_1
+        properties: {font_size: 25, text: Play relaxing songs}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_5_copy_1_copy_1_copy_1_copy_1
+        properties: {text: From your recent favourites, font_size: null, text_color: 'theme:Outline'}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: flow_panel_3_copy_1_copy_1_copy_1_copy_1
+        properties: {align: right}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        components:
+        - name: button_1_copy_1_copy_1_copy_1_copy_1
+          properties: {appearance: filled, text: Get started}
+          type: form:Components.Button
+          layout_properties: {}
   - name: card_2_copy_1_copy_1
     properties: {image_position: Bottom}
     type: form:Components.Card
     layout_properties: {grid_position: 'NFGVJN,HIPKTI'}
     components:
-    - name: card_content_container_5
+    - name: card_content_container_1_copy_1_copy_1_copy_1
       properties: {}
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
-      - name: text_7_copy_1_copy_1
-        properties: {text: Image on Bottom}
+      - name: text_4_copy_1_copy_1_copy_1
+        properties: {font_size: 25, text: Play relaxing songs}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_5_copy_1_copy_1_copy_1
+        properties: {text: From your recent favourites, font_size: null, text_color: 'theme:Outline'}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: flow_panel_3_copy_1_copy_1_copy_1
+        properties: {align: right}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        components:
+        - name: button_1_copy_1_copy_1_copy_1
+          properties: {appearance: filled, text: Get started}
+          type: form:Components.Button
+          layout_properties: {}
   - name: card_2_copy_1_copy_1_copy_1
     properties: {image_position: Left}
     type: form:Components.Card
     layout_properties: {grid_position: 'JWJILF,QDGNMK'}
     components:
-    - name: card_content_container_6
+    - name: card_content_container_1_copy_1_copy_1_copy_2
       properties: {}
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
-      - name: text_7_copy_1_copy_1_copy_1
-        properties: {text: Image on Left}
+      - name: text_4_copy_1_copy_1_copy_2
+        properties: {font_size: 25, text: Play relaxing songs}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_5_copy_1_copy_1_copy_2
+        properties: {text: From your recent favourites, font_size: null, text_color: 'theme:Outline'}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: flow_panel_3_copy_1_copy_1_copy_2
+        properties: {align: right}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        components:
+        - name: button_1_copy_1_copy_1_copy_2
+          properties: {appearance: filled, text: Get started}
+          type: form:Components.Button
+          layout_properties: {}
   - name: card_2_copy_1_copy_1_copy_1_copy_1
     properties: {image_position: Right}
     type: form:Components.Card
     layout_properties: {grid_position: 'CIQCXF,OARAJQ'}
     components:
-    - name: card_content_container_7
+    - name: card_content_container_1_copy_1_copy_1
       properties: {}
       type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
-      - name: text_7_copy_1_copy_1_copy_1_copy_1
-        properties: {text: Image on Right}
+      - name: text_4_copy_1_copy_1
+        properties: {font_size: 25, text: Play relaxing songs}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: text_5_copy_1_copy_1
+        properties: {text: From your recent favourites, font_size: null, text_color: 'theme:Outline'}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - name: flow_panel_3_copy_1_copy_1
+        properties: {align: right}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        components:
+        - name: button_1_copy_1_copy_1
+          properties: {appearance: filled, text: Get started}
+          type: form:Components.Button
+          layout_properties: {}
   - name: card_2_copy_1_copy_1_copy_1_copy_1_copy_1
     properties: {image_position: Full}
     type: form:Components.Card
     layout_properties: {grid_position: 'XWFHVN,SWAZFE'}
     components:
+    - name: flow_panel_5
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: anvil-m3-card-image-slot}
+      components:
+      - name: linear_panel_3
+        properties: {}
+        type: LinearPanel
+        layout_properties: {width: 345}
     - name: card_content_container_7_copy_1
       properties: {}
       type: form:Components.Card.CardContentContainer

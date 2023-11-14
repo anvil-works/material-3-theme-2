@@ -42,15 +42,19 @@ class Card(CardTemplate):
       self.dom_nodes['anvil-m3-card-image'].style = "display: none;"
     elif value is "Top":
       self.dom_nodes['anvil-m3-card'].style = "flex-direction: column;"
-      self.dom_nodes['anvil-m3-card-image'].style = "width: 100%";
+      self.dom_nodes['anvil-m3-card-image'].style = "width: 100%;"
     elif value is "Bottom":
       self.dom_nodes['anvil-m3-card'].style = "flex-direction: column-reverse;"
+      self.dom_nodes['anvil-m3-card-image'].style = "width: 100%;"
     elif value is "Left":
       self.dom_nodes['anvil-m3-card'].style = "flex-direction: row;"
+      self.dom_nodes['anvil-m3-card-image'].style = "height: 100%;"
     elif value is "Right":
       self.dom_nodes['anvil-m3-card'].style = "flex-direction: row-reverse;"
+      self.dom_nodes['anvil-m3-card-image'].style = "height: 100%;"
     elif value is "Full":
       self.dom_nodes['anvil-m3-card-content'].style = "display: none;"
+      self.dom_nodes['anvil-m3-card-image'].style = "width: 100%; height: 100%;"
   image_position = property_with_callback("image_position", set_image_position)
     
   # @property
