@@ -129,10 +129,46 @@ components:
     properties: {}
     type: form:Components.Divider
     layout_properties: {grid_position: 'KOBVZC,GQLCYD'}
+  - name: image_1_copy_1_copy_1
+    properties: {source: _/theme/github-integration-thumbnail.png, vertical_align: bottom,
+      spacing_below: none, spacing_above: none, height: 31, display_mode: fill_width}
+    type: Image
+    layout_properties: {grid_position: 'NPDSAZ,IKGDVY VHZXLX,RGMAAL'}
+  - name: flow_panel_4
+    properties: {}
+    type: FlowPanel
+    layout_properties: {grid_position: 'NPDSAZ,IKGDVY VHZXLX,QRCJPI'}
+    components:
+    - name: card_content_container_3
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+      components:
+      - name: card_content_container_1_copy_2_copy_1
+        properties: {}
+        type: form:Components.Card.CardContentContainer
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        components:
+        - name: text_4_copy_2_copy_1
+          properties: {font_size: 25, text: Play relaxing songs}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: text_5_copy_2_copy_1
+          properties: {text: From your recent favourites, font_size: null, text_color: 'theme:Outline'}
+          type: form:Components.Text
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+        - name: flow_panel_3_copy_2_copy_1
+          properties: {align: right}
+          type: FlowPanel
+          layout_properties: {slot: anvil-m3-card-content-container-slot}
+          components:
+          - name: button_1_copy_2_copy_1
+            properties: {appearance: tonal, text: Get started}
+            type: form:Components.Button
+            layout_properties: {}
   - name: card_1
     properties: {}
     type: form:Components.Card
-    layout_properties: {grid_position: 'NPDSAZ,IKGDVY'}
+    layout_properties: {grid_position: 'NPDSAZ,IKGDVY YHGVRV,LTPAQW'}
     components:
     - name: image_1
       properties: {source: _/theme/github-integration-thumbnail.png, vertical_align: top,
@@ -152,6 +188,11 @@ components:
         properties: {text: 'Click me, I should do something'}
         type: form:Components.Text
         layout_properties: {slot: anvil-m3-card-content-container-slot}
+  - name: card_3
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'NPDSAZ,IKGDVY XSGYRJ,HLIIFG'}
+    components: []
   - name: card_2
     properties: {}
     type: form:Components.Card
