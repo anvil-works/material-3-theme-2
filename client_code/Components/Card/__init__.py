@@ -41,7 +41,8 @@ class Card(CardTemplate):
     if value is "None":
       self.dom_nodes['anvil-m3-card-image'].style = "display: none;"
     elif value is "Top":
-      self.dom_nodes['anvil-m3-card'].style = "flex-direction: column; "
+      self.dom_nodes['anvil-m3-card'].style = "flex-direction: column;"
+      self.dom_nodes['anvil-m3-card-image'].style = "width: 100%";
     elif value is "Bottom":
       self.dom_nodes['anvil-m3-card'].style = "flex-direction: column-reverse;"
     elif value is "Left":
