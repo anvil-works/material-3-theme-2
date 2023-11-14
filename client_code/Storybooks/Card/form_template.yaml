@@ -1,0 +1,14 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: card_1
+    properties: {}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'JIQVBL,NPSSPN'}

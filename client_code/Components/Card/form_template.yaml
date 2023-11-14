@@ -1,8 +1,31 @@
+properties:
+- name: appearance
+  type: enum
+  important: true
+  default_binding_prop: true
+  options: [elevated, filled, outlined]
+  default_value: elevated
+- {name: enabled, type: boolean, default_value: false, important: true, designer_hint: enabled}
+- {name: visible, type: boolean, default_value: false, important: true, designer_hint: visible}
+- name: align
+  type: enum
+  important: true
+  options: [left, center, right]
+  default_value: left
+  designer_hint: align-horizontal
+- {name: card_image, type: string, important: true, default_value: ''}
+- name: image_position
+  type: enum
+  important: true
+  options: [None, Top, Bottom, Left, Right, Full]
+  default_value: None
+is_package: true
+custom_component: true
+components: []
 container:
   type: HtmlTemplate
   properties: {html: "<div anvil-name=\"anvil-m3-card-component\" >\n  <div class=\"\
       anvil-m3-card-shadow\">\n    <div anvil-name=\"anvil-m3-card-content\">\n  \
-      \    Content\n    </div>\n    <div anvil-name>\n      image\n    </div>\n  </div>\n\
-      </div>"}
-components: []
-is_package: true
+      \    Content\n    </div>\n    <div anvil-name=\"anvil-m3-card-image\">\n   \
+      \   image\n    </div>\n  </div>\n</div>"}
+custom_component_container: true
