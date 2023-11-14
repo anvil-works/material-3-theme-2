@@ -69,6 +69,13 @@
   border: 1px solid var(--anvil-m3-surface-container-low);
 /*   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);   /* lvl 1 */ */
 }
+
+
+.anvil-m3-card-shadow.anvil-m3-elevated {
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);   /* lvl 1 */
+}
+
+
 .anvil-m3-card.anvil-m3-elevated.anvil-m3-interactive:not(.anvil-m3-disabled):hover {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);   /* lvl 2 */
@@ -122,7 +129,6 @@
 .anvil-m3-card-content.anvil-m3-outlined.none-image {
   border-color: var(--anvil-m3-outline);
 }
-
 .anvil-m3-card-image.anvil-m3-outlined.full-image {
   border-color: var(--anvil-m3-outline);
 }
