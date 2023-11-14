@@ -33,6 +33,28 @@ class Card(CardTemplate):
     self.dom_nodes['anvil-m3-card'].classList.toggle('anvil-m3-elevated', False)
     self.dom_nodes['anvil-m3-card'].classList.toggle(f'anvil-m3-{value}', True)
   appearance = property_with_callback("appearance", set_appearance)
+
+  def set_image_position(self, value):
+    self.dom_nodes['anvil-m3-card-image'].style = ""
+    if value is "None":
+      self.dom_nodes['anvil-m3-card-image'].style = "display: none;"
+    elif value is "Top":
+      self.dom_nodes['anvil-m3-card'].style = "flex-direction: column;"
+      
+    elif value is "Bottom":
+      self.dom_nodes['anvil-m3-card'].style = "flex-direction: column-reverse;"
+      
+    elif value is "Left":
+      self.dom_nodes['anvil-m3-card'].style = "flex-direction: row;"
+      
+    elif value is "Right":
+      self.dom_nodes['anvil-m3-card'].style = "flex-direction: row-reverse;"
+      
+    elif value is "Full":
+      pass
+      
+      
+  image_position = property_with_callback("image_position", set_image_position)
     
   # @property
   # def interactive(self):

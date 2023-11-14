@@ -1,5 +1,5 @@
 .anvil-m3-card {
-  display: inline-block;
+  display: inline-flex;
   background: none;
   border: none;
   min-width: 15px;
@@ -7,6 +7,10 @@
   border-radius: 12px;
   overflow: hidden;
   position: relative;
+}
+
+.anvil-m3-card-image {
+  
 }
 
 .anvil-m3-card-content-container {
