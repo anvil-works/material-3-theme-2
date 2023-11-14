@@ -4,10 +4,12 @@
   border: none;
   min-width: 15px;
   margin: 0 8px 8px 0;
-  border-radius: 12px;
+  border-radius: 13px;
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+  
+  border-width: 0px;
 }
 
 /* div {
@@ -26,6 +28,7 @@ span {
   height: 50px;
   width: 50px;
   box-sizing: border-box;
+  border-radius: 0 0 12px 12px;
 }
 
 .anvil-m3-card-content-container {
