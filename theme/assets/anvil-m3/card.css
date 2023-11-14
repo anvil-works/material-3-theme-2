@@ -16,6 +16,9 @@
   overflow: hidden;
   z-index: 1;
 }
+.anvil-m3-card-image.none-image {
+  display: none;
+}
 .anvil-m3-card-image.full-image {
   border-radius: 12px;
 }

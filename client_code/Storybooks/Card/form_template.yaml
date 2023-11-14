@@ -8,27 +8,80 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: card_1
-    properties: {visible: true, appearance: outlined}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'JIQVBL,NPSSPN'}
-  - name: card_1_copy_1
-    properties: {visible: true, image_position: Top, appearance: outlined}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'ZXZWOE,IMRXEG'}
-  - name: card_1_copy_1_copy_1
-    properties: {visible: true, image_position: Bottom, appearance: outlined}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'IICECP,PSMLUQ'}
-  - name: card_1_copy_1_copy_1_copy_1
-    properties: {visible: true, image_position: Left, appearance: outlined}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'RMHJYP,YJQKGB'}
-  - name: card_1_copy_1_copy_1_copy_1_copy_1
-    properties: {visible: true, image_position: Right, appearance: outlined}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'FWWFFS,IODMGO'}
-  - name: card_1_copy_1_copy_1_copy_1_copy_1_copy_1
-    properties: {visible: true, image_position: Full, appearance: outlined}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'NAZJAX,YEJSKP'}
+  - name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'XKUWTH,LYNMON'}
+    components:
+    - name: card_1
+      properties: {visible: true, appearance: elevated}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,JGERTE JTIASU,RUWDRI'}
+    - name: card_1_copy_1
+      properties: {visible: true, image_position: Top, appearance: elevated}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,JGERTE SVSHWQ,HXGIMY'}
+    - name: card_1_copy_1_copy_1_copy_2
+      properties: {visible: true, image_position: Bottom, appearance: elevated}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,JGERTE DWZCGJ,OKQRBB'}
+    - name: card_1_copy_1_copy_1_copy_1_copy_2
+      properties: {visible: true, image_position: Left, appearance: elevated}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,JGERTE PNAPNL,LSAHEL'}
+    - name: card_1_copy_1_copy_1_copy_1_copy_1_copy_2
+      properties: {visible: true, image_position: Right, appearance: elevated}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,JGERTE KMSWLS,DPDMIM'}
+    - name: card_1_copy_1_copy_1_copy_1_copy_1_copy_1_copy_1
+      properties: {visible: true, image_position: Full, appearance: elevated}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,JGERTE KXCUIT,RUYFGM'}
+    - name: card_1_copy_2
+      properties: {visible: true, appearance: filled}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,UXDNWS YYTAXE,YUHMWO'}
+    - name: card_1_copy_1_copy_2
+      properties: {visible: true, image_position: Top, appearance: filled}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,UXDNWS XCJBTT,AMUFEZ'}
+    - name: card_1_copy_1_copy_1_copy_3
+      properties: {visible: true, image_position: Bottom, appearance: filled}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,UXDNWS CWCJRV,KVBGCY'}
+    - name: card_1_copy_1_copy_1_copy_1_copy_3
+      properties: {visible: true, image_position: Left, appearance: filled}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,UXDNWS AYJPPN,TQDBOO'}
+    - name: card_1_copy_1_copy_1_copy_1_copy_1_copy_3
+      properties: {visible: true, image_position: Right, appearance: filled}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,UXDNWS KZIVTD,QUMLUH'}
+    - name: card_1_copy_1_copy_1_copy_1_copy_1_copy_1
+      properties: {visible: true, image_position: Full, appearance: filled}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,UXDNWS ZNHBMQ,APQPFM'}
+    - name: card_1_copy_2_copy_1
+      properties: {visible: true, appearance: outlined}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,HAVWRJ XRSYHI,NIXOFX'}
+    - name: card_1_copy_1_copy_3
+      properties: {visible: true, image_position: Top, appearance: outlined}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,HAVWRJ ZJASSK,JXCFSA'}
+    - name: card_1_copy_1_copy_1_copy_4
+      properties: {visible: true, image_position: Bottom, appearance: outlined}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,HAVWRJ QYKIAS,ZFCRDZ'}
+    - name: card_1_copy_1_copy_1_copy_1_copy_4
+      properties: {visible: true, image_position: Left, appearance: outlined}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,HAVWRJ ASRCBB,OEKBHZ'}
+    - name: card_1_copy_1_copy_1_copy_1_copy_1_copy_4
+      properties: {visible: true, image_position: Right, appearance: outlined}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,HAVWRJ QDMNEK,QAKCFF'}
+    - name: card_1_copy_1_copy_1_copy_1_copy_1_copy_1_copy_2
+      properties: {visible: true, image_position: Full, appearance: outlined}
+      type: form:Components.Card
+      layout_properties: {grid_position: 'FUBQOD,HAVWRJ SYFWKV,YQEVMN'}

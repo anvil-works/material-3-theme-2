@@ -17,9 +17,11 @@ class Card(CardTemplate):
   visible = HtmlTemplate.visible
 
   def set_image_position(self, value):
-    self.dom_nodes['anvil-m3-card-image'].style = ""
-    self.dom_nodes['anvil-m3-card-content'].style = ""
-    self.dom_nodes['anvil-m3-card-shadow'].style = ""
+    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('none-image', False)
+    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('top-image', False)
+    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('bottom-image', False)
+    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('left-image', False)
+    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('right-image', False)
     self.dom_nodes['anvil-m3-card-content'].classList.toggle('none-image', False)
     self.dom_nodes['anvil-m3-card-content'].classList.toggle('top-image', False)
     self.dom_nodes['anvil-m3-card-content'].classList.toggle('bottom-image', False)
@@ -32,7 +34,6 @@ class Card(CardTemplate):
     self.dom_nodes['anvil-m3-card-image'].classList.toggle('right-image', False)
     
     if value is "None":
-      self.dom_nodes['anvil-m3-card-image'].style = "display: none;"
       self.dom_nodes['anvil-m3-card-content'].classList.toggle('none-image', True)
       self.dom_nodes['anvil-m3-card-image'].classList.toggle('none-image', True)
     elif value is "Top":
