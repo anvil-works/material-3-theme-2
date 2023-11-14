@@ -36,7 +36,7 @@ components:
           type: form:Components.Button
           layout_properties: {}
   - name: card_2_copy_1
-    properties: {image_position: Top, appearance: filled}
+    properties: {image_position: Top, appearance: elevated}
     type: form:Components.Card
     layout_properties: {grid_position: 'VIBINJ,ZNNOFA'}
     components:
