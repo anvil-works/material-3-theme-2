@@ -1,3 +1,6 @@
+.anvil-m3-card-shadow {
+  display: flex;
+}
 .anvil-m3-card-image {
   display: flex;
   position: relative;
@@ -6,14 +9,14 @@
   min-width: 200px;
   height: 200px;
   border-radius: 24px;
-/*     background-color: var(--mio-theme-color-secondary-container); */
+  background-image: url("https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
   overflow: hidden;
   z-index: 1;
 }
-
+/* 
 .anvil-m3-card {
   display: inline-flex;
   background: none;
@@ -25,7 +28,7 @@
   position: relative;
   
   border-width: 0px;
-}
+} */
 
 /* div {
   border-radius: 1rem;
@@ -49,6 +52,8 @@ span {
   margin: 0 16px;
   box-sizing: border-box;
 }
+
+
 
 /* Elevated */
 .anvil-m3-card.anvil-m3-elevated { 
