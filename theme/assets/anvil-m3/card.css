@@ -10,6 +10,17 @@
   box-sizing: border-box;
 }
 
+/* div {
+  border-radius: 1rem;
+  border-width: 5px;
+}
+
+span {
+  border-radius: 0 0 calc(1rem - 5px) calc(1rem - 5px);
+  border-width: 3px;
+} */
+
+
 .anvil-m3-card-image {
   background-image: url("https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   height: 50px;
