@@ -12,7 +12,6 @@ unique_ids:
     Components.Card.CardContentContainer: '1700064408790588916602306.8345'
     Components.Heading: '1691584734618253051882422.0236'
     Storybooks.IconButtons: '1699269478429122281515809.93484'
-    Components.Card_1.CardContentContainer_copy: '1700059946731121663381909.89957'
     Storybooks.ToggleIconButtons: '1699272222057346832733340.1957'
     Components.Menu.MenuItem: '1691072927249332240116307.56104'
     Components.Switch: NX6RIMTQ7UKHD7G77KDTDIWQJZ7COLZ3
@@ -28,7 +27,6 @@ unique_ids:
     Storybooks.ProgressIndicators: '1699446041525853056434467.0327'
     Storybooks.Dropdowns: '1699375874010926304727277.2252'
     Components.LinearProgressIndicator: '169900965150797501169878.6904'
-    Components.Card_1: '1690187979667270785025289.01892'
     Components.RadioButton: '1690464716172125967535572.36772'
     Components.Text: '1691572000604659329611163.5563'
     Components.DropdownMenu: '1696925549669743360540737.4421'
