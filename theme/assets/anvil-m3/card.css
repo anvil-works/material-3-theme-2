@@ -15,7 +15,8 @@
   justify-content: center;
   min-width: 200px;
   height: 200px;
-  background-image: url("https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+/*   background-image: url("https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+  background-image: url("https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -30,19 +31,15 @@
 }
 .anvil-m3-card-image.top-image {
   border-radius: 12px 12px 0 0;
-
 }
 .anvil-m3-card-image.bottom-image {
   border-radius: 0 0 12px 12px;
-
 }
 .anvil-m3-card-image.left-image {
   border-radius: 12px 0 0 12px;
-
 }
 .anvil-m3-card-image.right-image {
   border-radius: 0 12px 12px 0;
-
 }
 
 
@@ -124,9 +121,10 @@
 .anvil-m3-card-content.anvil-m3-outlined.none-image {
   border-color: var(--anvil-m3-outline);
 }
-//
+/* 
+  border: 1px solid transparent; */
 .anvil-m3-card-image.anvil-m3-outlined.full-image {
-  border-color: var(--anvil-m3-outline);
+  border: 1px solid var(--anvil-m3-outline);
 }
 
 
