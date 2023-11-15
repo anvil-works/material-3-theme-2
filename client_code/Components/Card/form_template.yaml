@@ -12,7 +12,7 @@ properties:
   options: [left, center, right]
   default_value: left
   designer_hint: align-horizontal
-- {name: card_image, type: string, important: true, default_value: ''}
+- {name: card_image, type: string, important: true, default_value: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
 - name: image_position
   type: enum
   important: true

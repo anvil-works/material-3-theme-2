@@ -1,14 +1,17 @@
+
+
+
 .anvil-m3-card-shadow {
   display: flex;
   background: none;
-/*   border: none; */
   min-width: 24px;
   min-height: 24px;
-  margin: 0 6px 8px 2px;
+  margin: 0 8px 8px 0px;
   overflow: hidden;
   position: relative;
   border-radius: 12px;
 }
+
 .anvil-m3-card-image {
   display: flex;
   position: relative;
@@ -16,17 +19,17 @@
   justify-content: center;
   min-width: 24px;
   min-height: 24px;
-/*   background-image: url("https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
-  background-image: url("https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
   overflow: hidden;
   z-index: 1;
 }
+
 .anvil-m3-card-image.none-image {
   display: none;
 }
+/*
 .anvil-m3-card-image.full-image {
   border-radius: 12px;
 }
@@ -42,7 +45,7 @@
 .anvil-m3-card-image.right-image {
   border-radius: 0 12px 12px 0;
 }
-
+ */
 
 .anvil-m3-card-content {
   min-width: 24px;
@@ -72,7 +75,7 @@
 /* Elevated */
 .anvil-m3-card-content.anvil-m3-elevated { 
   background-color: var(--anvil-m3-surface-container-low); 
-  border: 1px solid var(--anvil-m3-surface-container-low);
+/*   border: 1px solid var(--anvil-m3-surface-container-low); */
 /*   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);   /* lvl 1 */ */
 }
 
@@ -84,7 +87,7 @@
 /* Filled */
 .anvil-m3-card-content.anvil-m3-filled { 
   background-color: var(--anvil-m3-surface-container-highest); 
-  border: 1px solid var(--anvil-m3-surface-container-highest);
+/*   border: 1px solid var(--anvil-m3-surface-container-highest); */
 }
 .anvil-m3-card.anvil-m3-filled.anvil-m3-interactive:not(.anvil-m3-disabled):hover {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container-highest); 
@@ -166,7 +169,7 @@ span {
 /*   border-radius: 0 0 12px 12px; */
 } */
 
-.anvil-m3-card-content-container {
+.xanvil-m3-card-content-container {
   margin: 0 16px;
   box-sizing: border-box;
 }
@@ -174,44 +177,44 @@ span {
 
 
 /* Elevated */
-.anvil-m3-card.anvil-m3-elevated { 
+.xanvil-m3-card.anvil-m3-elevated { 
   background-color: var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);   /* lvl 1 */
 }
-.anvil-m3-card.anvil-m3-elevated.anvil-m3-interactive:not(.anvil-m3-disabled):hover {
+.xanvil-m3-card.anvil-m3-elevated.anvil-m3-interactive:not(.anvil-m3-disabled):hover {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container-low); 
   box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);   /* lvl 2 */
 }
-.anvil-m3-card.anvil-m3-elevated.anvil-m3-disabled {
+.xanvil-m3-card.anvil-m3-elevated.anvil-m3-disabled {
   color: var(--anvil-m3-surface-variant);
   opacity: .38;
   box-shadow: none;
 }
 
 /* Filled */
-.anvil-m3-card.anvil-m3-filled { 
+.xanvil-m3-card.anvil-m3-filled { 
   background-color: var(--anvil-m3-surface-container-highest); 
 }
-.anvil-m3-card.anvil-m3-filled.anvil-m3-interactive:not(.anvil-m3-disabled):hover {
+.xanvil-m3-card.anvil-m3-filled.anvil-m3-interactive:not(.anvil-m3-disabled):hover {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface-container-highest); 
   box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);    /* lvl 1 */
 }
-.anvil-m3-card.anvil-m3-filled.anvil-m3-disabled {
+.xanvil-m3-card.anvil-m3-filled.anvil-m3-disabled {
   color: var(--anvil-m3-surface-variant);
   opacity: .38;
   box-shadow: none;
 }
 
 /* Outlined */
-.anvil-m3-card.anvil-m3-outlined { 
+.xanvil-m3-card.anvil-m3-outlined { 
   background-color: var(--anvil-m3-surface);  
   border: 1px solid var(--anvil-m3-outline);
 }
-.anvil-m3-card.anvil-m3-outlined.anvil-m3-interactive:not(.anvil-m3-disabled):hover {
+.xanvil-m3-card.anvil-m3-outlined.anvil-m3-interactive:not(.anvil-m3-disabled):hover {
   background: linear-gradient(0deg, var(--anvil-m3-dark-overlay-1), var(--anvil-m3-dark-overlay-1)), var(--anvil-m3-surface); 
   box-shadow: none;
 }
-.anvil-m3-card.anvil-m3-outlined.anvil-m3-disabled {
+.xanvil-m3-card.anvil-m3-outlined.anvil-m3-disabled {
   color: var(--anvil-m3-surface-variant);
   opacity: .12;
   box-shadow: none;

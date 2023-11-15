@@ -34,6 +34,7 @@ class Card(CardTemplate):
     self.dom_nodes['anvil-m3-card-image'].classList.toggle('right-image', False)
     
     if value is "None":
+      self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('none-image', True)
       self.dom_nodes['anvil-m3-card-content'].classList.toggle('none-image', True)
       self.dom_nodes['anvil-m3-card-image'].classList.toggle('none-image', True)
     elif value is "Top":
@@ -77,3 +78,10 @@ class Card(CardTemplate):
     self.dom_nodes['anvil-m3-card-image'].classList.toggle(f'anvil-m3-{value}', True)
     self.dom_nodes['anvil-m3-card-content'].classList.toggle(f'anvil-m3-{value}', True)
   appearance = property_with_callback("appearance", set_appearance)
+
+  def set_image(self, value):
+    if value:
+      self.dom_nodes['anvil-m3-card-image'].style.backgroundImage = f"url('{value}')";
+    else:
+      self.dom_nodes['anvil-m3-card-image'].style.element.style.removeProperty = "background-image"
+  card_image = property_with_callback("card_image", set_image)

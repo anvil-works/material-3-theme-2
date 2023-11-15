@@ -14,27 +14,28 @@ components:
     layout_properties: {grid_position: 'XKUWTH,LYNMON'}
     components:
     - name: card_1
-      properties: {visible: true, appearance: outlined}
+      properties: {visible: true, appearance: outlined, card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        image_position: None}
       type: form:Components.Card
       layout_properties: {grid_position: 'FUBQOD,JGERTE JTIASU,RUWDRI'}
     - name: card_1_copy_1
-      properties: {visible: true, image_position: Top, appearance: outlined}
+      properties: {visible: true, image_position: Top, appearance: outlined, card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
       type: form:Components.Card
       layout_properties: {grid_position: 'FUBQOD,JGERTE SVSHWQ,HXGIMY'}
     - name: card_1_copy_1_copy_1_copy_2
-      properties: {visible: true, image_position: Bottom, appearance: outlined}
+      properties: {visible: true, image_position: Bottom, appearance: outlined, card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
       type: form:Components.Card
       layout_properties: {grid_position: 'FUBQOD,JGERTE DWZCGJ,OKQRBB'}
     - name: card_1_copy_1_copy_1_copy_1_copy_2
-      properties: {visible: true, image_position: Left, appearance: outlined}
+      properties: {visible: true, image_position: Left, appearance: outlined, card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
       type: form:Components.Card
       layout_properties: {grid_position: 'FUBQOD,JGERTE PNAPNL,LSAHEL'}
     - name: card_1_copy_1_copy_1_copy_1_copy_1_copy_2
-      properties: {visible: true, image_position: Right, appearance: outlined}
+      properties: {visible: true, image_position: Right, appearance: outlined, card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
       type: form:Components.Card
       layout_properties: {grid_position: 'FUBQOD,JGERTE KMSWLS,DPDMIM'}
     - name: card_1_copy_1_copy_1_copy_1_copy_1_copy_1_copy_1
-      properties: {visible: true, image_position: Full, appearance: outlined}
+      properties: {visible: true, image_position: Full, appearance: outlined, card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
       type: form:Components.Card
       layout_properties: {grid_position: 'FUBQOD,JGERTE KXCUIT,RUYFGM'}
     - name: card_1_copy_2
