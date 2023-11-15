@@ -37,7 +37,7 @@ components:
     components:
     - name: card_content_container_1
       properties: {}
-      type: form:Components.Card_1.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: flow_panel_2_copy_1
@@ -91,7 +91,7 @@ components:
     components:
     - name: card_content_container_2
       properties: {}
-      type: form:Components.Card_1.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_3_copy_1
@@ -145,7 +145,7 @@ components:
     components:
     - name: card_content_container_3
       properties: {}
-      type: form:Components.Card_1.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: radio_button_2
@@ -167,7 +167,7 @@ components:
     components:
     - name: card_content_container_4
       properties: {}
-      type: form:Components.Card_1.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: radio_button_5

@@ -15,7 +15,7 @@ components:
     components:
     - name: card_content_container_1_copy_1_copy_1_copy_1_copy_1_copy_1
       properties: {}
-      type: form:Components.Card_1.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_4_copy_1_copy_1_copy_1_copy_1_copy_1
@@ -42,7 +42,7 @@ components:
     components:
     - name: card_content_container_1_copy_1_copy_1_copy_1_copy_1
       properties: {}
-      type: form:Components.Card_1.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_4_copy_1_copy_1_copy_1_copy_1
@@ -69,7 +69,7 @@ components:
     components:
     - name: card_content_container_1_copy_1_copy_1_copy_1
       properties: {}
-      type: form:Components.Card_1.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_4_copy_1_copy_1_copy_1
@@ -96,7 +96,7 @@ components:
     components:
     - name: card_content_container_1_copy_1_copy_1_copy_2
       properties: {}
-      type: form:Components.Card_1.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_4_copy_1_copy_1_copy_2
@@ -123,7 +123,7 @@ components:
     components:
     - name: card_content_container_1_copy_1_copy_1
       properties: {}
-      type: form:Components.Card_1.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_4_copy_1_copy_1
@@ -159,7 +159,7 @@ components:
         layout_properties: {width: 345}
     - name: card_content_container_7_copy_1
       properties: {}
-      type: form:Components.Card_1.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_7_copy_1_copy_1_copy_1_copy_1_copy_1
@@ -199,7 +199,7 @@ components:
         components:
         - name: card_content_container_1_copy_1
           properties: {}
-          type: form:Components.Card_1.CardContentContainer
+          type: form:Components.Card.CardContentContainer
           layout_properties: {width: 354.703125}
           components:
           - name: text_4_copy_1
@@ -231,7 +231,7 @@ components:
       components:
       - name: card_content_container_1
         properties: {}
-        type: form:Components.Card_1.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {width: 354.703125}
         components:
         - name: text_4
@@ -263,7 +263,7 @@ components:
       components:
       - name: card_content_container_1_copy_2
         properties: {}
-        type: form:Components.Card_1.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {width: 354.703125}
         components:
         - name: text_4_copy_2
@@ -309,7 +309,7 @@ components:
         components:
         - name: card_content_container_1_copy_2_copy_1
           properties: {}
-          type: form:Components.Card_1.CardContentContainer
+          type: form:Components.Card.CardContentContainer
           layout_properties: {width: 262.5}
           components:
           - name: text_4_copy_2_copy_1
@@ -341,7 +341,7 @@ components:
       layout_properties: {slot: anvil-m3-card-slot}
     - name: card_content_container_2
       properties: {}
-      type: form:Components.Card_1.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: text_3
