@@ -104,7 +104,7 @@
 
 /* Outlined */
 .anvil-m3-card-content.anvil-m3-outlined {
-  border: 1px solid var(--anvil-m3-outline);
+/*   border: 1px solid var(--anvil-m3-outline); */
 }
 .anvil-m3-card-content.anvil-m3-outlined.top-image {
 /*   border-top-width: 0px; */
