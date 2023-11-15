@@ -102,30 +102,35 @@
   border-bottom-color: var(--anvil-m3-outline);
   border-left-color: var(--anvil-m3-outline);
   border-right-color: var(--anvil-m3-outline);
+  border-top-width: 0px;
 }
 .anvil-m3-card-content.anvil-m3-outlined.bottom-image {
   border-top-color: var(--anvil-m3-outline);
   border-left-color: var(--anvil-m3-outline);
   border-right-color: var(--anvil-m3-outline);
+  border-bottom-width: 0px;
 }
 .anvil-m3-card-content.anvil-m3-outlined.left-image {
   border-top-color: var(--anvil-m3-outline);
   border-bottom-color: var(--anvil-m3-outline);
   border-right-color: var(--anvil-m3-outline);
+  border-left-width: 0px;
 }
 .anvil-m3-card-content.anvil-m3-outlined.right-image {
   border-top-color: var(--anvil-m3-outline);
   border-bottom-color: var(--anvil-m3-outline);
   border-left-color: var(--anvil-m3-outline);
+  border-right-width: 0px;
 }
 .anvil-m3-card-content.anvil-m3-outlined.none-image {
   border-color: var(--anvil-m3-outline);
 }
-/* 
-  border: 1px solid transparent; */
 .anvil-m3-card-image.anvil-m3-outlined {
   border-color: var(--anvil-m3-outline);
   border-width: 1px;
+}
+.anvil-m3-card-image.anvil-m3-outlined.none-image {
+  border-style: solid;
 }
 .anvil-m3-card-image.anvil-m3-outlined.top-image {
   border-top-style: solid;
