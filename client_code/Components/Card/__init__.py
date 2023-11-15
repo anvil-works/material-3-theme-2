@@ -41,7 +41,8 @@ class Card(CardTemplate):
     self.dom_nodes['anvil-m3-card-content'].classList.toggle(f'{v}-image', True)
     self.dom_nodes['anvil-m3-card-image'].classList.toggle(f'{v}-image', True)
   image_position = property_with_callback("image_position", set_image_position)
-  
+
+  def set_class_of_node(self, node, appearance, set)
   def set_appearance(self, value):
     self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('anvil-m3-outlined', False)
     self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('anvil-m3-filled', False)
