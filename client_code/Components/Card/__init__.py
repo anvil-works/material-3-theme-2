@@ -25,7 +25,6 @@ class Card(CardTemplate):
   def set_image_position(self, value):
     for position in ['none', 'top', 'bottom', 'left', 'right', 'full']:
       self.set_nodes_class_by_image(position, False)
-
     self.set_nodes_class_by_image(value.lower(), True)
   image_position = property_with_callback("image_position", set_image_position)
 
