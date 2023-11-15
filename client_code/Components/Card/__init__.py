@@ -14,7 +14,7 @@ class Card(CardTemplate):
     self.init_components(**properties)
     if not anvil.designer.in_designer:
       self.dom_nodes['empty-content-slot'].style = "display: none";
-      self.dom_nodes['empty-iamge-slot'].style = "display: none";
+      self.dom_nodes['empty-image-slot'].style = "display: none";
   align = style_property('anvil-m3-card-component', 'justifyContent', 'align')
   visible = HtmlTemplate.visible
     
