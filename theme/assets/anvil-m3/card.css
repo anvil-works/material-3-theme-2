@@ -123,7 +123,10 @@
 }
 /* 
   border: 1px solid transparent; */
-.anvil-m3-card-image.anvil-m3-outlined.full-image {
+.anvil-m3-card-image.anvil-m3-outlined {
+  border-color: var(--anvil-m3-outline);
+}
+.full-image {
   border: 1px solid var(--anvil-m3-outline);
 }
 
