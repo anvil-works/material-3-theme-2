@@ -30,7 +30,6 @@
   
 }
 
-
 .anvil-m3-card-image {
   display: flex;
   position: relative;
@@ -88,6 +87,10 @@
 .anvil-m3-card-content.right-image {
   border-radius: 12px 0 0 12px;
   height: 100%;
+}
+
+.anvil-m3-card-content.full-image {
+  display: none;
 }
 
 /* Elevated */

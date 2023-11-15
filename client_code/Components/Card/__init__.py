@@ -17,46 +17,28 @@ class Card(CardTemplate):
   align = style_property('anvil-m3-card-component', 'justifyContent', 'align')
   visible = HtmlTemplate.visible
     
-
+  def set_nodes_class_by_image(self, image_position, val):
+    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle(f'{image_position}-image', val)
+    self.dom_nodes['anvil-m3-card-content'].classList.toggle(f'{image_position}-image', val)
+    self.dom_nodes['anvil-m3-card-image'].classList.toggle(f'{image_position}-image', val)
+    
   def set_image_position(self, value):
-    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('none-image', False)
-    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('top-image', False)
-    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('bottom-image', False)
-    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('left-image', False)
-    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('right-image', False)
-    self.dom_nodes['anvil-m3-card-content'].classList.toggle('none-image', False)
-    self.dom_nodes['anvil-m3-card-content'].classList.toggle('top-image', False)
-    self.dom_nodes['anvil-m3-card-content'].classList.toggle('bottom-image', False)
-    self.dom_nodes['anvil-m3-card-content'].classList.toggle('left-image', False)
-    self.dom_nodes['anvil-m3-card-content'].classList.toggle('right-image', False)
-    self.dom_nodes['anvil-m3-card-image'].classList.toggle('none-image', False)
-    self.dom_nodes['anvil-m3-card-image'].classList.toggle('top-image', False)
-    self.dom_nodes['anvil-m3-card-image'].classList.toggle('bottom-image', False)
-    self.dom_nodes['anvil-m3-card-image'].classList.toggle('left-image', False)
-    self.dom_nodes['anvil-m3-card-image'].classList.toggle('right-image', False)
+    for position in ['none', 'top', 'bottom', 'left', 'right', 'full']:
+      self.set_nodes_class_by_image(position, False)
 
-    v = value.lower()
-    print(v)
-    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle(f'{v}-image', True)
-    self.dom_nodes['anvil-m3-card-content'].classList.toggle(f'{v}-image', True)
-    self.dom_nodes['anvil-m3-card-image'].classList.toggle(f'{v}-image', True)
+    self.set_nodes_class_by_image(value.lower(), True)
   image_position = property_with_callback("image_position", set_image_position)
 
-  def set_class_of_node(self, node, appearance, set)
-  def set_appearance(self, value):
-    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('anvil-m3-outlined', False)
-    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('anvil-m3-filled', False)
-    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('anvil-m3-elevated', False)
-    self.dom_nodes['anvil-m3-card-image'].classList.toggle('anvil-m3-outlined', False)
-    self.dom_nodes['anvil-m3-card-image'].classList.toggle('anvil-m3-filled', False)
-    self.dom_nodes['anvil-m3-card-image'].classList.toggle('anvil-m3-elevated', False)
-    self.dom_nodes['anvil-m3-card-content'].classList.toggle('anvil-m3-outlined', False)
-    self.dom_nodes['anvil-m3-card-content'].classList.toggle('anvil-m3-filled', False)
-    self.dom_nodes['anvil-m3-card-content'].classList.toggle('anvil-m3-elevated', False)
+  def set_class_of_nodes(self, appearance, val):
+    self.dom_nodes[f'anvil-m3-card-shadow'].classList.toggle(f'anvil-m3-{appearance}', val)
+    self.dom_nodes[f'anvil-m3-card-image'].classList.toggle(f'anvil-m3-{appearance}', val)
+    self.dom_nodes[f'anvil-m3-card-content'].classList.toggle(f'anvil-m3-{appearance}', val)
     
-    self.dom_nodes['anvil-m3-card-shadow'].classList.toggle(f'anvil-m3-{value}', True)
-    self.dom_nodes['anvil-m3-card-image'].classList.toggle(f'anvil-m3-{value}', True)
-    self.dom_nodes['anvil-m3-card-content'].classList.toggle(f'anvil-m3-{value}', True)
+  def set_appearance(self, value):
+    for appearance in ['outlined', 'filled', 'elevated']:
+      self.set_class_of_nodes(appearance, False)
+
+    self.set_class_of_nodes(value.lower(), True)
   appearance = property_with_callback("appearance", set_appearance)
 
   def set_image(self, value):
