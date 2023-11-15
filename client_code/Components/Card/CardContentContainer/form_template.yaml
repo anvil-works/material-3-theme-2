@@ -1,9 +1,9 @@
 container:
   type: HtmlTemplate
-  properties: {html: "\n  <div anvil-slot=\"anvil-m3-card-content-container-slot\"\
-      \ anvil-name=\"anvil-m3-card-content-container\" class=\"anvil-m3-card-content-container\"\
-      \ >\n  \n    <p anvil-if-slot-empty=\"anvil-m3-card-content-container-slot\"\
-      \ style=\"color: #BBB\"><i>help</i></p>\n    \n  </div>"}
+  properties: {html: "<div anvil-slot=\"anvil-m3-card-content-container-slot\" \n\
+      \     anvil-name=\"anvil-m3-card-content-container\" \n     class=\"anvil-m3-card-content-container\"\
+      \ >\n  <p anvil-if-slot-empty=\"anvil-m3-card-content-container-slot\" \n  \
+      \   style=\"color: #BBB\"><i>Insert Content</i></p>\n</div>"}
 components: []
 is_package: true
 custom_component: true

@@ -141,14 +141,11 @@ span {
   height: 50px;
   width: 100%;
 /*   border-radius: 0 0 12px 12px; */
-} */
 
-.anvil-m3-card-content-container {
+.anvil-m3-card-content-container{
   margin: 0 16px;
-
-  background: green;
-/*   box-sizing: border-box; */
 }
+
 
 
 
