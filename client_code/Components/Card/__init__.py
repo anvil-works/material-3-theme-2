@@ -72,6 +72,7 @@ class Card(CardTemplate):
     self.dom_nodes['anvil-m3-card-content'].classList.toggle('anvil-m3-outlined', False)
     self.dom_nodes['anvil-m3-card-content'].classList.toggle('anvil-m3-filled', False)
     self.dom_nodes['anvil-m3-card-content'].classList.toggle('anvil-m3-elevated', False)
+    
     self.dom_nodes['anvil-m3-card-shadow'].classList.toggle(f'anvil-m3-{value}', True)
     self.dom_nodes['anvil-m3-card-image'].classList.toggle(f'anvil-m3-{value}', True)
     self.dom_nodes['anvil-m3-card-content'].classList.toggle(f'anvil-m3-{value}', True)
