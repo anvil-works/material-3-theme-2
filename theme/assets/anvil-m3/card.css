@@ -125,9 +125,27 @@
   border: 1px solid transparent; */
 .anvil-m3-card-image.anvil-m3-outlined {
   border-color: var(--anvil-m3-outline);
+  border-width: 1px;
 }
-.full-image {
-  border: 1px solid var(--anvil-m3-outline);
+.anvil-m3-card-image.anvil-m3-outlined.top-image {
+  border-top-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+}
+.anvil-m3-card-image.anvil-m3-outlined.bottom-image {
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+}
+.anvil-m3-card-image.anvil-m3-outlined.left-image {
+  border-top-style: solid;
+  border-left-style: solid;
+  border-bottom-style: solid;
+}
+.anvil-m3-card-image.anvil-m3-outlined.right-image {
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
 }
 
 
