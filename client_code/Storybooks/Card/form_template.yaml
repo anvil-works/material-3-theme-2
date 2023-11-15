@@ -256,6 +256,21 @@ components:
       properties: {visible: true, image_position: Top, appearance: filled}
       type: form:Components.Card
       layout_properties: {grid_position: 'FUBQOD,UXDNWS XCJBTT,AMUFEZ'}
+      components:
+      - name: flow_panel_1
+        properties: {}
+        type: FlowPanel
+        layout_properties: {slot: anvil-m3-card-image-slot}
+        components:
+        - name: icon_button_2
+          properties: {icon: play_circle, icon_color: white}
+          type: form:Components.IconButton
+          layout_properties: {}
+      - name: text_2
+        properties: {text: 'Title of some song that''s playing ', text_color: 'theme:On
+            Primary'}
+        type: form:Components.Text
+        layout_properties: {slot: anvil-m3-card-image-slot}
     - name: card_1_copy_1_copy_1_copy_3
       properties: {visible: true, image_position: Bottom, appearance: filled}
       type: form:Components.Card

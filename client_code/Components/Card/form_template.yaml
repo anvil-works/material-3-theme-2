@@ -26,10 +26,10 @@ container:
   properties: {html: "<div anvil-name=\"anvil-m3-card-component\" style=\"display:\
       \ flex\">\n  <div anvil-name=\"anvil-m3-card-shadow\" class=\"anvil-m3-card-shadow\"\
       >\n    <div anvil-slot=\"anvil-m3-card-image-slot\" \n         anvil-name=\"\
-      anvil-m3-card-image\" \n         class=\"anvil-m3-card-image\" style=\"background:\
-      \ blue\">\n      <p anvil-name=\"empty-image-slot\" anvil-if-slot-empty=\"anvil-m3-card-image-slot\"\
-      \ style=\"color: #BBB; padding: 0 2px;\"><i>Insert Image Content</i></p>\n \
-      \   </div>\n    <div anvil-slot=\"anvil-m3-card-content-slot\" \n         anvil-name=\"\
+      anvil-m3-card-image\" \n         class=\"anvil-m3-card-image\">\n      <p anvil-name=\"\
+      empty-image-slot\" anvil-if-slot-empty=\"anvil-m3-card-image-slot\" style=\"\
+      color: #BBB; padding: 0 2px;\"><i>Insert Image Content</i></p>\n    </div>\n\
+      \    <div anvil-slot=\"anvil-m3-card-content-slot\" \n         anvil-name=\"\
       anvil-m3-card-content\" \n         class=\"anvil-m3-card-content\">\n      <p\
       \ anvil-name=\"empty-content-slot\" anvil-if-slot-empty=\"anvil-m3-card-content-slot\"\
       \ style=\"color: #BBB; padding: 0 2px;\"><i>Insert Card Content</i></p>\n  \
