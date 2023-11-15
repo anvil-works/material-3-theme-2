@@ -1,4 +1,5 @@
 from ._anvil_designer import CardTemplate
+import anvil.designer
 from anvil import *
 import anvil.server
 import anvil.tables as tables
@@ -11,10 +12,12 @@ class Card(CardTemplate):
   def __init__(self, **properties):
     self._props = properties
     self.init_components(**properties)
-
+    if not anvil.designer.in_designer:
+      self.dom_nodes['empty-slot'].style = "display: none"
     # Any code you write here will run before the form opens.
   align = style_property('anvil-m3-card-component', 'justifyContent', 'align')
   visible = HtmlTemplate.visible
+    
 
   def set_image_position(self, value):
     self.dom_nodes['anvil-m3-card-shadow'].classList.toggle('none-image', False)
