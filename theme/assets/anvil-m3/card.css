@@ -1,6 +1,3 @@
-
-
-
 .anvil-m3-card-shadow {
   display: flex;
   background: none;
@@ -10,7 +7,29 @@
   overflow: hidden;
   position: relative;
   border-radius: 12px;
+} 
+
+/*       self.dom_nodes['anvil-m3-card-shadow'].style = ""
+      self.dom_nodes['anvil-m3-card-image'].style = "width: 100%;" */
+
+.anvil-m3-card-shadow.none-image {
 }
+.anvil-m3-card-shadow.top-image {
+  flex-direction: column;
+}
+.anvil-m3-card-shadow.bottom-image {
+  flex-direction: column-reverse;
+}
+.anvil-m3-card-shadow.left-image {
+  flex-direction: row;
+}
+.anvil-m3-card-shadow.right-image {
+  flex-direction: row-reverse;
+}
+.anvil-m3-card-shadow.full-image {
+  
+}
+
 
 .anvil-m3-card-image {
   display: flex;
@@ -168,7 +187,7 @@ span {
 /*   border-radius: 0 0 12px 12px; */
 } */
 
-.xanvil-m3-card-content-container {
+.anvil-m3-card-content-container {
   margin: 0 16px;
   box-sizing: border-box;
 }
