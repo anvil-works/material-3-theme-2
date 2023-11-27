@@ -83,15 +83,6 @@ components:
               Disabled'}
           type: form:Components.Text
           layout_properties: {slot: anvil-m3-card-content-container-slot}
-      - name: flow_panel_1_copy_1
-        properties: {}
-        type: FlowPanel
-        layout_properties: {slot: card-image-slot}
-        components:
-        - name: spacer_1_copy_1
-          properties: {height: 127}
-          type: Spacer
-          layout_properties: {width: 171}
   - name: card_1_copy_3
     properties: {visible: true, image_position: full, appearance: filled, rounded_image: false,
       card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
