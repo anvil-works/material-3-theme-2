@@ -228,7 +228,7 @@ components:
       - name: card_content_container_3
         properties: {}
         type: form:Components.Card.CardContentContainer
-        layout_properties: {width: 180}
+        layout_properties: {width: 121}
         components:
         - name: column_panel_2
           properties: {}
@@ -361,7 +361,7 @@ components:
         - name: column_panel_2_copy_3
           properties: {}
           type: ColumnPanel
-          layout_properties: {width: 212.46875}
+          layout_properties: {width: 135.46875}
           components:
           - name: text_1_copy_3_copy_4
             properties: {text: World Impact, style: label, scale: medium}
