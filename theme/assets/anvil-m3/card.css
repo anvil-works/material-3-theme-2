@@ -6,6 +6,7 @@
   border-radius: 12px;
   min-width: 24px;
   min-height: 24px;
+  width: 100%;
 /*   width: fit-content; */
 }
 .anvil-m3-card.none-image { }
