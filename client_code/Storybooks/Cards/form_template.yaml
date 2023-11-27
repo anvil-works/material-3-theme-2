@@ -130,9 +130,9 @@ components:
           type: form:Components.Link
           layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: top_outlined_copy
-      properties: {appearance: outlined, image_position: left, image_height: 75px,
+      properties: {appearance: outlined, image_position: left, image_height: 65px,
         card_image: 'https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        rounded_image: true, image_width: 75px}
+        rounded_image: true, image_width: 65px}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ WGWLLI,WJGVUP'}
       components:
@@ -147,20 +147,20 @@ components:
           layout_properties: {slot: anvil-m3-card-content-container-slot}
           components:
           - name: column_panel_2
-            properties: {}
+            properties: {col_widths: '{"XCLYES":45,"AZJNTK":15}'}
             type: ColumnPanel
-            layout_properties: {width: 168}
+            layout_properties: {width: 212}
             components:
             - name: text_3_copy_copy_copy_2
-              properties: {text: Sub Title, style: label, scale: small}
+              properties: {text: Natural Sounds, style: label, scale: large}
               type: form:Components.Text
               layout_properties: {grid_position: 'XRZLBP,XCLYES UGYYIE,ZCSLPZ WERNUA,NGJPMY'}
             - name: icon_button_1
-              properties: {}
+              properties: {icon: downloading, align: right}
               type: form:Components.IconButton
               layout_properties: {grid_position: 'XRZLBP,AZJNTK'}
             - name: text_3_copy_copy_copy_3
-              properties: {text: Sub Title, style: label, scale: small}
+              properties: {text: 1.2 Mb, style: label, scale: small}
               type: form:Components.Text
               layout_properties: {grid_position: 'XRZLBP,XCLYES UGYYIE,ZCSLPZ SIUAYJ,JJNQLE'}
     - name: full_elevated
