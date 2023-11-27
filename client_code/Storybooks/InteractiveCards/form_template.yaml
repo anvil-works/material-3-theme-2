@@ -68,14 +68,14 @@ components:
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_1_copy
-          properties: {}
+          properties: {align: justify}
           type: FlowPanel
           layout_properties: {slot: anvil-m3-card-content-container-slot}
           components:
           - name: heading_1_copy_copy
             properties: {text: Title}
             type: form:Components.Heading
-            layout_properties: {width: 184.28125}
+            layout_properties: {width: 69.28125}
           - name: icon_button_1_copy_copy
             properties: {align: right, icon: more_vert}
             type: form:Components.IconButton
@@ -225,14 +225,14 @@ components:
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_1
-          properties: {}
+          properties: {align: justify}
           type: FlowPanel
           layout_properties: {slot: anvil-m3-card-content-container-slot}
           components:
           - name: heading_1_copy
             properties: {text: Title}
             type: form:Components.Heading
-            layout_properties: {width: 192.28125}
+            layout_properties: {width: 67.28125}
           - name: icon_button_1_copy
             properties: {align: right, icon: more_vert}
             type: form:Components.IconButton
@@ -383,14 +383,14 @@ components:
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_1_copy_copy
-          properties: {}
+          properties: {align: justify}
           type: FlowPanel
           layout_properties: {slot: anvil-m3-card-content-container-slot}
           components:
           - name: heading_1_copy_copy_copy
             properties: {text: Title}
             type: form:Components.Heading
-            layout_properties: {width: 184.28125}
+            layout_properties: {width: 60.28125}
           - name: icon_button_1_copy_copy_copy
             properties: {align: right, icon: more_vert}
             type: form:Components.IconButton
