@@ -170,7 +170,7 @@ components:
         layout_properties: {width: 273}
         components:
         - name: heading_2_copy_2
-          properties: {align: center, text: Heading}
+          properties: {align: center, text: Heading text goes here does it go over what do we do bjaaah}
           type: form:Components.Heading
           layout_properties: {}
         - name: flow_panel_6_copy_2
