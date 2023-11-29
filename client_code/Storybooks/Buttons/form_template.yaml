@@ -251,7 +251,7 @@ components:
           type: form:Components.Button
           layout_properties: {}
       - name: button_15
-        properties: {text: '', material_icon: 14mp, appearance: tonal}
+        properties: {text: asdfasdf, material_icon: 14mp, appearance: tonal}
         type: form:Components.Button
         layout_properties: {slot: anvil-m3-card-content-container-slot}
   - name: card_2
