@@ -367,6 +367,7 @@ properties:
 - name: appearance
   type: enum
   options: [' ', elevated, filled, tonal, outlined]
+  default_value: ' '
 - {name: text_color, type: color, default_value: ''}
 - {name: icon_color, type: color, default_value: ''}
 - {name: font_family, type: string, default_value: ''}
