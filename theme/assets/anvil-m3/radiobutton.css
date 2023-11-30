@@ -13,9 +13,11 @@
   border-radius: 40px;
 }
 
-.anvil-m3-radiobutton-container:has(.anvil-m3-radiobutton-input:enabled):hover * {
+.anvil-m3-radiobutton-containe:has(.anvil-m3-radiobutton-input:enabled)r:hover * {
   cursor: pointer;
+  border: 1px dotted blue;
 }
+
 .anvil-m3-radiobutton-container:has(.anvil-m3-radiobutton-input:enabled):hover .anvil-m3-radiobutton-hover {
   background-color: var(--anvil-m3-dark-overlay-1);
 }
@@ -70,7 +72,11 @@
 }
 
 /* DISABLED */
+.anvil-m3-radiobutton-container:has(.anvil-m3-radiobutton-input:disabled):hover * {
+  cursor: not-allowed !important;
+}
 
+/* 
 .anvil-m3-radiobutton-container:has(.anvil-m3-radiobutton-input:disabled):hover * {
   cursor: not-allowed !important;
 }
@@ -83,7 +89,7 @@
 .anvil-m3-radiobutton-input:disabled + .anvil-m3-radiobutton-hover:hover{
   background-color: transparent !important;
   cursor: not-allowed !important;
-}
+} */
 
 /* LABEL */
 .anvil-m3-radiobutton-label {
