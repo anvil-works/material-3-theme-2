@@ -83,23 +83,24 @@ components:
         components:
         - name: button_1_copy_2
           properties: {appearance: elevated, bold: true, italic: false, underline: false,
-            material_icon: 10mp, enabled: true, text: '1'}
+            material_icon: 10mp, enabled: true, text: '1', icon: ' 10k'}
           type: form:Components.Button
           layout_properties: {}
         - name: button_2_copy_2
-          properties: {appearance: filled, bold: true, material_icon: 11mp, text: '2'}
+          properties: {appearance: filled, bold: true, material_icon: 11mp, text: '2',
+            icon: ' 10k'}
           type: form:Components.Button
           layout_properties: {}
         - name: button_3_copy_2
-          properties: {appearance: tonal, material_icon: 3d_rotation, text: '3'}
+          properties: {appearance: tonal, material_icon: 3d_rotation, text: '3', icon: ' 10k'}
           type: form:Components.Button
           layout_properties: {}
         - name: button_4_copy_2
-          properties: {appearance: outlined, material_icon: blur_on, text: '4'}
+          properties: {appearance: outlined, material_icon: blur_on, text: '4', icon: ' 10k'}
           type: form:Components.Button
           layout_properties: {}
         - name: button_5_copy_2
-          properties: {material_icon: 10mp, text: '5'}
+          properties: {material_icon: 10mp, text: '5', icon: ' 10k'}
           type: form:Components.Button
           layout_properties: {}
     - name: card_content_container_1_copy_2_copy_2
@@ -123,12 +124,13 @@ components:
           type: form:Components.Button
           layout_properties: {}
         - name: button_3_copy_2_copy_2
-          properties: {appearance: tonal, material_icon: 3d_rotation, text: '3', icon_align: right}
+          properties: {appearance: tonal, material_icon: 3d_rotation, text: '3', icon_align: right,
+            icon: ' 10k'}
           type: form:Components.Button
           layout_properties: {}
         - name: button_4_copy_2_copy_2
           properties: {appearance: outlined, material_icon: blur_on, text: '4', italic: false,
-            icon_align: right}
+            icon_align: right, icon: ' 10k'}
           type: form:Components.Button
           layout_properties: {}
         - name: button_5_copy_2_copy_2
