@@ -13,7 +13,7 @@
   border-radius: 40px;
 }
 
-.anvil-m3-radiobutton-container:hover * {
+.anvil-m3-radiobutton-container:has(.anvil-m3-radiobutton-input:enabled):hover * {
   cursor: pointer;
 }
 .anvil-m3-radiobutton-container:has(.anvil-m3-radiobutton-input:enabled):hover .anvil-m3-radiobutton-hover {
@@ -70,6 +70,10 @@
 }
 
 /* DISABLED */
+
+.anvil-m3-radiobutton-container:has(.anvil-m3-radiobutton-input:disabled):hover * {
+  cursor: not-allowed !important;
+}
 
 .anvil-m3-radiobutton-input:disabled + .anvil-m3-radiobutton-hover > .anvil-m3-radiobutton-checked, .anvil-m3-radiobutton-input:disabled + .anvil-m3-radiobutton-hover >  .anvil-m3-radiobutton-unchecked{
   color: var(--anvil-m3-on-disabled) !important;
