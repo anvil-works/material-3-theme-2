@@ -1,5 +1,6 @@
 properties:
-- {name: text, type: string, default_value: '', description: Text for the Button, group: Key Properties}
+- {name: text, type: string, default_value: '', description: Text for the Button,
+  group: Key Properties}
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction}
 - name: align
   type: enum
@@ -8,7 +9,8 @@ properties:
   default_value: left
   designer_hint: align-horizontal
   group: Look and Feel
-- {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible, group: Look and Feel}
+- {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible,
+  group: Look and Feel}
 - name: appearance
   type: enum
   options: [' ', elevated, filled, tonal, outlined]
@@ -16,9 +18,12 @@ properties:
 - {name: text_color, type: color, default_value: '', group: Text Style}
 - {name: font_family, type: string, default_value: '', group: Text Style}
 - {name: font_size, type: number, group: Text Style}
-- {name: underline, type: boolean, default_value: false, important: true, designer_hint: font-underline, group: Text Style}
-- {name: italic, type: boolean, default_value: false, important: true, designer_hint: font-italic, group: Text Style}
-- {name: bold, type: boolean, default_value: true, important: true, designer_hint: font-bold, group: Text Style}
+- {name: underline, type: boolean, default_value: false, important: true, designer_hint: font-underline,
+  group: Text Style}
+- {name: italic, type: boolean, default_value: false, important: true, designer_hint: font-italic,
+  group: Text Style}
+- {name: bold, type: boolean, default_value: true, important: true, designer_hint: font-bold,
+  group: Text Style}
 - name: icon
   type: enum
   default_binding_prop: true

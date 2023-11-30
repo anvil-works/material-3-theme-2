@@ -113,13 +113,13 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: button_1_copy_2_copy_2
-          properties: {appearance: elevated, bold: true, italic: false, underline: false,
-            material_icon: 10mp, enabled: true, text: '1', icon_align: right}
+          properties: {appearance: elevated, material_icon: 10mp, enabled: true, text: '1',
+            icon_align: right, italic: false, bold: true, underline: false, icon: 15mp}
           type: form:Components.Button
           layout_properties: {}
         - name: button_2_copy_2_copy_2
           properties: {appearance: filled, bold: true, material_icon: 11mp, text: '2',
-            icon_align: right}
+            icon_align: right, icon: 18_up_rating}
           type: form:Components.Button
           layout_properties: {}
         - name: button_3_copy_2_copy_2
@@ -133,7 +133,8 @@ components:
           layout_properties: {}
         - name: button_5_copy_2_copy_2
           properties: {material_icon: 22mp, text: '5', icon_align: right, text_color: 'theme:On
-              Surface Variant', font_size: 30, icon_size: 35, icon_color: 'theme:Error'}
+              Surface Variant', font_size: 30, icon_size: 35, icon_color: 'theme:Error',
+            icon: 14mp}
           type: form:Components.Button
           layout_properties: {}
   - name: card_1_copy_1_copy_2_copy
