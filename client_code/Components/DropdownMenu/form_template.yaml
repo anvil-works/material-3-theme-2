@@ -18,10 +18,10 @@ properties:
   default_value: []
   important: true
   description: The items to display in this dropdown
-  group: Common
+  group: Key Properties
   default_binding_prop: true
 - {name: placeholder, type: string, default_value: '', important: true, description: The text to be displayed when the selected_value is None,
-  group: Common}
+  group: Key Properties}
 - name: appearance
   type: enum
   important: true
@@ -34,7 +34,7 @@ properties:
   group: Label Style}
 - {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed,
   group: Look and Feel, designerHint: visible, designer_hint: visible}
-- {name: label_text, type: string, default_value: '', important: true, group: Common}
+- {name: label_text, type: string, default_value: '', important: true, group: Key Properties}
 - {name: bold_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
 - {name: italic_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}
 - {name: underline_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style}

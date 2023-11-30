@@ -21,9 +21,9 @@ properties:
   important: true
   options: [determinate, indeterminate]
   default_value: indeterminate
-  group: Common
+  group: Key Properties
 - {name: progress, type: number, important: true, default_value: 0, description: Percentage of progress for determinate type. Irrelevant for indeterminate type.,
-  group: Common}
+  group: Key Properties}
 - name: align
   type: enum
   important: true

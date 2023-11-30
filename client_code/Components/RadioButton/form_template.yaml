@@ -2,13 +2,13 @@ properties:
 - {name: group_name, type: string, default_value: '', default_binding_prop: true,
   description: 'Radio button group name,  must begin with a letter ([A-Za-z]) and
     may be followed by any number of letters, digits ([0-9]), hyphens ("-"), underscores
-    ("_"), colons (":"), and periods (".").', group: Common}
+    ("_"), colons (":"), and periods (".").', group: Key Properties}
 - {name: selected, type: boolean, default_value: false, description: Radio button option for html <input> checked property,
   group: Interaction}
 - {name: enabled, type: boolean, default_value: true, description: Enable radio button,
   group: Interaction, designerHint: enabled, designer_hint: enabled}
-- {name: text, type: string, default_value: '', group: Common}
-- {name: value, type: string, default_value: '', group: Common}
+- {name: text, type: string, default_value: '', group: Key Properties}
+- {name: value, type: string, default_value: '', group: Key Properties}
 - default_value: left
   group: Look and Feel
   important: true

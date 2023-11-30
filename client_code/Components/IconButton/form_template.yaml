@@ -372,7 +372,7 @@ properties:
     zoom_out, zoom_out_map]
   default_value: star_border
   include_none_option: true
-  group: Common
+  group: Key Properties
   priority: 100
 - {name: enabled, type: boolean, default_value: true, important: true, designerHint: enabled,
   designer_hint: enabled, description: True if this component should allow user interaction,

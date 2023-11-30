@@ -36,6 +36,6 @@ properties:
   important: true
   options: [determinate, indeterminate]
   default_value: indeterminate
-  group: Common
-- {name: progress, type: number, group: Common, important: true, default_value: 0,
+  group: Key Properties
+- {name: progress, type: number, group: Key Properties, important: true, default_value: 0,
   description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}

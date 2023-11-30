@@ -1,6 +1,6 @@
 properties:
 - {name: text, type: string, default_value: '', default_binding_prop: true, description: Text on Button,
-  group: Common}
+  group: Key Properties}
 - name: appearance
   type: enum
   options: [elevated, filled, tonal, outlined]

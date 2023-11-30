@@ -1,5 +1,5 @@
 properties:
-- {default_value: false, group: Common, important: true, name: checked, default_binding_prop: true,
+- {default_value: false, group: Key Properties, important: true, name: checked, default_binding_prop: true,
   type: boolean, designer_hint: toggle, designerHint: toggle, description: Whether or not the checkbox is checked}
 - {name: enabled, type: boolean, default_value: true, description: True if this component should allow user interaction,
   designerHint: enabled, group: Interaction, designer_hint: enabled, important: true}
@@ -9,7 +9,7 @@ properties:
     this component
 
 
-    ', group: Common, important: true}
+    ', group: Key Properties, important: true}
 - {name: allow_indeterminate, type: boolean, default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None.,
   group: Interaction, important: true}
 - {name: visible, type: boolean, default_value: true, description: Whether or not the component is displayed on the page,

@@ -364,9 +364,9 @@ properties:
     zoom_out, zoom_out_map]
   description: Left Icon
   default_value: null
-  group: Common
+  group: Key Properties
   include_none_option: true
-- {name: text, type: string, default_value: '', group: Common, description: Display Text for item}
+- {name: text, type: string, default_value: '', group: Key Properties, description: Display Text for item}
 - name: trailing_icon
   type: enum
   options: [10k, 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,
@@ -731,9 +731,9 @@ properties:
     zoom_out, zoom_out_map]
   description: Right Icon
   include_none_option: true
-  group: Common
+  group: Key Properties
 - {name: trailing_text, type: string, default_value: '', description: Right Text. Will be to the left of the trailing icon if both exist,
-  group: Common}
+  group: Key Properties}
 - {name: hide_leading_icon, type: boolean, default_value: false, description: Option to hide or show the leading icon. This will affect the spacing to the left of the text,
   group: Look and Feel}
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction}
