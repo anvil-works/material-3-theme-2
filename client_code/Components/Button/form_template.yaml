@@ -1,4 +1,5 @@
 properties:
+- {name: text, type: string, default_value: '', description: Text for the Button}
 - {name: enabled, type: boolean, default_value: true, designer_hint: enabled}
 - name: align
   type: enum
@@ -10,14 +11,13 @@ properties:
 - name: appearance
   type: enum
   options: [' ', elevated, filled, tonal, outlined]
-- {name: text, type: string, default_value: '', description: Text for the Button}
 - {name: text_color, type: color, default_value: ''}
 - {name: font_family, type: string, default_value: ''}
 - {name: font_size, type: number}
 - {name: underline, type: boolean, default_value: false, important: true, designer_hint: font-underline}
 - {name: italic, type: boolean, default_value: false, important: true, designer_hint: font-italic}
 - {name: bold, type: boolean, default_value: true, important: true, designer_hint: font-bold}
-- name: material_icon
+- name: icon
   type: enum
   default_binding_prop: true
   options: [' 10k', 10mp, 11mp, '123', 12mp, 13mp, 14mp, 15mp, 16mp, 17mp, 18_up_rating,

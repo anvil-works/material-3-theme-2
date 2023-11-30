@@ -50,8 +50,8 @@ class Button(ButtonTemplate):
     }]
 
   def set_icon(self):
-    if self.material_icon:
-      self.dom_nodes['anvil-m3-button-icon'].innerText = self.material_icon
+    if self.icon:
+      self.dom_nodes['anvil-m3-button-icon'].innerText = self.icon
       self.dom_nodes['anvil-m3-button-icon'].style.display = "flex"
       if self.text:
         self.dom_nodes['anvil-m3-button'].classList.add('anvil-m3-icon-padding')
@@ -65,7 +65,7 @@ class Button(ButtonTemplate):
     if self.text:
       self.dom_nodes['anvil-m3-button-text'].innerText = self.text
     else:
-      if not self.material_icon:
+      if not self.icon:
         if anvil.designer.in_designer:
           self.dom_nodes['anvil-m3-button-text'].innerText = anvil.designer.get_design_name(self)
           self.dom_nodes['anvil-m3-button-text'].classList.add('anvil-m3-textlessComponentText')
@@ -85,7 +85,7 @@ class Button(ButtonTemplate):
     
     self.set_icon()
     self.set_text()
-  material_icon = property_with_callback("material_icon", update_button_look)
+  icon = property_with_callback("icon", update_button_look)
   text = property_with_callback("text", update_button_look)
 
   def set_enabled(self, value):
