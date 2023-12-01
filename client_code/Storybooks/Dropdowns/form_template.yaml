@@ -80,6 +80,7 @@ components:
                 allow_none: false
                 enabled: true
                 visible: true
+                bold_label: true
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
             - name: dropdown_menu_2
