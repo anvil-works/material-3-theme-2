@@ -41,8 +41,8 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.dom_nodes['text-field-input'].style.cursor = "pointer"
     self.selection_field.dom_nodes['text-field-input'].setAttribute("readonly", True)
           
-    self.shield = document.createElement("div")
-    self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
+    # self.shield = document.createElement("div")
+    # self.shield.classList.toggle("anvil-m3-menu-clickShield", True)
 
     if not self.label_text and self.placeholder:
         self.selection_field.dom_nodes['label-text'].innerText = self.placeholder
@@ -147,7 +147,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self.handle_component_click)
     self.selection_field.dom_nodes['text-field-input'].addEventListener('focus', self.handle_selection_field_focus)
     self.selection_field.dom_nodes['text-field-input'].addEventListener('blur', self.handle_selection_field_blur)
-    self.shield.addEventListener('click', self.remove_shield_handler)
+    # self.shield.addEventListener('click', self.remove_shield_handler)
     self.menuNode.addEventListener('click', self.child_clicked)
     
   def on_cleanup(self, **event_args):
@@ -155,7 +155,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self.handle_component_click)
     self.selection_field.dom_nodes['text-field-input'].removeEventListener('focus', self.handle_selection_field_focus)
     self.selection_field.dom_nodes['text-field-input'].removeEventListener('blur', self.handle_selection_field_blur)
-    self.shield.removeEventListener('click', self.remove_shield_handler)
+    # self.shield.removeEventListener('click', self.remove_shield_handler)
     self.menuNode.removeEventListener('click', self.child_clicked)
 
   def handle_selection_field_focus(self, event):
@@ -192,7 +192,7 @@ class DropdownMenu(DropdownMenuTemplate):
         self.attempt_select()
         
   def close_menu(self):
-    self.remove_shield()
+    # self.remove_shield()
     self.set_menu_visibility(False)
     
   def iterate_hover(self, inc = True):
@@ -234,7 +234,7 @@ class DropdownMenu(DropdownMenuTemplate):
       if not self.label_text and self.placeholder:
         self.selection_field.dom_nodes['label-text'].innerText = ""
       if not anvil.designer.in_designer:
-        self.place_shield()
+        # self.place_shield()
         self.selection_field.trailing_icon = "arrow_drop_up"
       self.get_textfield_measurements()
       self.update_menu_placement()
@@ -287,18 +287,18 @@ class DropdownMenu(DropdownMenuTemplate):
       "width": rect.right - rect.left,
     }
   
-  def place_shield(self):
-    if not document.contains(self.shield):
-      document.body.appendChild(self.shield)
-      document.body.style.overflow = "hidden"
+  # def place_shield(self):
+  #   if not document.contains(self.shield):
+  #     document.body.appendChild(self.shield)
+  #     document.body.style.overflow = "hidden"
     
-  def remove_shield_handler(self, event):
-    self.close_menu()
+  # def remove_shield_handler(self, event):
+  #   self.close_menu()
     
-  def remove_shield(self):
-    if document.contains(self.shield):
-      document.body.removeChild(self.shield)
-      document.body.style.removeProperty("overflow")
+  # def remove_shield(self):
+  #   if document.contains(self.shield):
+  #     document.body.removeChild(self.shield)
+  #     document.body.style.removeProperty("overflow")
 
   def child_clicked(self, event):
     event.stopPropagation()
