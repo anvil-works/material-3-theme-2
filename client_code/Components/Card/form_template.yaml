@@ -1,7 +1,6 @@
 properties:
 - {name: visible, type: boolean, default_value: true, important: true, default_binding_prop: true,
-  designer_hint: visible, group: Look and Feel, description: 'Should this component
-    be displayed?'}
+  designer_hint: visible, description: 'Should this component be displayed?'}
 - name: appearance
   type: enum
   important: true
