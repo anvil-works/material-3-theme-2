@@ -769,13 +769,14 @@ properties:
   type: margin
   important: true
   default_value: [5px, null, null, null]
-- {name: character_limit, type: number, important: true, default_value: 0, description: Character limit for the textfield. Value must be greater 0. All other values default to no character limit}
 is_package: true
 events:
 - {name: pressed_enter, default_event: true}
 - {name: change}
 toolbox_item:
   icon: {light: 'asset:designer_icons/textfield.svg', dark: 'asset:designer_icons/textfield_dark.svg'}
+  title: TextArea
+  group: Form Input
 custom_component: true
 components: []
 container:
@@ -785,8 +786,9 @@ container:
       \ anvil-name=\"text-field-input-container\" style=\"position: relative\">\n\
       <!--     <input class=\"anvil-m3-text-field-input\" anvil-name=\"text-field-input\"\
       \ type=\"text\" id=\"tfield\" placeholder=\" \" /> -->\n    <textarea class=\"\
-      anvil-m3-text-field-input\" ></textarea>\n    <div class=\"anvil-m3-border-container\"\
-      \ anvil-name=\"anvil-m3-border-container\">\n      <div class=\"anvil-m3-border-container-cell-tl\"\
+      anvil-m3-text-field-input\" anvil-name=\"text-field-input\" id=\"tfield\" placeholder=\"\
+      \ \"></textarea>\n    <div class=\"anvil-m3-border-container\" anvil-name=\"\
+      anvil-m3-border-container\">\n      <div class=\"anvil-m3-border-container-cell-tl\"\
       ></div>\n      <div class=\"anvil-m3-border-container-cell-t\"></div>\n    \
       \  <div class=\"anvil-m3-border-container-cell-tr\"></div>\n      <div class=\"\
       anvil-m3-border-container-cell-b\"></div>\n      <label class=\"anvil-m3-label-text\"\
