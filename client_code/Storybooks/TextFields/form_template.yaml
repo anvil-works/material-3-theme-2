@@ -51,7 +51,7 @@ components:
           layout_properties: {grid_position: 'IPNJXN,XBZWCJ'}
         - name: text_field_2
           properties: {appearance: outlined, label_text: 'label, no placeholder',
-            supporting_text: '', character_limit: 10}
+            supporting_text: '', character_limit: 2}
           type: form:Components.TextField
           layout_properties: {grid_position: 'IPNJXN,DUZTXT'}
   - name: card_1_copy_2

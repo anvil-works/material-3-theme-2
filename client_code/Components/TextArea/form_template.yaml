@@ -769,6 +769,7 @@ properties:
   type: margin
   important: true
   default_value: [5px, null, null, null]
+- {name: character_limit, type: number, important: true, default_value: 0}
 is_package: true
 events:
 - {name: pressed_enter, default_event: true}
