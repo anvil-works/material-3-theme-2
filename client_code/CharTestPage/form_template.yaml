@@ -1,0 +1,4 @@
+layout: {type: 'form:Layouts.layout_1'}
+is_package: true
+components_by_slot:
+  content_slot: []
