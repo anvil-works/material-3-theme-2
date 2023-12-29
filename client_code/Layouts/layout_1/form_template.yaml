@@ -1,0 +1,25 @@
+container:
+  type: HtmlTemplate
+  properties: {html: "<div id=\"header\" anvil-slot=\"layout-header\" anvil-name=\"\
+      layout-header\" style=\"background: aliceblue\"></div>\n<div id=\"body\" anvil-name=\"\
+      layout-header\" style=\"display: flex\">\n  <div id=\"nav\" anvil-slot=\"layout-nav\"\
+      \ anvil-name=\"layout-nav\" style=\"background: lightpink\"> </div>\n  <div\
+      \ id=\"content\" anvil-slot=\"layout-content\" anvil-name=\"layout-content\"\
+      \ style=\"background: palegreen\"> </div>\n</div>\n<div id=\"footer\" anvil-slot=\"\
+      layout-footer\" anvil-name=\"layout-footer\" style=\"backgroud: lightyellow\"\
+      ></div>"}
+components: []
+is_package: true
+slots:
+  slot_1:
+    index: 0
+    set_layout_properties: {slot: layout-header}
+    target: {type: container, name: ''}
+  slot_2:
+    index: 0
+    set_layout_properties: {slot: layout-nav}
+    target: {type: container, name: ''}
+  slot_3:
+    index: 0
+    set_layout_properties: {slot: layout-content}
+    target: {type: container, name: ''}
