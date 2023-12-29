@@ -12,7 +12,7 @@ container:
 components: []
 is_package: true
 slots:
-  slot_3:
+  content_slot:
     index: 0
     set_layout_properties: {slot: layout-content}
     target: {type: container, name: ''}
@@ -20,11 +20,11 @@ slots:
     index: 0
     set_layout_properties: {slot: layout-header}
     target: {type: container, name: ''}
-  slot_1:
+  footer_slot:
     index: 0
     set_layout_properties: {slot: layout-footer}
     target: {type: container, name: ''}
-  slot_2:
+  nav_slot:
     index: 0
     set_layout_properties: {slot: layout-nav}
     target: {type: container, name: ''}
