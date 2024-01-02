@@ -1,0 +1,26 @@
+container:
+  type: HtmlTemplate
+  properties: {html: "<div class=\"anvil-m3-text-field\" anvil-name=\"text-field\"\
+      \ style=\"width: calc(100% - 10px)\">\n  <div class=\"anvil-m3-text-field-input-container\"\
+      \ anvil-name=\"text-field-input-container\" style=\"position: relative\">\n\
+      <!--     <input class=\"anvil-m3-text-field-input\" anvil-name=\"text-field-input\"\
+      \ type=\"text\" id=\"tfield\" placeholder=\" \" /> -->\n    <textarea row=\"\
+      20\" class=\"anvil-m3-text-field-input anvil-m3-textarea\" anvil-name=\"text-field-input\"\
+      \ id=\"tfield\" placeholder=\" \"></textarea>\n    <div class=\"anvil-m3-border-container\"\
+      \ anvil-name=\"anvil-m3-border-container\">\n      <div class=\"anvil-m3-border-container-cell-tl\"\
+      ></div>\n      <div class=\"anvil-m3-border-container-cell-t\"></div>\n    \
+      \  <div class=\"anvil-m3-border-container-cell-tr\"></div>\n      <div class=\"\
+      anvil-m3-border-container-cell-b\"></div>\n      <label class=\"anvil-m3-label-text\"\
+      \ anvil-name=\"label-text\" for=\"tfield\"></label>\n    </div>\n    <div class=\"\
+      anvil-m3-icon-container\" anvil-name=\"anvil-m3-icon-container\">\n      <i\
+      \ class=\"anvil-m3-leading-icon material-symbols-outlined\" anvil-name=\"leading-icon\"\
+      \ style=\"display: none;\"></i>\n      <i class=\"anvil-m3-trailing-icon material-symbols-outlined\"\
+      \ anvil-name=\"trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n \
+      \ </div>\n  <label style=\"display:flex; justify-content: space-between\" >\
+      \ \n    <span class=\"anvil-m3-text-field-supporting\" anvil-name=\"text-field-supporting\"\
+      \ ></span>\n    <span style=\"display: none\" class=\"anvil-m3-text-field-character-count\"\
+      \ anvil-name=\"text-field-character-counter\">\n      <span anvil-name=\"text-field-character-amount\"\
+      \ >0</span>\n      /\n      <span anvil-name=\"text-field-character-limit\"\
+      \ >10</span>\n    </span>\n  </label>\n</div>"}
+components: []
+is_package: true

@@ -36,6 +36,7 @@ unique_ids:
     Storybooks.ProgressIndicators: '1699446041525853056434467.0327'
     Storybooks.Dropdowns: '1699375874010926304727277.2252'
     Components.LinearProgressIndicator: '169900965150797501169878.6904'
+    Components.TextInput: '1704206642207482687325036.0235'
     Components.RadioButton: '1690464716172125967535572.36772'
     Components.Text: '1691572000604659329611163.5563'
     Components.DropdownMenu: '1696925549669743360540737.4421'
@@ -65,6 +66,7 @@ unique_ids:
     designer_icons/divider_dark.svg: '1702400004965244117368359.85986'
     designer_icons/navigation_link.svg: PSN4CZWASK3MYKUNV7XX6BWZ6GYPD3AN
     designer_icons/radio_button_dark.svg: '1702400214209203276304480.66202'
+    anvil-m3/text-inputs.css: '1704206729797674774175436.8566'
     anvil-m3/button.css: '1689852840093884237320513.6318'
     designer_icons/button_menu.svg: '1702402127292566312913641.6511'
     designer_icons/checkbox.svg: '1702400309384165269919129.87256'
