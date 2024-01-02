@@ -1,0 +1,3 @@
+layout: {type: 'form:Components.TextInput'}
+is_package: true
+custom_component: true
