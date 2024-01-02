@@ -1,12 +1,21 @@
+is_package: true
+slots:
+  input_component:
+    index: 0
+    set_layout_properties: {slot: input-slot}
+    target: {type: container, name: ''}
+custom_component: true
+components: []
 container:
   type: HtmlTemplate
   properties: {html: "<div class=\"anvil-m3-text-field\" anvil-name=\"text-field\"\
       \ style=\"width: calc(100% - 10px)\">\n  <div class=\"anvil-m3-text-field-input-container\"\
       \ anvil-name=\"text-field-input-container\" style=\"position: relative\">\n\
       <!--     <input class=\"anvil-m3-text-field-input\" anvil-name=\"text-field-input\"\
-      \ type=\"text\" id=\"tfield\" placeholder=\" \" /> -->\n    <textarea row=\"\
-      20\" class=\"anvil-m3-text-field-input anvil-m3-textarea\" anvil-name=\"text-field-input\"\
-      \ id=\"tfield\" placeholder=\" \"></textarea>\n    <div class=\"anvil-m3-border-container\"\
+      \ type=\"text\" id=\"tfield\" placeholder=\" \" /> -->\n    <div anvil-slot=\"\
+      input-slot\" anvil-slot-internal>\n<!--     <textarea row=\"20\" class=\"anvil-m3-text-field-input\
+      \ anvil-m3-textarea\" anvil-name=\"text-field-input\" id=\"tfield\" placeholder=\"\
+      \ \"></textarea> -->\n      \n    </div> \n    <div class=\"anvil-m3-border-container\"\
       \ anvil-name=\"anvil-m3-border-container\">\n      <div class=\"anvil-m3-border-container-cell-tl\"\
       ></div>\n      <div class=\"anvil-m3-border-container-cell-t\"></div>\n    \
       \  <div class=\"anvil-m3-border-container-cell-tr\"></div>\n      <div class=\"\
@@ -22,5 +31,4 @@ container:
       \ anvil-name=\"text-field-character-counter\">\n      <span anvil-name=\"text-field-character-amount\"\
       \ >0</span>\n      /\n      <span anvil-name=\"text-field-character-limit\"\
       \ >10</span>\n    </span>\n  </label>\n</div>"}
-components: []
-is_package: true
+custom_component_container: true
