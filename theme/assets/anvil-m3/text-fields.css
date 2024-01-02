@@ -166,5 +166,5 @@
 
 .anvil-m3-textarea {
   resize: none;
-  background: lightyellow
+  background: lightyellow !important;
 }
