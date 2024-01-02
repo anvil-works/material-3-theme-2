@@ -787,9 +787,9 @@ container:
       \ anvil-name=\"text-field-input-container\" style=\"position: relative\">\n\
       <!--     <input class=\"anvil-m3-text-field-input\" anvil-name=\"text-field-input\"\
       \ type=\"text\" id=\"tfield\" placeholder=\" \" /> -->\n    <textarea class=\"\
-      anvil-m3-text-field-input\" anvil-name=\"text-field-input\" id=\"tfield\" placeholder=\"\
-      \ \"></textarea>\n    <div class=\"anvil-m3-border-container\" anvil-name=\"\
-      anvil-m3-border-container\">\n      <div class=\"anvil-m3-border-container-cell-tl\"\
+      anvil-m3-text-field-input anvil-m3-textarea\" anvil-name=\"text-field-input\"\
+      \ id=\"tfield\" placeholder=\" \"></textarea>\n    <div class=\"anvil-m3-border-container\"\
+      \ anvil-name=\"anvil-m3-border-container\">\n      <div class=\"anvil-m3-border-container-cell-tl\"\
       ></div>\n      <div class=\"anvil-m3-border-container-cell-t\"></div>\n    \
       \  <div class=\"anvil-m3-border-container-cell-tr\"></div>\n      <div class=\"\
       anvil-m3-border-container-cell-b\"></div>\n      <label class=\"anvil-m3-label-text\"\
