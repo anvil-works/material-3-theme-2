@@ -46,8 +46,8 @@ components:
         components:
         - name: text_area_1
           properties: {}
-          type: form:Components.TextInput.TextArea_
-          layout_properties: {grid_position: 'AQIOVG,QZHXZP'}
+          type: form:Components.TextInput.TextArea
+          layout_properties: {grid_position: 'HAVYOM,NIHHKE'}
     - name: divider_1
       properties: {}
       type: form:Components.Divider
@@ -61,4 +61,12 @@ components:
         properties: {}
         type: ColumnPanel
         layout_properties: {slot: anvil-m3-card-content-container-slot}
-        components: []
+        components:
+        - name: text_area__1
+          properties: {}
+          type: form:Components.TextInput.TextArea_
+          layout_properties: {grid_position: 'YBDHSG,MVKFTV'}
+      - name: text_area__2
+        properties: {}
+        type: form:Components.TextInput.TextArea_
+        layout_properties: {slot: anvil-m3-card-content-container-slot}

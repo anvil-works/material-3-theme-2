@@ -8,7 +8,6 @@ from ...Functions import property_without_callback
 
 class TextInput(TextInputTemplate):
   def __init__(self, **properties):
-    
     self._props = properties
     self.init_components(**properties)
 
