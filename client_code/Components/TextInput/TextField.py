@@ -16,13 +16,13 @@ leading_icon_property = {"name": "leading_icon",
                          "description": "right side icon"}
 trailing_icon_property = {"name": "trailing_icon", 
                          "type": "enum", 
-                         "options": _m3_icons, 
+                         "options": _m3_icons[1:], 
                          "group": "Attributes", 
                          "important": True, 
                          "default_value": "",
-                         # "include_none_option": True, 
+                         "include_none_option": True, 
                          "description": "left side icon"}
-
+debugger
 class TextField(TextInput):
   _anvil_properties_ = [leading_icon_property, trailing_icon_property, *TextInput._anvil_properties_]
 
@@ -124,3 +124,5 @@ class TextField(TextInput):
       trailing_icon.innerText = ""
       text_field_input.style.paddingRight = "16px"
   # trailing_icon = property_with_callback("trailing_icon", set_trailing_icon)
+
+print(TextField._anvil_properties_)
