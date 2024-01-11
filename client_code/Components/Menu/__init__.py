@@ -35,6 +35,10 @@ class Menu(MenuTemplate):
       currVal = self.visible
       self.visible = not currVal
 
+  def _anvil_enable_drop_mode_(self, dropping):
+    raise Exception("Hello")
+    return []
+
   def _anvil_get_interactions_(self):
     return [
       {
