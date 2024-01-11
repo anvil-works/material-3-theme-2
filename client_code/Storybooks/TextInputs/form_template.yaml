@@ -71,7 +71,7 @@ components:
           layout_properties: {grid_position: 'NWZMVG,UZZGXW'}
         - name: text_area_1_copy_copy
           properties: {appearance: outlined, label_text: TTTTT, placeholder: plac,
-            supporting_text: sup, visible: true, error: false, enabled: true}
+            supporting_text: sup, visible: true, error: false, enabled: true, bold_display: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2_copy
