@@ -44,7 +44,7 @@ components:
         layout_properties: {slot: card-image-slot}
       - name: card_content_container_6
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-image-slot}
         components:
         - name: text_5
@@ -65,7 +65,7 @@ components:
       components:
       - name: card_content_container_4_copy_copy
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_1_copy
@@ -101,7 +101,7 @@ components:
       components:
       - name: card_content_container_4_copy_copy_copy_2_copy_2_copy_2
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: heading_1_copy_copy_copy_2_copy_2_copy_2
@@ -123,7 +123,7 @@ components:
         layout_properties: {slot: card-content-slot}
       - name: card_content_container_3
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: link_1_copy_2
@@ -139,7 +139,7 @@ components:
       components:
       - name: card_content_container_1_copy_3
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_3
@@ -164,7 +164,7 @@ components:
       components:
       - name: card_content_container_1
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_2
@@ -202,7 +202,7 @@ components:
         layout_properties: {slot: card-image-slot}
       - name: card_content_container_7
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-image-slot}
         components:
         - name: text_5_copy
@@ -222,7 +222,7 @@ components:
       components:
       - name: card_content_container_4_copy
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_1
@@ -258,7 +258,7 @@ components:
       components:
       - name: card_content_container_4_copy_copy_copy_2_copy_2_copy
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: heading_1_copy_copy_copy_2_copy_2_copy
@@ -280,7 +280,7 @@ components:
         layout_properties: {slot: card-content-slot}
       - name: card_content_container_9
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: link_1_copy
@@ -296,7 +296,7 @@ components:
       components:
       - name: card_content_container_1_copy_3_copy
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_3_copy
@@ -321,7 +321,7 @@ components:
       components:
       - name: card_content_container_1_copy
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_2_copy
@@ -360,7 +360,7 @@ components:
         layout_properties: {slot: card-image-slot}
       - name: card_content_container_8
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-image-slot}
         components:
         - name: text_5_copy_copy
@@ -380,7 +380,7 @@ components:
       components:
       - name: card_content_container_4_copy_copy_copy
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_1_copy_copy
@@ -416,7 +416,7 @@ components:
       components:
       - name: card_content_container_4_copy_copy_copy_2_copy_2
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: heading_1_copy_copy_copy_2_copy_2
@@ -438,7 +438,7 @@ components:
         layout_properties: {slot: card-content-slot}
       - name: card_content_container_2
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: link_1
@@ -453,7 +453,7 @@ components:
       components:
       - name: card_content_container_1_copy_3_copy_2
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_3_copy_2
@@ -477,7 +477,7 @@ components:
       components:
       - name: card_content_container_1_copy_2
         properties: {}
-        type: form:Components.Card.CardContentContainer
+        type: form:Components.Card_test.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_2_copy_2

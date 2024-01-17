@@ -31,7 +31,7 @@ components:
           type: form:Components.Text
   - name: card_1_copy_1
     properties: {visible: true}
-    type: form:Components.Card
+    type: form:Components.Card_test
     layout_properties: {grid_position: 'XELRDD,LWQQOV'}
     components:
     - name: flow_panel_2_copy_1
@@ -145,7 +145,7 @@ components:
               layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: card_1_copy_1_copy_1
     properties: {visible: true}
-    type: form:Components.Card
+    type: form:Components.Card_test
     layout_properties: {grid_position: 'YWLDED,AJTCVA'}
     components:
     - name: flow_panel_2_copy_1_copy_1
