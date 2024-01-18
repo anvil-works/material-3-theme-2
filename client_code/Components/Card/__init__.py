@@ -1,4 +1,4 @@
-from ._anvil_designer import Card_testTemplate
+from ._anvil_designer import CardTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
@@ -8,7 +8,7 @@ import anvil.designer
 from anvil import HtmlTemplate
 from ...Functions import property_with_callback, style_property, spacing_property, margin_property, padding_property
 
-class Card_test(Card_testTemplate):
+class Card(CardTemplate):
   def __init__(self, **properties):
     self._props = properties
     self.card_image_temp_url = None

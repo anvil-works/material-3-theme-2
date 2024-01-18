@@ -31,12 +31,12 @@ components:
           type: form:Components.Text
   - name: card_1
     properties: {visible: true}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
     components:
     - name: card_content_container_1
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_2
@@ -85,12 +85,12 @@ components:
             layout_properties: {grid_position: 'FGXMBK,JSORRS'}
   - name: card_2
     properties: {visible: true}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'YQVVVU,UMEILI'}
     components:
     - name: card_content_container_2
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: text_4

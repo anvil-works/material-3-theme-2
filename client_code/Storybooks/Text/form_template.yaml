@@ -23,12 +23,12 @@ components:
     layout_properties: {grid_position: 'VZCCDQ,OIYCGE JFHDIX,YHHRRL'}
   - name: card_1
     properties: {}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'VZCCDQ,OIYCGE XXLMMI,VMYKZO'}
     components:
     - name: card_content_container_2
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: column_panel_1
@@ -66,12 +66,12 @@ components:
     layout_properties: {grid_position: 'VZCCDQ,MZWSSO WWYVUF,QOLWTO'}
   - name: card_2
     properties: {}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'VZCCDQ,MZWSSO ILWORC,OFLBFB'}
     components:
     - name: card_content_container_1
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: anvil-m3-card-slot}
       components:
       - name: column_panel_2

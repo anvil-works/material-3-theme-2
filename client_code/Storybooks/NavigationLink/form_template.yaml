@@ -25,7 +25,7 @@ components:
     layout_properties: {grid_position: 'QNOTQM,UCTZKZ'}
   - name: card_1
     properties: {}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'DUNIXU,RRDTIG'}
     components:
     - name: column_panel_1

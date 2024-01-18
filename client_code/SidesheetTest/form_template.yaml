@@ -32,6 +32,6 @@ components:
   components:
   - name: card_1
     properties: {}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'JQUAMC,AVXZBF'}
 is_package: true

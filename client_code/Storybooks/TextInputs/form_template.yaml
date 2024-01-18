@@ -31,7 +31,7 @@ components:
           type: form:Components.Text
   - name: card_1_copy
     properties: {visible: true}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'OBTYEB,JSFRNK DAUGBR,PEROIY'}
     components:
     - name: text_1_copy
@@ -40,7 +40,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_2
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_1_copy_copy
@@ -91,7 +91,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_1_copy
@@ -119,7 +119,7 @@ components:
           layout_properties: {grid_position: 'XTNFIB,HQALSZ GMZUBF,BRGRTD'}
   - name: card_1_copy_copy_2
     properties: {visible: true}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'OBTYEB,JSFRNK CCECZZ,ELWGLA'}
     components:
     - name: text_1_copy_copy_2
@@ -128,7 +128,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_2_copy
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_1_copy_copy_copy
@@ -162,7 +162,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_3
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_1_copy_copy_2
@@ -190,7 +190,7 @@ components:
           layout_properties: {grid_position: 'XTNFIB,HQALSZ GMZUBF,BRGRTD'}
   - name: card_1_copy_copy_3
     properties: {visible: true}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'OBTYEB,JSFRNK TSTOXG,YGZXMW'}
     components:
     - name: text_1_copy_copy_3
@@ -199,7 +199,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_2_copy_2
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_1_copy_copy_copy_2
@@ -233,7 +233,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_4
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_1_copy_copy_3
@@ -261,7 +261,7 @@ components:
           layout_properties: {grid_position: 'XTNFIB,HQALSZ GMZUBF,BRGRTD'}
   - name: card_1_copy_copy_3_copy
     properties: {visible: true}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'OBTYEB,JSFRNK YRHGMD,SZHZMY'}
     components:
     - name: text_1_copy_copy_3_copy
@@ -270,7 +270,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_2_copy_2_copy
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_1_copy_copy_copy_2_copy
@@ -304,7 +304,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_4_copy
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_1_copy_copy_3_copy
@@ -332,7 +332,7 @@ components:
           layout_properties: {grid_position: 'XTNFIB,HQALSZ GMZUBF,BRGRTD'}
   - name: card_1_copy_copy
     properties: {visible: true}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'OBTYEB,KJNHMT XPCMVC,VCORHV'}
     components:
     - name: text_1_copy_copy
@@ -341,7 +341,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_copy
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_2_copy
@@ -387,7 +387,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_2
@@ -424,7 +424,7 @@ components:
           layout_properties: {grid_position: 'LINVKE,DDGQMJ'}
   - name: card_1_copy_copy_copy
     properties: {visible: true}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'OBTYEB,KJNHMT BPURLH,FKLLZU'}
     components:
     - name: text_1_copy_copy_copy
@@ -433,7 +433,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_copy_copy
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_2_copy_copy
@@ -468,7 +468,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_copy_2
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_2_copy_2
@@ -496,7 +496,7 @@ components:
           layout_properties: {grid_position: 'LINVKE,DDGQMJ'}
   - name: card_1_copy_copy_copy_2
     properties: {visible: true}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'OBTYEB,KJNHMT VDLYBA,BDGZUV'}
     components:
     - name: text_1_copy_copy_copy_2
@@ -505,7 +505,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_copy_copy_2
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_2_copy_copy_2
@@ -540,7 +540,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_copy_3
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_2_copy_3
@@ -568,7 +568,7 @@ components:
           layout_properties: {grid_position: 'LINVKE,DDGQMJ'}
   - name: card_1_copy_copy_copy_2_copy
     properties: {visible: true}
-    type: form:Components.Card_test
+    type: form:Components.Card
     layout_properties: {grid_position: 'OBTYEB,KJNHMT CYVCLV,IGDFJF'}
     components:
     - name: text_1_copy_copy_copy_2_copy
@@ -577,7 +577,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_copy_copy_2_copy
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_2_copy_copy_2_copy
@@ -611,7 +611,7 @@ components:
       layout_properties: {slot: card-content-slot}
     - name: card_content_container_1_copy_copy_copy_3_copy
       properties: {}
-      type: form:Components.Card_test.CardContentContainer
+      type: form:Components.Card.CardContentContainer
       layout_properties: {slot: card-content-slot}
       components:
       - name: column_panel_2_copy_3_copy

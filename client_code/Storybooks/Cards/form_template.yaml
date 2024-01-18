@@ -34,7 +34,7 @@ components:
       properties: {rounded_image: false, appearance: outlined, image_position: full,
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         image_height: 250p}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ ETYKRM,BWCZNC'}
       components:
       - name: full_title_heading_1
@@ -44,7 +44,7 @@ components:
         layout_properties: {slot: card-image-slot}
       - name: card_content_container_6
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-image-slot}
         components:
         - name: text_5
@@ -59,12 +59,12 @@ components:
           layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: none_outlined
       properties: {appearance: outlined}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ MVHMYI,SAKNYT'}
       components:
       - name: card_content_container_4_copy_copy
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_1_copy
@@ -95,12 +95,12 @@ components:
       properties: {appearance: outlined, image_position: top, image_height: 120px,
         card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         rounded_image: true}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ CBIXCJ,NZLDUT'}
       components:
       - name: card_content_container_4_copy_copy_copy_2_copy_2_copy_2
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: heading_1_copy_copy_copy_2_copy_2_copy_2
@@ -122,7 +122,7 @@ components:
         layout_properties: {slot: card-content-slot}
       - name: card_content_container_3
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: link_1_copy_2
@@ -133,12 +133,12 @@ components:
       properties: {appearance: outlined, image_position: right, image_height: '',
         card_image: 'https://images.unsplash.com/photo-1514936477380-5ea603b9a1ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         rounded_image: false, image_width: 100px}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ XWIXET,FPSYIJ'}
       components:
       - name: card_content_container_1_copy_3
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_3
@@ -157,12 +157,12 @@ components:
     - name: top_outlined_copy
       properties: {appearance: outlined, image_position: left, image_height: 65px,
         card_image: '', rounded_image: true, image_width: 65px}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ WGWLLI,WJGVUP'}
       components:
       - name: card_content_container_1
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_2
@@ -191,7 +191,7 @@ components:
       properties: {rounded_image: false, appearance: elevated, image_position: full,
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         image_width: ''}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,WREAWO TFZXFM,GWNOJK'}
       components:
       - name: full_title_heading_2
@@ -200,7 +200,7 @@ components:
         layout_properties: {slot: card-image-slot}
       - name: card_content_container_7
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-image-slot}
         components:
         - name: text_5_copy
@@ -215,12 +215,12 @@ components:
           layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: none_elevated
       properties: {}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,WREAWO ATIACM,XQTZXN'}
       components:
       - name: card_content_container_4_copy
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_1
@@ -251,12 +251,12 @@ components:
       properties: {appearance: elevated, image_position: top, image_height: 120px,
         card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         rounded_image: true}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,WREAWO YGIPAY,XNRXKB'}
       components:
       - name: card_content_container_4_copy_copy_copy_2_copy_2_copy
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: heading_1_copy_copy_copy_2_copy_2_copy
@@ -278,7 +278,7 @@ components:
         layout_properties: {slot: card-content-slot}
       - name: card_content_container_9
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: link_1_copy
@@ -289,12 +289,12 @@ components:
       properties: {appearance: elevated, image_position: right, image_height: '',
         card_image: 'https://images.unsplash.com/photo-1514936477380-5ea603b9a1ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         rounded_image: false, image_width: 100px}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,WREAWO OOSJVZ,QPABOP'}
       components:
       - name: card_content_container_1_copy_3_copy
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_3_copy
@@ -314,12 +314,12 @@ components:
       properties: {appearance: elevated, image_position: left, image_height: 65px,
         card_image: 'https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         rounded_image: true, image_width: 65px}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,WREAWO BGNRHQ,ZJHATY'}
       components:
       - name: card_content_container_1_copy
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_2_copy
@@ -348,7 +348,7 @@ components:
       properties: {rounded_image: false, appearance: filled, image_position: full,
         card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         image_height: '', image_width: ''}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,YAEOWI BWFXIR,JIWAFR'}
       components:
       - name: full_title_heading_3
@@ -357,7 +357,7 @@ components:
         layout_properties: {slot: card-image-slot}
       - name: card_content_container_8
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-image-slot}
         components:
         - name: text_5_copy_copy
@@ -372,12 +372,12 @@ components:
           layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: none_filled
       properties: {appearance: filled}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,YAEOWI JCCLYA,BCRGQW'}
       components:
       - name: card_content_container_4_copy_copy_copy
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_1_copy_copy
@@ -407,12 +407,12 @@ components:
     - name: top_filled
       properties: {appearance: filled, image_position: top, image_height: 120px, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         rounded_image: true}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,YAEOWI WZVJAU,BNRZFC'}
       components:
       - name: card_content_container_4_copy_copy_copy_2_copy_2
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: heading_1_copy_copy_copy_2_copy_2
@@ -434,7 +434,7 @@ components:
         layout_properties: {slot: card-content-slot}
       - name: card_content_container_2
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: link_1
@@ -444,12 +444,12 @@ components:
     - name: top_outlined_copy_copy_2_copy
       properties: {appearance: filled, image_position: right, image_height: '', card_image: 'https://images.unsplash.com/photo-1514936477380-5ea603b9a1ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         rounded_image: false, image_width: 100px}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,YAEOWI GMYZNM,PVJFIP'}
       components:
       - name: card_content_container_1_copy_3_copy_2
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_3_copy_2
@@ -468,12 +468,12 @@ components:
     - name: top_outlined_copy_copy_2
       properties: {appearance: filled, image_position: left, image_height: 65px, card_image: 'https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         rounded_image: true, image_width: 65px}
-      type: form:Components.Card_test
+      type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,YAEOWI WPOIVI,PFAVDO'}
       components:
       - name: card_content_container_1_copy_2
         properties: {}
-        type: form:Components.Card_test.CardContentContainer
+        type: form:Components.Card.CardContentContainer
         layout_properties: {slot: card-content-slot}
         components:
         - name: flow_panel_2_copy_2
