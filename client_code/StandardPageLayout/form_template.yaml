@@ -11,10 +11,6 @@ properties:
 - {name: show_sidesheet, type: boolean, default_value: true, important: true}
 is_package: true
 slots:
-  slot_1:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-navigation-rail-content}
-    target: {type: container, name: ''}
   slot_2:
     index: 0
     set_layout_properties: {slot: anvil-m3-app-bar-links}
@@ -30,6 +26,10 @@ slots:
   slot_5:
     index: 0
     set_layout_properties: {slot: anvil-m3-sidesheet}
+    target: {type: container, name: ''}
+  navigation_rail_slot:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-navigation-rail-content}
     target: {type: container, name: ''}
 custom_component: true
 components: []
