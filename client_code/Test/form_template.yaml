@@ -1,0 +1,13 @@
+layout: {type: 'form:StandardPageLayout'}
+is_package: true
+components_by_slot:
+  navigation_rail_slot:
+  - name: navigation_link_1
+    properties: {text: Settings, material_icon: settings}
+    type: form:Components.NavigationLink
+    layout_properties: {}
+  - name: navigation_link_2
+    properties: {text: Account, material_icon: account_circle}
+    type: form:Components.NavigationLink
+    layout_properties: {}
+slots: {}
