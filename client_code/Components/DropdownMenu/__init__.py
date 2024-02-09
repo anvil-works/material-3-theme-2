@@ -50,6 +50,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   #properties
   visible = HtmlTemplate.visible
+  margin = margin_property('anvil-m3-dropdownMenu-container')
 
   def set_background(self, value):
     self.selection_field.background = value
