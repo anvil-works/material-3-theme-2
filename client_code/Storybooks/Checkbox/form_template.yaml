@@ -53,33 +53,33 @@ components:
         type: ColumnPanel
         layout_properties: {grid_position: 'VNBGWB,GMLDFW NDAPMM,MPLGHL'}
         components:
+        - name: checkbox_5
+          properties: {text: 'Error, indeterminate', error: true, allow_indeterminate: true}
+          type: form:Components.Checkbox
+          layout_properties: {grid_position: 'OHGIBE,VCEUPB'}
+        - name: checkbox_4
+          properties: {text: 'Error, unchecked', error: true, checked: false}
+          type: form:Components.Checkbox
+          layout_properties: {grid_position: 'MHETUG,RXEIBL'}
         - name: checkbox_6
           properties: {text: 'Error, checked', checked: true, error: true}
           type: form:Components.Checkbox
           layout_properties: {grid_position: 'WJDSNE,PPBDJZ'}
-        - name: checkbox_4
-          properties: {text: 'Error, unchecked', error: true, checked: false}
-          type: form:Components.Checkbox
-          layout_properties: {grid_position: 'DCGVVU,RWXRJT'}
-        - name: checkbox_5
-          properties: {text: 'Error, indeterminate', error: true, allow_indeterminate: true}
-          type: form:Components.Checkbox
-          layout_properties: {grid_position: ''}
       - name: disabled_checkboxes
         properties: {}
         type: ColumnPanel
         layout_properties: {grid_position: 'VNBGWB,GMLDFW NDAPMM,MJNJRF'}
         components:
-        - name: checkbox_9_copy_1
+        - name: checkbox_9
           properties: {enabled: false, text: 'Disabled, indeterminate', checked: false,
             allow_indeterminate: true}
           type: form:Components.Checkbox
           layout_properties: {grid_position: ''}
-        - name: checkbox_8_copy_1
+        - name: checkbox_8
           properties: {enabled: false, text: 'Disabled, unchecked', checked: false}
           type: form:Components.Checkbox
           layout_properties: {grid_position: ''}
-        - name: checkbox_7_copy_1
+        - name: checkbox_7
           properties: {enabled: false, text: 'Disabled, checked', checked: true}
           type: form:Components.Checkbox
           layout_properties: {grid_position: ''}
