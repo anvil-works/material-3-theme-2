@@ -36,7 +36,7 @@ components:
         type: ColumnPanel
         layout_properties: {grid_position: 'VNBGWB,JIQEDF'}
         components:
-        - name: checkbox_3_copy_1
+        - name: checkbox_3
           properties: {text: Indeterminate, allow_indeterminate: true, checked: false}
           type: form:Components.Checkbox
           layout_properties: {grid_position: 'WTEIHA,ZGPNXB'}
