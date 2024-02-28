@@ -16,7 +16,7 @@ class BrookeTestPage(BrookeTestPageTemplate):
     self.repeating_panel_1.items = app_tables.people.search()
     self.repeating_panel_1_copy.items = app_tables.people.search()
 
-
+  
 
 
 
