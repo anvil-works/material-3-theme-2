@@ -27,5 +27,9 @@ components_by_slot:
     properties: {appearance: filled, text: Button, align: left}
     type: form:Components.Button
     layout_properties: {}
+  - name: interactive_card_1
+    properties: {}
+    type: form:Components.InteractiveCard
+    layout_properties: {}
 components: []
 event_bindings: {show: form_show}
