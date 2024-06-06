@@ -128,5 +128,3 @@ class NavigationLink(NavigationLinkTemplate):
   margin = margin_property('anvil-m3-navigation-link-container')
 
   
-
-
