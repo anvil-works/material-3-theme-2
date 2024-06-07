@@ -50,6 +50,7 @@ element {
 .anvil-m3-textinput-border.with-icon { grid-template-columns: 48px auto 1fr; }
 .anvil-m3-textinput-border > .anvil-m3-textinput-border-container-cell-b { grid-column: 1 / span 3; grid-row: 2 / span 4; }
 .anvil-m3-textinput-label-text { 
+  text-wrap: nowrap;
   grid-column: 2 / span 1; grid-row: 3 / span 1; }
 
 .anvil-m3-textinput-subcontent {
