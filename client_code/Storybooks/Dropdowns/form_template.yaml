@@ -88,7 +88,7 @@ components:
                 items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
                   dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
                   dropdown item 9]
-                placeholder: placeholder
+                placeholder: Long placeholder text
                 label_text: Dropdown Label 2
                 appearance: outlined
                 allow_none: false
@@ -123,6 +123,7 @@ components:
                 include_placeholder: ''
                 label_text: Dropdown Label 3
                 allow_none: true
+                appearance: outlined
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
             - name: dropdown_menu_4
@@ -131,7 +132,7 @@ components:
                   dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
                   dropdown item 9]
                 include_placeholder: ''
-                placeholder: placeholder
+                placeholder: Long placeholder text
                 label_text: Dropdown Label 4
                 appearance: outlined
                 allow_none: true
@@ -195,7 +196,7 @@ components:
                 items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
                   dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
                   dropdown item 9]
-                placeholder: placeholder
+                placeholder: Long placeholder text
                 label_text: ''
                 appearance: outlined
                 allow_none: false
@@ -227,6 +228,8 @@ components:
             include_placeholder: ''
             label_text: ''
             allow_none: true
+            placeholder: ''
+            appearance: outlined
           type: form:Components.DropdownMenu
           layout_properties: {width: 273}
         - name: dropdown_menu_4_copy_2
@@ -235,7 +238,7 @@ components:
               dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
               dropdown item 9]
             include_placeholder: ''
-            placeholder: placeholder
+            placeholder: Long placeholder text
             label_text: ''
             appearance: outlined
             allow_none: true
