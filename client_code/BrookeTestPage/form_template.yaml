@@ -93,10 +93,18 @@ components_by_slot:
     - name: dropdown_menu_1
       properties:
         placeholder: Long placeholder text
-        items: [Item 1]
+        items: [Item 1, item 2, item 3, item 4]
         appearance: outlined
+        allow_none: true
       type: form:Components.DropdownMenu
       layout_properties: {grid_position: 'DPTAFV,BIUBQY'}
+    - name: dropdown_menu_1_copy
+      properties:
+        placeholder: Long placeholder text
+        items: [Item 1, item 2, item 3, item 4]
+        appearance: filled
+      type: form:Components.DropdownMenu
+      layout_properties: {grid_position: 'PNPVFA,RIVNYJ'}
     - name: interactive_card_1
       properties: {enabled: false}
       type: form:Components.InteractiveCard
