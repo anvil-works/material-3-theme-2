@@ -13,8 +13,7 @@ components:
     type: form:Components.Text
     layout_properties: {grid_position: ''}
   - name: text_2_copy_1_copy_1
-    properties: {text: 'Checkboxes let users select one or more items from a list,
-        or turn an item on or off'}
+    properties: {text: 'Checkboxes let users select one or more items from a list, or turn an item on or off'}
     type: form:Components.Text
     layout_properties: {grid_position: ''}
   - name: link_1_copy_1
@@ -71,8 +70,7 @@ components:
         layout_properties: {grid_position: 'VNBGWB,GMLDFW NDAPMM,MJNJRF'}
         components:
         - name: checkbox_9_copy_1
-          properties: {enabled: false, text: 'Disabled, indeterminate', checked: false,
-            allow_indeterminate: true}
+          properties: {enabled: false, text: 'Disabled, indeterminate', checked: false, allow_indeterminate: true}
           type: form:Components.Checkbox
           layout_properties: {grid_position: ''}
         - name: checkbox_8_copy_1

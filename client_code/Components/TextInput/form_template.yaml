@@ -1,14 +1,9 @@
 properties:
-- {name: label_text, type: string, default_value: '', important: true, default_binding_prop: true,
-  group: Key Properties, description: Text displayed on the label of this component.}
-- {name: placeholder, type: string, default_value: '', important: true, group: Key Properties,
-  description: The text to be displayed when the component is empty.}
-- {name: supporting_text, type: string, default_value: '', important: false, group: Key Properties,
-  description: Text displayed underneath this component.}
-- {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties,
-  description: Limit the amount of characters that can be entered into this box.}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.: null}
+- {name: label_text, type: string, default_value: '', important: true, default_binding_prop: true, group: Key Properties, description: Text displayed on the label of this component.}
+- {name: placeholder, type: string, default_value: '', important: true, group: Key Properties, description: The text to be displayed when the component is empty.}
+- {name: supporting_text, type: string, default_value: '', important: false, group: Key Properties, description: Text displayed underneath this component.}
+- {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties, description: Limit the amount of characters that can be entered into this box.}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
 - name: align
   type: enum
   options: [left, center, right]
@@ -24,38 +19,22 @@ properties:
   default_value: filled
   group: Key Properties
   description: Predefined style type.
-- {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible,
-  group: Look and Feel, description: 'Should this component be displayed?'}
-- {name: label_text_color, type: color, default_value: '', important: false, description: Component’s label's text color,
-  group: Look and Feel}
-- {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color,
-  group: Look and Feel}
-- {name: supporting_text_color, type: color, default_value: '', important: false,
-  description: The color of this component's supporting text., group: Look and Feel}
-- {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in italics,
-  group: Text}
-- {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in bold,
-  group: Text}
-- {name: underline_label, type: boolean, default_value: false, important: false, description: Display this component’s label text underlined,
-  group: Text}
-- {name: label_font_size, type: number, important: false, description: The height of text displayed on this component’s label in pixels,
-  group: Text}
-- {name: label_font, type: string, default_value: '', important: false, description: The font family to use for this component’s label,
-  group: Text}
-- {name: italic_display, type: boolean, default_value: false, important: false, description: Display this component’s text in italics,
-  group: Text}
-- {name: bold_display, type: boolean, default_value: false, important: false, description: Display this component’s text in bold,
-  group: Text}
-- {name: underline_display, type: boolean, default_value: false, important: false,
-  description: Display this component’s text in underline, group: Text}
-- {name: display_font, type: string, default_value: '', important: false, description: The font family to use for this component’s text,
-  group: Text}
-- {name: display_font_size, type: number, important: false, description: The height of text displayed on this component’s text in pixels,
-  group: Text}
-- {name: enabled, type: boolean, default_value: true, important: true, group: Interaction,
-  designer_hint: enabled, description: True if this component should allow user interaction.}
-- {name: error, type: boolean, default_value: false, important: false, group: Interaction,
-  designer_hint: toggle, description: Whether or not the checkbox is in an error state.}
+- {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible, group: Look and Feel, description: 'Should this component be displayed?'}
+- {name: label_text_color, type: color, default_value: '', important: false, description: Component’s label's text color, group: Look and Feel}
+- {name: display_text_color, type: color, default_value: '', important: false, description: Component’s Input Text Color, group: Look and Feel}
+- {name: supporting_text_color, type: color, default_value: '', important: false, description: The color of this component's supporting text., group: Look and Feel}
+- {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in italics, group: Text}
+- {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label text in bold, group: Text}
+- {name: underline_label, type: boolean, default_value: false, important: false, description: Display this component’s label text underlined, group: Text}
+- {name: label_font_size, type: number, important: false, description: The height of text displayed on this component’s label in pixels, group: Text}
+- {name: label_font, type: string, default_value: '', important: false, description: The font family to use for this component’s label, group: Text}
+- {name: italic_display, type: boolean, default_value: false, important: false, description: Display this component’s text in italics, group: Text}
+- {name: bold_display, type: boolean, default_value: false, important: false, description: Display this component’s text in bold, group: Text}
+- {name: underline_display, type: boolean, default_value: false, important: false, description: Display this component’s text in underline, group: Text}
+- {name: display_font, type: string, default_value: '', important: false, description: The font family to use for this component’s text, group: Text}
+- {name: display_font_size, type: number, important: false, description: The height of text displayed on this component’s text in pixels, group: Text}
+- {name: enabled, type: boolean, default_value: true, important: true, group: Interaction, designer_hint: enabled, description: True if this component should allow user interaction.}
+- {name: error, type: boolean, default_value: false, important: false, group: Interaction, designer_hint: toggle, description: Whether or not the checkbox is in an error state.}
 - name: spacing
   type: spacing
   important: true
@@ -64,22 +43,15 @@ properties:
     margin: [auto, null, null, null]
   group: Layout
   description: The margin and padding of this component. Default value is in pixels.
-- {name: background, type: color, default_value: '', important: false, description: The background color of this component.,
-  group: Look and Feel}
+- {name: background, type: color, default_value: '', important: false, description: The background color of this component., group: Look and Feel}
 - {name: tooltip, type: string, default_value: '', important: false, group: Other}
-- {name: supporting_text_font, type: string, default_value: '', important: false,
-  description: The font family to use for this component’s supporting text., group: Text}
-- {name: supporting_text_font_size, type: number, important: false, description: The height of text displayed on this component’s supporting text in pixels.,
-  group: Text}
-- {name: character_limit_color, type: color, default_value: '', important: false,
-  description: The color of the character limit's text., group: Look and Feel}
-- {name: character_limit_font, type: string, default_value: '', important: false,
-  description: The font family to use for this component’s character limit., group: Text}
-- {name: character_limit_font_size, type: number, important: false, description: The height of text displayed on this component’s character limit in pixels.,
-  group: Text}
+- {name: supporting_text_font, type: string, default_value: '', important: false, description: The font family to use for this component’s supporting text., group: Text}
+- {name: supporting_text_font_size, type: number, important: false, description: The height of text displayed on this component’s supporting text in pixels., group: Text}
+- {name: character_limit_color, type: color, default_value: '', important: false, description: The color of the character limit's text., group: Look and Feel}
+- {name: character_limit_font, type: string, default_value: '', important: false, description: The font family to use for this component’s character limit., group: Text}
+- {name: character_limit_font_size, type: number, important: false, description: The height of text displayed on this component’s character limit in pixels., group: Text}
 - {name: text, type: string, default_value: '', important: true, description: The text displayed on this property}
-- {name: border_color, type: color, default_value: '', important: false, description: The color of the component's border,
-  group: Look and Feel}
+- {name: border_color, type: color, default_value: '', important: false, description: The color of the component's border, group: Look and Feel}
 is_package: true
 events:
 - {name: change, description: When the text in this component is edited.}
@@ -92,27 +64,6 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div class=\"anvil-m3-textinput\" anvil-name=\"anvil-m3-textinput\"\
-      \ >\n  <div class=\"anvil-m3-textinput-input-container\" anvil-name=\"anvil-m3-input-container\"\
-      >\n    <textarea class=\"anvil-m3-textinput-input anvil-m3-textarea\" row=\"\
-      1\" anvil-name=\"anvil-m3-textarea\"></textarea>\n    <input class=\"anvil-m3-textinput-input\
-      \ anvil-m3-textfield\" type=\"text\" anvil-name=\"anvil-m3-textfield\" />\n\
-      \    <div class=\"anvil-m3-textinput-border\"anvil-name=\"anvil-m3-border-container\"\
-      \  >\n      <div class=\"anvil-m3-textinput-border-container-cell-tl\"></div>\n\
-      \      <div class=\"anvil-m3-textinput-border-container-cell-t\"></div>\n  \
-      \    <div class=\"anvil-m3-textinput-border-container-cell-tr\"></div>\n   \
-      \   <div class=\"anvil-m3-textinput-border-container-cell-b\"></div>\n     \
-      \ <label class=\"anvil-m3-textinput-label-text\" anvil-name=\"anvil-m3-label-text\"\
-      \ for=\"\"></label>\n    </div>\n    <div class=\"anvil-m3-textinput-icon-container\"\
-      \ anvil-name=\"anvil-m3-icon-container\">\n      <i class=\"anvil-m3-textinput-leading-icon\
-      \ material-symbols-outlined\" anvil-name=\"anvil-m3-leading-icon\" style=\"\
-      display: none;\"></i>\n      <i class=\"anvil-m3-textinput-trailing-icon material-symbols-outlined\"\
-      \ anvil-name=\"anvil-m3-trailing-icon\" style=\"display: none;\"></i>\n  \t\
-      </div>\n  </div>\n  <div class=\"anvil-m3-textinput-subcontent\" anvil-name=\"\
-      anvil-m3-subcontent\">\n    <label class=\"anvil-m3-textinput-supporting-text\"\
-      \ anvil-name=\"anvil-m3-supporting-text\"></label> \n    <label style=\"display:\
-      \ none\" class=\"anvil-m3-textinput-character-count\" anvil-name=\"anvil-m3-character-counter\"\
-      >\n      <span anvil-name=\"anvil-m3-character-amount\" >0</span>\n      /\n\
-      \      <span anvil-name=\"anvil-m3-character-limit\" >10</span>\n    </label>\n\
-      \  </div>\n</div>"}
+  properties:
+    html: "<div class=\"anvil-m3-textinput\" anvil-name=\"anvil-m3-textinput\" >\n  <div class=\"anvil-m3-textinput-input-container\" anvil-name=\"anvil-m3-input-container\">\n    <textarea class=\"anvil-m3-textinput-input anvil-m3-textarea\" row=\"1\" anvil-name=\"anvil-m3-textarea\"></textarea>\n    <input class=\"anvil-m3-textinput-input anvil-m3-textfield\" type=\"text\" anvil-name=\"anvil-m3-textfield\" />\n    <div class=\"anvil-m3-textinput-border\"anvil-name=\"anvil-m3-border-container\"  >\n      <div class=\"anvil-m3-textinput-border-container-cell-tl\"></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-t\"></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-tr\"></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-b\"></div>\n      <label class=\"anvil-m3-textinput-label-text\" anvil-name=\"anvil-m3-label-text\" for=\"\"></label>\n    </div>\n    <div class=\"anvil-m3-textinput-icon-container\" anvil-name=\"anvil-m3-icon-container\">\n      <i class=\"anvil-m3-textinput-leading-icon material-symbols-outlined\" anvil-name=\"anvil-m3-leading-icon\" style=\"display: none;\"></i>\n      <i class=\"anvil-m3-textinput-trailing-icon material-symbols-outlined\" anvil-name=\"anvil-m3-trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n  </div>\n  <div class=\"anvil-m3-textinput-subcontent\" anvil-name=\"anvil-m3-subcontent\">\n    <label class=\"anvil-m3-textinput-supporting-text\" anvil-name=\"anvil-m3-supporting-text\"></label> \n    <label style=\"display: none\" class=\"anvil-m3-textinput-character-count\" anvil-name=\"anvil-m3-character-counter\">\n      <span anvil-name=\"anvil-m3-character-amount\" >0</span>\n      /\n      <span anvil-name=\"anvil-m3-character-limit\" >10</span>\n    </label>\n  </div>\n</div>"
   event_bindings: {show: form_show}

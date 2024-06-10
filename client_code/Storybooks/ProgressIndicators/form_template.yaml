@@ -54,8 +54,7 @@ components:
           layout_properties: {grid_position: 'HHGCRC,SOUFZA'}
           event_bindings: {click: button_1_click}
         - name: circular_progress_indicator_determinate
-          properties: {visible: true, type: determinate, progress: 50, align: center,
-            color: '#'}
+          properties: {visible: true, type: determinate, progress: 50, align: center, color: '#'}
           type: form:Components.CircularProgressIndicator
           layout_properties: {grid_position: 'GOCHRS,EAGRUI'}
         - name: linear_progress_indicator_determinate

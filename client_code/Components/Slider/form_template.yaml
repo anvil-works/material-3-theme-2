@@ -1,39 +1,24 @@
 properties:
-- {name: show_label, type: boolean, default_value: false, default_binding_prop: true,
-  group: Label, important: true, description: Display a label above the thumb}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.: null}
-- {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction,
-  description: True if this component should allow user interaction}
-- {name: progress_color, type: color, default_value: '', important: false, description: Color of the pogress bar,
-  group: Look and feel}
-- {name: track_color, type: color, default_value: '', important: false, description: Color of the track,
-  group: Look and feel}
-- {name: thumb_color, type: color, default_value: '', important: false, description: Color of the slider thumb,
-  group: Look and feel}
-- {name: label_color, type: color, default_value: '', important: false, description: Color of the background of the label,
-  group: Label}
-- {name: label_text_color, type: color, default_value: '', important: false, description: Color of the text of the label,
-  group: Label}
-- {name: value, type: number, important: true, default_value: null, description: The value of the slider,
-  group: Key properties}
-- {name: min, type: number, important: true, default_value: 0, description: The minimum value of the slider,
-  group: Key properties}
-- {name: max, type: number, important: true, default_value: 10, description: The maximum value of the slider,
-  group: Key properties}
-- {name: step, type: number, important: true, description: The stepping interval for the slider,
-  group: Key properties}
+- {name: show_label, type: boolean, default_value: false, default_binding_prop: true, group: Label, important: true, description: Display a label above the thumb}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
+- {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction, description: True if this component should allow user interaction}
+- {name: progress_color, type: color, default_value: '', important: false, description: Color of the pogress bar, group: Look and feel}
+- {name: track_color, type: color, default_value: '', important: false, description: Color of the track, group: Look and feel}
+- {name: thumb_color, type: color, default_value: '', important: false, description: Color of the slider thumb, group: Look and feel}
+- {name: label_color, type: color, default_value: '', important: false, description: Color of the background of the label, group: Label}
+- {name: label_text_color, type: color, default_value: '', important: false, description: Color of the text of the label, group: Label}
+- {name: value, type: number, important: true, default_value: null, description: The value of the slider, group: Key properties}
+- {name: min, type: number, important: true, default_value: 0, description: The minimum value of the slider, group: Key properties}
+- {name: max, type: number, important: true, default_value: 10, description: The maximum value of the slider, group: Key properties}
+- {name: step, type: number, important: true, description: The stepping interval for the slider, group: Key properties}
 - name: margin
   type: margin
   important: true
   default_value: ['', '', '', '']
   group: Layout
-- {name: show_markers, type: boolean, default_value: false, important: true, description: Display discrete markers,
-  group: Look and feel}
-- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
-  group: Other}
-- {name: visible, type: boolean, default_value: true, important: true, description: 'Should
-    this component be displayed?', group: Look and Feel, designer_hint: visible}
+- {name: show_markers, type: boolean, default_value: false, important: true, description: Display discrete markers, group: Look and feel}
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component, group: Other}
+- {name: visible, type: boolean, default_value: true, important: true, description: 'Should this component be displayed?', group: Look and Feel, designer_hint: visible}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the value of the component is changed}
@@ -46,14 +31,19 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<!-- Inspired by: https://codepen.io/viestursm/pen/BayEjaN -->\n\
-      \n<div class=\"anvil-m3-slider\" anvil-name=\"anvil-m3-slider\">\n  <div class=\"\
-      anvil-m3-slider-track-container\" anvil-name=\"anvil-m3-slider-track-container\"\
-      >\n    <div class=\"anvil-m3-slider-background\" anvil-name=\"anvil-m3-slider-background\"\
-      >\n      <div class=\"anvil-m3-slider-markers-container-bg\" anvil-name=\"anvil-m3-slider-markers-container-bg\"\
-      ></div>\n    </div>\n    <div class=\"anvil-m3-slider-progress\" anvil-name=\"\
-      anvil-m3-slider-progress\">\n      <div class=\"anvil-m3-slider-markers-container-progress\"\
-      \ anvil-name=\"anvil-m3-slider-markers-container-progress\"></div>\n    </div>\n\
-      \  </div>\n  <input anvil-name=\"anvil-m3-slider-input\" type=\"range\" min=\"\
-      0\" max=\"10\">\n</div>\n"}
+  properties:
+    html: |
+      <!-- Inspired by: https://codepen.io/viestursm/pen/BayEjaN -->
+
+      <div class="anvil-m3-slider" anvil-name="anvil-m3-slider">
+        <div class="anvil-m3-slider-track-container" anvil-name="anvil-m3-slider-track-container">
+          <div class="anvil-m3-slider-background" anvil-name="anvil-m3-slider-background">
+            <div class="anvil-m3-slider-markers-container-bg" anvil-name="anvil-m3-slider-markers-container-bg"></div>
+          </div>
+          <div class="anvil-m3-slider-progress" anvil-name="anvil-m3-slider-progress">
+            <div class="anvil-m3-slider-markers-container-progress" anvil-name="anvil-m3-slider-markers-container-progress"></div>
+          </div>
+        </div>
+        <input anvil-name="anvil-m3-slider-input" type="range" min="0" max="10">
+      </div>
   event_bindings: {show: form_show}

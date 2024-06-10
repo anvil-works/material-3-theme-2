@@ -1,18 +1,11 @@
 properties:
-- {name: background, type: color, default_value: '', important: false, description: background color of the component,
-  group: Look and Feel}
-- {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label in bold,
-  group: Label Style}
-- {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction,
-  group: Interaction, designerHint: enabled, designer_hint: enabled}
-- {name: label_font, type: string, default_value: '', important: false, description: The font family to use for this component's label,
-  group: Label Style}
-- {name: label_font_size, type: number, important: false, description: The height of text displayed on this component's label in pixels,
-  group: Label Style}
-- {name: label_text_color, type: color, default_value: '', important: false, description: Component's Input Text Color,
-  group: Label Style}
-- {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s text in italics,
-  group: Label Style}
+- {name: background, type: color, default_value: '', important: false, description: background color of the component, group: Look and Feel}
+- {name: bold_label, type: boolean, default_value: false, important: false, description: Display this component’s label in bold, group: Label Style}
+- {name: enabled, type: boolean, default_value: true, important: true, description: True if this component should allow user interaction, group: Interaction, designerHint: enabled, designer_hint: enabled}
+- {name: label_font, type: string, default_value: '', important: false, description: The font family to use for this component's label, group: Label Style}
+- {name: label_font_size, type: number, important: false, description: The height of text displayed on this component's label in pixels, group: Label Style}
+- {name: label_text_color, type: color, default_value: '', important: false, description: Component's Input Text Color, group: Label Style}
+- {name: italic_label, type: boolean, default_value: false, important: false, description: Display this component’s text in italics, group: Label Style}
 - name: items
   type: text[]
   default_value: []
@@ -20,56 +13,31 @@ properties:
   description: The items to display in this dropdown
   group: Key Properties
   default_binding_prop: true
-- {name: placeholder, type: string, default_value: '', important: true, description: The text to be displayed when the selected_value is None,
-  group: Key Properties}
+- {name: placeholder, type: string, default_value: '', important: true, description: The text to be displayed when the selected_value is None, group: Key Properties}
 - name: appearance
   type: enum
   important: true
   options: ['', outlined]
   description: Selection field's appearance
   group: Look and Feel
-- {name: selected_value, type: object, important: true, description: The value of the currently selected item. Can only be set at runtime,
-  group: Interaction}
-- {name: underline_label, type: boolean, default_value: false, important: false, description: Display this component’s text underlined,
-  group: Label Style}
-- {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed,
-  group: Look and Feel, designerHint: visible, designer_hint: visible}
-- {name: label_text, type: string, default_value: '', important: true, group: Key Properties,
-  description: Label text associated with the component. Usually the prompt.}
-- {name: bold_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style,
-  description: True if you'd like to bold the menu items}
-- {name: italic_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style,
-  description: True if you'd like to italicize the menu items}
-- {name: underline_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style,
-  description: True if you'd like to underline the menu items}
-- {name: items_text_color, type: color, default_value: '', important: false, description: Component's menu items' text color,
-  group: Dropdown Items Style}
-- {name: items_background, type: color, default_value: '', important: false, description: Component's menu items' background color,
-  group: Dropdown Items Style}
-- {name: items_font, type: string, default_value: '', important: false, description: The font family to use for the dropdown items,
-  group: Dropdown Items Style}
-- {name: items_font_size, type: number, important: false, description: The height of text displayed on the dropdown items in pixels,
-  group: Dropdown Items Style}
-- {name: selected_italic_display, type: boolean, default_value: false, important: false,
-  group: Selection Field Style, description: 'True, when there is a selected item,
-    the displayed text in the selection field is italicized'}
-- {name: selected_bold_display, type: boolean, default_value: false, important: false,
-  description: 'True, when there is a selected item, the displayed text in the selection
-    field is bold', group: Selection Field Style}
-- {name: selected_underline_display, type: boolean, default_value: false, important: false,
-  description: 'True, when there is a selected item, the displayed text in the selection
-    field is underlined', group: Selection Field Style}
-- {name: selected_font, type: string, default_value: '', important: false, description: 'When
-    there is a selected item, the font-family of the displayed text in the selection
-    field', group: Selection Field Style}
-- {name: selected_font_size, type: number, important: false, description: 'When there
-    is a selected item, the font-size (pixels) of the displayed text in the selection
-    field', group: Selection Field Style}
-- {name: selected_text_color, type: color, default_value: '', important: false, description: 'When
-    there is a selected item, the color of the displayed text in the selection field',
-  group: Selection Field Style}
-- {name: allow_none, type: boolean, default_value: false, important: true, description: Whether to add a placeholder item to the list with value None,
-  group: Interaction}
+- {name: selected_value, type: object, important: true, description: The value of the currently selected item. Can only be set at runtime, group: Interaction}
+- {name: underline_label, type: boolean, default_value: false, important: false, description: Display this component’s text underlined, group: Label Style}
+- {name: visible, type: boolean, default_value: true, important: true, description: Should this component be displayed, group: Look and Feel, designerHint: visible, designer_hint: visible}
+- {name: label_text, type: string, default_value: '', important: true, group: Key Properties, description: Label text associated with the component. Usually the prompt.}
+- {name: bold_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style, description: True if you'd like to bold the menu items}
+- {name: italic_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style, description: True if you'd like to italicize the menu items}
+- {name: underline_items, type: boolean, default_value: false, important: true, group: Dropdown Items Style, description: True if you'd like to underline the menu items}
+- {name: items_text_color, type: color, default_value: '', important: false, description: Component's menu items' text color, group: Dropdown Items Style}
+- {name: items_background, type: color, default_value: '', important: false, description: Component's menu items' background color, group: Dropdown Items Style}
+- {name: items_font, type: string, default_value: '', important: false, description: The font family to use for the dropdown items, group: Dropdown Items Style}
+- {name: items_font_size, type: number, important: false, description: The height of text displayed on the dropdown items in pixels, group: Dropdown Items Style}
+- {name: selected_italic_display, type: boolean, default_value: false, important: false, group: Selection Field Style, description: 'True, when there is a selected item, the displayed text in the selection field is italicized'}
+- {name: selected_bold_display, type: boolean, default_value: false, important: false, description: 'True, when there is a selected item, the displayed text in the selection field is bold', group: Selection Field Style}
+- {name: selected_underline_display, type: boolean, default_value: false, important: false, description: 'True, when there is a selected item, the displayed text in the selection field is underlined', group: Selection Field Style}
+- {name: selected_font, type: string, default_value: '', important: false, description: 'When there is a selected item, the font-family of the displayed text in the selection field', group: Selection Field Style}
+- {name: selected_font_size, type: number, important: false, description: 'When there is a selected item, the font-size (pixels) of the displayed text in the selection field', group: Selection Field Style}
+- {name: selected_text_color, type: color, default_value: '', important: false, description: 'When there is a selected item, the color of the displayed text in the selection field', group: Selection Field Style}
+- {name: allow_none, type: boolean, default_value: false, important: true, description: Whether to add a placeholder item to the list with value None, group: Interaction}
 is_package: true
 events:
 - {name: change, default_event: true, description: when an item is selected}
@@ -84,17 +52,17 @@ components:
   layout_properties: {slot: anvil-m3-dropdownMenu-slot}
   components: []
 - name: selection_field
-  properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: '',
-    placeholder: '', supporting_text: ' '}
+  properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: '', placeholder: '', supporting_text: ' '}
   type: form:Components.TextField_deprecated
   layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-dropdownMenu-container\" class=\"\
-      anvil-m3-dropdownMenu-container\" >\n  <div anvil-slot=\"anvil-m3-dropdownMenu-textfield\"\
-      \ anvil-name=\"anvil-m3-dropdownMenu-textfield\" class=\"anvil-m3-dropdownMenu-textfield\"\
-      \ anvil-slot-internal></div>\n  <div anvil-slot=\"anvil-m3-dropdownMenu-slot\"\
-      \ anvil-name=\"anvil-m3-dropdownMenu-items-container\" class=\"anvil-m3-dropdownMenu-items-container\"\
-      \ anvil-slot-internal></div>\n</div>", visible: true}
+  properties:
+    html: |-
+      <div anvil-name="anvil-m3-dropdownMenu-container" class="anvil-m3-dropdownMenu-container" >
+        <div anvil-slot="anvil-m3-dropdownMenu-textfield" anvil-name="anvil-m3-dropdownMenu-textfield" class="anvil-m3-dropdownMenu-textfield" anvil-slot-internal></div>
+        <div anvil-slot="anvil-m3-dropdownMenu-slot" anvil-name="anvil-m3-dropdownMenu-items-container" class="anvil-m3-dropdownMenu-items-container" anvil-slot-internal></div>
+      </div>
+    visible: true
   event_bindings: {show: form_show}
 custom_component_container: true

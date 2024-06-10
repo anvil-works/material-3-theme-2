@@ -1,19 +1,16 @@
 layout:
   type: form:StandardPageLayout
-  properties: {navigation_rail_collapse_to: Bottom app bar, app_title: Material Design 3,
-    show_sidesheet: false}
+  properties: {navigation_rail_collapse_to: Navigation drawer, app_title: Material Design 3, show_sidesheet: false}
 is_package: true
 components_by_slot:
   slot_1:
   - name: navigation_link_1
-    properties: {text: Home, material_icon: home, selected: true, navigate_to: TestPage,
-      badge: true}
+    properties: {text: Home, material_icon: home, selected: true, navigate_to: TestPage, badge: true}
     type: form:Components.NavigationLink
     layout_properties: {}
     event_bindings: {click: navigation_link_1_click}
   - name: navigation_link_2
-    properties: {material_icon: mail, text: Mail, navigate_to: AnotherPage, badge: true,
-      badge_count: 11}
+    properties: {material_icon: mail, text: Mail, navigate_to: AnotherPage, badge: true, badge_count: 11}
     type: form:Components.NavigationLink
     layout_properties: {}
   - name: divider_1
@@ -21,8 +18,7 @@ components_by_slot:
     type: form:Components.Divider
     layout_properties: {}
   - name: navigation_link_3
-    properties: {text: Log out, material_icon: logout, selected: false, badge: false,
-      url: 'https://anvil.works', role: null}
+    properties: {text: Log out, material_icon: logout, selected: false, badge: false, url: 'https://anvil.works', role: null}
     type: form:Components.NavigationLink
     layout_properties: {}
     event_bindings: {}

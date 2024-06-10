@@ -1,16 +1,13 @@
 properties:
-- {name: visible, type: boolean, default_value: true, default_binding_prop: true,
-  important: true, designerHint: visible, designer_hint: visible, group: Look and Feel}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.: null}
+- {name: visible, type: boolean, default_value: true, default_binding_prop: true, important: true, designerHint: visible, designer_hint: visible, group: Look and Feel}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
 - name: type
   type: enum
   important: true
   options: [determinate, indeterminate]
   default_value: indeterminate
   group: Key Properties
-- {name: progress, type: number, important: true, default_value: 0, description: Percentage of progress for determinate type. Irrelevant for indeterminate type.,
-  group: Key Properties}
+- {name: progress, type: number, important: true, default_value: 0, description: Percentage of progress for determinate type. Irrelevant for indeterminate type., group: Key Properties}
 - name: align
   type: enum
   important: true
@@ -19,8 +16,7 @@ properties:
   default_value: left
   group: Layout
 - {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of the component.}
-- {name: tooltip, type: string, default_value: '', important: true, group: Other,
-  description: Text to display when you hover the mouse over this component.}
+- {name: tooltip, type: string, default_value: '', important: true, group: Other, description: Text to display when you hover the mouse over this component.}
 - {name: color, type: color, default_value: '', important: true, description: The color of this component.}
 is_package: true
 events:
@@ -33,14 +29,5 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-progressindicator-component\" style=\"\
-      display:flex\">\n  <div anvil-name=\"anvil-m3-progressindicator\" class=\"anvil-m3-progressindicator-component\"\
-      >\n    <svg anvil-name=\"anvil-m3-progressindicator-indeterminate\" class=\"\
-      anvil-m3-progressindicator-circular\" style=\"transform: scaleX(-1)\">\n   \
-      \   <path anvil-name=\"anvil-m3-progressindicator-arc-indeterminate\" class=\"\
-      anvil-m3-progressindicator-arc anvil-m3-indefinate\" d=\"M 42 23 A 18 18 358\
-      \ 1 1 42 22\"></path>\n    </svg>\n    <svg anvil-name=\"anvil-m3-progressindicator-determinate\"\
-      \ class=\"anvil-m3-progressindicator-circular anvil-m3-progressindicator-hidden\"\
-      >\n      <path anvil-name=\"anvil-m3-progressindicator-arc\" class=\"anvil-m3-progressindicator-arc\"\
-      \ d=\"M 24.0 6.0 A 18 18 0.0 0 1 25.7970014996429 6.089925024995534\">\n   \
-      \   </path>\n    </svg> \n  </div>\n</div>"}
+  properties:
+    html: "<div anvil-name=\"anvil-m3-progressindicator-component\" style=\"display:flex\">\n  <div anvil-name=\"anvil-m3-progressindicator\" class=\"anvil-m3-progressindicator-component\">\n    <svg anvil-name=\"anvil-m3-progressindicator-indeterminate\" class=\"anvil-m3-progressindicator-circular\" style=\"transform: scaleX(-1)\">\n      <path anvil-name=\"anvil-m3-progressindicator-arc-indeterminate\" class=\"anvil-m3-progressindicator-arc anvil-m3-indefinate\" d=\"M 42 23 A 18 18 358 1 1 42 22\"></path>\n    </svg>\n    <svg anvil-name=\"anvil-m3-progressindicator-determinate\" class=\"anvil-m3-progressindicator-circular anvil-m3-progressindicator-hidden\">\n      <path anvil-name=\"anvil-m3-progressindicator-arc\" class=\"anvil-m3-progressindicator-arc\" d=\"M 24.0 6.0 A 18 18 0.0 0 1 25.7970014996429 6.089925024995534\">\n      </path>\n    </svg> \n  </div>\n</div>"

@@ -4,8 +4,9 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-slot=\"anvil-m3-card-content-container-slot\" anvil-name=\"\
-      anvil-m3-card-content-container\" class=\"anvil-m3-card-content-container\"\
-      >\n  <p anvil-name=\"empty-slot\" anvil-if-slot-empty=\"anvil-m3-card-content-container-slot\"\
-      \ style=\"color: #BBB\"><i>Insert Content</i></p>\n</div>"}
+  properties:
+    html: |-
+      <div anvil-slot="anvil-m3-card-content-container-slot" anvil-name="anvil-m3-card-content-container" class="anvil-m3-card-content-container">
+        <p anvil-name="empty-slot" anvil-if-slot-empty="anvil-m3-card-content-container-slot" style="color: #BBB"><i>Insert Content</i></p>
+      </div>
 custom_component_container: true

@@ -45,13 +45,11 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_field_1
-          properties: {label_text: 'label, no placeholder', leading_icon: null, trailing_icon: null,
-            enabled: true, visible: true, character_limit: 5}
+          properties: {label_text: 'label, no placeholder', leading_icon: null, trailing_icon: null, enabled: true, visible: true, character_limit: 5}
           type: form:Components.TextField_deprecated
           layout_properties: {grid_position: 'IPNJXN,XBZWCJ'}
         - name: text_field_2
-          properties: {appearance: outlined, label_text: 'label, no placeholder',
-            supporting_text: '', character_limit: 10}
+          properties: {appearance: outlined, label_text: 'label, no placeholder', supporting_text: '', character_limit: 10}
           type: form:Components.TextField_deprecated
           layout_properties: {grid_position: 'IPNJXN,DUZTXT'}
   - name: card_1_copy_2

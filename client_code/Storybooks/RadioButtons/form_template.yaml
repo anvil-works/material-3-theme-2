@@ -67,8 +67,7 @@ components:
               type: form:Components.RadioButton
               layout_properties: {}
             - name: radio_button_1_copy_2
-              properties: {text: Selection 3, group_name: group_1, selected: false,
-                background: ''}
+              properties: {text: Selection 3, group_name: group_1, selected: false, background: ''}
               type: form:Components.RadioButton
               layout_properties: {}
             - name: radio_button_1_copy_3
@@ -80,8 +79,7 @@ components:
               type: form:Components.RadioButton
               layout_properties: {}
             - name: radio_button_1_copy_5
-              properties: {text: Disabled Selection, group_name: group_1, enabled: false,
-                align: left}
+              properties: {text: Disabled Selection, group_name: group_1, enabled: false, align: left}
               type: form:Components.RadioButton
               layout_properties: {}
   - name: card_1_copy_1_copy_1
@@ -134,8 +132,7 @@ components:
               type: form:Components.RadioButton
               layout_properties: {}
             - name: radio_button_1_copy_5_copy_1
-              properties: {text: Disabled Selection, group_name: group_2, enabled: false,
-                visible: true, selected: true}
+              properties: {text: Disabled Selection, group_name: group_2, enabled: false, visible: true, selected: true}
               type: form:Components.RadioButton
               layout_properties: {}
   - name: card_2

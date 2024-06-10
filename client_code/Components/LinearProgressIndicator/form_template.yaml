@@ -1,9 +1,6 @@
 properties:
-- {default_value: true, group: Look and Feel, important: true, name: visible, default_binding_prop: true,
-  type: boolean, designer_hint: visible, designerHint: visible, description: 'Should
-    this component be displayed?'}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.: null}
+- {default_value: true, group: Look and Feel, important: true, name: visible, default_binding_prop: true, type: boolean, designer_hint: visible, designerHint: visible, description: 'Should this component be displayed?'}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
 - name: align
   type: enum
   important: true
@@ -19,11 +16,9 @@ properties:
   default_value: indeterminate
   group: Key Properties
   description: component type. Use Indeterminate to express an unspecified amount of wait time. Determinate should be used when the process completion rate can be detected.
-- {name: progress, type: number, group: Key Properties, important: true, default_value: 0,
-  description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}
+- {name: progress, type: number, group: Key Properties, important: true, default_value: 0, description: Percentage of progress for determinate type. Irrelevant for indeterminate type.}
 - {name: margin, type: margin, group: Layout, important: true, description: Margin (pixels) of the component.}
-- {name: tooltip, type: string, default_value: '', important: true, group: Other,
-  description: Text to display when you hover the mouse over this component}
+- {name: tooltip, type: string, default_value: '', important: true, group: Other, description: Text to display when you hover the mouse over this component}
 - {name: color, type: color, default_value: '', important: true, description: The color of this component.}
 is_package: true
 events:
@@ -36,29 +31,5 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-progressindicator-linear\" class=\"\
-      anvil-m3-progressindicator-component\">\n  <svg width=\"100%\" anvil-name=\"\
-      anvil-m3-progressindicator-indeterminate\" class=\"anvil-m3-progressindicator-track\"\
-      >\n    <line y1=\"2\" y2=\"2\" x1=\"0\" x2=\"0\" anvil-name=\"anvil-m3-progressindicator-indicator-indeterminate\"\
-      \ class=\"anvil-m3-progressindicator-indicator\">\n      <animate begin=\"0\"\
-      \ repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x2\" dur=\"\
-      4s\" calcMode=\"spline\" \n          values=\"0;120%\" \n          keySplines=\"\
-      0.06 0.7 0.11 0.98\"></animate>\n      <animate begin=\"00ms\" repeatCount=\"\
-      indefinite\" attributeType=\"XML\" attributeName=\"x1\" dur=\"4s\" calcMode=\"\
-      spline\" \n          values=\"0;120%\" \n          keySplines=\"0.48 0 0 0.83\"\
-      ></animate>\n    </line> \n    <line y1=\"2\" y2=\"2\" x1=\"0\" x2=\"0\" anvil-name=\"\
-      anvil-m3-progressindicator-indicator-indeterminate-2\" class=\"anvil-m3-progressindicator-indicator\"\
-      >\n        <animate begin=\"2000ms\" repeatCount=\"indefinite\" attributeType=\"\
-      XML\" attributeName=\"x2\" dur=\"4s\" calcMode=\"spline\" \n            values=\"\
-      0;120%\" \n            keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n      \
-      \  <animate begin=\"2000ms\" repeatCount=\"indefinite\" attributeType=\"XML\"\
-      \ attributeName=\"x1\" dur=\"4s\" calcMode=\"spline\" \n            values=\"\
-      0;120%\" \n            keySplines=\"0.48 0 0 0.83\"></animate>\n    </line>\n\
-      \  </svg>\n  <svg width=\"100%\" anvil-name=\"anvil-m3-progressindicator-determinate\"\
-      \ class=\"anvil-m3-progressindicator-track anvil-m3-progressindicator-hidden\"\
-      >\n    <line y1=\"2\" y2=\"2\" x1=\"0\" x2=\"0\" anvil-name=\"anvil-m3-progressindicator-indicator\"\
-      \ class=\"anvil-m3-progressindicator-indicator\">\n      <!--\n      <animate\
-      \ anvil-name=\"indicator-animate1\" begin=\"0\" repeatCount=\"indefinite\" attributeType=\"\
-      XML\" attributeName=\"x2\" dur=\"4s\" calcMode=\"spline\" \n          values=\"\
-      0;120%\" \n          keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n      -->\n\
-      \    </line> \n  </svg>\n</div>"}
+  properties:
+    html: "<div anvil-name=\"anvil-m3-progressindicator-linear\" class=\"anvil-m3-progressindicator-component\">\n  <svg width=\"100%\" anvil-name=\"anvil-m3-progressindicator-indeterminate\" class=\"anvil-m3-progressindicator-track\">\n    <line y1=\"2\" y2=\"2\" x1=\"0\" x2=\"0\" anvil-name=\"anvil-m3-progressindicator-indicator-indeterminate\" class=\"anvil-m3-progressindicator-indicator\">\n      <animate begin=\"0\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x2\" dur=\"4s\" calcMode=\"spline\" \n          values=\"0;120%\" \n          keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n      <animate begin=\"00ms\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x1\" dur=\"4s\" calcMode=\"spline\" \n          values=\"0;120%\" \n          keySplines=\"0.48 0 0 0.83\"></animate>\n    </line> \n    <line y1=\"2\" y2=\"2\" x1=\"0\" x2=\"0\" anvil-name=\"anvil-m3-progressindicator-indicator-indeterminate-2\" class=\"anvil-m3-progressindicator-indicator\">\n        <animate begin=\"2000ms\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x2\" dur=\"4s\" calcMode=\"spline\" \n            values=\"0;120%\" \n            keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n        <animate begin=\"2000ms\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x1\" dur=\"4s\" calcMode=\"spline\" \n            values=\"0;120%\" \n            keySplines=\"0.48 0 0 0.83\"></animate>\n    </line>\n  </svg>\n  <svg width=\"100%\" anvil-name=\"anvil-m3-progressindicator-determinate\" class=\"anvil-m3-progressindicator-track anvil-m3-progressindicator-hidden\">\n    <line y1=\"2\" y2=\"2\" x1=\"0\" x2=\"0\" anvil-name=\"anvil-m3-progressindicator-indicator\" class=\"anvil-m3-progressindicator-indicator\">\n      <!--\n      <animate anvil-name=\"indicator-animate1\" begin=\"0\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x2\" dur=\"4s\" calcMode=\"spline\" \n          values=\"0;120%\" \n          keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n      -->\n    </line> \n  </svg>\n</div>"
