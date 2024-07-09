@@ -1,9 +1,6 @@
 properties:
-- {name: visible, type: boolean, default_value: true, important: true, default_binding_prop: true,
-  designer_hint: visible, group: Look and Feel, description: 'Should this component
-    be displayed?'}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.: null}
+- {name: visible, type: boolean, default_value: true, important: true, default_binding_prop: true, designer_hint: visible, group: Look and Feel, description: 'Should this component be displayed?'}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
 - name: align
   type: enum
   important: true
@@ -19,8 +16,7 @@ properties:
   default_value: elevated
   group: Key Properties
   description: Predefined style type.
-- {name: card_image, type: uri, important: true, accept: image/*, description: Image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....).,
-  group: Image Style}
+- {name: card_image, type: uri, important: true, accept: image/*, description: Image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)., group: Image Style}
 - default_value: null
   include_none_option: true
   group: Image Style
@@ -30,13 +26,9 @@ properties:
   none_option_label: No Image
   options: [top, left, right, bottom, full]
   description: How the image in positioned/displayed on the card.
-- {name: rounded_image, type: boolean, default_value: false, important: true, group: Image Style,
-  description: 'For top/bottom/left/right image_positions, if the image will have
-    a rounded edge.'}
-- {name: image_height, type: string, important: true, default_value: '', description: Any valid CSS value for image height.,
-  group: Image Style}
-- {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width.,
-  group: Image Style}
+- {name: rounded_image, type: boolean, default_value: false, important: true, group: Image Style, description: 'For top/bottom/left/right image_positions, if the image will have a rounded edge.'}
+- {name: image_height, type: string, important: true, default_value: '', description: Any valid CSS value for image height., group: Image Style}
+- {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width., group: Image Style}
 - name: margin
   type: margin
   important: true
@@ -49,14 +41,10 @@ properties:
   default_value: [16px, 16px, 16px, 16px]
   group: Look and Feel
   description: Padding (pixels) of the card content
-- {name: card_image_content_padding, type: padding, important: false, group: Image Style,
-  description: Padding (pixels) of content in the card image}
-- {name: background, type: color, default_value: '', important: false, group: Look and Feel,
-  description: Card Background color}
-- {name: tooltip, type: string, default_value: '', important: false, description: Text to display when the mouse is hovered over this component.,
-  group: Other}
-- {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value.,
-  group: Look and Feel}
+- {name: card_image_content_padding, type: padding, important: false, group: Image Style, description: Padding (pixels) of content in the card image}
+- {name: background, type: color, default_value: '', important: false, group: Look and Feel, description: Card Background color}
+- {name: tooltip, type: string, default_value: '', important: false, description: Text to display when the mouse is hovered over this component., group: Other}
+- {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value., group: Look and Feel}
 is_package: true
 events:
 - {name: show, default_event: true, description: When the component is shown on the screen.}
@@ -68,14 +56,17 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<!-- <div anvil-name=\"anvil-m3-card-component\" style=\"display:\
-      \ flex\"> -->\n  <div anvil-name=\"anvil-m3-card\" class=\"anvil-m3-card\">\n\
-      \    <div anvil-slot=\"card-image-slot\" anvil-name=\"image\" class=\"anvil-m3-card-image\"\
-      \ style=\"background-image: '' \">\n      <p anvil-name=\"empty-image\" anvil-if-slot-empty=\"\
-      card-image-slot\" style=\"color: #BBB\"><i>Image Content</i></p>\n    </div>\n\
-      \    <div anvil-slot=\"card-content-slot\" anvil-name=\"content\" class=\"anvil-m3-card-content\"\
-      >\n      <p anvil-name=\"empty-content\" anvil-if-slot-empty=\"card-content-slot\"\
-      \ style=\"color: #BBB\"><i>Card Content</i></p>\n    </div>\n  </div>\n<!--\
-      \ </div> -->"}
+  properties:
+    html: |-
+      <!-- <div anvil-name="anvil-m3-card-component" style="display: flex"> -->
+        <div anvil-name="anvil-m3-card" class="anvil-m3-card">
+          <div anvil-slot="card-image-slot" anvil-name="image" class="anvil-m3-card-image" style="background-image: '' ">
+            <p anvil-name="empty-image" anvil-if-slot-empty="card-image-slot" style="color: #BBB"><i>Image Content</i></p>
+          </div>
+          <div anvil-slot="card-content-slot" anvil-name="content" class="anvil-m3-card-content">
+            <p anvil-name="empty-content" anvil-if-slot-empty="card-content-slot" style="color: #BBB"><i>Card Content</i></p>
+          </div>
+        </div>
+      <!-- </div> -->
   event_bindings: {show: form_show, hide: form_hide}
 custom_component_container: true

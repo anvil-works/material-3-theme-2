@@ -1,14 +1,8 @@
 properties:
-- {name: group_name, type: string, default_value: '', default_binding_prop: true,
-  description: 'Radio button group name,  must begin with a letter ([A-Za-z]) and
-    may be followed by any number of letters, digits ([0-9]), hyphens ("-"), underscores
-    ("_"), colons (":"), and periods (".").', group: Key Properties}
-- {name: selected, type: boolean, default_value: false, description: True if this radio button is selected.,
-  group: Interaction, designer_hint: toggle}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.: null}
-- {name: enabled, type: boolean, default_value: true, description: Enable radio button,
-  group: Interaction, designerHint: enabled, designer_hint: enabled}
+- {name: group_name, type: string, default_value: '', default_binding_prop: true, description: 'Radio button group name,  must begin with a letter ([A-Za-z]) and may be followed by any number of letters, digits ([0-9]), hyphens ("-"), underscores ("_"), colons (":"), and periods (".").', group: Key Properties}
+- {name: selected, type: boolean, default_value: false, description: True if this radio button is selected., group: Interaction, designer_hint: toggle}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
+- {name: enabled, type: boolean, default_value: true, description: Enable radio button, group: Interaction, designerHint: enabled, designer_hint: enabled}
 - {name: text, type: string, default_value: '', group: Key Properties, description: The text displayed on this component}
 - {name: value, type: string, default_value: '', group: Key Properties, description: The value of the group when this radio button is selected}
 - default_value: left
@@ -20,30 +14,18 @@ properties:
   designerHint: align-horizontal
   options: [left, center, right]
   description: The position of this component in the available space.
-- {name: background, type: color, description: background color of the component,
-  default_value: '', group: Look and Feel}
-- {name: bold, type: boolean, default_value: false, description: Display the component text as bold,
-  group: Text Style}
-- {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.,
-  group: Look and Feel}
-- {name: font, type: string, default_value: '', description: The font family to use for this component.,
-  group: Text Style}
-- {name: font_size, type: number, description: The height of text displayed on this component in pixels,
-  group: Text Style}
-- {name: text_color, type: color, default_value: '', description: Component's Text Color,
-  group: Text Style}
-- {name: italic, type: boolean, default_value: false, description: Display the component text as italic,
-  group: Text Style}
-- {name: underline, type: boolean, default_value: false, description: Display the component text as underlined,
-  group: Text Style}
-- {name: visible, type: boolean, default_value: true, description: Whether or not the component is displayed on the page,
-  group: Look and Feel, designerHint: visible, designer_hint: visible}
-- {name: margin, type: margin, important: true, description: Margin (pixels) of the component.,
-  group: Layout}
-- {name: tooltip, type: string, default_value: '', important: true, group: Other,
-  description: Text to display when the mouse is hovered over this component}
-- {name: radio_color, type: color, default_value: '', important: true, description: Color of the radio button itself,
-  group: Look and Feel}
+- {name: background, type: color, description: background color of the component, default_value: '', group: Look and Feel}
+- {name: bold, type: boolean, default_value: false, description: Display the component text as bold, group: Text Style}
+- {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value., group: Look and Feel}
+- {name: font, type: string, default_value: '', description: The font family to use for this component., group: Text Style}
+- {name: font_size, type: number, description: The height of text displayed on this component in pixels, group: Text Style}
+- {name: text_color, type: color, default_value: '', description: Component's Text Color, group: Text Style}
+- {name: italic, type: boolean, default_value: false, description: Display the component text as italic, group: Text Style}
+- {name: underline, type: boolean, default_value: false, description: Display the component text as underlined, group: Text Style}
+- {name: visible, type: boolean, default_value: true, description: Whether or not the component is displayed on the page, group: Look and Feel, designerHint: visible, designer_hint: visible}
+- {name: margin, type: margin, important: true, description: Margin (pixels) of the component., group: Layout}
+- {name: tooltip, type: string, default_value: '', important: true, group: Other, description: Text to display when the mouse is hovered over this component}
+- {name: radio_color, type: color, default_value: '', important: true, description: Color of the radio button itself, group: Look and Feel}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the component is selected or unselected}
@@ -56,15 +38,18 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-radiobutton-component\" style=\"\
-      display:flex\">\n  <div anvil-name=\"anvil-m3-radiobutton-container\" class=\"\
-      anvil-m3-radiobutton-container\">\n    <input class=\"anvil-m3-radiobutton-input\"\
-      \ anvil-name=\"anvil-m3-radiobutton-input\" type=\"radio\">\n    <div class=\"\
-      anvil-m3-radiobutton-hover\" anvil-name=\"anvil-m3-radiobutton-hover\">\n  \
-      \    <span class=\"material-symbols-outlined anvil-m3-radiobutton-unchecked\"\
-      \ anvil-name=\"anvil-m3-radiobutton-unchecked\">radio_button_unchecked</span>\n\
-      \      <span class=\"material-symbols-outlined anvil-m3-radiobutton-checked\"\
-      \ anvil-name=\"anvil-m3-radiobutton-checked\" style=\"display:none\">radio_button_checked</span>\n\
-      \    </div>\n    <label class=\"anvil-m3-radiobutton-label\" anvil-name=\"anvil-m3-radiobutton-label\"\
-      ></label>\n  </div>\n</div>", visible: true, background: ''}
+  properties:
+    html: |-
+      <div anvil-name="anvil-m3-radiobutton-component" style="display:flex">
+        <div anvil-name="anvil-m3-radiobutton-container" class="anvil-m3-radiobutton-container">
+          <input class="anvil-m3-radiobutton-input" anvil-name="anvil-m3-radiobutton-input" type="radio">
+          <div class="anvil-m3-radiobutton-hover" anvil-name="anvil-m3-radiobutton-hover">
+            <span class="material-symbols-outlined anvil-m3-radiobutton-unchecked" anvil-name="anvil-m3-radiobutton-unchecked">radio_button_unchecked</span>
+            <span class="material-symbols-outlined anvil-m3-radiobutton-checked" anvil-name="anvil-m3-radiobutton-checked" style="display:none">radio_button_checked</span>
+          </div>
+          <label class="anvil-m3-radiobutton-label" anvil-name="anvil-m3-radiobutton-label"></label>
+        </div>
+      </div>
+    visible: true
+    background: ''
   event_bindings: {show: form_show}

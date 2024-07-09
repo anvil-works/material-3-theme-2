@@ -45,8 +45,7 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: button_1
-          properties: {appearance: elevated, bold: true, italic: false, underline: false,
-            text: '1'}
+          properties: {appearance: elevated, bold: true, italic: false, underline: false, text: '1'}
           type: form:Components.Button
           layout_properties: {}
           event_bindings: {click: button_1_click}
@@ -82,13 +81,11 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: button_1_copy_2
-          properties: {appearance: elevated, bold: true, italic: false, underline: false,
-            material_icon: 10mp, enabled: true, text: '1'}
+          properties: {appearance: elevated, bold: true, italic: false, underline: false, material_icon: 10mp, enabled: true, text: '1'}
           type: form:Components.Button
           layout_properties: {}
         - name: button_2_copy_2
-          properties: {appearance: filled, bold: true, material_icon: 11mp, text: '2',
-            visible: true}
+          properties: {appearance: filled, bold: true, material_icon: 11mp, text: '2', visible: true}
           type: form:Components.Button
           layout_properties: {}
         - name: button_3_copy_2
@@ -114,13 +111,11 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: button_1_copy_2_copy_2
-          properties: {appearance: elevated, bold: true, italic: false, underline: false,
-            material_icon: 10mp, enabled: true, text: '1', icon_align: right}
+          properties: {appearance: elevated, bold: true, italic: false, underline: false, material_icon: 10mp, enabled: true, text: '1', icon_align: right}
           type: form:Components.Button
           layout_properties: {}
         - name: button_2_copy_2_copy_2
-          properties: {appearance: filled, bold: true, material_icon: 11mp, text: '2',
-            icon_align: right}
+          properties: {appearance: filled, bold: true, material_icon: 11mp, text: '2', icon_align: right}
           type: form:Components.Button
           layout_properties: {}
         - name: button_3_copy_2_copy_2
@@ -128,13 +123,11 @@ components:
           type: form:Components.Button
           layout_properties: {}
         - name: button_4_copy_2_copy_2
-          properties: {appearance: outlined, material_icon: blur_on, text: '4', italic: false,
-            icon_align: right}
+          properties: {appearance: outlined, material_icon: blur_on, text: '4', italic: false, icon_align: right}
           type: form:Components.Button
           layout_properties: {}
         - name: button_5_copy_2_copy_2
-          properties: {material_icon: 22mp, text: '5', icon_align: right, text_color: 'theme:On
-              Surface Variant', font_size: 30, icon_size: 35, icon_color: 'theme:Error'}
+          properties: {material_icon: 22mp, text: '5', icon_align: right, text_color: 'theme:On Surface Variant', font_size: 30, icon_size: 35, icon_color: 'theme:Error'}
           type: form:Components.Button
           layout_properties: {}
   - name: card_1_copy_1_copy_2_copy
@@ -153,13 +146,11 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: button_1_copy_2_copy
-          properties: {appearance: elevated, bold: true, italic: false, underline: false,
-            material_icon: 12mp, enabled: true, text: ''}
+          properties: {appearance: elevated, bold: true, italic: false, underline: false, material_icon: 12mp, enabled: true, text: ''}
           type: form:Components.Button
           layout_properties: {}
         - name: button_2_copy_2_copy
-          properties: {appearance: filled, bold: true, material_icon: 11mp, text: '',
-            icon_align: right}
+          properties: {appearance: filled, bold: true, material_icon: 11mp, text: '', icon_align: right}
           type: form:Components.Button
           layout_properties: {}
         - name: button_3_copy_2_copy
@@ -245,8 +236,7 @@ components:
           type: form:Components.Button
           layout_properties: {}
         - name: button_5_copy
-          properties: {enabled: false, text: '5', icon_size: null, material_icon: 10mp,
-            text_color: 'theme:On Surface', icon_color: 'theme:On Surface'}
+          properties: {enabled: false, text: '5', icon_size: null, material_icon: 10mp, text_color: 'theme:On Surface', icon_color: 'theme:On Surface'}
           type: form:Components.Button
           layout_properties: {}
   - name: card_2

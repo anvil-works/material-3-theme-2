@@ -49,24 +49,19 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_area_4
-          properties: {appearance: outlined, character_limit: 10, supporting_text: Supporting text,
-            label_text: Label}
+          properties: {appearance: outlined, character_limit: 10, supporting_text: Supporting text, label_text: Label}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'ZKYVEF,HZUOQJ'}
         - name: text_area_1_copy_copy
-          properties: {label_text: Label, appearance: outlined, bold_display: false,
-            supporting_text: Supporting text, display_text_color: '', placeholder: Placeholder,
-            error: false, enabled: true, display_font: '', visible: true, underline_display: false}
+          properties: {label_text: Label, appearance: outlined, bold_display: false, supporting_text: Supporting text, display_text_color: '', placeholder: Placeholder, error: false, enabled: true, display_font: '', visible: true, underline_display: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2_copy
-          properties: {label_text: Label only, appearance: outlined, error: false,
-            enabled: true, character_limit: null, supporting_text: ''}
+          properties: {label_text: Label only, appearance: outlined, error: false, enabled: true, character_limit: null, supporting_text: ''}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'KZNISN,XHIGXF'}
         - name: text_area_3_copy
-          properties: {placeholder: Placeholder only, appearance: outlined, enabled: true,
-            error: false}
+          properties: {placeholder: Placeholder only, appearance: outlined, enabled: true, error: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: ''}
     - name: divider_1
@@ -84,13 +79,11 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_area_1
-          properties: {placeholder: '', label_text: Label, supporting_text: Supporting text,
-            error: false, enabled: true, appearance: null, character_limit: 10}
+          properties: {placeholder: '', label_text: Label, supporting_text: Supporting text, error: false, enabled: true, appearance: null, character_limit: 10}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'NWZMVG,UZZGXW'}
         - name: text_area_1_copy
-          properties: {appearance: null, label_text: Label, placeholder: Placeholder,
-            supporting_text: Supporting text, error: false, enabled: true}
+          properties: {appearance: null, label_text: Label, placeholder: Placeholder, supporting_text: Supporting text, error: false, enabled: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2
@@ -121,24 +114,19 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_area_4_copy
-          properties: {appearance: outlined, character_limit: 10, supporting_text: Supporting text,
-            label_text: Label, enabled: false}
+          properties: {appearance: outlined, character_limit: 10, supporting_text: Supporting text, label_text: Label, enabled: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'GUUXUU,VFDALJ'}
         - name: text_area_1_copy_copy_copy_3
-          properties: {label_text: Label, appearance: outlined, bold_display: false,
-            supporting_text: Supporting text, display_text_color: '', placeholder: Placeholder,
-            error: false, enabled: false, display_font: '', visible: true, underline_display: false}
+          properties: {label_text: Label, appearance: outlined, bold_display: false, supporting_text: Supporting text, display_text_color: '', placeholder: Placeholder, error: false, enabled: false, display_font: '', visible: true, underline_display: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2_copy_copy_3
-          properties: {label_text: Label only, appearance: outlined, error: false,
-            enabled: false}
+          properties: {label_text: Label only, appearance: outlined, error: false, enabled: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'MGCHMN,TGQCGG'}
         - name: text_area_3_copy_copy_3
-          properties: {placeholder: Placeholder only, appearance: outlined, enabled: false,
-            error: false}
+          properties: {placeholder: Placeholder only, appearance: outlined, enabled: false, error: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: ''}
     - name: divider_1_copy
@@ -156,13 +144,11 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_area_1_copy_5
-          properties: {placeholder: '', label_text: Label, supporting_text: Supporting text,
-            error: false, enabled: false, appearance: null, character_limit: 10}
+          properties: {placeholder: '', label_text: Label, supporting_text: Supporting text, error: false, enabled: false, appearance: null, character_limit: 10}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'NWZMVG,UZZGXW'}
         - name: text_area_1_copy_copy_4
-          properties: {appearance: null, label_text: Label, placeholder: Placeholder,
-            supporting_text: Supporting text, error: false, enabled: false}
+          properties: {appearance: null, label_text: Label, placeholder: Placeholder, supporting_text: Supporting text, error: false, enabled: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2_copy_4
@@ -193,24 +179,19 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_area_4_copy_copy
-          properties: {appearance: outlined, character_limit: 10, supporting_text: Supporting text,
-            label_text: Label, enabled: true, error: true}
+          properties: {appearance: outlined, character_limit: 10, supporting_text: Supporting text, label_text: Label, enabled: true, error: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FGOSLO,UIKILK'}
         - name: text_area_1_copy_copy_copy
-          properties: {label_text: Label, appearance: outlined, bold_display: false,
-            supporting_text: Supporting text, display_text_color: '', placeholder: Placeholder,
-            error: true, enabled: true, display_font: '', visible: true, underline_display: false}
+          properties: {label_text: Label, appearance: outlined, bold_display: false, supporting_text: Supporting text, display_text_color: '', placeholder: Placeholder, error: true, enabled: true, display_font: '', visible: true, underline_display: false}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2_copy_copy
-          properties: {label_text: Label only, appearance: outlined, error: true,
-            enabled: true}
+          properties: {label_text: Label only, appearance: outlined, error: true, enabled: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'MGCHMN,TGQCGG'}
         - name: text_area_3_copy_copy
-          properties: {placeholder: Placeholder only, appearance: outlined, enabled: true,
-            error: true}
+          properties: {placeholder: Placeholder only, appearance: outlined, enabled: true, error: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: ''}
     - name: divider_1_copy_2
@@ -228,13 +209,11 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_area_1_copy_3
-          properties: {placeholder: '', label_text: Label, supporting_text: Supporting text,
-            error: true, enabled: true, appearance: null, character_limit: 10}
+          properties: {placeholder: '', label_text: Label, supporting_text: Supporting text, error: true, enabled: true, appearance: null, character_limit: 10}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'NWZMVG,UZZGXW'}
         - name: text_area_1_copy_copy_2
-          properties: {appearance: null, label_text: Label, placeholder: Placeholder,
-            supporting_text: Supporting text, error: true, enabled: true}
+          properties: {appearance: null, label_text: Label, placeholder: Placeholder, supporting_text: Supporting text, error: true, enabled: true}
           type: form:Components.TextInput.TextArea
           layout_properties: {grid_position: 'FHHGJV,JKQNTO'}
         - name: text_area_2_copy_2
@@ -265,22 +244,16 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_field_1_copy_2
-          properties: {label_text: Label, appearance: outlined, supporting_text: Supporting text,
-            placeholder: '', error: false, enabled: true, leading_icon: 2k_plus, character_limit: 10,
-            trailing_icon: 10mp}
+          properties: {label_text: Label, appearance: outlined, supporting_text: Supporting text, placeholder: '', error: false, enabled: true, leading_icon: 2k_plus, character_limit: 10, trailing_icon: 10mp}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
           event_bindings: {click: text_field_1_copy_2_click}
         - name: text_field_1_copy_copy
-          properties: {label_text: Label, appearance: outlined, bold_display: false,
-            supporting_text: Supporting text, italic_display: false, display_text_color: '',
-            placeholder: Placeholder, error: false, enabled: true, display_font: '',
-            leading_icon: 12mp, character_limit: null, underline_label: false}
+          properties: {label_text: Label, appearance: outlined, bold_display: false, supporting_text: Supporting text, italic_display: false, display_text_color: '', placeholder: Placeholder, error: false, enabled: true, display_font: '', leading_icon: 12mp, character_limit: null, underline_label: false}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3_copy
-          properties: {label_text: Label only, leading_icon: 13mp, appearance: outlined,
-            error: false, enabled: true}
+          properties: {label_text: Label only, leading_icon: 13mp, appearance: outlined, error: false, enabled: true}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
         - name: text_field_4_copy
@@ -311,14 +284,12 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_field_1
-          properties: {placeholder: '', label_text: Label, leading_icon: 10k, trailing_icon: 13mp,
-            supporting_text: Supporting text, error: false, enabled: true, character_limit: 10}
+          properties: {placeholder: '', label_text: Label, leading_icon: 10k, trailing_icon: 13mp, supporting_text: Supporting text, error: false, enabled: true, character_limit: 10}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
           event_bindings: {click: text_field_1_click}
         - name: text_field_1_copy
-          properties: {appearance: null, label_text: Label, placeholder: Placeholder,
-            supporting_text: Supporting text, leading_icon: '', error: false, enabled: true}
+          properties: {appearance: null, label_text: Label, placeholder: Placeholder, supporting_text: Supporting text, leading_icon: '', error: false, enabled: true}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3
@@ -357,22 +328,16 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_field_1_copy_2_copy_3
-          properties: {label_text: Label, appearance: outlined, supporting_text: Supporting text,
-            placeholder: '', error: false, enabled: false, leading_icon: 2k_plus,
-            character_limit: 10, trailing_icon: 10mp}
+          properties: {label_text: Label, appearance: outlined, supporting_text: Supporting text, placeholder: '', error: false, enabled: false, leading_icon: 2k_plus, character_limit: 10, trailing_icon: 10mp}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
           event_bindings: {click: text_field_1_copy_2_click, icon_click: text_field_1_copy_2_copy_3_icon_click}
         - name: text_field_1_copy_copy_copy_3
-          properties: {label_text: Label, appearance: outlined, bold_display: false,
-            supporting_text: Supporting text, italic_display: false, display_text_color: '',
-            placeholder: Placeholder, error: false, enabled: false, display_font: '',
-            leading_icon: 12mp, underline_label: false}
+          properties: {label_text: Label, appearance: outlined, bold_display: false, supporting_text: Supporting text, italic_display: false, display_text_color: '', placeholder: Placeholder, error: false, enabled: false, display_font: '', leading_icon: 12mp, underline_label: false}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3_copy_copy_3
-          properties: {label_text: Label only, leading_icon: 13mp, appearance: outlined,
-            error: false, enabled: false}
+          properties: {label_text: Label only, leading_icon: 13mp, appearance: outlined, error: false, enabled: false}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
         - name: text_field_4_copy_copy_3
@@ -403,14 +368,12 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_field_1_copy_5
-          properties: {placeholder: '', label_text: Label, leading_icon: 10k, trailing_icon: 13mp,
-            supporting_text: Supporting text, error: false, enabled: false, character_limit: 10}
+          properties: {placeholder: '', label_text: Label, leading_icon: 10k, trailing_icon: 13mp, supporting_text: Supporting text, error: false, enabled: false, character_limit: 10}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
           event_bindings: {click: text_field_1_click}
         - name: text_field_1_copy_copy_4
-          properties: {appearance: null, label_text: Label, placeholder: Placeholder,
-            supporting_text: Supporting text, leading_icon: '', error: false, enabled: false}
+          properties: {appearance: null, label_text: Label, placeholder: Placeholder, supporting_text: Supporting text, leading_icon: '', error: false, enabled: false}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3_copy_4
@@ -453,15 +416,11 @@ components:
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'HWKGVF,CPPTEL'}
         - name: text_field_1_copy_copy_copy
-          properties: {label_text: Label, appearance: outlined, bold_display: false,
-            supporting_text: Supporting text, italic_display: false, display_text_color: '',
-            placeholder: Placeholder, error: true, enabled: true, display_font: '',
-            leading_icon: 12mp, underline_label: false}
+          properties: {label_text: Label, appearance: outlined, bold_display: false, supporting_text: Supporting text, italic_display: false, display_text_color: '', placeholder: Placeholder, error: true, enabled: true, display_font: '', leading_icon: 12mp, underline_label: false}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3_copy_copy
-          properties: {label_text: Label only, leading_icon: 13mp, appearance: outlined,
-            error: true, enabled: true}
+          properties: {label_text: Label only, leading_icon: 13mp, appearance: outlined, error: true, enabled: true}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'FTJZSM,BBDPUV'}
         - name: text_field_4_copy_copy
@@ -492,14 +451,12 @@ components:
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         components:
         - name: text_field_1_copy_3
-          properties: {placeholder: '', label_text: Label, leading_icon: 10k, trailing_icon: 13mp,
-            supporting_text: Supporting text, error: true, enabled: true, character_limit: 10}
+          properties: {placeholder: '', label_text: Label, leading_icon: 10k, trailing_icon: 13mp, supporting_text: Supporting text, error: true, enabled: true, character_limit: 10}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'NCQVJZ,TARNBJ'}
           event_bindings: {click: text_field_1_click}
         - name: text_field_1_copy_copy_2
-          properties: {appearance: null, label_text: Label, placeholder: Placeholder,
-            supporting_text: Supporting text, leading_icon: '', error: true, enabled: true}
+          properties: {appearance: null, label_text: Label, placeholder: Placeholder, supporting_text: Supporting text, leading_icon: '', error: true, enabled: true}
           type: form:Components.TextInput.TextField
           layout_properties: {grid_position: 'ORPGYO,JKONFE'}
         - name: text_field_3_copy_2

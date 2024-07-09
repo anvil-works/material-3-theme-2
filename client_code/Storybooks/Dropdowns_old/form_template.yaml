@@ -73,9 +73,7 @@ components:
             components:
             - name: dropdown_menu_1
               properties:
-                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
-                  dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
-                  dropdown item 9]
+                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
                 label_text: Dropdown Label 1
                 allow_none: false
                 enabled: true
@@ -84,9 +82,7 @@ components:
               layout_properties: {width: 273}
             - name: dropdown_menu_2
               properties:
-                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
-                  dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
-                  dropdown item 9]
+                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
                 placeholder: placeholder
                 label_text: Dropdown Label 2
                 appearance: ''
@@ -113,9 +109,7 @@ components:
             components:
             - name: dropdown_menu_3
               properties:
-                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
-                  dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
-                  dropdown item 9]
+                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
                 include_placeholder: ''
                 label_text: Dropdown Label 3
                 allow_none: true
@@ -123,9 +117,7 @@ components:
               layout_properties: {width: 273}
             - name: dropdown_menu_4
               properties:
-                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
-                  dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
-                  dropdown item 9]
+                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
                 include_placeholder: ''
                 placeholder: placeholder
                 label_text: Dropdown Label 4
@@ -177,9 +169,7 @@ components:
             components:
             - name: dropdown_menu_1_copy_1
               properties:
-                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
-                  dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
-                  dropdown item 9]
+                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
                 label_text: ''
                 allow_none: false
                 enabled: true
@@ -188,9 +178,7 @@ components:
               layout_properties: {width: 273}
             - name: dropdown_menu_2_copy_1
               properties:
-                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
-                  dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
-                  dropdown item 9]
+                items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
                 placeholder: placeholder
                 label_text: ''
                 appearance: outlined
@@ -217,9 +205,7 @@ components:
         components:
         - name: dropdown_menu_3_copy_2
           properties:
-            items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
-              dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
-              dropdown item 9]
+            items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
             include_placeholder: ''
             label_text: ''
             allow_none: true
@@ -227,9 +213,7 @@ components:
           layout_properties: {width: 273}
         - name: dropdown_menu_4_copy_2
           properties:
-            items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
-              dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
-              dropdown item 9]
+            items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
             include_placeholder: ''
             placeholder: placeholder
             label_text: ''
@@ -258,9 +242,7 @@ components:
         components:
         - name: dropdown_menu_3_copy_1
           properties:
-            items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
-              dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
-              dropdown item 9]
+            items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
             include_placeholder: ''
             label_text: Dropdown Label 3
             allow_none: true
@@ -269,9 +251,7 @@ components:
           layout_properties: {width: 273}
         - name: dropdown_menu_4_copy_1
           properties:
-            items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4,
-              dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8,
-              dropdown item 9]
+            items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
             include_placeholder: ''
             placeholder: Placeholder Text
             label_text: Dropdown Label 4

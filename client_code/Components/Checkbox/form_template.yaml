@@ -1,39 +1,27 @@
 properties:
-- {default_value: false, group: Key Properties, important: true, name: checked, default_binding_prop: true,
-  type: boolean, designer_hint: toggle, designerHint: toggle, description: Whether or not the checkbox is checked.}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.: null}
-- {name: enabled, type: boolean, default_value: true, description: True if this component should allow user interaction.,
-  designerHint: enabled, group: Interaction, designer_hint: enabled, important: true}
-- {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state.,
-  group: Interaction, important: true}
-- {name: text, type: string, default_value: '', description: 'The text displayed on
-    this component.
+- {default_value: false, group: Key Properties, important: true, name: checked, default_binding_prop: true, type: boolean, designer_hint: toggle, designerHint: toggle, description: Whether or not the checkbox is checked.}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
+- {name: enabled, type: boolean, default_value: true, description: True if this component should allow user interaction., designerHint: enabled, group: Interaction, designer_hint: enabled, important: true}
+- {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state., group: Interaction, important: true}
+- name: text
+  type: string
+  default_value: ''
+  description: |+
+    The text displayed on this component.
 
-
-    ', group: Key Properties, important: true}
-- {name: allow_indeterminate, type: boolean, default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None.,
-  group: Interaction, important: true}
-- {name: visible, type: boolean, default_value: true, description: Whether or not the component is displayed on the page.,
-  designerHint: visible, important: true, group: Look and Feel, designer_hint: visible}
-- {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined.,
-  designerHint: font-underline, designer_hint: font-underline, group: Text}
-- {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics.,
-  designerHint: font-italic, group: Text, designer_hint: font-italic}
-- {name: font_size, type: number, description: The height of text displayed on this component in pixels.,
-  group: Text, important: true}
-- {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold.,
-  designerHint: font-bold, group: Text, designer_hint: font-bold}
-- {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value.,
-  group: Look and Feel}
-- {name: font, type: string, default_value: '', description: The font family to use for this component.,
-  group: Text}
-- {name: checkbox_color, type: color, default_value: '', description: The color of the checkbox.,
-  group: Look and Feel}
-- {name: text_color, type: color, default_value: '', description: The color of the component's label.,
-  group: Look and Feel}
-- {name: background, type: color, default_value: '', description: The background colour of this component.,
-  group: Look and Feel}
+  group: Key Properties
+  important: true
+- {name: allow_indeterminate, type: boolean, default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None., group: Interaction, important: true}
+- {name: visible, type: boolean, default_value: true, description: Whether or not the component is displayed on the page., designerHint: visible, important: true, group: Look and Feel, designer_hint: visible}
+- {name: underline, type: boolean, default_value: false, description: Display this component’s text underlined., designerHint: font-underline, designer_hint: font-underline, group: Text}
+- {name: italic, type: boolean, default_value: false, description: Display this component’s text in italics., designerHint: font-italic, group: Text, designer_hint: font-italic}
+- {name: font_size, type: number, description: The height of text displayed on this component in pixels., group: Text, important: true}
+- {name: bold, type: boolean, default_value: false, description: Display this component’s text in bold., designerHint: font-bold, group: Text, designer_hint: font-bold}
+- {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value., group: Look and Feel}
+- {name: font, type: string, default_value: '', description: The font family to use for this component., group: Text}
+- {name: checkbox_color, type: color, default_value: '', description: The color of the checkbox., group: Look and Feel}
+- {name: text_color, type: color, default_value: '', description: The color of the component's label., group: Look and Feel}
+- {name: background, type: color, default_value: '', description: The background colour of this component., group: Look and Feel}
 - default_value: left
   group: Layout
   important: true
@@ -44,8 +32,7 @@ properties:
   options: [left, center, right]
   description: The position of this component in the available space.
 - {name: margin, type: margin, important: true, group: Layout, description: Margin (pixels) of this component}
-- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component,
-  group: Other}
+- {name: tooltip, type: string, default_value: '', important: true, description: Text to display when the mouse is hovered over this component, group: Other}
 is_package: true
 events:
 - {name: change, default_event: true, description: When the component is checked or unchecked}
@@ -58,15 +45,17 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-checkbox-component\" style=\"display:flex\"\
-      >\n  <div anvil-name=\"anvil-m3-checkbox-container\" class=\"anvil-m3-checkbox-container\"\
-      >\n    <input class=\"anvil-m3-checkbox\" anvil-name=\"anvil-m3-checkbox\" type=\"\
-      checkbox\">\n      <div class=\"anvil-m3-checkbox-hover\" anvil-name=\"anvil-m3-checkbox-hover\"\
-      >\n        <span class=\"material-symbols-outlined anvil-m3-checkbox-unchecked\"\
-      \ anvil-name=\"anvil-m3-checkbox-unchecked\">check_box_outline_blank</span>\n\
-      \        <span class=\"material-symbols-outlined anvil-m3-checkbox-checked\"\
-      \ anvil-name=\"anvil-m3-checkbox-checked\">check_box</span>\n        <span class=\"\
-      material-symbols-outlined anvil-m3-checkbox-indeterminate\" anvil-name=\"anvil-m3-checkbox-indeterminate\"\
-      >indeterminate_check_box</span>\n      </div>\n      <label class=\"anvil-m3-checkbox-label\"\
-      \ anvil-name=\"anvil-m3-checkbox-label\"></label>\n  </div>\n</div>\n"}
+  properties:
+    html: |
+      <div anvil-name="anvil-m3-checkbox-component" style="display:flex">
+        <div anvil-name="anvil-m3-checkbox-container" class="anvil-m3-checkbox-container">
+          <input class="anvil-m3-checkbox" anvil-name="anvil-m3-checkbox" type="checkbox">
+            <div class="anvil-m3-checkbox-hover" anvil-name="anvil-m3-checkbox-hover">
+              <span class="material-symbols-outlined anvil-m3-checkbox-unchecked" anvil-name="anvil-m3-checkbox-unchecked">check_box_outline_blank</span>
+              <span class="material-symbols-outlined anvil-m3-checkbox-checked" anvil-name="anvil-m3-checkbox-checked">check_box</span>
+              <span class="material-symbols-outlined anvil-m3-checkbox-indeterminate" anvil-name="anvil-m3-checkbox-indeterminate">indeterminate_check_box</span>
+            </div>
+            <label class="anvil-m3-checkbox-label" anvil-name="anvil-m3-checkbox-label"></label>
+        </div>
+      </div>
   event_bindings: {show: form_show}

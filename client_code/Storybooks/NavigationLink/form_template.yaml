@@ -13,14 +13,11 @@ components:
     type: form:Components.Text
     layout_properties: {grid_position: 'AKFJIP,DTEYVB'}
   - name: text_2_copy_1
-    properties: {text: 'A link for navigation within an app. NavigationLinks are designed
-        to be used in the Navigation Rail/Drawer/Bar of a page using the Standard
-        Page Layout. '}
+    properties: {text: 'A link for navigation within an app. NavigationLinks are designed to be used in the Navigation Rail/Drawer/Bar of a page using the Standard Page Layout. '}
     type: form:Components.Text
     layout_properties: {grid_position: 'PZXGCA,BNJCLP'}
   - name: link_1
-    properties: {url: 'https://m3.material.io/components/navigation-bar/overview',
-      text: Navigation in Material 3}
+    properties: {url: 'https://m3.material.io/components/navigation-bar/overview', text: Navigation in Material 3}
     type: form:Components.Link
     layout_properties: {grid_position: 'QNOTQM,UCTZKZ'}
   - name: card_1

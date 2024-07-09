@@ -6,10 +6,8 @@ properties:
   options: [Full width, Inset]
   group: Key Properties
   important: true
-- {name: visible, type: boolean, default_value: true, important: true, description: 'Should
-    this component be displayed?', group: Look and Feel}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear,
-  based on css rules you've written for your app.: null}
+- {name: visible, type: boolean, default_value: true, important: true, description: 'Should this component be displayed?', group: Look and Feel}
+- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: Choose how this component can appear, based on css rules you've written for your app.: null}
 - {name: color, type: color, default_value: '', important: true}
 is_package: true
 events:
@@ -22,6 +20,7 @@ custom_component: true
 components: []
 container:
   type: HtmlTemplate
-  properties: {html: '<div class="anvil-m3-divider" anvil-name="anvil-m3-divider">
-
-      </div>'}
+  properties:
+    html: |-
+      <div class="anvil-m3-divider" anvil-name="anvil-m3-divider">
+      </div>

@@ -31,15 +31,12 @@ components:
     layout_properties: {grid_position: 'BIBAKN,IJKVCY'}
     components:
     - name: full_outline
-      properties: {rounded_image: false, appearance: outlined, image_position: full,
-        card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        image_height: 250p, background: '', tooltip: '', visible: true}
+      properties: {rounded_image: false, appearance: outlined, image_position: full, card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', image_height: 250p, background: '', tooltip: '', visible: true}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ ETYKRM,BWCZNC'}
       components:
       - name: full_title_heading_1
-        properties: {text: Material Design, align: center, background_color: '', text_color: 'theme:On
-            Primary'}
+        properties: {text: Material Design, align: center, background_color: '', text_color: 'theme:On Primary'}
         type: form:Components.Heading
         layout_properties: {slot: card-image-slot}
       - name: card_content_container_6
@@ -48,9 +45,7 @@ components:
         layout_properties: {slot: card-image-slot}
         components:
         - name: text_5
-          properties: {align: center, text: 'Material 3 is the latest version of Google’s
-              open-source design system. Design and build beautiful, usable products
-              with Material 3.', text_color: 'theme:On Primary'}
+          properties: {align: center, text: 'Material 3 is the latest version of Google’s open-source design system. Design and build beautiful, usable products with Material 3.', text_color: 'theme:On Primary'}
           type: form:Components.Text
           layout_properties: {slot: anvil-m3-card-content-container-slot}
         - name: button_2
@@ -92,9 +87,7 @@ components:
           type: form:Components.Button
           layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: top_outlined
-      properties: {appearance: outlined, image_position: top, image_height: 120px,
-        card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        rounded_image: true, tooltip: ''}
+      properties: {appearance: outlined, image_position: top, image_height: 120px, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', rounded_image: true, tooltip: ''}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ CBIXCJ,NZLDUT'}
       components:
@@ -108,8 +101,7 @@ components:
           type: form:Components.Heading
           layout_properties: {slot: anvil-m3-card-content-container-slot}
         - name: text_3_copy_copy_copy_2_copy_2_copy_2
-          properties: {text: 4.7 (246), style: label, scale: small, material_icon: star_half,
-            icon_color: '#fecb3e'}
+          properties: {text: 4.7 (246), style: label, scale: small, material_icon: star_half, icon_color: '#fecb3e'}
           type: form:Components.Text
           layout_properties: {slot: anvil-m3-card-content-container-slot}
         - name: text_1_copy_2
@@ -130,9 +122,7 @@ components:
           type: form:Components.Link
           layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: top_outlined_copy_copy_3
-      properties: {appearance: outlined, image_position: right, image_height: '',
-        card_image: 'https://images.unsplash.com/photo-1514936477380-5ea603b9a1ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        rounded_image: false, image_width: 100px}
+      properties: {appearance: outlined, image_position: right, image_height: '', card_image: 'https://images.unsplash.com/photo-1514936477380-5ea603b9a1ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', rounded_image: false, image_width: 100px}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ XWIXET,FPSYIJ'}
       components:
@@ -150,13 +140,11 @@ components:
             properties: {text: Local Fruit Farms, scale: large}
             type: form:Components.Text
           - name: text_3_copy_copy_copy_3_copy_3
-            properties: {text: See your local farms and what they have in stock year-round,
-              style: label, scale: small}
+            properties: {text: See your local farms and what they have in stock year-round, style: label, scale: small}
             type: form:Components.Text
             layout_properties: {width: 187.859375}
     - name: top_outlined_copy
-      properties: {appearance: outlined, image_position: left, image_height: 65px,
-        card_image: '', rounded_image: true, image_width: 65px}
+      properties: {appearance: outlined, image_position: left, image_height: 65px, card_image: '', rounded_image: true, image_width: 65px}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,XGSWAQ WGWLLI,WJGVUP'}
       components:
@@ -188,9 +176,7 @@ components:
               type: form:Components.Text
               layout_properties: {grid_position: 'XRZLBP,XCLYES SIUAYJ,JJNQLE'}
     - name: full_elevated
-      properties: {rounded_image: false, appearance: elevated, image_position: full,
-        card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        image_width: ''}
+      properties: {rounded_image: false, appearance: elevated, image_position: full, card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', image_width: ''}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,WREAWO TFZXFM,GWNOJK'}
       components:
@@ -204,9 +190,7 @@ components:
         layout_properties: {slot: card-image-slot}
         components:
         - name: text_5_copy
-          properties: {align: center, text: 'Material 3 is the latest version of Google’s
-              open-source design system. Design and build beautiful, usable products
-              with Material 3.', text_color: 'theme:On Primary'}
+          properties: {align: center, text: 'Material 3 is the latest version of Google’s open-source design system. Design and build beautiful, usable products with Material 3.', text_color: 'theme:On Primary'}
           type: form:Components.Text
           layout_properties: {slot: anvil-m3-card-content-container-slot}
         - name: button_1
@@ -248,9 +232,7 @@ components:
           type: form:Components.Button
           layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: top_elevated
-      properties: {appearance: elevated, image_position: top, image_height: 120px,
-        card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        rounded_image: true}
+      properties: {appearance: elevated, image_position: top, image_height: 120px, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', rounded_image: true}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,WREAWO YGIPAY,XNRXKB'}
       components:
@@ -264,8 +246,7 @@ components:
           type: form:Components.Heading
           layout_properties: {slot: anvil-m3-card-content-container-slot}
         - name: text_3_copy_copy_copy_2_copy_2_copy
-          properties: {text: 4.7 (246), style: label, scale: small, material_icon: star_half,
-            icon_color: '#fecb3e'}
+          properties: {text: 4.7 (246), style: label, scale: small, material_icon: star_half, icon_color: '#fecb3e'}
           type: form:Components.Text
           layout_properties: {slot: anvil-m3-card-content-container-slot}
         - name: text_1_copy
@@ -286,9 +267,7 @@ components:
           type: form:Components.Link
           layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: top_outlined_copy_copy_copy
-      properties: {appearance: elevated, image_position: right, image_height: '',
-        card_image: 'https://images.unsplash.com/photo-1514936477380-5ea603b9a1ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        rounded_image: false, image_width: 100px}
+      properties: {appearance: elevated, image_position: right, image_height: '', card_image: 'https://images.unsplash.com/photo-1514936477380-5ea603b9a1ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', rounded_image: false, image_width: 100px}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,WREAWO OOSJVZ,QPABOP'}
       components:
@@ -306,14 +285,11 @@ components:
             properties: {text: Local Fruit Farms, scale: large}
             type: form:Components.Text
           - name: text_3_copy_copy_copy_3_copy_3_copy
-            properties: {text: See your local farms and what they have in stock year-round,
-              style: label, scale: small}
+            properties: {text: See your local farms and what they have in stock year-round, style: label, scale: small}
             type: form:Components.Text
             layout_properties: {width: 190.859375}
     - name: top_outlined_copy_copy
-      properties: {appearance: elevated, image_position: left, image_height: 65px,
-        card_image: 'https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        rounded_image: true, image_width: 65px}
+      properties: {appearance: elevated, image_position: left, image_height: 65px, card_image: 'https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', rounded_image: true, image_width: 65px}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,WREAWO BGNRHQ,ZJHATY'}
       components:
@@ -345,9 +321,7 @@ components:
               type: form:Components.Text
               layout_properties: {grid_position: 'XRZLBP,XCLYES UGYYIE,ZCSLPZ SIUAYJ,JJNQLE'}
     - name: full_filled
-      properties: {rounded_image: false, appearance: filled, image_position: full,
-        card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        image_height: '', image_width: '', background: ''}
+      properties: {rounded_image: false, appearance: filled, image_position: full, card_image: 'https://images.unsplash.com/photo-1596166901050-109003982663?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', image_height: '', image_width: '', background: ''}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,YAEOWI BWFXIR,JIWAFR'}
       components:
@@ -361,9 +335,7 @@ components:
         layout_properties: {slot: card-image-slot}
         components:
         - name: text_5_copy_copy
-          properties: {align: center, text: 'Material 3 is the latest version of Google’s
-              open-source design system. Design and build beautiful, usable products
-              with Material 3.', text_color: 'theme:On Primary'}
+          properties: {align: center, text: 'Material 3 is the latest version of Google’s open-source design system. Design and build beautiful, usable products with Material 3.', text_color: 'theme:On Primary'}
           type: form:Components.Text
           layout_properties: {slot: anvil-m3-card-content-container-slot}
         - name: button_4
@@ -405,8 +377,7 @@ components:
           type: form:Components.Button
           layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: top_filled
-      properties: {appearance: filled, image_position: top, image_height: 120px, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        rounded_image: true}
+      properties: {appearance: filled, image_position: top, image_height: 120px, card_image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', rounded_image: true}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,YAEOWI WZVJAU,BNRZFC'}
       components:
@@ -420,8 +391,7 @@ components:
           type: form:Components.Heading
           layout_properties: {slot: anvil-m3-card-content-container-slot}
         - name: text_3_copy_copy_copy_2_copy_2
-          properties: {text: 4.7 (246), style: label, scale: small, material_icon: star_half,
-            icon_color: '#fecb3e'}
+          properties: {text: 4.7 (246), style: label, scale: small, material_icon: star_half, icon_color: '#fecb3e'}
           type: form:Components.Text
           layout_properties: {slot: anvil-m3-card-content-container-slot}
         - name: text_1
@@ -442,8 +412,7 @@ components:
           type: form:Components.Link
           layout_properties: {slot: anvil-m3-card-content-container-slot}
     - name: top_outlined_copy_copy_2_copy
-      properties: {appearance: filled, image_position: right, image_height: '', card_image: 'https://images.unsplash.com/photo-1514936477380-5ea603b9a1ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        rounded_image: false, image_width: 100px}
+      properties: {appearance: filled, image_position: right, image_height: '', card_image: 'https://images.unsplash.com/photo-1514936477380-5ea603b9a1ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', rounded_image: false, image_width: 100px}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,YAEOWI GMYZNM,PVJFIP'}
       components:
@@ -461,13 +430,11 @@ components:
             properties: {text: Local Fruit Farms, scale: large}
             type: form:Components.Text
           - name: text_3_copy_copy_copy_3_copy_3_copy_2
-            properties: {text: See your local farms and what they have in stock year-round,
-              style: label, scale: small}
+            properties: {text: See your local farms and what they have in stock year-round, style: label, scale: small}
             type: form:Components.Text
             layout_properties: {width: 187.859375}
     - name: top_outlined_copy_copy_2
-      properties: {appearance: filled, image_position: left, image_height: 65px, card_image: 'https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        rounded_image: true, image_width: 65px}
+      properties: {appearance: filled, image_position: left, image_height: 65px, card_image: 'https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', rounded_image: true, image_width: 65px}
       type: form:Components.Card
       layout_properties: {grid_position: 'VUJILW,YAEOWI WPOIVI,PFAVDO'}
       components:

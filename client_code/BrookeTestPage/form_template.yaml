@@ -49,8 +49,7 @@ components_by_slot:
         type: form:Components.Heading
         layout_properties: {slot: card-content-slot}
       - name: text_3_copy
-        properties: {text: £16, bold: true, scale: large, tooltip: test test, font_size: null,
-          material_icon: '', icon_size: null}
+        properties: {text: £16, bold: true, scale: large, tooltip: test test, font_size: null, material_icon: '', icon_size: null}
         type: form:Components.Text
         layout_properties: {slot: card-content-slot}
       - name: text_4_copy

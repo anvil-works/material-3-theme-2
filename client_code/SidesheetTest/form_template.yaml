@@ -1,29 +1,7 @@
 container:
   type: HtmlTemplate
-  properties: {html: "<div anvil-name=\"anvil-m3-navigation-rail\" class=\"anvil-m3-navigation-rail\"\
-      >\n  <div anvil-name=\"anvil-m3-drawer-close-btn\" class=\"anvil-m3-drawer-close-btn\"\
-      >\n    <span class=\"material-symbols-outlined\">menu_open</span>\n  </div>\n\
-      \  <div class=\"anvil-m3-navigation-rail-content\" anvil-slot=\"anvil-m3-navigation-rail-content\"\
-      >\n      <p anvil-if-slot-empty=\"anvil-m3-navigation-rail-content\" class=\"\
-      anvil-designer-only\" style=\"font-style: italic;\">Add navigation links here</p>\n\
-      \  </div>\n</div>\n\n<div anvil-name=\"anvil-m3-top-app-bar\" class=\"anvil-m3-top-app-bar\"\
-      >\n  <!--TODO: change this to an icon button-->\n  <div class=\"anvil-m3-title-container\"\
-      >\n    <div anvil-name=\"anvil-m3-drawer-open-btn\" class=\"anvil-m3-drawer-open-btn\"\
-      >\n      <span class=\"material-symbols-outlined\">menu</span>\n    </div>\n\
-      \    <div anvil-slot=\"anvil-m3-app-title\" class=\"anvil-m3-app-title\"><span\
-      \ anvil-if-slot-empty=\"anvil-m3-app-title\" class=\"anvil-designer-only\" style=\"\
-      font-style: italic;\">Drop optional title here</span></div>\n  </div>\n  <div\
-      \ class=\"anvil-m3-app-bar-links\" anvil-slot=\"anvil-m3-app-bar-links\"><span\
-      \ anvil-if-slot-empty=\"anvil-m3-app-bar-links\" class=\"anvil-designer-only\"\
-      \  style=\"font-style: italic; font-size:14px;\">Drop optional icon buttons\
-      \ here</span></div>\n</div>\n\n<div anvil-name=\"anvil-m3-navigation-drawer-scrim\"\
-      \ class=\"anvil-m3-navigation-drawer-scrim\"></div>\n\n<div class=\"anvil-m3-content\
-      \ has-sidesheet\" anvil-slot=\"anvil-m3-content sidesheet-open\" anvil-name=\"\
-      anvil-m3-content\">\n  <p anvil-if-slot-empty=\"anvil-m3-content\" class=\"\
-      anvil-designer-only\" style=\"font-style: italic;\">Add content here</p>\n</div>\n\
-      \n<div class=\"anvil-m3-sidesheet\">\n  <div anvil-slot=\"anvil-m3-sidesheet\"\
-      >\n    <p anvil-if-slot-empty=\"anvil-m3-sidesheet\">Add sidesheet content here</p>\n\
-      \  </div>  \n</div>\n\n"}
+  properties:
+    html: "<div anvil-name=\"anvil-m3-navigation-rail\" class=\"anvil-m3-navigation-rail\">\n  <div anvil-name=\"anvil-m3-drawer-close-btn\" class=\"anvil-m3-drawer-close-btn\">\n    <span class=\"material-symbols-outlined\">menu_open</span>\n  </div>\n  <div class=\"anvil-m3-navigation-rail-content\" anvil-slot=\"anvil-m3-navigation-rail-content\">\n      <p anvil-if-slot-empty=\"anvil-m3-navigation-rail-content\" class=\"anvil-designer-only\" style=\"font-style: italic;\">Add navigation links here</p>\n  </div>\n</div>\n\n<div anvil-name=\"anvil-m3-top-app-bar\" class=\"anvil-m3-top-app-bar\">\n  <!--TODO: change this to an icon button-->\n  <div class=\"anvil-m3-title-container\">\n    <div anvil-name=\"anvil-m3-drawer-open-btn\" class=\"anvil-m3-drawer-open-btn\">\n      <span class=\"material-symbols-outlined\">menu</span>\n    </div>\n    <div anvil-slot=\"anvil-m3-app-title\" class=\"anvil-m3-app-title\"><span anvil-if-slot-empty=\"anvil-m3-app-title\" class=\"anvil-designer-only\" style=\"font-style: italic;\">Drop optional title here</span></div>\n  </div>\n  <div class=\"anvil-m3-app-bar-links\" anvil-slot=\"anvil-m3-app-bar-links\"><span anvil-if-slot-empty=\"anvil-m3-app-bar-links\" class=\"anvil-designer-only\"  style=\"font-style: italic; font-size:14px;\">Drop optional icon buttons here</span></div>\n</div>\n\n<div anvil-name=\"anvil-m3-navigation-drawer-scrim\" class=\"anvil-m3-navigation-drawer-scrim\"></div>\n\n<div class=\"anvil-m3-content has-sidesheet\" anvil-slot=\"anvil-m3-content sidesheet-open\" anvil-name=\"anvil-m3-content\">\n  <p anvil-if-slot-empty=\"anvil-m3-content\" class=\"anvil-designer-only\" style=\"font-style: italic;\">Add content here</p>\n</div>\n\n<div class=\"anvil-m3-sidesheet\">\n  <div anvil-slot=\"anvil-m3-sidesheet\">\n    <p anvil-if-slot-empty=\"anvil-m3-sidesheet\">Add sidesheet content here</p>\n  </div>  \n</div>\n\n"
 components:
 - name: column_panel_1
   properties: {}
