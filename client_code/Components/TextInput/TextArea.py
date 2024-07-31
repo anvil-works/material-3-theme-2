@@ -145,7 +145,7 @@ class TextArea(TextInput):
   #!componentProp(material_3.TextArea)!1: {name:"display_font_size",type:"number",description:"The font size of the input and placeholder text."}
   #!componentProp(material_3.TextArea)!1: {name:"underline_display",type:"boolean",description:"The font family to use for the label on this component."}
   #!componentProp(material_3.TextArea)!1: {name:"italic_display",type:"boolean",description:"If True, the input and placeholder text will be italic."}
-  #!componentProp(material_3.TextArea)!1: {name:"bold_display"",type:"boolean",description:"If True, the input and placeholder text will be bold."}
+  #!componentProp(material_3.TextArea)!1: {name:"bold_display",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
   #!componentProp(material_3.TextArea)!1: {name:"supporting_text",type:"string",description:"The supporting text displayed underneath this component"}
   #!componentProp(material_3.TextArea)!1: {name:"supporting_text_color",type:"color",description:"The colour of the supporting text underneath this component."}
