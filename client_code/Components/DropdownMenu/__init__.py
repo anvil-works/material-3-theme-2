@@ -283,17 +283,20 @@ class DropdownMenu(DropdownMenuTemplate):
     self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
 
   def _handle_component_click(self, event):
-    print("menu is visible?", self.menu.visible)
+    print("menu is visible before change?", self.menu.visible)
     self._set_menu_visibility()
-    print("menu is visible now?", self.menu.visible)
-
+    print("_set_menu_visibility has been called. menu is visible now?",  self.menu.visible)
+  
+  def selection_field_trailing_icon_click(self, **event_args):
+    print("trailing button clicked")
+    
   def _set_menu_visibility(self, value = None):
     if (value is None):
-      print(value)
       value = not self.menu.visible
     
     self.menu.visible = value
-
+    print("menu visibility in set_menu_visibility", self.label_text, self.menu.visible)
+    
     if value:
       # print('yes')
       # selection_field_width = get_dom_node(self.selection_field).offsetWidth
@@ -445,4 +448,5 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
 
 #!defClass(material_3,DropdownMenu, anvil.Component)!:
+
 
