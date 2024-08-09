@@ -228,6 +228,7 @@ class TextField(TextInput):
   hide_text = property_with_callback("hide_text", _set_hide_text)
 
   def _handle_click(self, event):
+    debugger
     event.preventDefault()
     self.raise_event("trailing_icon_click")
 
