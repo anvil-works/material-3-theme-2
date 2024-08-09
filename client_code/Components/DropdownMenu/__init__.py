@@ -308,6 +308,10 @@ class DropdownMenu(DropdownMenuTemplate):
       return
     self._set_menu_visibility(False)
 
+  def _selection_field_trailing_icon_click(self, **event_args):
+    """This method is called when the trailing icon is clicked."""
+    pass
+
   def _child_clicked(self, event):
     event.stopPropagation()
     self._set_menu_visibility(False)
