@@ -283,12 +283,13 @@ class DropdownMenu(DropdownMenuTemplate):
     self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
 
   def _handle_component_click(self, event):
-    print("component clicked")
+    print("menu is visible?", self.menu.visible)
     self._set_menu_visibility()
+    print("menu is visible now?", self.menu.visible)
 
   def _set_menu_visibility(self, value = None):
-    print(value)
     if (value is None):
+      print(value)
       value = not self.menu.visible
     
     self.menu.visible = value
