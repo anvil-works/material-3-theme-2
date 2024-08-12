@@ -233,6 +233,7 @@ class DropdownMenu(DropdownMenuTemplate):
       open_keys = set(["ArrowUp", "ArrowDown", " ", "Enter"])
       if not self.menu.visible:
         if event.key in open_keys:
+          print("happening in keyboard events, open keys")
           self._set_menu_visibility(True)
           event.preventDefault()
         return
@@ -246,6 +247,7 @@ class DropdownMenu(DropdownMenuTemplate):
         return
 
       if event.key in ["Tab", "Escape"]:
+        print("happening in keyboard events, tab or escape")
         self._set_menu_visibility(False)
 
       if (event.key == " "): #space key as " " is stupid
@@ -268,6 +270,7 @@ class DropdownMenu(DropdownMenuTemplate):
   def _attempt_select(self):
     if not self._hoverIndex == None:
       self._children[self._hoverIndex].raise_event("click")
+    print("attempting select")
     self._set_menu_visibility(False)
 
   def _clear_hover_styles(self):
@@ -283,11 +286,12 @@ class DropdownMenu(DropdownMenuTemplate):
     self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
 
   def _handle_component_click(self, event):
+    print("handling component click")
     self._set_menu_visibility()
 
   def _set_menu_visibility(self, value = None):
-    print(self.label_text)
-    debugger
+    # print(self.label_text)
+    # debugger
     if (value is None):
       value = not self.menu.visible
     
@@ -309,10 +313,12 @@ class DropdownMenu(DropdownMenuTemplate):
   def _body_click(self, event):
     if self._field.contains(event.target) or self._menuNode.contains(event.target):
       return
+    print("body click")
     self._set_menu_visibility(False)
 
   def _child_clicked(self, event):
     event.stopPropagation()
+    print("child clicked")
     self._set_menu_visibility(False)
     
     if self.selected_value is None:
