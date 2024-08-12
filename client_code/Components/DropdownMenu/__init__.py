@@ -286,6 +286,8 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility()
 
   def _set_menu_visibility(self, value = None):
+    print("visibility of menu", self.menu.visible)
+    
     if (value is None):
       value = not self.menu.visible
     
@@ -303,6 +305,8 @@ class DropdownMenu(DropdownMenuTemplate):
       self.selection_field.trailing_icon = "arrow_drop_down"
       if self.selected_value is None:
         self._hoverIndex = None
+    
+    print("visibility of menu at the end", self.menu.visible)
 
   def _body_click(self, event):
     if self._field.contains(event.target) or self._menuNode.contains(event.target):
@@ -378,6 +382,11 @@ class DropdownMenu(DropdownMenuTemplate):
 
       selection.add_event_handler('click', _handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
+  
+  def selection_field_trailing_icon_click(self, **event_args):
+    """This method is called when the trailing icon is clicked."""
+    print("carrot pressed")
+    self._set_menu_visibility()
 
 # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
@@ -443,3 +452,4 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentEvent(material_3.DropdownMenu)!1: {name: "change", description: "When an item is selected.", parameters:[]}
 
 #!defClass(material_3,DropdownMenu, anvil.Component)!:
+
