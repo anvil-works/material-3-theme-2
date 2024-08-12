@@ -286,6 +286,8 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility()
 
   def _set_menu_visibility(self, value = None):
+    print(self.label_text)
+    debugger
     if (value is None):
       value = not self.menu.visible
     
