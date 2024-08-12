@@ -386,7 +386,10 @@ class DropdownMenu(DropdownMenuTemplate):
   def selection_field_trailing_icon_click(self, **event_args):
     """This method is called when the trailing icon is clicked."""
     print("carrot pressed")
-    self._set_menu_visibility()
+    
+    if not self.label_text:
+        self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
+    self._has_focus = True
 
 # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
