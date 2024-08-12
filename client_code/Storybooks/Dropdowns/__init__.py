@@ -12,3 +12,7 @@ class Dropdowns(DropdownsTemplate):
 
 
     # Any code you write here will run before the form opens.
+
+  def text_field_1_trailing_icon_click(self, **event_args):
+    """This method is called when the trailing icon is clicked."""
+    print("blah blah blah")

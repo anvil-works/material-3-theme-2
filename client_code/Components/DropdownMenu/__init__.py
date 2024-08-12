@@ -35,7 +35,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self._handle_selection_field_focus = self._handle_selection_field_focus
     self._child_clicked = self._child_clicked
     self._handle_component_click = self._handle_component_click
-    self._trailing_icon_click = self._trailing_icon_click
 
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
@@ -203,18 +202,18 @@ class DropdownMenu(DropdownMenuTemplate):
     self._cleanup = fui.auto_update(self._field, self._menuNode, placement="bottom-start", offset=0)
 
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self._handle_component_click)
+    # self.selection_field.dom_nodes['anvil-m3-trailing-icon'].addEventListener('click', self._handle_component_click)
     self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('focus', self._handle_selection_field_focus)
     self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('blur', self._handle_selection_field_blur)
     self._menuNode.addEventListener('click', self._child_clicked)
-    self.selection_field.dom_nodes['anvil-m3-icon-container'].addEventListener('click', self._trailing_icon_click)
     
 
   def _on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self._handle_keyboard_events)
     self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self._handle_component_click)
+    # self.selection_field.dom_nodes['anvil-m3-trailing-icon'].addEventListener('click', self._handle_component_click)
     self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('focus', self._handle_selection_field_focus)
     self.selection_field.dom_nodes['anvil-m3-textfield'].removeEventListener('blur', self._handle_selection_field_blur)
-    self.selection_field.dom_nodes['anvil-m3-icon-container'].removeEventListener('click', self._trailing_icon_click)
     self._menuNode.removeEventListener('click', self._child_clicked)
     self._cleanup()
     self._menuNode.remove()
@@ -228,11 +227,6 @@ class DropdownMenu(DropdownMenuTemplate):
     # if not self.label_text and self.placeholder and self.selected_value is None:
     #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
     self._has_focus = False
-
-  def _trailing_icon_click(self, event):
-    print("you clicked me. why")
-    print(self)
-    self.menu.visible = 
     
   def _handle_keyboard_events(self, event):
     if not self._has_focus:
@@ -292,9 +286,11 @@ class DropdownMenu(DropdownMenuTemplate):
     self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
 
   def _handle_component_click(self, event):
+    print("component is being clicked")
     self._set_menu_visibility()
 
   def _set_menu_visibility(self, value = None):
+    print("something happens here")
     if (value is None):
       value = not self.menu.visible
     
