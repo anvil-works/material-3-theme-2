@@ -85,7 +85,7 @@ components:
   properties: {trailing_icon: arrow_drop_down, appearance: '', enabled: true, label_text: '', placeholder: '', supporting_text: ' ', bold_display: false}
   type: form:Components.TextInput.TextField
   layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
-  event_bindings: {trailing_icon_click: selection_field_trailing_icon_click}
+  event_bindings: {}
 container:
   type: HtmlTemplate
   properties:
