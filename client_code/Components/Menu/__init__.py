@@ -16,27 +16,21 @@ class Menu(MenuTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self._props = properties
-    self._calc_menu_height = self._calc_menu_height
     self.init_components(**properties)
 
   """ Properties """
-  # visible = HtmlTemplate.visible
+  visible = HtmlTemplate.visible
   background_color = color_property('anvil-m3-menu-items-container', 'backgroundColor', 'background_color')
 
+  # @property
+  # def visible(self):
+  #   return self._visible
 
-  @property
-  def visible(self):
-    return self._visible
-
-  @visible.setter
-  def visible(self, value):
-    self._visible = value
-    HtmlTemplate.visible.__set__(self, value)
-    # if value:
-    #   window.addEventListener("scroll", self._calc_menu_height)
-    # else:
-    #   window.removeEventListener("scroll", self._calc_menu_height)
-
+  # @visible.setter
+  # def visible(self, value):
+  #   self._visible = value
+  #   HtmlTemplate.visible.__set__(self, value)
+    
   """ Functions """
   def set_or_toggle_visibility(self, value = None):
     if value is not None:
@@ -44,19 +38,6 @@ class Menu(MenuTemplate):
     else:
       currVal = self.visible
       self.visible = not currVal
-
-  def _calc_menu_height(self, event = None):
-    m = self.dom_nodes['anvil-m3-menu-items-container']
-    m.style.height = "auto" #resetting to default so can do calculations
-    rect = m.getBoundingClientRect()
-    menu_top, menu_bottom = rect.top, rect.bottom
-    natural_height = menu_bottom - menu_top
-    window_height = window.innerHeight
-
-    available_space = menu_top - window_height
-
-    if available_space < natural_height:
-      pass
 
   def _anvil_get_interactions_(self):
     return [
