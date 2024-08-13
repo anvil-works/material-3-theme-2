@@ -35,7 +35,7 @@ class Menu(MenuTemplate):
     if value:
       document.addEventListener("scroll", self._calc_menu_height)
     else:
-      
+      document.removeEventListener("scroll", self._calc_menu_height)
 
   """ Functions """
   def set_or_toggle_visibility(self, value = None):
@@ -45,8 +45,8 @@ class Menu(MenuTemplate):
       currVal = self.visible
       self.visible = not currVal
 
-  def _calc_menu_height(self):
-    pass
+  def _calc_menu_height(self, event):
+    print("TEEHEE I'M SCROLLING")
 
   def _anvil_get_interactions_(self):
     return [
