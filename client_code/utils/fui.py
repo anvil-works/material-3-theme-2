@@ -44,7 +44,7 @@ def auto_update(
 
     # custom stuff. This is not from fui. It's just so we can get the menus to resize and scroll if there iesn't enough vertical space
     floating_el.style.removeProperty('height')
-    # el_height = window.getComputedStyle(element)
+    el_height = window.getComputedStyle(floating_el).height[0,-2]
     
     print(rv.placement)
     if "bottom" in rv.placement:
