@@ -31,7 +31,6 @@ def auto_update(
 
   def update(*args):
     floating_el.style.removeProperty('height')
-    print("original height", window.getComputedStyle(floating_el).height)
     
     middleware = [fui.offset(offset), fui.flip(), fui.shift(shift), fui.hide(hide)]
     if arrow:
@@ -48,6 +47,8 @@ def auto_update(
     # custom stuff. This is not from fui. It's just so we can get the menus to resize and scroll if there iesn't enough vertical space
     el_height = int(window.getComputedStyle(floating_el).height[:-2])
     print(el_height)
+    # if el_height == 24 or el_height == 0:
+    #   return
     if "top" in rv.placement:
       print("at the top")
     else:
