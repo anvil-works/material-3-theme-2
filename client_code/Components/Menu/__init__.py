@@ -16,7 +16,6 @@ class Menu(MenuTemplate):
     # Set Form properties and Data Bindings.
     self._props = properties
     self.init_components(**properties)
-    
 
   """ Properties """
   # visible = HtmlTemplate.visible
@@ -30,8 +29,9 @@ class Menu(MenuTemplate):
   def visible(self, value):
     self._visible = value
     HtmlTemplate.visible.__set__(self, value)
-    print("visibility being updated for menu")
-    
+    if value:
+      print("you are visible. that's great.")
+      
 
   """ Functions """
   def set_or_toggle_visibility(self, value = None):
