@@ -19,23 +19,20 @@ class Menu(MenuTemplate):
     
 
   """ Properties """
-  visible = HtmlTemplate.visible
+  # visible = HtmlTemplate.visible
   background_color = color_property('anvil-m3-menu-items-container', 'backgroundColor', 'background_color')
-  
-  # @property
-  # def visible(self):
-  #   value = super(HtmlTemplate, self).visible
-  #   return value
-  #   # super(HtmlTemplate).visible
 
-  # @visible.setter
-  # def visible(self, value):
-  #   super(HtmlTemplate, self.__class__).visible.fset(self, value)
-  #   # self._visible = value
-  #   # super(HtmlTemplate).visible = value
-    
-  # #   self.dom_nodes['anvil-m3-menu-items-container'].classList.toggle('anvil-m3-menu-hidden', not value)
-  
+  @property
+  def visible(self):
+    # Call the superclass's getter
+    return HtmlTemplate.visible.fget(self)
+
+  @visible.setter
+  def visible(self, value):
+    # Call the superclass's setter to actually set the value
+    HtmlTemplate.visible.fset(self, value)
+    print(f"Setting visibility to: {value}")
+
   """ Functions """
   def set_or_toggle_visibility(self, value = None):
     if value is not None:
