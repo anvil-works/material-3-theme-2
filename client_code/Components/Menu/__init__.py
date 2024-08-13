@@ -50,9 +50,7 @@ class Menu(MenuTemplate):
     m = self.dom_nodes['anvil-m3-menu-items-container']
     rect = m.getBoundingClientRect()
     menu_top, menu_bottom = rect.top, rect.bottom
-    prwindow.innerHeight
-
-    
+    window_height = window.innerHeight
     
 
   def _anvil_get_interactions_(self):
