@@ -197,7 +197,7 @@ class ButtonMenu(ButtonMenuTemplate):
     # if event.key is "Tab":
     #   pass
     hover = self._hoverIndex #holding value for situation like alerts where it awaits 
-    self.set_visibility(False)
+    self._set_visibility(False)
     
     def attemptSelect():
       event.preventDefault();
