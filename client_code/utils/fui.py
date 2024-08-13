@@ -30,7 +30,9 @@ def auto_update(
   call the cleanup in x-anvil-page-removed"""
 
   def update(*args):
-    floating_el.style.removeAttribute('height');
+    floating_el.style.removeProperty('height');
+    floating_el.style.removeProperty('top');
+    floating_el.style.removeProperty('bottom');
     
     middleware = [fui.offset(offset), fui.flip(), fui.shift(shift), fui.hide(hide)]
     if arrow:
@@ -44,13 +46,14 @@ def auto_update(
     floating_el.style.left = f"{rv.x}px"
 
     if 'bottom' in rv.placement:
-      available_space = window.innerHeight - reference_el.getBoundingClient().bottom
+      available_space = window.innerHeight - reference_el.getBoundingClientRect().bottom
       print('space on the bottom', available_space)
+      floating_el.style.bottom = f"{0}px"
     else:
-      available_space = reference_el.getBoundingClient().top
+      available_space = reference_el.getBoundingClientRect().top
       print('space on the top', available_space)
       
-    floating_el.style.top = f"{rv.y}px"
+      floating_el.style.top = f"{rv.y}px"
 
     middlewareData = rv.middlewareData
     if "hide" in middlewareData:
