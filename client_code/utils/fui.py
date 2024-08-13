@@ -50,7 +50,9 @@ def auto_update(
       floating_el.style.top = f"{rv.y}px"
     else:
       ref_top = reference_el.getBoundingClientRect().top
-      floating_el.style.bottom = f"{ref_top}px"
+      print(ref_top)
+      print(window.innerHeight)
+      # floating_el.style.bottom = f"{window.innerHeight - ref_top}px"
       
     # custom stuff. This is not from fui. It's just so we can get the menus to resize and scroll if there iesn't enough vertical space
     # el_height = int(window.getComputedStyle(floating_el).height[:-2])
