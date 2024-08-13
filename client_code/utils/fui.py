@@ -31,6 +31,8 @@ def auto_update(
 
   def update(*args):
     floating_el.style.removeProperty('height')
+    floating_el.style.removeProperty('bottom')
+    floating_el.style.removeProperty('top')
     
     middleware = [fui.offset(offset), fui.flip(), fui.shift(shift), fui.hide(hide)]
     if arrow:
@@ -41,26 +43,29 @@ def auto_update(
       'strategy': strategy,
       'middleware': middleware,
     })
+
     floating_el.style.left = f"{rv.x}px"
+
+    if "bottom" in 
     floating_el.style.top = f"{rv.y}px"
 
     # custom stuff. This is not from fui. It's just so we can get the menus to resize and scroll if there iesn't enough vertical space
     # el_height = int(window.getComputedStyle(floating_el).height[:-2])
-    el_height = floating_el.offsetHeight
-    print(el_height)
+    # el_height = floating_el.offsetHeight
+    # print(el_height)
     
-    if "bottom" in rv.placement:
-      available_space = window.innerHeight - reference_el.getBoundingClientRect().top
-      # print(available_space)
-      if (available_space < el_height):
-        pass
-        # floating_el.style.height = f"{available_space}px"
-    else:
-      available_space = reference_el.getBoundingClientRect().top
-      # print(available_space)
-      if (available_space < el_height):
-        pass
-        # floating_el.style.height = f"{available_space}px"
+    # if "bottom" in rv.placement:
+    #   available_space = window.innerHeight - reference_el.getBoundingClientRect().bottom
+    #   # print(available_space)
+    #   if (available_space < el_height):
+    #     # pass
+    #     floating_el.style.height = f"{available_space}px"
+    # else:
+    #   available_space = reference_el.getBoundingClientRect().top
+    #   # print(available_space)
+    #   if (available_space < el_height):
+    #     # pass
+    #     floating_el.style.height = f"{available_space}px"
     
     middlewareData = rv.middlewareData
     if "hide" in middlewareData:
