@@ -22,12 +22,14 @@ class Menu(MenuTemplate):
   # visible = HtmlTemplate.visible
   background_color = color_property('anvil-m3-menu-items-container', 'backgroundColor', 'background_color')
   
-  # @property
-  # def visible(self):
-  #   return super(HtmlTemplate).visible
+  @property
+  def visible(self):
+    return self._visible
+    # super(HtmlTemplate).visible
 
-  # @visible.setter
-  # def visible(self, value):
+  @visible.setter
+  def visible(self, value):
+    self._visible = value
     # super(HtmlTemplate).visible = value
   #   self.dom_nodes['anvil-m3-menu-items-container'].classList.toggle('anvil-m3-menu-hidden', not value)
 
