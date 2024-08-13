@@ -32,6 +32,8 @@ def auto_update(
     middleware = [fui.offset(offset), fui.flip(), fui.shift(shift), fui.hide(hide)]
     if arrow:
       middleware.append(fui.arrow({"element": arrow}))
+
+    floating_el.style.height = "auto"
     
     rv = fui.computePosition(reference_el, floating_el, {
       'placement': placement,
