@@ -109,6 +109,7 @@ components:
                 appearance: outlined
                 error: false
                 items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
+                visible: true
                 selected_underline_display: true
                 italic_items: false
                 margin: ['', null, null, null]
@@ -139,6 +140,7 @@ components:
                 label_text: Dropdown Label 3
                 allow_none: true
                 error: false
+                visible: true
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
             - name: dropdown_menu_4
@@ -149,6 +151,7 @@ components:
                 label_text: Dropdown Label 4
                 appearance: outlined
                 allow_none: true
+                visible: true
               type: form:Components.DropdownMenu
               layout_properties: {width: 273}
   - name: card_1_copy_1
