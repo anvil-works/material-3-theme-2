@@ -32,10 +32,10 @@ class Menu(MenuTemplate):
   def visible(self, value):
     self._visible = value
     HtmlTemplate.visible.__set__(self, value)
-    if value:
-      window.addEventListener("scroll", self._calc_menu_height)
-    else:
-      window.removeEventListener("scroll", self._calc_menu_height)
+    # if value:
+    #   window.addEventListener("scroll", self._calc_menu_height)
+    # else:
+    #   window.removeEventListener("scroll", self._calc_menu_height)
 
   """ Functions """
   def set_or_toggle_visibility(self, value = None):
@@ -53,7 +53,10 @@ class Menu(MenuTemplate):
     natural_height = menu_bottom - menu_top
     window_height = window.innerHeight
 
-    
+    available_space = menu_top - window_height
+
+    if available_space < natural_height:
+      pass
 
   def _anvil_get_interactions_(self):
     return [
