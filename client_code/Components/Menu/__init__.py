@@ -33,7 +33,6 @@ class Menu(MenuTemplate):
     self._visible = value
     HtmlTemplate.visible.__set__(self, value)
     if value:
-      # self._calc_menu_height()
       window.addEventListener("scroll", self._calc_menu_height)
     else:
       window.removeEventListener("scroll", self._calc_menu_height)
@@ -52,6 +51,8 @@ class Menu(MenuTemplate):
     menu_top, menu_bottom = rect.top, rect.bottom
     window_height = window.innerHeight
     natural_height = menu_bottom - menu_top
+
+    
 
     
 
