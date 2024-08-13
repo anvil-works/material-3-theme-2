@@ -8,7 +8,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from anvil.js.window import document
+from anvil.js.window import window
 from anvil import HtmlTemplate
 from ...Functions import color_property
 
@@ -33,9 +33,9 @@ class Menu(MenuTemplate):
     self._visible = value
     HtmlTemplate.visible.__set__(self, value)
     if value:
-      document.addEventListener("scroll", self._calc_menu_height)
+      window.addEventListener("scroll", self._calc_menu_height)
     else:
-      document.removeEventListener("scroll", self._calc_menu_height)
+      window.removeEventListener("scroll", self._calc_menu_height)
 
   """ Functions """
   def set_or_toggle_visibility(self, value = None):
@@ -46,7 +46,14 @@ class Menu(MenuTemplate):
       self.visible = not currVal
 
   def _calc_menu_height(self, event):
+    m = self.dom_nodes['anvil-m3-menu-items-container']
+    rect = m.getBoundingClientRect()
+    print(rect.top, rect.bottom)
+
+    
+    
     print("TEEHEE I'M SCROLLING")
+    
 
   def _anvil_get_interactions_(self):
     return [
