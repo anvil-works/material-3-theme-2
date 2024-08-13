@@ -31,6 +31,7 @@ def auto_update(
 
   def update(*args):
     floating_el.style.removeProperty('height')
+    print("original height", window.getComputedStyle(floating_el).height)
     
     middleware = [fui.offset(offset), fui.flip(), fui.shift(shift), fui.hide(hide)]
     if arrow:
