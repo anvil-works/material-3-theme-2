@@ -25,13 +25,15 @@ class Menu(MenuTemplate):
   @property
   def visible(self):
     # Call the superclass's getter
-    return HtmlTemplate.visible.fget(self)
+    # return HtmlTemplate.visible.fget(self)
+    return self._visible
 
   @visible.setter
   def visible(self, value):
     # Call the superclass's setter to actually set the value
-    HtmlTemplate.visible.fset(self, value)
     print(f"Setting visibility to: {value}")
+    HtmlTemplate.visible.fset(self, value)
+    
 
   """ Functions """
   def set_or_toggle_visibility(self, value = None):
