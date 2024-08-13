@@ -32,21 +32,24 @@ def auto_update(
     middleware = [fui.offset(offset), fui.flip(), fui.shift(shift), fui.hide(hide)]
     if arrow:
       middleware.append(fui.arrow({"element": arrow}))
-
-    floating_el.style.height = "auto"
     
     rv = fui.computePosition(reference_el, floating_el, {
       'placement': placement,
       'strategy': strategy,
       'middleware': middleware,
     })
-    floating_el.style.left = f"{rv.x}px"
+    floating_el.style.left = f"{rv.x + 20}px"
     floating_el.style.top = f"{rv.y}px"
+    
+    floating_el.style.removeProperty('height')
 
     middlewareData = rv.middlewareData
     if "hide" in middlewareData:
       hidden = middlewareData.hide.referenceHidden
       floating_el.style.visibility = "hidden" if hidden else "visible"
+    else:
+      floating_el.style.height = "100px"
+
 
     if arrow and "arrow" in middlewareData:
       x = middlewareData.arrow.get("x")
