@@ -50,10 +50,8 @@ class Menu(MenuTemplate):
     m.style.height = "auto" #resetting to default so can do calculations
     rect = m.getBoundingClientRect()
     menu_top, menu_bottom = rect.top, rect.bottom
-    window_height = window.innerHeight
     natural_height = menu_bottom - menu_top
-
-    
+    window_height = window.innerHeight
 
     
 
