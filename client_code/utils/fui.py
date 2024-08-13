@@ -1,4 +1,5 @@
 from anvil.js import import_from
+from anvil.js.window import window
 
 # https://floating-ui.com/
 # can't import from cdn, load js file in assets and import from there
@@ -38,18 +39,19 @@ def auto_update(
       'strategy': strategy,
       'middleware': middleware,
     })
-    floating_el.style.left = f"{rv.x + 20}px"
+    floating_el.style.left = f"{rv.x}px"
     floating_el.style.top = f"{rv.y}px"
-    
+
+    # custom stuff. This is not from fui. It's just so we can get the menus to resize and scroll if there iesn't enough vertical space
     floating_el.style.removeProperty('height')
+    print(placement)
+
+    
 
     middlewareData = rv.middlewareData
     if "hide" in middlewareData:
       hidden = middlewareData.hide.referenceHidden
       floating_el.style.visibility = "hidden" if hidden else "visible"
-    else:
-      floating_el.style.height = "100px"
-
 
     if arrow and "arrow" in middlewareData:
       x = middlewareData.arrow.get("x")
