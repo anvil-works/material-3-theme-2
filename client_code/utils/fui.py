@@ -1,4 +1,5 @@
 from anvil.js import import_from
+from anvil.js.window import window
 
 # https://floating-ui.com/
 # can't import from cdn, load js file in assets and import from there
@@ -29,6 +30,8 @@ def auto_update(
   call the cleanup in x-anvil-page-removed"""
 
   def update(*args):
+    floating_el.style.removeAttribute('height');
+    
     middleware = [fui.offset(offset), fui.flip(), fui.shift(shift), fui.hide(hide)]
     if arrow:
       middleware.append(fui.arrow({"element": arrow}))
@@ -39,6 +42,14 @@ def auto_update(
       'middleware': middleware,
     })
     floating_el.style.left = f"{rv.x}px"
+
+    if 'bottom' in rv.placement:
+      available_space = window.innerHeight - reference_el.getBoundingClient().bottom
+      print('space on the bottom', available_space)
+    else:
+      available_space = reference_el.getBoundingClient().top
+      print('space on the top', available_space)
+      
     floating_el.style.top = f"{rv.y}px"
 
     middlewareData = rv.middlewareData
