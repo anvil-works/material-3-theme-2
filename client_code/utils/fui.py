@@ -47,9 +47,10 @@ def auto_update(
     floating_el.style.removeProperty('height')
     if "bottom" in rv.placement:
       available_space = window.innerHeight - rv.y
+      if (available_space < el_height):
+        floating_el.style.height = 
     else:
       available_space = rv.y
-
     
 
     middlewareData = rv.middlewareData
