@@ -38,7 +38,8 @@ class Menu(MenuTemplate):
     else:
       currVal = self.visible
       self.visible = not currVal
-      # calculate height
+    if (self.visible):
+      print("you should be visible now")
 
   def _calc_menu_height(self):
     pass
