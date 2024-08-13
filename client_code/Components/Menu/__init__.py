@@ -38,8 +38,10 @@ class Menu(MenuTemplate):
     else:
       currVal = self.visible
       self.visible = not currVal
+      # calculate height
 
-  
+  def _calc_menu_height(self):
+    pass
 
   def _anvil_get_interactions_(self):
     return [
