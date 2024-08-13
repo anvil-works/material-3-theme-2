@@ -44,16 +44,20 @@ def auto_update(
       'middleware': middleware,
     })
     floating_el.style.left = f"{rv.x}px"
-
+    el_height = floating_el.offsetHeight
+    
     if 'bottom' in rv.placement:
       available_space = window.innerHeight - reference_el.getBoundingClientRect().bottom
-      print('space on the bottom', available_space)
-      floating_el.style.bottom = f"{0}px"
+      if available_space < el_height:
+        floating_el.style.bottom = f"{0}px"
+      else:
+        floating_el.style.top = f"{rv.y}px"
     else:
       available_space = reference_el.getBoundingClientRect().top
-      print('space on the top', available_space)
-      
-      floating_el.style.top = f"{rv.y}px"
+      print(available_space)
+      # if available_space < el_height:
+        # floating_el.style.bottom = f"{10}px"
+        
 
     middlewareData = rv.middlewareData
     if "hide" in middlewareData:
