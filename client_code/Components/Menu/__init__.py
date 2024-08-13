@@ -51,6 +51,8 @@ class Menu(MenuTemplate):
     rect = m.getBoundingClientRect()
     menu_top, menu_bottom = rect.top, rect.bottom
     window_height = window.innerHeight
+    natural_height = menu_bottom - menu_top
+
     
 
   def _anvil_get_interactions_(self):
