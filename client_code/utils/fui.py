@@ -30,6 +30,8 @@ def auto_update(
   call the cleanup in x-anvil-page-removed"""
 
   def update(*args):
+    floating_el.style.removeProperty('height')
+    
     middleware = [fui.offset(offset), fui.flip(), fui.shift(shift), fui.hide(hide)]
     if arrow:
       middleware.append(fui.arrow({"element": arrow}))
@@ -43,20 +45,24 @@ def auto_update(
     floating_el.style.top = f"{rv.y}px"
 
     # custom stuff. This is not from fui. It's just so we can get the menus to resize and scroll if there iesn't enough vertical space
-    floating_el.style.removeProperty('height')
-    el_height = window.getComputedStyle(floating_el).height[0,-2]
-    
-    print(rv.placement)
-    if "bottom" in rv.placement:
-      available_space = window.innerHeight - rv.y
-      print(available_space)
-      if (available_space < el_height):
-        floating_el.style.height = f"{available_space}px"
+    el_height = int(window.getComputedStyle(floating_el).height[:-2])
+    print(el_height)
+    if "top" in rv.placement:
+      print("at the top")
     else:
-      available_space = rv.y
-      print(available_space)
-      if (available_space < el_height):
-        floating_el.style.height = f"{available_space}px"
+      print("at the bottom")
+    # if "bottom" in rv.placement:
+    #   available_space = window.innerHeight - rv.y
+    #   # print(available_space)
+    #   if (available_space < el_height):
+    #     pass
+    #     # floating_el.style.height = f"{available_space}px"
+    # else:
+    #   available_space = rv.y
+    #   # print(available_space)
+    #   if (available_space < el_height):
+    #     pass
+    #     # floating_el.style.height = f"{available_space}px"
     
     middlewareData = rv.middlewareData
     if "hide" in middlewareData:
