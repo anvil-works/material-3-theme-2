@@ -200,7 +200,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
     document.body.append(self._menuNode)
 
-    self._cleanup = fui.auto_update(self._field, self._menuNode, placement="bottom-start", offset=0)
+    self._cleanup = fui.auto_update(self.dom_nodes['anvil-m3-dropdownMenu-textfield'], self._menuNode, placement="bottom-start", offset=0)
 
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self._handle_component_click)
     self.selection_field.dom_nodes['anvil-m3-textfield'].addEventListener('focus', self._handle_selection_field_focus)
