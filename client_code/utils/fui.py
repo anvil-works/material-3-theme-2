@@ -1,5 +1,5 @@
 from anvil.js import import_from
-from anvil.js.window import window
+from anvil.js.window import document, window
 
 # https://floating-ui.com/
 # can't import from cdn, load js file in assets and import from there
@@ -45,26 +45,22 @@ def auto_update(
     floating_el.style.top = f"{rv.y}px"
 
     # custom stuff. This is not from fui. It's just so we can get the menus to resize and scroll if there iesn't enough vertical space
-    el_height = int(window.getComputedStyle(floating_el).height[:-2])
+    # el_height = int(window.getComputedStyle(floating_el).height[:-2])
+    el_height = floating_el.offsetHeight
     print(el_height)
-    if el_height == 0:
-      return
-    if "top" in rv.placement:
-      print("at the top")
+    
+    if "bottom" in rv.placement:
+      available_space = window.innerHeight - reference_el.getBoundingClientRect().top
+      # print(available_space)
+      if (available_space < el_height):
+        pass
+        # floating_el.style.height = f"{available_space}px"
     else:
-      print("at the bottom")
-    # if "bottom" in rv.placement:
-    #   available_space = window.innerHeight - rv.y
-    #   # print(available_space)
-    #   if (available_space < el_height):
-    #     pass
-    #     # floating_el.style.height = f"{available_space}px"
-    # else:
-    #   available_space = rv.y
-    #   # print(available_space)
-    #   if (available_space < el_height):
-    #     pass
-    #     # floating_el.style.height = f"{available_space}px"
+      available_space = reference_el.getBoundingClientRect().top
+      # print(available_space)
+      if (available_space < el_height):
+        pass
+        # floating_el.style.height = f"{available_space}px"
     
     middlewareData = rv.middlewareData
     if "hide" in middlewareData:
