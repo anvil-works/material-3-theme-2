@@ -49,8 +49,6 @@ class Menu(MenuTemplate):
     m = self.dom_nodes['anvil-m3-menu-items-container']
     rect = m.getBoundingClientRect()
     print(rect.top, rect.bottom)
-
-    
     
     print("TEEHEE I'M SCROLLING")
     
