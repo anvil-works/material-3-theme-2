@@ -33,6 +33,7 @@ class Menu(MenuTemplate):
     self._visible = value
     HtmlTemplate.visible.__set__(self, value)
     if value:
+      # self._calc_menu_height()
       window.addEventListener("scroll", self._calc_menu_height)
     else:
       window.removeEventListener("scroll", self._calc_menu_height)
@@ -45,12 +46,13 @@ class Menu(MenuTemplate):
       currVal = self.visible
       self.visible = not currVal
 
-  def _calc_menu_height(self, event):
+  def _calc_menu_height(self, event = None):
     m = self.dom_nodes['anvil-m3-menu-items-container']
     rect = m.getBoundingClientRect()
-    print(rect.top, rect.bottom)
+    menu_top, menu_bottom = rect.top, rect.bottom
+    prwindow.innerHeight
+
     
-    print("TEEHEE I'M SCROLLING")
     
 
   def _anvil_get_interactions_(self):
