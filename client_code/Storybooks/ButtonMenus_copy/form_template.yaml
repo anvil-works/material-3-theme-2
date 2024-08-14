@@ -1,0 +1,182 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+    layout_properties: {grid_position: 'XSWOOJ,FCHTQP'}
+    components:
+    - name: flow_panel_1
+      properties: {}
+      type: FlowPanel
+      components:
+      - name: linear_panel_2
+        properties: {}
+        type: LinearPanel
+        layout_properties: {width: 427}
+        components:
+        - name: text_1
+          properties: {text: ButtonMenu Component, font_size: 25, text_color: 'theme:Primary'}
+          type: form:Components.Text
+          layout_properties: {}
+        - name: text_2
+          properties: {text: Description. Properties. Link to docs. Etc}
+          type: form:Components.Text
+  - name: card_1_copy_1
+    properties: {visible: true}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'XELRDD,LWQQOV'}
+    components:
+    - name: flow_panel_2_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: column_panel_1_copy_1
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {width: 578}
+        components:
+        - name: flow_panel_3_copy_2
+          properties: {}
+          type: FlowPanel
+          layout_properties: {grid_position: 'YFXULF,CLTAUS'}
+          components:
+          - name: button_menu_1
+            properties: {text: MENU, appearance: elevated, menu_background: ''}
+            type: form:Components.ButtonMenu
+            layout_properties: {expand: false}
+            components:
+            - name: menu_item_1
+              properties: {text: Item 1, leading_icon: visibility, enabled: false, underline: false, italic: false, bold: false, hide_leading_icon: false}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: menu_item_2
+              properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C, enabled: true, trailing_icon: null}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+              event_bindings: {}
+            - name: menu_item_3
+              properties: {text: Item 3, leading_icon: edit}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+          - name: button_menu_2
+            properties: {text: menu 2, appearance: filled, menu_background: ''}
+            type: form:Components.ButtonMenu
+            components:
+            - name: menu_item_1_copy_1
+              properties: {text: Item 1, leading_icon: null, hide_leading_icon: false}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: menu_item_2_copy_1
+              properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: menu_item_3_copy_1
+              properties: {text: Item 3, leading_icon: edit}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: divider_1
+              properties: {}
+              type: form:Components.Divider
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: menu_item_4
+              properties: {text: Item 4, hide_leading_icon: true, trailing_icon: thumb_up}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            layout_properties: {}
+          - name: button_menu_2_copy_2
+            properties: {text: menu 3, appearance: tonal, visible: true, enabled: true}
+            type: form:Components.ButtonMenu
+            layout_properties: {}
+            components:
+            - name: menu_item_1_copy_1_copy_1
+              properties: {text: Item 1, leading_icon: visibility}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: menu_item_2_copy_1_copy_1
+              properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: menu_item_3_copy_1_copy_1
+              properties: {text: Item 3, leading_icon: edit}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: divider_1_copy_1
+              properties: {}
+              type: form:Components.Divider
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: menu_item_4_copy_1
+              properties: {text: Item 4, hide_leading_icon: true, trailing_icon: thumb_up}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+          - name: button_menu_2_copy_3
+            properties: {text: menu 1, appearance: outlined}
+            type: form:Components.ButtonMenu
+            layout_properties: {}
+            components:
+            - name: menu_item_1_copy_1_copy_2
+              properties: {text: Item 1, leading_icon: visibility}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: menu_item_2_copy_1_copy_2
+              properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: menu_item_3_copy_1_copy_2
+              properties: {text: Item 3, leading_icon: edit}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: divider_1_copy_2
+              properties: {}
+              type: form:Components.Divider
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+            - name: menu_item_4_copy_2
+              properties: {text: Item 4, hide_leading_icon: true, trailing_icon: thumb_up}
+              type: form:Components.MenuItem
+              layout_properties: {slot: anvil-m3-buttonMenu-slot}
+  - name: card_1_copy_1_copy_1
+    properties: {visible: true}
+    type: form:Components.Card
+    layout_properties: {grid_position: 'YWLDED,AJTCVA'}
+    components:
+    - name: flow_panel_2_copy_1_copy_1
+      properties: {}
+      type: FlowPanel
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: column_panel_1_copy_1_copy_1
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {width: 578}
+        components:
+        - name: flow_panel_3_copy_2_copy_1
+          properties: {}
+          type: FlowPanel
+          layout_properties: {grid_position: 'YFXULF,CLTAUS'}
+          components:
+          - name: button_menu_1_copy_1
+            properties: {text: menu 1, enabled: false}
+            type: form:Components.ButtonMenu
+            layout_properties: {}
+            components: []
+          - name: button_menu_2_copy_1
+            properties: {text: Menu 2, appearance: filled, enabled: false}
+            type: form:Components.ButtonMenu
+            layout_properties: {}
+          - name: button_menu_3_copy_1
+            properties: {text: Menu 3, appearance: tonal, enabled: false}
+            type: form:Components.ButtonMenu
+            layout_properties: {}
+          - name: button_menu_4_copy_1
+            properties: {text: Menu 4, appearance: outlined, enabled: false}
+            type: form:Components.ButtonMenu
+            layout_properties: {}
+custom_component: false

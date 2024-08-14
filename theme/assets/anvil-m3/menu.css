@@ -3,7 +3,7 @@
   min-width: 112px;
   /* max-width: 280px; */
   min-height: 24px;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   border-radius: 4px;
   padding: 8px 0;
   background-color: var(--anvil-m3-surface-container);
@@ -111,14 +111,14 @@
 }
 
 .anvil-m3-buttonMenu-items-container {
-  position: absolute;
-/*   position: fixed; */
+  /* position: absolute; */
+  position: fixed;
   inset: 0 0 auto auto;
   width: max-content;
   min-width: 112px;
   max-width: 280px;
   min-height: 24px;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   border-radius: 4px;
   padding: 8px 12px;
   background-color: var(--anvil-m3-surface-container);

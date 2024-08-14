@@ -2,7 +2,7 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: Storybooks.Dropdowns_copy}
+startup: {type: form, module: Storybooks.ButtonMenus_copy}
 package_name: Material_3_Theme_2_0
 allow_embedding: false
 toolbox_sections:
