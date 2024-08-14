@@ -55,7 +55,7 @@ components:
         supporting_text_font_size: null
         error: false
         items_background_color: theme:Error
-        items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9, dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9]
+        items: [dropdown item 1, dropdown item 2, dropdown item 3, dropdown item 4, dropdown item 5, dropdown item 6, dropdown item 7, dropdown item 8, dropdown item 9, dropdown item 10]
         visible: true
         enabled: true
         supporting_text: ''

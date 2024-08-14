@@ -52,10 +52,11 @@ def auto_update(
       if available_space < el_height:
         print("need to resize")
         floating_el.style.bottom = f"{0}px"
-        floating_el.style.height = f"{300}px"
+        floating_el.style.height = f"{available_space}px"
       else:
         print("this is fine!")
         floating_el.style.top = f"{rv.y}px"
+        
     else:
       print("T-O-P TOP!")
       available_space = reference_el.getBoundingClientRect().top
