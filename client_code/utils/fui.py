@@ -45,8 +45,9 @@ def auto_update(
     })
     floating_el.style.left = f"{rv.x}px"
     el_height = floating_el.offsetHeight
-    
+    print(rv.placement)
     if 'bottom' in rv.placement:
+      print("HELLO")
       available_space = window.innerHeight - reference_el.getBoundingClientRect().bottom
       if available_space < el_height:
         floating_el.style.bottom = f"{0}px"
