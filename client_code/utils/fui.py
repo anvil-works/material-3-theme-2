@@ -76,5 +76,4 @@ def auto_update(
         # assumes the arrow element is 8px 8px
         arrow.style[static_side] = "-4px"
 
-
   return fui.autoUpdate(reference_el, floating_el, update)
