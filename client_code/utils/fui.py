@@ -60,7 +60,7 @@ def auto_update(
         floating_el.style.top = "0px"
         floating_el.style.height = f"{available_space}px"
       else:
-        floating_el.style.bottom = f"{10}px"
+        floating_el.style.bottom = f"{window.innerHeight - available_space}px"
         
 
     middlewareData = rv.middlewareData
