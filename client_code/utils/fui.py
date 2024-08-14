@@ -43,25 +43,24 @@ def auto_update(
       'strategy': strategy,
       'middleware': middleware,
     })
+    
     floating_el.style.left = f"{rv.x}px"
     el_height = floating_el.offsetHeight
-    if el_height == 0:
-      return
     if 'bottom' in rv.placement:
       available_space = window.innerHeight - reference_el.getBoundingClientRect().bottom
       if available_space < el_height:
-        floating_el.style.bottom = f"{0}px"
+        floating_el.style.bottom = "0px"
         floating_el.style.height = f"{available_space}px"
       else:
-        # print(rv.y - window.scrollY)
         floating_el.style.top = f"{rv.y - window.scrollY}px"
     
     else:
-      print("T-O-P TOP!")
       available_space = reference_el.getBoundingClientRect().top
-      # print(available_space)
-      # if available_space < el_height:
-        # floating_el.style.bottom = f"{10}px"
+      if available_space < el_height:
+        floating_el.style.top = "0px"
+        floating_el.style.height = f"{available_space}px"
+      else:
+        floating_el.style.bottom = f"{10}px"
         
 
     middlewareData = rv.middlewareData
