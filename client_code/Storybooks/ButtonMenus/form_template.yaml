@@ -22,6 +22,10 @@ components:
         type: LinearPanel
         layout_properties: {width: 427}
         components:
+        - name: spacer_1
+          properties: {height: 263.740234375}
+          type: Spacer
+          layout_properties: {}
         - name: text_1
           properties: {text: ButtonMenu Component, font_size: 25, text_color: 'theme:Primary'}
           type: form:Components.Text
