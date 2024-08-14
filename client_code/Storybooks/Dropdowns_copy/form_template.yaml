@@ -63,6 +63,51 @@ components:
         tooltip: This is a drop down menu
       type: form:Components.DropdownMenu
       layout_properties: {slot: card-content-slot}
+    - name: button_menu_2_copy_3
+      properties: {text: menu 1, appearance: outlined}
+      type: form:Components.ButtonMenu
+      layout_properties: {slot: card-content-slot}
+      components:
+      - name: menu_item_1_copy_1_copy_2
+        properties: {text: Item 1, leading_icon: visibility}
+        type: form:Components.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_2_copy_1_copy_2
+        properties: {text: Item 2, leading_icon: copy_all, trailing_text: cmd + C}
+        type: form:Components.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_3_copy_1_copy_2
+        properties: {text: Item 3, leading_icon: edit}
+        type: form:Components.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: divider_1_copy_2
+        properties: {}
+        type: form:Components.Divider
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_4_copy_2
+        properties: {text: Item 4, hide_leading_icon: true, trailing_icon: thumb_up}
+        type: form:Components.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_1
+        properties: {text: another item}
+        type: form:Components.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_2
+        properties: {text: more_tiems}
+        type: form:Components.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_3
+        properties: {text: again!}
+        type: form:Components.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_4
+        properties: {text: and again!}
+        type: form:Components.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      - name: menu_item_5
+        properties: {text: NEVER STOP}
+        type: form:Components.MenuItem
+        layout_properties: {slot: anvil-m3-buttonMenu-slot}
   - name: card_1_copy_1
     properties: {visible: true}
     type: form:Components.Card
