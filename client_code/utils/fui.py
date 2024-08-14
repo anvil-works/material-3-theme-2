@@ -1,5 +1,5 @@
 from anvil.js import import_from
-from anvil.js.window import window
+from anvil.js.window import window, document
 
 # https://floating-ui.com/
 # can't import from cdn, load js file in assets and import from there
@@ -45,18 +45,17 @@ def auto_update(
     })
     floating_el.style.left = f"{rv.x}px"
     el_height = floating_el.offsetHeight
-    print(rv.placement)
+    if el_height == 0:
+      return
     if 'bottom' in rv.placement:
-      print("BOOTTTTTOM")
       available_space = window.innerHeight - reference_el.getBoundingClientRect().bottom
       if available_space < el_height:
-        print("need to resize")
         floating_el.style.bottom = f"{0}px"
         floating_el.style.height = f"{available_space}px"
       else:
-        print("this is fine!")
-        floating_el.style.top = f"{rv.y}px"
-        
+        # print(rv.y - window.scrollY)
+        floating_el.style.top = f"{rv.y - window.scrollY}px"
+    
     else:
       print("T-O-P TOP!")
       available_space = reference_el.getBoundingClientRect().top
