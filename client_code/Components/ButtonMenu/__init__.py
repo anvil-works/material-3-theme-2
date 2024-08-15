@@ -200,7 +200,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self._set_visibility(False)
     
     def attemptSelect():
-      event.preventDefault();
+      event.preventDefault()
       if hover is not None:
         self._children[hover].raise_event("click")
     
@@ -216,14 +216,14 @@ class ButtonMenu(ButtonMenuTemplate):
       while True:
         self._hoverIndex += 1
         if self._hoverIndex in self._itemIndices:
-          break;
+          break
     else:
       if self._hoverIndex is None or self._hoverIndex == 0:
         self._hoverIndex = len(self._children)
       while True:
         self._hoverIndex -= 1
         if self._hoverIndex in self._itemIndices:
-          break; 
+          break
     self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
     self._update_hover_styles()
 
