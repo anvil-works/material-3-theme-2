@@ -195,7 +195,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
   
   def _on_mount(self, **event_args):
-    document.addEventListener('keydown', self._handle_keyboard_events, True)
+    document.addEventListener('keydown', self._handle_keyboard_events)
     document.addEventListener('click', self._body_click)
 
     document.body.append(self._menuNode)

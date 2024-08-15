@@ -192,6 +192,7 @@ class ButtonMenu(ButtonMenuTemplate):
     
     if event.key in ["ArrowUp", "ArrowDown"]:
       self._iterate_hover(event.key == "ArrowDown")
+      event.preventDefault()
       return
       
     # if event.key is "Tab":
