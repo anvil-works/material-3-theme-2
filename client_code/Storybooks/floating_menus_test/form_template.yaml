@@ -14,7 +14,7 @@ components:
     layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
     components:
     - name: spacer_1
-      properties: {height: 799.2021484375}
+      properties: {height: 410.779296875}
       type: Spacer
       layout_properties: {slot: card-content-slot}
   - name: card_1_copy_1
