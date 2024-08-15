@@ -176,7 +176,8 @@ class ButtonMenu(ButtonMenuTemplate):
     self._set_visibility(False)
   
   def _get_hover_index_information(self):
-    self._children = self.get_components()[1:]
+    print("menu children",self.get_components())
+    self._children = self.get_components()[:-1]
     for i in range(0, len(self._children)):
       if isinstance(self._children[i], MenuItem):
         self._itemIndices.add(i)
@@ -213,24 +214,25 @@ class ButtonMenu(ButtonMenuTemplate):
   def _iterate_hover(self, inc = True):
     print("iterating", self._hoverIndex)
     if inc:
-      if self._hoverIndex is None:# or self._hoverIndex is (len(self._children) - 1):
-        print("down key")
+      if self._hoverIndex is None or self._hoverIndex is (len(self._children) - 1):
+        
         self._hoverIndex = -1
     #     self._hoverIndex = -1
       while True:
         self._hoverIndex += 1
         if self._hoverIndex in self._itemIndices:
           break
-        
+      print(self._hoverIndex)
     else:
+      print("up key")
       if self._hoverIndex is None or self._hoverIndex == 0:
-        print("up key")
+        
         self._hoverIndex = len(self._children)
-    #   while True:
-    #     self._hoverIndex -= 1
-    #     if self._hoverIndex in self._itemIndices:
-    #       break
-    # self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
+      while True:
+        self._hoverIndex -= 1
+        if self._hoverIndex in self._itemIndices:
+          break
+    self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
     self._update_hover_styles()
 
   def _clear_hover_styles(self):
