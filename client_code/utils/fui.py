@@ -14,12 +14,9 @@ _static_arrow_position = {
 
 def size_middleware():
     def apply(context):
-        availableWidth = context['availableWidth']
         availableHeight = context['availableHeight']
         elements = context['elements']
 
-        # Set styles directly in Python
-        elements.floating.style.maxWidth = f"{availableWidth}px"
         elements.floating.style.maxHeight = f"{availableHeight}px"
 
     return {"apply": apply}
