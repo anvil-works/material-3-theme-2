@@ -212,6 +212,7 @@ class ButtonMenu(ButtonMenuTemplate):
       
   def _iterate_hover(self, inc = True):
     if inc:
+      # pass
       if self._hoverIndex is None or self._hoverIndex is (len(self._children) - 1):
         self._hoverIndex = -1
       while True:
