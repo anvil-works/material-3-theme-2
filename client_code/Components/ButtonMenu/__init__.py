@@ -213,7 +213,6 @@ class ButtonMenu(ButtonMenuTemplate):
   def _iterate_hover(self, inc = True):
     print("iterating")
     if inc:
-      # pass
       if self._hoverIndex is None or self._hoverIndex is (len(self._children) - 1):
         self._hoverIndex = -1
       while True:
@@ -221,7 +220,6 @@ class ButtonMenu(ButtonMenuTemplate):
         if self._hoverIndex in self._itemIndices:
           break
     else:
-      pass
       if self._hoverIndex is None or self._hoverIndex == 0:
         self._hoverIndex = len(self._children)
       while True:
@@ -239,7 +237,8 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _update_hover_styles(self):
     self._clear_hover_styles()
-    self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
+    if (self._hoverIndex is not None):
+      self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
     
   def _anvil_get_interactions_(self):
     return [
