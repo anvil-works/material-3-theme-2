@@ -44,7 +44,6 @@ def auto_update(
     floating_el.style.left = f"{rv.x}px"
     floating_el.style.top = f"{rv.y}px"
 
-
     middlewareData = rv.middlewareData
 
     if "hide" in middlewareData:
@@ -69,7 +68,6 @@ def size_middleware():
   def apply(context):
       availableHeight = context['availableHeight']
       elements = context['elements']
-
       elements.floating.style.maxHeight = f"{availableHeight}px"
-
+  
   return {"apply": apply}

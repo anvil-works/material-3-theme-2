@@ -300,7 +300,6 @@ class DropdownMenu(DropdownMenuTemplate):
       self._menuNode.style.width = f"{selection_field_width}px"
       if not anvil.designer.in_designer:
         self.selection_field.trailing_icon = "arrow_drop_up"
-        self._menuNode.focus()
         
     else:
       self.selection_field.trailing_icon = "arrow_drop_down"
