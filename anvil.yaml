@@ -2,7 +2,7 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: test}
+startup: {type: form, module: Storybooks.Dropdowns}
 package_name: m3
 allow_embedding: false
 toolbox_sections:
