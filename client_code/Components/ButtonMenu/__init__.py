@@ -224,22 +224,8 @@ class ButtonMenu(ButtonMenuTemplate):
         self._hoverIndex -= 1
         if self._hoverIndex in self._itemIndices:
           break
-    self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
+    # self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
     self._update_hover_styles()
-
-  """
-    def _iterate_hover(self, inc = True):
-    if inc:
-      if self._hoverIndex is None or self._hoverIndex is (len(self._children) - 1):
-        self._hoverIndex = -1
-      self._hoverIndex += 1
-    else:
-      if self._hoverIndex is None or self._hoverIndex == 0:
-        self._hoverIndex = len(self._children)
-      self._hoverIndex -= 1
-    self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
-    self._update_hover_styles()
-  """
 
   def _clear_hover_styles(self):
     if self._children is not None:
