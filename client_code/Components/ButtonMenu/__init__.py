@@ -211,21 +211,21 @@ class ButtonMenu(ButtonMenuTemplate):
       attemptSelect()
       
   def _iterate_hover(self, inc = True):
-    print("iterating")
-    if inc:
-      if self._hoverIndex is None or self._hoverIndex is (len(self._children) - 1):
-        self._hoverIndex = -1
-      while True:
-        self._hoverIndex += 1
-        if self._hoverIndex in self._itemIndices:
-          break
-    else:
-      if self._hoverIndex is None or self._hoverIndex == 0:
-        self._hoverIndex = len(self._children)
-      while True:
-        self._hoverIndex -= 1
-        if self._hoverIndex in self._itemIndices:
-          break
+    print("iterating", self._hoverIndex)
+    # if inc:
+    #   if self._hoverIndex is None or self._hoverIndex is (len(self._children) - 1):
+    #     self._hoverIndex = -1
+    #   while True:
+    #     self._hoverIndex += 1
+    #     if self._hoverIndex in self._itemIndices:
+    #       break
+    # else:
+    #   if self._hoverIndex is None or self._hoverIndex == 0:
+    #     self._hoverIndex = len(self._children)
+    #   while True:
+    #     self._hoverIndex -= 1
+    #     if self._hoverIndex in self._itemIndices:
+    #       break
     # self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
     self._update_hover_styles()
 
