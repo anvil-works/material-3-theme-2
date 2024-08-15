@@ -183,7 +183,7 @@ class DropdownMenu(DropdownMenuTemplate):
   placeholder = property_with_callback("placeholder", _set_placeholder)
 
   # placeholder = property_without_callback("placeholder")
-  items = property_without_callback("items")
+  items = property_without_callback("items") #[("First Option", 0), ("Second Option", 1)]
   allow_none = property_without_callback("allow_none")
   bold_items = property_without_callback("bold_items")
   italic_items = property_without_callback("italic_items")

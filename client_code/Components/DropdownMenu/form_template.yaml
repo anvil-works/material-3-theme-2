@@ -76,17 +76,6 @@ toolbox_item:
   icon: {light: 'asset:designer_icons/dropdown_menu.svg', dark: 'asset:designer_icons/dropdown_menu_dark.svg'}
   hidden: true
 custom_component: true
-custom_component_container: true
-container:
-  type: HtmlTemplate
-  properties:
-    html: |-
-      <div anvil-name="anvil-m3-dropdownMenu-container" class="anvil-m3-dropdownMenu-container" >
-        <div anvil-slot="anvil-m3-dropdownMenu-textfield" anvil-name="anvil-m3-dropdownMenu-textfield" class="anvil-m3-dropdownMenu-textfield" anvil-slot-internal></div>
-        <div anvil-slot="anvil-m3-dropdownMenu-slot" anvil-name="anvil-m3-dropdownMenu-items-container" class="anvil-m3-dropdownMenu-items-container" anvil-slot-internal></div>
-      </div>
-    visible: true
-  event_bindings: {show: form_show}
 components:
 - properties: {visible: false}
   type: form:Components.Menu
@@ -97,3 +86,14 @@ components:
   layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
   event_bindings: {}
   name: selection_field
+container:
+  type: HtmlTemplate
+  properties:
+    html: |-
+      <div anvil-name="anvil-m3-dropdownMenu-container" class="anvil-m3-dropdownMenu-container" >
+        <div anvil-slot="anvil-m3-dropdownMenu-textfield" anvil-name="anvil-m3-dropdownMenu-textfield" class="anvil-m3-dropdownMenu-textfield" anvil-slot-internal></div>
+        <div anvil-slot="anvil-m3-dropdownMenu-slot" anvil-name="anvil-m3-dropdownMenu-items-container" class="anvil-m3-dropdownMenu-items-container" anvil-slot-internal></div>
+      </div>
+    visible: true
+  event_bindings: {show: form_show}
+custom_component_container: true
