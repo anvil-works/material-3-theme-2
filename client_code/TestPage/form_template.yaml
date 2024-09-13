@@ -26,6 +26,10 @@ components_by_slot:
     name: button_1
     properties: {align: left, appearance: filled, text: Button}
     type: form:_Components.Button
+  - layout_properties: {}
+    name: checkbox_1
+    properties: {error: true, text: I accept the terms and conditions}
+    type: form:_Components.Checkbox
 event_bindings: {show: form_show}
 is_package: true
 layout: {type: 'form:TestLayout'}

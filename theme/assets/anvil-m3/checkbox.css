@@ -60,9 +60,9 @@ input.anvil-m3-checkbox:checked + .anvil-m3-checkbox-hover > .anvil-m3-checkbox-
 
 /*Error states*/
 .anvil-m3-checkbox-container.anvil-m3-checkbox-error .anvil-m3-checkbox-unchecked, 
-
 .anvil-m3-checkbox-container.anvil-m3-checkbox-error .anvil-m3-checkbox-checked,
-.anvil-m3-checkbox-container.anvil-m3-checkbox-error .anvil-m3-checkbox-indeterminate {
+.anvil-m3-checkbox-container.anvil-m3-checkbox-error .anvil-m3-checkbox-indeterminate,
+.anvil-m3-checkbox-container.anvil-m3-checkbox-error .anvil-m3-checkbox-label {
   color: var(--anvil-m3-error) !important;
 }
 

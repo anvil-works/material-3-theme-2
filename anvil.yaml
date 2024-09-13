@@ -82,7 +82,7 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/tables.yml
-startup: {module: Storybooks.Text, type: form}
+startup: {module: TestPage, type: form}
 startup_form: null
 toolbox_sections:
 - items:
