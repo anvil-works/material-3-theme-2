@@ -17,22 +17,12 @@ class RadioGroup(RadioGroupTemplate):
     
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
-    
-    # if not anvil.designer.in_designer:
-    #   id = gen_id()
-    #   self.dom_nodes["anvil-m3-radiobutton-input"].id = id
-    #   self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
   def _on_mount(self, **event_args):
-    self.dom_nodes["anvil-m3-radiogroup-component"].addEventListener(
-      "click", self._handle_click
-    )
+    pass
 
   def _on_cleanup(self, **event_args):
-    self.dom_nodes["anvil-m3-radiogroup-component"].removeEventListener(
-      "click", self._handle_click
-    )
-
+    pass
 
   def _set_group_name(self, value):
     self.recreate_group_items()
@@ -69,9 +59,6 @@ class RadioGroup(RadioGroupTemplate):
         self.raise_event("change")
       radio_button.add_event_handler("click", _handle_r_button_click)
       self.add_component(radio_button, slot="anvil-m3-radiogroup-slot")
-      
-  def _handle_click(self, event):
-    pass
       
   def get_group_value(self):
     return self.selected_item

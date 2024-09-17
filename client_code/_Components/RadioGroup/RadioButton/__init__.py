@@ -54,8 +54,7 @@ class RadioButton(RadioButtonTemplate):
     self.dom_nodes["anvil-m3-radiobutton-hover"].removeEventListener(
       "click", self._handle_click
     )
-
-
+    
   # Properties
   enabled = enabled_property("anvil-m3-radiobutton-input")
   visible = HtmlTemplate.visible
@@ -104,10 +103,10 @@ class RadioButton(RadioButtonTemplate):
   text = property_with_callback("text", _set_text)
 
   def _handle_click(self, event):
-    self.raise_event("click")
-    # if self.enabled:
-    #   self.dom_nodes["anvil-m3-radiobutton-input"].focus()
-    #   self.selected = True
+    if self.enabled:
+      self.dom_nodes["anvil-m3-radiobutton-input"].focus()
+      self.selected = True
+      self.raise_event("click")
     #   self.raise_event("change")
 
   # def form_show(self, **event_args):
@@ -124,7 +123,20 @@ class RadioButton(RadioButtonTemplate):
     return selected_item.value
 
 
+
+
+
+
+
+
+
+
 #!defClass(material_3, RadioButton, anvil.Component)!:
+
+
+
+
+
 
 
 

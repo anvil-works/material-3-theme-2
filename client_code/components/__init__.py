@@ -14,7 +14,7 @@ from .._Components.LinearProgressIndicator import LinearProgressIndicator
 from .._Components.Link import Link
 from .._Components.MenuItem import MenuItem
 from .._Components.NavigationLink import NavigationLink
-from .._Components.RadioButton import RadioButton
+from .._Components.RadioGroup.RadioButton import RadioButton
 from .._Components.Slider import Slider
 from .._Components.Switch import Switch
 from .._Components.Text import Text
