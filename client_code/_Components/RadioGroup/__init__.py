@@ -25,12 +25,12 @@ class RadioGroup(RadioGroupTemplate):
 
   def _on_mount(self, **event_args):
     self.dom_nodes["anvil-m3-radiogroup-component"].addEventListener(
-      "change", self._handle_click
+      "click", self._handle_click
     )
 
   def _on_cleanup(self, **event_args):
     self.dom_nodes["anvil-m3-radiogroup-component"].removeEventListener(
-      "change", self._handle_click
+      "click", self._handle_click
     )
 
 
@@ -66,10 +66,12 @@ class RadioGroup(RadioGroupTemplate):
         radio_button.text = item
       def _handle_r_button_click(value = item, **e):
         self.selected_item = value
-      self.add_event_handler("x-click", _handle_r_button_click)
+        self.raise_event("change")
+      radio_button.add_event_handler("click", _handle_r_button_click)
       self.add_component(radio_button, slot="anvil-m3-radiogroup-slot")
       
-  def _handle_click(self)
+  def _handle_click(self, event):
+    pass
       
   def get_group_value(self):
     return self.selected_item

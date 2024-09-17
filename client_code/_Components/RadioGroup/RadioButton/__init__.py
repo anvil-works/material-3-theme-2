@@ -104,7 +104,7 @@ class RadioButton(RadioButtonTemplate):
   text = property_with_callback("text", _set_text)
 
   def _handle_click(self, event):
-    self.raise_event("change")
+    self.raise_event("click")
     # if self.enabled:
     #   self.dom_nodes["anvil-m3-radiobutton-input"].focus()
     #   self.selected = True
