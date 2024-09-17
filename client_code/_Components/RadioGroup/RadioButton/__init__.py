@@ -38,8 +38,8 @@ class RadioButton(RadioButtonTemplate):
     self._design_name = ""
     self.init_components(**properties)
 
-    self.add_event_handler("x-anvil-page-added", self._on_mount)
-    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
+    # self.add_event_handler("x-anvil-page-added", self._on_mount)
+    # self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
     if not anvil.designer.in_designer:
       id = gen_id()
       self.dom_nodes["anvil-m3-radiobutton-input"].id = id
