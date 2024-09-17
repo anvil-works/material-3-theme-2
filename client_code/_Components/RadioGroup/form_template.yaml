@@ -1,7 +1,22 @@
 components: []
 container:
   properties:
-    html: "<!-- <div anvil-name=\"anvil-m3-radiobutton-component\" style=\"display:flex\">\n  <div anvil-name=\"anvil-m3-radiobutton-container\" class=\"anvil-m3-radiobutton-container\">\n    <input class=\"anvil-m3-radiobutton-input\" anvil-name=\"anvil-m3-radiobutton-input\" type=\"radio\">\n    <div class=\"anvil-m3-radiobutton-hover\" anvil-name=\"anvil-m3-radiobutton-hover\">\n      <span class=\"material-symbols-outlined anvil-m3-radiobutton-unchecked\" anvil-name=\"anvil-m3-radiobutton-unchecked\">radio_button_unchecked</span>\n      <span class=\"material-symbols-outlined anvil-m3-radiobutton-checked\" anvil-name=\"anvil-m3-radiobutton-checked\" style=\"display:none\">radio_button_checked</span>\n    </div>\n    <label class=\"anvil-m3-radiobutton-label\" anvil-name=\"anvil-m3-radiobutton-label\"></label>\n  </div>\n</div> -->\n\n<div anvil-name=\"anvil-m3-radiogroup-component\" style=\"display:flex\">\n  \n</div>"
+    html: |-
+      <!-- <div anvil-name="anvil-m3-radiobutton-component" style="display:flex">
+        <div anvil-name="anvil-m3-radiobutton-container" class="anvil-m3-radiobutton-container">
+          <input class="anvil-m3-radiobutton-input" anvil-name="anvil-m3-radiobutton-input" type="radio">
+          <div class="anvil-m3-radiobutton-hover" anvil-name="anvil-m3-radiobutton-hover">
+            <span class="material-symbols-outlined anvil-m3-radiobutton-unchecked" anvil-name="anvil-m3-radiobutton-unchecked">radio_button_unchecked</span>
+            <span class="material-symbols-outlined anvil-m3-radiobutton-checked" anvil-name="anvil-m3-radiobutton-checked" style="display:none">radio_button_checked</span>
+          </div>
+          <label class="anvil-m3-radiobutton-label" anvil-name="anvil-m3-radiobutton-label"></label>
+        </div>
+      </div> -->
+
+      <div anvil-name="anvil-m3-radiogroup-component" style="display:flex">
+        <div anvil-name="anvil-m3-radiogroup-container" class="anvil-m3-radiogroup-container">
+        </div>
+      </div>
   type: HtmlTemplate
 custom_component: true
 is_package: true
