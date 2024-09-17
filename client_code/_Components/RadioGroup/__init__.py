@@ -12,6 +12,7 @@ class RadioGroup(RadioGroupTemplate):
   def __init__(self, **properties):
     self._props = properties
     self._tooltip_node = None
+    self._selected_item = None
     self.init_components(**properties)
 
   def _set_group_name(self, value):
@@ -24,7 +25,8 @@ class RadioGroup(RadioGroupTemplate):
   items = property_with_callback("items", _set_items)
 
   def _set_selected_item(self, value):
-    pass
+    print(value)
+    self.recreate_group_items()
   selected_item = property_with_callback("selected_item", _set_selected_item)
 
   def form_show(self, **event_args):
@@ -37,6 +39,7 @@ class RadioGroup(RadioGroupTemplate):
     for item in self.items:
       radio_button = RadioButton()
       radio_button.group_name = self.group_name
+      radio_button.selected = item is self.selected_item
       if isinstance(item, tuple):
         radio_button.text = item[0]
         # todo: include all the properties and such
