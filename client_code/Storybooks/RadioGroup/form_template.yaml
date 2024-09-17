@@ -29,6 +29,11 @@ components:
           group_name: grouuup
           items: [radio 1, radio 2, radio 2]
         type: form:_Components.RadioGroup
+      - layout_properties: {slot: card-content-container-slot}
+        name: radio_group_2
+        properties:
+          items: ['1', '2', '3']
+        type: form:_Components.RadioGroup
       layout_properties: {slot: card-content-slot}
       name: card_content_container_1
       properties: {}
