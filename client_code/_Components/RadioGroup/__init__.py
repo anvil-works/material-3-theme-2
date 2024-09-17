@@ -15,34 +15,22 @@ class RadioGroup(RadioGroupTemplate):
     self.init_components(**properties)
 
   def _set_group_name(self, value):
-    # go thru an change the group_name of every child to this
-    pass
+    self.recreate_group_items()
+    # this is overkill - Probably makes more sense to just go thru and set the group_name of all the children
   group_name = property_with_callback("group_name", _set_group_name)
 
   
   def _set_items(self, value):
-    # recreate all items with correc
-    pass
+    self.recreate_group_items()
   items = property_with_callback("items", _set_items)
-  
-
-  
-
-
-# <div anvil-name="anvil-m3-radiogroup-component" style="display:flex">
-#   <div anvil-name="anvil-m3-radiogroup-container" class="anvil-m3-radiogroup-container">
-#   </div>
-# </div>
 
   def form_show(self, **event_args):
     if not self.group_name:
       self.group_name = gen_id()
-            # id = gen_id()
-      # self.dom_nodes["anvil-m3-radiobutton-input"].id = id
-      # self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
-    self.create_group_items()
+    self.recreate_group_items()
 
-  def create_group_items(self):
+  def recreate_group_items(self):
+    self.clear(slot="anvil-m3-radiogroup-slot")
     for item in self.items:
       radio_button = RadioButton()
       radio_button.group_name = self.group_name
