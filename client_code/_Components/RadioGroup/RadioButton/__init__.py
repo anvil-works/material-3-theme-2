@@ -143,10 +143,11 @@ class RadioButton(RadioButtonTemplate):
   #   anvil.designer.update_component_properties(self, {"selected": self.selected})
 
   def _handle_click(self, event):
-    if self.enabled:
-  #     self.dom_nodes["anvil-m3-radiobutton-input"].focus()
-  #     self.selected = True
-      self.raise_event("change")
+    self.raise_event("change")
+    # if self.enabled:
+    #   self.dom_nodes["anvil-m3-radiobutton-input"].focus()
+    #   self.selected = True
+    #   self.raise_event("change")
 
   # def form_show(self, **event_args):
   #   if anvil.designer.in_designer:
