@@ -6,10 +6,12 @@ from anvil.js.window import document
 import random, string, math
 from ...utils import gen_id
 import anvil.designer
+import 
 
 class RadioGroup(RadioGroupTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
+    self._props = properties
+    self._tooltip_node = None
     self.init_components(**properties)
 
   def _set_group_name(self, value):
@@ -18,7 +20,6 @@ class RadioGroup(RadioGroupTemplate):
   group_name = property_with_callback("group_name", _set_group_name)
   
   items = property_without_callback("items")
-
 
 
 # <div anvil-name="anvil-m3-radiogroup-component" style="display:flex">
