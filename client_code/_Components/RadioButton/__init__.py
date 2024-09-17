@@ -92,12 +92,8 @@ class RadioButton(RadioButtonTemplate):
   #   self.dom_nodes['anvil-m3-radiobutton-input'].checked = value
 
   def _set_selected(self, value):
-    if isinstance(value, tuple):
-      self.dom_nodes['anvil-m3-radiobutton-input'].checked = value
-    else:
-      self.dom_nodes['anvil-m3-radiobutton-input'].checked = value
+    self.dom_nodes['anvil-m3-radiobutton-input'].checked = value
   selected = property_with_callback("selected", _set_selected)
-
   
 
   def _set_text(self, value):

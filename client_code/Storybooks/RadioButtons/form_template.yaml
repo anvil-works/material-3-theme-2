@@ -31,7 +31,7 @@ components:
             type: form:_Components.RadioButton
           - layout_properties: {}
             name: radio_button_3
-            properties: {align: right, group_name: asdf, selected: true, text: booton}
+            properties: {align: right, group_name: asdf, selected: false, text: booton}
             type: form:_Components.RadioButton
           - layout_properties: {}
             name: radio_button_4
@@ -44,7 +44,7 @@ components:
         - components:
           - layout_properties: {}
             name: radio_button_7
-            properties: {group_name: fdsa, selected: true, text: rdio}
+            properties: {group_name: fdsa, selected: false, text: rdio}
             type: form:_Components.RadioButton
           - layout_properties: {}
             name: radio_button_8
