@@ -38,22 +38,22 @@ class RadioButton(RadioButtonTemplate):
     self._design_name = ""
     self.init_components(**properties)
 
-    # self.add_event_handler("x-anvil-page-added", self._on_mount)
-    # self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
     if not anvil.designer.in_designer:
       id = gen_id()
       self.dom_nodes["anvil-m3-radiobutton-input"].id = id
       self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
-  # def _on_mount(self, **event_args):
-    # self.dom_nodes["anvil-m3-radiobutton-hover"].addEventListener(
-    #   "click", self._handle_click
-    # )
+  def _on_mount(self, **event_args):
+    self.dom_nodes["anvil-m3-radiobutton-hover"].addEventListener(
+      "click", self._handle_click
+    )
 
-  # def _on_cleanup(self, **event_args):
-  #   self.dom_nodes["anvil-m3-radiobutton-hover"].removeEventListener(
-  #     "click", self._handle_click
-  #   )
+  def _on_cleanup(self, **event_args):
+    self.dom_nodes["anvil-m3-radiobutton-hover"].removeEventListener(
+      "click", self._handle_click
+    )
 
 
   # Properties
@@ -142,11 +142,11 @@ class RadioButton(RadioButtonTemplate):
   #   self.selected = not self.selected
   #   anvil.designer.update_component_properties(self, {"selected": self.selected})
 
-  # def _handle_click(self, event):
-  #   if self.enabled:
+  def _handle_click(self, event):
+    if self.enabled:
   #     self.dom_nodes["anvil-m3-radiobutton-input"].focus()
   #     self.selected = True
-  #     self.raise_event("change")
+      self.raise_event("change")
 
   # def form_show(self, **event_args):
   #   if anvil.designer.in_designer:
