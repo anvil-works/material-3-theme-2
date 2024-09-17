@@ -25,6 +25,55 @@ components:
     - components:
       - components:
         - components:
+          - layout_properties: {}
+            name: radio_button_2
+            properties: {align: right, group_name: asdf, selected: true, text: button}
+            type: form:_Components.RadioButton
+          - layout_properties: {}
+            name: radio_button_3
+            properties: {align: right, group_name: asdf, selected: true, text: booton}
+            type: form:_Components.RadioButton
+          - layout_properties: {}
+            name: radio_button_4
+            properties: {align: right, group_name: asdf, selected: true, text: buhtn}
+            type: form:_Components.RadioButton
+          layout_properties: {grid_position: 'NKZLLK,WMVFAM'}
+          name: linear_panel_3
+          properties: {}
+          type: LinearPanel
+        - components:
+          - layout_properties: {}
+            name: radio_button_7
+            properties: {group_name: fdsa, selected: true, text: rdio}
+            type: form:_Components.RadioButton
+          - layout_properties: {}
+            name: radio_button_8
+            properties: {group_name: fdsa, selected: true, text: radeo}
+            type: form:_Components.RadioButton
+          - layout_properties: {}
+            name: radio_button_9
+            properties: {group_name: fdsa, text: rhodeo}
+            type: form:_Components.RadioButton
+          layout_properties: {grid_position: 'NKZLLK,EWMBDG'}
+          name: linear_panel_4
+          properties: {}
+          type: LinearPanel
+        layout_properties: {slot: card-content-container-slot}
+        name: column_panel_1
+        properties: {}
+        type: ColumnPanel
+      layout_properties: {slot: card-content-slot}
+      name: card_content_container_3
+      properties: {}
+      type: form:_Components.Card.CardContentContainer
+    layout_properties: {grid_position: 'XLQDFA,WUMOOX'}
+    name: card_1
+    properties: {}
+    type: form:_Components.Card
+  - components:
+    - components:
+      - components:
+        - components:
           - layout_properties: {grid_position: 'HAKWNV,EETNLW'}
             name: text_3
             properties: {text: Group 1}
@@ -32,15 +81,15 @@ components:
           - components:
             - layout_properties: {}
               name: radio_button_1
-              properties: {group_name: group_1, selected: true, text: Selection 1}
+              properties: {group_name: group_1, selected: true, text: Selection 1, visible: false}
               type: form:_Components.RadioButton
             - layout_properties: {}
               name: radio_button_1_copy_1
-              properties: {group_name: group_1, selected: false, text: Selection 2}
+              properties: {group_name: group_1, selected: true, text: Selection 2}
               type: form:_Components.RadioButton
             - layout_properties: {}
               name: radio_button_1_copy_2
-              properties: {background: '', group_name: group_1, selected: false, text: Selection 3}
+              properties: {background: '', group_name: group_1, selected: true, text: Selection 3}
               type: form:_Components.RadioButton
             - layout_properties: {}
               name: radio_button_1_copy_3
@@ -48,11 +97,11 @@ components:
               type: form:_Components.RadioButton
             - layout_properties: {}
               name: radio_button_1_copy_4
-              properties: {group_name: group_1, selected: true, text: Selection 5}
+              properties: {group_name: group_1, selected: true, text: Selection 5, visible: true}
               type: form:_Components.RadioButton
             - layout_properties: {}
               name: radio_button_1_copy_5
-              properties: {align: left, enabled: false, group_name: group_1, text: Disabled Selection}
+              properties: {align: left, enabled: false, group_name: group_1, selected: true, text: Disabled Selection}
               type: form:_Components.RadioButton
             layout_properties: {grid_position: 'VQDKEK,UJGSYX'}
             name: flow_panel_3_copy_2
@@ -85,11 +134,11 @@ components:
           - components:
             - layout_properties: {}
               name: radio_button_1_copy_6
-              properties: {group_name: group_2, selected: false, text: Selection 1}
+              properties: {group_name: group_2, selected: true, text: Selection 1}
               type: form:_Components.RadioButton
             - layout_properties: {}
               name: radio_button_1_copy_1_copy_1
-              properties: {group_name: group_2, text: Selection 2}
+              properties: {group_name: group_2, selected: true, text: Selection 2}
               type: form:_Components.RadioButton
             - layout_properties: {}
               name: radio_button_1_copy_2_copy_1
@@ -97,11 +146,11 @@ components:
               type: form:_Components.RadioButton
             - layout_properties: {}
               name: radio_button_1_copy_3_copy_1
-              properties: {group_name: group_2, selected: false, text: Selection 4}
+              properties: {group_name: group_2, selected: true, text: Selection 4}
               type: form:_Components.RadioButton
             - layout_properties: {}
               name: radio_button_1_copy_4_copy_1
-              properties: {group_name: group_2, selected: false, text: Selection 5}
+              properties: {group_name: group_2, selected: true, text: Selection 5}
               type: form:_Components.RadioButton
             - layout_properties: {}
               name: radio_button_1_copy_5_copy_1
