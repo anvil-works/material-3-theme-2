@@ -1,4 +1,4 @@
-from ._anvil_designer import RadioButtonTemplate
+from ._anvil_designer import RadioButton_copyTemplate
 from anvil import *
 import anvil.server
 import anvil.tables as tables
@@ -31,7 +31,7 @@ from ....Functions import (
 from ....utils import gen_id
 
 
-class RadioButton(RadioButtonTemplate):
+class RadioButton_copy(RadioButton_copyTemplate):
   def __init__(self, **properties):
     self._props = properties
     self._tooltip_node = None
@@ -45,15 +45,15 @@ class RadioButton(RadioButtonTemplate):
       self.dom_nodes["anvil-m3-radiobutton-input"].id = id
       self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
-  # def _on_mount(self, **event_args):
-    # self.dom_nodes["anvil-m3-radiobutton-hover"].addEventListener(
-    #   "click", self._handle_click
-    # )
+  def _on_mount(self, **event_args):
+    self.dom_nodes["anvil-m3-radiobutton-hover"].addEventListener(
+      "click", self._handle_click
+    )
 
-  # def _on_cleanup(self, **event_args):
-  #   self.dom_nodes["anvil-m3-radiobutton-hover"].removeEventListener(
-  #     "click", self._handle_click
-  #   )
+  def _on_cleanup(self, **event_args):
+    self.dom_nodes["anvil-m3-radiobutton-hover"].removeEventListener(
+      "click", self._handle_click
+    )
 
   #!componentEvent(material_3.RadioButton)!1: {name: "change", description: "When the Radio Button is selected or unselected."}
   #!componentEvent(material_3.RadioButton)!1: {name: "show", description: "When the Radio Button is shown on the screen."}
@@ -138,43 +138,43 @@ class RadioButton(RadioButtonTemplate):
 
   text = property_with_callback("text", _set_text)
 
-  # # Class Functions
-  # def _anvil_get_interactions_(self):
-  #   return [
-  #     {
-  #       "type": "whole_component",
-  #       "title": "Edit text",
-  #       "icon": "edit",
-  #       "default": True,
-  #       "callbacks": {
-  #         "execute": lambda: anvil.designer.start_inline_editing(
-  #           self, "text", self.dom_nodes["anvil-m3-radiobutton-label"]
-  #         )
-  #       },
-  #     },
-  #     {
-  #       "type": "region",
-  #       "bounds": self.dom_nodes["anvil-m3-radiobutton-hover"],
-  #       "sensitivity": 0,
-  #       "callbacks": {"execute": self._toggle_selected},
-  #     },
-  #   ]
+  # Class Functions
+  def _anvil_get_interactions_(self):
+    return [
+      {
+        "type": "whole_component",
+        "title": "Edit text",
+        "icon": "edit",
+        "default": True,
+        "callbacks": {
+          "execute": lambda: anvil.designer.start_inline_editing(
+            self, "text", self.dom_nodes["anvil-m3-radiobutton-label"]
+          )
+        },
+      },
+      {
+        "type": "region",
+        "bounds": self.dom_nodes["anvil-m3-radiobutton-hover"],
+        "sensitivity": 0,
+        "callbacks": {"execute": self._toggle_selected},
+      },
+    ]
 
-  # def _toggle_selected(self):
-  #   self.selected = not self.selected
-  #   anvil.designer.update_component_properties(self, {"selected": self.selected})
+  def _toggle_selected(self):
+    self.selected = not self.selected
+    anvil.designer.update_component_properties(self, {"selected": self.selected})
 
-  # def _handle_click(self, event):
-  #   if self.enabled:
-  #     self.dom_nodes["anvil-m3-radiobutton-input"].focus()
-  #     self.selected = True
-  #     self.raise_event("change")
+  def _handle_click(self, event):
+    if self.enabled:
+      self.dom_nodes["anvil-m3-radiobutton-input"].focus()
+      self.selected = True
+      self.raise_event("change")
 
-  # def form_show(self, **event_args):
-  #   if anvil.designer.in_designer:
-  #     self._design_name = anvil.designer.get_design_name(self)
-  #     if not self.text:
-  #       self.dom_nodes["anvil-m3-radiobutton-label"].innerText = self._design_name
+  def form_show(self, **event_args):
+    if anvil.designer.in_designer:
+      self._design_name = anvil.designer.get_design_name(self)
+      if not self.text:
+        self.dom_nodes["anvil-m3-radiobutton-label"].innerText = self._design_name
 
   #!defMethod(str)!2: "Returns the value of the button in the group which is pressed." ["get_group_value"]
   def get_group_value(self):

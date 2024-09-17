@@ -23,9 +23,9 @@ class RadioGroup(RadioGroupTemplate):
     self.recreate_group_items()
   items = property_with_callback("items", _set_items)
 
-  def _set_selected_value(self, value):
+  def _set_selected_item(self, value):
     pass
-  selected_value = property_with_callback("selected_value", _set_selected_value)
+  selected_item = property_with_callback("selected_item", _set_selected_item)
 
   def form_show(self, **event_args):
     if not self.group_name:
@@ -45,3 +45,5 @@ class RadioGroup(RadioGroupTemplate):
       self.add_component(radio_button, slot="anvil-m3-radiogroup-slot")
       
       
+  def get_group_value(self):
+    return self.selected_item
