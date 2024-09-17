@@ -52,7 +52,7 @@ components:
             type: form:_Components.RadioButton
           - layout_properties: {}
             name: radio_button_9
-            properties: {group_name: fdsa, text: rhodeo}
+            properties: {group_name: fdsa, selected: true, text: rhodeo}
             type: form:_Components.RadioButton
           layout_properties: {grid_position: 'NKZLLK,EWMBDG'}
           name: linear_panel_4
