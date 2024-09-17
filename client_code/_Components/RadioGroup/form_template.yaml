@@ -1,5 +1,6 @@
 components: []
 container:
+  event_bindings: {show: form_show}
   properties:
     html: |-
       <!-- <div anvil-name="anvil-m3-radiobutton-component" style="display:flex">
@@ -14,8 +15,7 @@ container:
       </div> -->
 
       <div anvil-name="anvil-m3-radiogroup-component" style="display:flex">
-        <div anvil-name="anvil-m3-radiogroup-container" class="anvil-m3-radiogroup-container">
-        </div>
+        <div anvil-name="anvil-m3-radiogroup-container" class="anvil-m3-radiogroup-container" anvil-slot="anvil-m3-radiogroup-slot" anvil-slot-internal></div>
       </div>
   type: HtmlTemplate
 custom_component: true
