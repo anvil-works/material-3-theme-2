@@ -21,6 +21,8 @@ container:
 custom_component: true
 events:
 - {default_event: true, name: change}
+- {name: show}
+- {name: hide}
 is_package: true
 properties:
 - {default_binding_prop: true, default_value: '', important: true, name: group_name, type: string}

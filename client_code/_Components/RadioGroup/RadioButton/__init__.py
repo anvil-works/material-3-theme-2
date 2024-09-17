@@ -30,7 +30,6 @@ from ....Functions import (
 )
 from ....utils import gen_id
 
-
 class RadioButton(RadioButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
@@ -40,6 +39,7 @@ class RadioButton(RadioButtonTemplate):
 
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
+    
     if not anvil.designer.in_designer:
       id = gen_id()
       self.dom_nodes["anvil-m3-radiobutton-input"].id = id
@@ -75,7 +75,7 @@ class RadioButton(RadioButtonTemplate):
   margin = margin_property("anvil-m3-radiobutton-component")
   tooltip = tooltip_property("anvil-m3-radiobutton-component")
   role = role_property("anvil-m3-radiobutton-container")
-  # selected = checked_property('anvil-m3-radiobutton-input')
+  selected = checked_property('anvil-m3-radiobutton-input')
 
   @property
   def radio_color(self):
@@ -88,19 +88,6 @@ class RadioButton(RadioButtonTemplate):
     self.dom_nodes["anvil-m3-radiobutton-checked"].style["color"] = value
     self.dom_nodes["anvil-m3-radiobutton-unchecked"].style["color"] = value
     self._props["radio_color"] = value
-
-  # @property
-  # def selected(self):
-  #   return self.dom_nodes['anvil-m3-radiobutton-input'].checked
-
-  # @selected.setter
-  # def selected(self, value):
-  #   self.dom_nodes['anvil-m3-radiobutton-input'].checked = value
-
-  def _set_selected(self, value):
-    self.dom_nodes["anvil-m3-radiobutton-input"].checked = value
-
-  selected = property_with_callback("selected", _set_selected)
 
   def _set_text(self, value):
     v = value
@@ -115,32 +102,6 @@ class RadioButton(RadioButtonTemplate):
     self.dom_nodes["anvil-m3-radiobutton-label"].innerText = v
 
   text = property_with_callback("text", _set_text)
-
-  # # Class Functions
-  # def _anvil_get_interactions_(self):
-  #   return [
-  #     {
-  #       "type": "whole_component",
-  #       "title": "Edit text",
-  #       "icon": "edit",
-  #       "default": True,
-  #       "callbacks": {
-  #         "execute": lambda: anvil.designer.start_inline_editing(
-  #           self, "text", self.dom_nodes["anvil-m3-radiobutton-label"]
-  #         )
-  #       },
-  #     },
-  #     {
-  #       "type": "region",
-  #       "bounds": self.dom_nodes["anvil-m3-radiobutton-hover"],
-  #       "sensitivity": 0,
-  #       "callbacks": {"execute": self._toggle_selected},
-  #     },
-  #   ]
-
-  # def _toggle_selected(self):
-  #   self.selected = not self.selected
-  #   anvil.designer.update_component_properties(self, {"selected": self.selected})
 
   def _handle_click(self, event):
     self.raise_event("change")
