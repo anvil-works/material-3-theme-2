@@ -13,8 +13,11 @@ class RadioGroup(RadioGroupTemplate):
     self.init_components(**properties)
 
   def _set_group_name(self, value):
+    # go thru an change the group_name of every child to this
     pass
-  group_name = property_with_callback("text", _set_text)
+  group_name = property_with_callback("group_name", _set_group_name)
+  
+  items = property_without_callback("items")
 
 
 
