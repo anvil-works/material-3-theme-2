@@ -19,3 +19,6 @@ class RadioGroup(RadioGroupTemplate):
   def radio_button_1_click(self, **event_args):
     """This method is called when the component is selected."""
     print("changed")
+
+  def radio_group_1_change(self, **event_args):
+    print("do somthing")

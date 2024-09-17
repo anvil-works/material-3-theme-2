@@ -54,10 +54,10 @@ class RadioGroup(RadioGroupTemplate):
         # todo: include all the properties and such
       else:
         radio_button.text = item
-      def _handle_r_button_click(value = item, **e):
+      def _handle_r_button_change(value = item, **e):
         self.selected_item = value
         self.raise_event("change")
-      radio_button.add_event_handler("click", _handle_r_button_click)
+      radio_button.add_event_handler("change", _handle_r_button_change)
       self.add_component(radio_button, slot="anvil-m3-radiogroup-slot")
       
   def get_group_value(self):

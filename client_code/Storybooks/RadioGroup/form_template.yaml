@@ -27,16 +27,12 @@ components:
         name: text_3
         properties: {text: text here}
         type: form:_Components.Text
-      - event_bindings: {click: button_1_click}
+      - event_bindings: {change: radio_group_1_change}
         layout_properties: {slot: card-content-container-slot}
-        name: button_1
-        properties: {text: clickity}
-        type: form:_Components.Button
-      - layout_properties: {slot: card-content-container-slot}
         name: radio_group_1
         properties:
           group_name: grouuup
-          items: [radio 1, radio 2, radio 2]
+          items: [radio 1, radio 2, radio 3, radio 4]
         type: form:_Components.RadioGroup
       - layout_properties: {slot: card-content-container-slot}
         name: radio_group_2
