@@ -19,10 +19,13 @@ class RadioGroup(RadioGroupTemplate):
     # this is overkill - Probably makes more sense to just go thru and set the group_name of all the children
   group_name = property_with_callback("group_name", _set_group_name)
 
-  
   def _set_items(self, value):
     self.recreate_group_items()
   items = property_with_callback("items", _set_items)
+
+  def _set_selected_value(self, value):
+    pass
+  selected_value = property_with_callback("selected_value", _set_selected_value)
 
   def form_show(self, **event_args):
     if not self.group_name:

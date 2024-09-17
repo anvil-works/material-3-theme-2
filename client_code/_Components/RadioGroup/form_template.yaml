@@ -26,4 +26,4 @@ properties:
   important: true
   name: items
   type: text[]
-- {important: true, name: selected_item, type: object}
+- {important: true, name: selected_value, type: object}
