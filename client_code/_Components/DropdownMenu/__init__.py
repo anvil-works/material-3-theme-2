@@ -30,13 +30,11 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selected_value = None
     
     if not self.allow_none:
-      if len(self.items):
-        self.selected_value = self.items[0]
-      else:
+      # if len(self.items):
+      #   self.selected_value = self.items[0]
+      # else:
         self.selection_field.dom_nodes['anvil-m3-textfield'].value = ""
-    # elif self.selected_value is None:
-    #   self.selection_field.dom_nodes['anvil-m3-textfield'].value = ""
-
+      
     self._has_focus = False
     self._handle_keyboard_events = self._handle_keyboard_events
     self._handle_selection_field_focus = self._handle_selection_field_focus
