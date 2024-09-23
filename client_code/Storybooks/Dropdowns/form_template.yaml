@@ -24,6 +24,25 @@ components:
   - components:
     - components:
       - layout_properties: {slot: card-content-container-slot}
+        name: dropdown_menu_5
+        properties: {allow_none: false}
+        type: form:_Components.DropdownMenu
+      - layout_properties: {slot: card-content-container-slot}
+        name: dropdown_menu_6
+        properties:
+          items: [item 1, item 2, item 3]
+        type: form:_Components.DropdownMenu
+      layout_properties: {slot: card-content-slot}
+      name: card_content_container_4
+      properties: {}
+      type: form:_Components.Card.CardContentContainer
+    layout_properties: {grid_position: 'YSWQEV,LEKRQD'}
+    name: card_3
+    properties: {}
+    type: form:_Components.Card
+  - components:
+    - components:
+      - layout_properties: {slot: card-content-container-slot}
         name: heading_1
         properties: {text: With Label}
         type: form:_Components.Heading
@@ -155,16 +174,6 @@ components:
         name: flow_panel_5
         properties: {}
         type: FlowPanel
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
-        name: drop_down_1
-        properties:
-          items: [a, a, a, a, a]
-        type: DropDown
-      - event_bindings: {click: button_1_click}
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-        name: button_1
-        properties: {text: button_1}
-        type: Button
       layout_properties: {slot: card-content-slot}
       name: card_content_container_1
       properties: {}
