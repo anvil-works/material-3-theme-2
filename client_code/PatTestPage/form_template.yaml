@@ -29,7 +29,7 @@ components_by_slot:
   - data_bindings: []
     layout_properties: {}
     name: button_1
-    properties: {align: center, icon: '', text: vcbxcv}
+    properties: {align: center, icon: 'fa:500px', text: vcbxcv}
     type: form:_Components.Button
 is_package: true
 layout:
