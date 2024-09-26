@@ -38,13 +38,23 @@ class RadioGroup:
       if old_button:
         old_button._update_dom(False)
       # Select the new button
-      button._update_dom(True)
       self._selected_button = button
-  
+      button._update_dom(True)
+      self._raise_change_event()
+    
     elif old_button == button:
       self._selected_button = None
       button._update_dom(False)
+      self.raise_change_event()
 
+  # @TODO: Yuck
+  def _raise_change_event(self):
+    try:
+      self.raise_event("change")
+    except AttributeError:
+      pass
+
+  
   @staticmethod
   def enclosing(component):
     while component:
