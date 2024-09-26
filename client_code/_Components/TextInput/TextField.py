@@ -13,7 +13,7 @@ input_text_property = {"name": "input_text",
                  "important": True}
 leading_icon_property = {"name": "leading_icon",
                          "type": "icon",
-                         "iconsets": ["material-icons"]
+                         "iconsets": ["material-icons"],
                          "group": "Icon",
                          "important": True,
                          "default_value": "",

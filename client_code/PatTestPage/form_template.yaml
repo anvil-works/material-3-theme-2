@@ -12,7 +12,7 @@ components_by_slot:
       type: form:_Components.TextInput.TextField
     - layout_properties: {grid_position: 'LIMAGG,YRHIJM VRVUDP,FTMQBH'}
       name: text_field_2
-      properties: {appearance: outlined}
+      properties: {appearance: outlined, leading_icon: ''}
       type: form:_Components.TextInput.TextField
     - layout_properties: {grid_position: 'LIMAGG,SWFTXC VHKCCD,DPPMMR'}
       name: text_area_1
@@ -28,7 +28,7 @@ components_by_slot:
     type: ColumnPanel
   - layout_properties: {}
     name: button_1
-    properties: {align: center, text: vcbxcv}
+    properties: {align: center, icon: 'mi:', text: vcbxcv}
     type: form:_Components.Button
 is_package: true
 layout:
