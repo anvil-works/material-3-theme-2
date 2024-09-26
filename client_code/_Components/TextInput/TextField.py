@@ -20,13 +20,12 @@ leading_icon_property = {"name": "leading_icon",
                          "includeNoneOption": True, # This might change to snake case at some point
                          "description": "The leading icon to display on this component."}
 trailing_icon_property = {"name": "trailing_icon",
-                          "type": "enum",
-                          "options": _m3_icons,
+                          "type": "icon",
+                          "iconsets": ["material-icons"],
                           "group": "Icon",
                           "important": True,
-                          "default_value": "None",
+                          "default_value": "",
                           "includeNoneOption": True,
-                          "noneOptionLabel": "None",
                           "description": "The trailing icon to display on this component."}
 type_property = {"name": "type", 
                  "type": "enum", 
