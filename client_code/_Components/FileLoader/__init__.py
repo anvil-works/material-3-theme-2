@@ -114,7 +114,7 @@ class FileLoader(FileLoaderTemplate):
   #!componentProp(material_3.FileLoader)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles."} 
   #!componentProp(material_3.FileLoader)!1: {name:"appearance",type:"enum",options:["text", "filled", "elevated", "tonal", "outlined"],description:"A predefined style for this component."}
   #!componentProp(material_3.FileLoader)!1: {name:"show_state",type:"boolean",description:"If True, display a message indicating the number of selected files."}
-  #!componentProp(material_3.FileLoader)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.FileLoader)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.FileLoader)!1: {name:"file_types",type:"string",description:"Specify what type of file to upload. Can accept a MIME type (eg 'image/png' or 'image/*'), an extension (eg '.png'), or a comma-separated set of them (eg '.png,.jpg,.jpeg')."} 
   #!componentProp(material_3.FileLoader)!1: {name:"multiple",type:"boolean",description:"If True, this FileLoader can load multiple files at the same time."} 
   #!componentProp(material_3.FileLoader)!1: {name:"file",type:"object",description:"The currently selected file (or the first, if multiple files are selected). This is a Media object."} 
@@ -149,12 +149,12 @@ class FileLoader(FileLoaderTemplate):
     self._props['show_state'] = value
 
   @property
-  def material_icon(self):
-    return self._material_icon
+  def icon(self):
+    return self._icon
 
-  @material_icon.setter
-  def material_icon(self, value):
-    self._material_icon = value
+  @icon.setter
+  def icon(self, value):
+    self._icon = value
     if value:
       self.dom_nodes['anvil-m3-fileloader-icon'].style.marginRight = "8px"
     else:
