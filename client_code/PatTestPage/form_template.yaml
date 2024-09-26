@@ -26,9 +26,10 @@ components_by_slot:
     name: column_panel_1
     properties: {}
     type: ColumnPanel
-  - layout_properties: {}
+  - data_bindings: []
+    layout_properties: {}
     name: button_1
-    properties: {align: center, text: vcbxcv}
+    properties: {align: center, icon: '', text: vcbxcv}
     type: form:_Components.Button
 is_package: true
 layout:
