@@ -44,7 +44,7 @@ properties:
 - {default_value: false, description: 'If True, this component’s text will be underlined.', designer_hint: font-underline, group: Text, important: false, name: underline, type: boolean}
 - {default_value: false, description: 'If True, this component’s text will be italic.', designer_hint: font-italic, group: Text, important: false, name: italic, type: boolean}
 - {default_value: true, description: 'If True, this component’s text will be bold.', designer_hint: font-bold, group: Text, important: false, name: bold, type: boolean}
-- {default_value: '', description: The icon to display on this component., group: Icon, important: true, include_none_option: true, name: icon, type: icon, iconsets: [font-awesome-4.7.0, material-icons]}
+- {default_value: '', description: The icon to display on this component., group: Icon, important: true, include_none_option: true, name: icon, type: icon, iconsets: ["font-awesome-4.7.0", "material-icons"]}
 - {default_value: '', description: The colour of the icon displayed on this component., group: Look and Feel, name: icon_color, type: color}
 - {description: The size (pixels) of the icon displayed on this component., group: Icon, name: icon_size, type: number}
 - default_value: left
