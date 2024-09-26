@@ -12,13 +12,12 @@ input_text_property = {"name": "input_text",
                  "supportsWriteback": True,
                  "important": True}
 leading_icon_property = {"name": "leading_icon",
-                         "type": "enum",
-                         "options": _m3_icons,
+                         "type": "icon",
+                         "iconsets": ["material-icons"]
                          "group": "Icon",
                          "important": True,
-                         "default_value": "None",
+                         "default_value": "",
                          "includeNoneOption": True, # This might change to snake case at some point
-                         "noneOptionLabel": "None",
                          "description": "The leading icon to display on this component."}
 trailing_icon_property = {"name": "trailing_icon",
                           "type": "enum",
@@ -170,9 +169,9 @@ class TextField(TextInput):
     text_field_input = self.dom_nodes['anvil-m3-textfield']
     border_container = self.dom_nodes['anvil-m3-border-container']
 
-    if value:
+    if value and value.startswith("mi:"):
       leading_icon.style.display = "block"
-      leading_icon.innerText = value
+      leading_icon.innerText = value[3:]
       icon_container.style.paddingLeft = "12px"
       text_field_input.style.paddingLeft = "48px"
       border_container.classList.add("with-icon")
