@@ -23,7 +23,6 @@ events:
 - {description: When the component is removed from the screen., name: hide}
 is_package: true
 properties:
-- {default_binding_prop: true, default_value: '', description: 'Radio button group name,  must begin with a letter ([A-Za-z]) and may be followed by any number of letters, digits ([0-9]), hyphens ("-"), underscores ("_"), colons (":"), and periods (".").', group: Key Properties, name: group_name, type: string}
 - {default_value: false, description: 'If True, the component is in the selected state.', designer_hint: toggle, group: Interaction, name: selected, type: boolean}
 - {default_value: '', description: A style for this component defined in CSS and added to Roles., group: Look and Feel, name: role, type: themeRole}
 - {default_value: true, description: 'If True, this component allows user interaction.', designerHint: enabled, designer_hint: enabled, group: Interaction, name: enabled, type: boolean}
