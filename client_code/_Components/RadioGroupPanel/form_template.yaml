@@ -1,0 +1,18 @@
+components: []
+container:
+  properties:
+    html: |
+      <div anvil-slot="default"></div>
+  type: HtmlTemplate
+custom_component: true
+custom_component_container: true
+events:
+- default_event: true
+  description: When the RadioButton selection changes
+  name: change
+  parameters: []
+- {description: When the component is removed from the screen, name: hide}
+- {description: When the component is shown on the screen, name: show}
+is_package: true
+properties: []
+toolbox_item: {group: Form Input}

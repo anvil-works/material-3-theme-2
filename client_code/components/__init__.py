@@ -15,6 +15,7 @@ from .._Components.Link import Link
 from .._Components.MenuItem import MenuItem
 from .._Components.NavigationLink import NavigationLink
 from .._Components.RadioButton import RadioButton
+from .._Components.RadioGroupPanel import RadioGroupPanel, RadioGroup
 from .._Components.Slider import Slider
 from .._Components.Switch import Switch
 from .._Components.Text import Text
@@ -40,6 +41,8 @@ Link = Link
 MenuItem = MenuItem
 NavigationLink = NavigationLink
 RadioButton = RadioButton
+RadioGroup = RadioGroup
+RadioGroupPanel = RadioGroupPanel
 Slider = Slider
 Switch = Switch
 Text = Text

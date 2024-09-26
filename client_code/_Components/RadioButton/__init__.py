@@ -7,6 +7,7 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from anvil.js.window import document
 import anvil.designer
+from ...components import RadioGroup
 from ...Functions import checked_property, role_property, tooltip_property, name_property, innerText_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, value_property, property_with_callback, font_family_property, margin_property
 from ...utils import gen_id
 
@@ -14,7 +15,8 @@ class RadioButton(RadioButtonTemplate):
   def __init__(self, **properties):
     self._props = properties
     self._tooltip_node = None
-    self._design_name = "" 
+    self._design_name = ""
+    self.group = None
     self.init_components(**properties)
     
     self.add_event_handler("x-anvil-page-added", self._on_mount)
@@ -26,6 +28,8 @@ class RadioButton(RadioButtonTemplate):
 
   def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self._handle_click)
+    self.group = RadioGroup.enclosing(self)
+    self.group._add_button(self)
 
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self._handle_click)
@@ -85,11 +89,15 @@ class RadioButton(RadioButtonTemplate):
 
   @property
   def selected(self):
-    return self.dom_nodes['anvil-m3-radiobutton-input'].checked
+    return self.group.selected_button is self
 
   @selected.setter
-  def selected(self, value):
-    self.dom_nodes['anvil-m3-radiobutton-input'].checked = value
+  def selected(self, new_state):
+    if self.group:
+      self.group.select(self, new_state)
+
+  def _update_dom(self, new_state):
+    self.dom_nodes['anvil-m3-radiobutton-input'].checked = new_state
 
   def _set_text(self, value):
     v = value
@@ -138,10 +146,5 @@ class RadioButton(RadioButtonTemplate):
       self._design_name = anvil.designer.get_design_name(self)
       if not self.text:
         self.dom_nodes['anvil-m3-radiobutton-label'].innerText = self._design_name
-
-  #!defMethod(str)!2: "Returns the value of the button in the group which is pressed." ["get_group_value"]
-  def get_group_value(self):
-    selected_item = document.querySelector(f".anvil-m3-radiobutton-input[name={self.group_name}]:checked")
-    return selected_item.value
 
 #!defClass(material_3, RadioButton, anvil.Component)!:
