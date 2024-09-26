@@ -50,8 +50,8 @@ class Button(ButtonTemplate):
       self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
       
   def _set_icon(self):
-    if self.icon:
-      self.dom_nodes['anvil-m3-button-icon'].innerText = self.icon
+    if self.icon and self.icon.startswith('mi:'):
+      self.dom_nodes['anvil-m3-button-icon'].innerText = self.icon[3:]
       self.dom_nodes['anvil-m3-button-icon'].style.display = "flex"
       if self.text:
         self.dom_nodes['anvil-m3-button'].classList.add('anvil-m3-icon-padding')
