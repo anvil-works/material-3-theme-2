@@ -28,7 +28,7 @@ components_by_slot:
     type: ColumnPanel
   - layout_properties: {}
     name: button_1
-    properties: {align: center, icon: 'mi:', text: vcbxcv}
+    properties: {align: center, icon: '', text: vcbxcv}
     type: form:_Components.Button
 is_package: true
 layout:
