@@ -25,22 +25,22 @@ components:
   type: form:_Components.Card
 - layout_properties: {grid_position: 'RGAGSD,BZNGGM'}
   name: radio_button_6
-  properties: {text: Outer}
+  properties: {selected: false, text: Outer}
   type: form:_Components.RadioButton
 - components:
   - components:
     - components:
       - layout_properties: {slot: default}
         name: radio_button_3
-        properties: {selected: false, text: Albie}
+        properties: {selected: true, text: Albie}
         type: form:_Components.RadioButton
       - layout_properties: {slot: default}
         name: radio_button_4
-        properties: {text: Bruce}
+        properties: {selected: true, text: Bruce}
         type: form:_Components.RadioButton
       - layout_properties: {slot: default}
         name: radio_button_5
-        properties: {text: Cedric}
+        properties: {selected: true, text: Cedric}
         type: form:_Components.RadioButton
       event_bindings: {change: radio_group_panel_2_change}
       layout_properties: {slot: card-content-container-slot}
@@ -57,7 +57,7 @@ components:
   type: form:_Components.Card
 - layout_properties: {grid_position: 'DHKUUB,UWVHPU'}
   name: radio_button_7
-  properties: {text: Space}
+  properties: {selected: false, text: Space}
   type: form:_Components.RadioButton
 - event_bindings: {click: button_1_click}
   layout_properties: {grid_position: 'YGINSK,HMTXKR'}
