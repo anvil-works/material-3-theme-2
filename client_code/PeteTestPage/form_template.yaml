@@ -40,7 +40,7 @@ components:
         type: form:_Components.RadioButton
       - layout_properties: {slot: default}
         name: radio_button_5
-        properties: {selected: true, text: Cedric}
+        properties: {selected: false, text: Cedric}
         type: form:_Components.RadioButton
       event_bindings: {change: radio_group_panel_2_change}
       layout_properties: {slot: card-content-container-slot}
