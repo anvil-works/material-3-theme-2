@@ -119,7 +119,10 @@ class RadioButton(RadioButtonTemplate):
         "default": True,
         "callbacks": {
           "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-radiobutton-label'])
-        },   
+        }, 
+
+      # Not sure about this yet:
+      #
       # },
       # {
       #   "type": "region",
@@ -137,15 +140,10 @@ class RadioButton(RadioButtonTemplate):
 
   def _handle_click(self, event):
     self.dom_nodes['anvil-m3-radiobutton-input'].click()
-    # if self.enabled:
-    #   self.dom_nodes['anvil-m3-radiobutton-input'].focus()
-    #   self.selected = True 
-    #   self.raise_event("change")
-      
+
   def _handle_change(self, event):
     self.group._handle_change()
     self.raise_event("change")
-    
 
   def form_show(self, **event_args):
     if anvil.designer.in_designer:

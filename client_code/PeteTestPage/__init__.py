@@ -13,7 +13,7 @@ class PeteTestPage(PeteTestPageTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def radio_group_panel_1_change(self, **event_args):
+  def radio_group_panel_2_change(self, **event_args):
     """This method is called when the RadioButton selection changes"""
     selected = self.radio_group_panel_2.selected_button
     print(f"Change: {selected.text} ({selected.value})")

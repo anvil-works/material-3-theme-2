@@ -22,11 +22,11 @@ class RadioGroup:
     try:
       self.raise_event("change")
     except AttributeError:
-      pass
+      pass  # In case we're not a 
   
   @property
   def selected_button(self):
-    for button in self.buttons:
+    for button in self._buttons:
       if button.selected:
         return button
     return None

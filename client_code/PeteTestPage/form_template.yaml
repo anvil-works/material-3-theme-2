@@ -10,7 +10,7 @@ components:
         name: radio_button_2
         properties: {text: Second}
         type: form:_Components.RadioButton
-      event_bindings: {change: radio_group_panel_1_change}
+      event_bindings: {}
       layout_properties: {slot: card-content-container-slot}
       name: radio_group_panel_1
       properties: {}
@@ -42,6 +42,7 @@ components:
         name: radio_button_5
         properties: {text: Cedric}
         type: form:_Components.RadioButton
+      event_bindings: {change: radio_group_panel_2_change}
       layout_properties: {slot: card-content-container-slot}
       name: radio_group_panel_2
       properties: {}
