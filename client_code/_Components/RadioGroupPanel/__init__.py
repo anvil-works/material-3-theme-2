@@ -22,7 +22,7 @@ class RadioGroup:
     try:
       self.raise_event("change")
     except AttributeError:
-      pass  # In case we're not a 
+      pass  # Do nothing if we're not a component
   
   @property
   def selected_button(self):
@@ -41,11 +41,11 @@ class RadioGroup:
     else:
       button.selected = True
 
-  @staticmethod
-  def enclosing(component):
+  @classmethod
+  def enclosing(cls, component):
     while component:
       component = component.parent
-      if isinstance(component, RadioGroup):
+      if isinstance(component, cls):
         return component
 
     # No enclosing RadioGroup container, return a global one
