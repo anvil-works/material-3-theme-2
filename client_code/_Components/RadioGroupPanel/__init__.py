@@ -33,7 +33,13 @@ class RadioGroup:
 
   @selected_button.setter
   def selected_button(self, button):
-    button.selected = True
+    if button is None:
+      # Deselect the currently selected button
+      selected_button = self.selected_button
+      if selected_button:
+        selected_button.selected = False
+    else:
+      button.selected = True
 
   @staticmethod
   def enclosing(component):

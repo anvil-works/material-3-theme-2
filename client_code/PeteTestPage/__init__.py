@@ -15,12 +15,9 @@ class PeteTestPage(PeteTestPageTemplate):
 
   def radio_group_panel_1_change(self, **event_args):
     """This method is called when the RadioButton selection changes"""
-    selected = self.radio_group_panel_1.selected_button
+    selected = self.radio_group_panel_2.selected_button
     print(f"Change: {selected.text} ({selected.value})")
 
-  def checkbox_1_change(self, **event_args):
-    print(self.checkbox_1.checked)
-
   def button_1_click(self, **event_args):
-    self.radio_group_panel_2.select(self.radio_button_4)
+    self.radio_group_panel_2.selected_button = self.radio_button_4
     
