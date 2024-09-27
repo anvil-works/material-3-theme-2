@@ -32,7 +32,7 @@ components:
     - components:
       - layout_properties: {slot: default}
         name: radio_button_3
-        properties: {selected: true, text: Albie}
+        properties: {selected: false, text: Albie}
         type: form:_Components.RadioButton
       - layout_properties: {slot: default}
         name: radio_button_4
