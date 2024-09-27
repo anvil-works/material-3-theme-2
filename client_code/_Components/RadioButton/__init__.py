@@ -28,7 +28,7 @@ class RadioButton(RadioButtonTemplate):
         self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
   def _on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("change", self._handle_change)
+    # self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("change", self._handle_change)
     self.group = RadioGroup.enclosing(self)
     self.group._add_button(self)
     self.dom_nodes["anvil-m3-radiobutton-input"].name = id(self.group)
@@ -136,6 +136,7 @@ class RadioButton(RadioButtonTemplate):
   def _handle_change(self, event):
     self.group._handle_change(self.selected)
     self.raise_event("change")
+    
 
   def form_show(self, **event_args):
     if anvil.designer.in_designer:

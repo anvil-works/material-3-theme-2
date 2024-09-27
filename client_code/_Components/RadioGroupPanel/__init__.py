@@ -20,43 +20,14 @@ class RadioGroup:
 
   @property
   def selected_button(self):
-    return self._selected_button
+    for button in self.buttons:
+      if button.selected:
+        return button
+    return None
 
   @selected_button.setter
   def selected_button(self, button):
-    self.select(button, True)
-
-  def select(self, button, new_state=True):
-    old_button = self._selected_button
-    if new_state:
-      if button == old_button:
-        return
-      # Deselect the previously selected button
-      if old_button:
-        self._update_dom(old_button, False)
-      # Select the new button
-      self._selected_button = button
-      self._update_dom(button, True)
-      self._raise_change_event()
-
-    elif old_button == button:
-      self._selected_button = None
-      self._update_dom(button, False)
-      self._raise_change_event()
-
-  # @TODO: Yuck
-  def _raise_change_event(self):
-    try:
-      self.raise_event("change")
-    except AttributeError:
-      pass
-
-  @staticmethod
-  def _update_dom(button, new_state):
-    try:
-      button._update_dom(new_state)
-    except AttributeError:
-      pass
+    button.selected = True
 
   @staticmethod
   def enclosing(component):
