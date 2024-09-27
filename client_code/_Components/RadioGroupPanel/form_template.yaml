@@ -2,7 +2,7 @@ components: []
 container:
   properties:
     html: |
-      <div anvil-slot="default"></div>
+      <div class="anvil-m3-radiogroup-panel" anvil-slot="default"></div>
   type: HtmlTemplate
 custom_component: true
 custom_component_container: true
