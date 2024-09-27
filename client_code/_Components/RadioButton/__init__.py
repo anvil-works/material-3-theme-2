@@ -28,14 +28,13 @@ class RadioButton(RadioButtonTemplate):
         self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
   def _on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self._handle_click)
+    self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("change", self._handle_change)
     self.group = RadioGroup.enclosing(self)
     self.group._add_button(self)
-    print(dir(self.group))
-    self.dom_nodes["anvil-m3-radiobutton-input"].name = f"foo"
+    self.dom_nodes["anvil-m3-radiobutton-input"].name = id(self.group)
 
   def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self._handle_click)
+    self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("change", self._handle_change)
   
   #!componentEvent(material_3.RadioButton)!1: {name: "change", description: "When the Radio Button is selected or unselected."}
   #!componentEvent(material_3.RadioButton)!1: {name: "show", description: "When the Radio Button is shown on the screen."}
@@ -92,15 +91,12 @@ class RadioButton(RadioButtonTemplate):
 
   @property
   def selected(self):
-    return self.dom_nodes['anvil-m3-radio-button-input'].checked
+    return self.dom_nodes['anvil-m3-radiobutton-input'].checked
 
   @selected.setter
   def selected(self, new_state):
-    self.dom_nodes['anvil-m3-radio-button-input'].checked = new_state
-  
-  def _update_dom(self, new_state):
     self.dom_nodes['anvil-m3-radiobutton-input'].checked = new_state
-
+  
   def _set_text(self, value):
     v = value
     self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-textlessComponentText', False)
@@ -122,26 +118,24 @@ class RadioButton(RadioButtonTemplate):
         "callbacks": {
           "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-radiobutton-label'])
         },   
-      },
-      {
-        "type": "region",
-        "bounds": self.dom_nodes['anvil-m3-radiobutton-hover'],
-        "sensitivity": 0,
-        "callbacks": {
-          "execute": self._toggle_selected
-        }
+      # },
+      # {
+      #   "type": "region",
+      #   "bounds": self.dom_nodes['anvil-m3-radiobutton-hover'],
+      #   "sensitivity": 0,
+      #   "callbacks": {
+      #     "execute": self._toggle_selected
+      #   }
       }
     ]
 
-  def _toggle_selected(self):
-    self.selected = not self.selected
-    anvil.designer.update_component_properties(self, {'selected': self.selected})
+  # def _toggle_selected(self):
+  #   self.selected = not self.selected
+  #   anvil.designer.update_component_properties(self, {'selected': self.selected})
    
-  def _handle_click(self, event):
-    if self.enabled:
-      self.dom_nodes['anvil-m3-radiobutton-input'].focus()
-      self.selected = True 
-      self.raise_event("change")
+  def _handle_change(self, event):
+    self.group._handle_change(self.selected)
+    self.raise_event("change")
 
   def form_show(self, **event_args):
     if anvil.designer.in_designer:
