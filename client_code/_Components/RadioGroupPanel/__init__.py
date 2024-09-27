@@ -18,6 +18,12 @@ class RadioGroup:
   def _add_button(self, button):
     self._buttons.append(button)
 
+  def _handle_change(self):
+    try:
+      self.raise_event("change")
+    except AttributeError:
+      pass
+  
   @property
   def selected_button(self):
     for button in self.buttons:

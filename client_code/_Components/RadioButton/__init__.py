@@ -28,13 +28,15 @@ class RadioButton(RadioButtonTemplate):
         self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
   def _on_mount(self, **event_args):
-    # self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("change", self._handle_change)
+    self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self._handle_click)
+    self.dom_nodes['anvil-m3-radiobutton-input'].addEventListener("change", self._handle_change)
     self.group = RadioGroup.enclosing(self)
     self.group._add_button(self)
     self.dom_nodes["anvil-m3-radiobutton-input"].name = id(self.group)
 
   def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("change", self._handle_change)
+    self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self._handle_click)
+    self.dom_nodes['anvil-m3-radiobutton-input'].removeEventListener("change", self._handle_change)
   
   #!componentEvent(material_3.RadioButton)!1: {name: "change", description: "When the Radio Button is selected or unselected."}
   #!componentEvent(material_3.RadioButton)!1: {name: "show", description: "When the Radio Button is shown on the screen."}
@@ -132,9 +134,16 @@ class RadioButton(RadioButtonTemplate):
   # def _toggle_selected(self):
   #   self.selected = not self.selected
   #   anvil.designer.update_component_properties(self, {'selected': self.selected})
-   
+
+  def _handle_click(self, event):
+    self.dom_nodes['anvil-m3-radiobutton-input'].click()
+    # if self.enabled:
+    #   self.dom_nodes['anvil-m3-radiobutton-input'].focus()
+    #   self.selected = True 
+    #   self.raise_event("change")
+      
   def _handle_change(self, event):
-    self.group._handle_change(self.selected)
+    self.group._handle_change()
     self.raise_event("change")
     
 
