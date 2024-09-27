@@ -58,5 +58,10 @@ components:
   name: radio_button_7
   properties: {text: Space}
   type: form:_Components.RadioButton
+- event_bindings: {click: button_1_click}
+  layout_properties: {grid_position: 'YGINSK,HMTXKR'}
+  name: button_1
+  properties: {align: center, text: Select Bruce}
+  type: form:_Components.Button
 container: {type: ColumnPanel}
 is_package: true
