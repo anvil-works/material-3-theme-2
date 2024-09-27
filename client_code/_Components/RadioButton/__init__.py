@@ -24,12 +24,15 @@ class RadioButton(RadioButtonTemplate):
     if not anvil.designer.in_designer:
         id = gen_id()
         self.dom_nodes["anvil-m3-radiobutton-input"].id = id
+        self.dom_nodes["anvil-m3-radiobutton-input"].value = id
         self.dom_nodes["anvil-m3-radiobutton-label"].setAttribute("for", id)
 
   def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-radiobutton-hover'].addEventListener("click", self._handle_click)
     self.group = RadioGroup.enclosing(self)
     self.group._add_button(self)
+    print(dir(self.group))
+    self.dom_nodes["anvil-m3-radiobutton-input"].name = f"foo"
 
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-radiobutton-hover'].removeEventListener("click", self._handle_click)
@@ -89,13 +92,12 @@ class RadioButton(RadioButtonTemplate):
 
   @property
   def selected(self):
-    return self.group.selected_button is self
+    return self.dom_nodes['anvil-m3-radio-button-input'].checked
 
   @selected.setter
   def selected(self, new_state):
-    if self.group:
-      self.group.select(self, new_state)
-
+    self.dom_nodes['anvil-m3-radio-button-input'].checked = new_state
+  
   def _update_dom(self, new_state):
     self.dom_nodes['anvil-m3-radiobutton-input'].checked = new_state
 
