@@ -8,7 +8,6 @@ import anvil.js
 from ...Functions import color_property, role_property, tooltip_property, href_property, innerHTML_property, font_family_property, font_size_property, margin_property, italic_property, bold_property, underline_property
 import anvil.designer
 
-#Currently, material_icon works and not icon (because they can't both work at the same time)
 class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):
     self._props = properties
@@ -62,7 +61,7 @@ class NavigationLink(NavigationLinkTemplate):
   #!componentProp(material_3.NavigationLink)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(material_3.NavigationLink)!1: {name:"margin",type:"margin",description:"The margin (pixels) of the component."}
   #!componentProp(material_3.NavigationLink)!1: {name:"url",type:"string",description:"TThe target URL of the link. Can be set to a URL string or to a Media object."}
-  #!componentProp(material_3.NavigationLink)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.NavigationLink)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.NavigationLink)!1: {name:"selected",type:"boolean",description:"If True, the component is in the selected state."} 
   #!componentProp(material_3.NavigationLink)!1: {name:"badge",type:"boolean",description:"If True, display a notification badge on the icon."} 
   #!componentProp(material_3.NavigationLink)!1: {name:"badge_count",type:"number",description:"The number to display on the badge."} 
@@ -96,13 +95,13 @@ class NavigationLink(NavigationLinkTemplate):
       self.dom_nodes['anvil-m3-navigation-link'].href = 'javascript:void(0)'
 
   @property
-  def material_icon(self):
-    return self._material_icon
+  def icon(self):
+    return self._icon
 
-  @material_icon.setter
-  def material_icon(self, value):
+  @icon.setter
+  def icon(self, value):
     link_icon = self.dom_nodes['anvil-m3-navigation-link-icon']
-    self._material_icon = value
+    self._icon = value
     if value:
       link_icon.className = ""
       link_icon.classList.add("material-symbols-outlined")

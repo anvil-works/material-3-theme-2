@@ -56,7 +56,7 @@ class Text(TextTemplate):
   #!componentProp(material_3.Text)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
   #!componentProp(material_3.Text)!1: {name:"align",type:"enum",options:['left', 'right', 'center', 'justify'], description:"The position of this component in the available space."} 
   #!componentProp(material_3.Text)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
-  #!componentProp(material_3.Text)!1: {name:"material_icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(material_3.Text)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
   #!componentProp(material_3.Text)!1: {name:"style",type:"enum",options:['display', 'headline', 'title'],description:"Role of the text component: display, headline or title."}  
   #!componentProp(material_3.Text)!1: {name:"scale",type:"enum",options:['small', 'medium', 'large'],description:"The size of the text component."}
   #!componentProp(material_3.Text)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
@@ -101,12 +101,12 @@ class Text(TextTemplate):
     self.dom_nodes['anvil-m3-text-container'].style.fontSize = value
 
   @property
-  def material_icon(self):
-    return self._material_icon
+  def icon(self):
+    return self._icon
 
-  @material_icon.setter
-  def material_icon(self, value):
-    self._material_icon = value
+  @icon.setter
+  def icon(self, value):
+    self._icon = value
     if value:
       self.dom_nodes['anvil-m3-text-icon'].style.marginRight = "8px"
     else:
