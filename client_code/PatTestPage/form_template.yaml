@@ -61,8 +61,12 @@ components_by_slot:
     type: form:_Components.Text
   - layout_properties: {}
     name: icon_button_1
-    properties: {icon: 'mi:'}
+    properties: {icon: 'mi:10k'}
     type: form:_Components.IconButton
+  - layout_properties: {}
+    name: toggle_icon_button_1
+    properties: {icon: 'mi:1x_mobiledata_badge'}
+    type: form:_Components.ToggleIconButton
 is_package: true
 layout:
   properties: {show_sidesheet: false}
