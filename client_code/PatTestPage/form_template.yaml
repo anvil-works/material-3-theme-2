@@ -34,6 +34,10 @@ components_by_slot:
     name: dropdown_menu_1
     properties: {}
     type: form:_Components.DropdownMenu
+  - layout_properties: {}
+    name: file_loader_1
+    properties: {icon: 'mi:file_upload'}
+    type: form:_Components.FileLoader
 is_package: true
 layout:
   properties: {show_sidesheet: false}
