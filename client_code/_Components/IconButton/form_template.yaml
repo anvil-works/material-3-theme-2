@@ -20,6 +20,7 @@ properties:
 - default_value: standard
   description: A predefined style for this component.
   group: Key Properties
+  iconsets: [material-icons]
   important: true
   name: appearance
   options: [standard, filled, tonal, outlined]
