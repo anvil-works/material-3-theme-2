@@ -105,7 +105,7 @@ class NavigationLink(NavigationLinkTemplate):
     if value:
       link_icon.className = ""
       link_icon.classList.add("material-symbols-outlined")
-      link_icon.innerText = value
+      link_icon.innerText = value[3:]
 
   @property
   def selected(self):

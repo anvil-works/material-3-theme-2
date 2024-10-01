@@ -121,15 +121,16 @@ class Link(LinkTemplate):
 
   @property
   def icon(self):
-    return self.dom_nodes['anvil-m3-link-icon'].innerText
+    return self._props.get('icon')
 
   @icon.setter
   def icon(self, value):
+    self._props['icon'] = value
     if value and self.text:
       self.dom_nodes['anvil-m3-link-icon'].style.marginRight = "8px"
     else:
       self.dom_nodes['anvil-m3-link-icon'].style.marginRight = ""
-    self.dom_nodes['anvil-m3-link-icon'].innerText = value
+    self.dom_nodes['anvil-m3-link-icon'].innerText = value[3:]
 
   @property
   def text(self):

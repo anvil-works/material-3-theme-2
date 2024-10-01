@@ -61,7 +61,7 @@ class IconButton(IconButtonTemplate):
   
   appearance = property_with_callback("appearance", _appearance_setter)
   visible = HtmlTemplate.visible
-  icon = innerText_property('anvil-m3-iconbutton-icon', 'icon')
+  # icon = innerText_property('anvil-m3-iconbutton-icon', 'icon')
   enabled = enabled_property('anvil-m3-iconbutton-container')
   align = style_property('anvil-m3-iconbutton-component', 'justifyContent', 'align')
   border = border_property('anvil-m3-iconbutton-container')
@@ -70,5 +70,14 @@ class IconButton(IconButtonTemplate):
   margin = margin_property('anvil-m3-iconbutton-component')
   role = role_property('anvil-m3-iconbutton-container')
   tooltip = tooltip_property('anvil-m3-iconbutton-component')
+
+  @property
+  def icon(self):
+    return self._props.get('icon')
+
+  @icon.setter
+  def icon(self, value):
+    self._props['icon'] = value
+    self.dom_nodes['anvil-m3-iconbutton-icon'].innerText = value[3:]
 
 #!defClass(material_3,IconButton,anvil.Component)!:

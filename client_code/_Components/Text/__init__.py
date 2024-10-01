@@ -111,7 +111,7 @@ class Text(TextTemplate):
       self.dom_nodes['anvil-m3-text-icon'].style.marginRight = "8px"
     else:
       self.dom_nodes['anvil-m3-text-icon'].style.marginRight = ""
-    self.dom_nodes['anvil-m3-text-icon'].innerText = value
+    self.dom_nodes['anvil-m3-text-icon'].innerText = value[3:]
 
   @property
   def style(self):

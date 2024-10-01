@@ -24,7 +24,7 @@ class MenuItem(MenuItemTemplate):
   @leading_icon.setter
   def leading_icon(self, value):
     self._props['leading_icon'] = value
-    self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerHTML = value or " "
+    self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerHTML = value[3:] or " "
     if value:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
     elif not value and not self.add_icon_space:
@@ -65,7 +65,7 @@ class MenuItem(MenuItemTemplate):
   @trailing_icon.setter
   def trailing_icon(self, value):
     self._trailing_icon = value
-    self.dom_nodes["anvil-m3-menuItem-trailingIcon"].innerText = value 
+    self.dom_nodes["anvil-m3-menuItem-trailingIcon"].innerText = value[3:] 
     
   @property
   def trailing_text(self):

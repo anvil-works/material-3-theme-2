@@ -159,7 +159,7 @@ class FileLoader(FileLoaderTemplate):
       self.dom_nodes['anvil-m3-fileloader-icon'].style.marginRight = "8px"
     else:
       self.dom_nodes['anvil-m3-fileloader-icon'].style.marginRight = ""
-    self.dom_nodes['anvil-m3-fileloader-icon'].innerText = value
+    self.dom_nodes['anvil-m3-fileloader-icon'].innerText = value[3:]
 
   @property
   def file_types(self):

@@ -2,7 +2,7 @@ components_by_slot:
   slot_1:
   - layout_properties: {}
     name: navigation_link_1
-    properties: {}
+    properties: {icon: 'mi:star_rate'}
     type: form:_Components.NavigationLink
   slot_3:
   - components:
@@ -32,12 +32,37 @@ components_by_slot:
     type: form:_Components.Button
   - layout_properties: {}
     name: dropdown_menu_1
-    properties: {}
+    properties: {icon: 'mi:123', icon_color: 'theme:On Primary Container'}
     type: form:_Components.DropdownMenu
   - layout_properties: {}
     name: file_loader_1
     properties: {icon: 'mi:file_upload'}
     type: form:_Components.FileLoader
+  - layout_properties: {}
+    name: link_1
+    properties: {icon: '123'}
+    type: form:_Components.Link
+  - components: []
+    layout_properties: {}
+    name: button_menu_1
+    properties: {}
+    type: form:_Components.ButtonMenu
+  - layout_properties: {}
+    name: link_2
+    properties: {icon: 'mi:10mp', text: ffgasdf}
+    type: form:_Components.Link
+  - layout_properties: {}
+    name: switch_1
+    properties: {selected: false, selected_icon: 'mi:add_task', unselected_icon: 'mi:10k'}
+    type: form:_Components.Switch
+  - layout_properties: {}
+    name: text_1
+    properties: {icon: 'mi:10mp'}
+    type: form:_Components.Text
+  - layout_properties: {}
+    name: icon_button_1
+    properties: {icon: ''}
+    type: form:_Components.IconButton
 is_package: true
 layout:
   properties: {show_sidesheet: false}

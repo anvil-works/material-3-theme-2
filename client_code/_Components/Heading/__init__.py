@@ -161,7 +161,7 @@ class Heading(HeadingTemplate):
       self.dom_nodes['anvil-m3-heading-icon'].style.marginRight = "8px"
     else:
       self.dom_nodes['anvil-m3-heading-icon'].style.marginRight = ""
-    self.dom_nodes['anvil-m3-heading-icon'].innerText = value
+    self.dom_nodes['anvil-m3-heading-icon'].innerText = value[3:]
 
   @property
   def style(self):

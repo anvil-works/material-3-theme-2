@@ -86,7 +86,7 @@ properties:
   include_none_option: true
   name: icon
   type: icon
-- {default_value: '', description: The colour of the leading icon, group: Look and Feel, important: false, name: leading_icon_color, type: color}
+- {default_value: '', description: The colour of the leading icon, group: Look and Feel, important: false, name: icon_color, type: color}
 - {default_value: '', description: ' The text to display when the mouse is hovered over this component', important: false, name: tooltip, type: string}
 - {default_value: '', description: The supporting text displayed underneath this component, group: Key Properties, important: false, name: supporting_text, type: string}
 - {default_value: '', description: The colour of the supporting text underneath this component, group: Look and Feel, important: false, name: supporting_text_color, type: color}
