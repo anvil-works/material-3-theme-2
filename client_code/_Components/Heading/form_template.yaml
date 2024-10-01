@@ -39,7 +39,14 @@ properties:
 - {default_binding_prop: true, default_value: '', description: The text displayed on this component., group: Key Properties, important: true, multiline: true, name: text, type: string}
 - {default_value: false, description: 'If True, this component’s text will be underlined.', designer_hint: font-underline, group: Text, name: underline, type: boolean}
 - {default_value: true, description: If True, designer_hint: visible, group: Look and Feel, important: true, name: visible, the component will be displayed.: null, type: boolean}
-- {default_value: '', description: The icon to display on this component., group: Icon, important: true, include_none_option: true, name: material_icon, none_option_label: No icon, type: icon}
+- default_value: ''
+  description: The icon to display on this component.
+  group: Icon
+  iconsets: [material-icons]
+  important: true
+  include_none_option: true
+  name: icon
+  type: icon
 - {default_value: '', description: The colour of the text on the component., group: Look and Feel, name: text_color, type: color}
 - {default_value: '', description: The background colour of this component., group: Look and Feel, name: background_color, type: color}
 - {default_value: '', description: The border of this component. Can take any valid CSS border value., group: Look and Feel, name: border, type: string}

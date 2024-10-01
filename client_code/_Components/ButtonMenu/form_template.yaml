@@ -47,7 +47,14 @@ properties:
   name: icon_position
   options: [left, right]
   type: enum
-- {default_binding_prop: true, default_value: '', description: The icon to display on the Button., group: Icon, important: true, include_none_option: true, name: icon, type: icon}
+- default_value: ''
+  description: The icon to display on the Button.
+  group: Icon
+  iconsets: [material-icons]
+  important: true
+  include_none_option: true
+  name: icon
+  type: icon
 - default_value: ['8', '8', '8', '8']
   description: The margin (pixels) of the component.
   group: Layout

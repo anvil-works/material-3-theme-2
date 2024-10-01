@@ -16,10 +16,22 @@ events:
 - {default_event: true, description: When the component is clicked, name: click}
 is_package: true
 properties:
-- {default_binding_prop: true, default_value: '', description: The leading icon to display on this component., group: Key Properties, include_none_option: true, name: leading_icon, none_option_label: No Icon, type: icon}
+- default_value: ''
+  description: The leading icon to display on this component.
+  group: Key Properties
+  iconsets: [material-icons]
+  include_none_option: true
+  name: leading_icon
+  type: icon
 - {default_value: '', description: The main text displayed on this component, group: Key Properties, name: text, type: string}
 - {description: Use this property to store any extra data for the component., group: Other, important: false, name: tag, type: object}
-- {default_value: '', description: The trailing icon to display on this component., group: Key Properties, include_none_option: true, name: trailing_icon, none_option_label: No Icon, type: icon}
+- default_value: ''
+  description: The trailing icon to display on this component.
+  group: Key Properties
+  iconsets: [material-icons]
+  include_none_option: true
+  name: trailing_icon
+  type: icon
 - {default_value: '', description: The text to be displayed on the right side of the component. Will be to the left of the trailing icon if both exist., group: Key Properties, name: trailing_text, type: string}
 - {default_value: false, description: 'If True, add a space where the leading_icon would be so that this MenuItem is aligned with MenuItems with leading_icons.', group: Look and Feel, name: add_icon_space, type: boolean}
 - {default_value: true, description: 'If True, this component allows user interaction.', designer_hint: enabled, group: Interaction, name: enabled, type: boolean}

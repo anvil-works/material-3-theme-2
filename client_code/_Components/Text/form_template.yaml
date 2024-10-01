@@ -41,7 +41,14 @@ properties:
 - {description: The font size of the text displayed on this component., group: Text, important: true, name: font_size, type: number}
 - {default_value: '', description: The colour of the text on the component., group: Look and Feel, name: text_color, type: color}
 - {default_value: '', description: A style for this component defined in CSS and added to Roles, group: Look and Feel, name: role, type: themeRole}
-- {default_value: '', description: The icon to display on this component., group: Icon, important: true, include_none_option: true, name: icon, none_option_label: No icon, type: icon}
+- default_value: ''
+  description: The icon to display on this component.
+  group: Icon
+  iconsets: [material-icons]
+  important: true
+  include_none_option: true
+  name: icon
+  type: icon
 - {default_value: false, description: 'If True, this component’s text will be italic.', designer_hint: font-italic, group: Text, name: italic, type: boolean}
 - {description: Use this property to store any extra data for the component., group: Other, important: false, name: tag, type: object}
 - {default_binding_prop: true, default_value: '', description: The text displayed on this component., group: Key Properties, important: false, multiline: true, name: text, type: string}

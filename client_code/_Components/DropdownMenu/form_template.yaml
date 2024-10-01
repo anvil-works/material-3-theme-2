@@ -78,7 +78,14 @@ properties:
 - {default_value: '', description: The colour of the displayed text if there is a selected item, group: Selection Field Style, important: false, name: selected_text_color, type: color}
 - {description: The margin (pixels) of the component., group: Layout, important: true, name: margin, type: margin}
 - {default_value: false, description: 'If True, this component is in an error state.', group: Interaction, important: true, name: error, type: boolean}
-- {default_value: '', description: The leading icon to display on this component., group: Icon, important: true, include_none_option: true, name: leading_icon, none_option_label: No icon, type: icon}
+- default_value: ''
+  description: The leading icon to display on this component.
+  group: Icon
+  iconsets: [material-icons]
+  important: true
+  include_none_option: true
+  name: icon
+  type: icon
 - {default_value: '', description: The colour of the leading icon, group: Look and Feel, important: false, name: leading_icon_color, type: color}
 - {default_value: '', description: ' The text to display when the mouse is hovered over this component', important: false, name: tooltip, type: string}
 - {default_value: '', description: The supporting text displayed underneath this component, group: Key Properties, important: false, name: supporting_text, type: string}

@@ -25,7 +25,12 @@ properties:
 - {default_value: false, description: 'If True, display a message indicating the number of selected files.', group: Other, important: false, name: show_state, type: boolean}
 - {default_value: File upload, description: The text displayed on this component., group: Key Properties, important: true, name: text, type: string}
 - {default_value: '', description: A style for this component defined in CSS and added to Roles., group: Look and Feel, name: role, type: themeRole}
-- {default_value: '', group: Icon, important: true, name: icon, type: icon}
+- default_value: ''
+  group: Icon
+  iconsets: [material-icons]
+  important: true
+  name: icon
+  type: icon
 - {default_value: true, description: 'If True, this component allows user interaction.', designerHint: enabled, designer_hint: enabled, group: Interaction, important: true, name: enabled, type: boolean}
 - {default_value: true, description: 'If True, the component will be displayed.', designerHint: visible, designer_hint: visible, group: Look and Feel, important: true, name: visible, type: boolean}
 - {default_value: '', description: The colour of the text on the component., group: Look and Feel, important: true, name: text_color, type: color}

@@ -22,9 +22,23 @@ events:
 - {description: When the component is removed from the screen., name: hide}
 is_package: true
 properties:
-- {default_value: '', description: Optional icon to appear on the Switch when toggled on., group: Icon, important: false, include_none_option: true, name: selected_icon, none_option_label: No icon, type: icon}
+- default_value: ''
+  description: Optional icon to appear on the Switch when toggled on.
+  group: Icon
+  iconsets: [material-icons]
+  important: false
+  include_none_option: true
+  name: selected_icon
+  type: icon
 - {default_binding_prop: true, default_value: false, description: 'If True, this component is toggled on.', designerHint: toggle, designer_hint: toggle, group: Key Properties, important: true, name: selected, type: boolean}
-- {default_value: '', description: Optional icon on the Switch when toggled off., group: Icon, important: false, include_none_option: true, name: unselected_icon, none_option_label: No icon, type: icon}
+- default_value: ''
+  description: Optional icon on the Switch when toggled off.
+  group: Icon
+  iconsets: [material-icons]
+  important: false
+  include_none_option: true
+  name: unselected_icon
+  type: icon
 - {default_value: '', description: The background colour of the component when toggled off., group: Look and Feel, important: false, name: unselected_background_color, type: color}
 - {default_value: '', description: The background colour of the component when toggled on., group: Look and Feel, important: false, name: selected_background_color, type: color}
 - {default_value: '', description: The colour of the Switch thumb when toggled off., group: Look and Feel, name: unselected_thumb_color, type: color}
