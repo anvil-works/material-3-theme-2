@@ -31,6 +31,18 @@ components_by_slot:
     name: button_menu_1
     properties: {}
     type: form:_Components.ButtonMenu
+  - components:
+    - layout_properties: {slot: card-content-slot}
+      name: card_content_container_1
+      properties: {}
+      type: form:_Components.Card.CardContentContainer
+    layout_properties: {}
+    name: card_1
+    properties:
+      spacing:
+        margin: ['40', null, null, null]
+        padding: ['', null, null, '']
+    type: form:_Components.Card
   slot_5: []
   slot_6: []
   slot_7: []

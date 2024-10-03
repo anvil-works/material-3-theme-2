@@ -1,6 +1,7 @@
 .anvil-m3-card {
   display: flex;
-  margin: 8px;
+  margin: calc(1rem + 3px);
+  padding: 2rem;
   overflow: hidden;
   position: relative;
   border-radius: 12px;

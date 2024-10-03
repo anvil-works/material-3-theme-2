@@ -7,6 +7,9 @@ from anvil.tables import app_tables
 import anvil.designer
 from anvil import HtmlTemplate
 from ...Functions import tooltip_property, role_property, property_with_callback, style_property, spacing_property, margin_property, padding_property, color_property, border_property
+from anvil.js import get_dom_node
+from anvil.js import window
+from ...utils.properties import get_unset_spacing
 
 class Card(CardTemplate):
   def __init__(self, **properties):
@@ -18,6 +21,12 @@ class Card(CardTemplate):
     # if not anvil.designer.in_designer:
     #   self.dom_nodes['empty-image'].style.display = "none"
     #   self.dom_nodes['empty-content'].style.display = "none"
+
+  def _anvil_get_unset_property_values_(self):
+    rv = get_unset_spacing(self.dom_nodes["anvil-m3-card"], self.spacing)
+    print(rv)
+    return {"spacing": rv}
+
 
   def add_component(self, component, slot="card-content-slot", **layout_props):
     super().add_component(component, slot=slot, **layout_props)
