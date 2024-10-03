@@ -1,6 +1,10 @@
 components_by_slot:
   slot_1: []
   slot_3:
+  - layout_properties: {}
+    name: label_1
+    properties: {}
+    type: Label
   - event_bindings: {pressed_enter: text_field_3_pressed_enter}
     layout_properties: {}
     name: text_field_3

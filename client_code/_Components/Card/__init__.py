@@ -23,7 +23,8 @@ class Card(CardTemplate):
     #   self.dom_nodes['empty-content'].style.display = "none"
 
   def _anvil_get_unset_property_values_(self):
-    rv = get_unset_spacing(self.dom_nodes["anvil-m3-card"], self.spacing)
+    el = self.dom_nodes["anvil-m3-card"]
+    rv = get_unset_spacing(el, el, self.spacing)
     print(rv)
     return {"spacing": rv}
 
