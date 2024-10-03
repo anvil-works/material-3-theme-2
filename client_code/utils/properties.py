@@ -57,11 +57,21 @@ def get_unset_spacing(element_margin, element_padding, current_value):
   }
 
 
+def get_unset_value(element, key, current_value):
+  if current_value is not None or current_value != "":
+    return {"value": None, "css": None}
+
+  styles = window.getComputedStyle(element)
+  css = styles[key]
+  return {"value": _get_value(css), "css": css}
+
+
 try:
   from anvil.property_utils import (
     get_unset_margin,
     get_unset_padding,
     get_unset_spacing,
+    get_unset_value,
   )
 except ImportError as e:
   print(e)
