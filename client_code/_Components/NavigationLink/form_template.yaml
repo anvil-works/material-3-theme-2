@@ -41,7 +41,7 @@ properties:
 - {default_value: '', description: The font family to use for this component., group: Text, name: font_family, type: string}
 - {default_value: '', description: The colour of the icon displayed on this component., group: Look and Feel, name: icon_color, type: color}
 - {default_value: '', description: The size (pixels) of the icon displayed on this component., group: Icon, name: icon_size, type: string}
-- default_value: ''
+- default_value: mi:star
   description: The icon to display on this component.
   group: Key Properties
   iconsets: [material-icons]

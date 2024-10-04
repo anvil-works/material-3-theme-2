@@ -25,7 +25,7 @@ properties:
   options: [standard, filled, tonal, outlined]
   type: enum
 - {description: Use this property to store any extra data for the component., group: Other, important: false, name: tag, type: object}
-- default_value: ''
+- default_value: mi:star
   description: Icon to display on button
   group: Key Properties
   iconsets: [material-icons]

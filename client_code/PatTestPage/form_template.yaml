@@ -1,8 +1,8 @@
 components_by_slot:
   slot_1:
   - layout_properties: {}
-    name: navigation_link_1
-    properties: {icon: 'mi:star_rate'}
+    name: navigation_link_2
+    properties: {}
     type: form:_Components.NavigationLink
   slot_3:
   - components:
@@ -60,13 +60,13 @@ components_by_slot:
     properties: {icon: 'mi:10mp'}
     type: form:_Components.Text
   - layout_properties: {}
-    name: icon_button_1
-    properties: {icon: 'mi:10k'}
-    type: form:_Components.IconButton
-  - layout_properties: {}
     name: toggle_icon_button_1
     properties: {icon: 'mi:1x_mobiledata_badge'}
     type: form:_Components.ToggleIconButton
+  - layout_properties: {}
+    name: icon_button_1
+    properties: {}
+    type: form:_Components.IconButton
 is_package: true
 layout:
   properties: {show_sidesheet: false}
