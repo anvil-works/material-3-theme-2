@@ -10,7 +10,7 @@ components:
     type: form:_Components.Link
   - components:
     - components:
-      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+      - layout_properties: {slot: card-content-container-slot}
         name: heading_10
         properties: {scale: large, style: title, text: Text}
         type: form:_Components.Heading
@@ -39,7 +39,7 @@ components:
           name: text_6
           properties: {font_size: null, scale: small, text: Body Small}
           type: form:_Components.Text
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        layout_properties: {slot: card-content-container-slot}
         name: column_panel_1
         properties: {}
         type: ColumnPanel
@@ -51,13 +51,13 @@ components:
     name: card_1
     properties: {}
     type: form:_Components.Card
-  - layout_properties: {grid_position: 'WWYVUF,QOLWTO'}
-    name: heading_11
-    properties: {scale: large, style: title, text: Heading}
-    type: form:_Components.Heading
   - components:
     - components:
       - components:
+        - layout_properties: {grid_position: 'KWOEQR,KQXTCN'}
+          name: heading_11
+          properties: {scale: large, style: title, text: Heading}
+          type: form:_Components.Heading
         - layout_properties: {grid_position: 'BQBWMG,GFZEWW KMVLFD,AUHIPA'}
           name: heading_1
           properties: {material_icon: null, scale: large, style: title, text: Title Large}
@@ -94,7 +94,7 @@ components:
           name: heading_9
           properties: {scale: small, text: Display Small}
           type: form:_Components.Heading
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        layout_properties: {slot: card-content-container-slot}
         name: column_panel_2
         properties: {col_widths: '{"GFZEWW":20,"DYCYXB":20,"KRPVFE":20}'}
         type: ColumnPanel
@@ -102,10 +102,6 @@ components:
       name: card_content_container_1
       properties: {}
       type: form:_Components.Card.CardContentContainer
-    - layout_properties: {slot: card-content-slot}
-      name: text_7
-      properties: {align: center}
-      type: form:_Components.Text
     layout_properties: {grid_position: 'ILWORC,OFLBFB'}
     name: card_2
     properties: {}

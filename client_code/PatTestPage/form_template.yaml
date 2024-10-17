@@ -30,6 +30,10 @@ components_by_slot:
     name: button_1
     properties: {align: center, text: vcbxcv}
     type: form:_Components.Button
+  - layout_properties: {}
+    name: divider_1
+    properties: {}
+    type: form:_Components.Divider
 is_package: true
 layout:
   properties: {show_sidesheet: false}
