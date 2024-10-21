@@ -46,6 +46,7 @@ class NavigationLink(NavigationLinkTemplate):
       }]
 
   def _anvil_get_unset_property_values_(self):
+    m = 
     tfs = get_unset_value(self.dom_nodes['anvil-m3-navigation-link-text'], "fontSize", self.font_size)
     ifs = get_unset_value(self.dom_nodes['anvil-m3-navigation-link-icon'], "fontSize", self.icon_size)
     return {"font_size": tfs, "icon_size": ifs}
