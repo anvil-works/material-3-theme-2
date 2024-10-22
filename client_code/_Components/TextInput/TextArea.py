@@ -54,6 +54,9 @@ class TextArea(TextInput):
     self.dom_nodes['anvil-m3-textarea'].removeEventListener("focus", self._on_focus)
     self.dom_nodes['anvil-m3-textarea'].removeEventListener("blur", self._on_lost_focus)
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-textarea'])
+
+  def _anvil_get_unset_property_values_(self):
+    
   
   display_italic = italic_property('anvil-m3-textarea', 'display_italic')
   display_bold = bold_property('anvil-m3-textarea', 'display_bold')
