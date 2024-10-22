@@ -35,12 +35,12 @@ class Heading(HeadingTemplate):
       }
     }]
 
-  def _anvil_get_unset_property_values_(self):
-    text = self.dom_nodes['anvil-m3-button-text']
-    icon = self.dom_nodes['anvil-m3-button-icon']
-    tfs = get_unset_value(text, "fontSize", self.font_size)
-    ifs = get_unset_value(icon, "fontSize", self.icon_size)
-    return {"font_size": tfs, "icon_size": ifs}
+  # def _anvil_get_unset_property_values_(self):
+  #   text = self.dom_nodes['anvil-m3-button-text']
+  #   icon = self.dom_nodes['anvil-m3-button-icon']
+  #   tfs = get_unset_value(text, "fontSize", self.font_size)
+  #   ifs = get_unset_value(icon, "fontSize", self.icon_size)
+  #   return {"font_size": tfs, "icon_size": ifs}
 
   def _start_inline_editing(self):
     el_name = f'anvil-m3-heading-{self.style}'
