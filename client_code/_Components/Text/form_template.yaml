@@ -52,7 +52,7 @@ properties:
   type: enum
 - {default_value: false, description: 'If True, this component’s text will be italic.', designer_hint: font-italic, group: Text, name: italic, type: boolean}
 - {description: Use this property to store any extra data for the component., group: Other, important: false, name: tag, type: object}
-- {default_binding_prop: true, default_value: '', description: The text displayed on this component., group: Key Properties, important: false, multiline: true, name: text, type: string}
+- {default_binding_prop: true, default_value: '', description: The text displayed on this component., group: Key Properties, important: true, multiline: true, name: text, type: string}
 - {default_value: false, description: 'If True, this component’s text will be underlined.', designer_hint: font-underline, group: Text, name: underline, type: boolean}
 - {default_value: true, description: 'If True, the component will be displayed.', designer_hint: visible, group: Look and Feel, important: true, name: visible, type: boolean}
 - {description: The size (pixels) of the icon displayed on this component., group: Icon, name: icon_size, type: number}
