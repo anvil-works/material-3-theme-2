@@ -17,7 +17,7 @@ class TextInput(TextInputTemplate):
     
     self._on_input = self._on_input
 
-  def _anvil_get_unset_property_values_(self):
+  def _get_common_unset_property_values_(self):
     el = self.dom_nodes['anvil-m3-textinput']
     m = get_unset_margin(el, self.margin)
     label = self.dom_nodes['anvil-m3-label-text']
