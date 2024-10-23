@@ -2,7 +2,7 @@ components: []
 container:
   event_bindings: {show: form_show}
   properties:
-    html: |-
+    html: |
       <div anvil-name="anvil-m3-button-component" style="display:flex">
         <button anvil-name="anvil-m3-button" class="anvil-m3-button">
           <i anvil-name="anvil-m3-button-icon" class="material-symbols-outlined" style="display: none;"></i>

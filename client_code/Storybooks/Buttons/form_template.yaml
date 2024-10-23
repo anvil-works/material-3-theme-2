@@ -43,7 +43,10 @@ components:
           type: form:_Components.Button
         - layout_properties: {}
           name: button_5
-          properties: {text: '5'}
+          properties:
+            spacing:
+              padding: [null, '', null, null]
+            text: '5'
           type: form:_Components.Button
         layout_properties: {slot: anvil-m3-card-content-container-slot}
         name: flow_panel_2
