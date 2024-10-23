@@ -258,7 +258,7 @@ class DropdownMenu(DropdownMenuTemplate):
           event.preventDefault()
         return
 
-      if event.key not in action_keys: #TODO: eventually want to use this to jump somewhere in the list
+      if event.key not in action_keys:
         return
 
       if event.key == "ArrowUp" or event.key == "ArrowDown":
