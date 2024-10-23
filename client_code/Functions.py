@@ -8,6 +8,7 @@ from anvil.property_utils import set_element_margin, set_element_padding, set_el
 from .utils import noop, fui
 import anvil.designer
 
+#TODO: move this to utils.properties
 def theme_color_to_css(color:str):
   if color.startswith('theme:'):
     color = color.lstrip('theme:')

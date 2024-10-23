@@ -2,7 +2,7 @@ from ._anvil_designer import LinkTemplate
 from anvil import *
 import anvil.designer
 from ...Functions import tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property, font_family_property, spacing_property
-
+from ...utils.properties import anvil_prop
 from anvil import HtmlTemplate
 
 class Link(LinkTemplate):
@@ -83,17 +83,13 @@ class Link(LinkTemplate):
   tooltip = tooltip_property('anvil-m3-link')
   role = role_property('anvil-m3-link')
   background_color = color_property('anvil-m3-link', 'backgroundColor', 'background_color')
-
-  @property
-  def align(self):
-    return self._props.get('align')
-
-  @align.setter
+ 
+  @anvil_prop(default_value='left')
   def align(self, value):
-    self._props['align'] = value
     self.dom_nodes['anvil-m3-link'].style.textAlign = value
     #self.dom_nodes['anvil-m3-link-container'].style.justifyContent = value
     self.dom_nodes['anvil-m3-link-icon-container'].style.justifyContent = value
+    
   
   @property
   def url(self):

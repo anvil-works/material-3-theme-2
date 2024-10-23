@@ -23,6 +23,7 @@ class Slider(SliderTemplate):
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
+  #TODO: move stuff from from_show event to _on_mount. Can probs use self._mounted instead of self._shown
   def _on_mount(self, **event_args):
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self._on_input)
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self._on_mouse_down)

@@ -4,6 +4,7 @@ from anvil.property_utils import (
     get_padding_styles,
     get_spacing_styles,
 )
+from ..Functions import property_with_callback, property_without_callback
 
 _directions = ("Top", "Right", "Bottom", "Left")
 
@@ -67,7 +68,7 @@ def get_unset_value(element, key, current_value):
     css = styles[key]
     return {"value": _get_value(css), "css": css}
 
-
+#after prod deploy, remove this try and delete the overwritten functions above
 try:
     from anvil.property_utils import (
         get_unset_margin,
@@ -81,3 +82,22 @@ except (ImportError, AttributeError):
 class ComponentTag():
   def __repr__(self):
     return f"ComponentTag({self.__dict__})"
+
+
+def anvil_prop(*args, **kwargs):
+  if 'default_value' in kwargs:
+    #we were called with a default value, return a decorator
+    def dec(fn):
+      if isinstance(fn, str):
+        return property_without_callback(fn)
+      else:
+        return property_with_callback(fn.__name__, fn, kwargs['default_value'])
+    return dec
+  else:
+    #we were used directly as a decorator with a setter or to create a property without a callback. 
+    if isinstance(args[0], str):
+      return property_without_callback(args[0])
+    else:
+      fn = args[0]
+      return property_with_callback(fn.__name__,fn)
+

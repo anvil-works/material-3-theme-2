@@ -1,8 +1,0 @@
-components_by_slot:
-  slot_3:
-  - layout_properties: {}
-    name: column_panel_1
-    properties: {}
-    type: ColumnPanel
-is_package: true
-layout: {type: 'form:NavigationRailLayout'}

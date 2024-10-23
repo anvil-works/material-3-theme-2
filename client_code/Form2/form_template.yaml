@@ -1,0 +1,39 @@
+components_by_slot:
+  nav_rail:
+  - layout_properties: {}
+    name: navigation_link_1
+    properties: {}
+    type: form:_Components.NavigationLink
+  - layout_properties: {}
+    name: navigation_link_2
+    properties: {}
+    type: form:_Components.NavigationLink
+  sidesheet:
+  - components:
+    - layout_properties: {slot: anvil-m3-sidesheet-footer}
+      name: button_1
+      properties: {text: Do something}
+      type: form:_Components.Button
+    - layout_properties: {slot: anvil-m3-sidesheet-close-button}
+      name: icon_button_1
+      properties: {icon: 'mi:close'}
+      type: form:_Components.IconButton
+    - layout_properties: {slot: anvil-m3-sidesheet-title}
+      name: heading_1
+      properties: {}
+      type: form:_Components.Heading
+    layout_properties: {}
+    name: sidesheet_content_1
+    properties: {}
+    type: form:SidesheetContent
+is_package: true
+layout: {type: 'form:NavigationRailLayout'}
+slots:
+  content:
+    index: 0
+    set_layout_properties: {}
+    target: {name: content, type: slot}
+  slot_1:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-sidesheet}
+    target: {name: sidesheet_content_1, type: container}

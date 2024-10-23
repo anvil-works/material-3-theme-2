@@ -1,0 +1,17 @@
+components:
+- layout_properties: {grid_position: 'PCSQEE,DDLOBX'}
+  name: link_1
+  properties: {align: left}
+  type: form:_Components.Link
+- components:
+  - layout_properties: {slot: card-content-slot}
+    name: card_content_container_1
+    properties: {}
+    type: form:_Components.Card.CardContentContainer
+  event_bindings: {click: interactive_card_1_click}
+  layout_properties: {grid_position: 'MCMCHF,SOTPGA'}
+  name: interactive_card_1
+  properties: {}
+  type: form:_Components.InteractiveCard
+container: {type: ColumnPanel}
+is_package: true

@@ -24,7 +24,7 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.sidesheet_previous_state = False
     self.init_components(**properties)
 
-    window.document.addEventListener('scroll', self._add_scroll_class)
+    window.document.addEventListener('scroll', self._on_scroll)
     self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
     # self.nav_drawer_close_btn.addEventListener('click', self.hide_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
@@ -43,10 +43,9 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     window.setTimeout(lambda: self.nav_drawer.style.setProperty('width', '0px'), 250)
     window.setTimeout(lambda: self.nav_drawer.classList.remove('anvil-m3-shown'), 245)
 
-  def _add_scroll_class(self, e):
-    if self.app_bar.classList.contains('anvil-m3-scrolled'):
-      if window.scrollY == 0:
-        self.app_bar.classList.remove('anvil-m3-scrolled')
+  def _on_scroll(self, e):
+    if window.scrollY == 0:
+      self.app_bar.classList.remove('anvil-m3-scrolled')
     else:
       self.app_bar.classList.add('anvil-m3-scrolled')
 

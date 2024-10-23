@@ -15,12 +15,10 @@ class Button(ButtonTemplate):
   def __init__(self, **properties):
     self.tag = ComponentTag()
     self._props = properties
-    self._text = properties.get('text', '')
 
     self._tooltip_node = None
     self.init_components(**properties)
-    
-    self._handle_click = self._handle_click
+
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
@@ -118,15 +116,6 @@ class Button(ButtonTemplate):
   def form_show(self, **event_args):
     self._update_button_look()
 
-  # @property
-  # def tag(self):
-  #   print('getting tag')
-  #   return self._props.get('tag')
-
-  # @tag.setter
-  # def tag(self, value):
-  #   print('setting tag')
-  #   self._props['tag'] = ComponentTag()
   
   align = property_with_callback('align', _set_align)
   role = role_property('anvil-m3-button')

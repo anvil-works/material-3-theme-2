@@ -5,7 +5,7 @@ from ..Functions import property_with_callback
 
 #todo figure out how to get default value to work
 # another_proerty = {"name": "asdf", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction", "description": "If True, this component allows user interaction.", "showInDesignerWhen": "another_property"}
-enabled_property = {"name": "enabled", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction", "description": "If True, this component allows user interaction.", "showInDesignerWhen": "asdf"}
+enabled_property = {"name": "enabled", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction", "description": "If True, this component allows user interaction."}
 click_event = {"name": "click", "defaultEvent": True, "description": "When the component is clicked"}
 
 class InteractiveCard(Card):
@@ -14,18 +14,20 @@ class InteractiveCard(Card):
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
-    self.dom_nodes['anvil-m3-card'].classList.toggle('anvil-m3-interactive', True)
-    self._handle_click = self._handle_click
+    #module component props don't get their default values initialized by default. this makes sure the enabled setter has run
     self.enabled = self.enabled
+    self.dom_nodes['anvil-m3-card'].classList.toggle('anvil-m3-interactive', True)
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
   def _set_enabled(self, value): #why not being set in the beginning??
     self.dom_nodes['anvil-m3-card'].classList.toggle('anvil-m3-disabled', not value)
+    
   enabled = property_with_callback("enabled", _set_enabled, default_value=True)
   
   def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-card'].addEventListener("click", self._handle_click)
+    
   def _on_cleanup(self, **event_args):
     self.dom_nodes['anvil-m3-card'].removeEventListener("click", self._handle_click)
 

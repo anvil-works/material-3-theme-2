@@ -21,6 +21,8 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self.sidesheet = self.dom_nodes['anvil-m3-sidesheet']
     self.content = self.dom_nodes['anvil-m3-content']
     self.sidesheet_previous_state = False
+    self.zero_width_timeout = None
+    self.shown_timeout = None
     self.init_components(**properties)
 
     window.document.addEventListener('scroll', self._add_scroll_class)
@@ -31,6 +33,8 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
 
   #!defMethod(_)!2: "Open the navigation drawer." ["open_nav_drawer"]
   def open_nav_drawer(self, e):
+    window.clearTimeout(self.zero_width_timeout)
+    window.clearTimeout(self.shown_timeout)
     self.nav_rail.style.width = '360px'
     self.nav_rail.style.left = "0px"
     self.nav_rail.classList.add('anvil-m3-shown')
@@ -40,8 +44,8 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   def hide_nav_drawer(self, e):
     self.nav_rail.style.left = "-101%"
     self.nav_drawer_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
-    window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
-    window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245)
+    self.zero_width_timeout = window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
+    self.shown_timeout = window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245)
 
   #!defMethod(_)!2: "Add components to the navigation rail." ["add_to_nav_rail"]
   def add_to_nav_rail(self, component):
@@ -69,7 +73,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
       self.sidesheet.classList.add('anvil-m3-open')
       self.content.classList.add('anvil-m3-sidesheet-open')
       self.sidesheet_previous_state = True
-    
+    #TODO: check timeout stuff
   def _close_sidesheet(self):
     self.content.classList.add('anvil-m3-transition-width')
     self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})

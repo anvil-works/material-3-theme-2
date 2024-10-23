@@ -150,9 +150,9 @@ class ButtonMenu(ButtonMenuTemplate):
   role = property_with_callback("role", _set_role)
 
   def _toggle_menu_visibility(self, **event_args):
-    self._set_visibility()
+    self._toggle_visibility()
 
-  def _set_visibility(self, value = None):
+  def _toggle_visibility(self, value = None):
     classes = self._menuNode.classList
     if value is not None:
       classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
@@ -174,14 +174,14 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _child_clicked(self, event):
     # do the click action. The child should handle this
-    self._set_visibility(False)
+    self._toggle_visibility(False)
     if self.enabled:
       self.raise_event("click")
 
   def _body_click(self, event):
     if self._btnNode.contains(event.target) or self._menuNode.contains(event.target):
       return
-    self._set_visibility(False)
+    self._toggle_visibility(False)
   
   def _get_hover_index_information(self):
     self._children = self.get_components()[:-1]
@@ -206,7 +206,7 @@ class ButtonMenu(ButtonMenuTemplate):
     # if event.key is "Tab":
     #   pass
     hover = self._hoverIndex #holding value for situation like alerts where it awaits 
-    self._set_visibility(False)
+    self._toggle_visibility(False)
     
     def attemptSelect():
       event.preventDefault()
@@ -266,10 +266,10 @@ class ButtonMenu(ButtonMenuTemplate):
     ]
 
   def _on_select_descendent(self):
-    self._set_visibility(True)
+    self._toggle_visibility(True)
 
   def _on_select_other(self):
-    self._set_visibility(False)
+    self._toggle_visibility(False)
 
   def form_show(self, **event_args):
     if anvil.designer.in_designer:

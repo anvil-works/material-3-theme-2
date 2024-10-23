@@ -12,7 +12,7 @@ import random, string, math
 import anvil.designer
 from ..MenuItem import MenuItem
 from ...utils import fui, noop
-from ...utils.properties import get_unset_value, get_unset_margin
+from ...utils.properties import get_unset_value, get_unset_margin, anvil_prop
 
 
 class DropdownMenu(DropdownMenuTemplate):
@@ -206,6 +206,8 @@ class DropdownMenu(DropdownMenuTemplate):
   italic_items = property_without_callback("italic_items")
   underline_items = property_without_callback("underline_items")
   items_text_color = property_without_callback("items_text_color")
+
+  bold_items = anvil_prop('bold_items')
 
   items_font = property_without_callback("items_font")
   items_font_size = property_without_callback("items_font_size")
