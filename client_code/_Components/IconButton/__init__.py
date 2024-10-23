@@ -9,8 +9,6 @@ from ...Functions import innerText_property, tooltip_property, role_property, en
 from anvil import HtmlTemplate
 from ...utils.properties import get_unset_margin
 
-#TODO: all classes should have anvil-m3 prefix
-
 class IconButton(IconButtonTemplate):
   def __init__(self, **properties):
     self.tag = ComponentTag()
