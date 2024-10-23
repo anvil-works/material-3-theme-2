@@ -118,16 +118,6 @@ class Button(ButtonTemplate):
   def form_show(self, **event_args):
     self._update_button_look()
 
-  # @property
-  # def tag(self):
-  #   print('getting tag')
-  #   return self._props.get('tag')
-
-  # @tag.setter
-  # def tag(self, value):
-  #   print('setting tag')
-  #   self._props['tag'] = ComponentTag()
-  
   align = property_with_callback('align', _set_align)
   role = role_property('anvil-m3-button')
   appearance = property_with_callback("appearance", _set_appearance)

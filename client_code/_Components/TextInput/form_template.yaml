@@ -50,7 +50,7 @@ properties:
 - {description: The font size of the input and placeholder text., group: Text, important: false, name: display_font_size, type: number}
 - {default_value: true, description: 'If True, this component allows user interaction.', designer_hint: enabled, group: Interaction, important: true, name: enabled, type: boolean}
 - {default_value: false, description: 'If True, this component is in an error state.', designer_hint: toggle, group: Interaction, important: false, name: error, type: boolean}
-- {description: The margin (pixels) of this component., group: Layout, important: true, name: spacing, type: margin}
+- {description: The margin (pixels) of this component., group: Layout, important: true, name: margin, type: margin}
 - {default_value: '', description: The colour of the background of this component., group: Look and Feel, important: false, name: background_color, type: color}
 - {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: false, name: tooltip, type: string}
 - {default_value: '', description: The font family to use for the supporting text underneath this component., group: Text, important: false, name: supporting_text_font_family, type: string}
