@@ -29,12 +29,12 @@ components_by_slot:
   - components:
     - layout_properties: {slot: default}
       name: radio_button_1
-      properties: {selected: true, text: Hi}
+      properties: {selected: false, text: Hi}
       type: form:_Components.RadioButton
     - event_bindings: {select: radio_button_2_select}
       layout_properties: {slot: default}
       name: radio_button_2
-      properties: {selected: false, text: Hello}
+      properties: {selected: true, text: Hello}
       type: form:_Components.RadioButton
     layout_properties: {}
     name: radio_group_panel_1
@@ -51,6 +51,15 @@ components_by_slot:
       type: form:_Components.RadioButton
     layout_properties: {}
     name: radio_group_panel_2
+    properties: {}
+    type: form:_Components.RadioGroupPanel
+  - components:
+    - layout_properties: {slot: default}
+      name: radio_button_5
+      properties: {selected: true}
+      type: form:_Components.RadioButton
+    layout_properties: {}
+    name: radio_group_panel_3
     properties: {}
     type: form:_Components.RadioGroupPanel
   content_slot: []
