@@ -12,7 +12,7 @@ components_by_slot:
       type: form:_Components.Button
     - layout_properties: {grid_position: 'QRUMHO,WDYJJP'}
       name: text_area_1
-      properties: {align: center, label: dafsd, placeholder: asdfasdf, text: ''}
+      properties: {align: center, description: asdfasdfasdfsd, label: dafsd, placeholder: asdfasdf, text: ''}
       type: form:_Components.TextInput.TextArea
     layout_properties: {}
     name: column_panel_1
