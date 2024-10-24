@@ -86,6 +86,7 @@ services:
   source: /runtime/services/tables.yml
 startup: {module: PatTestPage, type: form}
 startup_form: null
+client_init_module: InitModule
 toolbox: {hide_classic_components: true}
 toolbox_sections:
 - description: Use Typography components to display text
