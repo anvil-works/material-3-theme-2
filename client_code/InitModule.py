@@ -1,12 +1,17 @@
-import anvil.server
-# This is a module.
-# You can define variables and functions here, and use them from any form. For example, in a top-level form:
-#
-#    from . import Module1
-#
-#    Module1.say_hello()
-#
+import anvil.pluggable_ui
+from .._Components.Button import Button
+from .._Components.TextInput.TextField import TextField
+
+def make_footer_button(button_type, **kwargs):
+  return Button(**kwargs)
+
+anvil.pluggable_ui.provide("m3", {
+  "anvil.TextBoxWithLabel": TextField,
+  "anvil.TextBox": TextField,
+  "anvil.Button": Button,
+  "anvil.alerts.FooterButton": make_footer_button
+})
 
 
-def say_hello():
-  print("Hello, world")
+print('hello world')
+
