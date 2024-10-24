@@ -33,4 +33,6 @@ components_by_slot:
   content_slot: []
   nav_rail: []
 is_package: true
-layout: {type: 'form:NavigationRailLayout'}
+layout:
+  properties: {show_sidesheet: false}
+  type: form:NavigationRailLayout
