@@ -3,10 +3,6 @@
   align-items: center;
 }
 
-.anvil-m3-link-container {
-  display: flex
-}
-
 .anvil-m3-heading-container > .anvil-m3-heading-icon, .anvil-m3-text-container > .anvil-m3-text-icon {
   font-size: inherit;
 }
@@ -160,7 +156,7 @@ a.anvil-m3-link:hover, a.anvil-m3-link:focus {
 }
 
 .anvil-m3-link {
-  /* display: flex; */
+  display: inline-block;
   text-decoration: none;
 }
 

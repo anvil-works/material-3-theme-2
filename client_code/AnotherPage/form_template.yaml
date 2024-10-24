@@ -14,9 +14,15 @@ components_by_slot:
     name: interactive_card_1
     properties: {}
     type: form:_Components.InteractiveCard
-  - layout_properties: {}
+  - components:
+    - layout_properties: {slot: anvil-m3-link-slot}
+      name: heading_1
+      properties: {align: left, text: hello}
+      type: form:_Components.Heading
+    layout_properties: {}
     name: link_1
     properties:
+      align: left
       spacing:
         margin: ['100', null, null, null]
       text: hello
