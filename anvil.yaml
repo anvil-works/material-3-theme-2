@@ -84,7 +84,7 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/tables.yml
-startup: {module: PatTestPage, type: form}
+startup: {module: AnotherPage, type: form}
 startup_form: null
 toolbox: {hide_classic_components: true}
 toolbox_sections:
