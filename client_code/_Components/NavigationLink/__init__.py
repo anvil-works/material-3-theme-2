@@ -1,9 +1,8 @@
 from ._anvil_designer import NavigationLinkTemplate
 from anvil import *
 import anvil.js
-from ...Functions import color_property, role_property, tooltip_property, href_property, innerHTML_property, font_family_property, font_size_property, spacing_property, italic_property, bold_property, underline_property
 import anvil.designer
-from ...utils.properties import get_unset_value, get_unset_spacing, anvil_prop
+from ...utils.properties import get_unset_value, get_unset_spacing, anvil_prop, color_property, role_property, tooltip_property, href_property, innerHTML_property, font_family_property, font_size_property, spacing_property, italic_property, bold_property, underline_property
 
 class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):

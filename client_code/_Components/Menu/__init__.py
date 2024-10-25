@@ -2,7 +2,7 @@ from ._anvil_designer import MenuTemplate
 from anvil import *
 import anvil.server
 from anvil import HtmlTemplate
-from ...Functions import color_property
+from ...utils.properties import color_property
 
 class Menu(MenuTemplate):
   def __init__(self, **properties):

@@ -5,9 +5,8 @@ from anvil import HtmlTemplate
 from anvil.js.window import document
 import anvil.designer
 from ..._Components.RadioGroupPanel import RadioGroup
-from ...Functions import role_property, tooltip_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property, spacing_property
 from ...utils import gen_id
-from ...utils.properties import anvil_prop
+from ...utils.properties import anvil_prop, role_property, tooltip_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property, spacing_property
 
 class RadioButton(RadioButtonTemplate):
   def __init__(self, **properties):

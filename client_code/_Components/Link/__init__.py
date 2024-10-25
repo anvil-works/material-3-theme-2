@@ -1,8 +1,7 @@
 from ._anvil_designer import LinkTemplate
 from anvil import *
 import anvil.designer
-from ...Functions import tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property, font_family_property, spacing_property
-from ...utils.properties import anvil_prop
+from ...utils.properties import anvil_prop, tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property, font_family_property, spacing_property
 from anvil import HtmlTemplate
 
 class Link(LinkTemplate):
