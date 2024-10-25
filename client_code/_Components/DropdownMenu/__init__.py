@@ -21,7 +21,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self._props = properties
     self._design_name = ""
     self.init_components(**properties)
-        
     self._cleanup = noop
 
     self._menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
@@ -67,6 +66,15 @@ class DropdownMenu(DropdownMenuTemplate):
   #properties
   visible = HtmlTemplate.visible
   margin = margin_property('anvil-m3-dropdownMenu-textbox')
+  items = anvil_prop("items")
+  allow_none = property_without_callback("allow_none")
+  bold_items = property_without_callback("bold_items")
+  italic_items = property_without_callback("italic_items")
+  underline_items = property_without_callback("underline_items")
+  items_text_color = property_without_callback("items_text_color")
+  bold_items = anvil_prop('bold_items')
+  items_font = property_without_callback("items_font")
+  items_font_size = property_without_callback("items_font_size")
 
   @anvil_prop
   def background_color(self, value):
@@ -100,74 +108,73 @@ class DropdownMenu(DropdownMenuTemplate):
   def enabled(self, value):
     self.selection_field.enabled = value
 
-  @a
-  def _set_appearance(self, value):
+  @anvil_prop
+  def appearance(self, value):
     self.selection_field.appearance = value
-  appearance = property_with_callback("appearance", _set_appearance)
 
-  def _set_role(self, value):
+  @anvil_prop
+  def role(self, value):
     self.selection_field.role = value
-  role = property_with_callback("role", _set_role)
 
-  def _set_selected_italic(self, value):
+  @anvil_prop
+  def selected_italic(self, value):
     self.selection_field.display_italic = value
-  selected_italic = property_with_callback("selected_italic", _set_selected_italic)
 
-  def _set_selected_bold(self, value):
+  @anvil_prop
+  def selected_bold(self, value):
     self.selection_field.display_bold = value
-  selected_bold = property_with_callback("selected_bold", _set_selected_bold)
 
-  def _set_selected_underline(self, value):
+  @anvil_prop
+  def selected_underline(self, value):
     self.selection_field.display_underline = value
-  selected_underline = property_with_callback("selected_underline", _set_selected_underline)
 
-  def _set_selected_font(self, value):
+  @anvil_prop
+  def selected_font(self, value):
     self.selection_field.selected_font = value
-  selected_font_family = property_with_callback("selected_font_family", _set_selected_font)
 
-  def _set_selected_font_size(self, value):
+  @anvil_prop
+  def selected_font_size(self, value):
     self.selection_field.selected_font_size = value
-  selected_font_size = property_with_callback("selected_font_size", _set_selected_font_size)
 
-  def _set_selected_text_color(self, value):
+  @anvil_prop
+  def selected_text_color(self, value):
     self.selection_field.selected_text_color = value
-  selected_text_color = property_with_callback("selected_text_color", _set_selected_text_color)
 
-  def _set_icon(self, value):
+  @anvil_prop
+  def icon(self, value):
     self.selection_field.leading_icon = value
-  icon = property_with_callback("icon", _set_icon)
 
-  def _set_icon_color(self, value):
+  @anvil_prop
+  def icon_color(self, value):
     self.selection_field.leading_icon_color = value
-  icon_color = property_with_callback("icon_color", _set_icon_color)
 
-  def _set_tooltip(self, value):
+  @anvil_prop
+  def tooltip(self, value):
     self.selection_field.tooltip = value
-  tooltip = property_with_callback("tooltip", _set_tooltip)
 
-  def _set_supporting_text(self, value):
+  @anvil_prop
+  def supporting_text(self, value):
     self.selection_field.supporting_text = value
-  supporting_text = property_with_callback("supporting_text", _set_supporting_text)
 
-  def _set_supporting_text_color(self, value):
+  @anvil_prop
+  def supporting_text_color(self, value):
     self.selection_field.supporting_text_color = value
-  supporting_text_color = property_with_callback("supporting_text_color", _set_supporting_text_color)
 
-  def _set_supporting_text_font_family(self, value):
+  @anvil_prop
+  def supporting_text_font_family(self, value):
     self.selection_field.supporting_text_font_family = value
-  supporting_text_font_family = property_with_callback("supporting_text_font_family", _set_supporting_text_font_family)
 
-  def _set_supporting_text_font_size(self, value):
+  @anvil_prop
+  def supporting_text_font_size(self, value):
     self.selection_field.supporting_text_font_size = value
-  supporting_text_font_size = property_with_callback("supporting_text_font_size", _set_supporting_text_font_size)
 
-  def _set_border_color(self, value):
+  @anvil_prop
+  def border_color(self, value):
     self.selection_field.border_color = value
-  border_color = property_with_callback("border_color", _set_border_color)
 
-  def _set_menu_color(self, value):
+  @anvil_prop
+  def menu_color(self, value):
     self.menu.background_color = value
-  menu_background_color = property_with_callback("menu_color", _set_menu_color)
 
   @anvil_prop
   def error(self, value):
@@ -201,15 +208,6 @@ class DropdownMenu(DropdownMenuTemplate):
   def placeholder(self, value):
     self.selection_field.placeholder = value
 
-  items = property_without_callback("items")
-  allow_none = property_without_callback("allow_none")
-  bold_items = property_without_callback("bold_items")
-  italic_items = property_without_callback("italic_items")
-  underline_items = property_without_callback("underline_items")
-  items_text_color = property_without_callback("items_text_color")
-  bold_items = anvil_prop('bold_items')
-  items_font = property_without_callback("items_font")
-  items_font_size = property_without_callback("items_font_size")
   
   def _on_mount(self, **event_args):
     document.addEventListener('keydown', self._handle_keyboard_events)
