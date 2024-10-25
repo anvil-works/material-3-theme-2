@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from anvil import HtmlTemplate
-from ...Functions import tooltip_property, role_property, theme_color_to_css, innerText_property, color_property, style_property, property_with_callback, margin_property
+from ...Functions import tooltip_property, role_property, theme_color_to_css, innerText_property, color_property, style_property, margin_property
 from math import pi, cos, sin
 from ...utils.properties import get_unset_margin, anvil_prop
 
@@ -31,21 +31,21 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
 
   @anvil_prop
   def color(self, value):
-    if value: value = theme_color_to_css(value)
+    if value: 
+      value = theme_color_to_css(value)
     self.dom_nodes['anvil-m3-progressindicator-arc'].style['stroke'] = value
     self.dom_nodes['anvil-m3-progressindicator-arc-indeterminate'].style['stroke'] = value
-    self._props['color'] = value
 
-  def _update_determinance(self, value):
+  @anvil_prop
+  def type(self, value):
     v = value is "determinate"
     self.dom_nodes['anvil-m3-progressindicator-indeterminate'].classList.toggle('anvil-m3-progressindicator-hidden', v)
     self.dom_nodes['anvil-m3-progressindicator-determinate'].classList.toggle('anvil-m3-progressindicator-hidden', not v)
-  type = property_with_callback("type", _update_determinance)
 
-  def _update_progress(self, value):
+  @anvil_prop
+  def progress(self, value):
     v = max(min(value or 0, 100), 0)
     self._draw_path(v)
-  progress = property_with_callback("progress", _update_progress)
 
   def _draw_path(self, percent):
     cx, cy = 24, 24 #center of circle

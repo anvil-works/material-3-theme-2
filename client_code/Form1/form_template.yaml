@@ -20,5 +20,9 @@ components:
   name: checkbox_2
   properties: {}
   type: form:_Components.Checkbox
+- layout_properties: {grid_position: 'GKRWQY,SQGURZ'}
+  name: circular_progress_indicator_1
+  properties: {color: '', progress: 50, type: determinate}
+  type: form:_Components.CircularProgressIndicator
 container: {type: ColumnPanel}
 is_package: true
