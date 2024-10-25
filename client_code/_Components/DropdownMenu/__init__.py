@@ -76,29 +76,29 @@ class DropdownMenu(DropdownMenuTemplate):
   def label_bold(self, value):
     self.selection_field.label_bold = value
 
-  def _set_label_font(self, value):
+  @anvil_prop
+  def label_font(self, value):
     self.selection_field.label_font = value
-  label_font_family = property_with_callback("label_font_family", _set_label_font)
 
-  def _set_label_font_size(self, value):
+  @anvil_prop
+  def label_font_size(self, value):
     self.selection_field.label_font_size = value
-  label_font_size = property_with_callback("label_font_size", _set_label_font_size)
 
-  def _set_label_color(self, value):
+  @anvil_prop
+  def label_color(self, value):
     self.selection_field.label_color = value
-  label_color = property_with_callback("label_color", _set_label_color)
 
-  def _set_label_italic(self, value):
+  @anvil_prop
+  def label_italic(self, value):
     self.selection_field.label_italic = value
-  label_italic = property_with_callback("label_italic", _set_label_italic)
 
-  def _set_label_underline(self, value):
+  @anvil_prop
+  def label_underline(self, value):
     self.selection_field.label_underline = value
-  label_underline = property_with_callback("label_underline", _set_label_underline)
 
-  def _set_enabled(self, value):
+  @anvil_prop
+  def enabled(self, value):
     self.selection_field.enabled = value
-  enabled = property_with_callback("enabled", _set_enabled)
 
   def _set_appearance(self, value):
     self.selection_field.appearance = value
@@ -348,7 +348,6 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def form_show(self, **event_args):
     self._create_menu_items()
-
     if anvil.designer.in_designer:
       self._design_name = anvil.designer.get_design_name(self)
       if not self.label:
