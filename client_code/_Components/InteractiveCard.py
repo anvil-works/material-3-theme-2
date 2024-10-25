@@ -3,8 +3,6 @@ from .Card import Card
 import anvil.designer
 from ..Functions import property_with_callback
 
-#todo figure out how to get default value to work
-# another_proerty = {"name": "asdf", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction", "description": "If True, this component allows user interaction.", "showInDesignerWhen": "another_property"}
 enabled_property = {"name": "enabled", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction", "description": "If True, this component allows user interaction."}
 click_event = {"name": "click", "defaultEvent": True, "description": "When the component is clicked"}
 
@@ -14,7 +12,7 @@ class InteractiveCard(Card):
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
-    #module component props don't get their default values initialized by default. this makes sure the enabled setter has run
+    # Module component props don't get their default values initialized by default. This makes sure the enabled setter has run.
     self.enabled = self.enabled
     self.dom_nodes['anvil-m3-card'].classList.toggle('anvil-m3-interactive', True)
     self.dom_nodes['anvil-m3-card'].addEventListener("click", self._handle_click)
