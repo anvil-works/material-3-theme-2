@@ -1,6 +1,6 @@
 components: []
 container:
-  event_bindings: {show: form_show}
+  event_bindings: {}
   properties:
     html: |
       <!-- Inspired by: https://codepen.io/viestursm/pen/BayEjaN -->

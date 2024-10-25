@@ -42,17 +42,18 @@ class DropdownMenu(DropdownMenuTemplate):
     self._body_click = self._body_click
     self._handle_component_click = self._handle_component_click
 
+    self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self._handle_component_click)
+    self.selection_field.dom_nodes['anvil-m3-textbox'].addEventListener('focus', self._handle_selection_field_focus)
+    self.selection_field.dom_nodes['anvil-m3-textbox'].addEventListener('blur', self._handle_selection_field_blur)
+
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
     self.selection_field.dom_nodes['anvil-m3-textbox'].style.caretColor = 'transparent'
     self.selection_field.dom_nodes['anvil-m3-textbox'].style.cursor = "pointer"
     self.selection_field.dom_nodes['anvil-m3-textbox'].setAttribute("readonly", True)
-
-    # if self.placeholder: #when no label, in unfocused state, use the placeholder as the display text.
-    #   self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
-
-    if anvil.designer.in_designer: #hides so doesn't do the ghosty visible thing when in designer cuz i want it to just straight up not show cuz its nto like you can add stuffin anyways.
+  
+    if anvil.designer.in_designer:
       self._menuNode.classList.toggle("anvil-m3-menu-hidden", True)
 
   def _anvil_get_unset_property_values_(self):
@@ -199,7 +200,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.placeholder = value
   placeholder = property_with_callback("placeholder", _set_placeholder)
 
-  # placeholder = property_without_callback("placeholder")
   items = property_without_callback("items")
   allow_none = property_without_callback("allow_none")
   bold_items = property_without_callback("bold_items")
@@ -215,23 +215,13 @@ class DropdownMenu(DropdownMenuTemplate):
   def _on_mount(self, **event_args):
     document.addEventListener('keydown', self._handle_keyboard_events)
     document.addEventListener('click', self._body_click)
-
     document.body.append(self._menuNode)
-
     self._cleanup = fui.auto_update(self._field, self._menuNode, placement="bottom-start", offset=0)
-
-    self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener('click', self._handle_component_click)
-    self.selection_field.dom_nodes['anvil-m3-textbox'].addEventListener('focus', self._handle_selection_field_focus)
-    self.selection_field.dom_nodes['anvil-m3-textbox'].addEventListener('blur', self._handle_selection_field_blur)
-
     self._menuNode.addEventListener('click', self._child_clicked)
 
   def _on_cleanup(self, **event_args):
     document.removeEventListener('keydown', self._handle_keyboard_events)
     document.removeEventListener('click', self._body_click)
-    self.dom_nodes['anvil-m3-dropdownMenu-container'].removeEventListener('click', self._handle_component_click)
-    self.selection_field.dom_nodes['anvil-m3-textbox'].removeEventListener('focus', self._handle_selection_field_focus)
-    self.selection_field.dom_nodes['anvil-m3-textbox'].removeEventListener('blur', self._handle_selection_field_blur)
     self._menuNode.removeEventListener('click', self._child_clicked)
     self._cleanup()
     self._menuNode.remove()
@@ -269,7 +259,7 @@ class DropdownMenu(DropdownMenuTemplate):
       if event.key in ["Tab", "Escape"]:
         self._set_menu_visibility(False)
 
-      if (event.key == " "): #space key as " " is stupid
+      if (event.key == " "):
         event.preventDefault()
         self._attempt_select()
       if (event.key == "Enter"):
@@ -358,8 +348,6 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def form_show(self, **event_args):
     self._create_menu_items()
-    # selection_field_width = get_dom_node(self.selection_field).offsetWidth
-    # self._menuNode.style.width = f"{selection_field_width}px"
 
     if anvil.designer.in_designer:
       self._design_name = anvil.designer.get_design_name(self)
@@ -397,14 +385,9 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.italic = self.italic_items
       selection.underline = self.underline_items
       selection.text_color = self.items_text_color
-      # selection.background = self.items_background_color
       selection.font = self.items_font
       selection.font_size = self.items_font_size
 
-      # if isinstance(item, tuple):
-      #   selection.text = item[0]
-      # else:
-      #   selection.text = item
       selection.text = item
 
       def _handle_selection_click(value = item, **e):
