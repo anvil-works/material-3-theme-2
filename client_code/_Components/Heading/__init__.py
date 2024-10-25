@@ -97,29 +97,25 @@ class Heading(HeadingTemplate):
 
   @anvil_prop
   def font_size(self, value):
-    self.dom_nodes['anvil-m3-heading-display'].style.fontSize = f'{value}px'
-    self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = f'{value}px'
-    self.dom_nodes['anvil-m3-heading-title'].style.fontSize = f'{value}px'
-    self.dom_nodes['anvil-m3-heading-container'].style.fontSize = f'{value}px'
+    if value:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontSize = f'{value}px'
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = f'{value}px'
+      self.dom_nodes['anvil-m3-heading-title'].style.fontSize = f'{value}px'
+      self.dom_nodes['anvil-m3-heading-container'].style.fontSize = f'{value}px'
+    else:
+      self.dom_nodes['anvil-m3-heading-display'].style.fontSize = ''
+      self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = ''
+      self.dom_nodes['anvil-m3-heading-title'].style.fontSize = ''
+      self.dom_nodes['anvil-m3-heading-container'].style.fontSize = ''
 
-  @property
-  def icon_size(self):
-    return self._icon_size
-
-  @icon_size.setter
+  @anvil_prop
   def icon_size(self, value):
-    self._icon_size = value
     if value:
       value = f'{value}px'
     self.dom_nodes['anvil-m3-heading-icon'].style.fontSize = value
 
-  @property
-  def underline(self):
-    return self._underline
-
-  @underline.setter
+  @anvil_prop
   def underline(self, value):
-    self._underline = value
     if value:
       self.dom_nodes['anvil-m3-heading-display'].style.textDecoration = 'underline'
       self.dom_nodes['anvil-m3-heading-headline'].style.textDecoration = 'underline'
@@ -129,13 +125,8 @@ class Heading(HeadingTemplate):
       self.dom_nodes['anvil-m3-heading-headline'].style.textDecoration = 'none'
       self.dom_nodes['anvil-m3-heading-title'].style.textDecoration = 'none'
 
-  @property
-  def bold(self):
-    return self._bold
-
-  @bold.setter
+  @anvil_prop
   def bold(self, value):
-    self._bold = value
     if value:
       self.dom_nodes['anvil-m3-heading-display'].style.fontWeight = 'bold'
       self.dom_nodes['anvil-m3-heading-headline'].style.fontWeight = 'bold'
@@ -145,38 +136,23 @@ class Heading(HeadingTemplate):
       self.dom_nodes['anvil-m3-heading-headline'].style.fontWeight = 'normal'
       self.dom_nodes['anvil-m3-heading-title'].style.fontWeight = 'normal'
 
-  @property
-  def text(self):
-    return self._text
-
-  @text.setter
+  @anvil_prop
   def text(self, value):
-    self._text = value
     if value:
       self.dom_nodes['anvil-m3-heading-display'].innerText = value
       self.dom_nodes['anvil-m3-heading-headline'].innerText = value
       self.dom_nodes['anvil-m3-heading-title'].innerText = value
 
-  @property
-  def icon(self):
-    return self._icon
-
-  @icon.setter
+  @anvil_prop
   def icon(self, value):
-    self._icon = value
     if value:
       self.dom_nodes['anvil-m3-heading-icon'].style.marginRight = "8px"
     else:
       self.dom_nodes['anvil-m3-heading-icon'].style.marginRight = ""
     self.dom_nodes['anvil-m3-heading-icon'].innerText = value[3:]
 
-  @property
-  def style(self):
-    return self._style
-
-  @style.setter
+  @anvil_prop
   def style(self, value):
-    self._style = value
     display = self.dom_nodes['anvil-m3-heading-display']
     headline = self.dom_nodes['anvil-m3-heading-headline']
     title = self.dom_nodes['anvil-m3-heading-title']
@@ -195,13 +171,8 @@ class Heading(HeadingTemplate):
       headline.style.display = 'none'
       title.style.display = 'block'
 
-  @property
-  def scale(self):
-    return self._scale
-
-  @scale.setter
+  @anvil_prop
   def scale(self, value):
-    self._scale = value
     self.dom_nodes['anvil-m3-heading-display'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
     self.dom_nodes['anvil-m3-heading-headline'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
     self.dom_nodes['anvil-m3-heading-title'].classList.remove('anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small')
@@ -211,24 +182,12 @@ class Heading(HeadingTemplate):
     self.dom_nodes['anvil-m3-heading-title'].classList.add(f'anvil-m3-heading-{value}')
     self.dom_nodes['anvil-m3-heading-container'].classList.add(f'anvil-m3-heading-{value}')
 
-  @property
-  def spacing(self):
-    return self._props.get('spacing')
-
-  @spacing.setter
+  @anvil_prop
   def spacing(self, value):
     set_element_spacing(self.dom_nodes['anvil-m3-heading-container'], value)
-    # set_element_spacing(self.dom_nodes['anvil-m3-heading-headline'], value)
-    # set_element_spacing(self.dom_nodes['anvil-m3-heading-title'], value)
-    self._props['spacing'] = value
 
-  @property
-  def line_height(self):
-    return self._props.get('line_height')
-
-  @line_height.setter
+  @anvil_prop
   def line_height(self, value):
-    self._props['line_height'] = value
     self.dom_nodes['anvil-m3-heading-display'].style.lineHeight = value
     self.dom_nodes['anvil-m3-heading-headline'].style.lineHeight = value
     self.dom_nodes['anvil-m3-heading-title'].style.lineHeight = value
