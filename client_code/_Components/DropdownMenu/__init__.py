@@ -100,6 +100,7 @@ class DropdownMenu(DropdownMenuTemplate):
   def enabled(self, value):
     self.selection_field.enabled = value
 
+  @a
   def _set_appearance(self, value):
     self.selection_field.appearance = value
   appearance = property_with_callback("appearance", _set_appearance)
@@ -168,23 +169,24 @@ class DropdownMenu(DropdownMenuTemplate):
     self.menu.background_color = value
   menu_background_color = property_with_callback("menu_color", _set_menu_color)
 
-  def _set_error(self, value):
+  @anvil_prop
+  def error(self, value):
     if value: 
       self.dom_nodes['anvil-m3-dropdownMenu-textbox'].classList.add('anvil-m3-dropdown-error')
     else: 
       self.dom_nodes['anvil-m3-dropdownMenu-textbox'].classList.remove('anvil-m3-dropdown-error')
-  error = property_with_callback("error", _set_error)
 
-  def _set_label(self, value):
+  @anvil_prop
+  def label(self, value):
     v = value or ""
     self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', False)
     if anvil.designer.in_designer and not value:
       v = self._design_name
       self.selection_field.dom_nodes['anvil-m3-label-text'].classList.toggle('anvil-m3-textlessComponentText', True)
     self.selection_field.label = v
-  label = property_with_callback("label", _set_label)
 
-  def _set_selected_value(self, value):
+  @anvil_prop
+  def selected_value(self, value):
     if (value is None and self.allow_none) or (value in self.items):
       if value is None and self.allow_none:
         self._hoverIndex = None
@@ -194,11 +196,10 @@ class DropdownMenu(DropdownMenuTemplate):
         self.selection_field.dom_nodes['anvil-m3-textbox'].value = value
     else:
       self.selection_field.dom_nodes['anvil-m3-textbox'].value = "<Invalid value>"
-  selected_value = property_with_callback("selected_value", _set_selected_value)
 
-  def _set_placeholder(self, value):
+  @anvil_prop
+  def placeholder(self, value):
     self.selection_field.placeholder = value
-  placeholder = property_with_callback("placeholder", _set_placeholder)
 
   items = property_without_callback("items")
   allow_none = property_without_callback("allow_none")
@@ -206,9 +207,7 @@ class DropdownMenu(DropdownMenuTemplate):
   italic_items = property_without_callback("italic_items")
   underline_items = property_without_callback("underline_items")
   items_text_color = property_without_callback("items_text_color")
-
   bold_items = anvil_prop('bold_items')
-
   items_font = property_without_callback("items_font")
   items_font_size = property_without_callback("items_font_size")
   
@@ -232,8 +231,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self._has_focus = True
 
   def _handle_selection_field_blur(self, event):
-    # if not self.label and self.placeholder and self.selected_value is None:
-    #     self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = self.placeholder
     self._has_focus = False
     
   def _handle_keyboard_events(self, event):
