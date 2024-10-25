@@ -8,7 +8,7 @@ from anvil import HtmlTemplate
 import anvil.designer
 from ...Functions import underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property
 from anvil.property_utils import set_element_spacing
-from ...utils.properties import get_unset_value, get_unset_spacing
+from ...utils.properties import get_unset_value, get_unset_spacing, anvil_prop
 
 
 class Heading(HeadingTemplate):
@@ -87,13 +87,8 @@ class Heading(HeadingTemplate):
   tooltip = tooltip_property('anvil-m3-heading-container')
   role = role_property('anvil-m3-heading-container')
 
-  @property
-  def align(self):
-    return self._props.get('align')
-
-  @align.setter
+  @anvil_prop
   def align(self, value):
-    self._props['align'] = value
     if value == 'justify':
       self.dom_nodes['anvil-m3-heading-container'].style.justifyContent = 'left'
     else:
@@ -119,7 +114,8 @@ class Heading(HeadingTemplate):
   @icon_size.setter
   def icon_size(self, value):
     self._icon_size = value
-    if value: value = f'{value}px'
+    if value:
+      value = f'{value}px'
     self.dom_nodes['anvil-m3-heading-icon'].style.fontSize = value
 
   @property

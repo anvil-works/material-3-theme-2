@@ -128,6 +128,7 @@ class FileLoader(FileLoaderTemplate):
   tooltip = tooltip_property('anvil-m3-fileloader-container')
   role = role_property('anvil-m3-fileloader-container')
   show_state = anvil_prop("show_state")
+  file = anvil_prop("file")
 
   @anvil_prop
   def appearance(self, value):
@@ -139,43 +140,20 @@ class FileLoader(FileLoaderTemplate):
     if value and value != 'text':
       file_loader.classList.add(f"anvil-m3-{value}")
 
-  @property
-  def icon(self):
-    return self._icon
-
-  @icon.setter
+  @anvil_prop(default_value="mi:file_upload")
   def icon(self, value):
-    self._icon = value
     if value:
       self.dom_nodes['anvil-m3-fileloader-icon'].style.marginRight = "8px"
     else:
       self.dom_nodes['anvil-m3-fileloader-icon'].style.marginRight = ""
     self.dom_nodes['anvil-m3-fileloader-icon'].innerText = value[3:]
 
-  @property
-  def file_types(self):
-    return self._props.get("file_types")
-
-  @file_types.setter
+  @anvil_prop
   def file_types(self, value):
-    self._props["file_types"] = value
     self.dom_nodes['anvil-m3-fileloader-input'].accept = value
 
-  @property
-  def multiple(self):
-    return self._props.get("multiple")
-
-  @multiple.setter
+  @anvil_prop
   def multiple(self, value):
-    self._props["multiple"] = value
     self.dom_nodes['anvil-m3-fileloader-input'].multiple = value
-
-  @property
-  def file(self):
-    return self._props.get("file")
-
-  @file.setter
-  def file(self, value):
-    self._props["file"] = value
 
 #!defClass(material_3, FileLoader, anvil.Component)!:
