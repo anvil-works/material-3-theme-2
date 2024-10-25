@@ -38,10 +38,9 @@ class ButtonMenu(ButtonMenuTemplate):
     self._menuNode.addEventListener('click', self._child_clicked)
     self._btnNode.addEventListener('click', self._handle_click)
     document.addEventListener('click', self._body_click)
-    # this is a bit of a hack, we still have a reference to the dom node but we've moved it to the body
-    # this gets around the whole, anvil containers love to set their overflow to hidden
+    # This is a bit of a hack, we still have a reference to the dom node but we've moved it to the body
+    # this gets around the whole "anvil containers love to set their overflow to hidden"
     document.body.append(self._menuNode)
-
     self._cleanup = fui.auto_update(self._btnNode, self._menuNode, placement="bottom-start")
   
   def _on_cleanup(self, **event_args):

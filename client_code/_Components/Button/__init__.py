@@ -19,13 +19,7 @@ class Button(ButtonTemplate):
     self._tooltip_node = None
     self.init_components(**properties)
 
-    self.add_event_handler("x-anvil-page-added", self._on_mount)
-    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
-
-  def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-button'].addEventListener("click", self._handle_click)
-  def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-button'].removeEventListener("click", self._handle_click)
 
   def _handle_click(self, event):
     event.preventDefault()
