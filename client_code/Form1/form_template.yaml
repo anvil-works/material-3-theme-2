@@ -28,5 +28,9 @@ components:
   name: file_loader_1
   properties: {}
   type: form:_Components.FileLoader
+- layout_properties: {grid_position: 'HGVQTV,VHGGBW'}
+  name: heading_1
+  properties: {font_size: null}
+  type: form:_Components.Heading
 container: {type: ColumnPanel}
 is_package: true
