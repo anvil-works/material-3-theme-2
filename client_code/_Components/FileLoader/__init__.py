@@ -4,16 +4,15 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import property_with_callback, underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, spacing_property
+from ...Functions import underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, spacing_property
 from anvil.js.window import FileReader, Uint8Array
 from ...utils import gen_id
-from ...utils.properties import get_unset_value, get_unset_spacing
+from ...utils.properties import get_unset_value, get_unset_spacing, anvil_prop
 
 #todo: fix focus state within column panel
 
 class FileLoader(FileLoaderTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
     self.tag = ComponentTag()
     self._props = properties
     self._tooltip_node = None
@@ -80,15 +79,6 @@ class FileLoader(FileLoaderTemplate):
   def _handle_lost_focus(self, event, **event_args):
     self.raise_event("lost_focus")
 
-  def _set_appearance(self, value):
-    file_loader = self.dom_nodes['anvil-m3-fileloader-container']
-    file_loader.classList.remove('anvil-m3-elevated')
-    file_loader.classList.remove('anvil-m3-filled')
-    file_loader.classList.remove('anvil-m3-tonal')
-    file_loader.classList.remove('anvil-m3-outlined')
-    if value and value != 'text':
-      file_loader.classList.add(f"anvil-m3-{value}")
-
   #!componentEvent(material_3.FileLoader)!1: {name: "change", description: "When a new file is loaded into this FileLoader.", parameters:[{name: "file", description: "The first selected file. Set the 'multiple' property to allow loading more than one file."},{name: "files", description: "A list of loaded files. Set the 'multiple' property to allow loading more than one file."}]}
   #!componentEvent(material_3.FileLoader)!1: {name: "show", description: "When the FileLoader is shown on the screen."}
   #!componentEvent(material_3.FileLoader)!1: {name: "hide", description: "When the FileLoader is removed from the screen."}
@@ -120,7 +110,6 @@ class FileLoader(FileLoaderTemplate):
   #!componentProp(material_3.FileLoader)!1: {name:"file",type:"object",description:"The currently selected file (or the first, if multiple files are selected). This is a Media object."} 
   #!componentProp(material_3.FileLoader)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
-
   text = innerText_property('anvil-m3-fileloader-label')
   visible = HtmlTemplate.visible
   enabled = enabled_property('anvil-m3-fileloader-input')
@@ -138,15 +127,17 @@ class FileLoader(FileLoaderTemplate):
   spacing = spacing_property('anvil-m3-fileloader-container')
   tooltip = tooltip_property('anvil-m3-fileloader-container')
   role = role_property('anvil-m3-fileloader-container')
-  appearance = property_with_callback("appearance", _set_appearance)
+  show_state = anvil_prop("show_state")
 
-  @property
-  def show_state(self):
-    return self._props.get('show_state')
-
-  @show_state.setter
-  def show_state(self, value):
-    self._props['show_state'] = value
+  @anvil_prop
+  def appearance(self, value):
+    file_loader = self.dom_nodes['anvil-m3-fileloader-container']
+    file_loader.classList.remove('anvil-m3-elevated')
+    file_loader.classList.remove('anvil-m3-filled')
+    file_loader.classList.remove('anvil-m3-tonal')
+    file_loader.classList.remove('anvil-m3-outlined')
+    if value and value != 'text':
+      file_loader.classList.add(f"anvil-m3-{value}")
 
   @property
   def icon(self):
