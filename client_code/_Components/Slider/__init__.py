@@ -3,9 +3,8 @@ from anvil import *
 from anvil.js.window import document, ResizeObserver
 import anvil.js
 from anvil import HtmlTemplate
-from ...Functions import enabled_property, role_property, value_property, color_property, theme_color_to_css, margin_property, tooltip_property
 from anvil.designer import in_designer
-from ...utils.properties import get_unset_margin, anvil_prop
+from ...utils.properties import get_unset_margin, anvil_prop, enabled_property, role_property, value_property, color_property, theme_color_to_css, margin_property, tooltip_property
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):

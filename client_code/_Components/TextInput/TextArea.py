@@ -3,8 +3,7 @@ from . import TextInput
 import anvil.designer
 import anvil.js
 from anvil.js.window import ResizeObserver, requestAnimationFrame
-from ...Functions import italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property, style_property
-from ...utils.properties import get_unset_value, anvil_prop
+from ...utils.properties import get_unset_value, anvil_prop, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property, style_property
 
 text_property = {"name": "text",
                  "type": "string",

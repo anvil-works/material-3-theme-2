@@ -4,9 +4,8 @@ import anvil.server
 from anvil import HtmlTemplate
 import anvil.designer
 from anvil.js.window import document
-from ...Functions import tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, spacing_property
 from ...utils import fui, noop
-from ...utils.properties import get_unset_value, get_unset_spacing, anvil_prop
+from ...utils.properties import get_unset_value, get_unset_spacing, anvil_prop,  tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, spacing_property
 import time
 #TODO: figure out what to do with line height
 #TODO: figure out default icon sizes 
