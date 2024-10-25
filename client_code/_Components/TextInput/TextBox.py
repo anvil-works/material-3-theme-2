@@ -97,6 +97,16 @@ class TextBox(TextInput):
   def select(self):
     self.dom_nodes['anvil-m3-textbox'].select()
 
+  display_italic = italic_property('anvil-m3-textbox', 'display_italic')
+  display_bold = bold_property('anvil-m3-textbox', 'display_bold')
+  display_underline = underline_property('anvil-m3-textbox', 'display_underline')
+  display_font_size = font_size_property('anvil-m3-textbox', 'display_font_size')
+  display_font_family = font_family_property('anvil-m3-textbox', 'display_font')
+  text_color = color_property('anvil-m3-textbox', 'color', 'text_color')
+  background = color_property('anvil-m3-textbox', 'backgroundColor', 'background' )
+  leading_icon_color = color_property('anvil-m3-leading-icon', 'color', 'leading_icon_color')
+  trailing_icon_color = color_property('anvil-m3-trailing-icon', 'color', 'trailing_icon_color')
+
   @anvil_prop
   def placeholder(self, value):
     input = self.dom_nodes['anvil-m3-textbox']
@@ -169,12 +179,11 @@ class TextBox(TextInput):
       icon_container.style.paddingLeft = "16px"
       text_box_input.style.paddingLeft = "16px"
       border_container.classList.remove("with-icon")
-  
-  def _set_trailing_icon(self, value):
-    icon_container = self.dom_nodes['anvil-m3-icon-container']
+
+  @anvil_prop
+  def trailing_icon(self, value):
     trailing_icon = self.dom_nodes['anvil-m3-trailing-icon']
     text_box_input = self.dom_nodes['anvil-m3-textbox']
-
     if value:
       trailing_icon.style.display = "block"
       trailing_icon.innerText = value[3:]
@@ -183,19 +192,9 @@ class TextBox(TextInput):
       trailing_icon.style.display = "none"
       trailing_icon.innerText = ""
       text_box_input.style.paddingRight = "16px"
-  trailing_icon = property_with_callback("trailing_icon", _set_trailing_icon)
 
-  display_italic = italic_property('anvil-m3-textbox', 'display_italic')
-  display_bold = bold_property('anvil-m3-textbox', 'display_bold')
-  display_underline = underline_property('anvil-m3-textbox', 'display_underline')
-  display_font_size = font_size_property('anvil-m3-textbox', 'display_font_size')
-  display_font_family = font_family_property('anvil-m3-textbox', 'display_font')
-  text_color = color_property('anvil-m3-textbox', 'color', 'text_color')
-  background = color_property('anvil-m3-textbox', 'backgroundColor', 'background' )
-  leading_icon_color = color_property('anvil-m3-leading-icon', 'color', 'leading_icon_color')
-  trailing_icon_color = color_property('anvil-m3-trailing-icon', 'color', 'trailing_icon_color')
-
-  def _set_character_limit(self, value):
+  @anvil_prop
+  def character_limit(self, value):
     if value is None or value < 1:
       text_box_input = self.dom_nodes['anvil-m3-textbox'].removeAttribute("maxlength")
       self.dom_nodes['anvil-m3-character-counter'].style = "display: none"
@@ -203,11 +202,10 @@ class TextBox(TextInput):
       text_box_input = self.dom_nodes['anvil-m3-textbox'].setAttribute("maxlength", value)
       self.dom_nodes['anvil-m3-character-counter'].style = "display: inline"
       self.dom_nodes['anvil-m3-character-limit'].innerText = int(value)
-  character_limit = property_with_callback("character_limit", _set_character_limit)
 
-  def _set_type(self, value):
+  @anvil_prop
+  def type(self, value):
     self.dom_nodes['anvil-m3-textbox'].setAttribute("type", value)
-  type = property_with_callback("type", _set_type)
 
   def _set_hide_text(self, value):
     self.dom_nodes['anvil-m3-textbox'].setAttribute("type", "password" if value else self.type)
