@@ -12,7 +12,7 @@ import anvil.designer
 from ..MenuItem import MenuItem
 from ...Functions import property_with_callback, color_property, border_property, role_property
 from ...utils import fui, noop
-from ...utils.properties import get_unset_value, get_unset_spacing, ComponentTag
+from ...utils.properties import get_unset_value, get_unset_spacing, ComponentTag, anvil_prop
 
 class ButtonMenu(ButtonMenuTemplate):
   def __init__(self, **properties):
@@ -38,8 +38,8 @@ class ButtonMenu(ButtonMenuTemplate):
     self._menuNode.addEventListener('click', self._child_clicked)
     self._btnNode.addEventListener('click', self._handle_click)
     document.addEventListener('click', self._body_click)
-    # This is a bit of a hack, we still have a reference to the dom node but we've moved it to the body
-    # this gets around the whole "anvil containers love to set their overflow to hidden"
+    # We still have a reference to the dom node but we've moved it to the body
+    # This gets around the fact that Anvil containers set their overflow to hidden
     document.body.append(self._menuNode)
     self._cleanup = fui.auto_update(self._btnNode, self._menuNode, placement="bottom-start")
   
@@ -65,88 +65,92 @@ class ButtonMenu(ButtonMenuTemplate):
   menu_background_color = color_property('anvil-m3-buttonMenu-items-container', 'background', 'menu_background_color')
   menu_border = border_property('anvil-m3-buttonMenu-items-container', 'menu_border')
   visible = HtmlTemplate.visible
-  
-  def _set_text(self, value):
+
+  @anvil_prop
+  def text(self, value):
     v = value
     self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', False)
     if anvil.designer.in_designer and not value:
       v = self._design_name
       self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', True)
     self.menu_button.text = v
-  text = property_with_callback("text", _set_text)
 
-
-  def _set_appearance(self, value):
+  @anvil_prop
+  def appearance(self, value):
     self.menu_button.appearance = value
-  appearance = property_with_callback("appearance", _set_appearance)
 
-  def _set_tooltip(self, value):
+  @anvil_prop
+  def tooltip(self, value):
     self.menu_button.tooltip = value
-  tooltip = property_with_callback("tooltip", _set_tooltip)
 
-  def _set_enabled(self, value):
+  @anvil_prop
+  def enabled(self, value):
     self.menu_button.enabled = value
-  enabled = property_with_callback("enabled", _set_enabled)
 
-  def _set_bold(self, value):
+  @anvil_prop
+  def bold(self, value):
     self.menu_button.bold = value
-  bold = property_with_callback("bold", _set_bold)
 
-  def _set_italic(self, value):
+  @anvil_prop
+  def italic(self, value):
     self.menu_button.italic = value
-  italic = property_with_callback("italic", _set_italic)
- 
-  def _set_underline(self, value):
+
+  @anvil_prop
+  def underline(self, value):
     self.menu_button.underline = value
-  underline = property_with_callback("underline", _set_underline)
 
-  def _set_button_border(self, value):
+  @anvil_prop
+  def button_border(self, value):
     self.menu_button.border = value
-  button_border = property_with_callback("button_border", _set_button_border)
 
-  def _set_button_background_color(self, value):
+  @anvil_prop
+  def button_background_color(self, value):
     self.menu_button.background_color = value
-  button_background_color = property_with_callback("button_background_color", _set_button_background_color)
 
-  def _set_button_text_color(self, value):
+  @anvil_prop
+  def button_text_color(self, value):
     self.menu_button.text_color = value
-  button_text_color = property_with_callback("button_text_color", _set_button_text_color)
 
-  def _set_button_font_size(self, value):
+  @anvil_prop
+  def button_font_size(self, value):
     self.menu_button.font_size = value
-  button_font_size = property_with_callback("button_font_size", _set_button_font_size)
 
-  def _set_icon(self, value):
+  @anvil_prop
+  def icon(self, value):
     self.menu_button.icon = value
-  icon = property_with_callback("icon", _set_icon)
 
-  def _set_icon_color(self, value):
+  @anvil_prop
+  def icon_color(self, value):
     self.menu_button.icon_color = value
-  icon_color = property_with_callback("icon_color", _set_icon_color)
 
-  def _set_icon_size(self, value):
+  @anvil_prop
+  def icon_size(self, value):
     self.menu_button.icon_size = value
-  icon_size = property_with_callback("icon_size", _set_icon_size)
 
-  def _set_icon_position(self, value):
+  @anvil_prop
+  def icon_position(self, value):
     self.menu_button.icon_position = value
-  icon_position = property_with_callback("icon_position", _set_icon_position)
 
-  def _set_spacing(self, value):
+  @anvil_prop
+  def spacing(self, value):
     self.menu_button.spacing = value
-  spacing = property_with_callback("spacing", _set_spacing)
 
-  def _set_align(self, value):
+  @anvil_prop
+  def align(self, value):
     self.dom_nodes['anvil-m3-buttonMenu-container'].style.justifyContent = value
-  align = property_with_callback("align", _set_align)
 
-  def _set_button_font_family(self, value):
+  @anvil_prop
+  def button_font_family(self, value):
     self.menu_button.font_family = value
-  button_font_family = property_with_callback("button_font_family", _set_button_font_family)
 
-  def _set_role(self, value):
+  @anvil_prop
+  def role(self, value):
     self.menu_button.role = value
-  role = property_with_callback("role", _set_role)
+
+  @anvil_prop
+  def menu_items(self, value=[]):
+    for i in value:
+      self.add_component(i, slot='anvil-m3-buttonMenu-slot')
 
   def _toggle_menu_visibility(self, **event_args):
     self._toggle_visibility()
@@ -164,12 +168,6 @@ class ButtonMenu(ButtonMenuTemplate):
     else:
       self._hoverIndex = None
       self._clear_hover_styles()
-
-  def _set_menu_items(self, value=[]):
-    for i in value:
-      self.add_component(i, slot='anvil-m3-buttonMenu-slot')
-  menu_items = property_with_callback('menu_items', _set_menu_items)
-
 
   def _child_clicked(self, event):
     # do the click action. The child should handle this
@@ -191,20 +189,14 @@ class ButtonMenu(ButtonMenuTemplate):
   def _handle_keyboard_events(self, event):
     if not self._open:
       return
-
     action_keys = set(["ArrowUp", "ArrowDown", "Tab", "Escape", " ", "Enter"])
     if event.key not in action_keys:
-      #TODO: eventually want to use this to jump somewhere in the list
       return
-    
     if event.key in ["ArrowUp", "ArrowDown"]:
       self._iterate_hover(event.key == "ArrowDown")
       event.preventDefault()
       return
-      
-    # if event.key is "Tab":
-    #   pass
-    hover = self._hoverIndex #holding value for situation like alerts where it awaits 
+    hover = self._hoverIndex # holding value for situations like alerts, where it awaits 
     self._toggle_visibility(False)
     
     def attemptSelect():
