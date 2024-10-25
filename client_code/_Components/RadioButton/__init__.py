@@ -77,12 +77,17 @@ class RadioButton(RadioButtonTemplate):
   spacing = spacing_property('anvil-m3-radiobutton-component')
   tooltip = tooltip_property('anvil-m3-radiobutton-component')
   role = role_property('anvil-m3-radiobutton-container')
-  
-  @property
-  def radio_color(self):
-    return self._props.get('radio_color')
 
-  @radio_color.setter
+  @anvil_prop
+  def text(self, value):
+    v = value
+    self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-textlessComponentText', False)
+    if anvil.designer.in_designer and not value:
+      v = self._design_name
+      self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-textlessComponentText', True)
+    self.dom_nodes['anvil-m3-radiobutton-label'].innerText = v
+  
+  @anvil_prop
   def radio_color(self, value):
     if value: value = theme_color_to_css(value)
     self.dom_nodes['anvil-m3-radiobutton-checked'].style['color'] = value
@@ -129,15 +134,6 @@ class RadioButton(RadioButtonTemplate):
           except anvil.js.ExternalError:
             pass  # Ignore error if the component isn't on the currently editing form
 
-  @anvil_prop
-  def text(self, value):
-    v = value
-    self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-textlessComponentText', False)
-    if anvil.designer.in_designer and not value:
-      v = self._design_name
-      self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-textlessComponentText', True)
-    self.dom_nodes['anvil-m3-radiobutton-label'].innerText = v
-  
   # Class Functions
   def _anvil_get_interactions_(self):
     return [

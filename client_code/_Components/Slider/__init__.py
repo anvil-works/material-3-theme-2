@@ -3,9 +3,9 @@ from anvil import *
 from anvil.js.window import document, ResizeObserver
 import anvil.js
 from anvil import HtmlTemplate
-from ...Functions import enabled_property, role_property, value_property, color_property, property_with_callback, theme_color_to_css, margin_property, tooltip_property
+from ...Functions import enabled_property, role_property, value_property, color_property, theme_color_to_css, margin_property, tooltip_property
 from anvil.designer import in_designer
-from ...utils.properties import get_unset_margin
+from ...utils.properties import get_unset_margin, anvil_prop
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):
@@ -100,12 +100,6 @@ class Slider(SliderTemplate):
   def _do_hide_label(self):
     self.label_container.remove()
 
-  def _set_thumb_color(self, value=None):
-    if self.thumb_color:
-      self.dom_nodes['anvil-m3-slider-input'].style.setProperty('--anvil-m3-slider-thumb-color', theme_color_to_css(self.thumb_color))
-    else:
-      self.dom_nodes['anvil-m3-slider-input'].style.setProperty('--anvil-m3-slider-thumb-color', 'var(--anvil-m3-primary)')
-
   #!componentProp(material_3.Slider)!1: {name:"show_label",type:"boolean",description:"If True, display a label above the thumb with the current value."} 
   #!componentProp(material_3.Slider)!1: {name:"progress_color",type:"color",description:"The colour of the progress bar"}  
   #!componentProp(material_3.Slider)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
@@ -125,31 +119,28 @@ class Slider(SliderTemplate):
   #!componentProp(material_3.Slider)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
   #!componentEvent(material_3.Slider)!1: {name: "change", description: "When the value of the component is changed", parameters:[]}  
-      
-  thumb_color = property_with_callback('thumb_color', _set_thumb_color)
+
   progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
   track_color = color_property("anvil-m3-slider-background", 'background', 'track_color')
   margin = margin_property("anvil-m3-slider")
   tooltip = tooltip_property('anvil-m3-slider')
   visible = HtmlTemplate.visible
   role = role_property('anvil-m3-slider')
+  show_label = anvil_prop("show_label")
 
-  @property
-  def label_color(self):
-    return self._props.get('label_color')
+  @anvil_prop
+  def thumb_color(self, value=None):
+    if self.thumb_color:
+      self.dom_nodes['anvil-m3-slider-input'].style.setProperty('--anvil-m3-slider-thumb-color', theme_color_to_css(self.thumb_color))
+    else:
+      self.dom_nodes['anvil-m3-slider-input'].style.setProperty('--anvil-m3-slider-thumb-color', 'var(--anvil-m3-primary)')
 
-  @label_color.setter
+  @anvil_prop
   def label_color(self, value):
-    self._props['label_color'] = value
     self.label_container.style.background = theme_color_to_css(value)
 
-  @property
-  def label_text_color(self):
-    return self._props.get('label_text_color')
-
-  @label_text_color.setter
+  @anvil_prop
   def label_text_color(self, value):
-    self._props['label_text_color'] = value
     self.label_container.style.color = theme_color_to_css(value)
 
   @property
@@ -201,14 +192,6 @@ class Slider(SliderTemplate):
       self._update_progress()
     if in_designer and self._mounted:
       anvil.designer.update_component_properties(self, {"value": self.value})
-  
-  @property
-  def show_label(self):
-    return self._props.get('show_label')
-
-  @show_label.setter
-  def show_label(self, value):
-    self._props['show_label'] = value
 
   @property
   def enabled(self):
