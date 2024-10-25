@@ -21,7 +21,6 @@ class Text(TextTemplate):
     self._props = properties
     self._tooltip_node = None
     self.init_components(**properties)
-   
     
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""

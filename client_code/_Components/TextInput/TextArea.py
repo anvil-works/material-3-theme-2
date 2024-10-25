@@ -11,15 +11,12 @@ text_property = {"name": "text",
                  "default_value": "None",
                  "description": "The input text displayed on this component",
                  "supportsWriteback": True,
-                 # "binding_writeback_events": ["lost_focus"],
                  "important": True}
 
-height_property = {
-  "name": "height",
-  "type": "number",
-  "default_value": None,
-  "description": "The initial height of this TextArea",
-}
+height_property = {"name": "height",
+                   "type": "number",
+                   "default_value": None,
+                   "description": "The initial height of this TextArea",}
 
 class TextArea(TextInput):
   _anvil_properties_ = [text_property, height_property, *TextInput._anvil_properties_]
@@ -30,29 +27,24 @@ class TextArea(TextInput):
     hiddenInput = self.dom_nodes['anvil-m3-textbox']
     self.dom_nodes['anvil-m3-input-container'].removeChild(hiddenInput)
 
-    # self.update_height = self.update_height
     self._on_change = self._on_change
     self._on_focus = self._on_focus
     self._on_lost_focus = self._on_lost_focus
 
-    self.add_event_handler("x-anvil-page-added", self._on_mount)
-    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
-
-  def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-textarea'].addEventListener("input", self._expand_to_fit_content)
     self.dom_nodes['anvil-m3-textarea'].addEventListener("input", self._on_input)
     self.dom_nodes['anvil-m3-textarea'].addEventListener("change", self._on_change)
     self.dom_nodes['anvil-m3-textarea'].addEventListener("focus", self._on_focus)
     self.dom_nodes['anvil-m3-textarea'].addEventListener("blur", self._on_lost_focus)
+
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
+
+  def _on_mount(self, **event_args):
     self.resize_observer = ResizeObserver(self._on_resize)
     self.resize_observer.observe(self.dom_nodes['anvil-m3-textarea'])
     
   def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-textarea'].removeEventListener("input", self._expand_to_fit_content)
-    self.dom_nodes['anvil-m3-textarea'].removeEventListener("input", self._on_input)
-    self.dom_nodes['anvil-m3-textarea'].removeEventListener("change", self._on_change)
-    self.dom_nodes['anvil-m3-textarea'].removeEventListener("focus", self._on_focus)
-    self.dom_nodes['anvil-m3-textarea'].removeEventListener("blur", self._on_lost_focus)
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-textarea'])
 
   def _anvil_get_unset_property_values_(self):

@@ -74,24 +74,12 @@ class TextBox(TextInput):
     self._on_focus = self._on_focus
     self._on_lost_focus = self._on_lost_focus
 
-    self.add_event_handler("x-anvil-page-added", self._on_mount)
-    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
-
-  def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-textbox'].addEventListener("input", self._on_input)
     self.dom_nodes['anvil-m3-textbox'].addEventListener("keydown", self._on_key_down)
     self.dom_nodes['anvil-m3-textbox'].addEventListener("change", self._on_change)
     self.dom_nodes['anvil-m3-textbox'].addEventListener("focus", self._on_focus)
     self.dom_nodes['anvil-m3-textbox'].addEventListener("blur", self._on_lost_focus)
     self.dom_nodes['anvil-m3-trailing-icon'].addEventListener("click", self._handle_click)
-    
-  def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-textbox'].removeEventListener("input", self._on_input)
-    self.dom_nodes['anvil-m3-textbox'].removeEventListener("keydown", self._on_key_down)
-    self.dom_nodes['anvil-m3-textbox'].removeEventListener("change", self._on_change)
-    self.dom_nodes['anvil-m3-trailing-icon'].removeEventListener("click", self._handle_click)
-    self.dom_nodes['anvil-m3-textbox'].removeEventListener("focus", self._on_focus)
-    self.dom_nodes['anvil-m3-textbox'].removeEventListener("blur", self._on_lost_focus)
 
   def _on_key_down(self, e):
     if e.key == "Enter":

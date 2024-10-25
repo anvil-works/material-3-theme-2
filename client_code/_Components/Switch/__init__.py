@@ -19,14 +19,7 @@ class Switch(SwitchTemplate):
     self._tooltip_node = None
     self._props = properties
     self.init_components(**properties)
-    self.add_event_handler("x-anvil-page-added", self._on_mount)
-    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
-    
-  def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-switch-input'].addEventListener("change", self._handle_change)
-    
-  def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-switch-input'].removeEventListener("change", self._handle_change)
 
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes["anvil-m3-switch-container"]
@@ -51,7 +44,6 @@ class Switch(SwitchTemplate):
 
   def _handle_change(self, event):
     if self.enabled:
-      #self.dom_nodes['anvil-m3-switch-input'].focus()
       self.selected = not self.selected
       self.raise_event("change")
 
