@@ -48,7 +48,7 @@ class ButtonMenu(ButtonMenuTemplate):
     self._menuNode.removeEventListener('click', self._child_clicked)
     document.removeEventListener('click', self._body_click)
     self._cleanup()
-    # remove the menu node we put on the body
+    # Remove the menu node we put on the body
     self._menuNode.remove()
 
   def _anvil_get_unset_property_values_(self):
