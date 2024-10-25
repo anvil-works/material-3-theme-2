@@ -111,7 +111,7 @@ class Checkbox(CheckboxTemplate):
   spacing = spacing_property('anvil-m3-checkbox-component')
   tooltip = tooltip_property('anvil-m3-checkbox-container')
   role = role_property('anvil-m3-checkbox-container')
-  allow_indeterminate = anvil_prop('allow_indeterminate')
+  # allow_indeterminate = anvil_prop('allow_indeterminate')
 
   @anvil_prop
   def text(self, value):
@@ -144,5 +144,14 @@ class Checkbox(CheckboxTemplate):
     self.dom_nodes['anvil-m3-checkbox-container'].classList.remove('anvil-m3-checkbox-error')
     if value:
       self.dom_nodes['anvil-m3-checkbox-container'].classList.add('anvil-m3-checkbox-error')
+
+  @property
+  def allow_indeterminate(self):
+    return self._props.get('allow_indeterminate')
+
+  @allow_indeterminate.setter
+  def allow_indeterminate(self, value):
+    self._props['allow_indeterminate'] = value
+
 
 #!defClass(material_3,Checkbox, anvil.Component)!:
