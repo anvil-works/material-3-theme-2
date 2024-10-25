@@ -6,7 +6,7 @@ from anvil.js import window
 from anvil import HtmlTemplate
 from ...Functions import theme_color_to_css, role_property, tooltip_property, enabled_property, style_property, color_property, theme_color_to_css, property_with_callback, margin_property
 import anvil.designer
-from ...utils.properties import get_unset_margin
+from ...utils.properties import get_unset_margin, anvil_prop
 
 
 class Switch(SwitchTemplate):
