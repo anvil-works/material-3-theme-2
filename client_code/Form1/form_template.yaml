@@ -1,5 +1,5 @@
 components:
-- event_bindings: {show: link_1_show}
+- event_bindings: {}
   layout_properties: {grid_position: 'PCSQEE,DDLOBX'}
   name: link_1
   properties: {align: left}
@@ -24,7 +24,11 @@ components:
   type: form:_Components.Button
 - layout_properties: {grid_position: 'KBRYHW,YGBBJX'}
   name: checkbox_1
-  properties: {error: true, text: sdfasd}
+  properties: {allow_indeterminate: true, checked: false, error: false, text: sdfasd}
+  type: form:_Components.Checkbox
+- layout_properties: {grid_position: 'PHPKCL,FVQRFB'}
+  name: checkbox_2
+  properties: {}
   type: form:_Components.Checkbox
 container: {type: ColumnPanel}
 is_package: true
