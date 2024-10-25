@@ -91,44 +91,28 @@ class Switch(SwitchTemplate):
   unselected_thumb_color = property_with_callback('unselected_thumb_color', _set_color_styles)
   unselected_outline_color = property_with_callback('unselected_outline_color', _set_color_styles)
 
-  @property
-  def selected_icon(self):
-    return self._selected_icon
-
-  @selected_icon.setter
+  @anvil_prop
   def selected_icon(self, value):
     link_icon = self.dom_nodes['anvil-m3-enabled-switch-icon']
     switch_slider = self.dom_nodes['anvil-m3-switch-slider']
-    self._selected_icon = value
     link_icon.classList.remove("material-symbols-outlined")
     link_icon.innerText = value[3:]
     if value:
       link_icon.classList.add("material-symbols-outlined")
       switch_slider.classList.add('anvil-m3-has-enabled-icon')
   
-  @property
-  def unselected_icon(self):
-    return self._unselected_icon
-
-  @unselected_icon.setter
+  @anvil_prop
   def unselected_icon(self, value):
     link_icon = self.dom_nodes['anvil-m3-disabled-switch-icon']
     switch_slider = self.dom_nodes['anvil-m3-switch-slider']
-    self._unselected_icon = value
     link_icon.innerText = value[3:]
     link_icon.classList.remove("material-symbols-outlined")
     if value:
       link_icon.classList.add("material-symbols-outlined")
       switch_slider.classList.add('anvil-m3-has-disabled-icon')
 
-  @property
-  def selected(self):
-    return self._props.get('selected')
-    # return self.dom_nodes['anvil-m3-switch-input'].checked
-
-  @selected.setter
+  @anvil_prop
   def selected(self, value):
-    self._props['selected'] = value
     self.dom_nodes['anvil-m3-switch-input'].checked = value
     self._set_color_styles()
 
