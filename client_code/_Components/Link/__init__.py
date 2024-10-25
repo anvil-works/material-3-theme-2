@@ -13,15 +13,10 @@ class Link(LinkTemplate):
     self._props = properties
     self._tooltip_node = None
     self.init_components(**properties)
-    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.dom_nodes['anvil-m3-link'].addEventListener("click", self._handle_click)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
     
-
-  def _on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-link'].addEventListener("click", self._handle_click)
-    
   def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-link'].removeEventListener("click", self._handle_click)
     self.revoke_tmp_url()
     
   def form_show(self, **event_args):

@@ -19,13 +19,7 @@ class IconButton(IconButtonTemplate):
     
     self._handle_click = self._handle_click
 
-    self.add_event_handler("x-anvil-page-added", self._on_mount)
-    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
-
-  def _on_mount(self, **event_args):
     self.dom_nodes['anvil-m3-iconbutton-container'].addEventListener('click', self._handle_click)
-  def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-iconbutton-container'].removeEventListener('click', self._handle_click)
 
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes["anvil-m3-iconbutton-container"]

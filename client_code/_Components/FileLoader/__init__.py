@@ -23,8 +23,9 @@ class FileLoader(FileLoaderTemplate):
     self._handle_focus = self._handle_focus
     self._handle_lost_focus = self._handle_lost_focus
 
-    self.add_event_handler("x-anvil-page-added", self._on_mount)
-    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
+    self.dom_nodes['anvil-m3-fileloader-input'].addEventListener("change", self._handle_change)
+    self.dom_nodes['anvil-m3-fileloader-container'].addEventListener("focus", self._handle_focus)
+    self.dom_nodes['anvil-m3-fileloader-container'].addEventListener("blur", self._handle_lost_focus)
     
     if not anvil.designer.in_designer:
       id = gen_id()
@@ -63,16 +64,6 @@ class FileLoader(FileLoaderTemplate):
   #!defMethod(_)!2: "Open the file selector from code, this should be called within a click event handler for another component." ["open_file_selector"]
   def open_file_selector(self):
     self.dom_nodes['anvil-m3-fileloader-input'].click()
-
-  def _on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-fileloader-input'].addEventListener("change", self._handle_change)
-    self.dom_nodes['anvil-m3-fileloader-container'].addEventListener("focus", self._handle_focus)
-    self.dom_nodes['anvil-m3-fileloader-container'].addEventListener("blur", self._handle_lost_focus)
-    
-  def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-fileloader-input'].removeEventListener("change", self._handle_change)
-    self.dom_nodes['anvil-m3-fileloader-container'].removeEventListener("focus", self._handle_focus)
-    self.dom_nodes['anvil-m3-fileloader-container'].removeEventListener("blur", self._handle_lost_focus)
 
   def _handle_change(self, event, **event_args):
     files = self.dom_nodes['anvil-m3-fileloader-input'].files

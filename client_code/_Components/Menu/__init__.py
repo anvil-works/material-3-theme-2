@@ -1,7 +1,3 @@
-# <div anvil-slot="anvil-m3-menu-slot" anvil-name="anvil-m3-menu-items-container" class="anvil-m3-menu-items-container">
-#   <p anvil-if-slot-empty="anvil-m3-menu-slot" style="color: #BBB;"><i>Menu items go here</i></p>
-# </div>
-
 from ._anvil_designer import MenuTemplate
 from anvil import *
 import anvil.server
@@ -18,19 +14,9 @@ class Menu(MenuTemplate):
     self._props = properties
     self.init_components(**properties)
     
-
   """ Properties """
   visible = HtmlTemplate.visible
   background_color = color_property('anvil-m3-menu-items-container', 'backgroundColor', 'background_color')
-  
-  # @property
-  # def visible(self):
-  #   return self._visible
-
-  # @visible.setter
-  # def visible(self, value):
-  #   self._visible = value
-  #   self.dom_nodes['anvil-m3-menu-items-container'].classList.toggle('anvil-m3-menu-hidden', not value)
 
   """ Functions """
   def set_or_toggle_visibility(self, value = None):
@@ -39,9 +25,7 @@ class Menu(MenuTemplate):
     else:
       currVal = self.visible
       self.visible = not currVal
-
   
-
   def _anvil_get_interactions_(self):
     return [
       {
@@ -55,8 +39,6 @@ class Menu(MenuTemplate):
 
   def _on_select_descendant(self):
     pass
-    # print("I did something on select")
 
   def _on_select_other(self):
     pass
-    # print("something happened on deselect")

@@ -17,19 +17,12 @@ class InteractiveCard(Card):
     #module component props don't get their default values initialized by default. this makes sure the enabled setter has run
     self.enabled = self.enabled
     self.dom_nodes['anvil-m3-card'].classList.toggle('anvil-m3-interactive', True)
-    self.add_event_handler("x-anvil-page-added", self._on_mount)
-    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
+    self.dom_nodes['anvil-m3-card'].addEventListener("click", self._handle_click)
 
   def _set_enabled(self, value): #why not being set in the beginning??
     self.dom_nodes['anvil-m3-card'].classList.toggle('anvil-m3-disabled', not value)
     
   enabled = property_with_callback("enabled", _set_enabled, default_value=True)
-  
-  def _on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-card'].addEventListener("click", self._handle_click)
-    
-  def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-card'].removeEventListener("click", self._handle_click)
 
   def _handle_click(self, event):
     event.preventDefault()
