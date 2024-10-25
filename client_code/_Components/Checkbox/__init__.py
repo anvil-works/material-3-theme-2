@@ -96,7 +96,6 @@ class Checkbox(CheckboxTemplate):
   #!componentProp(material_3.Checkbox)!1: {name:"error",type:"boolean",description:"If True, the checkbox is in an error state."}
   #!componentProp(material_3.Checkbox)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
-
   enabled = enabled_property('anvil-m3-checkbox')
   visible = HtmlTemplate.visible
   underline = underline_property('anvil-m3-checkbox-label')
@@ -111,7 +110,7 @@ class Checkbox(CheckboxTemplate):
   spacing = spacing_property('anvil-m3-checkbox-component')
   tooltip = tooltip_property('anvil-m3-checkbox-container')
   role = role_property('anvil-m3-checkbox-container')
-  # allow_indeterminate = anvil_prop('allow_indeterminate')
+  allow_indeterminate = anvil_prop('allow_indeterminate')
 
   @anvil_prop
   def text(self, value):
@@ -136,22 +135,21 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox-unchecked'].style.display = 'none'
       self.dom_nodes['anvil-m3-checkbox-checked'].style.display = 'none'
       self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.display = 'inline'
+    elif value is True:
+      self.dom_nodes['anvil-m3-checkbox'].checked = value
+      self.dom_nodes['anvil-m3-checkbox-unchecked'].style.display = 'none'
+      self.dom_nodes['anvil-m3-checkbox-checked'].style.display = 'inline'
+      self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.display = 'none'
     else:
       self.dom_nodes['anvil-m3-checkbox'].checked = value
-
+      self.dom_nodes['anvil-m3-checkbox-unchecked'].style.display = 'inline'
+      self.dom_nodes['anvil-m3-checkbox-checked'].style.display = 'none'
+      self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.display = 'none'
+      
   @anvil_prop
   def error(self, value):
     self.dom_nodes['anvil-m3-checkbox-container'].classList.remove('anvil-m3-checkbox-error')
     if value:
       self.dom_nodes['anvil-m3-checkbox-container'].classList.add('anvil-m3-checkbox-error')
-
-  @property
-  def allow_indeterminate(self):
-    return self._props.get('allow_indeterminate')
-
-  @allow_indeterminate.setter
-  def allow_indeterminate(self, value):
-    self._props['allow_indeterminate'] = value
-
 
 #!defClass(material_3,Checkbox, anvil.Component)!:

@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from ...Functions import tooltip_property, role_property, theme_color_to_css, innerText_property, color_property, style_property, property_with_callback, margin_property
 from math import pi, cos, sin
-from ...utils.properties import get_unset_margin
+from ...utils.properties import get_unset_margin, anvil_prop
 
 class CircularProgressIndicator(CircularProgressIndicatorTemplate):
   def __init__(self, **properties):
@@ -29,11 +29,7 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
   tooltip = tooltip_property('anvil-m3-progressindicator')
   role = role_property('anvil-m3-progressindicator')
 
-  @property
-  def color(self):
-    return self._props.get('color')
-
-  @color.setter
+  @anvil_prop
   def color(self, value):
     if value: value = theme_color_to_css(value)
     self.dom_nodes['anvil-m3-progressindicator-arc'].style['stroke'] = value
