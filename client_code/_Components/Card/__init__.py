@@ -19,15 +19,10 @@ class Card(CardTemplate):
     self._tooltip_node = None
     self.init_components(**properties)
     
-    # if not anvil.designer.in_designer:
-    #   self.dom_nodes['empty-image'].style.display = "none"
-    #   self.dom_nodes['empty-content'].style.display = "none"
-
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes["anvil-m3-card"]
     rv = get_unset_spacing(el, el, self.spacing)
     return {"spacing": rv}
-
 
   def add_component(self, component, slot="card-content-slot", **layout_props):
     super().add_component(component, slot=slot, **layout_props)
@@ -55,7 +50,6 @@ class Card(CardTemplate):
   appearance = property_with_callback("appearance", _set_appearance)
   background_color = color_property('anvil-m3-card', 'backgroundColor', 'background_color')
   orientation = property_with_callback('orientation', _set_orientation)
-
 
   #!componentProp(material_3.Card)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
   #!componentProp(material_3.Card)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}

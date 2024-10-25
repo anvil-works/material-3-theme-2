@@ -18,18 +18,12 @@ class Checkbox(CheckboxTemplate):
     self._allow_indeterminate = properties['allow_indeterminate']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.add_event_handler("x-anvil-page-added", self._on_mount)
-    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
+    self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self._handle_change)
+    
     if not anvil.designer.in_designer:
       id = gen_id()
       self.dom_nodes["anvil-m3-checkbox"].id = id
       self.dom_nodes["anvil-m3-checkbox-label"].setAttribute("for", id)
-
-  def _on_mount(self, **event_args):
-    self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self._handle_change)
-
-  def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-checkbox-hover'].removeEventListener('click', self._handle_change)
 
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes["anvil-m3-checkbox-component"]
