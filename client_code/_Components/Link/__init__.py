@@ -82,14 +82,9 @@ class Link(LinkTemplate):
   def align(self, value):
     self.dom_nodes['anvil-m3-link'].style.textAlign = value
     self.dom_nodes['anvil-m3-link-icon-container'].style.justifyContent = value
-    
-  @property
-  def url(self):
-    return self._props.get('url')
 
-  @url.setter
+  @anvil_prop
   def url(self, value):
-    self._props['url'] = value
     self.dom_nodes['anvil-m3-link'].removeAttribute("download")
     self.dom_nodes['anvil-m3-link'].removeAttribute("target")
     self.revoke_tmp_url()
@@ -99,7 +94,6 @@ class Link(LinkTemplate):
           self.dom_nodes['anvil-m3-link'].setAttribute("download", value.name)
         self.temp_url = anvil.media.TempUrl(value)
         self.dom_nodes['anvil-m3-link'].href = self.temp_url.url
-        # self.dom_nodes['anvil-m3-link'].href = value.get_url()
       else:
         self.dom_nodes['anvil-m3-link'].href = value
         self.dom_nodes['anvil-m3-link'].setAttribute("target", "_blank")
@@ -110,23 +104,14 @@ class Link(LinkTemplate):
     if self.temp_url:
       self.temp_url.revoke()
 
-  @property
-  def icon_size(self):
-    return self._icon_size
-
-  @icon_size.setter
+  @anvil_prop
   def icon_size(self, value):
-    self._icon_size = value
-    if value: value = f'{value}px'
+    if value:
+      value = f'{value}px'
     self.dom_nodes['anvil-m3-link-icon'].style.fontSize = value
 
-  @property
-  def icon(self):
-    return self._props.get('icon')
-
-  @icon.setter
+  @anvil_prop
   def icon(self, value):
-    self._props['icon'] = value
     if value and self.text:
       self.dom_nodes['anvil-m3-link-icon'].style.marginRight = "8px"
     else:
