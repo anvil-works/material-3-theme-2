@@ -2,10 +2,9 @@ from ._anvil_designer import CardTemplate
 from anvil import *
 import anvil.designer
 from anvil import HtmlTemplate
-from ...Functions import tooltip_property, role_property, style_property, spacing_property, margin_property, padding_property, color_property, border_property
 from anvil.js import get_dom_node
 from anvil.js import window
-from ...utils.properties import get_unset_spacing, anvil_prop
+from ...utils.properties import get_unset_spacing, anvil_prop, tooltip_property, role_property, style_property, spacing_property, margin_property, padding_property, color_property, border_property
 
 class Card(CardTemplate):
   def __init__(self, **properties):

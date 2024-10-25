@@ -1,8 +1,7 @@
 from ._anvil_designer import ButtonTemplate
 from anvil import *
 import anvil.js
-from ...Functions import color_property, role_property, tooltip_property, custom_bold_property, font_family_property, font_size_property, style_property, property_with_callback, underline_property, bold_property, italic_property, spacing_property 
-from ...utils.properties import get_unset_value, get_unset_spacing, ComponentTag, anvil_prop
+from ...utils.properties import get_unset_value, get_unset_spacing, ComponentTag, anvil_prop, color_property, role_property, tooltip_property, custom_bold_property, font_family_property, font_size_property, style_property, property_with_callback, underline_property, bold_property, italic_property, spacing_property
 from anvil import HtmlTemplate
 import anvil.designer
 

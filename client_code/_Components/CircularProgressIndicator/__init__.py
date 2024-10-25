@@ -1,9 +1,8 @@
 from ._anvil_designer import CircularProgressIndicatorTemplate
 from anvil import *
 from anvil import HtmlTemplate
-from ...Functions import tooltip_property, role_property, theme_color_to_css, innerText_property, color_property, style_property, margin_property
 from math import pi, cos, sin
-from ...utils.properties import get_unset_margin, anvil_prop
+from ...utils.properties import get_unset_margin, anvil_prop, tooltip_property, role_property, theme_color_to_css, innerText_property, color_property, style_property, margin_property
 
 class CircularProgressIndicator(CircularProgressIndicatorTemplate):
   def __init__(self, **properties):

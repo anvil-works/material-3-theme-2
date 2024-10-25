@@ -1,9 +1,9 @@
 import anvil.server
 from . import TextInput
 import anvil.designer
-from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
+from ...Functions import italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 from anvil.property_utils import anvil_property
-from ...utils.properties import anvil_prop
+from ...utils.properties import anvil_prop, get_unset_value
 
 text_property = {"name": "text",
                  "type": "string",
@@ -55,7 +55,6 @@ trailing_icon_color_property = {"name": "trailing_icon_color",
                                "default_value": "",
                                "description": "The colour of the trailing icon."}
 
-
 click_event = {"name": "trailing_icon_click", "defaultEvent": False, "description": "When the trailing icon is clicked."}
 pressed_enter_event = {"name": "pressed_enter", "defaultEvent": True, "description": "When the user presses enter in this component."}
 
@@ -87,9 +86,18 @@ class TextBox(TextInput):
       self.raise_event("x-anvil-write-back-text")
       self.raise_event("pressed_enter")
 
+  def _handle_click(self, event):
+    event.preventDefault()
+    self.raise_event("trailing_icon_click")
+
   def _set_id(self, value):
     super()._set_id(value)
     self.dom_nodes["anvil-m3-textbox"].id = value
+
+  def _anvil_get_unset_property_values_(self):
+    common_props = TextInput._get_common_unset_property_values_(self)
+    common_props['display_font_size'] = get_unset_value(self.dom_nodes['anvil-m3-textbox'], "fontSize", self.display_font_size)
+    return common_props
 
   def focus(self):
     self.dom_nodes['anvil-m3-textbox'].focus()
@@ -207,13 +215,9 @@ class TextBox(TextInput):
   def type(self, value):
     self.dom_nodes['anvil-m3-textbox'].setAttribute("type", value)
 
-  def _set_hide_text(self, value):
+  @anvil_prop
+  def hide_text(self, value):
     self.dom_nodes['anvil-m3-textbox'].setAttribute("type", "password" if value else self.type)
-  hide_text = property_with_callback("hide_text", _set_hide_text)
-
-  def _handle_click(self, event):
-    event.preventDefault()
-    self.raise_event("trailing_icon_click")
 
   #!componentProp(material_3.TextBox)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
   #!componentProp(material_3.TextBox)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
