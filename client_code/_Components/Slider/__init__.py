@@ -100,6 +100,28 @@ class Slider(SliderTemplate):
   def _do_hide_label(self):
     self.label_container.remove()
 
+  def _set_markers(self):
+    slider = self.dom_nodes["anvil-m3-slider-input"]
+    markers_container_bg = self.dom_nodes["anvil-m3-slider-markers-container-bg"]
+    markers_container_progress = self.dom_nodes["anvil-m3-slider-markers-container-progress"]
+    markers_container_bg.innerHTML = ''
+    markers_container_progress.innerHTML = ''
+    markers_container_bg.style.width = self._get_track_width()
+    markers_container_progress.style.width = self._get_track_width()
+    slider_range = float(slider.max) - float(slider.min)
+    if slider.step != 'null':
+      marker_count = int(slider_range // float(slider.step))
+    else:
+      marker_count = slider_range
+    if self.show_markers:
+      for i in range(marker_count + 1):
+        marker_bg = document.createElement('span')
+        marker_progress = document.createElement('span')
+        marker_bg.classList.add('anvil-m3-slider-marker-bg')
+        marker_progress.classList.add('anvil-m3-slider-marker-progress')
+        markers_container_bg.appendChild(marker_bg)
+        markers_container_progress.appendChild(marker_progress)
+ 
   #!componentProp(material_3.Slider)!1: {name:"show_label",type:"boolean",description:"If True, display a label above the thumb with the current value."} 
   #!componentProp(material_3.Slider)!1: {name:"progress_color",type:"color",description:"The colour of the progress bar"}  
   #!componentProp(material_3.Slider)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
@@ -142,6 +164,23 @@ class Slider(SliderTemplate):
   @anvil_prop
   def label_text_color(self, value):
     self.label_container.style.color = theme_color_to_css(value)
+
+  @anvil_prop
+  def enabled(self, value):
+    self._enabled = value
+    full_slider = self.dom_nodes['anvil-m3-slider']
+    input = self.dom_nodes['anvil-m3-slider-input']
+    if value:
+      input.removeAttribute("disabled")
+      full_slider.classList.remove("anvil-m3-slider-disabled")
+    else:
+      input.setAttribute("disabled", " ")
+      full_slider.classList.add("anvil-m3-slider-disabled")
+         
+  @anvil_prop
+  def show_markers(self, value):
+    if self._mounted:
+      self._set_markers()
 
   @property
   def value(self):
@@ -192,53 +231,5 @@ class Slider(SliderTemplate):
       self._update_progress()
     if in_designer and self._mounted:
       anvil.designer.update_component_properties(self, {"value": self.value})
-
-  @property
-  def enabled(self):
-    return self._enabled
-
-  @enabled.setter
-  def enabled(self, value):
-    self._enabled = value
-    full_slider = self.dom_nodes['anvil-m3-slider']
-    input = self.dom_nodes['anvil-m3-slider-input']
-    if value:
-      input.removeAttribute("disabled")
-      full_slider.classList.remove("anvil-m3-slider-disabled")
-    else:
-      input.setAttribute("disabled", " ")
-      full_slider.classList.add("anvil-m3-slider-disabled")
-
-  def _set_markers(self):
-    slider = self.dom_nodes["anvil-m3-slider-input"]
-    markers_container_bg = self.dom_nodes["anvil-m3-slider-markers-container-bg"]
-    markers_container_progress = self.dom_nodes["anvil-m3-slider-markers-container-progress"]
-    markers_container_bg.innerHTML = ''
-    markers_container_progress.innerHTML = ''
-    markers_container_bg.style.width = self._get_track_width()
-    markers_container_progress.style.width = self._get_track_width()
-    slider_range = float(slider.max) - float(slider.min)
-    if slider.step != 'null':
-      marker_count = int(slider_range // float(slider.step))
-    else:
-      marker_count = slider_range
-    if self.show_markers:
-      for i in range(marker_count + 1):
-        marker_bg = document.createElement('span')
-        marker_progress = document.createElement('span')
-        marker_bg.classList.add('anvil-m3-slider-marker-bg')
-        marker_progress.classList.add('anvil-m3-slider-marker-progress')
-        markers_container_bg.appendChild(marker_bg)
-        markers_container_progress.appendChild(marker_progress)
-          
-  @property
-  def show_markers(self):
-    return self._props.get('show_markers')
-
-  @show_markers.setter
-  def show_markers(self, value):
-    self._props['show_markers'] = value
-    if self._mounted:
-      self._set_markers()
   
 #!defClass(material_3,Slider,anvil.Component)!:
