@@ -6,7 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...Functions import property_with_callback, innerText_property, spacing_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property, tooltip_property
-
+from ...utils.properties import anvil_prop
 import anvil.designer
 
 class MenuItem(MenuItemTemplate):
@@ -17,19 +17,6 @@ class MenuItem(MenuItemTemplate):
     self._tooltip_node = None
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-menuItem-container'].addEventListener("click", self.handle_click)
-
-  @property
-  def leading_icon(self):
-    return self._props.get('leading_icon')
-    
-  @leading_icon.setter
-  def leading_icon(self, value):
-    self._props['leading_icon'] = value
-    self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerHTML = value[3:] or " "
-    if value:
-      self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
-    elif not value and not self.add_icon_space:
-      self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
 
   italic = italic_property('anvil-m3-menuItem-labelText')
   bold = bold_property('anvil-m3-menuItem-labelText')
@@ -52,6 +39,15 @@ class MenuItem(MenuItemTemplate):
     else:
       self.dom_nodes['anvil-m3-menuItem-labelText'].innerText = value
   text = property_with_callback("text", _set_text)
+
+
+  @anvil_prop
+  def leading_icon(self, value):
+    self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerHTML = value[3:] or " "
+    if value:
+      self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
+    elif not value and not self.add_icon_space:
+      self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
 
   @property
   def trailing_icon(self):
