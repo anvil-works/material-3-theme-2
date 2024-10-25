@@ -3,6 +3,7 @@ from . import TextInput
 import anvil.designer
 from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 from anvil.property_utils import anvil_property
+from ...utils.properties import anvil_prop
 
 text_property = {"name": "text",
                  "type": "string",
@@ -86,7 +87,18 @@ class TextBox(TextInput):
       self.raise_event("x-anvil-write-back-text")
       self.raise_event("pressed_enter")
 
-  def _set_placeholder(self, value):
+  def _set_id(self, value):
+    super()._set_id(value)
+    self.dom_nodes["anvil-m3-textbox"].id = value
+
+  def focus(self):
+    self.dom_nodes['anvil-m3-textbox'].focus()
+
+  def select(self):
+    self.dom_nodes['anvil-m3-textbox'].select()
+
+  @anvil_prop
+  def placeholder(self, value):
     input = self.dom_nodes['anvil-m3-textbox']
     if value:
       input.placeholder = value
@@ -94,14 +106,7 @@ class TextBox(TextInput):
     else:
       input.placeholder = " "
       input.classList.remove('anvil-m3-has-placeholder')
-  placeholder = property_with_callback('placeholder', _set_placeholder)
 
-  def focus(self):
-    self.dom_nodes['anvil-m3-textbox'].focus()
-
-  def select(self):
-    self.dom_nodes['anvil-m3-textbox'].select()
-  
   @property
   def text(self):
     if self._props.get('type') == "number" and self.dom_nodes['anvil-m3-textbox'].value:
@@ -112,16 +117,17 @@ class TextBox(TextInput):
   @text.setter
   def text(self, value):
     self.dom_nodes['anvil-m3-textbox'].value = value
-      
-  def _set_label(self, value):
+
+  @anvil_prop
+  def label(self, value):
     self.dom_nodes['anvil-m3-label-text'].innerText = value or ""
     if value:
       self.dom_nodes['anvil-m3-textbox'].classList.toggle('has_label_text', True)
     else:
-      self.dom_nodes['anvil-m3-textbox'].classList.toggle('has_label_text', anvil.designer.in_designer);
-  label = property_with_callback("label", _set_label)
+      self.dom_nodes['anvil-m3-textbox'].classList.toggle('has_label_text', anvil.designer.in_designer)
 
-  def _set_enabled(self, value):
+  @anvil_prop
+  def enabled(self, value):
     supporting_text = self.dom_nodes['anvil-m3-subcontent']
     trailing_icon = self.dom_nodes['anvil-m3-trailing-icon']
     if value:
@@ -132,13 +138,9 @@ class TextBox(TextInput):
       self.dom_nodes['anvil-m3-textbox'].setAttribute("disabled", " ")
       supporting_text.classList.add("anvil-m3-textinput-disabled")
       trailing_icon.classList.add("anvil-m3-disable-icon")
-  enabled = property_with_callback("enabled", _set_enabled)
-  
-  def _set_id(self, value):
-    super()._set_id(value)
-    self.dom_nodes["anvil-m3-textbox"].id = value
 
-  def _set_error(self, value):
+  @anvil_prop
+  def error(self, value):
     super()._set_error(value)
     if value:
       icon = "error"
@@ -148,15 +150,13 @@ class TextBox(TextInput):
       icon = self.trailing_icon
       self._set_trailing_icon(icon)
       self.dom_nodes["anvil-m3-trailing-icon"].classList.remove("anvil-m3-error-icon")
-    # icon = "error" if value else self.trailing_icon
-  error = property_with_callback("error", _set_error)
-    
-  def _set_leading_icon(self, value):
+
+  @anvil_prop
+  def leading_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']
     leading_icon = self.dom_nodes['anvil-m3-leading-icon']
     text_box_input = self.dom_nodes['anvil-m3-textbox']
     border_container = self.dom_nodes['anvil-m3-border-container']
-
     if value:
       leading_icon.style.display = "block"
       leading_icon.innerText = value[3:]
@@ -169,7 +169,6 @@ class TextBox(TextInput):
       icon_container.style.paddingLeft = "16px"
       text_box_input.style.paddingLeft = "16px"
       border_container.classList.remove("with-icon")
-  leading_icon = property_with_callback("leading_icon", _set_leading_icon)  
   
   def _set_trailing_icon(self, value):
     icon_container = self.dom_nodes['anvil-m3-icon-container']

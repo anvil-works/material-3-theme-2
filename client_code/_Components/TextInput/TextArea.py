@@ -52,6 +52,25 @@ class TextArea(TextInput):
     common_props['display_font_size'] = get_unset_value(self.dom_nodes['anvil-m3-textarea'], "fontSize", self.display_font_size)
     return common_props
 
+  def _expand_to_fit_content(self, event):
+    if event.target.scrollHeight > event.target.clientHeight:
+      self.dom_nodes['anvil-m3-textarea'].style.height = '56px' #Min-height based off M3 specs
+      self._set_height(event.target.scrollHeight)
+
+  def _on_resize(self, entries, observer):
+    for entry in entries:
+      h = entry.target.scrollHeight
+    requestAnimationFrame(lambda _: self._set_height(h))
+
+  def _set_height(self, h):
+    # Keep this function, because it's easier to call it from a lambda than setting the height property.
+    self.dom_nodes['anvil-m3-textarea'].style.height = f'{h}px'
+    self.dom_nodes['anvil-m3-border-container'].style.height = f"{self.dom_nodes['anvil-m3-textarea'].clientHeight}px"
+
+  def _set_id(self, value):
+    super()._set_id(value)
+    self.dom_nodes["anvil-m3-textarea"].id = value
+
   def focus(self):
     self.dom_nodes['anvil-m3-textarea'].focus()
 
@@ -103,25 +122,6 @@ class TextArea(TextInput):
       self.dom_nodes['anvil-m3-textarea'].setAttribute("disabled", " ")
       supporting_text.classList.add("anvil-m3-textinput-disabled")
 
-  def _set_id(self, value):
-    super()._set_id(value)
-    self.dom_nodes["anvil-m3-textarea"].id = value
-
-  def _expand_to_fit_content(self, event):
-    if event.target.scrollHeight > event.target.clientHeight:
-      self.dom_nodes['anvil-m3-textarea'].style.height = '56px' #Min-height based off M3 specs
-      self._set_height(event.target.scrollHeight)
-
-  def _on_resize(self, entries, observer):
-    for entry in entries:
-      h = entry.target.scrollHeight
-    requestAnimationFrame(lambda _: self._set_height(h))
-
-  def _set_height(self, h):
-    # Keep this function, because it's easier to call it from a lambda than setting the height property.
-    self.dom_nodes['anvil-m3-textarea'].style.height = f'{h}px'
-    self.dom_nodes['anvil-m3-border-container'].style.height = f"{self.dom_nodes['anvil-m3-textarea'].clientHeight}px"
-
   @property
   def height(self):
     return self.dom_nodes['anvil-m3-textarea'].scrollHeight
@@ -130,7 +130,8 @@ class TextArea(TextInput):
   def height(self, value):
     self._set_height(value)
 
-  def _set_character_limit(self, value):
+  @anvil_prop
+  def character_limit(self, value):
     if value is None or value < 1:
       text_area_input = self.dom_nodes['anvil-m3-textarea'].removeAttribute("maxlength")
       self.dom_nodes['anvil-m3-character-counter'].style = "display: none"
@@ -138,10 +139,9 @@ class TextArea(TextInput):
       text_area_input = self.dom_nodes['anvil-m3-textarea'].setAttribute("maxlength", value)
       self.dom_nodes['anvil-m3-character-counter'].style = "display: inline";
       self.dom_nodes['anvil-m3-character-limit'].innerText = int(value);
-  character_limit = property_with_callback("character_limit", _set_character_limit)
 
   def _anvil_get_interactions_(self):
-
+    
     def on_grab(x,y):
       self._grab_height = self.height
 
