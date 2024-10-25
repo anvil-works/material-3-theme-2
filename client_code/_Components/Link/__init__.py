@@ -15,16 +15,16 @@ class Link(LinkTemplate):
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-link'].addEventListener("click", self._handle_click)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
-    
+
   def _on_cleanup(self, **event_args):
-    self.revoke_tmp_url()
-    
+    self._revoke_tmp_url()
+
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     if anvil.designer.in_designer and not self.text and not self.icon and not self.get_components():
       self.dom_nodes['anvil-m3-link-text'].innerText = anvil.designer.get_design_name(self)
       self.dom_nodes['anvil-m3-link-text'].style.display = 'block'
-    
+
   def _handle_click(self, event):
     keys = {'shift': event.shiftKey, 'alt': event.altKey, 'ctrl': event.ctrlKey, 'meta': event.metaKey}
     self.raise_event("click", keys=keys, event=event)
@@ -39,6 +39,10 @@ class Link(LinkTemplate):
         "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-link-text'])
       }
     }]
+
+  def _revoke_tmp_url(self):
+    if self.temp_url:
+      self.temp_url.revoke()
 
   #!componentEvent(material_3.Link)!1: {name: "click", description: "When the Link is clicked."}
   #!componentEvent(material_3.Link)!1: {name: "show", description: "When the Link is shown on the screen."}
@@ -87,7 +91,7 @@ class Link(LinkTemplate):
   def url(self, value):
     self.dom_nodes['anvil-m3-link'].removeAttribute("download")
     self.dom_nodes['anvil-m3-link'].removeAttribute("target")
-    self.revoke_tmp_url()
+    self._revoke_tmp_url()
     if value: 
       if isinstance(value, Media):
         if value.name:
@@ -99,10 +103,6 @@ class Link(LinkTemplate):
         self.dom_nodes['anvil-m3-link'].setAttribute("target", "_blank")
     else:
       self.dom_nodes['anvil-m3-link'].href = 'javascript:void(0)'
-
-  def revoke_tmp_url(self):
-    if self.temp_url:
-      self.temp_url.revoke()
 
   @anvil_prop
   def icon_size(self, value):
@@ -118,19 +118,12 @@ class Link(LinkTemplate):
       self.dom_nodes['anvil-m3-link-icon'].style.marginRight = ""
     self.dom_nodes['anvil-m3-link-icon'].innerText = value[3:]
 
-  @property
-  def text(self):
-    return self._props.get('text')
-
-  @text.setter
+  @anvil_prop
   def text(self, value):
-    self._props['text'] = value
     self.dom_nodes['anvil-m3-link-text'].innerText = value
     if value:
       self.dom_nodes['anvil-m3-link-text'].style.display = 'block'
     else:
       self.dom_nodes['anvil-m3-link-text'].style.display = 'none'
-
-
 
 #!defClass(material_3, Link, anvil.Component)!:
