@@ -4,7 +4,7 @@ import anvil.designer
 import anvil.js
 from anvil.js.window import ResizeObserver, requestAnimationFrame
 from ...Functions import property_with_callback, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property, style_property
-from ...utils.properties import get_unset_value
+from ...utils.properties import get_unset_value, anvil_prop
 
 text_property = {"name": "text",
                  "type": "string",
@@ -51,6 +51,12 @@ class TextArea(TextInput):
     common_props = TextInput._get_common_unset_property_values_(self)
     common_props['display_font_size'] = get_unset_value(self.dom_nodes['anvil-m3-textarea'], "fontSize", self.display_font_size)
     return common_props
+
+  def focus(self):
+    self.dom_nodes['anvil-m3-textarea'].focus()
+
+  def select(self):
+    self.dom_nodes['anvil-m3-textarea'].select()
   
   display_italic = italic_property('anvil-m3-textarea', 'display_italic')
   display_bold = bold_property('anvil-m3-textarea', 'display_bold')
@@ -61,13 +67,8 @@ class TextArea(TextInput):
   background = color_property('anvil-m3-textarea', 'backgroundColor', 'background')
   align = style_property('anvil-m3-textarea', 'textAlign', 'align')
 
-  def focus(self):
-    self.dom_nodes['anvil-m3-textarea'].focus()
-
-  def select(self):
-    self.dom_nodes['anvil-m3-textarea'].select()
-
-  def _set_placeholder(self, value):
+  @anvil_prop
+  def placeholder(self, value):
     input = self.dom_nodes['anvil-m3-textarea']
     if value:
       input.placeholder = value
@@ -75,7 +76,14 @@ class TextArea(TextInput):
     else:
       input.placeholder = " "
       input.classList.remove('anvil-m3-has-placeholder')
-  placeholder = property_with_callback('placeholder', _set_placeholder)
+
+  @anvil_prop
+  def label(self, value):
+    self.dom_nodes['anvil-m3-label-text'].innerText = value or ""
+    if value:
+      self.dom_nodes['anvil-m3-textarea'].classList.toggle('has_label_text', True)
+    else:
+      self.dom_nodes['anvil-m3-textarea'].classList.toggle('has_label_text', anvil.designer.in_designer)
 
   @property
   def text(self):
@@ -85,14 +93,7 @@ class TextArea(TextInput):
   def text(self, value):
     self.dom_nodes['anvil-m3-textarea'].value = value
 
-  def _set_label(self, value):
-    self.dom_nodes['anvil-m3-label-text'].innerText = value or ""
-    if value:
-      self.dom_nodes['anvil-m3-textarea'].classList.toggle('has_label_text', True)
-    else:
-      self.dom_nodes['anvil-m3-textarea'].classList.toggle('has_label_text', anvil.designer.in_designer);
-  label = property_with_callback("label", _set_label)
-  
+  @anvi
   def _set_enabled(self, value):
     supporting_text = self.dom_nodes['anvil-m3-subcontent']
     if value:
