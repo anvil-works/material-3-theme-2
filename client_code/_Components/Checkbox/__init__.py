@@ -111,6 +111,7 @@ class Checkbox(CheckboxTemplate):
   spacing = spacing_property('anvil-m3-checkbox-component')
   tooltip = tooltip_property('anvil-m3-checkbox-container')
   role = role_property('anvil-m3-checkbox-container')
+  allow_indeterminate = anvil_prop('allow_indeterminate')
 
   @anvil_prop
   def text(self, value):
@@ -137,14 +138,6 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.display = 'inline'
     else:
       self.dom_nodes['anvil-m3-checkbox'].checked = value
-
-  @property
-  def allow_indeterminate(self):
-    return self._props.get('allow_indeterminate')
-
-  @allow_indeterminate.setter
-  def allow_indeterminate(self, value):
-    self._props['allow_indeterminate'] = value
 
   @anvil_prop
   def error(self, value):
