@@ -82,10 +82,8 @@ class Link(LinkTemplate):
   @anvil_prop(default_value='left')
   def align(self, value):
     self.dom_nodes['anvil-m3-link'].style.textAlign = value
-    #self.dom_nodes['anvil-m3-link-container'].style.justifyContent = value
     self.dom_nodes['anvil-m3-link-icon-container'].style.justifyContent = value
     
-  
   @property
   def url(self):
     return self._props.get('url')

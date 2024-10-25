@@ -60,7 +60,7 @@ def get_unset_value(element, key, current_value):
     css = styles[key]
     return {"value": _get_value(css), "css": css}
 
-#after prod deploy, remove this try and delete the overwritten functions above
+#TODO: after prod deploy, remove this try and delete the overwritten functions above
 try:
     from anvil.property_utils import (
         get_unset_margin,

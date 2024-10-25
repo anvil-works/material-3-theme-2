@@ -18,5 +18,9 @@ components:
   name: slider_1
   properties: {show_label: false, show_markers: true}
   type: form:_Components.Slider
+- layout_properties: {grid_position: 'JHMOHT,ANZIOR'}
+  name: button_1
+  properties: {align: right}
+  type: form:_Components.Button
 container: {type: ColumnPanel}
 is_package: true

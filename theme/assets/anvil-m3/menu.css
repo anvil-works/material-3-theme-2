@@ -1,9 +1,7 @@
 /***** Menu *****/
 .anvil-m3-menu-items-container { 
   min-width: 112px;
-  /* max-width: 280px; */
   min-height: 24px;
-  /* max-height: 100vh; */
   border-radius: 4px;
   padding: 8px 0;
   background-color: var(--anvil-m3-surface-container);
@@ -14,7 +12,6 @@
 }
 
 .anvil-m3-menu-hidden {
-/*   display: none; */
   pointer-events: none;
   opacity: 0;
   height: 1px;
@@ -109,13 +106,11 @@
 .anvil-m3-buttonMenu-items-container {
   box-sizing: border-box;
   position: absolute;
-/*   position: fixed; */
   inset: 0 0 auto auto;
   width: max-content;
   min-width: 112px;
   max-width: 280px;
   min-height: 24px;
-  /* max-height: 100vh; */
   border-radius: 4px;
   padding: 8px 12px;
   background-color: var(--anvil-m3-surface-container);

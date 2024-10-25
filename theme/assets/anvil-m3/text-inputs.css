@@ -46,7 +46,6 @@ element {
 } */
 
 .anvil-m3-textinput-icon-container { display: flex; align-items: center; padding-left: 16px; position: absolute;}
-/* TODO: Fix animation */
 .anvil-m3-textinput-border { height: 56px; display: grid; grid-template-columns: 16px auto 1fr; grid-template-rows: 4px 15px auto 1fr 4px; } 
 /* .anvil-m3-border-container { display: grid; grid-template-columns: 16px auto 1fr; grid-template-rows: 4px 1fr auto 1fr 4px; } */
 

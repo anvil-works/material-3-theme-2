@@ -10,6 +10,7 @@ from ...utils.properties import get_unset_value, get_unset_spacing
 from anvil import HtmlTemplate
 import anvil.designer
 from ...utils.properties import ComponentTag
+from ...utils.properties import anvil_prop
 
 class Button(ButtonTemplate):
   def __init__(self, **properties):
@@ -44,13 +45,6 @@ class Button(ButtonTemplate):
     tfs = get_unset_value(self.dom_nodes['anvil-m3-button-text'], "fontSize", self.font_size)
     ifs = get_unset_value(self.dom_nodes['anvil-m3-button-icon'], "fontSize", self.icon_size)
     return {"font_size": tfs, "icon_size": ifs, "spacing": sp}
-
-  def _set_align(self, value):
-    self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', False)
-    if value == 'full':
-      self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', True)
-    else:
-      self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
       
   def _set_icon(self):
     if self.icon and self.icon.startswith('mi:'):
@@ -110,8 +104,14 @@ class Button(ButtonTemplate):
   def form_show(self, **event_args):
     self._update_button_look()
 
-  
-  align = property_with_callback('align', _set_align)
+  @anvil_prop
+  def align(self, value):
+    self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', False)
+    if value == 'full':
+      self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', True)
+    else:
+      self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
+
   role = role_property('anvil-m3-button')
   appearance = property_with_callback("appearance", _set_appearance)
   enabled = property_with_callback("enabled", _set_enabled)

@@ -50,8 +50,6 @@
 .anvil-m3-button:active { background: var(--anvil-m3-primary-overlay-3); }
 .anvil-m3-button:disabled { cursor: not-allowed; color: var(--anvil-m3-on-disabled); background: none; }
 
-/* TODO: Simplify shadows? */
-
 /* Elevated */
 .anvil-m3-button.anvil-m3-elevated { background-color: var(--anvil-m3-surface-container-low); box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30); 
                                     padding: 0 24px; 
