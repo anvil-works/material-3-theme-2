@@ -20,22 +20,21 @@ class Slider(SliderTemplate):
     self._tooltip_node = None
     self._mounted = False
     self.init_components(**properties)
-    self.add_event_handler("x-anvil-page-added", self._on_mount)
-    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
-
-  #TODO: move stuff from from_show event to _on_mount. Can probs use self._mounted instead of self._shown
-  def _on_mount(self, **event_args):
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self._on_input)
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self._on_mouse_down)
     self.dom_nodes['anvil-m3-slider-input'].addEventListener("change", self._on_change)
+    self.add_event_handler("x-anvil-page-added", self._on_mount)
+    self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
+
+  def _on_mount(self, **event_args):
+    self._mounted = True
+    self._set_markers()
+    self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
+    self._update_progress()
     self.resize_observer = ResizeObserver(self._on_window_resize)
     self.resize_observer.observe(self.dom_nodes['anvil-m3-slider'])
-    self._mounted = True
   
   def _on_cleanup(self, **event_args):
-    self.dom_nodes['anvil-m3-slider-input'].removeEventListener('input', self._on_input)
-    self.dom_nodes['anvil-m3-slider-input'].removeEventListener('mousedown', self._on_mouse_down)
-    self.dom_nodes['anvil-m3-slider-input'].removeEventListener("change", self._on_change)
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-slider'])
     self._mounted = False
 
@@ -256,14 +255,7 @@ class Slider(SliderTemplate):
   @show_markers.setter
   def show_markers(self, value):
     self._props['show_markers'] = value
-    if self._shown:
+    if self._mounted:
       self._set_markers()
-
-  def form_show(self, **event_args):
-    """This method is called when the HTML panel is shown on the screen"""
-    self._shown = True
-    self._set_markers()
-    self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
-    self._update_progress()
-
+  
 #!defClass(material_3,Slider,anvil.Component)!:

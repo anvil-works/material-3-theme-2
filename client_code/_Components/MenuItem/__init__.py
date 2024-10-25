@@ -30,8 +30,7 @@ class MenuItem(MenuItemTemplate):
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
     elif not value and not self.add_icon_space:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
-    
-  # text = innerText_property('anvil-m3-menuItem-labelText')
+
   italic = italic_property('anvil-m3-menuItem-labelText')
   bold = bold_property('anvil-m3-menuItem-labelText')
   underline = underline_property('anvil-m3-menuItem-labelText')
@@ -47,12 +46,6 @@ class MenuItem(MenuItemTemplate):
   spacing = spacing_property('anvil-m3-menuItem-container')
   tooltip = tooltip_property('anvil-m3-menuItem-container')
 
-  # def innerText_property(dom_node_name, prop_name="text"):
-  # def set_innerText(self, value):
-  #   self.dom_nodes[dom_node_name].innerText = value
-  # return property_with_callback(prop_name, set_innerText)
-
-  
   def _set_text(self, value):
     if isinstance(value, tuple):
       self.dom_nodes['anvil-m3-menuItem-labelText'].innerText = value[0]
@@ -90,7 +83,6 @@ class MenuItem(MenuItemTemplate):
     elif not self.leading_icon and not value:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
       
-
   @property
   def enabled(self):
     return self._enabled
@@ -138,7 +130,6 @@ class MenuItem(MenuItemTemplate):
   #!componentProp(material_3.MenuItem)!1: {name:"add_icon_space",type:"boolean",description:"If True, add a space where the leading_icon would be so that this MenuItem is aligned with MenuItems with leading_icons."}
   #!componentProp(material_3.MenuItem)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
   #!componentProp(material_3.MenuItem)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-
 
   #!componentEvent(material_3.MenuItem)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
 
