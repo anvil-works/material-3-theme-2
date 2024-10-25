@@ -1,16 +1,5 @@
 allow_embedding: false
 db_schema:
-  another_category:
-    client: none
-    columns:
-    - admin_ui: {order: 0, width: 200}
-      name: string
-      type: string
-    - admin_ui: {order: -1, width: 200}
-      name: ID
-      type: number
-    server: full
-    title: Another Category
   jobs:
     client: search
     columns:

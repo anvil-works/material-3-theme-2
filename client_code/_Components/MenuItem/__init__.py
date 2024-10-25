@@ -5,7 +5,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ...Functions import property_with_callback, innerText_property, spacing_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property, tooltip_property
+from ...Functions import innerText_property, spacing_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property, tooltip_property
 from ...utils.properties import anvil_prop
 import anvil.designer
 
@@ -33,13 +33,12 @@ class MenuItem(MenuItemTemplate):
   spacing = spacing_property('anvil-m3-menuItem-container')
   tooltip = tooltip_property('anvil-m3-menuItem-container')
 
-  def _set_text(self, value):
+  @anvil_prop
+  def text(self, value):
     if isinstance(value, tuple):
       self.dom_nodes['anvil-m3-menuItem-labelText'].innerText = value[0]
     else:
       self.dom_nodes['anvil-m3-menuItem-labelText'].innerText = value
-  text = property_with_callback("text", _set_text)
-
 
   @anvil_prop
   def leading_icon(self, value):
@@ -49,43 +48,23 @@ class MenuItem(MenuItemTemplate):
     elif not value and not self.add_icon_space:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
 
-  @property
-  def trailing_icon(self):
-    return self._trailing_icon
-    
-  @trailing_icon.setter
+  @anvil_prop
   def trailing_icon(self, value):
-    self._trailing_icon = value
     self.dom_nodes["anvil-m3-menuItem-trailingIcon"].innerText = value[3:] 
-    
-  @property
-  def trailing_text(self):
-    return self._trailing_text
-    
-  @trailing_text.setter
+      
+  @anvil_prop
   def trailing_text(self, value):
-    self._trailing_text = value
     self.dom_nodes["anvil-m3-menuItem-trailingText"].innerText = value 
 
-  @property 
-  def add_icon_space(self):
-    return self._props.get('add_icon_space')
-    
-  @add_icon_space.setter
+  @anvil_prop
   def add_icon_space(self, value):
-    self._props['add_icon_space'] = value
     if value:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add("anvil-m3-menuItem-showLeadingIcon")
     elif not self.leading_icon and not value:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.remove("anvil-m3-menuItem-showLeadingIcon")
-      
-  @property
-  def enabled(self):
-    return self._enabled
-    
-  @enabled.setter
+
+  @anvil_prop
   def enabled(self, value):
-    self._enabled = value
     self.dom_nodes["anvil-m3-menuItem-container"].classList.toggle("anvil-m3-menuItem-disabled", not value)
 
   """ Functions """

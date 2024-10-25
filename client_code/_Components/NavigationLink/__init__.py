@@ -1,13 +1,9 @@
 from ._anvil_designer import NavigationLinkTemplate
 from anvil import *
-import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 import anvil.js
 from ...Functions import color_property, role_property, tooltip_property, href_property, innerHTML_property, font_family_property, font_size_property, spacing_property, italic_property, bold_property, underline_property
 import anvil.designer
-from ...utils.properties import get_unset_value, get_unset_spacing
+from ...utils.properties import get_unset_value, get_unset_spacing, anvil_prop
 
 class NavigationLink(NavigationLinkTemplate):
   def __init__(self, **properties):
@@ -87,61 +83,38 @@ class NavigationLink(NavigationLinkTemplate):
   tooltip = tooltip_property('anvil-m3-navigation-link-container')
   spacing = spacing_property('anvil-m3-navigation-link-container')
   background_color = color_property('anvil-m3-navigation-link-container', 'backgroundColor', 'background_color')
-
-  @property
-  def url(self):
-    return self._props.get('url')
-
-  @url.setter
+  navigate_to = anvil_prop("navigate_to")
+  
+  @anvil_prop
   def url(self, value):
     if value:
-      self._props['url'] = value
       self.dom_nodes['anvil-m3-navigation-link'].href = value
     else:
       self.dom_nodes['anvil-m3-navigation-link'].href = 'javascript:void(0)'
 
-  @property
-  def icon(self):
-    return self._icon
-
-  @icon.setter
+  @anvil_prop
   def icon(self, value):
     link_icon = self.dom_nodes['anvil-m3-navigation-link-icon']
-    self._icon = value
     if value:
       link_icon.className = ""
       link_icon.classList.add("material-symbols-outlined")
       link_icon.innerText = value[3:]
 
-  @property
-  def selected(self):
-    return self._selected
-
-  @selected.setter
+  @anvil_prop
   def selected(self, value):
     if value:
       self.dom_nodes['anvil-m3-navigation-link'].classList.add('anvil-m3-navigation-link-selected')
     else:
       self.dom_nodes['anvil-m3-navigation-link'].classList.remove('anvil-m3-navigation-link-selected')
-    self._selected = value
 
-  @property
-  def badge(self):
-    return self._badge
-
-  @badge.setter
+  @anvil_prop
   def badge(self, value):
     if value:
       self.dom_nodes['anvil-m3-navigation-link'].classList.add('anvil-m3-has-badge')
     else:
       self.dom_nodes['anvil-m3-navigation-link'].classList.remove('anvil-m3-has-badge')
-    self._badge = value
 
-  @property
-  def badge_count(self):
-    return self._badge_count
-
-  @badge_count.setter
+  @anvil_prop
   def badge_count(self, value):
     if value and self.badge:
       self.dom_nodes['anvil-m3-icon-badge'].innerHTML = value
@@ -153,14 +126,5 @@ class NavigationLink(NavigationLinkTemplate):
       self.dom_nodes['anvil-m3-icon-badge'].classList.remove("anvil-m3-large-badge")
       self.dom_nodes['anvil-m3-navigation-drawer-icon-badge'].innerHTML = ""
       self.dom_nodes['anvil-m3-navigation-drawer-icon-badge'].classList.remove("anvil-m3-large-badge")
-    self._badge_count = value
-
-  @property
-  def navigate_to(self):
-    return self._navigate_to
-
-  @navigate_to.setter
-  def navigate_to(self, value):
-    self._navigate_to = value
 
 #!defClass(material_3, NavigationLink, anvil.Component)!:
