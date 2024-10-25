@@ -64,7 +64,6 @@ class Link(LinkTemplate):
   #!componentProp(material_3.Link)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
   #!componentProp(material_3.Link)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
 
-
   italic = italic_property('anvil-m3-link-text')
   bold = bold_property('anvil-m3-link')
   font_family = font_family_property('anvil-m3-link', 'font_family')
