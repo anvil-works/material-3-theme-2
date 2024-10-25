@@ -8,7 +8,7 @@ from anvil import HtmlTemplate
 from ...Functions import enabled_property, role_property, tooltip_property, style_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, innerText_property, spacing_property, font_family_property, border_property
 from ...utils import gen_id
 import anvil.designer
-from ...utils.properties import get_unset_value, get_unset_spacing
+from ...utils.properties import get_unset_value, get_unset_spacing, anvil_prop
 
 class Checkbox(CheckboxTemplate):
   def __init__(self, **properties):
@@ -112,40 +112,25 @@ class Checkbox(CheckboxTemplate):
   tooltip = tooltip_property('anvil-m3-checkbox-container')
   role = role_property('anvil-m3-checkbox-container')
 
-  @property
-  def text(self):
-    return self._props.get('text')
-
-  @text.setter
+  @anvil_prop
   def text(self, value):
-    self._props['text'] = value
     if value:
       self.dom_nodes['anvil-m3-checkbox-label'].innerText = value
       self.dom_nodes['anvil-m3-checkbox-label'].style.display = 'block'
     else:
       self.dom_nodes['anvil-m3-checkbox-label'].style.display = 'none'
 
-  @property
-  def checkbox_color(self):
-    return self._props.get('checkbox_color')
-
-  @checkbox_color.setter
+  @anvil_prop
   def checkbox_color(self, value):
-    self._props['checkbox_color'] = value
     if value:
       value = theme_color_to_css(value)
     self.dom_nodes['anvil-m3-checkbox-unchecked'].style.color = value
     self.dom_nodes['anvil-m3-checkbox-checked'].style.color = value
     self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.color = value
 
-  @property
-  def checked(self):
-    return self._props.get('checked')
-
-  @checked.setter
+  @anvil_prop
   def checked(self, value):
-    self._props['checked'] = value
-    if value == None and self.allow_indeterminate:
+    if value is None and self.allow_indeterminate:
       self.dom_nodes['anvil-m3-checkbox'].indeterminate = True
       self.dom_nodes['anvil-m3-checkbox-unchecked'].style.display = 'none'
       self.dom_nodes['anvil-m3-checkbox-checked'].style.display = 'none'
@@ -161,14 +146,9 @@ class Checkbox(CheckboxTemplate):
   def allow_indeterminate(self, value):
     self._props['allow_indeterminate'] = value
 
-  @property
-  def error(self):
-    return self._props.get('error')
-
-  @error.setter
+  @anvil_prop
   def error(self, value):
     self.dom_nodes['anvil-m3-checkbox-container'].classList.remove('anvil-m3-checkbox-error')
-    self._props['error'] = value
     if value:
       self.dom_nodes['anvil-m3-checkbox-container'].classList.add('anvil-m3-checkbox-error')
 

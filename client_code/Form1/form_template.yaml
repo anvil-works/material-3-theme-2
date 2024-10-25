@@ -22,5 +22,9 @@ components:
   name: button_1
   properties: {align: left, appearance: outlined, enabled: true, text: sdfsd}
   type: form:_Components.Button
+- layout_properties: {grid_position: 'KBRYHW,YGBBJX'}
+  name: checkbox_1
+  properties: {error: true, text: sdfasd}
+  type: form:_Components.Checkbox
 container: {type: ColumnPanel}
 is_package: true
