@@ -10,7 +10,7 @@ from anvil.js.window import document
 import random, string, math
 import anvil.designer
 from ..MenuItem import MenuItem
-from ...Functions import property_with_callback, color_property, border_property, role_property
+from ...Functions import color_property, border_property, role_property
 from ...utils import fui, noop
 from ...utils.properties import get_unset_value, get_unset_spacing, ComponentTag, anvil_prop
 
