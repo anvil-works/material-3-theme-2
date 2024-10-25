@@ -45,23 +45,9 @@ class Button(ButtonTemplate):
     tfs = get_unset_value(self.dom_nodes['anvil-m3-button-text'], "fontSize", self.font_size)
     ifs = get_unset_value(self.dom_nodes['anvil-m3-button-icon'], "fontSize", self.icon_size)
     return {"font_size": tfs, "icon_size": ifs, "spacing": sp}
-
-  def _set_text(self):
-    if self.text:
-      self.dom_nodes['anvil-m3-button-text'].innerText = self.text
-    else:
-      if not self.icon:
-        if anvil.designer.in_designer:
-          self.dom_nodes['anvil-m3-button-text'].innerText = anvil.designer.get_design_name(self)
-          self.dom_nodes['anvil-m3-button-text'].classList.add('anvil-m3-textlessComponentText')
-        else: 
-          self.dom_nodes['anvil-m3-button-text'].innerText = "Button"
-      else:
-        self.dom_nodes['anvil-m3-button-text'].innerText = ""
       
   def _update_button_look(self, value = None):
     buttonNode = self.dom_nodes['anvil-m3-button']
-    iconNode = self.dom_nodes['anvil-m3-button-icon']
     textNode = self.dom_nodes['anvil-m3-button-text']
 
     buttonNode.classList.remove('anvil-m3-icon-padding')
@@ -73,18 +59,6 @@ class Button(ButtonTemplate):
       
   def form_show(self, **event_args):
     self._update_button_look()
-
-  @anvil_prop
-  def align(self, value):
-    self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', False)
-    if value == 'full':
-      self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', True)
-    else:
-      self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
-      
-  @anvil_prop
-  def icon_align(self, value):
-    self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-right-icon', value == 'right')
 
   def _set_icon(self):
     if self.icon and self.icon.startswith('mi:'):
@@ -98,24 +72,20 @@ class Button(ButtonTemplate):
       self.dom_nodes['anvil-m3-button-icon'].innerText = ""
       self.dom_nodes['anvil-m3-button-icon'].style.display = "none"
 
-    def _set_enabled(self, value):
-    if value:
-      self.dom_nodes['anvil-m3-button'].removeAttribute("disabled")
+  def _set_text(self):
+    if self.text:
+      self.dom_nodes['anvil-m3-button-text'].innerText = self.text
     else:
-      self.dom_nodes['anvil-m3-button'].setAttribute("disabled", " ")
-      
-  def _set_appearance(self, value):
-    button = self.dom_nodes['anvil-m3-button']
-    button.classList.remove('anvil-m3-elevated')
-    button.classList.remove('anvil-m3-filled')
-    button.classList.remove('anvil-m3-tonal')
-    button.classList.remove('anvil-m3-outlined')
-    if value and value != 'text':
-      button.classList.add(f"anvil-m3-{value}")
+      if not self.icon:
+        if anvil.designer.in_designer:
+          self.dom_nodes['anvil-m3-button-text'].innerText = anvil.designer.get_design_name(self)
+          self.dom_nodes['anvil-m3-button-text'].classList.add('anvil-m3-textlessComponentText')
+        else: 
+          self.dom_nodes['anvil-m3-button-text'].innerText = "Button"
+      else:
+        self.dom_nodes['anvil-m3-button-text'].innerText = ""
 
   role = role_property('anvil-m3-button')
-  appearance = property_with_callback("appearance", _set_appearance)
-  enabled = property_with_callback("enabled", _set_enabled)
   text = property_with_callback("text", _update_button_look)
   icon = property_with_callback("icon", _update_button_look)
   text_color = color_property('anvil-m3-button-text', 'color', 'text_color')
@@ -131,6 +101,35 @@ class Button(ButtonTemplate):
   border = style_property('anvil-m3-button', 'border', 'border')
   tooltip = tooltip_property('anvil-m3-button')
   visible = HtmlTemplate.visible
+
+  @anvil_prop
+  def align(self, value):
+    self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', False)
+    if value == 'full':
+      self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', True)
+    else:
+      self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
+      
+  @anvil_prop
+  def icon_align(self, value):
+    self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-right-icon', value == 'right')
+
+  @anvil_prop
+  def enabled(self, value):
+    if value:
+      self.dom_nodes['anvil-m3-button'].removeAttribute("disabled")
+    else:
+      self.dom_nodes['anvil-m3-button'].setAttribute("disabled", " ")
+
+  @anvil_prop
+  def appearance(self, value):
+    button = self.dom_nodes['anvil-m3-button']
+    button.classList.remove('anvil-m3-elevated')
+    button.classList.remove('anvil-m3-filled')
+    button.classList.remove('anvil-m3-tonal')
+    button.classList.remove('anvil-m3-outlined')
+    if value and value != 'text':
+      button.classList.add(f"anvil-m3-{value}")
 
   #!componentProp(material_3.Button)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
   #!componentProp(material_3.Button)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}  

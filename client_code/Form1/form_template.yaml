@@ -20,7 +20,7 @@ components:
   type: form:_Components.Slider
 - layout_properties: {grid_position: 'JHMOHT,ANZIOR'}
   name: button_1
-  properties: {align: right}
+  properties: {align: left, appearance: outlined, enabled: true, text: sdfsd}
   type: form:_Components.Button
 container: {type: ColumnPanel}
 is_package: true
