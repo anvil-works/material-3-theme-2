@@ -6,7 +6,7 @@ import anvil.designer
 from anvil.js.window import document
 from ...Functions import tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, font_family_property, border_property, spacing_property
 from ...utils import fui, noop
-from ...utils.properties import get_unset_value, get_unset_spacing
+from ...utils.properties import get_unset_value, get_unset_spacing, anvil_prop
 import time
 #TODO: figure out what to do with line height
 #TODO: figure out default icon sizes 
@@ -83,72 +83,42 @@ class Text(TextTemplate):
   tooltip = tooltip_property('anvil-m3-text-container')
   role = role_property('anvil-m3-text-container')
 
-  @property
-  def align(self):
-    return self._props.get('align')
-
-  @align.setter
+  @anvil_prop
   def align(self, value):
-    self._props['align'] = value
     if value == 'justify':
       self.dom_nodes['anvil-m3-text-container'].style.justifyContent = 'left'
     else:
       self.dom_nodes['anvil-m3-text-container'].style.justifyContent = value
     self.dom_nodes['anvil-m3-text'].style.textAlign = value
 
-  @property
-  def font_size(self):
-    return self._props.get('font_size')
-
-  @font_size.setter
+  @anvil_prop
   def font_size(self, value):
-    self._props['font_size'] = value
     if value: value = f'{value}px'
     self.dom_nodes['anvil-m3-text'].style.fontSize = value
     self.dom_nodes['anvil-m3-text-container'].style.fontSize = value
 
-  @property
-  def icon(self):
-    return self._icon
-
-  @property
-  def line_height(self):
-    return self._props.get('line_height')
-
-  @line_height.setter
+  @anvil_prop
   def line_height(self, value):
-    self._props['line_height'] = value
     self.dom_nodes['anvil-m3-text-container'].style.lineHeight = value
     self.dom_nodes['anvil-m3-text'].style.lineHeight = value
 
-  @icon.setter
+  @anvil_prop
   def icon(self, value):
-    self._icon = value
     if value:
       self.dom_nodes['anvil-m3-text-icon'].style.marginRight = "8px"
     else:
       self.dom_nodes['anvil-m3-text-icon'].style.marginRight = ""
     self.dom_nodes['anvil-m3-text-icon'].innerText = value[3:]
 
-  @property
-  def style(self):
-    return self._style
-
-  @style.setter
+  @anvil_prop
   def style(self, value):
-    self._style = value
     self.dom_nodes['anvil-m3-text'].classList.remove('anvil-m3-text-label', 'anvil-m3-text-body')
     self.dom_nodes['anvil-m3-text'].classList.add(f'anvil-m3-text-{value}')
     self.dom_nodes['anvil-m3-text-container'].classList.remove('anvil-m3-text-label', 'anvil-m3-text-body')
     self.dom_nodes['anvil-m3-text-container'].classList.add(f'anvil-m3-text-{value}')
 
-  @property
-  def scale(self):
-    return self._scale
-
-  @scale.setter
+  @anvil_prop
   def scale(self, value):
-    self._scale = value
     self.dom_nodes['anvil-m3-text'].classList.remove('anvil-m3-text-large', 'anvil-m3-text-medium', 'anvil-m3-text-small')
     self.dom_nodes['anvil-m3-text-container'].classList.remove('anvil-m3-text-large', 'anvil-m3-text-medium', 'anvil-m3-text-small')
     self.dom_nodes['anvil-m3-text'].classList.add(f'anvil-m3-text-{value}')
