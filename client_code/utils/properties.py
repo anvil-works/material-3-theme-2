@@ -284,4 +284,3 @@ def anvil_prop(*args, **kwargs):
     else:
       fn = args[0]
       return property_with_callback(fn.__name__,fn)
-
