@@ -93,8 +93,8 @@ class TextArea(TextInput):
   def text(self, value):
     self.dom_nodes['anvil-m3-textarea'].value = value
 
-  @anvi
-  def _set_enabled(self, value):
+  @anvil_prop
+  def enabled(self, value):
     supporting_text = self.dom_nodes['anvil-m3-subcontent']
     if value:
       self.dom_nodes['anvil-m3-textarea'].removeAttribute("disabled")
@@ -102,7 +102,6 @@ class TextArea(TextInput):
     else:
       self.dom_nodes['anvil-m3-textarea'].setAttribute("disabled", " ")
       supporting_text.classList.add("anvil-m3-textinput-disabled")
-  enabled = property_with_callback("enabled", _set_enabled)
 
   def _set_id(self, value):
     super()._set_id(value)
@@ -110,7 +109,7 @@ class TextArea(TextInput):
 
   def _expand_to_fit_content(self, event):
     if event.target.scrollHeight > event.target.clientHeight:
-      self.dom_nodes['anvil-m3-textarea'].style.height = '56px' #min-height based off specs
+      self.dom_nodes['anvil-m3-textarea'].style.height = '56px' #Min-height based off M3 specs
       self._set_height(event.target.scrollHeight)
 
   def _on_resize(self, entries, observer):
