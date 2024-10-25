@@ -1,9 +1,6 @@
 from ._anvil_designer import IconButtonTemplate
 from anvil import *
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 import anvil.designer
 from ...Functions import tooltip_property, role_property, enabled_property, color_property, style_property, property_with_callback, border_property, margin_property
 from anvil import HtmlTemplate

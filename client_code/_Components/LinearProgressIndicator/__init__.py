@@ -1,9 +1,6 @@
 from ._anvil_designer import LinearProgressIndicatorTemplate
 from anvil import *
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from ...Functions import tooltip_property, margin_property, theme_color_to_css, role_property, color_property
 from ...utils.properties import get_unset_margin, anvil_prop

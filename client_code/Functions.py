@@ -1,8 +1,5 @@
 from anvil import *
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 from anvil.js.window import document
 from anvil.property_utils import set_element_margin, set_element_padding, set_element_spacing
 from .utils import noop, fui

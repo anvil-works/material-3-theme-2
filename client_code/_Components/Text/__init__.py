@@ -1,9 +1,6 @@
 from ._anvil_designer import TextTemplate
 from anvil import *
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 from anvil import HtmlTemplate
 import anvil.designer
 from anvil.js.window import document

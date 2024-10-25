@@ -1,16 +1,13 @@
 from ._anvil_designer import RadioButtonTemplate
 from anvil import *
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 from anvil import HtmlTemplate
 from anvil.js.window import document
 import anvil.designer
 from ..._Components.RadioGroupPanel import RadioGroup
 from ...Functions import role_property, tooltip_property, enabled_property, style_property, underline_property, italic_property, border_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property, spacing_property
-from ...Functions import property_with_callback, property_without_callback
 from ...utils import gen_id
+from ...utils.properties import anvil_prop
 
 class RadioButton(RadioButtonTemplate):
   def __init__(self, **properties):
@@ -67,7 +64,7 @@ class RadioButton(RadioButtonTemplate):
   # Properties 
   enabled = enabled_property('anvil-m3-radiobutton-input')
   visible = HtmlTemplate.visible
-  value = property_without_callback('value')
+  value = anvil_prop('value')
   underline = underline_property('anvil-m3-radiobutton-label')
   italic = italic_property('anvil-m3-radiobutton-label')
   bold = bold_property('anvil-m3-radiobutton-label')
@@ -132,15 +129,14 @@ class RadioButton(RadioButtonTemplate):
           except anvil.js.ExternalError:
             pass  # Ignore error if the component isn't on the currently editing form
 
-  def _set_text(self, value):
+  @anvil_prop
+  def text(self, value):
     v = value
     self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-textlessComponentText', False)
     if anvil.designer.in_designer and not value:
       v = self._design_name
       self.dom_nodes['anvil-m3-radiobutton-label'].classList.toggle('anvil-m3-textlessComponentText', True)
     self.dom_nodes['anvil-m3-radiobutton-label'].innerText = v
-    
-  text = property_with_callback("text", _set_text)
   
   # Class Functions
   def _anvil_get_interactions_(self):

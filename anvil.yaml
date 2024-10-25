@@ -1,58 +1,5 @@
 allow_embedding: false
-db_schema:
-  jobs:
-    client: search
-    columns:
-    - admin_ui: {order: 0, width: 200}
-      name: Titles
-      type: string
-    - admin_ui: {order: -1, width: 200}
-      name: ID
-      type: number
-    server: full
-    title: Jobs
-  people:
-    client: search
-    columns:
-    - admin_ui: {order: 0, width: 200}
-      name: Name
-      type: string
-    - admin_ui: {order: -1, width: 200}
-      name: ID
-      type: number
-    - admin_ui: {order: 2, width: 200}
-      name: Job
-      target: jobs
-      type: link_single
-    - admin_ui: {order: 3, width: 200}
-      name: blah
-      target: another_category
-      type: link_multiple
-    server: full
-    title: People
-  users:
-    client: none
-    columns:
-    - admin_ui: {order: 0, width: 200}
-      name: email
-      type: string
-    - admin_ui: {order: 1, width: 200}
-      name: enabled
-      type: bool
-    - admin_ui: {order: 2, width: 200}
-      name: last_login
-      type: datetime
-    - admin_ui: {order: 3, width: 200}
-      name: password_hash
-      type: string
-    - admin_ui: {order: 4, width: 200}
-      name: n_password_failures
-      type: number
-    - admin_ui: {order: 5, width: 200}
-      name: confirmed_email
-      type: bool
-    server: full
-    title: Users
+db_schema: {}
 name: Material 3 Theme
 native_deps:
   head_html: |

@@ -2,9 +2,6 @@ from ._anvil_designer import Sliders_copyTemplate
 from anvil import *
 import plotly.graph_objects as go
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 
 class Sliders_copy(Sliders_copyTemplate):
   def __init__(self, **properties):

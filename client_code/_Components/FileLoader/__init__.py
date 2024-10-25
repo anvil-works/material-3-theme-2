@@ -1,9 +1,6 @@
 from ._anvil_designer import FileLoaderTemplate
 from anvil import *
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 from ...Functions import underline_property, role_property, tooltip_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, enabled_property, font_family_property, spacing_property
 from anvil.js.window import FileReader, Uint8Array
 from ...utils import gen_id

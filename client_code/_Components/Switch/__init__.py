@@ -1,9 +1,6 @@
 from ._anvil_designer import SwitchTemplate
 from anvil import *
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 from anvil.js.window import document, getComputedStyle
 from anvil.js import window
 from anvil import HtmlTemplate
