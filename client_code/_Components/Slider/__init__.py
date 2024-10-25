@@ -10,7 +10,6 @@ from ...utils.properties import get_unset_margin
 class Slider(SliderTemplate):
   def __init__(self, **properties):
     self.tag = ComponentTag()
-    self._shown = False
     self.label_container = document.createElement('div')
     self.label_container.classList.add('anvil-m3-slider-label-container')
     self.label = document.createElement('div')
@@ -20,6 +19,7 @@ class Slider(SliderTemplate):
     self._tooltip_node = None
     self._mounted = False
     self.init_components(**properties)
+    
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self._on_input)
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self._on_mouse_down)
     self.dom_nodes['anvil-m3-slider-input'].addEventListener("change", self._on_change)
@@ -27,12 +27,12 @@ class Slider(SliderTemplate):
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
   def _on_mount(self, **event_args):
+    self.resize_observer = ResizeObserver(self._on_window_resize)
+    self.resize_observer.observe(self.dom_nodes['anvil-m3-slider'])
     self._mounted = True
     self._set_markers()
     self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
     self._update_progress()
-    self.resize_observer = ResizeObserver(self._on_window_resize)
-    self.resize_observer.observe(self.dom_nodes['anvil-m3-slider'])
   
   def _on_cleanup(self, **event_args):
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-slider'])

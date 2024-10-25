@@ -1,5 +1,6 @@
 components:
-- layout_properties: {grid_position: 'PCSQEE,DDLOBX'}
+- event_bindings: {show: link_1_show}
+  layout_properties: {grid_position: 'PCSQEE,DDLOBX'}
   name: link_1
   properties: {align: left}
   type: form:_Components.Link
@@ -13,5 +14,9 @@ components:
   name: interactive_card_1
   properties: {}
   type: form:_Components.InteractiveCard
+- layout_properties: {grid_position: 'NTNBSP,DBUJAT'}
+  name: slider_1
+  properties: {show_label: false, show_markers: true}
+  type: form:_Components.Slider
 container: {type: ColumnPanel}
 is_package: true

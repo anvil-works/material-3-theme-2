@@ -16,3 +16,7 @@ class Form1(Form1Template):
   def interactive_card_1_click(self, **event_args):
     """This method is called when the component is clicked"""
     alert()
+
+  def link_1_show(self, **event_args):
+    """This method is called when the component is shown on the screen."""
+    pass
