@@ -79,7 +79,6 @@ class ComponentTag():
   def __repr__(self):
     return f"ComponentTag({self.__dict__})"
 
-
 def theme_color_to_css(color:str):
   if color.startswith('theme:'):
     color = color.lstrip('theme:')
@@ -180,7 +179,6 @@ def custom_bold_property(dom_node_name, prop_name="bold", custom_bold=500):
       self.dom_nodes[dom_node_name].style.fontWeight = 'normal'
   return property_with_callback(prop_name, set_bold)
   
-
 def font_size_property(dom_node_name, prop_name="font_size"):
   def set_font_size(self, value):
     self._font_size = value
@@ -266,7 +264,6 @@ def tooltip_property(dom_node_name, prop_name="tooltip"):
         self._cleanup()
         self._cleanup = noop
   return property_with_callback(prop_name, set_tooltip)
-
 
 def anvil_prop(*args, **kwargs):
   if 'default_value' in kwargs:
