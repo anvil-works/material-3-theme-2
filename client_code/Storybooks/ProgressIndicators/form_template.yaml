@@ -1,99 +1,99 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: linear_panel_1
-    properties: {}
-    type: LinearPanel
-    layout_properties: {grid_position: 'XSWOOJ,FCHTQP'}
-    components:
-    - name: flow_panel_1
-      properties: {}
-      type: FlowPanel
-      components:
-      - name: linear_panel_2
-        properties: {}
-        type: LinearPanel
-        layout_properties: {width: 427}
-        components:
-        - name: text_1
-          properties: {text: ProgressIndicator Components, font_size: 25, text_color: 'theme:Primary'}
+- components:
+  - components:
+    - components:
+      - components:
+        - layout_properties: {}
+          name: text_1
+          properties: {font_size: 25, text: ProgressIndicator Components, text_color: 'theme:Primary'}
           type: form:Components.Text
-          layout_properties: {}
         - name: text_2
           properties: {text: Description. Properties. Link to docs. Etc}
           type: form:Components.Text
-  - name: card_1
-    properties: {visible: true}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
-    components:
-    - name: card_content_container_1
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: column_panel_2
+        layout_properties: {width: 427}
+        name: linear_panel_2
         properties: {}
-        type: ColumnPanel
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-        components:
-        - name: text_3_copy_1
+        type: LinearPanel
+      name: flow_panel_1
+      properties: {}
+      type: FlowPanel
+    layout_properties: {grid_position: 'XSWOOJ,FCHTQP'}
+    name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+  - components:
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'HQXNTC,YSZACR'}
+          name: text_3_copy_1
           properties: {text: Determinate}
           type: form:Components.Text
-          layout_properties: {grid_position: 'HQXNTC,YSZACR'}
-        - name: button_1
-          properties: {text: Make Progress Go, appearance: filled}
-          type: form:Components.Button
+        - event_bindings: {click: button_1_click}
           layout_properties: {grid_position: 'HHGCRC,SOUFZA'}
-          event_bindings: {click: button_1_click}
-        - name: circular_progress_indicator_determinate
-          properties: {visible: true, type: determinate, progress: 50, align: center, color: '#'}
+          name: button_1
+          properties: {appearance: filled, text: Make Progress Go}
+          type: form:Components.Button
+        - layout_properties: {grid_position: 'GOCHRS,EAGRUI'}
+          name: circular_progress_indicator_determinate
+          properties: {align: center, color: '#', progress: 50, type: determinate, visible: true}
           type: form:Components.CircularProgressIndicator
-          layout_properties: {grid_position: 'GOCHRS,EAGRUI'}
-        - name: linear_progress_indicator_determinate
-          properties: {visible: true, type: determinate, progress: 47.75, color: ''}
+        - layout_properties: {grid_position: 'FJJOWZ,JMVCER'}
+          name: linear_progress_indicator_determinate
+          properties: {color: '', progress: 47.75, type: determinate, visible: true}
           type: form:Components.LinearProgressIndicator
-          layout_properties: {grid_position: 'FJJOWZ,JMVCER'}
-      - name: flow_panel_2
-        properties: {}
-        type: FlowPanel
         layout_properties: {slot: anvil-m3-card-content-container-slot}
-        components:
-        - name: column_panel_1
-          properties: {}
-          type: ColumnPanel
-          layout_properties: {width: 578}
-          components:
-          - name: text_3
+        name: column_panel_2
+        properties: {}
+        type: ColumnPanel
+      - components:
+        - components:
+          - layout_properties: {grid_position: 'HJLVQL,QGOPQU'}
+            name: text_3
             properties: {text: Indeterminate}
             type: form:Components.Text
-            layout_properties: {grid_position: 'HJLVQL,QGOPQU'}
-          - name: circular_progress_indicator
-            properties: {visible: true, type: indeterminate, align: left, color: ''}
+          - layout_properties: {grid_position: 'KTGWGP,OENKJQ'}
+            name: circular_progress_indicator
+            properties: {align: left, color: '', type: indeterminate, visible: true}
             type: form:Components.CircularProgressIndicator
-            layout_properties: {grid_position: 'KTGWGP,OENKJQ'}
-          - name: linear_progress_indicator
-            properties: {visible: true, color: '', type: indeterminate, progress: 60}
+          - layout_properties: {grid_position: 'FGXMBK,JSORRS'}
+            name: linear_progress_indicator
+            properties: {color: '', progress: 60, type: indeterminate, visible: true}
             type: form:Components.LinearProgressIndicator
-            layout_properties: {grid_position: 'FGXMBK,JSORRS'}
-  - name: card_2
-    properties: {visible: true}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'YQVVVU,UMEILI'}
-    components:
-    - name: card_content_container_2
+          layout_properties: {width: 578}
+          name: column_panel_1
+          properties: {}
+          type: ColumnPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        name: flow_panel_2
+        properties: {}
+        type: FlowPanel
+      layout_properties: {slot: card-content-slot}
+      name: card_content_container_1
       properties: {}
       type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: text_4
+    layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
+    name: card_1
+    properties: {visible: true}
+    type: form:Components.Card
+  - components:
+    - components:
+      - layout_properties: {slot: anvil-m3-card-content-container-slot}
+        name: text_4
         properties: {text: 'TODO: smooth out determinate progress transition'}
         type: form:Components.Text
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
+      layout_properties: {slot: card-content-slot}
+      name: card_content_container_2
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+    layout_properties: {grid_position: 'YQVVVU,UMEILI'}
+    name: card_2
+    properties: {visible: true}
+    type: form:Components.Card
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

@@ -1,151 +1,151 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: linear_panel_1
-    properties: {}
-    type: LinearPanel
-    layout_properties: {grid_position: 'XSWOOJ,FCHTQP'}
-    components:
-    - name: flow_panel_1
-      properties: {}
-      type: FlowPanel
-      components:
-      - name: linear_panel_2
-        properties: {}
-        type: LinearPanel
-        layout_properties: {width: 427}
-        components:
-        - name: text_1
-          properties: {text: ToggleIconButton Component, font_size: 25, text_color: 'theme:Primary'}
+- components:
+  - components:
+    - components:
+      - components:
+        - layout_properties: {}
+          name: text_1
+          properties: {font_size: 25, text: ToggleIconButton Component, text_color: 'theme:Primary'}
           type: form:Components.Text
-          layout_properties: {}
         - name: text_2
           properties: {text: Description. Properties. Link to docs. Etc}
           type: form:Components.Text
-  - name: card_1
-    properties: {visible: true}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
-    components:
-    - name: card_content_container_1
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: flow_panel_2
+        layout_properties: {width: 427}
+        name: linear_panel_2
         properties: {}
-        type: FlowPanel
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-        components:
-        - name: column_panel_1
-          properties: {}
-          type: ColumnPanel
-          layout_properties: {width: 578}
-          components:
-          - name: flow_panel_3
-            properties: {}
-            type: FlowPanel
-            layout_properties: {grid_position: 'YFXULF,CLTAUS', full_width_row: false}
-            components:
-            - name: toggle_icon_button_1
+        type: LinearPanel
+      name: flow_panel_1
+      properties: {}
+      type: FlowPanel
+    layout_properties: {grid_position: 'XSWOOJ,FCHTQP'}
+    name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+  - components:
+    - components:
+      - components:
+        - components:
+          - components:
+            - layout_properties: {}
+              name: toggle_icon_button_1
               properties: {selected: false}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: toggle_icon_button_1_copy_1
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_1
               properties: {appearance: Filled, selected: false}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: toggle_icon_button_1_copy_2
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_2
               properties: {appearance: Filled tonal}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: toggle_icon_button_1_copy_3
-              properties: {appearance: Outlined, background: pink, border: '', background_color: ''}
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_3
+              properties: {appearance: Outlined, background: pink, background_color: '', border: ''}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: text_3
-              properties: {text: Unselected Buttons, bold: false}
+            - layout_properties: {}
+              name: text_3
+              properties: {bold: false, text: Unselected Buttons}
               type: form:Components.Text
-              layout_properties: {}
-          - name: flow_panel_3_copy_1
+            layout_properties: {full_width_row: false, grid_position: 'YFXULF,CLTAUS'}
+            name: flow_panel_3
             properties: {}
             type: FlowPanel
-            layout_properties: {grid_position: 'OPSSAR,TRXWQC'}
-            components:
-            - name: toggle_icon_button_1_copy_4
+          - components:
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_4
               properties: {enabled: false}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: toggle_icon_button_1_copy_1_copy_1
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_1_copy_1
               properties: {appearance: Filled, enabled: false}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: toggle_icon_button_1_copy_2_copy_1
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_2_copy_1
               properties: {appearance: Filled tonal, enabled: false}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: toggle_icon_button_1_copy_3_copy_1
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_3_copy_1
               properties: {appearance: Outlined, enabled: false}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: text_3_copy_1
+            - layout_properties: {}
+              name: text_3_copy_1
               properties: {text: Unselected/Disabled Buttons}
               type: form:Components.Text
-              layout_properties: {}
-          - name: flow_panel_3_copy_2
+            layout_properties: {grid_position: 'OPSSAR,TRXWQC'}
+            name: flow_panel_3_copy_1
             properties: {}
             type: FlowPanel
-            layout_properties: {grid_position: 'QXIMAX,YLKZLT'}
-            components:
-            - name: toggle_icon_button_1_copy_5
+          - components:
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_5
               properties: {selected: true}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: toggle_icon_button_1_copy_1_copy_2
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_1_copy_2
               properties: {appearance: Filled, selected: true}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: toggle_icon_button_1_copy_2_copy_2
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_2_copy_2
               properties: {appearance: Filled tonal, selected: true}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: toggle_icon_button_1_copy_3_copy_2
-              properties: {appearance: Outlined, selected: true, background: '', selected_background: pink}
+            - layout_properties: {width: 38.78906899414063}
+              name: toggle_icon_button_1_copy_3_copy_2
+              properties: {appearance: Outlined, background: '', selected: true, selected_background: pink}
               type: form:Components.ToggleIconButton
-              layout_properties: {width: 38.78906899414063}
-            - name: text_3_copy_2
+            - layout_properties: {}
+              name: text_3_copy_2
               properties: {text: Selected Buttons}
               type: form:Components.Text
-              layout_properties: {}
-          - name: flow_panel_3_copy_1_copy_1
+            layout_properties: {grid_position: 'QXIMAX,YLKZLT'}
+            name: flow_panel_3_copy_2
             properties: {}
             type: FlowPanel
-            layout_properties: {grid_position: 'EWLUVH,PIWGQQ'}
-            components:
-            - name: toggle_icon_button_1_copy_4_copy_1
+          - components:
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_4_copy_1
               properties: {enabled: false, selected: true}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: toggle_icon_button_1_copy_1_copy_1_copy_1
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_1_copy_1_copy_1
               properties: {appearance: Filled, enabled: false, selected: true}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: toggle_icon_button_1_copy_2_copy_1_copy_1
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_2_copy_1_copy_1
               properties: {appearance: Filled tonal, enabled: false, selected: true}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: toggle_icon_button_1_copy_3_copy_1_copy_1
+            - layout_properties: {}
+              name: toggle_icon_button_1_copy_3_copy_1_copy_1
               properties: {appearance: Outlined, enabled: false, selected: true}
               type: form:Components.ToggleIconButton
-              layout_properties: {}
-            - name: text_3_copy_2_copy_1
+            - layout_properties: {}
+              name: text_3_copy_2_copy_1
               properties: {text: Selected/Disabled Buttons}
               type: form:Components.Text
-              layout_properties: {}
+            layout_properties: {grid_position: 'EWLUVH,PIWGQQ'}
+            name: flow_panel_3_copy_1_copy_1
+            properties: {}
+            type: FlowPanel
+          layout_properties: {width: 578}
+          name: column_panel_1
+          properties: {}
+          type: ColumnPanel
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        name: flow_panel_2
+        properties: {}
+        type: FlowPanel
+      layout_properties: {slot: card-content-slot}
+      name: card_content_container_1
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+    layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
+    name: card_1
+    properties: {visible: true}
+    type: form:Components.Card
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

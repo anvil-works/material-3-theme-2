@@ -1,46 +1,6 @@
-properties:
-- name: navigation_rail_collapse_to
-  type: enum
-  default_value: Bottom app bar
-  default_binding_prop: true
-  options: [Bottom app bar, Modal navigation drawer]
-  description: How should the side navigation rail collapse on mobile?
-- {name: navigation_rail_color, type: color, default_value: ''}
-- {name: background_color, type: color, default_value: '', description: The background color of Forms using this Layout.}
-- {name: text_color, type: color, default_value: '', description: Default color of the text on Forms using this layout}
-- {name: show_sidesheet, type: boolean, default_value: true, important: true}
-- name: navigation_rail_vertical_align
-  type: enum
-  important: true
-  options: [Top, Center, Bottom]
-  default_value: Top
-is_package: true
-slots:
-  slot_1:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-navigation-rail-content}
-    target: {type: container, name: ''}
-  slot_2:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-app-bar-links}
-    target: {type: container, name: ''}
-  slot_3:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-content}
-    target: {type: container, name: ''}
-  slot_4:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-app-title}
-    target: {type: container, name: ''}
-  slot_5:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-sidesheet}
-    target: {type: container, name: ''}
-toolbox_item: {hidden: true}
-custom_component: true
 components: []
 container:
-  type: HtmlTemplate
+  event_bindings: {}
   properties:
     html: |+
       <div anvil-name="anvil-m3-navigation-rail" class="anvil-m3-navigation-rail">
@@ -73,5 +33,45 @@ container:
         <p anvil-if-slot-empty="anvil-m3-sidesheet" class="anvil-designer-only" style="font-style: italic;">Add optional sidesheet content here</p>
       </div>
 
-  event_bindings: {}
-layout_metadata: {title: NavigationRailLayout, description: A simple layout with a left-side navigation rail and optional right-hand sidepanel, thumbnail: 'asset:designer_icons/navigation-rail-thumb.png'}
+  type: HtmlTemplate
+custom_component: true
+is_package: true
+layout_metadata: {description: A simple layout with a left-side navigation rail and optional right-hand sidepanel, thumbnail: 'asset:designer_icons/navigation-rail-thumb.png', title: NavigationRailLayout}
+properties:
+- default_binding_prop: true
+  default_value: Bottom app bar
+  description: How should the side navigation rail collapse on mobile?
+  name: navigation_rail_collapse_to
+  options: [Bottom app bar, Modal navigation drawer]
+  type: enum
+- {default_value: '', name: navigation_rail_color, type: color}
+- {default_value: '', description: The background color of Forms using this Layout., name: background_color, type: color}
+- {default_value: '', description: Default color of the text on Forms using this layout, name: text_color, type: color}
+- {default_value: true, important: true, name: show_sidesheet, type: boolean}
+- default_value: Top
+  important: true
+  name: navigation_rail_vertical_align
+  options: [Top, Center, Bottom]
+  type: enum
+slots:
+  slot_1:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-navigation-rail-content}
+    target: {name: '', type: container}
+  slot_2:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-app-bar-links}
+    target: {name: '', type: container}
+  slot_3:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-content}
+    target: {name: '', type: container}
+  slot_4:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-app-title}
+    target: {name: '', type: container}
+  slot_5:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-sidesheet}
+    target: {name: '', type: container}
+toolbox_item: {hidden: true}

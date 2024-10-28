@@ -1,142 +1,142 @@
-layout: {type: 'form:NewNavRailLayout'}
-is_package: true
 components_by_slot:
   slot_1: []
   slot_3:
-  - name: column_panel_1
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {}
-    components:
-    - name: button_1
+  - components:
+    - layout_properties: {grid_position: 'LQUELR,MYOAKY'}
+      name: button_1
       properties: {}
       type: form:Components.Button
-      layout_properties: {grid_position: 'LQUELR,MYOAKY'}
-    - name: checkbox_1
+    - layout_properties: {grid_position: 'SHFSWZ,QYXOPR'}
+      name: checkbox_1
       properties: {}
       type: form:Components.Checkbox
-      layout_properties: {grid_position: 'SHFSWZ,QYXOPR'}
-    - name: file_loader_1
+    - layout_properties: {grid_position: 'CBSKPE,SURJLM'}
+      name: file_loader_1
       properties: {}
       type: form:Components.FileLoader
-      layout_properties: {grid_position: 'CBSKPE,SURJLM'}
-    - name: slider_1
+    - layout_properties: {grid_position: 'QLISHE,CFIZGG'}
+      name: slider_1
       properties: {}
       type: form:Components.Slider
-      layout_properties: {grid_position: 'QLISHE,CFIZGG'}
-    - name: linear_progress_indicator_1
+    - layout_properties: {grid_position: 'AYEEYS,ADSUWI'}
+      name: linear_progress_indicator_1
       properties: {}
       type: form:Components.LinearProgressIndicator
-      layout_properties: {grid_position: 'AYEEYS,ADSUWI'}
-    - name: circular_progress_indicator_1
-      properties: {type: indeterminate, progress: null}
+    - layout_properties: {grid_position: 'DSXJXI,GTBQAL'}
+      name: circular_progress_indicator_1
+      properties: {progress: null, type: indeterminate}
       type: form:Components.CircularProgressIndicator
-      layout_properties: {grid_position: 'DSXJXI,GTBQAL'}
-    - name: switch_1
+    - layout_properties: {grid_position: 'OAOJAL,TAZVFJ'}
+      name: switch_1
       properties: {}
       type: form:Components.Switch
-      layout_properties: {grid_position: 'OAOJAL,TAZVFJ'}
-    - name: radio_button_1
+    - layout_properties: {grid_position: 'SCRJEC,LXJLGH'}
+      name: radio_button_1
       properties: {}
       type: form:Components.RadioButton
-      layout_properties: {grid_position: 'SCRJEC,LXJLGH'}
-    - name: text_field_1
+    - layout_properties: {grid_position: 'XPBUYL,RCMLBI'}
+      name: text_field_1
       properties: {}
       type: form:Components.TextInput.TextField
-      layout_properties: {grid_position: 'XPBUYL,RCMLBI'}
-    - name: text_area_1
+    - layout_properties: {grid_position: 'NAWPTG,RVUNOV'}
+      name: text_area_1
       properties: {}
       type: form:Components.TextInput.TextArea
-      layout_properties: {grid_position: 'NAWPTG,RVUNOV'}
-    - name: dropdown_menu_2
+    - layout_properties: {grid_position: 'VZLVHU,ZIAZJV'}
+      name: dropdown_menu_2
       properties: {}
       type: form:Components.DropdownMenu
-      layout_properties: {grid_position: 'VZLVHU,ZIAZJV'}
-    - name: card_4
+    - layout_properties: {grid_position: 'IZAZJM,APFKFG'}
+      name: card_4
       properties: {}
       type: form:Components.Card
-      layout_properties: {grid_position: 'IZAZJM,APFKFG'}
-    - name: interactive_card_1
+    - layout_properties: {grid_position: 'XURFUS,VYWERX'}
+      name: interactive_card_1
       properties: {}
       type: form:Components.InteractiveCard
-      layout_properties: {grid_position: 'XURFUS,VYWERX'}
-    - name: divider_1
+    - layout_properties: {grid_position: 'RDCIKL,SGMCCP'}
+      name: divider_1
       properties: {}
       type: form:Components.Divider
-      layout_properties: {grid_position: 'RDCIKL,SGMCCP'}
-    - name: navigation_link_1
+    - layout_properties: {grid_position: 'BEKRNN,FTYKWS'}
+      name: navigation_link_1
       properties: {}
       type: form:Components.NavigationLink
-      layout_properties: {grid_position: 'BEKRNN,FTYKWS'}
-    - name: button_menu_1
+    - components: []
+      layout_properties: {grid_position: 'JDPNHX,QMAQBJ'}
+      name: button_menu_1
       properties: {}
       type: form:Components.ButtonMenu
-      layout_properties: {grid_position: 'JDPNHX,QMAQBJ'}
-      components: []
-    - name: dropdown_menu_1
+    - event_bindings: {change: dropdown_menu_1_change}
+      layout_properties: {grid_position: 'NXTXSC,HNOTPO'}
+      name: dropdown_menu_1
       properties:
         items: [Hello, Patricia]
       type: form:Components.DropdownMenu
-      layout_properties: {grid_position: 'NXTXSC,HNOTPO'}
-      event_bindings: {change: dropdown_menu_1_change}
-    - name: drop_down_1
+    - event_bindings: {change: drop_down_1_change}
+      layout_properties: {grid_position: 'HLHIAO,SIIEFU'}
+      name: drop_down_1
       properties: {}
       type: DropDown
-      layout_properties: {grid_position: 'HLHIAO,SIIEFU'}
-      event_bindings: {change: drop_down_1_change}
-    - name: card_1
+    - layout_properties: {grid_position: 'KNROCN,PJLDFX'}
+      name: card_1
       properties:
-        image_height: '400'
-        image_width: '400'
         card_image: ''
+        image_height: '400'
         image_position: top
+        image_width: '400'
         margin: ['24', '24', 4px, '24']
         rounded_image: false
       type: form:Components.Card
-      layout_properties: {grid_position: 'KNROCN,PJLDFX'}
-    - name: card_2
+    - layout_properties: {grid_position: 'ASOHSX,HVMMNT'}
+      name: card_2
       properties:
-        image_position: full
         image_height: '400'
+        image_position: full
         image_width: '400'
         margin: ['24', '24', 4px, '24']
       type: form:Components.Card
-      layout_properties: {grid_position: 'ASOHSX,HVMMNT'}
-  slot_7: []
-  slot_6: []
-  slot_5:
-  - name: sidesheet_content_1
-    properties: {}
-    type: form:SidesheetContent
     layout_properties: {}
-    components:
-    - name: card_3
-      properties:
-        margin: [4px, 4px, '32', 4px]
-        image_position: full
-        image_height: '120'
-      type: form:Components.Card
+    name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+  slot_5:
+  - components:
+    - components: []
       layout_properties: {slot: anvil-m3-sidesheet}
-      components: []
-    - name: card_3_copy_2
+      name: card_3
       properties:
-        margin: [4px, 4px, '32', 4px]
-        image_position: full
         image_height: '120'
+        image_position: full
+        margin: [4px, 4px, '32', 4px]
       type: form:Components.Card
-      layout_properties: {slot: anvil-m3-sidesheet}
-    - name: card_3_copy
+    - layout_properties: {slot: anvil-m3-sidesheet}
+      name: card_3_copy_2
       properties:
-        margin: [4px, 4px, '32', 4px]
-        image_position: full
         image_height: '120'
+        image_position: full
+        margin: [4px, 4px, '32', 4px]
       type: form:Components.Card
-      layout_properties: {slot: anvil-m3-sidesheet}
-    - name: heading_1
-      properties: {text: Sidesheet, style: title, scale: large, visible: false}
+    - layout_properties: {slot: anvil-m3-sidesheet}
+      name: card_3_copy
+      properties:
+        image_height: '120'
+        image_position: full
+        margin: [4px, 4px, '32', 4px]
+      type: form:Components.Card
+    - layout_properties: {slot: anvil-m3-sidesheet-title}
+      name: heading_1
+      properties: {scale: large, style: title, text: Sidesheet, visible: false}
       type: form:Components.Heading
-      layout_properties: {slot: anvil-m3-sidesheet-title}
-    - name: icon_button_1
+    - layout_properties: {slot: anvil-m3-sidesheet-close-button}
+      name: icon_button_1
       properties: {icon: close}
       type: form:Components.IconButton
-      layout_properties: {slot: anvil-m3-sidesheet-close-button}
+    layout_properties: {}
+    name: sidesheet_content_1
+    properties: {}
+    type: form:SidesheetContent
+  slot_6: []
+  slot_7: []
+is_package: true
+layout: {type: 'form:NewNavRailLayout'}

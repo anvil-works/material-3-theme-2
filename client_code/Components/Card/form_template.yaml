@@ -1,61 +1,6 @@
-properties:
-- {name: visible, type: boolean, default_value: true, important: true, default_binding_prop: true, designer_hint: visible, group: Look and Feel, description: 'If True, the component will be displayed.'}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
-- name: align
-  type: enum
-  important: true
-  options: [left, center, right, full]
-  default_value: left
-  designer_hint: align-horizontal
-  description: The position of this component in the available space.
-  group: Layout
-- name: appearance
-  type: enum
-  important: true
-  options: [elevated, filled, outlined]
-  default_value: elevated
-  group: Key Properties
-  description: A predefined style for this component.
-- {name: card_image, type: uri, important: true, accept: image/*, description: Image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)., group: Image Style}
-- include_none_option: true
-  description: How the image in positioned/displayed on the card.
-  group: Image Style
-  none_option_label: No Image
-  name: image_position
-  type: enum
-  important: true
-  options: [top, left, right, bottom, full]
-  default_value: null
-- {name: rounded_image, type: boolean, default_value: false, important: true, group: Image Style, description: 'For top/bottom/left/right image_positions, if the image will have a rounded edge.'}
-- {name: image_height, type: string, important: true, default_value: '', description: Any valid CSS value for image height., group: Image Style}
-- {name: image_width, type: string, important: true, default_value: '', description: Any valid CSS value for image width., group: Image Style}
-- name: margin
-  type: margin
-  important: true
-  default_value: [4px, 4px, 4px, 4px]
-  group: Layout
-  description: The margin (pixels) of the component.
-- name: card_content_padding
-  type: padding
-  important: false
-  default_value: [16px, 16px, 16px, 16px]
-  group: Look and Feel
-  description: Padding (pixels) of the card content
-- {name: card_image_content_padding, type: padding, important: false, group: Image Style, description: Padding (pixels) of content in the card image}
-- {name: background_color, type: color, default_value: '', important: false, group: Look and Feel, description: The colour of the background of this component.}
-- {name: tooltip, type: string, default_value: '', important: false, description: The text to display when the mouse is hovered over this component., group: Other}
-- {name: border, type: string, default_value: '', important: false, description: The border of this component. Can take any valid CSS border value., group: Look and Feel}
-is_package: true
-events:
-- {name: show, default_event: true, description: When the component is shown on the screen.}
-- {name: hide, description: When the component is removed from the screen.}
-toolbox_item:
-  icon: {light: 'asset:designer_icons/card.svg', dark: 'asset:designer_icons/card_dark.svg'}
-  hidden: true
-custom_component: true
 components: []
 container:
-  type: HtmlTemplate
+  event_bindings: {hide: form_hide, show: form_show}
   properties:
     html: |-
       <!-- <div anvil-name="anvil-m3-card-component" style="display: flex"> -->
@@ -68,5 +13,60 @@ container:
           </div>
         </div>
       <!-- </div> -->
-  event_bindings: {show: form_show, hide: form_hide}
+  type: HtmlTemplate
+custom_component: true
 custom_component_container: true
+events:
+- {default_event: true, description: When the component is shown on the screen., name: show}
+- {description: When the component is removed from the screen., name: hide}
+is_package: true
+properties:
+- {default_binding_prop: true, default_value: true, description: 'If True, the component will be displayed.', designer_hint: visible, group: Look and Feel, important: true, name: visible, type: boolean}
+- {default_value: '', description: A style for this component defined in CSS and added to Roles., group: Look and Feel, name: role, type: themeRole}
+- default_value: left
+  description: The position of this component in the available space.
+  designer_hint: align-horizontal
+  group: Layout
+  important: true
+  name: align
+  options: [left, center, right, full]
+  type: enum
+- default_value: elevated
+  description: A predefined style for this component.
+  group: Key Properties
+  important: true
+  name: appearance
+  options: [elevated, filled, outlined]
+  type: enum
+- {accept: image/*, description: Image to be displayed on the card. Can be a URL or an asset (eg. _/theme/....)., group: Image Style, important: true, name: card_image, type: uri}
+- default_value: null
+  description: How the image in positioned/displayed on the card.
+  group: Image Style
+  important: true
+  include_none_option: true
+  name: image_position
+  none_option_label: No Image
+  options: [top, left, right, bottom, full]
+  type: enum
+- {default_value: false, description: 'For top/bottom/left/right image_positions, if the image will have a rounded edge.', group: Image Style, important: true, name: rounded_image, type: boolean}
+- {default_value: '', description: Any valid CSS value for image height., group: Image Style, important: true, name: image_height, type: string}
+- {default_value: '', description: Any valid CSS value for image width., group: Image Style, important: true, name: image_width, type: string}
+- default_value: [4px, 4px, 4px, 4px]
+  description: The margin (pixels) of the component.
+  group: Layout
+  important: true
+  name: margin
+  type: margin
+- default_value: [16px, 16px, 16px, 16px]
+  description: Padding (pixels) of the card content
+  group: Look and Feel
+  important: false
+  name: card_content_padding
+  type: padding
+- {description: Padding (pixels) of content in the card image, group: Image Style, important: false, name: card_image_content_padding, type: padding}
+- {default_value: '', description: The colour of the background of this component., group: Look and Feel, important: false, name: background_color, type: color}
+- {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: false, name: tooltip, type: string}
+- {default_value: '', description: The border of this component. Can take any valid CSS border value., group: Look and Feel, important: false, name: border, type: string}
+toolbox_item:
+  hidden: true
+  icon: {dark: 'asset:designer_icons/card_dark.svg', light: 'asset:designer_icons/card.svg'}

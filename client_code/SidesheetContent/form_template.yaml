@@ -1,11 +1,11 @@
-is_package: true
-toolbox_item:
-  icon: {light: 'asset:designer_icons/sidesheet.svg', dark: 'asset:designer_icons/sidesheet_dark.svg'}
-  hidden: true
-custom_component: true
 components: []
 container:
-  type: HtmlTemplate
   properties:
     html: "<div class=\"anvil-m3-sidesheet-top-section\">\n  <div class=\"anvil-m3-sidesheet-title-container\">\n    <div anvil-slot=\"anvil-m3-sidesheet-title\">    \n      <p anvil-if-slot-empty=\"anvil-m3-sidesheet-title\" class=\"anvil-designer-only\">Add sidesheet title here</p>\n    </div>\n    <div anvil-slot=\"anvil-m3-sidesheet-close-button\">\n      <p anvil-if-slot-empty=\"anvil-m3-sidesheet-close-button\" class=\"anvil-designer-only\">Drop close button here</p>\n    </div>\n  </div>\n  <div anvil-slot=\"anvil-m3-sidesheet\" class=anvil-m3-sidesheet-content>\n    <p anvil-if-slot-empty=\"anvil-m3-sidesheet\" class=\"anvil-designer-only\">Add sidesheet content here</p>\n  </div> \n</div>\n<div anvil-slot=\"anvil-m3-sidesheet-footer\" class=\"anvil-m3-sidesheet-footer\">\n  <p anvil-if-slot-empty=\"anvil-m3-sidesheet-footer\" class=\"anvil-designer-only\">Add sidesheet footer here</p>\n</div>"
+  type: HtmlTemplate
+custom_component: true
 custom_component_container: true
+is_package: true
+toolbox_item:
+  hidden: true
+  icon: {dark: 'asset:designer_icons/sidesheet_dark.svg', light: 'asset:designer_icons/sidesheet.svg'}

@@ -1,44 +1,6 @@
-properties:
-- {name: show_label, type: boolean, default_value: false, group: Label, important: true, description: Display a label above the thumb}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
-- {name: enabled, type: boolean, default_value: true, designer_hint: enabled, group: Interaction, description: 'If True, this component allows user interaction.'}
-- {name: progress_color, type: color, default_value: '', important: false, description: The colour of the progress bar., group: Look and feel}
-- {name: track_color, type: color, default_value: '', important: false, description: The colour of the track., group: Look and feel}
-- {name: thumb_color, type: color, default_value: '', important: false, description: The colour of the Slider thumb., group: Look and feel}
-- {name: label_color, type: color, default_value: '', important: false, description: The colour of the background of the label., group: Label}
-- {name: label_text_color, type: color, default_value: '', important: false, description: The colour of the text of the label., group: Label}
-- name: value
-  type: number
-  important: true
-  default_value: null
-  description: The value of the slider
-  group: Key properties
-  allow_binding_writeback: true
-  binding_writeback_events: [change]
-- {name: min, type: number, important: true, default_value: 0, description: The minimum value of the Slider., group: Key properties}
-- {name: max, type: number, important: true, default_value: 10, description: The maximum value of the Slider., group: Key properties}
-- {name: step, type: number, important: true, description: The stepping interval for the Slider, group: Key properties}
-- name: margin
-  type: margin
-  important: true
-  default_value: ['', '', '', '']
-  group: Layout
-  description: The margin (pixels) of the component.
-- {name: show_markers, type: boolean, default_value: false, important: true, description: 'If True, display discrete markers on the track.', group: Look and feel}
-- {name: tooltip, type: string, default_value: '', important: true, description: The text to display when the mouse is hovered over this component., group: Other}
-- {name: visible, type: boolean, default_value: true, important: true, description: 'If True, the component will be displayed.', group: Look and Feel, designer_hint: visible}
-is_package: true
-events:
-- {name: change, default_event: true, description: When the value of the component is changed}
-- {name: show, description: When the component is shown on the screen}
-- {name: hide, description: When the component is removed from the screen}
-toolbox_item:
-  icon: {light: 'asset:designer_icons/slider.svg', dark: 'asset:designer_icons/slider_dark.svg'}
-  hidden: true
-custom_component: true
 components: []
 container:
-  type: HtmlTemplate
+  event_bindings: {show: form_show}
   properties:
     html: |
       <!-- Inspired by: https://codepen.io/viestursm/pen/BayEjaN -->
@@ -54,4 +16,42 @@ container:
         </div>
         <input anvil-name="anvil-m3-slider-input" type="range" min="0" max="10">
       </div>
-  event_bindings: {show: form_show}
+  type: HtmlTemplate
+custom_component: true
+events:
+- {default_event: true, description: When the value of the component is changed, name: change}
+- {description: When the component is shown on the screen, name: show}
+- {description: When the component is removed from the screen, name: hide}
+is_package: true
+properties:
+- {default_value: false, description: Display a label above the thumb, group: Label, important: true, name: show_label, type: boolean}
+- {default_value: '', description: A style for this component defined in CSS and added to Roles., group: Look and Feel, name: role, type: themeRole}
+- {default_value: true, description: 'If True, this component allows user interaction.', designer_hint: enabled, group: Interaction, name: enabled, type: boolean}
+- {default_value: '', description: The colour of the progress bar., group: Look and feel, important: false, name: progress_color, type: color}
+- {default_value: '', description: The colour of the track., group: Look and feel, important: false, name: track_color, type: color}
+- {default_value: '', description: The colour of the Slider thumb., group: Look and feel, important: false, name: thumb_color, type: color}
+- {default_value: '', description: The colour of the background of the label., group: Label, important: false, name: label_color, type: color}
+- {default_value: '', description: The colour of the text of the label., group: Label, important: false, name: label_text_color, type: color}
+- allow_binding_writeback: true
+  binding_writeback_events: [change]
+  default_value: null
+  description: The value of the slider
+  group: Key properties
+  important: true
+  name: value
+  type: number
+- {default_value: 0, description: The minimum value of the Slider., group: Key properties, important: true, name: min, type: number}
+- {default_value: 10, description: The maximum value of the Slider., group: Key properties, important: true, name: max, type: number}
+- {description: The stepping interval for the Slider, group: Key properties, important: true, name: step, type: number}
+- default_value: ['', '', '', '']
+  description: The margin (pixels) of the component.
+  group: Layout
+  important: true
+  name: margin
+  type: margin
+- {default_value: false, description: 'If True, display discrete markers on the track.', group: Look and feel, important: true, name: show_markers, type: boolean}
+- {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: true, name: tooltip, type: string}
+- {default_value: true, description: 'If True, the component will be displayed.', designer_hint: visible, group: Look and Feel, important: true, name: visible, type: boolean}
+toolbox_item:
+  hidden: true
+  icon: {dark: 'asset:designer_icons/slider_dark.svg', light: 'asset:designer_icons/slider.svg'}

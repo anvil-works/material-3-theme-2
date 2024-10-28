@@ -1,120 +1,120 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {col_widths: '{"OIYCGE":15,"MZWSSO":45}'}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: text_head
-    properties: {text: Text and Heading Components, font_size: 25, text_color: 'theme:Primary'}
+- components:
+  - layout_properties: {grid_position: 'AEWVHC,PCSOYD'}
+    name: text_head
+    properties: {font_size: 25, text: Text and Heading Components, text_color: 'theme:Primary'}
     type: form:Components.Text
-    layout_properties: {grid_position: 'AEWVHC,PCSOYD'}
-  - name: typography_link
-    properties: {url: 'https://m3.material.io/styles/typography/overview', text: Typography in Material 3}
+  - layout_properties: {grid_position: ',undefined'}
+    name: typography_link
+    properties: {text: Typography in Material 3, url: 'https://m3.material.io/styles/typography/overview'}
     type: form:Components.Link
-    layout_properties: {grid_position: ',undefined'}
-  - name: heading_10
-    properties: {text: Text, style: title, scale: large}
+  - layout_properties: {grid_position: 'VZCCDQ,OIYCGE JFHDIX,YHHRRL'}
+    name: heading_10
+    properties: {scale: large, style: title, text: Text}
     type: form:Components.Heading
-    layout_properties: {grid_position: 'VZCCDQ,OIYCGE JFHDIX,YHHRRL'}
-  - name: card_1
-    properties: {}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'VZCCDQ,OIYCGE XXLMMI,VMYKZO'}
-    components:
-    - name: card_content_container_2
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: column_panel_1
-        properties: {}
-        type: ColumnPanel
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-        components:
-        - name: text_1
-          properties: {text: Label Large, scale: large, style: label}
+  - components:
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'ZXLMJG,PLIPRV'}
+          name: text_1
+          properties: {scale: large, style: label, text: Label Large}
           type: form:Components.Text
-          layout_properties: {grid_position: 'ZXLMJG,PLIPRV'}
-        - name: text_4
-          properties: {text: Body Large, scale: large}
+        - layout_properties: {grid_position: 'ZXLMJG,PDGWTZ'}
+          name: text_4
+          properties: {scale: large, text: Body Large}
           type: form:Components.Text
-          layout_properties: {grid_position: 'ZXLMJG,PDGWTZ'}
-        - name: text_2
-          properties: {text: Label Medium, style: label}
+        - layout_properties: {grid_position: 'WJXTUG,YFNUEK'}
+          name: text_2
+          properties: {style: label, text: Label Medium}
           type: form:Components.Text
-          layout_properties: {grid_position: 'WJXTUG,YFNUEK'}
-        - name: text_5
+        - layout_properties: {grid_position: 'WJXTUG,AGRPVZ'}
+          name: text_5
           properties: {text: Body Medium}
           type: form:Components.Text
-          layout_properties: {grid_position: 'WJXTUG,AGRPVZ'}
-        - name: text_3
-          properties: {text: Label Small, scale: small, style: label}
+        - layout_properties: {grid_position: 'FPOLMD,CYHNGR'}
+          name: text_3
+          properties: {scale: small, style: label, text: Label Small}
           type: form:Components.Text
-          layout_properties: {grid_position: 'FPOLMD,CYHNGR'}
-        - name: text_6
-          properties: {text: Body Small, scale: small}
+        - layout_properties: {grid_position: 'FPOLMD,GGIQSN'}
+          name: text_6
+          properties: {scale: small, text: Body Small}
           type: form:Components.Text
-          layout_properties: {grid_position: 'FPOLMD,GGIQSN'}
-  - name: heading_11
-    properties: {text: Heading, style: title, scale: large}
-    type: form:Components.Heading
-    layout_properties: {grid_position: 'VZCCDQ,MZWSSO WWYVUF,QOLWTO'}
-  - name: card_2
-    properties: {}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'VZCCDQ,MZWSSO ILWORC,OFLBFB'}
-    components:
-    - name: card_content_container_1
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        name: column_panel_1
+        properties: {}
+        type: ColumnPanel
+      layout_properties: {slot: card-content-slot}
+      name: card_content_container_2
       properties: {}
       type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: column_panel_2
-        properties: {col_widths: '{"GFZEWW":20,"DYCYXB":20,"KRPVFE":20}'}
-        type: ColumnPanel
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-        components:
-        - name: heading_1
-          properties: {text: Title Large, scale: large, style: title}
+    layout_properties: {grid_position: 'VZCCDQ,OIYCGE XXLMMI,VMYKZO'}
+    name: card_1
+    properties: {}
+    type: form:Components.Card
+  - layout_properties: {grid_position: 'VZCCDQ,MZWSSO WWYVUF,QOLWTO'}
+    name: heading_11
+    properties: {scale: large, style: title, text: Heading}
+    type: form:Components.Heading
+  - components:
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'BQBWMG,GFZEWW KMVLFD,AUHIPA'}
+          name: heading_1
+          properties: {scale: large, style: title, text: Title Large}
           type: form:Components.Heading
-          layout_properties: {grid_position: 'BQBWMG,GFZEWW KMVLFD,AUHIPA'}
-        - name: heading_2
-          properties: {text: Title Medium, style: title}
+        - layout_properties: {grid_position: 'BQBWMG,GFZEWW SECXWY,PFVBVJ'}
+          name: heading_2
+          properties: {style: title, text: Title Medium}
           type: form:Components.Heading
-          layout_properties: {grid_position: 'BQBWMG,GFZEWW SECXWY,PFVBVJ'}
-        - name: heading_4
+        - layout_properties: {grid_position: 'BQBWMG,DYCYXB'}
+          name: heading_4
           properties: {scale: large, style: headline, text: Headline Large}
           type: form:Components.Heading
-          layout_properties: {grid_position: 'BQBWMG,DYCYXB'}
-        - name: heading_7
-          properties: {text: Display Large, scale: large}
+        - layout_properties: {grid_position: 'BQBWMG,KRPVFE'}
+          name: heading_7
+          properties: {scale: large, text: Display Large}
           type: form:Components.Heading
-          layout_properties: {grid_position: 'BQBWMG,KRPVFE'}
-        - name: heading_3
-          properties: {text: Title Small, scale: small, style: title}
+        - layout_properties: {grid_position: 'FWYGVF,VUEKEL'}
+          name: heading_3
+          properties: {scale: small, style: title, text: Title Small}
           type: form:Components.Heading
-          layout_properties: {grid_position: 'FWYGVF,VUEKEL'}
-        - name: heading_5
+        - layout_properties: {grid_position: 'FWYGVF,KQQLLE JMNWAB,JSRSCM'}
+          name: heading_5
           properties: {style: headline, text: Headline Medium}
           type: form:Components.Heading
-          layout_properties: {grid_position: 'FWYGVF,KQQLLE JMNWAB,JSRSCM'}
-        - name: heading_6
-          properties: {text: Headline Small, scale: small, style: headline}
+        - layout_properties: {grid_position: 'FWYGVF,KQQLLE YMIBLU,NBGPVH'}
+          name: heading_6
+          properties: {scale: small, style: headline, text: Headline Small}
           type: form:Components.Heading
-          layout_properties: {grid_position: 'FWYGVF,KQQLLE YMIBLU,NBGPVH'}
-        - name: heading_8
+        - layout_properties: {grid_position: 'FWYGVF,SDUGJR YXFANG,GADWFT'}
+          name: heading_8
           properties: {text: Display Medium}
           type: form:Components.Heading
-          layout_properties: {grid_position: 'FWYGVF,SDUGJR YXFANG,GADWFT'}
-        - name: heading_9
-          properties: {text: Display Small, scale: small}
+        - layout_properties: {grid_position: 'FWYGVF,SDUGJR THVLGL,CKHDME'}
+          name: heading_9
+          properties: {scale: small, text: Display Small}
           type: form:Components.Heading
-          layout_properties: {grid_position: 'FWYGVF,SDUGJR THVLGL,CKHDME'}
-    - name: text_7
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        name: column_panel_2
+        properties: {col_widths: '{"GFZEWW":20,"DYCYXB":20,"KRPVFE":20}'}
+        type: ColumnPanel
+      layout_properties: {slot: card-content-slot}
+      name: card_content_container_1
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+    - layout_properties: {slot: card-content-slot}
+      name: text_7
       properties: {align: center}
       type: form:Components.Text
-      layout_properties: {slot: card-content-slot}
+    layout_properties: {grid_position: 'VZCCDQ,MZWSSO ILWORC,OFLBFB'}
+    name: card_2
+    properties: {}
+    type: form:Components.Card
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {col_widths: '{"OIYCGE":15,"MZWSSO":45}'}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

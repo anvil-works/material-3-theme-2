@@ -1,31 +1,31 @@
-layout: {type: 'form:TestLayout'}
-is_package: true
+components: []
 components_by_slot:
   slot_1:
-  - name: spacer_1
+  - layout_properties: {}
+    name: spacer_1
     properties: {height: 32}
     type: Spacer
-    layout_properties: {}
-  - name: slider_2
+  - layout_properties: {}
+    name: slider_2
     properties: {has_label: true}
     type: form:Components.Slider
-    layout_properties: {}
   slot_3:
-  - name: link_1
-    properties: {text: Click on me I'm a link, underline: true, italic: false, bold: false}
+  - layout_properties: {}
+    name: link_1
+    properties: {bold: false, italic: false, text: Click on me I'm a link, underline: true}
     type: form:Components.Link
-    layout_properties: {}
-  - name: linear_progress_indicator_1
+  - layout_properties: {}
+    name: linear_progress_indicator_1
     properties: {}
     type: form:Components.LinearProgressIndicator
-    layout_properties: {}
-  - name: divider_1
+  - layout_properties: {}
+    name: divider_1
     properties: {}
     type: form:Components.Divider
-    layout_properties: {}
-  - name: button_1
-    properties: {appearance: filled, text: Button, align: left}
+  - layout_properties: {}
+    name: button_1
+    properties: {align: left, appearance: filled, text: Button}
     type: form:Components.Button
-    layout_properties: {}
-components: []
 event_bindings: {show: form_show}
+is_package: true
+layout: {type: 'form:TestLayout'}

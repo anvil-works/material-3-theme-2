@@ -1,35 +1,35 @@
-properties:
-- {name: visible, type: boolean, default_value: true, default_binding_prop: true, description: 'If True, the component will be displayed.', important: true, designerHint: visible, designer_hint: visible, group: Look and Feel}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
-- name: type
-  type: enum
-  important: true
-  options: [determinate, indeterminate]
-  default_value: indeterminate
-  group: Key Properties
-  description: Display a determinate or indeterminate progress indicator. Use determinate to set the progress with the progress property. Use indeterminate to express an unspecified amount of wait time.
-- {name: progress, type: number, important: true, default_value: 0, description: The percentage of progress for the determinate type indicator. This property is irrelevant for the indeterminate type., group: Key Properties}
-- name: align
-  type: enum
-  important: true
-  options: [left, center, right]
-  designer_hint: align-horizontal
-  default_value: left
-  group: Layout
-  description: The position of this component in the available space.
-- {name: margin, type: margin, important: true, group: Layout, description: The margin (pixels) of the component.}
-- {name: tooltip, type: string, default_value: '', important: true, group: Other, description: The text to display when the mouse is hovered over this component.}
-- {name: color, type: color, default_value: '', important: true, description: The color of this component.}
-is_package: true
-events:
-- {name: show, default_event: true, description: When the component is shown on the screen.}
-- {name: hide, description: When the component is removed from the screen.}
-toolbox_item:
-  icon: {light: 'asset:designer_icons/circular_progress_indicator.svg', dark: 'asset:designer_icons/circular_progress_indicator_dark.svg'}
-  hidden: true
-custom_component: true
 components: []
 container:
-  type: HtmlTemplate
   properties:
     html: "<div anvil-name=\"anvil-m3-progressindicator-component\" style=\"display:flex\">\n  <div anvil-name=\"anvil-m3-progressindicator\" class=\"anvil-m3-progressindicator-component\">\n    <svg anvil-name=\"anvil-m3-progressindicator-indeterminate\" class=\"anvil-m3-progressindicator-circular\" style=\"transform: scaleX(-1)\">\n      <path anvil-name=\"anvil-m3-progressindicator-arc-indeterminate\" class=\"anvil-m3-progressindicator-arc anvil-m3-indefinate\" d=\"M 42 23 A 18 18 358 1 1 42 22\"></path>\n    </svg>\n    <svg anvil-name=\"anvil-m3-progressindicator-determinate\" class=\"anvil-m3-progressindicator-circular anvil-m3-progressindicator-hidden\">\n      <path anvil-name=\"anvil-m3-progressindicator-arc\" class=\"anvil-m3-progressindicator-arc\" d=\"M 24.0 6.0 A 18 18 0.0 0 1 25.7970014996429 6.089925024995534\">\n      </path>\n    </svg> \n  </div>\n</div>"
+  type: HtmlTemplate
+custom_component: true
+events:
+- {default_event: true, description: When the component is shown on the screen., name: show}
+- {description: When the component is removed from the screen., name: hide}
+is_package: true
+properties:
+- {default_binding_prop: true, default_value: true, description: 'If True, the component will be displayed.', designerHint: visible, designer_hint: visible, group: Look and Feel, important: true, name: visible, type: boolean}
+- {default_value: '', description: A style for this component defined in CSS and added to Roles., group: Look and Feel, name: role, type: themeRole}
+- default_value: indeterminate
+  description: Display a determinate or indeterminate progress indicator. Use determinate to set the progress with the progress property. Use indeterminate to express an unspecified amount of wait time.
+  group: Key Properties
+  important: true
+  name: type
+  options: [determinate, indeterminate]
+  type: enum
+- {default_value: 0, description: The percentage of progress for the determinate type indicator. This property is irrelevant for the indeterminate type., group: Key Properties, important: true, name: progress, type: number}
+- default_value: left
+  description: The position of this component in the available space.
+  designer_hint: align-horizontal
+  group: Layout
+  important: true
+  name: align
+  options: [left, center, right]
+  type: enum
+- {description: The margin (pixels) of the component., group: Layout, important: true, name: margin, type: margin}
+- {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: true, name: tooltip, type: string}
+- {default_value: '', description: The color of this component., important: true, name: color, type: color}
+toolbox_item:
+  hidden: true
+  icon: {dark: 'asset:designer_icons/circular_progress_indicator_dark.svg', light: 'asset:designer_icons/circular_progress_indicator.svg'}

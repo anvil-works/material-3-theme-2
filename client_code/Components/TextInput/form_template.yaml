@@ -1,68 +1,68 @@
-properties:
-- {name: label_text, type: string, default_value: '', important: false, default_binding_prop: true, group: Key Properties, description: The label text of the component.}
-- {name: placeholder, type: string, default_value: '', important: false, group: Key Properties, description: The text to be displayed when the component is empty.}
-- {name: supporting_text, type: string, default_value: '', important: false, group: Key Properties, description: The supporting text displayed underneath this component}
-- {name: character_limit, type: number, important: false, default_value: 0, group: Key Properties, description: The max number of characters a user can enter into this component. The limit is displayed below the component.}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles}
-- name: align
-  type: enum
-  options: [left, center, right]
-  default_value: left
-  important: true
-  group: Layout
-  designer_hint: align-horizontal
-  description: The position of this component in the available space.
-- name: appearance
-  type: enum
-  important: true
-  options: [filled, outlined]
-  default_value: filled
-  group: Key Properties
-  description: A predefined style for this component.
-- {name: visible, type: boolean, default_value: true, important: true, designer_hint: visible, group: Look and Feel, description: 'If True, the component will be displayed.'}
-- {name: label_text_color, type: color, default_value: '', important: false, description: The colour of the label text on the component., group: Look and Feel}
-- {name: display_text_color, type: color, default_value: '', important: false, description: The colour of the input text displayed on this component., group: Look and Feel}
-- {name: supporting_text_color, type: color, default_value: '', important: false, description: The colour of the supporting text underneath this component., group: Look and Feel}
-- {name: italic_label, type: boolean, default_value: false, important: false, description: 'If True, the label text will be italic.', group: Text}
-- {name: bold_label, type: boolean, default_value: false, important: false, description: 'If True, the label text will be bold.', group: Text}
-- {name: underline_label, type: boolean, default_value: false, important: false, description: 'If True, the label text will be underlined.', group: Text}
-- {name: label_font_size, type: number, important: false, description: The font size of the label text on this component., group: Text}
-- {name: label_font, type: string, default_value: '', important: false, description: The font family to use for the label on this component., group: Text}
-- {name: italic_display, type: boolean, default_value: false, important: false, description: 'If True, the input and placeholder text will be italic.', group: Text, designer_hint: font-italic}
-- {name: bold_display, type: boolean, default_value: false, important: false, description: 'If True, the input and placeholder text will be bold.', group: Text, designer_hint: font-bold}
-- {name: underline_display, type: boolean, default_value: false, important: false, description: 'If True, the input and placeholder text will be underlined.', group: Text, designer_hint: font-underline}
-- {name: display_font, type: string, default_value: '', important: false, description: The font family to use for the input and placeholder text., group: Text}
-- {name: display_font_size, type: number, important: false, description: The font size of the input and placeholder text., group: Text}
-- {name: enabled, type: boolean, default_value: true, important: true, group: Interaction, designer_hint: enabled, description: 'If True, this component allows user interaction.'}
-- {name: error, type: boolean, default_value: false, important: false, group: Interaction, designer_hint: toggle, description: 'If True, this component is in an error state.'}
-- name: spacing
-  type: spacing
-  important: true
-  default_value:
-    padding: [auto, null, null, null]
-    margin: [auto, null, null, null]
-  group: Layout
-  description: The margin and padding of this component. Default value is in pixels.
-- {name: background_color, type: color, default_value: '', important: false, description: The colour of the background of this component., group: Look and Feel}
-- {name: tooltip, type: string, default_value: '', important: false, group: Other, description: The text to display when the mouse is hovered over this component.}
-- {name: supporting_text_font, type: string, default_value: '', important: false, description: The font family to use for the supporting text underneath this component., group: Text}
-- {name: supporting_text_font_size, type: number, important: false, description: The font size of the supporting text displayed underneath this component., group: Text}
-- {name: character_limit_color, type: color, default_value: '', important: false, description: The colour of the character limit text displayed underneath this component., group: Look and Feel}
-- {name: character_limit_font, type: string, default_value: '', important: false, description: The font family of the character limit text displayed underneath this component., group: Text}
-- {name: character_limit_font_size, type: number, important: false, description: The font size of the character limit text displayed underneath this component., group: Text}
-- {name: border_color, type: color, default_value: '', important: false, description: The colour of the border of this component., group: Look and Feel}
-is_package: true
-events:
-- {name: change, description: When the text in this component is edited., default_event: true}
-- {name: show, description: When the component is shown on the screen.}
-- {name: hide, description: When the component is removed from the screen.}
-- {name: focus, description: When the component gets focus.}
-- {name: lost_focus, description: When the component loses focus.}
-toolbox_item: {hidden: true}
-custom_component: true
 components: []
 container:
-  type: HtmlTemplate
+  event_bindings: {show: form_show}
   properties:
     html: "<div class=\"anvil-m3-textinput\" anvil-name=\"anvil-m3-textinput\" >\n  <div class=\"anvil-m3-textinput-input-container\" anvil-name=\"anvil-m3-input-container\">\n    <textarea class=\"anvil-m3-textinput-input anvil-m3-textarea\" row=\"1\" anvil-name=\"anvil-m3-textarea\"></textarea>\n    <input class=\"anvil-m3-textinput-input anvil-m3-textfield\" type=\"text\" anvil-name=\"anvil-m3-textfield\" />\n    <div class=\"anvil-m3-textinput-border\"anvil-name=\"anvil-m3-border-container\"  >\n      <div class=\"anvil-m3-textinput-border-container-cell-tl\"></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-t\"></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-tr\"></div>\n      <div class=\"anvil-m3-textinput-border-container-cell-b\"></div>\n      <label class=\"anvil-m3-textinput-label-text\" anvil-name=\"anvil-m3-label-text\" for=\"\"></label>\n    </div>\n    <div class=\"anvil-m3-textinput-icon-container\" anvil-name=\"anvil-m3-icon-container\">\n      <i class=\"anvil-m3-textinput-leading-icon material-symbols-outlined\" anvil-name=\"anvil-m3-leading-icon\" style=\"display: none;\"></i>\n      <i class=\"anvil-m3-textinput-trailing-icon material-symbols-outlined\" anvil-name=\"anvil-m3-trailing-icon\" style=\"display: none;\"></i>\n  \t</div>\n  </div>\n  <div class=\"anvil-m3-textinput-subcontent\" anvil-name=\"anvil-m3-subcontent\">\n    <label class=\"anvil-m3-textinput-supporting-text\" anvil-name=\"anvil-m3-supporting-text\"></label> \n    <label style=\"display: none\" class=\"anvil-m3-textinput-character-count\" anvil-name=\"anvil-m3-character-counter\">\n      <span anvil-name=\"anvil-m3-character-amount\" >0</span>\n      /\n      <span anvil-name=\"anvil-m3-character-limit\" >10</span>\n    </label>\n  </div>\n</div>"
-  event_bindings: {show: form_show}
+  type: HtmlTemplate
+custom_component: true
+events:
+- {default_event: true, description: When the text in this component is edited., name: change}
+- {description: When the component is shown on the screen., name: show}
+- {description: When the component is removed from the screen., name: hide}
+- {description: When the component gets focus., name: focus}
+- {description: When the component loses focus., name: lost_focus}
+is_package: true
+properties:
+- {default_binding_prop: true, default_value: '', description: The label text of the component., group: Key Properties, important: false, name: label_text, type: string}
+- {default_value: '', description: The text to be displayed when the component is empty., group: Key Properties, important: false, name: placeholder, type: string}
+- {default_value: '', description: The supporting text displayed underneath this component, group: Key Properties, important: false, name: supporting_text, type: string}
+- {default_value: 0, description: The max number of characters a user can enter into this component. The limit is displayed below the component., group: Key Properties, important: false, name: character_limit, type: number}
+- {default_value: '', description: A style for this component defined in CSS and added to Roles, group: Look and Feel, name: role, type: themeRole}
+- default_value: left
+  description: The position of this component in the available space.
+  designer_hint: align-horizontal
+  group: Layout
+  important: true
+  name: align
+  options: [left, center, right]
+  type: enum
+- default_value: filled
+  description: A predefined style for this component.
+  group: Key Properties
+  important: true
+  name: appearance
+  options: [filled, outlined]
+  type: enum
+- {default_value: true, description: 'If True, the component will be displayed.', designer_hint: visible, group: Look and Feel, important: true, name: visible, type: boolean}
+- {default_value: '', description: The colour of the label text on the component., group: Look and Feel, important: false, name: label_text_color, type: color}
+- {default_value: '', description: The colour of the input text displayed on this component., group: Look and Feel, important: false, name: display_text_color, type: color}
+- {default_value: '', description: The colour of the supporting text underneath this component., group: Look and Feel, important: false, name: supporting_text_color, type: color}
+- {default_value: false, description: 'If True, the label text will be italic.', group: Text, important: false, name: italic_label, type: boolean}
+- {default_value: false, description: 'If True, the label text will be bold.', group: Text, important: false, name: bold_label, type: boolean}
+- {default_value: false, description: 'If True, the label text will be underlined.', group: Text, important: false, name: underline_label, type: boolean}
+- {description: The font size of the label text on this component., group: Text, important: false, name: label_font_size, type: number}
+- {default_value: '', description: The font family to use for the label on this component., group: Text, important: false, name: label_font, type: string}
+- {default_value: false, description: 'If True, the input and placeholder text will be italic.', designer_hint: font-italic, group: Text, important: false, name: italic_display, type: boolean}
+- {default_value: false, description: 'If True, the input and placeholder text will be bold.', designer_hint: font-bold, group: Text, important: false, name: bold_display, type: boolean}
+- {default_value: false, description: 'If True, the input and placeholder text will be underlined.', designer_hint: font-underline, group: Text, important: false, name: underline_display, type: boolean}
+- {default_value: '', description: The font family to use for the input and placeholder text., group: Text, important: false, name: display_font, type: string}
+- {description: The font size of the input and placeholder text., group: Text, important: false, name: display_font_size, type: number}
+- {default_value: true, description: 'If True, this component allows user interaction.', designer_hint: enabled, group: Interaction, important: true, name: enabled, type: boolean}
+- {default_value: false, description: 'If True, this component is in an error state.', designer_hint: toggle, group: Interaction, important: false, name: error, type: boolean}
+- default_value:
+    margin: [auto, null, null, null]
+    padding: [auto, null, null, null]
+  description: The margin and padding of this component. Default value is in pixels.
+  group: Layout
+  important: true
+  name: spacing
+  type: spacing
+- {default_value: '', description: The colour of the background of this component., group: Look and Feel, important: false, name: background_color, type: color}
+- {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: false, name: tooltip, type: string}
+- {default_value: '', description: The font family to use for the supporting text underneath this component., group: Text, important: false, name: supporting_text_font, type: string}
+- {description: The font size of the supporting text displayed underneath this component., group: Text, important: false, name: supporting_text_font_size, type: number}
+- {default_value: '', description: The colour of the character limit text displayed underneath this component., group: Look and Feel, important: false, name: character_limit_color, type: color}
+- {default_value: '', description: The font family of the character limit text displayed underneath this component., group: Text, important: false, name: character_limit_font, type: string}
+- {description: The font size of the character limit text displayed underneath this component., group: Text, important: false, name: character_limit_font_size, type: number}
+- {default_value: '', description: The colour of the border of this component., group: Look and Feel, important: false, name: border_color, type: color}
+toolbox_item: {hidden: true}

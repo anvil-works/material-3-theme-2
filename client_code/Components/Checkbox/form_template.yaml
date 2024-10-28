@@ -1,50 +1,6 @@
-properties:
-- {description: Whether or not the checkbox is checked., group: Key Properties, name: checked, default_binding_prop: true, type: boolean, important: true, designer_hint: toggle, designerHint: toggle, default_value: false}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
-- {description: 'If True, this component allows user interaction.', group: Interaction, name: enabled, type: boolean, important: true, designer_hint: enabled, designerHint: enabled, default_value: true}
-- {name: error, type: boolean, default_value: false, description: Whether or not the checkbox is in an error state., group: Interaction, important: true}
-- name: text
-  type: string
-  default_value: ''
-  description: |+
-    The text displayed on this component.
-
-  group: Key Properties
-  important: true
-- {name: allow_indeterminate, type: boolean, default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None., group: Interaction, important: true}
-- {description: 'If True, the component will be displayed.', group: Look and Feel, name: visible, type: boolean, important: true, designer_hint: visible, designerHint: visible, default_value: true}
-- {name: underline, type: boolean, default_value: false, description: 'If True, this component’s text will be underlined.', designerHint: font-underline, designer_hint: font-underline, group: Text}
-- {name: italic, type: boolean, default_value: false, description: 'If True, this component’s text will be italic.', designerHint: font-italic, group: Text, designer_hint: font-italic}
-- {name: font_size, type: number, description: The font size of the text displayed on this component., group: Text, important: true}
-- {name: bold, type: boolean, default_value: false, description: 'If True, this component’s text will be bold.', designerHint: font-bold, group: Text, designer_hint: font-bold}
-- {name: border, type: string, default_value: '', description: The border of this component. Can take any valid CSS border value., group: Look and Feel}
-- {name: font_family, type: string, default_value: '', description: The font family to use for this component., group: Text}
-- {name: checkbox_color, type: color, default_value: '', description: The color of the checkbox., group: Look and Feel}
-- {name: text_color, type: color, default_value: '', description: The colour of the text on the component., group: Look and Feel}
-- {name: background_color, type: color, default_value: '', description: The colour of the background of this component., group: Look and Feel}
-- description: The position of this component in the available space.
-  group: Layout
-  name: align
-  type: enum
-  important: true
-  designer_hint: align-horizontal
-  designerHint: align-horizontal
-  options: [left, center, right]
-  default_value: left
-- {name: margin, type: margin, important: true, group: Layout, description: The margin (pixels) of the component.}
-- {name: tooltip, type: string, default_value: '', important: true, description: The text to display when the mouse is hovered over this component., group: Other}
-is_package: true
-events:
-- {name: change, default_event: true, description: When the component is checked or unchecked}
-- {name: show, description: When the component is shown on the screen.}
-- {name: hide, description: When the component is removed from the screen.}
-toolbox_item:
-  icon: {light: 'asset:designer_icons/checkbox.svg', dark: 'asset:designer_icons/checkbox_dark.svg'}
-  hidden: true
-custom_component: true
 components: []
 container:
-  type: HtmlTemplate
+  event_bindings: {show: form_show}
   properties:
     html: |
       <div anvil-name="anvil-m3-checkbox-component" style="display:flex">
@@ -58,4 +14,48 @@ container:
             <label class="anvil-m3-checkbox-label" anvil-name="anvil-m3-checkbox-label"></label>
         </div>
       </div>
-  event_bindings: {show: form_show}
+  type: HtmlTemplate
+custom_component: true
+events:
+- {default_event: true, description: When the component is checked or unchecked, name: change}
+- {description: When the component is shown on the screen., name: show}
+- {description: When the component is removed from the screen., name: hide}
+is_package: true
+properties:
+- {default_binding_prop: true, default_value: false, description: Whether or not the checkbox is checked., designerHint: toggle, designer_hint: toggle, group: Key Properties, important: true, name: checked, type: boolean}
+- {default_value: '', description: A style for this component defined in CSS and added to Roles., group: Look and Feel, name: role, type: themeRole}
+- {default_value: true, description: 'If True, this component allows user interaction.', designerHint: enabled, designer_hint: enabled, group: Interaction, important: true, name: enabled, type: boolean}
+- {default_value: false, description: Whether or not the checkbox is in an error state., group: Interaction, important: true, name: error, type: boolean}
+- default_value: ''
+  description: |+
+    The text displayed on this component.
+
+  group: Key Properties
+  important: true
+  name: text
+  type: string
+- {default_value: false, description: Support an indeterminate state. The indeterminate state can only be set in code by setting checked=None., group: Interaction, important: true, name: allow_indeterminate, type: boolean}
+- {default_value: true, description: 'If True, the component will be displayed.', designerHint: visible, designer_hint: visible, group: Look and Feel, important: true, name: visible, type: boolean}
+- {default_value: false, description: 'If True, this component’s text will be underlined.', designerHint: font-underline, designer_hint: font-underline, group: Text, name: underline, type: boolean}
+- {default_value: false, description: 'If True, this component’s text will be italic.', designerHint: font-italic, designer_hint: font-italic, group: Text, name: italic, type: boolean}
+- {description: The font size of the text displayed on this component., group: Text, important: true, name: font_size, type: number}
+- {default_value: false, description: 'If True, this component’s text will be bold.', designerHint: font-bold, designer_hint: font-bold, group: Text, name: bold, type: boolean}
+- {default_value: '', description: The border of this component. Can take any valid CSS border value., group: Look and Feel, name: border, type: string}
+- {default_value: '', description: The font family to use for this component., group: Text, name: font_family, type: string}
+- {default_value: '', description: The color of the checkbox., group: Look and Feel, name: checkbox_color, type: color}
+- {default_value: '', description: The colour of the text on the component., group: Look and Feel, name: text_color, type: color}
+- {default_value: '', description: The colour of the background of this component., group: Look and Feel, name: background_color, type: color}
+- default_value: left
+  description: The position of this component in the available space.
+  designerHint: align-horizontal
+  designer_hint: align-horizontal
+  group: Layout
+  important: true
+  name: align
+  options: [left, center, right]
+  type: enum
+- {description: The margin (pixels) of the component., group: Layout, important: true, name: margin, type: margin}
+- {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: true, name: tooltip, type: string}
+toolbox_item:
+  hidden: true
+  icon: {dark: 'asset:designer_icons/checkbox_dark.svg', light: 'asset:designer_icons/checkbox.svg'}

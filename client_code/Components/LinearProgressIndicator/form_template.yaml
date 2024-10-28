@@ -1,35 +1,35 @@
-properties:
-- {default_value: true, group: Look and Feel, important: true, name: visible, default_binding_prop: true, type: boolean, designer_hint: visible, designerHint: visible, description: 'If True, the component will be displayed.'}
-- {name: role, type: themeRole, default_value: '', group: Look and Feel, description: A style for this component defined in CSS and added to Roles.}
-- name: align
-  type: enum
-  important: true
-  options: [left, center, right, full]
-  default_value: left
-  designer_hint: align-horizontal
-  description: The position of this component in the available space.
-  group: Layout
-- name: type
-  type: enum
-  important: true
-  options: [determinate, indeterminate]
-  default_value: indeterminate
-  group: Key Properties
-  description: Display a determinate or indeterminate progress indicator. Use determinate to set the progress with the progress property. Use indeterminate to express an unspecified amount of wait time.
-- {name: progress, type: number, group: Key Properties, important: true, default_value: 0, description: The percentage of progress for the determinate type indicator. This property is irrelevant for the indeterminate type.}
-- {name: margin, type: margin, group: Layout, important: true, description: The margin (pixels) of the component.}
-- {name: tooltip, type: string, default_value: '', important: true, group: Other, description: The text to display when the mouse is hovered over this component.}
-- {name: color, type: color, default_value: '', important: true, description: The color of this component.}
-is_package: true
-events:
-- {name: show, default_event: true}
-- {name: hide}
-toolbox_item:
-  icon: {light: 'asset:designer_icons/linear_progress_indicator.svg', dark: 'asset:designer_icons/linear_progress_indicator_dark.svg'}
-  hidden: true
-custom_component: true
 components: []
 container:
-  type: HtmlTemplate
   properties:
     html: "<div anvil-name=\"anvil-m3-progressindicator-linear\" class=\"anvil-m3-progressindicator-component\">\n  <svg width=\"100%\" anvil-name=\"anvil-m3-progressindicator-indeterminate\" class=\"anvil-m3-progressindicator-track\">\n    <line y1=\"2\" y2=\"2\" x1=\"0\" x2=\"0\" anvil-name=\"anvil-m3-progressindicator-indicator-indeterminate\" class=\"anvil-m3-progressindicator-indicator\">\n      <animate begin=\"0\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x2\" dur=\"4s\" calcMode=\"spline\" \n          values=\"0;120%\" \n          keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n      <animate begin=\"00ms\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x1\" dur=\"4s\" calcMode=\"spline\" \n          values=\"0;120%\" \n          keySplines=\"0.48 0 0 0.83\"></animate>\n    </line> \n    <line y1=\"2\" y2=\"2\" x1=\"0\" x2=\"0\" anvil-name=\"anvil-m3-progressindicator-indicator-indeterminate-2\" class=\"anvil-m3-progressindicator-indicator\">\n        <animate begin=\"2000ms\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x2\" dur=\"4s\" calcMode=\"spline\" \n            values=\"0;120%\" \n            keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n        <animate begin=\"2000ms\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x1\" dur=\"4s\" calcMode=\"spline\" \n            values=\"0;120%\" \n            keySplines=\"0.48 0 0 0.83\"></animate>\n    </line>\n  </svg>\n  <svg width=\"100%\" anvil-name=\"anvil-m3-progressindicator-determinate\" class=\"anvil-m3-progressindicator-track anvil-m3-progressindicator-hidden\">\n    <line y1=\"2\" y2=\"2\" x1=\"0\" x2=\"0\" anvil-name=\"anvil-m3-progressindicator-indicator\" class=\"anvil-m3-progressindicator-indicator\">\n      <!--\n      <animate anvil-name=\"indicator-animate1\" begin=\"0\" repeatCount=\"indefinite\" attributeType=\"XML\" attributeName=\"x2\" dur=\"4s\" calcMode=\"spline\" \n          values=\"0;120%\" \n          keySplines=\"0.06 0.7 0.11 0.98\"></animate>\n      -->\n    </line> \n  </svg>\n</div>"
+  type: HtmlTemplate
+custom_component: true
+events:
+- {default_event: true, name: show}
+- {name: hide}
+is_package: true
+properties:
+- {default_binding_prop: true, default_value: true, description: 'If True, the component will be displayed.', designerHint: visible, designer_hint: visible, group: Look and Feel, important: true, name: visible, type: boolean}
+- {default_value: '', description: A style for this component defined in CSS and added to Roles., group: Look and Feel, name: role, type: themeRole}
+- default_value: left
+  description: The position of this component in the available space.
+  designer_hint: align-horizontal
+  group: Layout
+  important: true
+  name: align
+  options: [left, center, right, full]
+  type: enum
+- default_value: indeterminate
+  description: Display a determinate or indeterminate progress indicator. Use determinate to set the progress with the progress property. Use indeterminate to express an unspecified amount of wait time.
+  group: Key Properties
+  important: true
+  name: type
+  options: [determinate, indeterminate]
+  type: enum
+- {default_value: 0, description: The percentage of progress for the determinate type indicator. This property is irrelevant for the indeterminate type., group: Key Properties, important: true, name: progress, type: number}
+- {description: The margin (pixels) of the component., group: Layout, important: true, name: margin, type: margin}
+- {default_value: '', description: The text to display when the mouse is hovered over this component., group: Other, important: true, name: tooltip, type: string}
+- {default_value: '', description: The color of this component., important: true, name: color, type: color}
+toolbox_item:
+  hidden: true
+  icon: {dark: 'asset:designer_icons/linear_progress_indicator_dark.svg', light: 'asset:designer_icons/linear_progress_indicator.svg'}

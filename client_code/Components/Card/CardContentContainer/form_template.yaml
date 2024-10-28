@@ -1,12 +1,12 @@
-is_package: true
-toolbox_item: {hidden: true}
-custom_component: true
 components: []
 container:
-  type: HtmlTemplate
   properties:
     html: |-
       <div anvil-slot="anvil-m3-card-content-container-slot" anvil-name="anvil-m3-card-content-container" class="anvil-m3-card-content-container">
         <p anvil-name="empty-slot" anvil-if-slot-empty="anvil-m3-card-content-container-slot" style="color: #BBB"><i>Insert Content</i></p>
       </div>
+  type: HtmlTemplate
+custom_component: true
 custom_component_container: true
+is_package: true
+toolbox_item: {hidden: true}

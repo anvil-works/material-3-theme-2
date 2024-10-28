@@ -1,142 +1,142 @@
-layout: {type: 'form:TestLayout'}
-is_package: true
 components_by_slot:
+  slot_1: []
   slot_3:
-  - name: column_panel_1
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {}
-    components:
-    - name: card_1
+  - components:
+    - components:
+      - layout_properties: {slot: card-content-slot}
+        name: heading_2
+        properties: {bold: true, role: null, style: headline, text: Monstera}
+        type: form:Components.Heading
+      - layout_properties: {slot: card-content-slot}
+        name: text_3
+        properties: {bold: true, scale: large, text: £35, tooltip: test}
+        type: form:Components.Text
+      - layout_properties: {slot: card-content-slot}
+        name: text_4
+        properties:
+          margin: [null, null, '12', null]
+          role: null
+          text: 30-40cm
+        type: form:Components.Text
+      - layout_properties: {slot: card-content-slot}
+        name: button_1
+        properties: {appearance: filled, icon: null, role: null, text: Add to Cart}
+        type: form:Components.Button
+      layout_properties: {grid_position: 'WFWNVB,SSHCJN'}
+      name: card_1
       properties:
+        card_content_padding: ['16', '28', '16', '28']
         card_image: _/theme/pexels-avonne-stalling-6597437.jpg
         image_height: 300px
-        card_content_padding: ['16', '28', '16', '28']
+        image_position: top
         role: null
-        image_position: top
       type: form:Components.Card
-      layout_properties: {grid_position: 'WFWNVB,SSHCJN'}
-      components:
-      - name: heading_2
-        properties: {text: Monstera, bold: true, style: headline, role: null}
+    - components:
+      - layout_properties: {slot: card-content-slot}
+        name: heading_2_copy
+        properties: {bold: true, style: headline, text: Chinese Money Plant, tooltip: heading}
         type: form:Components.Heading
-        layout_properties: {slot: card-content-slot}
-      - name: text_3
-        properties: {text: £35, bold: true, scale: large, tooltip: test}
-        type: form:Components.Text
-        layout_properties: {slot: card-content-slot}
-      - name: text_4
+      - layout_properties: {slot: card-content-slot}
+        name: text_3_copy
         properties:
-          text: 30-40cm
-          margin: [null, null, '12', null]
-          role: null
-        type: form:Components.Text
-        layout_properties: {slot: card-content-slot}
-      - name: button_1
-        properties: {appearance: filled, text: Add to Cart, role: null, icon: null}
-        type: form:Components.Button
-        layout_properties: {slot: card-content-slot}
-    - name: card_1_copy
-      properties:
-        card_image: _/theme/pexels-erik-mclean-10894354.jpg
-        image_height: 300px
-        card_content_padding: ['16', '28', '16', '28']
-        border: ''
-        image_position: top
-      type: form:Components.Card
-      layout_properties: {grid_position: 'WFWNVB,GWTWMU'}
-      components:
-      - name: heading_2_copy
-        properties: {text: Chinese Money Plant, bold: true, style: headline, tooltip: heading}
-        type: form:Components.Heading
-        layout_properties: {slot: card-content-slot}
-      - name: text_3_copy
-        properties:
-          text: £16
           bold: true
-          scale: large
-          tooltip: test test
           font_size: null
-          material_icon: ''
           icon_size: null
           margin: [null, '', null, null]
+          material_icon: ''
+          scale: large
+          text: £16
+          tooltip: test test
         type: form:Components.Text
-        layout_properties: {slot: card-content-slot}
-      - name: text_4_copy
+      - layout_properties: {slot: card-content-slot}
+        name: text_4_copy
         properties:
-          text: 10-20cm
-          margin: [null, null, '12', null]
-          font_size: null
+          align: left
           background_color: ''
-          align: left
+          font_size: null
+          margin: [null, null, '12', null]
+          text: 10-20cm
         type: form:Components.Text
+      - event_bindings: {}
         layout_properties: {slot: card-content-slot}
-      - name: button_2_copy
+        name: button_2_copy
         properties:
-          role: null
-          appearance: filled
           align: left
-          margin: ['8', '8', '8', '0']
-          tooltip: Hello
-          border: ''
-          material_icon: 15mp
-          text: Add to cart
-          icon_align: left
+          appearance: filled
           bold: true
+          border: ''
+          icon_align: left
+          margin: ['8', '8', '8', '0']
+          material_icon: 15mp
+          role: null
+          text: Add to cart
+          tooltip: Hello
         type: form:Components.Button
-        layout_properties: {slot: card-content-slot}
-        event_bindings: {}
-    - name: text_field_1
-      properties: {placeholder: Long placeholder text, appearance: outlined}
-      type: form:Components.TextInput.TextField
-      layout_properties: {grid_position: 'ZHBAGJ,AXLSUW'}
-    - name: dropdown_menu_1
+      layout_properties: {grid_position: 'WFWNVB,GWTWMU'}
+      name: card_1_copy
       properties:
-        placeholder: Long placeholder text
-        items: [Item 1]
+        border: ''
+        card_content_padding: ['16', '28', '16', '28']
+        card_image: _/theme/pexels-erik-mclean-10894354.jpg
+        image_height: 300px
+        image_position: top
+      type: form:Components.Card
+    - layout_properties: {grid_position: 'ZHBAGJ,AXLSUW'}
+      name: text_field_1
+      properties: {appearance: outlined, placeholder: Long placeholder text}
+      type: form:Components.TextInput.TextField
+    - layout_properties: {grid_position: 'DPTAFV,BIUBQY'}
+      name: dropdown_menu_1
+      properties:
         appearance: outlined
+        items: [Item 1]
+        placeholder: Long placeholder text
       type: form:Components.DropdownMenu
-      layout_properties: {grid_position: 'DPTAFV,BIUBQY'}
-    - name: interactive_card_1
+    - layout_properties: {grid_position: 'WEWMJW,WUNIXO'}
+      name: interactive_card_1
       properties: {enabled: false}
       type: form:Components.InteractiveCard
-      layout_properties: {grid_position: 'WEWMJW,WUNIXO'}
-    - name: card_2
-      properties: {appearance: elevated}
-      type: form:Components.Card
-      layout_properties: {grid_position: 'FGQTIR,KATWKB'}
-      components:
-      - name: data_grid_1_copy
-        properties:
-          columns:
-          - {id: SSPCYS, data_key: ID, title: ID}
-          - {id: BEMEZA, data_key: Name, title: Name}
-          - {id: AUINYA, data_key: Job, title: Job}
-        type: DataGrid
-        layout_properties: {slot: card-content-slot}
-        components:
-        - name: repeating_panel_1_copy
+    - components:
+      - components:
+        - layout_properties: {}
+          name: repeating_panel_1_copy
           properties: {item_template: BrookeTestPage.RowTemplate2, visible: true}
           type: RepeatingPanel
-          layout_properties: {}
-    - name: data_grid_1
-      properties:
-        columns:
-        - {id: SSPCYS, data_key: ID, title: ID}
-        - {id: BEMEZA, data_key: Name, title: Name}
-        - {id: AUINYA, data_key: Job, title: Job}
-      type: DataGrid
-      components:
-      - name: repeating_panel_1
+        layout_properties: {slot: card-content-slot}
+        name: data_grid_1_copy
+        properties:
+          columns:
+          - {data_key: ID, id: SSPCYS, title: ID}
+          - {data_key: Name, id: BEMEZA, title: Name}
+          - {data_key: Job, id: AUINYA, title: Job}
+        type: DataGrid
+      layout_properties: {grid_position: 'FGQTIR,KATWKB'}
+      name: card_2
+      properties: {appearance: elevated}
+      type: form:Components.Card
+    - components:
+      - layout_properties: {}
+        name: repeating_panel_1
         properties: {item_template: BrookeTestPage.RowTemplate2, visible: true}
         type: RepeatingPanel
-        layout_properties: {}
       layout_properties: {grid_position: 'CBQESC,AFZVDN'}
+      name: data_grid_1
+      properties:
+        columns:
+        - {data_key: ID, id: SSPCYS, title: ID}
+        - {data_key: Name, id: BEMEZA, title: Name}
+        - {data_key: Job, id: AUINYA, title: Job}
+      type: DataGrid
+    layout_properties: {}
+    name: column_panel_1
+    properties: {}
+    type: ColumnPanel
   slot_5: []
-  slot_1: []
   slot_7:
-  - name: icon_button_1
+  - event_bindings: {click: icon_button_1_click}
+    layout_properties: {}
+    name: icon_button_1
     properties: {icon: close}
     type: form:Components.IconButton
-    layout_properties: {}
-    event_bindings: {click: icon_button_1_click}
+is_package: true
+layout: {type: 'form:TestLayout'}

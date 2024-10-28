@@ -1,123 +1,123 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: linear_panel_1
-    properties: {}
-    type: LinearPanel
-    layout_properties: {grid_position: 'XSWOOJ,FCHTQP'}
-    components:
-    - name: flow_panel_1
-      properties: {}
-      type: FlowPanel
-      components:
-      - name: linear_panel_2
-        properties: {}
-        type: LinearPanel
-        layout_properties: {width: 427}
-        components:
-        - name: text_1
-          properties: {text: TextField Component, font_size: 25, text_color: 'theme:Primary'}
+- components:
+  - components:
+    - components:
+      - components:
+        - layout_properties: {}
+          name: text_1
+          properties: {font_size: 25, text: TextField Component, text_color: 'theme:Primary'}
           type: form:Components.Text
-          layout_properties: {}
         - name: text_2
           properties: {text: Description. Properties. Link to docs. Etc}
           type: form:Components.Text
-  - name: card_1
-    properties: {visible: true}
-    type: form:Components.Card
+        layout_properties: {width: 427}
+        name: linear_panel_2
+        properties: {}
+        type: LinearPanel
+      name: flow_panel_1
+      properties: {}
+      type: FlowPanel
+    layout_properties: {grid_position: 'XSWOOJ,FCHTQP'}
+    name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+  - components:
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'IPNJXN,XBZWCJ'}
+          name: text_field_1
+          properties: {character_limit: 5, enabled: true, label_text: 'label, no placeholder', leading_icon: null, trailing_icon: null, visible: true}
+          type: form:Components.TextField_deprecated
+        - layout_properties: {grid_position: 'IPNJXN,DUZTXT'}
+          name: text_field_2
+          properties: {appearance: outlined, character_limit: 10, label_text: 'label, no placeholder', supporting_text: ''}
+          type: form:Components.TextField_deprecated
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        name: column_panel_1
+        properties: {}
+        type: ColumnPanel
+      layout_properties: {slot: card-content-slot}
+      name: card_content_container_1
+      properties: {}
+      type: form:Components.Card.CardContentContainer
     layout_properties: {grid_position: 'DGAPCA,XMRUSB'}
-    components:
-    - name: card_content_container_1
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: column_panel_1
-        properties: {}
-        type: ColumnPanel
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-        components:
-        - name: text_field_1
-          properties: {label_text: 'label, no placeholder', leading_icon: null, trailing_icon: null, enabled: true, visible: true, character_limit: 5}
-          type: form:Components.TextField_deprecated
-          layout_properties: {grid_position: 'IPNJXN,XBZWCJ'}
-        - name: text_field_2
-          properties: {appearance: outlined, label_text: 'label, no placeholder', supporting_text: '', character_limit: 10}
-          type: form:Components.TextField_deprecated
-          layout_properties: {grid_position: 'IPNJXN,DUZTXT'}
-  - name: card_1_copy_2
+    name: card_1
     properties: {visible: true}
     type: form:Components.Card
-    layout_properties: {grid_position: 'TEIBOG,KKHAFU'}
-    components:
-    - name: card_content_container_1_copy_2
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: column_panel_2
-        properties: {}
-        type: ColumnPanel
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-        components:
-        - name: text_field_3
+  - components:
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'RHIGNP,BVSLBO'}
+          name: text_field_3
           properties: {label_text: label, placeholder: placeholder}
           type: form:Components.TextField_deprecated
-          layout_properties: {grid_position: 'RHIGNP,BVSLBO'}
-        - name: text_field_4
-          properties: {appearance: outlined, placeholder: placeholder, label_text: LABEL}
+        - layout_properties: {grid_position: 'RHIGNP,QTDRDY'}
+          name: text_field_4
+          properties: {appearance: outlined, label_text: LABEL, placeholder: placeholder}
           type: form:Components.TextField_deprecated
-          layout_properties: {grid_position: 'RHIGNP,QTDRDY'}
-  - name: card_1_copy
-    properties: {visible: true}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'KESMMM,OWFASP'}
-    components:
-    - name: card_content_container_1_copy
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: column_panel_3
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        name: column_panel_2
         properties: {}
         type: ColumnPanel
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-        components:
-        - name: text_field_5
+      layout_properties: {slot: card-content-slot}
+      name: card_content_container_1_copy_2
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+    layout_properties: {grid_position: 'TEIBOG,KKHAFU'}
+    name: card_1_copy_2
+    properties: {visible: true}
+    type: form:Components.Card
+  - components:
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'DYUUPG,CBGNMZ'}
+          name: text_field_5
           properties: {placeholder: 'placeholder, no label'}
           type: form:Components.TextField_deprecated
-          layout_properties: {grid_position: 'DYUUPG,CBGNMZ'}
-        - name: text_field_6
+        - layout_properties: {grid_position: 'DYUUPG,LMCRGO'}
+          name: text_field_6
           properties: {appearance: outlined, placeholder: 'placeholder, no label'}
           type: form:Components.TextField_deprecated
-          layout_properties: {grid_position: 'DYUUPG,LMCRGO'}
-  - name: card_1_copy_copy
-    properties: {visible: true}
-    type: form:Components.Card
-    layout_properties: {grid_position: 'OZUGQW,GEERBF'}
-    components:
-    - name: card_content_container_1_copy_copy
-      properties: {}
-      type: form:Components.Card.CardContentContainer
-      layout_properties: {slot: card-content-slot}
-      components:
-      - name: column_panel_4
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        name: column_panel_3
         properties: {}
         type: ColumnPanel
-        layout_properties: {slot: anvil-m3-card-content-container-slot}
-        components:
-        - name: text_field_7
+      layout_properties: {slot: card-content-slot}
+      name: card_content_container_1_copy
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+    layout_properties: {grid_position: 'KESMMM,OWFASP'}
+    name: card_1_copy
+    properties: {visible: true}
+    type: form:Components.Card
+  - components:
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'WRTPUD,AMYWUF'}
+          name: text_field_7
           properties: {supporting_text: 'no label, no placeholder'}
           type: form:Components.TextField_deprecated
-          layout_properties: {grid_position: 'WRTPUD,AMYWUF'}
-        - name: text_field_8
+        - layout_properties: {grid_position: 'WRTPUD,VXWYEI'}
+          name: text_field_8
           properties: {appearance: outlined, supporting_text: 'no label, no placeholder'}
           type: form:Components.TextField_deprecated
-          layout_properties: {grid_position: 'WRTPUD,VXWYEI'}
+        layout_properties: {slot: anvil-m3-card-content-container-slot}
+        name: column_panel_4
+        properties: {}
+        type: ColumnPanel
+      layout_properties: {slot: card-content-slot}
+      name: card_content_container_1_copy_copy
+      properties: {}
+      type: form:Components.Card.CardContentContainer
+    layout_properties: {grid_position: 'OZUGQW,GEERBF'}
+    name: card_1_copy_copy
+    properties: {visible: true}
+    type: form:Components.Card
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

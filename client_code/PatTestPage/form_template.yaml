@@ -1,32 +1,32 @@
-layout:
-  type: form:NavigationRailLayout
-  properties: {show_sidesheet: false}
-is_package: true
 components_by_slot:
   slot_1:
-  - name: navigation_link_1
+  - layout_properties: {}
+    name: navigation_link_1
     properties: {}
     type: form:Components.NavigationLink
-    layout_properties: {}
   slot_3:
-  - name: column_panel_1
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {}
-    components:
-    - name: text_field_1
+  - components:
+    - layout_properties: {grid_position: 'LIMAGG,YRHIJM'}
+      name: text_field_1
       properties: {label_text: Hi}
       type: form:Components.TextInput.TextField
-      layout_properties: {grid_position: 'LIMAGG,YRHIJM'}
-    - name: text_field_2
+    - layout_properties: {grid_position: 'LIMAGG,YRHIJM VRVUDP,FTMQBH'}
+      name: text_field_2
       properties: {appearance: outlined}
       type: form:Components.TextInput.TextField
-      layout_properties: {grid_position: 'LIMAGG,YRHIJM VRVUDP,FTMQBH'}
-    - name: text_area_1
+    - layout_properties: {grid_position: 'LIMAGG,SWFTXC VHKCCD,DPPMMR'}
+      name: text_area_1
       properties: {}
       type: form:Components.TextInput.TextArea
-      layout_properties: {grid_position: 'LIMAGG,SWFTXC VHKCCD,DPPMMR'}
-    - name: text_area_2
+    - layout_properties: {grid_position: 'LIMAGG,SWFTXC UMNPSF,WDKFVC'}
+      name: text_area_2
       properties: {appearance: outlined}
       type: form:Components.TextInput.TextArea
-      layout_properties: {grid_position: 'LIMAGG,SWFTXC UMNPSF,WDKFVC'}
+    layout_properties: {}
+    name: column_panel_1
+    properties: {}
+    type: ColumnPanel
+is_package: true
+layout:
+  properties: {show_sidesheet: false}
+  type: form:NavigationRailLayout

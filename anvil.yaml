@@ -1,123 +1,70 @@
-services:
-- source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {}
-startup: {type: form, module: AnotherPage}
-package_name: Material_3_Theme_2_0
 allow_embedding: false
-toolbox_sections:
-- packageName: Material_3_Theme_2_0
-  title: Typography
-  items:
-  - title: Text
-    icon: {light: 'asset:designer_icons/text.svg', dark: 'asset:designer_icons/text_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Text}
-  - title: Heading
-    icon: {light: 'asset:designer_icons/heading.svg', dark: 'asset:designer_icons/heading_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Heading}
-  - title: Link
-    icon: {light: 'asset:designer_icons/link.svg', dark: 'asset:designer_icons/link_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Link}
-  - title: RichText
-    icon: {light: /ide/img/toolbox/RichText.svg, dark: /ide/img/toolbox/RichText.dark.svg}
-    component: {type: anvil.RichText}
-- packageName: Material_3_Theme_2_0
-  title: Buttons
-  items:
-  - title: Button
-    icon: {light: 'asset:designer_icons/button.svg', dark: 'asset:designer_icons/button_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Button}
-  - title: IconButton
-    icon: {light: 'asset:designer_icons/icon_button.svg', dark: 'asset:designer_icons/icon_button_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.IconButton}
-  - title: ToggleIconButton
-    icon: {light: 'asset:designer_icons/toggle_icon_button.svg', dark: 'asset:designer_icons/toggle_icon_button_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
-  - title: ButtonMenu
-    icon: {light: 'asset:designer_icons/button_menu.svg', dark: 'asset:designer_icons/button_menu_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.ButtonMenu}
-- packageName: Material_3_Theme_2_0
-  title: Display
-  items:
-  - title: Card
-    icon: {light: 'asset:designer_icons/card.svg', dark: 'asset:designer_icons/card_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Card}
-  - title: InteractiveCard
-    icon: {light: 'asset:designer_icons/interactive_card.svg', dark: 'asset:designer_icons/interactive_card_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.InteractiveCard}
-  - title: CardContentContainer
-    icon: null
-    component: {type: Material_3_Theme_2_0.Components.Card.CardContentContainer}
-  - title: SidesheetContent
-    icon: {light: 'asset:designer_icons/sidesheet.svg', dark: 'asset:designer_icons/sidesheet_dark.svg'}
-    component: {type: Material_3_Theme_2_0.SidesheetContent}
-  - title: Divider
-    icon: {light: 'asset:designer_icons/divider.svg', dark: 'asset:designer_icons/divider_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Divider}
-- packageName: Material_3_Theme_2_0
-  title: Navigation
-  items:
-  - title: NavigationLink
-    icon: {light: 'asset:designer_icons/navigation_link.svg', dark: 'asset:designer_icons/navigation_link_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.NavigationLink}
-- packageName: Material_3_Theme_2_0
-  title: Form Input
-  items:
-  - title: Checkbox
-    icon: {light: 'asset:designer_icons/checkbox.svg', dark: 'asset:designer_icons/checkbox_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Checkbox}
-  - title: RadioButton
-    icon: {light: 'asset:designer_icons/radio_button.svg', dark: 'asset:designer_icons/radio_button_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.RadioButton}
-  - title: TextField
-    icon: {light: 'asset:designer_icons/textfield.svg', dark: 'asset:designer_icons/textfield_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.TextInput.TextField}
-  - title: TextArea
-    icon: {light: 'asset:designer_icons/textfield.svg', dark: 'asset:designer_icons/textfield_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.TextInput.TextArea}
-  - title: DropdownMenu
-    icon: {light: 'asset:designer_icons/dropdown_menu.svg', dark: 'asset:designer_icons/dropdown_menu_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.DropdownMenu}
-  - title: Switch
-    icon: {light: 'asset:designer_icons/switch.svg', dark: 'asset:designer_icons/switch_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Switch}
-  - title: FileLoader
-    icon: {light: 'asset:designer_icons/file_loader.svg', dark: 'asset:designer_icons/file_loader_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.FileLoader}
-  - title: Slider
-    icon: {light: 'asset:designer_icons/slider.svg', dark: 'asset:designer_icons/slider_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.Slider}
-- packageName: Material_3_Theme_2_0
-  title: Feedback
-  items:
-  - title: LinearProgressIndicator
-    icon: {light: 'asset:designer_icons/linear_progress_indicator.svg', dark: 'asset:designer_icons/linear_progress_indicator_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.LinearProgressIndicator}
-  - title: CircularProgressIndicator
-    icon: {light: 'asset:designer_icons/circular_progress_indicator.svg', dark: 'asset:designer_icons/circular_progress_indicator_dark.svg'}
-    component: {type: Material_3_Theme_2_0.Components.CircularProgressIndicator}
-- packageName: Material_3_Theme_2_0
-  title: Integrations
-  items:
-  - title: Plot
-    icon: {light: /ide/img/toolbox/Plot.svg, dark: /ide/img/toolbox/Plot.dark.svg}
-    component: {type: anvil.Plot}
-  - title: YouTube Video
-    icon: {light: /ide/img/toolbox/YouTubeVideo.svg, dark: /ide/img/toolbox/YouTubeVideo.dark.svg}
-    component: {type: anvil.YouTubeVideo}
-  - title: Google Map
-    icon: {light: /ide/img/toolbox/GoogleMap.svg, dark: /ide/img/toolbox/GoogleMap.dark.svg}
-    component: {type: anvil.GoogleMap}
-  - title: Canvas
-    icon: {light: /ide/img/toolbox/Canvas.svg, dark: /ide/img/toolbox/Canvas.dark.svg}
-    component: {type: anvil.Canvas}
+db_schema:
+  another_category:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: string
+      type: string
+    - admin_ui: {order: -1, width: 200}
+      name: ID
+      type: number
+    server: full
+    title: Another Category
+  jobs:
+    client: search
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Titles
+      type: string
+    - admin_ui: {order: -1, width: 200}
+      name: ID
+      type: number
+    server: full
+    title: Jobs
+  people:
+    client: search
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Name
+      type: string
+    - admin_ui: {order: -1, width: 200}
+      name: ID
+      type: number
+    - admin_ui: {order: 2, width: 200}
+      name: Job
+      target: jobs
+      type: link_single
+    - admin_ui: {order: 3, width: 200}
+      name: blah
+      target: another_category
+      type: link_multiple
+    server: full
+    title: People
+  users:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: email
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: enabled
+      type: bool
+    - admin_ui: {order: 2, width: 200}
+      name: last_login
+      type: datetime
+    - admin_ui: {order: 3, width: 200}
+      name: password_hash
+      type: string
+    - admin_ui: {order: 4, width: 200}
+      name: n_password_failures
+      type: number
+    - admin_ui: {order: 5, width: 200}
+      name: confirmed_email
+      type: bool
+    server: full
+    title: Users
 name: Material 3 Theme 2.0
-runtime_options:
-  version: 3
-  client_version: '3'
-  server_version: python3-full
-  server_spec: {base: python310-minimal}
-startup_form: null
 native_deps:
   head_html: |-
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,68 +72,121 @@ native_deps:
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-db_schema:
-  jobs:
-    client: search
-    server: full
-    columns:
-    - name: Titles
-      admin_ui: {order: 0, width: 200}
-      type: string
-    - name: ID
-      admin_ui: {order: -1, width: 200}
-      type: number
-    title: Jobs
-  people:
-    client: search
-    server: full
-    columns:
-    - name: Name
-      admin_ui: {order: 0, width: 200}
-      type: string
-    - name: ID
-      admin_ui: {order: -1, width: 200}
-      type: number
-    - name: Job
-      admin_ui: {width: 200, order: 2}
-      type: link_single
-      target: jobs
-    - name: blah
-      admin_ui: {width: 200, order: 3}
-      type: link_multiple
-      target: another_category
-    title: People
-  another_category:
-    client: none
-    server: full
-    columns:
-    - name: string
-      admin_ui: {order: 0, width: 200}
-      type: string
-    - name: ID
-      admin_ui: {order: -1, width: 200}
-      type: number
-    title: Another Category
-  users:
-    client: none
-    server: full
-    columns:
-    - name: email
-      admin_ui: {order: 0, width: 200}
-      type: string
-    - name: enabled
-      admin_ui: {order: 1, width: 200}
-      type: bool
-    - name: last_login
-      admin_ui: {order: 2, width: 200}
-      type: datetime
-    - name: password_hash
-      admin_ui: {order: 3, width: 200}
-      type: string
-    - name: n_password_failures
-      admin_ui: {order: 4, width: 200}
-      type: number
-    - name: confirmed_email
-      admin_ui: {order: 5, width: 200}
-      type: bool
-    title: Users
+package_name: m3
+runtime_options:
+  client_version: '3'
+  server_spec: {base: python310-minimal}
+  server_version: python3-full
+  version: 3
+services:
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/tables.yml
+startup: {module: AnotherPage, type: form}
+startup_form: null
+toolbox_sections:
+- items:
+  - component: {type: Material_3_Theme_2_0.Components.Text}
+    icon: {dark: 'asset:designer_icons/text_dark.svg', light: 'asset:designer_icons/text.svg'}
+    title: Text
+  - component: {type: Material_3_Theme_2_0.Components.Heading}
+    icon: {dark: 'asset:designer_icons/heading_dark.svg', light: 'asset:designer_icons/heading.svg'}
+    title: Heading
+  - component: {type: Material_3_Theme_2_0.Components.Link}
+    icon: {dark: 'asset:designer_icons/link_dark.svg', light: 'asset:designer_icons/link.svg'}
+    title: Link
+  - component: {type: anvil.RichText}
+    icon: {dark: /ide/img/toolbox/RichText.dark.svg, light: /ide/img/toolbox/RichText.svg}
+    title: RichText
+  packageName: Material_3_Theme_2_0
+  title: Typography
+- items:
+  - component: {type: Material_3_Theme_2_0.Components.Button}
+    icon: {dark: 'asset:designer_icons/button_dark.svg', light: 'asset:designer_icons/button.svg'}
+    title: Button
+  - component: {type: Material_3_Theme_2_0.Components.IconButton}
+    icon: {dark: 'asset:designer_icons/icon_button_dark.svg', light: 'asset:designer_icons/icon_button.svg'}
+    title: IconButton
+  - component: {type: Material_3_Theme_2_0.Components.ToggleIconButton}
+    icon: {dark: 'asset:designer_icons/toggle_icon_button_dark.svg', light: 'asset:designer_icons/toggle_icon_button.svg'}
+    title: ToggleIconButton
+  - component: {type: Material_3_Theme_2_0.Components.ButtonMenu}
+    icon: {dark: 'asset:designer_icons/button_menu_dark.svg', light: 'asset:designer_icons/button_menu.svg'}
+    title: ButtonMenu
+  packageName: Material_3_Theme_2_0
+  title: Buttons
+- items:
+  - component: {type: Material_3_Theme_2_0.Components.Card}
+    icon: {dark: 'asset:designer_icons/card_dark.svg', light: 'asset:designer_icons/card.svg'}
+    title: Card
+  - component: {type: Material_3_Theme_2_0.Components.InteractiveCard}
+    icon: {dark: 'asset:designer_icons/interactive_card_dark.svg', light: 'asset:designer_icons/interactive_card.svg'}
+    title: InteractiveCard
+  - component: {type: Material_3_Theme_2_0.Components.Card.CardContentContainer}
+    icon: null
+    title: CardContentContainer
+  - component: {type: Material_3_Theme_2_0.SidesheetContent}
+    icon: {dark: 'asset:designer_icons/sidesheet_dark.svg', light: 'asset:designer_icons/sidesheet.svg'}
+    title: SidesheetContent
+  - component: {type: Material_3_Theme_2_0.Components.Divider}
+    icon: {dark: 'asset:designer_icons/divider_dark.svg', light: 'asset:designer_icons/divider.svg'}
+    title: Divider
+  packageName: Material_3_Theme_2_0
+  title: Display
+- items:
+  - component: {type: Material_3_Theme_2_0.Components.NavigationLink}
+    icon: {dark: 'asset:designer_icons/navigation_link_dark.svg', light: 'asset:designer_icons/navigation_link.svg'}
+    title: NavigationLink
+  packageName: Material_3_Theme_2_0
+  title: Navigation
+- items:
+  - component: {type: Material_3_Theme_2_0.Components.Checkbox}
+    icon: {dark: 'asset:designer_icons/checkbox_dark.svg', light: 'asset:designer_icons/checkbox.svg'}
+    title: Checkbox
+  - component: {type: Material_3_Theme_2_0.Components.RadioButton}
+    icon: {dark: 'asset:designer_icons/radio_button_dark.svg', light: 'asset:designer_icons/radio_button.svg'}
+    title: RadioButton
+  - component: {type: Material_3_Theme_2_0.Components.TextInput.TextField}
+    icon: {dark: 'asset:designer_icons/textfield_dark.svg', light: 'asset:designer_icons/textfield.svg'}
+    title: TextField
+  - component: {type: Material_3_Theme_2_0.Components.TextInput.TextArea}
+    icon: {dark: 'asset:designer_icons/textfield_dark.svg', light: 'asset:designer_icons/textfield.svg'}
+    title: TextArea
+  - component: {type: Material_3_Theme_2_0.Components.DropdownMenu}
+    icon: {dark: 'asset:designer_icons/dropdown_menu_dark.svg', light: 'asset:designer_icons/dropdown_menu.svg'}
+    title: DropdownMenu
+  - component: {type: Material_3_Theme_2_0.Components.Switch}
+    icon: {dark: 'asset:designer_icons/switch_dark.svg', light: 'asset:designer_icons/switch.svg'}
+    title: Switch
+  - component: {type: Material_3_Theme_2_0.Components.FileLoader}
+    icon: {dark: 'asset:designer_icons/file_loader_dark.svg', light: 'asset:designer_icons/file_loader.svg'}
+    title: FileLoader
+  - component: {type: Material_3_Theme_2_0.Components.Slider}
+    icon: {dark: 'asset:designer_icons/slider_dark.svg', light: 'asset:designer_icons/slider.svg'}
+    title: Slider
+  packageName: Material_3_Theme_2_0
+  title: Form Input
+- items:
+  - component: {type: Material_3_Theme_2_0.Components.LinearProgressIndicator}
+    icon: {dark: 'asset:designer_icons/linear_progress_indicator_dark.svg', light: 'asset:designer_icons/linear_progress_indicator.svg'}
+    title: LinearProgressIndicator
+  - component: {type: Material_3_Theme_2_0.Components.CircularProgressIndicator}
+    icon: {dark: 'asset:designer_icons/circular_progress_indicator_dark.svg', light: 'asset:designer_icons/circular_progress_indicator.svg'}
+    title: CircularProgressIndicator
+  packageName: Material_3_Theme_2_0
+  title: Feedback
+- items:
+  - component: {type: anvil.Plot}
+    icon: {dark: /ide/img/toolbox/Plot.dark.svg, light: /ide/img/toolbox/Plot.svg}
+    title: Plot
+  - component: {type: anvil.YouTubeVideo}
+    icon: {dark: /ide/img/toolbox/YouTubeVideo.dark.svg, light: /ide/img/toolbox/YouTubeVideo.svg}
+    title: YouTube Video
+  - component: {type: anvil.GoogleMap}
+    icon: {dark: /ide/img/toolbox/GoogleMap.dark.svg, light: /ide/img/toolbox/GoogleMap.svg}
+    title: Google Map
+  - component: {type: anvil.Canvas}
+    icon: {dark: /ide/img/toolbox/Canvas.dark.svg, light: /ide/img/toolbox/Canvas.svg}
+    title: Canvas
+  packageName: Material_3_Theme_2_0
+  title: Integrations

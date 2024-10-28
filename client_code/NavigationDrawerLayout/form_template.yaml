@@ -1,33 +1,5 @@
-properties:
-- {name: navigation_drawer_color, type: color, default_value: '', important: true, default_binding_prop: true, description: The color of the Navigation Drawer on Forms using this Layout.}
-- {name: background_color, type: string, default_value: '', important: true, description: The background color of Forms using this Layout.}
-- {name: text_color, type: string, default_value: '', important: true, description: The default color of the text on Forms using this Layout.}
-- {name: show_sidesheet, type: boolean, default_value: false, important: true, description: 'If True, the sidesheet will be shown on Forms using this Layout.'}
-is_package: true
-slots:
-  slot_1:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-content}
-    target: {type: container, name: ''}
-  slot_2:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-navigation-drawer-content}
-    target: {type: container, name: ''}
-  slot_3:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-app-bar-links}
-    target: {type: container, name: ''}
-  slot_4:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-app-title}
-    target: {type: container, name: ''}
-  slot_5:
-    index: 0
-    set_layout_properties: {slot: anvil-m3-sidesheet}
-    target: {type: container, name: ''}
 components: []
 container:
-  type: HtmlTemplate
   properties:
     html: |-
       <div anvil-name="anvil-m3-navigation-drawer" class="anvil-m3-navigation-drawer">
@@ -59,4 +31,32 @@ container:
       <div class="anvil-m3-sidesheet anvil-m3-open" anvil-slot="anvil-m3-sidesheet" anvil-name="anvil-m3-sidesheet">
         <p anvil-if-slot-empty="anvil-m3-sidesheet" class="anvil-designer-only" style="font-style: italic;">Add optional sidesheet content here</p>
       </div>
-layout_metadata: {title: NavigationDrawerLayout, description: 'A simple layout with a left-side navigation drawer and optional right-hand sidepanel ', thumbnail: 'asset:designer_icons/navigation-drawer-thumb.png'}
+  type: HtmlTemplate
+is_package: true
+layout_metadata: {description: 'A simple layout with a left-side navigation drawer and optional right-hand sidepanel ', thumbnail: 'asset:designer_icons/navigation-drawer-thumb.png', title: NavigationDrawerLayout}
+properties:
+- {default_binding_prop: true, default_value: '', description: The color of the Navigation Drawer on Forms using this Layout., important: true, name: navigation_drawer_color, type: color}
+- {default_value: '', description: The background color of Forms using this Layout., important: true, name: background_color, type: string}
+- {default_value: '', description: The default color of the text on Forms using this Layout., important: true, name: text_color, type: string}
+- {default_value: false, description: 'If True, the sidesheet will be shown on Forms using this Layout.', important: true, name: show_sidesheet, type: boolean}
+slots:
+  slot_1:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-content}
+    target: {name: '', type: container}
+  slot_2:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-navigation-drawer-content}
+    target: {name: '', type: container}
+  slot_3:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-app-bar-links}
+    target: {name: '', type: container}
+  slot_4:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-app-title}
+    target: {name: '', type: container}
+  slot_5:
+    index: 0
+    set_layout_properties: {slot: anvil-m3-sidesheet}
+    target: {name: '', type: container}

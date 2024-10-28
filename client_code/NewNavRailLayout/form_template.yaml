@@ -1,27 +1,27 @@
-layout:
-  type: form:NavigationRailLayout
-  properties: {navigation_rail_vertical_align: Top}
+components_by_slot:
+  slot_1:
+  - layout_properties: {}
+    name: navigation_link_1
+    properties: {material_icon: circle}
+    type: form:Components.NavigationLink
+  - layout_properties: {}
+    name: navigation_link_2
+    properties: {material_icon: square}
+    type: form:Components.NavigationLink
+  - layout_properties: {}
+    name: navigation_link_3
+    properties: {material_icon: hexagon}
+    type: form:Components.NavigationLink
 is_package: true
+layout:
+  properties: {navigation_rail_vertical_align: Top}
+  type: form:NavigationRailLayout
 slots:
   slot_3:
     index: 0
     set_layout_properties: {}
-    target: {type: slot, name: slot_3}
+    target: {name: slot_3, type: slot}
   slot_5:
     index: 0
     set_layout_properties: {}
-    target: {type: slot, name: slot_5}
-components_by_slot:
-  slot_1:
-  - name: navigation_link_1
-    properties: {material_icon: circle}
-    type: form:Components.NavigationLink
-    layout_properties: {}
-  - name: navigation_link_2
-    properties: {material_icon: square}
-    type: form:Components.NavigationLink
-    layout_properties: {}
-  - name: navigation_link_3
-    properties: {material_icon: hexagon}
-    type: form:Components.NavigationLink
-    layout_properties: {}
+    target: {name: slot_5, type: slot}

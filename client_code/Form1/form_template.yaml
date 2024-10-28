@@ -1,2 +1,2 @@
-layout: {type: 'form:NewNavRailLayout'}
 is_package: true
+layout: {type: 'form:NewNavRailLayout'}
