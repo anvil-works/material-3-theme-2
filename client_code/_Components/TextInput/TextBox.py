@@ -2,7 +2,7 @@ import anvil.server
 from . import TextInput
 import anvil.designer
 from anvil.property_utils import anvil_property
-from ...utils.properties import anvil_prop, get_unset_value, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
+from ...utils.properties import property_with_callback, anvil_prop, get_unset_value, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property
 
 text_property = {"name": "text",
                  "type": "string",
@@ -187,8 +187,7 @@ class TextBox(TextInput):
       text_box_input.style.paddingLeft = "16px"
       border_container.classList.remove("with-icon")
 
-  @anvil_prop
-  def trailing_icon(self, value):
+  def _set_trailing_icon(self, value):
     trailing_icon = self.dom_nodes['anvil-m3-trailing-icon']
     text_box_input = self.dom_nodes['anvil-m3-textbox']
     if value:
@@ -199,6 +198,7 @@ class TextBox(TextInput):
       trailing_icon.style.display = "none"
       trailing_icon.innerText = ""
       text_box_input.style.paddingRight = "16px"
+  trailing_icon = property_with_callback('trailing_icon', _set_trailing_icon)
 
   @anvil_prop
   def character_limit(self, value):
