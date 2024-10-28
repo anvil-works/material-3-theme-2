@@ -1,5 +1,6 @@
 from ._anvil_designer import MenuItemTemplate
 from anvil import *
+import anvil.users
 from anvil import HtmlTemplate
 import anvil.server
 import anvil.tables as tables

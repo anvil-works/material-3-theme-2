@@ -1,5 +1,6 @@
 from ._anvil_designer import Dropdowns_oldTemplate
 from anvil import *
+import anvil.users
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q

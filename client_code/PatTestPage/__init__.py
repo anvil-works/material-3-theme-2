@@ -1,5 +1,6 @@
 from ._anvil_designer import PatTestPageTemplate
 from anvil import *
+import anvil.users
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -10,6 +11,8 @@ class PatTestPage(PatTestPageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.checkbox_1.checked = None
+
+    anvil.users.login_with_form()
 
     # Any code you write here will run before the form opens.
 
