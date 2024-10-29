@@ -28,15 +28,15 @@ components_by_slot:
     name: column_panel_1
     properties: {col_spacing: none, col_widths: '{"ZQNIUH":30,"BSFKWY":30}'}
     type: ColumnPanel
+  - layout_properties: {}
+    name: dropdown_menu_1
+    properties: {align: left, icon: ''}
+    type: form:_Components.DropdownMenu
   - event_bindings: {pressed_enter: text_box_1_pressed_enter}
     layout_properties: {}
     name: text_box_1
     properties: {leading_icon: 'mi:10mp', trailing_icon: 'mi:10k'}
     type: form:_Components.TextInput.TextBox
-  - layout_properties: {}
-    name: dropdown_menu_1
-    properties: {align: left, icon: ''}
-    type: form:_Components.DropdownMenu
   - layout_properties: {}
     name: button_menu_1
     properties: {align: full}
