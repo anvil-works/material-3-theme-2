@@ -61,15 +61,15 @@ components:
     name: card_1_copy_1
     properties: {}
     type: form:_Components.Card
-  - layout_properties: {grid_position: 'JKUHHH,AFMKZK'}
-    name: checkbox_5_copy_1
-    properties: {allow_indeterminate: true, error: true, text: 'Error, indeterminate'}
-    type: form:_Components.Checkbox
-  - layout_properties: {grid_position: 'JKUHHH,AFMKZK'}
+  - layout_properties: {grid_position: 'JMZITB,DYMSGV'}
     name: checkbox_3_copy_1
     properties: {allow_indeterminate: true, checked: false, text: Indeterminate}
     type: form:_Components.Checkbox
-  - layout_properties: {grid_position: 'JKUHHH,AFMKZK'}
+  - layout_properties: {grid_position: ''}
+    name: checkbox_5_copy_1
+    properties: {allow_indeterminate: true, error: true, text: 'Error, indeterminate'}
+    type: form:_Components.Checkbox
+  - layout_properties: {grid_position: 'FHHDJV,FBCBQC'}
     name: checkbox_6_copy_1
     properties: {checked: true, error: true, text: 'Error, checked'}
     type: form:_Components.Checkbox
