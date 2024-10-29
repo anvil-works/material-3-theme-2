@@ -15,11 +15,11 @@ components:
   - components:
     - components:
       - components:
-        - layout_properties: {grid_position: 'FDBKWJ,TWHGQX'}
+        - layout_properties: {grid_position: 'LPTFSJ,KGZURI'}
           name: checkbox_1_copy_1
           properties: {checked: false, text: Unchecked}
           type: form:_Components.Checkbox
-        - layout_properties: {grid_position: 'WMOSGM,UHSDCL'}
+        - layout_properties: {grid_position: 'DEPNTY,MMUVCB'}
           name: checkbox_2_copy_1
           properties: {checked: true, text: Checked}
           type: form:_Components.Checkbox
@@ -45,7 +45,7 @@ components:
         name: disabled_checkboxes
         properties: {}
         type: ColumnPanel
-      - layout_properties: {grid_position: 'VNBGWB,GMLDFW JYAQWB,WGRJSK'}
+      - layout_properties: {grid_position: 'VNBGWB,GMLDFW VLZZWD,WWPQVO'}
         name: checkbox_4_copy_1
         properties: {checked: false, error: true, text: 'Error, unchecked'}
         type: form:_Components.Checkbox
