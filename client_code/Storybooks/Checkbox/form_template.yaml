@@ -36,13 +36,13 @@ components:
         properties: {}
         type: ColumnPanel
       - components:
-        - layout_properties: {grid_position: 'DCGVVU,RWXRJT'}
-          name: checkbox_4_copy_1
-          properties: {checked: false, error: true, text: 'Error, unchecked'}
-          type: form:_Components.Checkbox
-        - layout_properties: {grid_position: ''}
+        - layout_properties: {grid_position: 'ZBVGWC,PBORPS'}
           name: checkbox_5_copy_1
           properties: {allow_indeterminate: true, error: true, text: 'Error, indeterminate'}
+          type: form:_Components.Checkbox
+        - layout_properties: {grid_position: 'GVCNPH,YWBDWS'}
+          name: checkbox_4_copy_1
+          properties: {checked: false, error: true, text: 'Error, unchecked'}
           type: form:_Components.Checkbox
         layout_properties: {grid_position: 'VNBGWB,GMLDFW NDAPMM,MPLGHL'}
         name: column_panel_1
