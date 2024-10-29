@@ -19,7 +19,7 @@ components:
           name: checkbox_1_copy_1
           properties: {checked: false, text: Unchecked}
           type: form:_Components.Checkbox
-        - layout_properties: {grid_position: ''}
+        - layout_properties: {grid_position: 'BCUTZT,PXHHZN'}
           name: checkbox_2_copy_1
           properties: {checked: true, text: Checked}
           type: form:_Components.Checkbox
@@ -45,11 +45,11 @@ components:
         name: disabled_checkboxes
         properties: {}
         type: ColumnPanel
-      - layout_properties: {grid_position: 'VNBGWB,GMLDFW DQJSFS,AACPTO'}
+      - layout_properties: {grid_position: 'VNBGWB,GMLDFW IKNLPJ,FVMDAB'}
         name: checkbox_4_copy_1
         properties: {checked: false, error: true, text: 'Error, unchecked'}
         type: form:_Components.Checkbox
-      - layout_properties: {grid_position: 'VNBGWB,GMLDFW DQJSFS,AACPTO'}
+      - layout_properties: {grid_position: 'VNBGWB,GMLDFW ZKZCXX,YCGGUJ'}
         name: checkbox_8_copy_1
         properties: {checked: false, enabled: false, text: 'Disabled, unchecked'}
         type: form:_Components.Checkbox
@@ -61,15 +61,15 @@ components:
     name: card_1_copy_1
     properties: {}
     type: form:_Components.Card
-  - layout_properties: {grid_position: 'JMZITB,DYMSGV'}
+  - layout_properties: {grid_position: 'HRCNZE,JMFJAJ'}
     name: checkbox_3_copy_1
     properties: {allow_indeterminate: true, checked: false, text: Indeterminate}
     type: form:_Components.Checkbox
-  - layout_properties: {grid_position: ''}
+  - layout_properties: {grid_position: 'GHJNSL,LPNALS'}
     name: checkbox_5_copy_1
     properties: {allow_indeterminate: true, error: true, text: 'Error, indeterminate'}
     type: form:_Components.Checkbox
-  - layout_properties: {grid_position: 'FHHDJV,FBCBQC'}
+  - layout_properties: {grid_position: 'VJURMT,GJUHDT'}
     name: checkbox_6_copy_1
     properties: {checked: true, error: true, text: 'Error, checked'}
     type: form:_Components.Checkbox
