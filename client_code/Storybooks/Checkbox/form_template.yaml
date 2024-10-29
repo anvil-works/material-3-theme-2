@@ -15,11 +15,11 @@ components:
   - components:
     - components:
       - components:
-        - layout_properties: {grid_position: 'LPTFSJ,KGZURI'}
+        - layout_properties: {grid_position: 'UNBIAY,VVUUNE'}
           name: checkbox_1_copy_1
           properties: {checked: false, text: Unchecked}
           type: form:_Components.Checkbox
-        - layout_properties: {grid_position: 'DEPNTY,MMUVCB'}
+        - layout_properties: {grid_position: 'SYIEML,GFFQBW'}
           name: checkbox_2_copy_1
           properties: {checked: true, text: Checked}
           type: form:_Components.Checkbox
@@ -33,7 +33,7 @@ components:
         properties: {}
         type: ColumnPanel
       - components:
-        - layout_properties: {grid_position: ''}
+        - layout_properties: {grid_position: 'ZTDWVD,SRVYQD'}
           name: checkbox_9_copy_1
           properties: {allow_indeterminate: true, checked: false, enabled: false, text: 'Disabled, indeterminate'}
           type: form:_Components.Checkbox
@@ -45,7 +45,7 @@ components:
         name: disabled_checkboxes
         properties: {}
         type: ColumnPanel
-      - layout_properties: {grid_position: 'VNBGWB,GMLDFW VLZZWD,WWPQVO'}
+      - layout_properties: {grid_position: 'VNBGWB,GMLDFW RUAUJR,EJLPSM'}
         name: checkbox_4_copy_1
         properties: {checked: false, error: true, text: 'Error, unchecked'}
         type: form:_Components.Checkbox
