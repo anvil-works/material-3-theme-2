@@ -123,11 +123,6 @@ components:
       name: card_content_container_2
       properties: {}
       type: form:_Components.Card.CardContentContainer
-    layout_properties: {grid_position: 'CDWTDQ,IZJJKC'}
-    name: card_1_copy_1_copy_1
-    properties: {visible: true}
-    type: form:_Components.Card
-  - components:
     - components:
       - layout_properties: {slot: card-content-container-slot}
         name: radio_button_5
@@ -146,6 +141,11 @@ components:
       name: card_content_container_4
       properties: {}
       type: form:_Components.Card.CardContentContainer
+    layout_properties: {grid_position: 'CDWTDQ,IZJJKC'}
+    name: card_1_copy_1_copy_1
+    properties: {visible: true}
+    type: form:_Components.Card
+  - components: []
     layout_properties: {grid_position: 'DQFROL,AEKVKE'}
     name: card_2
     properties: {visible: true}
