@@ -27,15 +27,15 @@ components:
           name: checkbox_2_copy_1
           properties: {checked: true, text: Checked}
           type: form:_Components.Checkbox
+        - layout_properties: {grid_position: 'IHZYPA,UFNGLH'}
+          name: checkbox_6_copy_1
+          properties: {checked: true, error: true, text: 'Error, checked'}
+          type: form:_Components.Checkbox
         layout_properties: {grid_position: 'VNBGWB,JIQEDF'}
         name: enabled_checkboxes
         properties: {}
         type: ColumnPanel
       - components:
-        - layout_properties: {grid_position: 'WJDSNE,PPBDJZ'}
-          name: checkbox_6_copy_1
-          properties: {checked: true, error: true, text: 'Error, checked'}
-          type: form:_Components.Checkbox
         - layout_properties: {grid_position: 'DCGVVU,RWXRJT'}
           name: checkbox_4_copy_1
           properties: {checked: false, error: true, text: 'Error, unchecked'}
