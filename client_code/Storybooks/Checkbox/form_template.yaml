@@ -19,7 +19,7 @@ components:
           name: checkbox_1_copy_1
           properties: {checked: false, text: Unchecked}
           type: form:_Components.Checkbox
-        - layout_properties: {grid_position: 'BCUTZT,PXHHZN'}
+        - layout_properties: {grid_position: 'WMOSGM,UHSDCL'}
           name: checkbox_2_copy_1
           properties: {checked: true, text: Checked}
           type: form:_Components.Checkbox
@@ -45,11 +45,11 @@ components:
         name: disabled_checkboxes
         properties: {}
         type: ColumnPanel
-      - layout_properties: {grid_position: 'VNBGWB,GMLDFW IKNLPJ,FVMDAB'}
+      - layout_properties: {grid_position: 'VNBGWB,GMLDFW JYAQWB,WGRJSK'}
         name: checkbox_4_copy_1
         properties: {checked: false, error: true, text: 'Error, unchecked'}
         type: form:_Components.Checkbox
-      - layout_properties: {grid_position: 'VNBGWB,GMLDFW ZKZCXX,YCGGUJ'}
+      - layout_properties: {grid_position: 'VNBGWB,GMLDFW SUVVBI,XDHUWF'}
         name: checkbox_8_copy_1
         properties: {checked: false, enabled: false, text: 'Disabled, unchecked'}
         type: form:_Components.Checkbox
