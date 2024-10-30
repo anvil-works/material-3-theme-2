@@ -1,0 +1,10 @@
+src = ["client_code", "server_code"]
+
+indent-width = 2
+
+[lint]
+select = ["E", "F", "I001"]
+
+[lint.isort]
+known-third-party = ["anvil"]
+
