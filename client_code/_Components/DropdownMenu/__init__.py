@@ -208,6 +208,7 @@ class DropdownMenu(DropdownMenuTemplate):
     
     p = MenuItem()
     p.text = self.placeholder if self.placeholder else ""
+    p.bold = self.items_bold
     p.italic = self.items_italic
     p.underline = self.items_underline
     p.text_color = self.items_text_color
@@ -434,6 +435,8 @@ class DropdownMenu(DropdownMenuTemplate):
   @anvil_prop
   def items_font_size(self, value):
     self._recreate_items()
+
+# menu_background_color = color_property('anvil-m3-buttonMenu-items-container', 'background', 'menu_background_color')
 
   #!componentProp(m3.DropdownMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
   #!componentProp(m3.DropdownMenu)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
