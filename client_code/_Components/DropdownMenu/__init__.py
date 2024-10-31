@@ -203,7 +203,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_designer_text_placeholder()
 
   def _create_menu_items(self):
-    print(self.items)
+    # print(self.items)
     self.menu.clear()
     
     p = MenuItem()
@@ -410,6 +410,7 @@ class DropdownMenu(DropdownMenuTemplate):
   
   @anvil_prop
   def items(self, value):
+    print(self.items)
     self._recreate_items()
     
   @anvil_prop
