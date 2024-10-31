@@ -11,7 +11,7 @@ from ..._utils.properties import get_unset_value, get_unset_margin, anvil_prop, 
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
-    # self._init = False
+    self._init = False
     self.tag = ComponentTag()
     self._props = properties
     self._set_designer_text_placeholder, self._start_inline_editing = inline_editing(
@@ -55,8 +55,8 @@ class DropdownMenu(DropdownMenuTemplate):
     if anvil.designer.in_designer:
       self._menuNode.classList.toggle("anvil-m3-menu-hidden", True)
       
-    # self._init = True
-    # self._create_menu_items()
+    self._init = True
+    self._create_menu_items()
 
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes['anvil-m3-dropdownMenu-textbox']
@@ -253,10 +253,6 @@ class DropdownMenu(DropdownMenuTemplate):
       else:
         self._children.append(selection)
 
-  # def _rebuild_menu_items(self):
-  #   self._clear_menu_items()
-  #   self._create_menu_items()
-
   # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
     return [
@@ -405,21 +401,12 @@ class DropdownMenu(DropdownMenuTemplate):
   def placeholder(self, value):
     self.selection_field.placeholder = value
     
-  @anvil_prop
-  def bold_items(self, value):
-    print(value)
-    # self.bold_items = value
-    # if self._init:
-    self._create_menu_items()
 
   items = anvil_prop("items")
-
   # @anvil_prop
   # def items(self, value):
-  #   self.items = value
-    # for appearance in ['outlined', 'filled', 'elevated']:
-    #   self._set_class_of_nodes(appearance, False)
-    # self._set_class_of_nodes(value, True)
+  #   if self._init:
+  #     self._create_menu_items()
 
   # def _set_items(self, value):
   #   self.items = value
@@ -429,11 +416,29 @@ class DropdownMenu(DropdownMenuTemplate):
   #   self._set_items(value)
   #   print(value)
     
-  # bold_items = anvil_prop("bold_items")
-  italic_items = anvil_prop("italic_items")
-  underline_items = anvil_prop("underline_items")
-  items_text_color = anvil_prop("items_text_color")
-  # bold_items = anvil_prop('bold_items')
+  # italic_items = anvil_prop("italic_items")
+  # underline_items = anvil_prop("underline_items")
+  # items_text_color = anvil_prop("items_text_color")
+  def _recreate_items(self):
+    if self._init:
+      self._create_menu_items()
+      
+  @anvil_prop
+  def italic_items(self, value):
+    self._recreate_items()
+  
+  @anvil_prop
+  def underline_items(self, value):
+    self._recreate_items()
+  
+  @anvil_prop
+  def items_text_color(self, value):
+    self._recreate_items()
+  
+  @anvil_prop
+  def bold_items(self, value):
+    self._recreate_items()
+      
   items_font = anvil_prop("items_font")
   items_font_size = anvil_prop("items_font_size")
 
