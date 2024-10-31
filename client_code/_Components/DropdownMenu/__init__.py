@@ -9,14 +9,6 @@ from ..MenuItem import MenuItem
 from ..._utils import fui, noop
 from ..._utils.properties import get_unset_value, get_unset_margin, anvil_prop, margin_property, color_property, inline_editing
 
-  # def __init__(self, **properties):
-  #   self._init = False
-  #   self.init_components(**properties)
-  #   self._init = True
-  #   self._create_items()
-
-
-
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
     self._init = False
@@ -414,12 +406,21 @@ class DropdownMenu(DropdownMenuTemplate):
   def placeholder(self, value):
     self.selection_field.placeholder = value
 
-  items = anvil_prop("items")
+  # items = anvil_prop("items")
   
-  # @anvil_prop
-  # def items(self, value):
-  #   self.items = value
+  @anvil_prop
+  def items(self, value):
+    self.items = value
     # self._rebuild_menu_items()
+
+  
+  def _set_items(self, value):
+    self.items = value
+
+  @anvil_prop
+  def items(self, value):
+    self._set_items(value)
+    print(value)
     
   bold_items = anvil_prop("bold_items")
   italic_items = anvil_prop("italic_items")
