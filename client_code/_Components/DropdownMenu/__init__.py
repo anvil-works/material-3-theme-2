@@ -9,6 +9,20 @@ from ..MenuItem import MenuItem
 from ..._utils import fui, noop
 from ..._utils.properties import get_unset_value, get_unset_margin, anvil_prop, margin_property, color_property, inline_editing
 
+  # def __init__(self, **properties):
+  #   self._init = False
+  #   self.init_components(**properties)
+  #   self._init = True
+  #   self._create_items()
+
+  # @property
+  # def item_color(self):
+  #   return self._props.get("item_color")
+  # @item_color.setter
+  # def item_color(self, value):
+  #   self._props["item_color"] = value
+  #   if self._init:
+  #     self._create_items()
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
