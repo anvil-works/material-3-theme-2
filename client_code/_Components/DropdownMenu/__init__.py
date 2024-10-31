@@ -203,7 +203,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_designer_text_placeholder()
 
   def _create_menu_items(self):
-    # print(self.items)
     self.menu.clear()
     
     p = MenuItem()
@@ -405,12 +404,9 @@ class DropdownMenu(DropdownMenuTemplate):
   def _recreate_items(self):
     if self._init:
       self._create_menu_items()
-      
-  # items = anvil_prop("items")
   
   @anvil_prop
   def items(self, value):
-    print(self.items)
     self._recreate_items()
     
   @anvil_prop
@@ -436,8 +432,6 @@ class DropdownMenu(DropdownMenuTemplate):
   @anvil_prop
   def items_font_size(self, value):
     self._recreate_items()
-
-# menu_background_color = color_property('anvil-m3-buttonMenu-items-container', 'background', 'menu_background_color')
 
   #!componentProp(m3.DropdownMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
   #!componentProp(m3.DropdownMenu)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
