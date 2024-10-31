@@ -438,9 +438,14 @@ class DropdownMenu(DropdownMenuTemplate):
   @anvil_prop
   def bold_items(self, value):
     self._recreate_items()
-      
-  items_font = anvil_prop("items_font")
-  items_font_size = anvil_prop("items_font_size")
+  
+  @anvil_prop
+  def items_font(self, value):
+    self._recreate_items()
+  
+  @anvil_prop
+  def items_font_size(self, value):
+    self._recreate_items()
 
   #!componentProp(m3.DropdownMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
   #!componentProp(m3.DropdownMenu)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
