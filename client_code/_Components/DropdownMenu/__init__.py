@@ -11,7 +11,7 @@ from ..._utils.properties import get_unset_value, get_unset_margin, anvil_prop, 
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
-    self._init = False
+    # self._init = False
     self.tag = ComponentTag()
     self._props = properties
     self._set_designer_text_placeholder, self._start_inline_editing = inline_editing(
@@ -55,8 +55,8 @@ class DropdownMenu(DropdownMenuTemplate):
     if anvil.designer.in_designer:
       self._menuNode.classList.toggle("anvil-m3-menu-hidden", True)
       
-    self._init = True
-    self._create_menu_items()
+    # self._init = True
+    # self._create_menu_items()
 
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes['anvil-m3-dropdownMenu-textbox']
@@ -200,13 +200,12 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility(False)
 
   def form_show(self, **event_args):
-    # self._create_menu_items()
+    self._create_menu_items()
     self._set_designer_text_placeholder()
 
-  def _clear_menu_items(self):
-    self.menu.clear() #removes the appended items in the container
-    
   def _create_menu_items(self):
+    self.menu.clear()
+    
     p = MenuItem()
     p.text = self.placeholder if self.placeholder else ""
     p.italic = self.italic_items
@@ -254,9 +253,9 @@ class DropdownMenu(DropdownMenuTemplate):
       else:
         self._children.append(selection)
 
-  def _rebuild_menu_items(self):
-    self._clear_menu_items()
-    self._create_menu_items()
+  # def _rebuild_menu_items(self):
+  #   self._clear_menu_items()
+  #   self._create_menu_items()
 
   # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
@@ -405,6 +404,13 @@ class DropdownMenu(DropdownMenuTemplate):
   @anvil_prop
   def placeholder(self, value):
     self.selection_field.placeholder = value
+    
+  @anvil_prop
+  def bold_items(self, value):
+    print(value)
+    # self.bold_items = value
+    # if self._init:
+    self._create_menu_items()
 
   items = anvil_prop("items")
 
@@ -423,11 +429,11 @@ class DropdownMenu(DropdownMenuTemplate):
   #   self._set_items(value)
   #   print(value)
     
-  bold_items = anvil_prop("bold_items")
+  # bold_items = anvil_prop("bold_items")
   italic_items = anvil_prop("italic_items")
   underline_items = anvil_prop("underline_items")
   items_text_color = anvil_prop("items_text_color")
-  bold_items = anvil_prop('bold_items')
+  # bold_items = anvil_prop('bold_items')
   items_font = anvil_prop("items_font")
   items_font_size = anvil_prop("items_font_size")
 

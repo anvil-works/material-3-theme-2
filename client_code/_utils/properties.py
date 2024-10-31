@@ -213,20 +213,16 @@ def anvil_prop(*args, **kwargs):
     # We were called with a default value, return a decorator
     def dec(fn):
       if isinstance(fn, str):
-        print(1)
         return property_without_callback(fn)
       else:
-        print(2)
         return property_with_callback(fn.__name__, fn, kwargs['default_value'])
     return dec
   else:
     # We were used directly as a decorator with a setter or to create a property without a callback. 
     if isinstance(args[0], str):
-      print(3, args[0])
       return property_without_callback(args[0])
     else:
       fn = args[0]
-      print(4, fn)
       return property_with_callback(fn.__name__,fn)
 
 
