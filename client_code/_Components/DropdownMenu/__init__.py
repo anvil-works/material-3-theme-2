@@ -11,7 +11,7 @@ from ..._utils.properties import get_unset_value, get_unset_margin, anvil_prop, 
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
-    self._init = False
+    self._init = True
     self.tag = ComponentTag()
     self._props = properties
     self._set_designer_text_placeholder, self._start_inline_editing = inline_editing(
@@ -55,8 +55,8 @@ class DropdownMenu(DropdownMenuTemplate):
     if anvil.designer.in_designer:
       self._menuNode.classList.toggle("anvil-m3-menu-hidden", True)
       
-    self._init = True
-    self._create_menu_items()
+    # self._init = True
+    # self._create_menu_items()
 
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes['anvil-m3-dropdownMenu-textbox']
