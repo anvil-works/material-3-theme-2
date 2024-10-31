@@ -251,7 +251,7 @@ class DropdownMenu(DropdownMenuTemplate):
       else:
         self._children.append(selection)
 
-  def rebuild_menu_items(self):
+  def _rebuild_menu_items(self):
     self._clear_menu_items()
     self._create_menu_items()
 
@@ -403,7 +403,13 @@ class DropdownMenu(DropdownMenuTemplate):
   def placeholder(self, value):
     self.selection_field.placeholder = value
 
-  items = anvil_prop("items")
+  # items = anvil_prop("items")
+  
+  @anvil_prop
+  def items(self, value):
+    self.items = value
+    self._rebuild_menu_items()
+    
   bold_items = anvil_prop("bold_items")
   italic_items = anvil_prop("italic_items")
   underline_items = anvil_prop("underline_items")
