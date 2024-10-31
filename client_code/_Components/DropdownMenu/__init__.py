@@ -406,21 +406,22 @@ class DropdownMenu(DropdownMenuTemplate):
   def placeholder(self, value):
     self.selection_field.placeholder = value
 
-  # items = anvil_prop("items")
-  
-  @anvil_prop
-  def items(self, value):
-    self.items = value
-    # self._rebuild_menu_items()
+  items = anvil_prop("items")
 
-  
-  def _set_items(self, value):
-    self.items = value
+  # @anvil_prop
+  # def items(self, value):
+  #   self.items = value
+    # for appearance in ['outlined', 'filled', 'elevated']:
+    #   self._set_class_of_nodes(appearance, False)
+    # self._set_class_of_nodes(value, True)
 
-  @anvil_prop
-  def items(self, value):
-    self._set_items(value)
-    print(value)
+  # def _set_items(self, value):
+  #   self.items = value
+
+  # @anvil_prop
+  # def items(self, value):
+  #   self._set_items(value)
+  #   print(value)
     
   bold_items = anvil_prop("bold_items")
   italic_items = anvil_prop("italic_items")
