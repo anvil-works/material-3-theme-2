@@ -55,8 +55,8 @@ class DropdownMenu(DropdownMenuTemplate):
     if anvil.designer.in_designer:
       self._menuNode.classList.toggle("anvil-m3-menu-hidden", True)
       
-    # self._init = True
-    # self._create_menu_items()
+    self._init = True
+    self._create_menu_items()
 
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes['anvil-m3-dropdownMenu-textbox']
@@ -200,7 +200,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_menu_visibility(False)
 
   def form_show(self, **event_args):
-    self._create_menu_items()
     self._set_designer_text_placeholder()
 
   def _create_menu_items(self):
@@ -210,7 +209,7 @@ class DropdownMenu(DropdownMenuTemplate):
     p = MenuItem()
     p.text = self.placeholder if self.placeholder else ""
     p.italic = self.items_italic
-    p.underline = self.underline_items
+    p.underline = self.items_underline
     p.text_color = self.items_text_color
     # p.background = self.items_background_color
     p.font_family = self.items_font_family
@@ -234,9 +233,9 @@ class DropdownMenu(DropdownMenuTemplate):
       selection = MenuItem()
       selection.hide_leading_icon = True
 
-      selection.bold = self.bold_items
+      selection.bold = self.items_bold
       selection.italic = self.items_italic
-      selection.underline = self.underline_items
+      selection.underline = self.items_underline
       selection.text_color = self.items_text_color
       selection.font_family = self.items_font_family
       selection.font_size = self.items_font_size
@@ -406,21 +405,18 @@ class DropdownMenu(DropdownMenuTemplate):
     if self._init:
       self._create_menu_items()
       
-  items = anvil_prop("items")
-  items_italic = anvil_prop("items_italic")
+  # items = anvil_prop("items")
   
   @anvil_prop
   def items(self, value):
     self._recreate_items()
     
-  # @anvil_prop
-  # def italic_items(self, value):
-  #   print(value)
-  #   print(self._init)
-  #   self._recreate_items()
+  @anvil_prop
+  def items_italic(self, value):
+    self._recreate_items()
   
   @anvil_prop
-  def underline_items(self, value):
+  def items_underline(self, value):
     self._recreate_items()
   
   @anvil_prop
@@ -428,7 +424,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._recreate_items()
   
   @anvil_prop
-  def bold_items(self, value):
+  def items_bold(self, value):
     self._recreate_items()
   
   @anvil_prop
