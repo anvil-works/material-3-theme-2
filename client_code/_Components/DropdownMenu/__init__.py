@@ -11,7 +11,7 @@ from ..._utils.properties import get_unset_value, get_unset_margin, anvil_prop, 
 
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
-    self._init = True
+    self._init = False
     self.tag = ComponentTag()
     self._props = properties
     self._set_designer_text_placeholder, self._start_inline_editing = inline_editing(
@@ -209,7 +209,7 @@ class DropdownMenu(DropdownMenuTemplate):
     
     p = MenuItem()
     p.text = self.placeholder if self.placeholder else ""
-    p.italic = self.italic_items
+    p.italic = self.items_italic
     p.underline = self.underline_items
     p.text_color = self.items_text_color
     # p.background = self.items_background_color
@@ -235,7 +235,7 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.hide_leading_icon = True
 
       selection.bold = self.bold_items
-      selection.italic = self.italic_items
+      selection.italic = self.items_italic
       selection.underline = self.underline_items
       selection.text_color = self.items_text_color
       selection.font_family = self.items_font_family
@@ -406,15 +406,18 @@ class DropdownMenu(DropdownMenuTemplate):
     if self._init:
       self._create_menu_items()
       
-  # items = anvil_prop("items")
+  items = anvil_prop("items")
+  items_italic = anvil_prop("items_italic")
   
   @anvil_prop
   def items(self, value):
     self._recreate_items()
     
-  @anvil_prop
-  def italic_items(self, value):
-    self._recreate_items()
+  # @anvil_prop
+  # def italic_items(self, value):
+  #   print(value)
+  #   print(self._init)
+  #   self._recreate_items()
   
   @anvil_prop
   def underline_items(self, value):
@@ -452,7 +455,7 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(m3.DropdownMenu)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
 
   #!componentProp(m3.DropdownMenu)!1: {name:"items_text_color",type:"color",description:"The colour of the menu items' text."} 
-  #!componentProp(m3.DropdownMenu)!1: {name:"items_font",type:"string",description:"The font family to use for the menu items."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"items_font_family",type:"string",description:"The font family to use for the menu items."}
   #!componentProp(m3.DropdownMenu)!1: {name:"items_font_size",type:"number",description:"The font size of the menu items."}
   #!componentProp(m3.DropdownMenu)!1: {name:"items_underline",type:"boolean",description:"If True, the menu items will be underlined."}
   #!componentProp(m3.DropdownMenu)!1: {name:"items_italic",type:"boolean",description:"If True, the menu items will be italic."}
