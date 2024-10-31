@@ -200,7 +200,9 @@ class DropdownMenu(DropdownMenuTemplate):
     self._create_menu_items()
     self._set_designer_text_placeholder()
 
-
+  def _clear_menu_items(self):
+    self.menu.clear() #removes the appended items in the container
+    
   def _create_menu_items(self):
     p = MenuItem()
     p.text = self.placeholder if self.placeholder else ""
