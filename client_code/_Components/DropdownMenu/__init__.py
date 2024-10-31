@@ -204,6 +204,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._set_designer_text_placeholder()
 
   def _create_menu_items(self):
+    print(self.items)
     self.menu.clear()
     
     p = MenuItem()
@@ -405,8 +406,12 @@ class DropdownMenu(DropdownMenuTemplate):
     if self._init:
       self._create_menu_items()
       
-  items = anvil_prop("items")
+  # items = anvil_prop("items")
   
+  @anvil_prop
+  def items(self, value):
+    self._recreate_items()
+    
   @anvil_prop
   def italic_items(self, value):
     self._recreate_items()
