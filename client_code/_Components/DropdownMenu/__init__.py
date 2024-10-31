@@ -251,6 +251,10 @@ class DropdownMenu(DropdownMenuTemplate):
       else:
         self._children.append(selection)
 
+  def rebuild_menu_items(self):
+    self._clear_menu_items()
+    self._create_menu_items()
+
   # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
     return [
@@ -266,15 +270,7 @@ class DropdownMenu(DropdownMenuTemplate):
   #properties
   visible = HtmlTemplate.visible
   margin = margin_property('anvil-m3-dropdownMenu-textbox')
-  items = anvil_prop("items")
   allow_none = anvil_prop("allow_none")
-  bold_items = anvil_prop("bold_items")
-  italic_items = anvil_prop("italic_items")
-  underline_items = anvil_prop("underline_items")
-  items_text_color = anvil_prop("items_text_color")
-  bold_items = anvil_prop('bold_items')
-  items_font = anvil_prop("items_font")
-  items_font_size = anvil_prop("items_font_size")
 
   @anvil_prop
   def background_color(self, value):
@@ -406,6 +402,15 @@ class DropdownMenu(DropdownMenuTemplate):
   @anvil_prop
   def placeholder(self, value):
     self.selection_field.placeholder = value
+
+  items = anvil_prop("items")
+  bold_items = anvil_prop("bold_items")
+  italic_items = anvil_prop("italic_items")
+  underline_items = anvil_prop("underline_items")
+  items_text_color = anvil_prop("items_text_color")
+  bold_items = anvil_prop('bold_items')
+  items_font = anvil_prop("items_font")
+  items_font_size = anvil_prop("items_font_size")
 
   #!componentProp(m3.DropdownMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
   #!componentProp(m3.DropdownMenu)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
