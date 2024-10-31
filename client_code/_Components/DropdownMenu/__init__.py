@@ -212,7 +212,7 @@ class DropdownMenu(DropdownMenuTemplate):
     p.underline = self.underline_items
     p.text_color = self.items_text_color
     # p.background = self.items_background_color
-    p.font = self.items_font_family
+    p.font_family = self.items_font_family
     p.font_size = self.items_font_size
     p.hide_leading_icon = True
 
@@ -237,7 +237,7 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.italic = self.italic_items
       selection.underline = self.underline_items
       selection.text_color = self.items_text_color
-      selection.font = self.items_font
+      selection.font_family = self.items_font_family
       selection.font_size = self.items_font_size
 
       selection.text = item
@@ -447,7 +447,7 @@ class DropdownMenu(DropdownMenuTemplate):
   #!componentProp(m3.DropdownMenu)!1: {name:"label_bold",type:"boolean",description:"If True, the label text will be bold."}
 
   #!componentProp(m3.DropdownMenu)!1: {name:"items_text_color",type:"color",description:"The colour of the menu items' text."} 
-  #!componentProp(m3.DropdownMenu)!1: {name:"items_font_family",type:"string",description:"The font family to use for the menu items."}
+  #!componentProp(m3.DropdownMenu)!1: {name:"items_font",type:"string",description:"The font family to use for the menu items."}
   #!componentProp(m3.DropdownMenu)!1: {name:"items_font_size",type:"number",description:"The font size of the menu items."}
   #!componentProp(m3.DropdownMenu)!1: {name:"items_underline",type:"boolean",description:"If True, the menu items will be underlined."}
   #!componentProp(m3.DropdownMenu)!1: {name:"items_italic",type:"boolean",description:"If True, the menu items will be italic."}
