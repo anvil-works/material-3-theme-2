@@ -212,7 +212,7 @@ class DropdownMenu(DropdownMenuTemplate):
     p.underline = self.underline_items
     p.text_color = self.items_text_color
     # p.background = self.items_background_color
-    p.font = self.items_font
+    p.font = self.items_font_family
     p.font_size = self.items_font_size
     p.hide_leading_icon = True
 
@@ -401,28 +401,12 @@ class DropdownMenu(DropdownMenuTemplate):
   def placeholder(self, value):
     self.selection_field.placeholder = value
     
-
-  items = anvil_prop("items")
-  # @anvil_prop
-  # def items(self, value):
-  #   if self._init:
-  #     self._create_menu_items()
-
-  # def _set_items(self, value):
-  #   self.items = value
-
-  # @anvil_prop
-  # def items(self, value):
-  #   self._set_items(value)
-  #   print(value)
-    
-  # italic_items = anvil_prop("italic_items")
-  # underline_items = anvil_prop("underline_items")
-  # items_text_color = anvil_prop("items_text_color")
   def _recreate_items(self):
     if self._init:
       self._create_menu_items()
       
+  items = anvil_prop("items")
+  
   @anvil_prop
   def italic_items(self, value):
     self._recreate_items()
@@ -440,7 +424,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._recreate_items()
   
   @anvil_prop
-  def items_font(self, value):
+  def items_font_family(self, value):
     self._recreate_items()
   
   @anvil_prop
