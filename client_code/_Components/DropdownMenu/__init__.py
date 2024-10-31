@@ -368,7 +368,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.border_color = value
 
   @anvil_prop
-  def menu_color(self, value):
+  def menu_background_color(self, value):
     self.menu.background_color = value
 
   @anvil_prop

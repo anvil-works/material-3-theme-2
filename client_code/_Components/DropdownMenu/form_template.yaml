@@ -1,7 +1,7 @@
 components:
 - layout_properties: {slot: anvil-m3-dropdownMenu-textfield}
   name: selection_field
-  properties: {trailing_icon: 'mi:arrow_drop_down'}
+  properties: {background_color: '', trailing_icon: 'mi:arrow_drop_down'}
   type: form:_Components.TextInput.TextBox
 - layout_properties: {slot: anvil-m3-dropdownMenu-slot}
   name: menu
