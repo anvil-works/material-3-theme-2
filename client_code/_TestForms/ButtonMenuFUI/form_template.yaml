@@ -13,8 +13,9 @@ components:
       name: menu_item_2
       properties: {leading_icon: 10mp, text: abc}
       type: form:_Components.MenuItem
+    layout_properties: {}
     name: button_menu_1
-    properties: {}
+    properties: {align: full}
     type: form:_Components.ButtonMenu
   - layout_properties: {}
     name: spacer_1
