@@ -76,7 +76,7 @@ body {
 
 /*NAVIGATION: RAIL, DRAWER, APP BAR*/
 @media(min-width: 980px) {
-  .anvil-m3-navigation-drawer.anvil-m3- {
+  .anvil-m3-navigation-drawer.anvil-m3-out-of-anvil {
     width: 360px !important;
     height: 100%;
     padding: 28px;
@@ -84,7 +84,7 @@ body {
 }
 
 @media(min-width: 980px) {
-  .anvil-m3-navigation-drawer {
+  .anvil-m3-navigation-drawer.anvil-m3-out-of-anvil {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
