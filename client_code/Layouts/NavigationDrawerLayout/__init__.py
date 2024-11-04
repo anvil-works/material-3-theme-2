@@ -26,7 +26,6 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.init_components(**properties)
 
     if in_designer:
-      print('in designer')
       self.nav_drawer.classList.add('anvil-m3-nav-drawer-in-designer')
       self.nav_drawer.classList.remove('anvil-m3-nav-drawer-out-designer')
 
