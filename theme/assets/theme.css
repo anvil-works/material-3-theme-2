@@ -75,7 +75,6 @@ body {
 }
 
 /*NAVIGATION: RAIL, DRAWER, APP BAR*/
-
 @media(min-width: 980px) {
   .anvil-m3-navigation-drawer {
     width: 360px !important;
@@ -105,39 +104,6 @@ body {
     z-index:8;
     top: 0;
     left: 0px !important;
-  }
-}
-
-@media(max-width: 980px) {
-  .anvil-m3-navigation-drawer {
-    display: block;
-/*     width: 0px; */
-    height: 100%;
-    padding: 28px;
-    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
-    margin: 0;
-    top: 0;
-    left: -101%;
-    border-right: none;
-    border-radius: 0 20px 20px 0;
-    position: absolute;
-  }
-}
-
-
-@media(max-width: 980px) {
-  .anvil-m3-navigation-drawer {
-    width: 100%;
-    padding: 12px 8px 16px 8px;
-    flex-direction: row;
-    justify-content: center;
-    overflow-y: hidden;
-    background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
-    height: 100%;
-    display: flex;
-    position: fixed;
-    z-index:8;
-    top: 0;
   }
 }
 
@@ -199,6 +165,21 @@ body {
   }
 }
 
+@media(max-width: 980px) {
+  .anvil-m3-navigation-drawer {
+    display: block;
+/*     width: 0px; */
+    height: 100%;
+    padding: 28px;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+    margin: 0;
+    top: 0;
+    left: -101%;
+    border-right: none;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+  }
+}
 
 @media(max-width: 600px) {
   .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer {
