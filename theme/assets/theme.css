@@ -351,14 +351,14 @@ body {
 }
 
 @media(max-width: 980px) {
-  .anvil-m3-navigation-drawer.anvil-m3-shown .anvil-m3-drawer-close-btn {
+  .anvil-m3-navigation-drawer.anvil-m3-shown.anvil-m3-nav-drawer-out-designer .anvil-m3-drawer-close-btn {
     display: block;
 /*     padding-left: 28px; */
   }
 }
 
-@media(max-width: 980px) {
-  .anvil-m3-navigation-drawer.anvil-m3-shown .anvil-m3-drawer-close-btn {
+@media(max-width: 1080px) {
+  .anvil-m3-navigation-drawer.anvil-m3-shown.anvil-m3-nav-drawer-in-designer .anvil-m3-drawer-close-btn {
     display: block;
 /*     padding-left: 28px; */
   }
@@ -368,6 +368,13 @@ body {
   .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer.anvil-m3-shown .anvil-m3-drawer-close-btn {
     display: block;
 /*     padding-left: 28px; */
+  }
+}
+
+@media(max-width: 980px) {
+.anvil-m3-navigation-drawer + .anvil-m3-top-app-bar .anvil-m3-drawer-open-btn span, 
+.anvil-m3-navigation-drawer .anvil-m3-drawer-close-btn span {
+  font-size: 24px;
   }
 }
 
