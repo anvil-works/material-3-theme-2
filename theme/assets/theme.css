@@ -96,11 +96,6 @@ body {
     width: 360px !important;
     height: 100%;
     padding: 28px;
-  }
-}
-
-@media(min-width: 980px) {
-  .anvil-m3-navigation-drawer.anvil-m3-nav-drawer-in-designer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -109,6 +104,22 @@ body {
     z-index:8;
     top: 0;
     left: 0px !important;
+  }
+}
+
+@media(max-width: 980px) {
+  .anvil-m3-navigation-drawer {
+    width: 100%;
+    padding: 12px 8px 16px 8px;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: hidden;
+    background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    z-index:8;
+    top: 0;
   }
 }
 
@@ -152,21 +163,7 @@ body {
   }
 }
 
-@media(max-width: 980px) {
-  .anvil-m3-navigation-drawer {
-    width: 100%;
-    padding: 12px 8px 16px 8px;
-    flex-direction: row;
-    justify-content: center;
-    overflow-y: hidden;
-    background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
-    height: 100%;
-    display: flex;
-    position: fixed;
-    z-index:8;
-    top: 0;
-  }
-}
+
 
 @media(max-width: 600px) {
   .anvil-m3-navigation-rail.anvil-m3-bottom-app-bar, .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer {
