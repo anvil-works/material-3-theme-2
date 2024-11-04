@@ -80,11 +80,6 @@ body {
     width: 360px !important;
     height: 100%;
     padding: 28px;
-  }
-}
-
-@media(min-width: 980px) {
-  .anvil-m3-navigation-drawer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
