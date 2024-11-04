@@ -372,15 +372,15 @@ body {
 }
 
 @media(max-width: 980px) {
-.anvil-m3-navigation-drawer + .anvil-m3-top-app-bar .anvil-m3-drawer-open-btn span, 
-.anvil-m3-navigation-drawer .anvil-m3-drawer-close-btn span {
+.anvil-m3-navigation-drawer.anvil-m3-nav-drawer-out-designer + .anvil-m3-top-app-bar .anvil-m3-drawer-open-btn span, 
+.anvil-m3-navigation-drawer.anvil-m3-nav-drawer-out-designer .anvil-m3-drawer-close-btn span {
   font-size: 24px;
   }
 }
 
-@media(max-width: 980px) {
-.anvil-m3-navigation-drawer + .anvil-m3-top-app-bar .anvil-m3-drawer-open-btn span, 
-.anvil-m3-navigation-drawer .anvil-m3-drawer-close-btn span {
+@media(max-width: 1080px) {
+.anvil-m3-navigation-drawer.anvil-m3-nav-drawer-in-designer + .anvil-m3-top-app-bar .anvil-m3-drawer-open-btn span, 
+.anvil-m3-navigation-drawer.anvil-m3-nav-drawer-in-designer .anvil-m3-drawer-close-btn span {
   font-size: 24px;
   }
 }
@@ -410,8 +410,18 @@ body {
     width: 100%;
     height: 100%;
     z-index: 5;
-/*     opacity: 0; */
-/*     transition: opacity 0.25s; */
+  }
+}
+
+@media(max-width: 980px) {
+  .anvil-m3-navigation-drawer ~ .anvil-m3-navigation-drawer-scrim{
+    background-color: rgba(0, 0, 0, 0.32);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
   }
 }
 
