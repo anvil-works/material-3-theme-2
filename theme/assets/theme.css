@@ -402,7 +402,7 @@ body {
 }
 
 @media(max-width: 980px) {
-  .anvil-m3-navigation-drawer ~ .anvil-m3-navigation-drawer-scrim{
+  .anvil-m3-navigation-drawer.anvil-m3-nav-drawer-out-designer ~ .anvil-m3-navigation-drawer-scrim{
     background-color: rgba(0, 0, 0, 0.32);
     position: fixed;
     top: 0px;
@@ -413,8 +413,8 @@ body {
   }
 }
 
-@media(max-width: 980px) {
-  .anvil-m3-navigation-drawer ~ .anvil-m3-navigation-drawer-scrim{
+@media(max-width: 1080px) {
+  .anvil-m3-navigation-drawer.anvil-m3-nav-drawer-in-designer ~ .anvil-m3-navigation-drawer-scrim{
     background-color: rgba(0, 0, 0, 0.32);
     position: fixed;
     top: 0px;
@@ -440,7 +440,14 @@ body {
 }
 
 @media(max-width: 980px) {
-  .anvil-m3-navigation-drawer.anvil-m3-shown ~ .anvil-m3-navigation-drawer-scrim {
+  .anvil-m3-navigation-drawer.anvil-m3-shown.anvil-m3-nav-drawer-in-designer ~ .anvil-m3-navigation-drawer-scrim {
+    display: block;
+  }
+}
+
+
+@media(max-width: 980px) {
+  .anvil-m3-navigation-drawer.anvil-m3-shown.anvil-m3-nav-drawer-in-designer ~ .anvil-m3-navigation-drawer-scrim {
     display: block;
   }
 }
