@@ -117,11 +117,6 @@ body {
     z-index:8;
     top: 0;
     left: 0px !important;
-  }
-}
-
-@media(min-width: 600px) {
-  .anvil-m3-navigation-rail {
     background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%; 
     width: 80px !important;
   /* padding: 56px 12px; */
