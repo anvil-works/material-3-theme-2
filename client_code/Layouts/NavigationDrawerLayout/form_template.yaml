@@ -2,7 +2,7 @@ components: []
 container:
   properties:
     html: |-
-      <div anvil-name="anvil-m3-navigation-drawer" class="anvil-m3-navigation-drawer">
+      <div anvil-name="anvil-m3-navigation-drawer" class="anvil-m3-navigation-drawer anvil-m3-out">
         <!-- <div anvil-name="anvil-m3-drawer-close-btn" class="anvil-m3-drawer-close-btn"> -->
           <!-- <span class="material-symbols-outlined">menu_open</span>
         </div> -->
