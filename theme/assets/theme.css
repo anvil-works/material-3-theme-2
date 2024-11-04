@@ -91,7 +91,7 @@ body {
   }
 }
 
-@media(min-width: 980px) {
+@media(min-width: 1080px) {
   .anvil-m3-navigation-drawer.anvil-m3-nav-drawer-in-designer {
     width: 360px !important;
     height: 100%;
@@ -123,7 +123,7 @@ body {
   }
 }
 
-@media(max-width: 980px) {
+@media(max-width: 1080px) {
   .anvil-m3-navigation-drawer.anvil-m3-nav-drawer-in-designer {
     display: block;
 /*     width: 0px; */
