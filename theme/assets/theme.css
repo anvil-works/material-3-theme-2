@@ -293,7 +293,17 @@ body {
 }
 
 @media(max-width: 980px) {
-  .anvil-m3-navigation-drawer + .anvil-m3-top-app-bar .anvil-m3-app-bar-links {
+  .anvil-m3-navigation-drawer.anvil-m3-nav-drawer-out-designer + .anvil-m3-top-app-bar .anvil-m3-app-bar-links {
+    display: flex;
+    padding-right: 16px;
+    column-gap: 24px;
+    align-items: center;
+    justify-content: right;
+  }
+}
+
+@media(max-width: 1080px) {
+  .anvil-m3-navigation-drawer.anvil-m3-nav-drawer-in-designer + .anvil-m3-top-app-bar .anvil-m3-app-bar-links {
     display: flex;
     padding-right: 16px;
     column-gap: 24px;
