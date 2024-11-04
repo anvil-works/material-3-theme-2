@@ -14,9 +14,7 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self._props = properties
-
-    if anvil.designer.in_designer
-
+      
     self.nav_drawer = self.dom_nodes['anvil-m3-navigation-drawer']
     self.nav_drawer_open_btn = self.dom_nodes['anvil-m3-drawer-open-btn']
     self.nav_drawer_scrim = self.dom_nodes['anvil-m3-navigation-drawer-scrim']
@@ -26,6 +24,9 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.content = self.dom_nodes['anvil-m3-content']
     self.sidesheet_previous_state = False
     self.init_components(**properties)
+
+    if anvil.designer.in_designer:
+      self.nav_drawer.classList.remove('')
 
     self.nav_drawer_open_btn.addEventListener('click', self._open_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self._hide_nav_drawer)
