@@ -76,7 +76,7 @@ body {
 
 /*NAVIGATION: RAIL, DRAWER, APP BAR*/
 @media(min-width: 980px) {
-  .anvil-m3-navigation-drawer {
+  .anvil-m3-navigation-drawer.anvil-m3-nav-drawer-out-designer {
     width: 360px !important;
     height: 100%;
     padding: 28px;
