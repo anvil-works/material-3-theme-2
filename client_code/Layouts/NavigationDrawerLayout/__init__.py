@@ -25,8 +25,8 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.sidesheet_previous_state = False
     self.init_components(**properties)
 
-    if anvil.designer.in_designer:
-      self.nav_drawer.classList.remove('')
+    if in_designer:
+      self.nav_drawer.classList.remove('anvil-m3-out-of-designer')
 
     self.nav_drawer_open_btn.addEventListener('click', self._open_nav_drawer)
     self.nav_drawer_scrim.addEventListener('click', self._hide_nav_drawer)
