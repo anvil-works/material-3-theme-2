@@ -26,6 +26,7 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.init_components(**properties)
 
     if in_designer:
+      print('in designer')
       self.nav_drawer.classList.add('anvil-m3-nav-drawer-in-designer')
 
     self.nav_drawer_open_btn.addEventListener('click', self._open_nav_drawer)
