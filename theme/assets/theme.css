@@ -88,6 +88,15 @@ body {
     z-index:8;
     top: 0;
     left: 0px !important;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: hidden;
+    background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    z-index:8;
+    top: 0;
   }
 }
 
