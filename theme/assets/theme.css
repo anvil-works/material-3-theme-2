@@ -97,7 +97,7 @@ body {
 }
 
 @media(min-width: 980px) {
-  .anvil-m3-navigation-drawer. {
+  .anvil-m3-navigation-drawer.anvil-m3-nav-drawer-in-designer {
     width: 360px !important;
     height: 100%;
     padding: 28px;
@@ -105,7 +105,7 @@ body {
 }
 
 @media(min-width: 980px) {
-  .anvil-m3-navigation-drawer {
+  .anvil-m3-navigation-drawer.anvil-m3-nav-drawer-in-designer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -116,7 +116,6 @@ body {
     left: 0px !important;
   }
 }
-
 
 @media(min-width: 600px) {
  .anvil-m3-navigation-rail {
