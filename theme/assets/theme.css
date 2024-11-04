@@ -96,6 +96,28 @@ body {
   }
 }
 
+@media(min-width: 980px) {
+  .anvil-m3-navigation-drawer {
+    width: 360px !important;
+    height: 100%;
+    padding: 28px;
+  }
+}
+
+@media(min-width: 980px) {
+  .anvil-m3-navigation-drawer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    overflow-y: auto;
+    z-index:8;
+    top: 0;
+    left: 0px !important;
+  }
+}
+
+
 @media(min-width: 600px) {
  .anvil-m3-navigation-rail {
     display: flex;
