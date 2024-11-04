@@ -323,7 +323,7 @@ body {
 }
 
 @media(max-width: 980px) {
-  .anvil-m3-navigation-drawer.anvil-m3-shown {
+  .anvil-m3-navigation-drawer.anvil-m3-nav-drawer-out-designer.anvil-m3-shown {
     width: 360px;
     left: 0px;
     transition: right 0.25s;
@@ -331,8 +331,8 @@ body {
   }
 }
 
-@media(max-width: 980px) {
-  .anvil-m3-navigation-drawer.anvil-m3-shown {
+@media(max-width: 1080px) {
+  .anvil-m3-navigation-drawer.anvil-m3-nav-drawer-in-designer.anvil-m3-shown {
     width: 360px;
     left: 0px;
     transition: right 0.25s;
@@ -347,6 +347,13 @@ body {
     left: 0px;
     transition: right 0.25s;
     transition: left .25s;
+  }
+}
+
+@media(max-width: 980px) {
+  .anvil-m3-navigation-drawer.anvil-m3-shown .anvil-m3-drawer-close-btn {
+    display: block;
+/*     padding-left: 28px; */
   }
 }
 
