@@ -97,7 +97,7 @@ body {
 }
 
 @media(min-width: 980px) {
-  .anvil-m3-navigation-drawer {
+  .anvil-m3-navigation-drawer. {
     width: 360px !important;
     height: 100%;
     padding: 28px;
