@@ -1,7 +1,7 @@
-import anvil.server
-from .Card import Card
 import anvil.designer
+
 from .._utils.properties import anvil_prop
+from .Card import Card
 
 enabled_property = {"name": "enabled", "type": "boolean", "important": True, "designerHint": "enabled", "group": "Interaction", "description": "If True, this component allows user interaction."}
 click_event = {"name": "click", "defaultEvent": True, "description": "When the component is clicked"}

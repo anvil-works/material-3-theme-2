@@ -1,20 +1,13 @@
-from anvil import *
-from anvil.js import window
-from anvil.property_utils import set_element_margin, set_element_padding, set_element_spacing
-from anvil.js.window import document
-from . import fui, noop
 import anvil.designer
+from anvil import *
+from anvil.js.window import document
 from anvil.property_utils import (
-    get_margin_styles,
-    get_padding_styles,
-    get_spacing_styles,
+  set_element_margin,
+  set_element_padding,
+  set_element_spacing,
 )
-from anvil.property_utils import (
-    get_unset_margin,
-    get_unset_padding,
-    get_unset_spacing,
-    get_unset_value,
-)
+
+from . import fui, noop
 
 _directions = ("Top", "Right", "Bottom", "Left")
 

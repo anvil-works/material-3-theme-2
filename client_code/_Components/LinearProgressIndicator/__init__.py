@@ -1,8 +1,16 @@
-from ._anvil_designer import LinearProgressIndicatorTemplate
 from anvil import *
-import anvil.server
 from anvil import HtmlTemplate
-from ..._utils.properties import get_unset_margin, anvil_prop, tooltip_property, margin_property, theme_color_to_css, role_property, color_property
+
+from ..._utils.properties import (
+  anvil_prop,
+  get_unset_margin,
+  margin_property,
+  role_property,
+  theme_color_to_css,
+  tooltip_property,
+)
+from ._anvil_designer import LinearProgressIndicatorTemplate
+
 
 class LinearProgressIndicator(LinearProgressIndicatorTemplate):
   def __init__(self, **properties):

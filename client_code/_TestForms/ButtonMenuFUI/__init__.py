@@ -1,6 +1,8 @@
-from ._anvil_designer import ButtonMenuFUITemplate
 from anvil import *
 from anvil.js import get_dom_node
+
+from ._anvil_designer import ButtonMenuFUITemplate
+
 
 class ButtonMenuFUI(ButtonMenuFUITemplate):
   def __init__(self, **properties):

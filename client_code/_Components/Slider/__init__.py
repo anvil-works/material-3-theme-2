@@ -1,10 +1,20 @@
-from ._anvil_designer import SliderTemplate
-from anvil import *
-from anvil.js.window import document, ResizeObserver
 import anvil.js
+from anvil import *
 from anvil import HtmlTemplate
 from anvil.designer import in_designer
-from ..._utils.properties import get_unset_margin, anvil_prop, enabled_property, role_property, value_property, color_property, theme_color_to_css, margin_property, tooltip_property
+from anvil.js.window import ResizeObserver, document
+
+from ..._utils.properties import (
+  anvil_prop,
+  color_property,
+  get_unset_margin,
+  margin_property,
+  role_property,
+  theme_color_to_css,
+  tooltip_property,
+)
+from ._anvil_designer import SliderTemplate
+
 
 class Slider(SliderTemplate):
   def __init__(self, **properties):

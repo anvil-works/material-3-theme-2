@@ -1,9 +1,21 @@
-from ._anvil_designer import MenuItemTemplate
+import anvil.designer
+import anvil.server
 from anvil import *
 from anvil import HtmlTemplate
-import anvil.server
-from ..._utils.properties import anvil_prop, innerText_property, spacing_property, enabled_property, underline_property, italic_property, bold_property, font_size_property, color_property, theme_color_to_css, font_family_property, tooltip_property
-import anvil.designer
+
+from ..._utils.properties import (
+  anvil_prop,
+  bold_property,
+  color_property,
+  font_family_property,
+  font_size_property,
+  italic_property,
+  spacing_property,
+  tooltip_property,
+  underline_property,
+)
+from ._anvil_designer import MenuItemTemplate
+
 
 class MenuItem(MenuItemTemplate):
   def __init__(self, **properties):

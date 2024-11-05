@@ -1,6 +1,6 @@
-from ._anvil_designer import RadioGroupPanelTemplate
 from anvil import *
-import anvil.server
+
+from ._anvil_designer import RadioGroupPanelTemplate
 
 
 class RadioGroup(Component):

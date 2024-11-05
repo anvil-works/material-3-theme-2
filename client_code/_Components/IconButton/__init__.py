@@ -1,9 +1,20 @@
-from ._anvil_designer import IconButtonTemplate
-from anvil import *
-import anvil.server
 import anvil.designer
+from anvil import *
 from anvil import HtmlTemplate
-from ..._utils.properties import get_unset_margin, anvil_prop, tooltip_property, role_property, enabled_property, color_property, style_property, property_with_callback, border_property, margin_property
+
+from ..._utils.properties import (
+  anvil_prop,
+  border_property,
+  color_property,
+  enabled_property,
+  get_unset_margin,
+  margin_property,
+  role_property,
+  style_property,
+  tooltip_property,
+)
+from ._anvil_designer import IconButtonTemplate
+
 
 class IconButton(IconButtonTemplate):
   def __init__(self, **properties):

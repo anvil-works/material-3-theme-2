@@ -1,6 +1,5 @@
 import anvil.server
 from anvil import *
-from anvil.js.window import FileReader, Uint8Array
 
 from ..._utils import gen_id
 from ..._utils.properties import (

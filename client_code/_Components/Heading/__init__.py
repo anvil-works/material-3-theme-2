@@ -9,10 +9,10 @@ from ..._utils.properties import (
   font_family_property,
   get_unset_spacing,
   get_unset_value,
+  inline_editing,
   italic_property,
   role_property,
   tooltip_property,
-  inline_editing,
 )
 from ._anvil_designer import HeadingTemplate
 

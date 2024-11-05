@@ -1,9 +1,20 @@
-import anvil.server
-from . import TextInput
 import anvil.designer
 import anvil.js
+import anvil.server
 from anvil.js.window import ResizeObserver, requestAnimationFrame
-from ..._utils.properties import get_unset_value, anvil_prop, italic_property, bold_property, underline_property, font_family_property, font_size_property, color_property, style_property
+
+from ..._utils.properties import (
+  anvil_prop,
+  bold_property,
+  color_property,
+  font_family_property,
+  font_size_property,
+  get_unset_value,
+  italic_property,
+  style_property,
+  underline_property,
+)
+from . import TextInput
 
 text_property = {
   "name": "text",

@@ -1,7 +1,8 @@
-import anvil.server
-from .IconButton import IconButton
 import anvil.designer
+import anvil.server
+
 from .._utils.properties import property_with_callback, theme_color_to_css
+from .IconButton import IconButton
 
 selected_property = {"name": "selected", "type": "boolean", "group": "Interaction", "important": True, "default_value": False, "description": "If True, the component is in the selected state"}
 selected_border_property = {"name": "selected_border", "type": "string", "group": "Toggled Style" , "description": "The border style when the component is in the selected state. Accepts any valid CSS border value."}

@@ -1,8 +1,13 @@
-from ._anvil_designer import NavigationRailLayoutTemplate
 from anvil import *
-import anvil.server
-from ..._utils.properties import innerText_property, color_property, theme_color_to_css, padding_property, anvil_prop
 from anvil.js import window
+
+from ..._utils.properties import (
+  anvil_prop,
+  color_property,
+  padding_property,
+  theme_color_to_css,
+)
+from ._anvil_designer import NavigationRailLayoutTemplate
 
 
 class NavigationRailLayout(NavigationRailLayoutTemplate):

@@ -1,8 +1,22 @@
-from ._anvil_designer import LinkTemplate
-from anvil import *
 import anvil.designer
-from ..._utils.properties import anvil_prop, tooltip_property, role_property, underline_property, italic_property, style_property, color_property, innerText_property, bold_property, font_size_property, href_property, font_family_property, spacing_property
+from anvil import *
 from anvil import HtmlTemplate
+
+from ..._utils.properties import (
+  anvil_prop,
+  bold_property,
+  color_property,
+  font_family_property,
+  font_size_property,
+  italic_property,
+  role_property,
+  spacing_property,
+  style_property,
+  tooltip_property,
+  underline_property,
+)
+from ._anvil_designer import LinkTemplate
+
 
 class Link(LinkTemplate):
   def __init__(self, **properties):
