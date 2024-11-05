@@ -15,13 +15,12 @@ from .._Components.Link import Link
 from .._Components.MenuItem import MenuItem
 from .._Components.NavigationLink import NavigationLink
 from .._Components.RadioButton import RadioButton
-from .._Components.RadioGroupPanel import RadioGroupPanel, RadioGroup
+from .._Components.RadioGroupPanel import RadioGroup, RadioGroupPanel
+from .._Components.SidesheetContent import SidesheetContent
 from .._Components.Slider import Slider
 from .._Components.Switch import Switch
 from .._Components.Text import Text
-from .._Components.TextInput import TextArea
-from .._Components.TextInput import TextBox
+from .._Components.TextInput import TextArea, TextBox
 from .._Components.ToggleIconButton import ToggleIconButton
-from .._Components.SidesheetContent import SidesheetContent
 
 
