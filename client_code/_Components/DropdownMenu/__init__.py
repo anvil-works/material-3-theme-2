@@ -245,6 +245,7 @@ class DropdownMenu(DropdownMenuTemplate):
 
     p = MenuItem(**item_props, text=self.placeholder or "")
     p.tag.value = None
+    p.tag.label = ""
 
     def _handle_select_placeholder(**e):
       if self.allow_none:
@@ -264,6 +265,7 @@ class DropdownMenu(DropdownMenuTemplate):
     for label, value in self._clean_items:
       selection = MenuItem(**item_props, text=label)
       selection.tag.value = value
+      selection.tag.label = label
 
       def _handle_selection_click(value=value, **e):
         self.selected_value = value
@@ -418,7 +420,7 @@ class DropdownMenu(DropdownMenuTemplate):
   def selected_value(self, value):
     for child in self._children:
       if child.tag.value == value:
-        self.selection_field.dom_nodes['anvil-m3-textbox'].value = child.text
+        self.selection_field.dom_nodes['anvil-m3-textbox'].value = child.tag.label
         break
     else:  # no break
       self.selection_field.dom_nodes['anvil-m3-textbox'].value = "<Invalid value>"
