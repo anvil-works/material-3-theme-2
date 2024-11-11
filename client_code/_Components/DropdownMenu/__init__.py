@@ -272,6 +272,8 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.add_event_handler('click', _handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
       self._children.append(selection)
+    
+    self.selected_value = self.selected_value
 
   # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
