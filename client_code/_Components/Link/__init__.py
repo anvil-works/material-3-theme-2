@@ -7,6 +7,7 @@ from ..._utils.properties import (
   color_property,
   font_family_property,
   font_size_property,
+  inline_editing,
   italic_property,
   role_property,
   spacing_property,
@@ -24,25 +25,15 @@ class Link(LinkTemplate):
     self.tag = anvil.ComponentTag()
     self._props = properties
     self._tooltip_node = None
+    self._set_designer_text_placeholder, self._start_inline_editing = inline_editing(
+      self, self.dom_nodes['anvil-m3-link-text'], self._set_label, "label"
+    )
     self.init_components(**properties)
     self.dom_nodes['anvil-m3-link'].addEventListener("click", self._handle_click)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
 
   def _on_cleanup(self, **event_args):
     self._revoke_tmp_url()
-
-  def form_show(self, **event_args):
-    """This method is called when the HTML panel is shown on the screen"""
-    if (
-      anvil.designer.in_designer
-      and not self.text
-      and not self.icon
-      and not self.get_components()
-    ):
-      self.dom_nodes['anvil-m3-link-text'].innerText = anvil.designer.get_design_name(
-        self
-      )
-      self.dom_nodes['anvil-m3-link-text'].style.display = 'block'
 
   def _handle_click(self, event):
     keys = {
@@ -60,11 +51,7 @@ class Link(LinkTemplate):
         "title": "Edit text",
         "icon": "edit",
         "default": True,
-        "callbacks": {
-          "execute": lambda: anvil.designer.start_inline_editing(
-            self, "text", self.dom_nodes['anvil-m3-link-text']
-          )
-        },
+        "callbacks": {"execute": self._start_inline_editing},
       }
     ]
 
@@ -148,13 +135,17 @@ class Link(LinkTemplate):
       self.dom_nodes['anvil-m3-link-icon'].style.marginRight = ""
     self.dom_nodes['anvil-m3-link-icon'].innerText = value[3:]
 
-  @anvil_prop
-  def text(self, value):
+  def _set_text(self, value):
     self.dom_nodes['anvil-m3-link-text'].innerText = value
     if value:
       self.dom_nodes['anvil-m3-link-text'].style.display = 'block'
     else:
       self.dom_nodes['anvil-m3-link-text'].style.display = 'none'
+
+  @anvil_prop
+  def text(self, value):
+    self._set_text(value)
+    self._set_designer_text_placeholder()
 
 
 #!defClass(m3, Link, anvil.Component)!:
