@@ -275,7 +275,8 @@ class DropdownMenu(DropdownMenuTemplate):
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
       self._children.append(selection)
     
-    self.selected_value = self.selected_value
+    if not anvil.designer.in_designer:
+      self.selected_value = self.selected_value
 
   # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
