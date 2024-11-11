@@ -43,10 +43,7 @@ class MenuItem(MenuItemTemplate):
 
   @anvil_prop
   def text(self, value):
-    if isinstance(value, tuple):
-      self.dom_nodes['anvil-m3-menuItem-labelText'].innerText = value[0]
-    else:
-      self.dom_nodes['anvil-m3-menuItem-labelText'].innerText = value
+    self.dom_nodes['anvil-m3-menuItem-labelText'].innerText = value
 
   @anvil_prop
   def leading_icon(self, value):
