@@ -233,16 +233,17 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _create_menu_items(self):
     self.menu.clear()
+    item_props = {
+      "hide_leading_icon": True,
+      "bold": self.items_bold,
+      "italic": self.items_italic,
+      "underline": self.items_underline,
+      "text_color": self.items_text_color,
+      "font_family": self.items_font_family,
+      "font_size": self.items_font_size,
+    }
 
-    p = MenuItem()
-    p.text = self.placeholder if self.placeholder else ""
-    p.bold = self.items_bold
-    p.italic = self.items_italic
-    p.underline = self.items_underline
-    p.text_color = self.items_text_color
-    p.font_family = self.items_font_family
-    p.font_size = self.items_font_size
-    p.hide_leading_icon = True
+    p = MenuItem(**item_props, text=self.placeholder or "")
     p.tag.value = None
 
     def _handle_select_placeholder(**e):
@@ -261,17 +262,7 @@ class DropdownMenu(DropdownMenuTemplate):
       self._children.append(p)
 
     for label, value in self._clean_items:
-      selection = MenuItem()
-      selection.hide_leading_icon = True
-
-      selection.bold = self.items_bold
-      selection.italic = self.items_italic
-      selection.underline = self.items_underline
-      selection.text_color = self.items_text_color
-      selection.font_family = self.items_font_family
-      selection.font_size = self.items_font_size
-
-      selection.text = label
+      selection = MenuItem(**item_props, text=label)
       selection.tag.value = value
 
       def _handle_selection_click(value=value, **e):
