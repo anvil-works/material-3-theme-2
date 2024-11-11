@@ -1,7 +1,6 @@
+import anvil
 import anvil.designer
 import anvil.server
-from anvil import *
-from anvil import HtmlTemplate
 from anvil.js import get_dom_node
 from anvil.js.window import document
 
@@ -20,34 +19,27 @@ from ._anvil_designer import DropdownMenuTemplate
 class DropdownMenu(DropdownMenuTemplate):
   def __init__(self, **properties):
     self._init = False
-    self.tag = ComponentTag()
+    self.tag = anvil.ComponentTag()
     self._props = properties
+    self._clean_items = []
+    self._children = []
+    self._hoverIndex = None
+    self.selected_value = None
     self._set_designer_text_placeholder, self._start_inline_editing = inline_editing(
       self,
       self.selection_field.dom_nodes['anvil-m3-label-text'],
       self._set_label,
       "label",
     )
-    self.init_components(**properties)
     self._cleanup = noop
-
+    self._has_focus = False
     self._menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
     self._field = get_dom_node(self.selection_field).querySelector("input")
 
-    self._hoverIndex = None
-    self._children = None
-
-    self.selected_value = None
+    self.init_components(**properties)
 
     if not self.allow_none:
       self.selection_field.dom_nodes['anvil-m3-textbox'].value = ""
-
-    self._has_focus = False
-    self._handle_keyboard_events = self._handle_keyboard_events
-    self._handle_selection_field_focus = self._handle_selection_field_focus
-    self._child_clicked = self._child_clicked
-    self._body_click = self._body_click
-    self._handle_component_click = self._handle_component_click
 
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener(
       'click', self._handle_component_click
@@ -165,7 +157,7 @@ class DropdownMenu(DropdownMenuTemplate):
     self._update_hover_styles()
 
   def _attempt_select(self):
-    if not self._hoverIndex is None:
+    if self._hoverIndex is not None:
       self._children[self._hoverIndex].raise_event("click")
     self._set_menu_visibility(False)
 
@@ -199,18 +191,12 @@ class DropdownMenu(DropdownMenuTemplate):
       self._menuNode.style.width = f"{selection_field_width}px"
 
       # dealing with hover
-      if self.allow_none is True:
-        if self.selected_value is None:
-          self._hoverIndex = 0
-      elif self.selected_value in self.items:
-        for index, child in enumerate(self._children):
-          if isinstance(self.selected_value, tuple):
-            if child.text == self.selected_value:
-              self._hoverIndex = index
-          else:
-            if child.text is self.selected_value:
-              self._hoverIndex = index
-      else:
+      selected_value = self.selected_value
+      for index, child in enumerate(self._children):
+        if child.tag.value == selected_value:
+          self._hoverIndex = index
+          break
+      else:  # no break
         self._hoverIndex = None
 
       self._update_hover_styles()
@@ -257,6 +243,7 @@ class DropdownMenu(DropdownMenuTemplate):
     p.font_family = self.items_font_family
     p.font_size = self.items_font_size
     p.hide_leading_icon = True
+    p.tag.value = None
 
     def _handle_select_placeholder(**e):
       if self.allow_none:
@@ -266,12 +253,14 @@ class DropdownMenu(DropdownMenuTemplate):
     if not self.allow_none:
       p.enabled = False
 
+    self._children = []
+
     if self.allow_none or self.placeholder:
       p.add_event_handler('click', _handle_select_placeholder)
       self.menu.add_component(p, slot="anvil-m3-menu-slot")
-      self._children = [p]
+      self._children.append(p)
 
-    for item in self.items:
+    for label, value in self._clean_items:
       selection = MenuItem()
       selection.hide_leading_icon = True
 
@@ -282,18 +271,16 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.font_family = self.items_font_family
       selection.font_size = self.items_font_size
 
-      selection.text = item
+      selection.text = label
+      selection.tag.value = value
 
-      def _handle_selection_click(value=item, **e):
+      def _handle_selection_click(value=value, **e):
         self.selected_value = value
         self.raise_event("change")
 
       selection.add_event_handler('click', _handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
-      if self._children is None:
-        self._children = [selection]
-      else:
-        self._children.append(selection)
+      self._children.append(selection)
 
   # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
@@ -308,9 +295,12 @@ class DropdownMenu(DropdownMenuTemplate):
     ]
 
   # properties
-  visible = HtmlTemplate.visible
+  visible = anvil.HtmlTemplate.visible
   margin = margin_property('anvil-m3-dropdownMenu-textbox')
-  allow_none = anvil_prop("allow_none")
+
+  @anvil_prop
+  def allow_none(self, value):
+    self._recreate_items()
 
   @anvil_prop
   def background_color(self, value):
@@ -433,19 +423,17 @@ class DropdownMenu(DropdownMenuTemplate):
 
   @anvil_prop
   def selected_value(self, value):
-    if (value is None and self.allow_none) or (value in self.items):
-      if value is None and self.allow_none:
-        self._hoverIndex = None
-      if isinstance(value, tuple):
-        self.selection_field.dom_nodes['anvil-m3-textbox'].value = value[0]
-      else:
-        self.selection_field.dom_nodes['anvil-m3-textbox'].value = value
-    else:
+    for child in self._children:
+      if child.tag.value == value:
+        self.selection_field.dom_nodes['anvil-m3-textbox'].value = child.text
+        break
+    else:  # no break
       self.selection_field.dom_nodes['anvil-m3-textbox'].value = "<Invalid value>"
 
   @anvil_prop
   def placeholder(self, value):
     self.selection_field.placeholder = value
+    self._recreate_items()
 
   def _recreate_items(self):
     if self._init:
@@ -453,6 +441,23 @@ class DropdownMenu(DropdownMenuTemplate):
 
   @anvil_prop
   def items(self, value):
+    items = value
+    clean_items = self._clean_items = []
+    for i, item in enumerate(items):
+      if isinstance(item, str):
+        clean_items.append((item, item))
+      elif not isinstance(item, (tuple, list)):
+        raise TypeError("DropdownMenu items must be a list of strings or tuples")
+      else:
+        label, value = item
+        if not isinstance(label, str):
+          raise TypeError(
+            "Dropdown item tuples must be of the form ('label', value),"
+            f" (at item ${i} got {item!r})"
+          )
+
+        clean_items.append((label, value))
+
     self._recreate_items()
 
   @anvil_prop
