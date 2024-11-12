@@ -34,12 +34,12 @@ class DropdownMenu(DropdownMenuTemplate):
     self._cleanup = noop
     self._has_focus = False
     self._menuNode = self.dom_nodes['anvil-m3-dropdownMenu-items-container']
-    self._field = get_dom_node(self.selection_field).querySelector("input")
+    self._field = self.selection_field.dom_nodes['anvil-m3-textbox']
 
     self.init_components(**properties)
 
     if not self.allow_none:
-      self.selection_field.dom_nodes['anvil-m3-textbox'].value = ""
+      self.selection_field.text = ""
 
     self.dom_nodes['anvil-m3-dropdownMenu-container'].addEventListener(
       'click', self._handle_component_click
@@ -106,8 +106,6 @@ class DropdownMenu(DropdownMenuTemplate):
     self._menuNode.remove()
 
   def _handle_selection_field_focus(self, event):
-    if not self.label:
-      self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = ""
     self._has_focus = True
 
   def _handle_selection_field_blur(self, event):
@@ -274,9 +272,8 @@ class DropdownMenu(DropdownMenuTemplate):
       selection.add_event_handler('click', _handle_selection_click)
       self.menu.add_component(selection, slot="anvil-m3-menu-slot")
       self._children.append(selection)
-    
-    if not anvil.designer.in_designer:
-      self.selected_value = self.selected_value
+
+    self.selected_value = self.selected_value
 
   # DESIGNER INTERACTIONS
   def _anvil_get_interactions_(self):
@@ -410,7 +407,7 @@ class DropdownMenu(DropdownMenuTemplate):
       )
 
   def _set_label(self, value):
-    self.selection_field.dom_nodes['anvil-m3-label-text'].innerText = value
+    self.selection_field.label = value
 
   @anvil_prop
   def label(self, value):
@@ -419,12 +416,18 @@ class DropdownMenu(DropdownMenuTemplate):
 
   @anvil_prop
   def selected_value(self, value):
+    if anvil.designer.in_designer:
+      return
+
     for child in self._children:
       if child.tag.value == value:
-        self.selection_field.dom_nodes['anvil-m3-textbox'].value = child.tag.label
+        self.selection_field.text = child.tag.label
         break
     else:  # no break
-      self.selection_field.dom_nodes['anvil-m3-textbox'].value = "<Invalid value>"
+      if value is not None:
+        self.selection_field.text = "<Invalid value>"
+      else:
+        self.selection_field.text = ""
 
   @anvil_prop
   def placeholder(self, value):
