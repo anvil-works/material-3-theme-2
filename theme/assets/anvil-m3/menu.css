@@ -87,7 +87,7 @@
   cursor: pointer;
 }
 
-.anvil-m3-menuItem-container:hover .anvil-m3-menuItem-core,  .anvil-m3-menuItem-container-keyboardHover .anvil-m3-menuItem-core,{
+.anvil-m3-menuItem-container:hover .anvil-m3-menuItem-core,  .anvil-m3-menuItem-container-keyboardHover .anvil-m3-menuItem-core {
   color: var(--anvil-m3-on-surface)
 }
 
