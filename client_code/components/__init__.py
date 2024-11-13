@@ -23,4 +23,34 @@ from .._Components.Text import Text
 from .._Components.TextInput import TextArea, TextBox
 from .._Components.ToggleIconButton import ToggleIconButton
 
+__all__ = [
+  "Button",
+  "ButtonMenu",
+  "Card",
+  "CardContentContainer",
+  "Checkbox",
+  "CircularProgressIndicator",
+  "Divider",
+  "DropdownMenu",
+  "FileLoader",
+  "Heading",
+  "IconButton",
+  "InteractiveCard",
+  "LinearProgressIndicator",
+  "Link",
+  "MenuItem",
+  "NavigationLink",
+  "RadioButton",
+  "RadioGroup",
+  "RadioGroupPanel",
+  "SidesheetContent",
+  "Slider",
+  "Switch",
+  "Text",
+  "TextArea",
+  "TextBox",
+  "ToggleIconButton",
+]
 
+for c in __all__:
+  globals()[c].__module__ = f"{__package__}.{__name__}"
