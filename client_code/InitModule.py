@@ -1,8 +1,6 @@
 from anvil import pluggable_ui
 
-from ._Components.Button import Button
-from ._Components.Checkbox import Checkbox
-from ._Components.TextInput.TextBox import TextBox
+from .components import Button, Checkbox, TextBox
 
 
 def make_footer_button(button_type, **kwargs):
