@@ -11,27 +11,30 @@ class Menu(MenuTemplate):
     self.tag = ComponentTag()
     self._props = properties
     self.init_components(**properties)
-    
+
   """ Properties """
   visible = HtmlTemplate.visible
-  background_color = color_property('anvil-m3-menu-items-container', 'backgroundColor', 'background_color')
+  background_color = color_property(
+    'anvil-m3-menu-items-container', 'backgroundColor', 'background_color'
+  )
 
   """ Functions """
-  def set_or_toggle_visibility(self, value = None):
+
+  def set_or_toggle_visibility(self, value=None):
     if value is not None:
       self.visible = value
     else:
       currVal = self.visible
       self.visible = not currVal
-  
+
   def _anvil_get_interactions_(self):
     return [
       {
         "type": "designer_events",
         "callbacks": {
-          "onSelectDescendent": self._on_select_descendant, 
-          "onSelectOther": self._on_select_other
-        }
+          "onSelectDescendent": self._on_select_descendant,
+          "onSelectOther": self._on_select_other,
+        },
       },
     ]
 

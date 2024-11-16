@@ -28,9 +28,11 @@ class Slider(SliderTemplate):
     self._tooltip_node = None
     self._mounted = False
     self.init_components(**properties)
-    
+
     self.dom_nodes["anvil-m3-slider-input"].addEventListener("input", self._on_input)
-    self.dom_nodes["anvil-m3-slider-input"].addEventListener("mousedown", self._on_mouse_down)
+    self.dom_nodes["anvil-m3-slider-input"].addEventListener(
+      "mousedown", self._on_mouse_down
+    )
     self.dom_nodes['anvil-m3-slider-input'].addEventListener("change", self._on_change)
     self.add_event_handler("x-anvil-page-added", self._on_mount)
     self.add_event_handler("x-anvil-page-removed", self._on_cleanup)
@@ -40,9 +42,11 @@ class Slider(SliderTemplate):
     self.resize_observer.observe(self.dom_nodes['anvil-m3-slider'])
     self._mounted = True
     self._set_markers()
-    self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
+    self.dom_nodes[
+      'anvil-m3-slider-track-container'
+    ].style.width = self._get_track_width()
     self._update_progress()
-  
+
   def _on_cleanup(self, **event_args):
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-slider'])
     self._mounted = False
@@ -68,10 +72,12 @@ class Slider(SliderTemplate):
     document.removeEventListener("mouseup", self._on_mouse_up)
 
   def _on_window_resize(self, *args):
-    self.dom_nodes['anvil-m3-slider-track-container'].style.width = self._get_track_width()
+    self.dom_nodes[
+      'anvil-m3-slider-track-container'
+    ].style.width = self._get_track_width()
     self._set_markers()
     self._update_progress()
-    
+
   def _update_progress(self):
     slider = self.dom_nodes["anvil-m3-slider-input"]
     progress = self.dom_nodes["anvil-m3-slider-progress"]
@@ -113,7 +119,9 @@ class Slider(SliderTemplate):
   def _set_markers(self):
     slider = self.dom_nodes["anvil-m3-slider-input"]
     markers_container_bg = self.dom_nodes["anvil-m3-slider-markers-container-bg"]
-    markers_container_progress = self.dom_nodes["anvil-m3-slider-markers-container-progress"]
+    markers_container_progress = self.dom_nodes[
+      "anvil-m3-slider-markers-container-progress"
+    ]
     markers_container_bg.innerHTML = ''
     markers_container_progress.innerHTML = ''
     markers_container_bg.style.width = self._get_track_width()
@@ -131,15 +139,15 @@ class Slider(SliderTemplate):
         marker_progress.classList.add('anvil-m3-slider-marker-progress')
         markers_container_bg.appendChild(marker_bg)
         markers_container_progress.appendChild(marker_progress)
- 
-  #!componentProp(m3.Slider)!1: {name:"show_label",type:"boolean",description:"If True, display a label above the thumb with the current value."} 
-  #!componentProp(m3.Slider)!1: {name:"progress_color",type:"color",description:"The colour of the progress bar"}  
-  #!componentProp(m3.Slider)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+
+  #!componentProp(m3.Slider)!1: {name:"show_label",type:"boolean",description:"If True, display a label above the thumb with the current value."}
+  #!componentProp(m3.Slider)!1: {name:"progress_color",type:"color",description:"The colour of the progress bar"}
+  #!componentProp(m3.Slider)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."}
   #!componentProp(m3.Slider)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!componentProp(m3.Slider)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!componentProp(m3.Slider)!1: {name:"thumb_color",type:"color",description:"The colour of the slider thumb."} 
+  #!componentProp(m3.Slider)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
+  #!componentProp(m3.Slider)!1: {name:"thumb_color",type:"color",description:"The colour of the slider thumb."}
   #!componentProp(m3.Slider)!1: {name:"label_color",type:"color",description:"The colour of the background of the label"}
-  #!componentProp(m3.Slider)!1: {name:"label_text_color",type:"color",description:"The colour of the text of the label"} 
+  #!componentProp(m3.Slider)!1: {name:"label_text_color",type:"color",description:"The colour of the text of the label"}
   #!componentProp(m3.Slider)!1: {name:"value",type:"number",description:"The value of the slider."}
   #!componentProp(m3.Slider)!1: {name:"min",type:"number",description:"The minimum value of the Slider."}
   #!componentProp(m3.Slider)!1: {name:"max",type:"number",description:"The maximum value of the Slider."}
@@ -150,10 +158,14 @@ class Slider(SliderTemplate):
   #!componentProp(m3.Slider)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
   #!componentProp(m3.Slider)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
-  #!componentEvent(m3.Slider)!1: {name: "change", description: "When the value of the component is changed", parameters:[]}  
+  #!componentEvent(m3.Slider)!1: {name: "change", description: "When the value of the component is changed", parameters:[]}
 
-  progress_color = color_property("anvil-m3-slider-progress", 'background', 'progress_color')
-  track_color = color_property("anvil-m3-slider-background", 'background', 'track_color')
+  progress_color = color_property(
+    "anvil-m3-slider-progress", 'background', 'progress_color'
+  )
+  track_color = color_property(
+    "anvil-m3-slider-background", 'background', 'track_color'
+  )
   margin = margin_property("anvil-m3-slider")
   tooltip = tooltip_property('anvil-m3-slider')
   visible = HtmlTemplate.visible
@@ -163,9 +175,13 @@ class Slider(SliderTemplate):
   @anvil_prop
   def thumb_color(self, value=None):
     if self.thumb_color:
-      self.dom_nodes['anvil-m3-slider-input'].style.setProperty('--anvil-m3-slider-thumb-color', theme_color_to_css(self.thumb_color))
+      self.dom_nodes['anvil-m3-slider-input'].style.setProperty(
+        '--anvil-m3-slider-thumb-color', theme_color_to_css(self.thumb_color)
+      )
     else:
-      self.dom_nodes['anvil-m3-slider-input'].style.setProperty('--anvil-m3-slider-thumb-color', 'var(--anvil-m3-primary)')
+      self.dom_nodes['anvil-m3-slider-input'].style.setProperty(
+        '--anvil-m3-slider-thumb-color', 'var(--anvil-m3-primary)'
+      )
 
   @anvil_prop
   def label_color(self, value):
@@ -186,7 +202,7 @@ class Slider(SliderTemplate):
     else:
       input.setAttribute("disabled", " ")
       full_slider.classList.add("anvil-m3-slider-disabled")
-         
+
   @anvil_prop
   def show_markers(self, value):
     if self._mounted:
@@ -213,7 +229,7 @@ class Slider(SliderTemplate):
         self.dom_nodes["anvil-m3-slider-input"].min = value
         self._update_progress()
     if in_designer and self._mounted:
-        anvil.designer.update_component_properties(self, {"value": self.value})
+      anvil.designer.update_component_properties(self, {"value": self.value})
 
   @property
   def max(self):
@@ -226,7 +242,7 @@ class Slider(SliderTemplate):
         self.dom_nodes["anvil-m3-slider-input"].max = value
         self._update_progress()
     if in_designer and self._mounted:
-        anvil.designer.update_component_properties(self, {"value": self.value})
+      anvil.designer.update_component_properties(self, {"value": self.value})
 
   @property
   def step(self):
@@ -241,5 +257,6 @@ class Slider(SliderTemplate):
       self._update_progress()
     if in_designer and self._mounted:
       anvil.designer.update_component_properties(self, {"value": self.value})
-  
+
+
 #!defClass(m3,Slider,anvil.Component)!:

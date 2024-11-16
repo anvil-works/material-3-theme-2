@@ -22,21 +22,24 @@ text_property = {
   "default_value": "None",
   "description": "The input text displayed on this component",
   "supportsWriteback": True,
-  "important": True
+  "important": True,
 }
 
-height_property = {"name": "height",
-                   "type": "number",
-                   "default_value": None,
-                   "description": "The initial height of this TextArea",}
+height_property = {
+  "name": "height",
+  "type": "number",
+  "default_value": None,
+  "description": "The initial height of this TextArea",
+}
+
 
 class TextArea(TextInput):
   _anvil_properties_ = [text_property, height_property, *TextInput._anvil_properties_]
-  
+
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
-    
+
     self.display_italic = self.display_italic
     self.display_bold = self.display_bold
     self.display_underline = self.display_underline
@@ -59,7 +62,9 @@ class TextArea(TextInput):
     self._on_focus = self._on_focus
     self._on_lost_focus = self._on_lost_focus
 
-    self.dom_nodes['anvil-m3-textarea'].addEventListener("input", self._expand_to_fit_content)
+    self.dom_nodes['anvil-m3-textarea'].addEventListener(
+      "input", self._expand_to_fit_content
+    )
     self.dom_nodes['anvil-m3-textarea'].addEventListener("input", self._on_input)
     self.dom_nodes['anvil-m3-textarea'].addEventListener("change", self._on_change)
     self.dom_nodes['anvil-m3-textarea'].addEventListener("focus", self._on_focus)
@@ -71,18 +76,22 @@ class TextArea(TextInput):
   def _on_mount(self, **event_args):
     self.resize_observer = ResizeObserver(self._on_resize)
     self.resize_observer.observe(self.dom_nodes['anvil-m3-textarea'])
-    
+
   def _on_cleanup(self, **event_args):
     self.resize_observer.unobserve(self.dom_nodes['anvil-m3-textarea'])
 
   def _anvil_get_unset_property_values_(self):
     common_props = TextInput._get_common_unset_property_values_(self)
-    common_props['display_font_size'] = get_unset_value(self.dom_nodes['anvil-m3-textarea'], "fontSize", self.display_font_size)
+    common_props['display_font_size'] = get_unset_value(
+      self.dom_nodes['anvil-m3-textarea'], "fontSize", self.display_font_size
+    )
     return common_props
 
   def _expand_to_fit_content(self, event):
     if event.target.scrollHeight > event.target.clientHeight:
-      self.dom_nodes['anvil-m3-textarea'].style.height = '56px' #Min-height based off M3 specs
+      self.dom_nodes[
+        'anvil-m3-textarea'
+      ].style.height = '56px'  # Min-height based off M3 specs
       self._set_height(event.target.scrollHeight)
 
   def _on_resize(self, entries, observer):
@@ -93,7 +102,9 @@ class TextArea(TextInput):
   def _set_height(self, h):
     # Keep this function, because it's easier to call it from a lambda than setting the height property.
     self.dom_nodes['anvil-m3-textarea'].style.height = f'{h}px'
-    self.dom_nodes['anvil-m3-border-container'].style.height = f"{self.dom_nodes['anvil-m3-textarea'].clientHeight}px"
+    self.dom_nodes[
+      'anvil-m3-border-container'
+    ].style.height = f"{self.dom_nodes['anvil-m3-textarea'].clientHeight}px"
 
   def _set_id(self, value):
     super()._set_id(value)
@@ -104,14 +115,18 @@ class TextArea(TextInput):
 
   def select(self):
     self.dom_nodes['anvil-m3-textarea'].select()
-  
+
   display_italic = italic_property('anvil-m3-textarea', 'display_italic')
   display_bold = bold_property('anvil-m3-textarea', 'display_bold')
   display_underline = underline_property('anvil-m3-textarea', 'display_underline')
   display_font_size = font_size_property('anvil-m3-textarea', 'display_font_size')
   display_font = font_family_property('anvil-m3-textarea', 'display_font')
-  display_text_color = color_property('anvil-m3-textarea', 'color', 'display_text_color')
-  background_color = color_property('anvil-m3-textarea', 'backgroundColor', 'background_color')
+  display_text_color = color_property(
+    'anvil-m3-textarea', 'color', 'display_text_color'
+  )
+  background_color = color_property(
+    'anvil-m3-textarea', 'backgroundColor', 'background_color'
+  )
   align = style_property('anvil-m3-textarea', 'textAlign', 'align')
 
   @anvil_prop
@@ -130,7 +145,9 @@ class TextArea(TextInput):
     if value:
       self.dom_nodes['anvil-m3-textarea'].classList.toggle('has_label_text', True)
     else:
-      self.dom_nodes['anvil-m3-textarea'].classList.toggle('has_label_text', anvil.designer.in_designer)
+      self.dom_nodes['anvil-m3-textarea'].classList.toggle(
+        'has_label_text', anvil.designer.in_designer
+      )
 
   @property
   def text(self):
@@ -164,13 +181,16 @@ class TextArea(TextInput):
       text_area_input = self.dom_nodes['anvil-m3-textarea'].removeAttribute("maxlength")
       self.dom_nodes['anvil-m3-character-counter'].style = "display: none"
     else:
-      text_area_input = self.dom_nodes['anvil-m3-textarea'].setAttribute("maxlength", value)
-      self.dom_nodes['anvil-m3-character-counter'].style = "display: inline";
-      self.dom_nodes['anvil-m3-character-limit'].innerText = int(value);
+      text_area_input = self.dom_nodes['anvil-m3-textarea'].setAttribute(
+        "maxlength", value
+      )
+      self.dom_nodes['anvil-m3-character-counter'].style = "display: inline"
+      self.dom_nodes['anvil-m3-character-limit'].innerText = int(value)
 
   def _anvil_get_interactions_(self):
     text_input_interactions = super()._anvil_get_interactions_()
-    def on_grab(x,y):
+
+    def on_grab(x, y):
       self._grab_height = self.height
 
     def on_drag(dx, dy, ctrl):
@@ -180,7 +200,7 @@ class TextArea(TextInput):
       h = self._grab_height + dy
       self.height = h
       anvil.designer.update_component_properties(self, {"height": h})
-    
+
     return text_input_interactions + [
       {
         "type": "handle",
@@ -192,17 +212,17 @@ class TextArea(TextInput):
           "drop": on_drop,
         },
       }
-    ]  
+    ]
 
-  #!componentProp(m3.TextArea)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
-  #!componentProp(m3.TextArea)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
-  #!componentProp(m3.TextArea)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.TextArea)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."}
+  #!componentProp(m3.TextArea)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}
+  #!componentProp(m3.TextArea)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."}
   #!componentProp(m3.TextArea)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(m3.TextArea)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
   #!componentProp(m3.TextArea)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
 
-  #!componentProp(m3.TextArea)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
-  #!componentProp(m3.TextArea)!1: {name:"label",type:"string",description:"The label text of the component."} 
+  #!componentProp(m3.TextArea)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."}
+  #!componentProp(m3.TextArea)!1: {name:"label",type:"string",description:"The label text of the component."}
   #!componentProp(m3.TextArea)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label on this component."}
   #!componentProp(m3.TextArea)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
   #!componentProp(m3.TextArea)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
@@ -241,5 +261,6 @@ class TextArea(TextInput):
 
   #!defMethod(_)!2: "Set the keyboard focus to this TextArea." ["focus"]
   #!defMethod(_)!2: "Set the input text on this TextArea." ["select"]
+
 
 #!defClass(m3,TextArea, anvil.Component)!:

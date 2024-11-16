@@ -32,8 +32,10 @@ class Checkbox(CheckboxTemplate):
     self._allow_indeterminate = properties['allow_indeterminate']
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener("click", self._handle_change)
-    
+    self.dom_nodes['anvil-m3-checkbox-hover'].addEventListener(
+      "click", self._handle_change
+    )
+
     if not anvil.designer.in_designer:
       id = gen_id()
       self.dom_nodes["anvil-m3-checkbox"].id = id
@@ -42,7 +44,9 @@ class Checkbox(CheckboxTemplate):
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes["anvil-m3-checkbox-component"]
     sp = get_unset_spacing(el, el, self.spacing)
-    fs = get_unset_value(self.dom_nodes['anvil-m3-checkbox-label'], "fontSize", self.font_size)
+    fs = get_unset_value(
+      self.dom_nodes['anvil-m3-checkbox-label'], "fontSize", self.font_size
+    )
     return {"font_size": fs, "spacing": sp}
 
   #!defMethod(_)!2: "Set the keyboard focus to this Checkbox." ["focus"]
@@ -62,17 +66,17 @@ class Checkbox(CheckboxTemplate):
         "icon": "edit",
         "default": True,
         "callbacks": {
-          "execute":  lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-checkbox-label'])
-        }
+          "execute": lambda: anvil.designer.start_inline_editing(
+            self, "text", self.dom_nodes['anvil-m3-checkbox-label']
+          )
+        },
       },
       {
         "type": "region",
         "bounds": self.dom_nodes['anvil-m3-checkbox-hover'],
         "sensitivity": 0,
-        "callbacks": {
-          "execute": self._toggle_checked
-        }
-      }
+        "callbacks": {"execute": self._toggle_checked},
+      },
     ]
 
   def _toggle_checked(self):
@@ -90,19 +94,19 @@ class Checkbox(CheckboxTemplate):
   #!componentEvent(m3.Checkbox)!1: {name: "hide", description: "When the Checkbox is removed from the screen."}
 
   #!componentProp(m3.Checkbox)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!componentProp(m3.Checkbox)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.Checkbox)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."}
   #!componentProp(m3.Checkbox)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
   #!componentProp(m3.Checkbox)!1: {name:"italic",type:"boolean",description:"If True, this component’s text will be italic."}
   #!componentProp(m3.Checkbox)!1: {name:"bold",type:"boolean",description:"If True, this component’s text will be bold."}
   #!componentProp(m3.Checkbox)!1: {name:"font_size",type:"number",description:"The font size of text displayed on this component."}
   #!componentProp(m3.Checkbox)!1: {name:"border",type:"string",description:"The border of this component. Can take any valid CSS border value."}
   #!componentProp(m3.Checkbox)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  #!componentProp(m3.Checkbox)!1: {name:"text_color",type:"color",description:"The color of the text on the component."} 
+  #!componentProp(m3.Checkbox)!1: {name:"text_color",type:"color",description:"The color of the text on the component."}
   #!componentProp(m3.Checkbox)!1: {name:"background_color",type:"color",description:"The color of the background of this component."}
-  #!componentProp(m3.Checkbox)!1: {name:"align",type:"enum",description:"The position of this component in the available space."} 
+  #!componentProp(m3.Checkbox)!1: {name:"align",type:"enum",description:"The position of this component in the available space."}
   #!componentProp(m3.Checkbox)!1: {name:"spacing",type:"spacing",description:"The margin and padding (pixels) of the component."}
   #!componentProp(m3.Checkbox)!1: {name:"tooltip",type:"string",description:"The text to display when the mouse is hovered over this component."}
-  #!componentProp(m3.Checkbox)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
+  #!componentProp(m3.Checkbox)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
   #!componentProp(m3.Checkbox)!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!componentProp(m3.Checkbox)!1: {name:"checkbox_color",type:"color",description:"The color of the checkbox."}
   #!componentProp(m3.Checkbox)!1: {name:"checked",type:"boolean",description:"If True, the checkbox is checked."}
@@ -119,7 +123,9 @@ class Checkbox(CheckboxTemplate):
   border = border_property('anvil-m3-checkbox-container')
   font_family = font_family_property('anvil-m3-checkbox-label', 'font')
   text_color = color_property('anvil-m3-checkbox-label', 'color', 'text_color')
-  background_color = color_property('anvil-m3-checkbox-component', 'backgroundColor', 'background')
+  background_color = color_property(
+    'anvil-m3-checkbox-component', 'backgroundColor', 'background'
+  )
   align = style_property('anvil-m3-checkbox-component', 'justifyContent', 'align')
   spacing = spacing_property('anvil-m3-checkbox-component')
   tooltip = tooltip_property('anvil-m3-checkbox-container')
@@ -159,11 +165,16 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox-unchecked'].style.display = 'inline'
       self.dom_nodes['anvil-m3-checkbox-checked'].style.display = 'none'
       self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.display = 'none'
-      
+
   @anvil_prop
   def error(self, value):
-    self.dom_nodes['anvil-m3-checkbox-container'].classList.remove('anvil-m3-checkbox-error')
+    self.dom_nodes['anvil-m3-checkbox-container'].classList.remove(
+      'anvil-m3-checkbox-error'
+    )
     if value:
-      self.dom_nodes['anvil-m3-checkbox-container'].classList.add('anvil-m3-checkbox-error')
+      self.dom_nodes['anvil-m3-checkbox-container'].classList.add(
+        'anvil-m3-checkbox-error'
+      )
+
 
 #!defClass(m3,Checkbox, anvil.Component)!:

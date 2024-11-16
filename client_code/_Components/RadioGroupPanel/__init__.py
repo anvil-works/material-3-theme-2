@@ -14,7 +14,7 @@ class RadioGroup(Component):
   #!componentEvent(m3.RadioGroupPanel)!1: {name: "show", description: "When the component is shown on the screen."}
   #!componentEvent(m3.RadioGroupPanel)!1: {name: "hide", description: "When the component is removed from the screen."}
 
-  #!componentProp(m3.RadioGroupPanel)!1: {name:"selected_value",type:"object",description:"Value property of the selected RadioButton."} 
+  #!componentProp(m3.RadioGroupPanel)!1: {name:"selected_value",type:"object",description:"Value property of the selected RadioButton."}
 
   @property
   def buttons(self):
@@ -29,7 +29,7 @@ class RadioGroup(Component):
   def _handle_change(self):
     self.raise_event("x-anvil-write-back-selected_value")
     self.raise_event("change")
-  
+
   @property
   def selected_button(self):
     for button in self._buttons:
@@ -64,7 +64,7 @@ class RadioGroup(Component):
         self.selected_button = button
         return
     self.selected_button = None
-  
+
   @classmethod
   def enclosing(cls, component):
     while component:
@@ -78,10 +78,11 @@ class RadioGroup(Component):
 
 global_radio_group = RadioGroup()
 
+
 class RadioGroupPanel(RadioGroup, RadioGroupPanelTemplate):
   def __init__(self, **properties):
     super().__init__()
     self.init_components(**properties)
 
-#!defClass(m3, RadioGroupPanel, anvil.Component)!:
 
+#!defClass(m3, RadioGroupPanel, anvil.Component)!:

@@ -14,63 +14,95 @@ from ..._utils.properties import (
 )
 from . import TextInput
 
-text_property = {"name": "text",
-                 "type": "string",
-                 "default_value": "None",
-                 "description": "The text displayed on this component.",
-                 "supportsWriteback": True,
-                 "important": True}
-leading_icon_property = {"name": "leading_icon",
-                         "type": "icon",
-                         "iconsets": ["material-icons"],
-                         "group": "Icon",
-                         "important": True,
-                         "default_value": "None",
-                         "includeNoneOption": True, # This might change to snake case at some point
-                         "noneOptionLabel": "None",
-                         "description": "The leading icon to display on this component."}
-trailing_icon_property = {"name": "trailing_icon",
-                          "type": "icon",
-                          "group": "Icon",
-                          "iconsets": ["material-icons"],
-                          "important": True,
-                          "default_value": "None",
-                          "includeNoneOption": True,
-                          "noneOptionLabel": "None",
-                          "description": "The trailing icon to display on this component."}
-type_property = {"name": "type", 
-                 "type": "enum", 
-                 "options": ["text", "number", "email", "tel", "url"], 
-                 "group": "Other", 
-                 "important": False, 
-                 "default_value": "text",
-                 "description": "The type of data that the user can enter into this box."}
-hide_text_property = {"name": "hide_text", 
-                      "type": "boolean", 
-                      "group": "Other", 
-                      "important": False, 
-                      "default_value": False,
-                      "description": "If True, display stars instead of text when the user types input into this component."}
-leading_icon_color_property = {"name": "leading_icon_color", 
-                               "type": "color", 
-                               "group": "Look and Feel", 
-                               "important": False, 
-                               "default_value": "",
-                               "description": "The colour of the leading icon."}
-trailing_icon_color_property = {"name": "trailing_icon_color", 
-                               "type": "color", 
-                               "group": "Look and Feel", 
-                               "important": False, 
-                               "default_value": "",
-                               "description": "The colour of the trailing icon."}
+text_property = {
+  "name": "text",
+  "type": "string",
+  "default_value": "None",
+  "description": "The text displayed on this component.",
+  "supportsWriteback": True,
+  "important": True,
+}
+leading_icon_property = {
+  "name": "leading_icon",
+  "type": "icon",
+  "iconsets": ["material-icons"],
+  "group": "Icon",
+  "important": True,
+  "default_value": "None",
+  "includeNoneOption": True,  # This might change to snake case at some point
+  "noneOptionLabel": "None",
+  "description": "The leading icon to display on this component.",
+}
+trailing_icon_property = {
+  "name": "trailing_icon",
+  "type": "icon",
+  "group": "Icon",
+  "iconsets": ["material-icons"],
+  "important": True,
+  "default_value": "None",
+  "includeNoneOption": True,
+  "noneOptionLabel": "None",
+  "description": "The trailing icon to display on this component.",
+}
+type_property = {
+  "name": "type",
+  "type": "enum",
+  "options": ["text", "number", "email", "tel", "url"],
+  "group": "Other",
+  "important": False,
+  "default_value": "text",
+  "description": "The type of data that the user can enter into this box.",
+}
+hide_text_property = {
+  "name": "hide_text",
+  "type": "boolean",
+  "group": "Other",
+  "important": False,
+  "default_value": False,
+  "description": "If True, display stars instead of text when the user types input into this component.",
+}
+leading_icon_color_property = {
+  "name": "leading_icon_color",
+  "type": "color",
+  "group": "Look and Feel",
+  "important": False,
+  "default_value": "",
+  "description": "The colour of the leading icon.",
+}
+trailing_icon_color_property = {
+  "name": "trailing_icon_color",
+  "type": "color",
+  "group": "Look and Feel",
+  "important": False,
+  "default_value": "",
+  "description": "The colour of the trailing icon.",
+}
 
-click_event = {"name": "trailing_icon_click", "defaultEvent": False, "description": "When the trailing icon is clicked."}
-pressed_enter_event = {"name": "pressed_enter", "defaultEvent": True, "description": "When the user presses enter in this component."}
+click_event = {
+  "name": "trailing_icon_click",
+  "defaultEvent": False,
+  "description": "When the trailing icon is clicked.",
+}
+pressed_enter_event = {
+  "name": "pressed_enter",
+  "defaultEvent": True,
+  "description": "When the user presses enter in this component.",
+}
+
 
 class TextBox(TextInput):
-  _anvil_properties_ = [text_property, leading_icon_property, trailing_icon_property, type_property, hide_text_property, leading_icon_color_property, trailing_icon_color_property, *TextInput._anvil_properties_]
+  _anvil_properties_ = [
+    text_property,
+    leading_icon_property,
+    trailing_icon_property,
+    type_property,
+    hide_text_property,
+    leading_icon_color_property,
+    trailing_icon_color_property,
+    *TextInput._anvil_properties_,
+  ]
   _anvil_events_ = [click_event, pressed_enter_event, *TextInput._anvil_events_]
-  
+
   def __init__(self, **properties):
     super().__init__(**properties)
     self.init_components(**properties)
@@ -93,10 +125,10 @@ class TextBox(TextInput):
     self.character_limit = self.character_limit
     self.type = self.type
     self.hide_text = self.hide_text
-    
+
     hiddenInput = self.dom_nodes['anvil-m3-textarea']
     self.dom_nodes['anvil-m3-input-container'].removeChild(hiddenInput)
-    
+
     self._on_key_down = self._on_key_down
     self._on_change = self._on_change
     self._handle_click = self._handle_click
@@ -108,7 +140,9 @@ class TextBox(TextInput):
     self.dom_nodes['anvil-m3-textbox'].addEventListener("change", self._on_change)
     self.dom_nodes['anvil-m3-textbox'].addEventListener("focus", self._on_focus)
     self.dom_nodes['anvil-m3-textbox'].addEventListener("blur", self._on_lost_focus)
-    self.dom_nodes['anvil-m3-trailing-icon'].addEventListener("click", self._handle_click)
+    self.dom_nodes['anvil-m3-trailing-icon'].addEventListener(
+      "click", self._handle_click
+    )
 
   def _on_key_down(self, e):
     if e.key == "Enter":
@@ -134,7 +168,9 @@ class TextBox(TextInput):
 
   def _anvil_get_unset_property_values_(self):
     common_props = TextInput._get_common_unset_property_values_(self)
-    common_props['display_font_size'] = get_unset_value(self.dom_nodes['anvil-m3-textbox'], "fontSize", self.display_font_size)
+    common_props['display_font_size'] = get_unset_value(
+      self.dom_nodes['anvil-m3-textbox'], "fontSize", self.display_font_size
+    )
     return common_props
 
   def focus(self):
@@ -149,9 +185,15 @@ class TextBox(TextInput):
   display_font_size = font_size_property('anvil-m3-textbox', 'display_font_size')
   display_font_family = font_family_property('anvil-m3-textbox', 'display_font')
   display_text_color = color_property('anvil-m3-textbox', 'color', 'display_text_color')
-  background_color = color_property('anvil-m3-textbox', 'backgroundColor', 'background_color' )
-  leading_icon_color = color_property('anvil-m3-leading-icon', 'color', 'leading_icon_color')
-  trailing_icon_color = color_property('anvil-m3-trailing-icon', 'color', 'trailing_icon_color')
+  background_color = color_property(
+    'anvil-m3-textbox', 'backgroundColor', 'background_color'
+  )
+  leading_icon_color = color_property(
+    'anvil-m3-leading-icon', 'color', 'leading_icon_color'
+  )
+  trailing_icon_color = color_property(
+    'anvil-m3-trailing-icon', 'color', 'trailing_icon_color'
+  )
 
   @anvil_prop
   def placeholder(self, value):
@@ -180,7 +222,9 @@ class TextBox(TextInput):
     if value:
       self.dom_nodes['anvil-m3-textbox'].classList.toggle('has_label_text', True)
     else:
-      self.dom_nodes['anvil-m3-textbox'].classList.toggle('has_label_text', anvil.designer.in_designer)
+      self.dom_nodes['anvil-m3-textbox'].classList.toggle(
+        'has_label_text', anvil.designer.in_designer
+      )
 
   @anvil_prop
   def enabled(self, value):
@@ -237,6 +281,7 @@ class TextBox(TextInput):
       trailing_icon.style.display = "none"
       trailing_icon.innerText = ""
       text_box_input.style.paddingRight = "16px"
+
   trailing_icon = property_with_callback('trailing_icon', _set_trailing_icon)
 
   @anvil_prop
@@ -245,7 +290,9 @@ class TextBox(TextInput):
       text_box_input = self.dom_nodes['anvil-m3-textbox'].removeAttribute("maxlength")
       self.dom_nodes['anvil-m3-character-counter'].style = "display: none"
     else:
-      text_box_input = self.dom_nodes['anvil-m3-textbox'].setAttribute("maxlength", value)
+      text_box_input = self.dom_nodes['anvil-m3-textbox'].setAttribute(
+        "maxlength", value
+      )
       self.dom_nodes['anvil-m3-character-counter'].style = "display: inline"
       self.dom_nodes['anvil-m3-character-limit'].innerText = int(value)
 
@@ -255,17 +302,19 @@ class TextBox(TextInput):
 
   @anvil_prop
   def hide_text(self, value):
-    self.dom_nodes['anvil-m3-textbox'].setAttribute("type", "password" if value else self.type)
+    self.dom_nodes['anvil-m3-textbox'].setAttribute(
+      "type", "password" if value else self.type
+    )
 
-  #!componentProp(m3.TextBox)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
-  #!componentProp(m3.TextBox)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}  
-  #!componentProp(m3.TextBox)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.TextBox)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."}
+  #!componentProp(m3.TextBox)!1: {name:"appearance",type:"enum",options:["filled", "outlined"],description:"A predefined style for this component."}
+  #!componentProp(m3.TextBox)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."}
   #!componentProp(m3.TextBox)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
   #!componentProp(m3.TextBox)!1: {name:"error",type:"boolean",description:"If True, this component is in an error state."}
   #!componentProp(m3.TextBox)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
 
-  #!componentProp(m3.TextBox)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."} 
-  #!componentProp(m3.TextBox)!1: {name:"label",type:"string",description:"The label text of the component."} 
+  #!componentProp(m3.TextBox)!1: {name:"label_color",type:"color",description:"The colour of the label text on the component."}
+  #!componentProp(m3.TextBox)!1: {name:"label",type:"string",description:"The label text of the component."}
   #!componentProp(m3.TextBox)!1: {name:"label_font_family",type:"string",description:"The font family to use for the label this component."}
   #!componentProp(m3.TextBox)!1: {name:"label_font_size",type:"number",description:"The font size of the label text on this component."}
   #!componentProp(m3.TextBox)!1: {name:"label_underline",type:"boolean",description:"If True, the label text will be underlined."}
@@ -279,7 +328,7 @@ class TextBox(TextInput):
   #!componentProp(m3.TextBox)!1: {name:"display_italic",type:"boolean",description:"If True, the input and placeholder text will be italic."}
   #!componentProp(m3.TextBox)!1: {name:"display_bold",type:"boolean",description:"If True, the input and placeholder text will be bold."}
 
-  #!componentProp(m3.TextBox)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."} 
+  #!componentProp(m3.TextBox)!1: {name:"leading_icon",type:"enum",description:"The leading icon to display on this component."}
   #!componentProp(m3.TextBox)!1: {name:"trailing_icon",type:"enum",description:"The trailing icon to display on this component."}
   #!componentProp(m3.TextBox)!1: {name:"leading_icon_color",type:"color",description:"The colour of the leading icon displayed on this component."}
   #!componentProp(m3.TextBox)!1: {name:"trailing_icon_color",type:"color",description:"The colour of the trailing icon displayed on this component."}
@@ -309,5 +358,6 @@ class TextBox(TextInput):
 
   #!defMethod(_)!2: "Set the keyboard focus to this TextBox." ["focus"]
   #!defMethod(_)!2: "Set the input text on this TextBox." ["select"]
+
 
 #!defClass(m3,TextBox, anvil.Component)!:

@@ -37,14 +37,22 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self.nav_rail.style.width = '360px'
     self.nav_rail.style.left = "0px"
     self.nav_rail.classList.add('anvil-m3-shown')
-    self.nav_drawer_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
+    self.nav_drawer_scrim.animate(
+      [{'opacity': '0'}, {'opacity': '1'}], {'duration': 250, 'iterations': 1}
+    )
 
   #!defMethod(_)!2: "Hide the navigation drawer." ["hide_nav_drawer"]
   def hide_nav_drawer(self, e):
     self.nav_rail.style.left = "-101%"
-    self.nav_drawer_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
-    self.zero_width_timeout = window.setTimeout(lambda: self.nav_rail.style.setProperty('width', '0px'), 250)
-    self.shown_timeout = window.setTimeout(lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245)
+    self.nav_drawer_scrim.animate(
+      [{'opacity': '1'}, {'opacity': '0'}], {'duration': 250, 'iterations': 1}
+    )
+    self.zero_width_timeout = window.setTimeout(
+      lambda: self.nav_rail.style.setProperty('width', '0px'), 250
+    )
+    self.shown_timeout = window.setTimeout(
+      lambda: self.nav_rail.classList.remove('anvil-m3-shown'), 245
+    )
 
   #!defMethod(_)!2: "Add components to the navigation rail." ["add_to_nav_rail"]
   def add_to_nav_rail(self, component):
@@ -55,7 +63,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
       if window.scrollY == 0:
         self.app_bar.classList.remove('anvil-m3-scrolled')
     else:
-      self.app_bar.classList.add('anvil-m3-scrolled')   
+      self.app_bar.classList.add('anvil-m3-scrolled')
 
   def _open_sidesheet(self):
     if self.sidesheet_previous_state:
@@ -63,8 +71,12 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
       window.setTimeout(lambda: self.sidesheet.classList.add('anvil-m3-open'), 1)
       self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
       self.content.classList.add('anvil-m3-transition-width')
-      window.setTimeout(lambda: self.content.classList.add('anvil-m3-sidesheet-open'), 5)
-      self.sidesheet_scrim.animate([{'opacity': '0'},{'opacity': '1'}], {'duration': 250, 'iterations': 1})
+      window.setTimeout(
+        lambda: self.content.classList.add('anvil-m3-sidesheet-open'), 5
+      )
+      self.sidesheet_scrim.animate(
+        [{'opacity': '0'}, {'opacity': '1'}], {'duration': 250, 'iterations': 1}
+      )
     else:
       self.sidesheet_scrim.classList.add('anvil-m3-sidesheet-open')
       self.sidesheet_scrim.style.opacity = 1
@@ -75,12 +87,20 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
 
   def _close_sidesheet(self):
     self.content.classList.add('anvil-m3-transition-width')
-    self.sidesheet_scrim.animate([{'opacity': '1'},{'opacity': '0'}], {'duration': 250, 'iterations': 1})
-    window.setTimeout(lambda: self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open'), 245)
+    self.sidesheet_scrim.animate(
+      [{'opacity': '1'}, {'opacity': '0'}], {'duration': 250, 'iterations': 1}
+    )
+    window.setTimeout(
+      lambda: self.sidesheet_scrim.classList.remove('anvil-m3-sidesheet-open'), 245
+    )
     self.sidesheet.classList.remove('anvil-m3-open')
     self.content.classList.remove('anvil-m3-sidesheet-open')
-    window.setTimeout(lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245)
-    window.setTimeout(lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245)
+    window.setTimeout(
+      lambda: self.content.classList.remove('anvil-m3-sidesheet-open'), 245
+    )
+    window.setTimeout(
+      lambda: self.sidesheet.classList.remove('anvil-m3-display-block'), 245
+    )
 
   def _icon_button_1_click(self, **event_args):
     self.show_sidesheet = False
@@ -89,25 +109,29 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   #!componentEvent(m3.NavigationRailLayout)!1: {name: "hide", description: "When the Form is removed from the screen."}
   #!componentEvent(m3.NavigationRailLayout)!1: {name: "refreshing_data_bindings", description: "When refresh_data_bindings is called."}
 
-  #!componentProp(m3.NavigationRailLayout)!1: {name:"navigation_rail_color",type:"color",description:"The color of the navigation rail on Forms using this Layout."} 
-  #!componentProp(m3.NavigationRailLayout)!1: {name:"background_color",type:"color",description:"The background color of Forms using this Layout."} 
-  #!componentProp(m3.NavigationRailLayout)!1: {name:"text_color",type:"color",description:"The default color of the text on Forms using this Layout."} 
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"navigation_rail_color",type:"color",description:"The color of the navigation rail on Forms using this Layout."}
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"background_color",type:"color",description:"The background color of Forms using this Layout."}
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"text_color",type:"color",description:"The default color of the text on Forms using this Layout."}
   #!componentProp(m3.NavigationRailLayout)!1: {name:"navigation_rail_collapse_to",type:"enum",options:["bottom_app_bar","modal_navigation_drawer"],description:"The way the side navigation will collapse on mobile."}
-  #!componentProp(m3.NavigationRailLayout)!1: {name:"navigation_rail_vertical_align",type:"enum",options:["top", "center", "bottom"], description:"The vertical position of the content in the navigation rail."} 
-  #!componentProp(m3.NavigationRailLayout)!1: {name:"show_sidesheet",type:"boolean",description:"If True, the sidesheet will be shown on Forms using this Layout."} 
-  #!componentProp(m3.NavigationRailLayout)!1: {name:"content_padding",type:"padding",description:"The padding (pixels) around the content of the page."} 
-  
-  navigation_rail_color = color_property('anvil-m3-navigation-rail', 'backgroundColor', 'navigation_rail_color')
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"navigation_rail_vertical_align",type:"enum",options:["top", "center", "bottom"], description:"The vertical position of the content in the navigation rail."}
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"show_sidesheet",type:"boolean",description:"If True, the sidesheet will be shown on Forms using this Layout."}
+  #!componentProp(m3.NavigationRailLayout)!1: {name:"content_padding",type:"padding",description:"The padding (pixels) around the content of the page."}
+
+  navigation_rail_color = color_property(
+    'anvil-m3-navigation-rail', 'backgroundColor', 'navigation_rail_color'
+  )
   content_padding = padding_property('anvil-m3-content')
-  
+
   @anvil_prop
   def background_color(self, value):
-    if value: value = theme_color_to_css(value)
+    if value:
+      value = theme_color_to_css(value)
     window.document.body.style.backgroundColor = value
 
   @anvil_prop
   def text_color(self, value):
-    if value: value = theme_color_to_css(value)
+    if value:
+      value = theme_color_to_css(value)
     window.document.body.style.color = value
 
   @anvil_prop
@@ -135,5 +159,6 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
       self._open_sidesheet()
     else:
       self._close_sidesheet()
+
 
 #!defClass(m3, NavigationRailLayout, anvil.Component)!:

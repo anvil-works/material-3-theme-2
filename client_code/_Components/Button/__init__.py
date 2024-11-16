@@ -40,42 +40,50 @@ class Button(ButtonTemplate):
         "click",
         event=event,
         keys={
-            "shift": event.shiftKey,
-            "alt": event.altKey,
-            "ctrl": event.ctrlKey,
-            "meta": event.metaKey,
+          "shift": event.shiftKey,
+          "alt": event.altKey,
+          "ctrl": event.ctrlKey,
+          "meta": event.metaKey,
         },
       )
 
   def _anvil_get_interactions_(self):
-    return [{
-      "type": "whole_component",
-      "title": "Edit text",
-      "icon": "edit",
-      "default": True,
-      "callbacks": {
-        "execute": lambda: anvil.designer.start_inline_editing(self, "text", self.dom_nodes['anvil-m3-button-text'])
+    return [
+      {
+        "type": "whole_component",
+        "title": "Edit text",
+        "icon": "edit",
+        "default": True,
+        "callbacks": {
+          "execute": lambda: anvil.designer.start_inline_editing(
+            self, "text", self.dom_nodes['anvil-m3-button-text']
+          )
+        },
       }
-    }]
+    ]
 
   def _anvil_get_unset_property_values_(self):
     el = self.dom_nodes["anvil-m3-button"]
     sp = get_unset_spacing(el, el, self.spacing)
-    tfs = get_unset_value(self.dom_nodes['anvil-m3-button-text'], "fontSize", self.font_size)
-    ifs = get_unset_value(self.dom_nodes['anvil-m3-button-icon'], "fontSize", self.icon_size)
+    tfs = get_unset_value(
+      self.dom_nodes['anvil-m3-button-text'], "fontSize", self.font_size
+    )
+    ifs = get_unset_value(
+      self.dom_nodes['anvil-m3-button-icon'], "fontSize", self.icon_size
+    )
     return {"font_size": tfs, "icon_size": ifs, "spacing": sp}
-      
-  def _update_button_look(self, value = None):
+
+  def _update_button_look(self, value=None):
     buttonNode = self.dom_nodes['anvil-m3-button']
     textNode = self.dom_nodes['anvil-m3-button-text']
 
     buttonNode.classList.remove('anvil-m3-icon-padding')
     textNode.classList.remove('anvil-m3-textlessComponentText')
     buttonNode.classList.remove('anvil-m3-no-text')
-    
+
     self._set_icon()
     self._set_text()
-      
+
   def form_show(self, **event_args):
     self._update_button_look()
 
@@ -97,9 +105,13 @@ class Button(ButtonTemplate):
     else:
       if not self.icon:
         if anvil.designer.in_designer:
-          self.dom_nodes['anvil-m3-button-text'].innerText = anvil.designer.get_design_name(self)
-          self.dom_nodes['anvil-m3-button-text'].classList.add('anvil-m3-textlessComponentText')
-        else: 
+          self.dom_nodes[
+            'anvil-m3-button-text'
+          ].innerText = anvil.designer.get_design_name(self)
+          self.dom_nodes['anvil-m3-button-text'].classList.add(
+            'anvil-m3-textlessComponentText'
+          )
+        else:
           self.dom_nodes['anvil-m3-button-text'].innerText = "Button"
       else:
         self.dom_nodes['anvil-m3-button-text'].innerText = ""
@@ -115,7 +127,9 @@ class Button(ButtonTemplate):
   bold = custom_bold_property('anvil-m3-button-text')
   icon_color = color_property('anvil-m3-button-icon', 'color', 'icon_color')
   icon_size = font_size_property('anvil-m3-button-icon', 'icon_size')
-  background_color = color_property('anvil-m3-button', 'backgroundColor', 'background_color')
+  background_color = color_property(
+    'anvil-m3-button', 'backgroundColor', 'background_color'
+  )
   spacing = spacing_property('anvil-m3-button')
   border = style_property('anvil-m3-button', 'border', 'border')
   tooltip = tooltip_property('anvil-m3-button')
@@ -128,10 +142,12 @@ class Button(ButtonTemplate):
       self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', True)
     else:
       self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
-      
+
   @anvil_prop
   def icon_align(self, value):
-    self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-right-icon', value == 'right')
+    self.dom_nodes['anvil-m3-button'].classList.toggle(
+      'anvil-m3-right-icon', value == 'right'
+    )
 
   @anvil_prop
   def enabled(self, value):
@@ -152,12 +168,12 @@ class Button(ButtonTemplate):
 
   #!componentProp(m3.Button)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."}
   #!componentProp(m3.Button)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for this component."}
-  #!componentProp(m3.Button)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.Button)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."}
   #!componentProp(m3.Button)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!componentProp(m3.Button)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!componentProp(m3.Button)!1: {name:"text_color",type:"color",description:"The colour of the text on the component."} 
+  #!componentProp(m3.Button)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
+  #!componentProp(m3.Button)!1: {name:"text_color",type:"color",description:"The colour of the text on the component."}
   #!componentProp(m3.Button)!1: {name:"font_family",type:"string",description:"The font family to use for this component."}
-  #!componentProp(m3.Button)!1: {name:"icon",type:"enum",description:"The icon to display on this component."} 
+  #!componentProp(m3.Button)!1: {name:"icon",type:"enum",description:"The icon to display on this component."}
   #!componentProp(m3.Button)!1: {name:"text",type:"string",description:"The text displayed on this component"}
   #!componentProp(m3.Button)!1: {name:"font_size",type:"number",description:"The font size of the text displayed on this component."}
   #!componentProp(m3.Button)!1: {name:"underline",type:"boolean",description:"If True, this component’s text will be underlined."}
@@ -173,5 +189,6 @@ class Button(ButtonTemplate):
   #!componentProp(m3.Button)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
   #!componentEvent(m3.Button)!1: {name: "click", description: "When the component is clicked.", parameters:[]}
+
 
 #!defClass(m3, Button, anvil.Component)!:

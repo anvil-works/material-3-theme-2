@@ -156,16 +156,16 @@ class DropdownMenu(DropdownMenuTemplate):
 
   def _attempt_select(self, event):
     if self._hoverIndex is not None:
-        self._children[self._hoverIndex].raise_event(
-          "click",
-          event=event,
-          keys={
-            "shift": event.shiftKey,
-            "alt": event.altKey,
-            "ctrl": event.ctrlKey,
-            "meta": event.metaKey,
-          },
-        )
+      self._children[self._hoverIndex].raise_event(
+        "click",
+        event=event,
+        keys={
+          "shift": event.shiftKey,
+          "alt": event.altKey,
+          "ctrl": event.ctrlKey,
+          "meta": event.metaKey,
+        },
+      )
     self._set_menu_visibility(False)
 
   def _clear_hover_styles(self):

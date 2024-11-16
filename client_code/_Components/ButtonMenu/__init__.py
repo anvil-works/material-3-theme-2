@@ -38,9 +38,10 @@ class ButtonMenu(ButtonMenuTemplate):
 
   def _setup_fui(self):
     if self._shown:
-        self._cleanup()
-        self._cleanup = fui.auto_update(self._btnNode, self._menuNode, placement="bottom-start")
-
+      self._cleanup()
+      self._cleanup = fui.auto_update(
+        self._btnNode, self._menuNode, placement="bottom-start"
+      )
 
   def _on_mount(self, **event_args):
     self._shown = True
@@ -52,7 +53,7 @@ class ButtonMenu(ButtonMenuTemplate):
     # This gets around the fact that Anvil containers set their overflow to hidden
     document.body.append(self._menuNode)
     self._setup_fui()
-  
+
   def _on_cleanup(self, **event_args):
     self._shown = False
     document.removeEventListener('keydown', self._handle_keyboard_events)
@@ -65,8 +66,16 @@ class ButtonMenu(ButtonMenuTemplate):
   def _anvil_get_unset_property_values_(self):
     el = self.menu_button.dom_nodes["anvil-m3-button"]
     sp = get_unset_spacing(el, el, self.spacing)
-    tfs = get_unset_value(self.menu_button.dom_nodes['anvil-m3-button-text'], "fontSize", self.button_font_size)
-    ifs = tfs = get_unset_value(self.menu_button.dom_nodes['anvil-m3-button-icon'], "fontSize", self.button_font_size)
+    tfs = get_unset_value(
+      self.menu_button.dom_nodes['anvil-m3-button-text'],
+      "fontSize",
+      self.button_font_size,
+    )
+    ifs = tfs = get_unset_value(
+      self.menu_button.dom_nodes['anvil-m3-button-icon'],
+      "fontSize",
+      self.button_font_size,
+    )
     return {"button_font_size": tfs, "icon_size": ifs, "spacing": sp}
 
   def _handle_click(self, event):
@@ -82,17 +91,23 @@ class ButtonMenu(ButtonMenuTemplate):
         },
       )
 
-  menu_background_color = color_property('anvil-m3-buttonMenu-items-container', 'background', 'menu_background_color')
+  menu_background_color = color_property(
+    'anvil-m3-buttonMenu-items-container', 'background', 'menu_background_color'
+  )
   menu_border = border_property('anvil-m3-buttonMenu-items-container', 'menu_border')
   visible = HtmlTemplate.visible
 
   @anvil_prop
   def text(self, value):
     v = value
-    self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', False)
+    self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle(
+      'anvil-m3-textlessComponentText', False
+    )
     if anvil.designer.in_designer and not value:
       v = self._design_name
-      self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle('anvil-m3-textlessComponentText', True)
+      self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle(
+        'anvil-m3-textlessComponentText', True
+      )
     self.menu_button.text = v
 
   @anvil_prop
@@ -157,12 +172,20 @@ class ButtonMenu(ButtonMenuTemplate):
 
   @anvil_prop
   def align(self, value):
-    self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', False)
-    self.menu_button.dom_nodes['anvil-m3-button-component'].style.removeProperty('justify-content')
+    self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle(
+      'anvil-m3-full-width', False
+    )
+    self.menu_button.dom_nodes['anvil-m3-button-component'].style.removeProperty(
+      'justify-content'
+    )
     if value == 'full':
-      self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', True)
+      self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle(
+        'anvil-m3-full-width', True
+      )
     else:
-      self.menu_button.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
+      self.menu_button.dom_nodes[
+        'anvil-m3-button-component'
+      ].style.justifyContent = value
     self._setup_fui()
 
   @anvil_prop
@@ -181,13 +204,13 @@ class ButtonMenu(ButtonMenuTemplate):
   def _toggle_menu_visibility(self, **event_args):
     self._toggle_visibility()
 
-  def _toggle_visibility(self, value = None):
+  def _toggle_visibility(self, value=None):
     classes = self._menuNode.classList
     if value is not None:
       classes.toggle('anvil-m3-buttonMenu-items-hidden', not value)
     else:
       classes.toggle('anvil-m3-buttonMenu-items-hidden')
-      
+
     self._open = not classes.contains('anvil-m3-buttonMenu-items-hidden')
     if self._open:
       self._get_hover_index_information()
@@ -214,13 +237,13 @@ class ButtonMenu(ButtonMenuTemplate):
     if self._btnNode.contains(event.target) or self._menuNode.contains(event.target):
       return
     self._toggle_visibility(False)
-  
+
   def _get_hover_index_information(self):
     self._children = self.get_components()[:-1]
     for i in range(0, len(self._children)):
       if isinstance(self._children[i], MenuItem):
         self._itemIndices.add(i)
-   
+
   def _handle_keyboard_events(self, event):
     if not self._open:
       return
@@ -231,9 +254,11 @@ class ButtonMenu(ButtonMenuTemplate):
       self._iterate_hover(event.key == "ArrowDown")
       event.preventDefault()
       return
-    hover = self._hoverIndex # holding value for situations like alerts, where it awaits 
+    hover = (
+      self._hoverIndex
+    )  # holding value for situations like alerts, where it awaits
     self._toggle_visibility(False)
-    
+
     def attemptSelect():
       event.preventDefault()
       if hover is not None:
@@ -247,13 +272,13 @@ class ButtonMenu(ButtonMenuTemplate):
             "meta": event.metaKey,
           },
         )
-    
-    if event.key == " ": # " " indicates the space key
+
+    if event.key == " ":  # " " indicates the space key
       attemptSelect()
     if event.key == "Enter":
       attemptSelect()
-      
-  def _iterate_hover(self, inc = True):
+
+  def _iterate_hover(self, inc=True):
     if inc:
       if self._hoverIndex is None or self._hoverIndex is (len(self._children) - 1):
         self._hoverIndex = -1
@@ -268,24 +293,33 @@ class ButtonMenu(ButtonMenuTemplate):
         self._hoverIndex -= 1
         if self._hoverIndex in self._itemIndices:
           break
-    self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].scrollIntoView({'block': 'nearest'})
+    self._children[self._hoverIndex].dom_nodes[
+      'anvil-m3-menuItem-container'
+    ].scrollIntoView({'block': 'nearest'})
     self._update_hover_styles()
 
   def _clear_hover_styles(self):
     if self._children is not None:
       for child in self._children:
         if isinstance(child, MenuItem):
-          child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', False)
+          child.dom_nodes['anvil-m3-menuItem-container'].classList.toggle(
+            'anvil-m3-menuItem-container-keyboardHover', False
+          )
 
   def _update_hover_styles(self):
     self._clear_hover_styles()
-    self._children[self._hoverIndex].dom_nodes['anvil-m3-menuItem-container'].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
-    
+    self._children[self._hoverIndex].dom_nodes[
+      'anvil-m3-menuItem-container'
+    ].classList.toggle('anvil-m3-menuItem-container-keyboardHover', True)
+
   def _anvil_get_interactions_(self):
     return [
       {
         "type": "designer_events",
-        "callbacks": {"onSelectDescendent": self._on_select_descendent, "onSelectOther": self._on_select_other},
+        "callbacks": {
+          "onSelectDescendent": self._on_select_descendent,
+          "onSelectOther": self._on_select_other,
+        },
       },
       {
         "type": "whole_component",
@@ -312,14 +346,14 @@ class ButtonMenu(ButtonMenuTemplate):
       if not self.text:
         self.menu_button.text = self._design_name
 
-  #!componentProp(m3.ButtonMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."} 
-  #!componentProp(m3.ButtonMenu)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for the Button."}  
-  #!componentProp(m3.ButtonMenu)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."} 
+  #!componentProp(m3.ButtonMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."}
+  #!componentProp(m3.ButtonMenu)!1: {name:"appearance",type:"enum",options:["filled", "elevated", "tonal", "outlined", "text"],description:"A predefined style for the Button."}
+  #!componentProp(m3.ButtonMenu)!1: {name:"visible",type:"boolean",description:"If True, the component will be displayed."}
   #!componentProp(m3.ButtonMenu)!1: {name:"enabled",type:"boolean",description:"If True, this component allows user interaction."}
-  #!componentProp(m3.ButtonMenu)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"} 
-  #!componentProp(m3.ButtonMenu)!1: {name:"button_text_color",type:"color",description:"The colour of the text on the Button."} 
+  #!componentProp(m3.ButtonMenu)!1: {name:"role",type:"themeRole",description:"A style for this component defined in CSS and added to Roles"}
+  #!componentProp(m3.ButtonMenu)!1: {name:"button_text_color",type:"color",description:"The colour of the text on the Button."}
   #!componentProp(m3.ButtonMenu)!1: {name:"button_font_family",type:"string",description:"The font family to use for the Button"}
-  #!componentProp(m3.ButtonMenu)!1: {name:"icon",type:"enum",description:"The icon to display on the Button."} 
+  #!componentProp(m3.ButtonMenu)!1: {name:"icon",type:"enum",description:"The icon to display on the Button."}
   #!componentProp(m3.ButtonMenu)!1: {name:"text",type:"string",description:"The text displayed on the Button"}
   #!componentProp(m3.ButtonMenu)!1: {name:"button_font_size",type:"number",description:"The font size of the text displayed on the Button."}
   #!componentProp(m3.ButtonMenu)!1: {name:"underline",type:"boolean",description:"If True, the Button’s text will be underlined."}
@@ -337,7 +371,7 @@ class ButtonMenu(ButtonMenuTemplate):
   #!componentProp(m3.ButtonMenu)!1: {name:"menu_items",type:"object",description:"A list of components to be added to the menu."}
   #!componentProp(m3.ButtonMenu)!1: {name:"tag",type:"object",description:"Use this property to store any extra data for the component."}
 
-
   #!componentEvent(m3.ButtonMenu)!1: {name: "click", description: "When the Button is clicked.", parameters:[]}
+
 
 #!defClass(m3, ButtonMenu, anvil.Component)!:
