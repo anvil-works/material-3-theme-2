@@ -196,7 +196,7 @@ toolbox_sections:
     url: /docs/client/components/containers#datarowpanel
   - component: {type: anvil.LinearPanel}
     icon: {dark: /ide/img/toolbox/RepeatingPanel.dark.svg, light: /ide/img/toolbox/RepeatingPanel.svg}
-    title: LinerPanel
+    title: LinearPanel
     url: /docs/client/components/containers#linearpanel
   - component: {type: anvil.GridPanel}
     icon: {dark: /ide/img/toolbox/GridPanel.dark.svg, light: /ide/img/toolbox/GridPanel.svg}
