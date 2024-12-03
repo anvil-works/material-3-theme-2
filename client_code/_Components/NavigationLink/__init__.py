@@ -14,6 +14,7 @@ from ..._utils.properties import (
   italic_property,
   role_property,
   spacing_property,
+  simple_prop,
   tooltip_property,
   underline_property,
 )
@@ -124,17 +125,21 @@ class NavigationLink(NavigationLinkTemplate):
   background_color = color_property(
     'anvil-m3-navigation-link-container', 'backgroundColor', 'background_color'
   )
-  navigate_to = anvil_prop("navigate_to")
+  navigate_to = simple_prop("navigate_to")
 
   @anvil_prop
-  def url(self, value):
+  @property
+  def url(self, value) -> str:
+    """TThe target URL of the link. Can be set to a URL string or to a Media object."""
     if value:
       self.dom_nodes['anvil-m3-navigation-link'].href = value
     else:
       self.dom_nodes['anvil-m3-navigation-link'].href = 'javascript:void(0)'
 
   @anvil_prop
-  def icon(self, value):
+  @property
+  def icon(self, value) -> str:
+    """The icon to display on this component."""
     link_icon = self.dom_nodes['anvil-m3-navigation-link-icon']
     if value:
       link_icon.className = ""
@@ -142,7 +147,9 @@ class NavigationLink(NavigationLinkTemplate):
       link_icon.innerText = value[3:]
 
   @anvil_prop
-  def selected(self, value):
+  @property
+  def selected(self, value) -> bool:
+    """If True, the component is in the selected state."""
     if value:
       self.dom_nodes['anvil-m3-navigation-link'].classList.add(
         'anvil-m3-navigation-link-selected'
@@ -153,14 +160,18 @@ class NavigationLink(NavigationLinkTemplate):
       )
 
   @anvil_prop
-  def badge(self, value):
+  @property
+  def badge(self, value) -> bool:
+    """If True, display a notification badge on the icon."""
     if value:
       self.dom_nodes['anvil-m3-navigation-link'].classList.add('anvil-m3-has-badge')
     else:
       self.dom_nodes['anvil-m3-navigation-link'].classList.remove('anvil-m3-has-badge')
 
   @anvil_prop
-  def badge_count(self, value):
+  @property
+  def badge_count(self, value) -> bool:
+    """If True, display a notification badge on the icon."""
     if value and self.badge:
       self.dom_nodes['anvil-m3-icon-badge'].innerHTML = value
       self.dom_nodes['anvil-m3-icon-badge'].classList.add("anvil-m3-large-badge")

@@ -10,6 +10,7 @@ from ..._utils.properties import (
   get_unset_margin,
   margin_property,
   role_property,
+  simple_prop,
   theme_color_to_css,
   tooltip_property,
 )
@@ -170,10 +171,12 @@ class Slider(SliderTemplate):
   tooltip = tooltip_property('anvil-m3-slider')
   visible = HtmlTemplate.visible
   role = role_property('anvil-m3-slider')
-  show_label = anvil_prop("show_label")
+  show_label = simple_prop("show_label")
 
   @anvil_prop
-  def thumb_color(self, value=None):
+  @property
+  def thumb_color(self, value=None) -> str:
+    """The colour of the slider thumb."""
     if self.thumb_color:
       self.dom_nodes['anvil-m3-slider-input'].style.setProperty(
         '--anvil-m3-slider-thumb-color', theme_color_to_css(self.thumb_color)
@@ -184,15 +187,21 @@ class Slider(SliderTemplate):
       )
 
   @anvil_prop
-  def label_color(self, value):
+  @property
+  def label_color(self, value) -> str:
+    """The colour of the background of the label"""
     self.label_container.style.background = theme_color_to_css(value)
 
   @anvil_prop
-  def label_text_color(self, value):
+  @property
+  def label_text_color(self, value) -> str:
+    """The colour of the text of the label"""
     self.label_container.style.color = theme_color_to_css(value)
 
   @anvil_prop
-  def enabled(self, value):
+  @property
+  def enabled(self, value) -> bool:
+    """If True, this component allows user interaction."""
     self._enabled = value
     full_slider = self.dom_nodes['anvil-m3-slider']
     input = self.dom_nodes['anvil-m3-slider-input']
@@ -204,7 +213,9 @@ class Slider(SliderTemplate):
       full_slider.classList.add("anvil-m3-slider-disabled")
 
   @anvil_prop
-  def show_markers(self, value):
+  @property
+  def show_markers(self, value) -> bool:
+    """If True, display discrete markers on the track."""
     if self._mounted:
       self._set_markers()
 

@@ -97,12 +97,16 @@ class Text(TextTemplate):
   role = role_property('anvil-m3-text-container')
 
   @anvil_prop
-  def text(self, value):
+  @property
+  def text(self, value) -> str:
+    """The text displayed on this component"""
     self._set_text(value)
     self._set_designer_text_placeholder()
 
   @anvil_prop
-  def align(self, value):
+  @property
+  def align(self, value) -> str:
+    """The position of this component in the available space."""
     if value == 'justify':
       self.dom_nodes['anvil-m3-text-container'].style.justifyContent = 'left'
     else:
@@ -110,19 +114,25 @@ class Text(TextTemplate):
     self.dom_nodes['anvil-m3-text'].style.textAlign = value
 
   @anvil_prop
-  def font_size(self, value):
+  @property
+  def font_size(self, value) -> float:
+    """The font size of text displayed on this component."""
     if value:
       value = f'{value}px'
     self.dom_nodes['anvil-m3-text'].style.fontSize = value
     self.dom_nodes['anvil-m3-text-container'].style.fontSize = value
 
   @anvil_prop
-  def line_height(self, value):
+  @property
+  def line_height(self, value) -> str:
+    """The line height of this component."""
     self.dom_nodes['anvil-m3-text-container'].style.lineHeight = value
     self.dom_nodes['anvil-m3-text'].style.lineHeight = value
 
   @anvil_prop
-  def icon(self, value):
+  @property
+  def icon(self, value) -> str:
+    """The icon to display on this component."""
     if value:
       self.dom_nodes['anvil-m3-text-icon'].style.marginRight = "8px"
     else:
@@ -130,7 +140,9 @@ class Text(TextTemplate):
     self.dom_nodes['anvil-m3-text-icon'].innerText = value[3:]
 
   @anvil_prop
-  def style(self, value):
+  @property
+  def style(self, value) -> str:
+    """Role of the text component: display, headline or title."""
     self.dom_nodes['anvil-m3-text'].classList.remove(
       'anvil-m3-text-label', 'anvil-m3-text-body'
     )
@@ -141,7 +153,9 @@ class Text(TextTemplate):
     self.dom_nodes['anvil-m3-text-container'].classList.add(f'anvil-m3-text-{value}')
 
   @anvil_prop
-  def scale(self, value):
+  @property
+  def scale(self, value) -> str:
+    """The size of the text component."""
     self.dom_nodes['anvil-m3-text'].classList.remove(
       'anvil-m3-text-large', 'anvil-m3-text-medium', 'anvil-m3-text-small'
     )

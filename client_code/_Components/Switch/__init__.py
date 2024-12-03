@@ -132,7 +132,9 @@ class Switch(SwitchTemplate):
   )
 
   @anvil_prop
-  def selected_icon(self, value):
+  @property
+  def selected_icon(self, value) -> str:
+    """Optional icon to appear on the Switch when toggled on."""
     link_icon = self.dom_nodes['anvil-m3-enabled-switch-icon']
     switch_slider = self.dom_nodes['anvil-m3-switch-slider']
     link_icon.classList.remove("material-symbols-outlined")
@@ -142,7 +144,9 @@ class Switch(SwitchTemplate):
       switch_slider.classList.add('anvil-m3-has-enabled-icon')
 
   @anvil_prop
-  def unselected_icon(self, value):
+  @property
+  def unselected_icon(self, value) -> str:
+    """Optional icon to appear on the Switch when toggled off."""
     link_icon = self.dom_nodes['anvil-m3-disabled-switch-icon']
     switch_slider = self.dom_nodes['anvil-m3-switch-slider']
     link_icon.innerText = value[3:]
@@ -152,7 +156,9 @@ class Switch(SwitchTemplate):
       switch_slider.classList.add('anvil-m3-has-disabled-icon')
 
   @anvil_prop
-  def selected(self, value):
+  @property
+  def selected(self, value) -> bool:
+    """If True, this component is toggled on."""
     self.dom_nodes['anvil-m3-switch-input'].checked = value
     self._set_color_styles()
 
