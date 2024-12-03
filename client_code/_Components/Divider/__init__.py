@@ -37,7 +37,9 @@ class Divider(DividerTemplate):
   margin = margin_property('anvil-m3-divider')
 
   @anvil_prop
-  def type(self, value):
+  @property
+  def type(self, value) -> str:
+    """Display the Divider across the full width of the container or inset."""
     divider = self.dom_nodes['anvil-m3-divider']
     value = value.lower().replace(' ', '-')
     divider.className = "anvil-m3-divider"

@@ -30,7 +30,9 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
   margin = margin_property('anvil-m3-progressindicator-linear')
 
   @anvil_prop
-  def progress_color(self, value):
+  @property
+  def progress_color(self, value) -> str:
+    """The colour of the progress bar"""
     if value:
       value = theme_color_to_css(value)
     self.dom_nodes['anvil-m3-progressindicator-indicator'].style['stroke'] = value
@@ -42,7 +44,9 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
     ] = value
 
   @anvil_prop
-  def track_color(self, value):
+  @property
+  def track_color(self, value) -> str:
+    """The colour of the LinearProgressIndicator track."""
     if value:
       value = theme_color_to_css(value)
     self.dom_nodes[
@@ -53,7 +57,9 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
     ].style.backgroundColor = value
 
   @anvil_prop
-  def type(self, value):
+  @property
+  def type(self, value) -> str:
+    """Display a determinate or indeterminate progress indicator. Use determinate to set the progress with the progress property. Use indeterminate to express an unspecified amount of wait time."""
     v = value == "determinate"
     self.dom_nodes['anvil-m3-progressindicator-indeterminate'].classList.toggle(
       'anvil-m3-progressindicator-hidden', v
@@ -63,7 +69,9 @@ class LinearProgressIndicator(LinearProgressIndicatorTemplate):
     )
 
   @anvil_prop
-  def progress(self, value):
+  @property
+  def progress(self, value) -> float:
+    """The progress of the LinearProgressIndicator."""
     v = max(min(value or 0, 100), 0)
     self.dom_nodes['anvil-m3-progressindicator-indicator'].setAttribute("x2", f"{v}%")
 

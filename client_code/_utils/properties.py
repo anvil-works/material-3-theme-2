@@ -263,36 +263,32 @@ def tooltip_property(dom_node_name, prop_name="tooltip"):
   return property_with_callback(prop_name, set_tooltip)
 
 
+simple_prop = property_without_callback
+
 def anvil_prop(*args, **kwargs):
   """
-  Can be used to return a property descriptor for a named property:
-
-    my_property = anvil_prop("my_property")
-
   Can be used as a plain decorator on a property setter:
 
     @anvil_prop
+    @property
     def my_property(new_value):
       ...
 
-  In both cases, you can pass a default_value kwarg if required:
-
-    my_property = anvil_prop("my_property", default_value=42)
-
     @anvil_prop(default_value=42)
+    @property
     def my_property(new_value):
       ...
   """
 
   def get_decorator(default_value=None):
-    return lambda fn: property_with_callback(
-      fn.__name__, fn, default_value=default_value
-    )
+    def decorator(prop):
+      assert isinstance(prop, property), "expected an @property decorator"
+      fn = prop.fget
+      return property_with_callback(fn.__name__, fn, default_value=default_value)
 
-  if len(args) > 0 and isinstance(args[0], str):
-    # We have been called as a function, with the name of the property as our first arg
-    return property_without_callback(args[0], default_value=kwargs.get("default_value"))
-  elif len(args) == 0:
+    return decorator
+
+  if not args:
     # We have been used as a decorator with kwargs
     return get_decorator(kwargs.get("default_value"))
   else:
