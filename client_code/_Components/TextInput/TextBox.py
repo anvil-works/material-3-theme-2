@@ -146,7 +146,7 @@ class TextBox(TextInput):
     )
 
   def _on_key_down(self, e):
-    if e.key == "Enter":
+    if getattr(e, 'key', None) == "Enter":
       self.raise_event("x-anvil-write-back-text")
       self.raise_event("pressed_enter")
 
