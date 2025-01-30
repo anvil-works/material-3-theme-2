@@ -24,6 +24,7 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.content = self.dom_nodes['anvil-m3-content']
     self.sidesheet_previous_state = False
     self.init_components(**properties)
+    self.zero_width_timeout = None
 
     if in_designer:
       self.nav_drawer.classList.remove('anvil-m3-navigation-drawer-out-designer')
@@ -67,6 +68,8 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
 
   #!defMethod(_)!2: "Open the navigation drawer." ["open_nav_drawer"]
   def open_nav_drawer(self, e=None):
+    window.clearTimeout(self.zero_width_timeout)
+    window.clearTimeout(self.shown_timeout)
     self.nav_drawer.style.width = '360px'
     self.nav_drawer.style.left = "0px"
     self.nav_drawer.classList.add('anvil-m3-shown')
@@ -79,6 +82,12 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.nav_drawer.style.left = "-101%"
     animation = self.nav_drawer_scrim.animate(
       [{'opacity': '1'}, {'opacity': '0'}], {'duration': 250, 'iterations': 1}
+    )
+    self.zero_width_timeout = window.setTimeout(
+      lambda: self.nav_drawer.style.setProperty('width', '0px'), 250
+    )
+    self.shown_timeout = window.setTimeout(
+      lambda: self.nav_drawer.classList.remove('anvil-m3-shown'), 245
     )
 
     def on_finished(e):
