@@ -141,7 +141,7 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
       self.nav_rail.classList.remove(c)
       self.content.classList.remove(c)
     self.nav_rail.classList.add(f"anvil-m3-{value}")
-    self.content.classList.add()
+    self.content.classList.add(f"anvil-m3-{value}")
 
   @anvil_prop
   def navigation_rail_vertical_align(self, value):

@@ -478,6 +478,13 @@ body {
 }
 
 @media(max-width: 600px) {
+.anvil-m3-content..anvil-m3-navigation-rail-content.anvil-m3-bottom-app-bar  {
+
+  }
+}
+
+
+@media(max-width: 600px) {
 .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer .anvil-m3-navigation-rail-content {
       width: 100%;
   }
