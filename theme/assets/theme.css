@@ -467,27 +467,27 @@ body {
 
 
 @media(max-width: 600px) {
-.anvil-m3-navigation-rail.anvil-m3-bottom-app-bar .anvil-m3-navigation-rail-content {
-      margin-top: 0px;
-      flex-direction: row;
-      width: 100%;
-      height: 80px;
-      justify-content: center;
-      column-gap: 8px
-  }
+  .anvil-m3-navigation-rail.anvil-m3-bottom-app-bar .anvil-m3-navigation-rail-content {
+    margin-top: 0px;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    column-gap: 8px
+    }
 }
 
 @media(max-width: 600px) {
-.anvil-m3-content..anvil-m3-navigation-rail-content.anvil-m3-bottom-app-bar  {
-
+  .anvil-m3-content.anvil-m3-content-navigation-rail.anvil-m3-bottom-app-bar  {
+    margin-bottom: 80px;
+    }
   }
-}
 
 
 @media(max-width: 600px) {
-.anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer .anvil-m3-navigation-rail-content {
-      width: 100%;
-  }
+  .anvil-m3-navigation-rail.anvil-m3-modal-navigation-drawer .anvil-m3-navigation-rail-content {
+    width: 100%;
+    }
 }
 
 .anvil-m3-navigation-rail [anvil-dropzone] {
