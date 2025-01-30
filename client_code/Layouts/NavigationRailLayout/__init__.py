@@ -139,7 +139,9 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     value = value.lower().replace('_', '-')
     for c in ['anvil-m3-bottom-app-bar', 'anvil-m3-modal-navigation-drawer']:
       self.nav_rail.classList.remove(c)
+      self.content.classList.remove(c)
     self.nav_rail.classList.add(f"anvil-m3-{value}")
+    self.content.classList.add()
 
   @anvil_prop
   def navigation_rail_vertical_align(self, value):
