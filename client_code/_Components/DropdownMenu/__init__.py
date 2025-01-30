@@ -227,9 +227,9 @@ class DropdownMenu(DropdownMenuTemplate):
       or self._menuNode.contains(event.target)
       or icon.contains(event.target)
     ):
-      self._has_focus = True
-      return
-    self._set_menu_visibility(False)
+      self.selection_field.focus()
+    else:
+        self._set_menu_visibility(False)
 
   def _child_clicked(self, event):
     event.stopPropagation()
