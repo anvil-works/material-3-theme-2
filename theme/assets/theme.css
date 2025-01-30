@@ -583,7 +583,6 @@ body {
   font-size: 14px;
   letter-spacing: 0.25px;
   min-height: 48px;
-  /* display: flex !important; */
   flex-direction: column;
   justify-items: center !important;
 }
