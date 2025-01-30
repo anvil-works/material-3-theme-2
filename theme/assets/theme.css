@@ -969,6 +969,40 @@ th.month select.monthselect::after {
   margin: 0;
 }
 
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-data-row-panel div.anvil-data-row-col:not(.anvil-extra-column) {
+  border-right: 1px solid %color:Outline Variant%;
+  border-bottom: 1px solid %color:Outline Variant%;
+}
+
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-design-data-row-panel div.anvil-data-row-col:not(.anvil-extra-column) {
+  border-right: 1px solid %color:Outline Variant%;
+  border-bottom: 1px solid %color:Outline Variant%;
+}
+
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-data-row-panel div.anvil-data-row-col:not(.anvil-extra-column) > * {
+  flex-grow: 1;
+}
+
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-design-data-row-panel div.anvil-data-row-col:not(.anvil-extra-column) > * {
+  flex-grow: 1;
+}
+
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-data-row-panel div.anvil-data-row-col:last-child:not(.anvil-extra-column) {
+  border-right: 0;
+}
+
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-design-data-row-panel div.anvil-data-row-col:last-child:not(.anvil-extra-column) {
+  border-right: 0;
+}
+
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-data-row-panel {
+  margin: 0;
+}
+
+.anvil-data-grid .anvil-data-grid-child-panel .anvil-design-data-row-panel {
+  margin: 0;
+}
+
 .anvil-data-grid > .data-grid-child-panel>div.auto-grid-header div.data-row-col, .anvil-data-grid > .data-grid-child-panel div.anvil-role-data-grid-header div.data-row-col{
   border-top: 0;
   border-bottom: 0;
