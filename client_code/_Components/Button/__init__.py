@@ -35,6 +35,7 @@ class Button(ButtonTemplate):
 
   def _handle_click(self, event):
     event.preventDefault()
+    event.stopPropagation()
     if self.enabled:
       self.raise_event(
         "click",
