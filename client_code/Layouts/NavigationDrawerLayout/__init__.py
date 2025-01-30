@@ -25,6 +25,7 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.sidesheet_previous_state = False
     self.init_components(**properties)
     self.zero_width_timeout = None
+    self.shown_timeout = None
 
     if in_designer:
       self.nav_drawer.classList.remove('anvil-m3-navigation-drawer-out-designer')
