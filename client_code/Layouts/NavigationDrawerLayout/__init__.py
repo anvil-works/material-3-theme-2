@@ -24,13 +24,15 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     self.content = self.dom_nodes['anvil-m3-content']
     self.sidesheet_previous_state = False
     self.init_components(**properties)
+    self.zero_width_timeout = None
+    self.shown_timeout = None
 
     if in_designer:
       self.nav_drawer.classList.remove('anvil-m3-navigation-drawer-out-designer')
       self.nav_drawer.classList.add('anvil-m3-navigation-drawer-in-designer')
 
-    self.nav_drawer_open_btn.addEventListener('click', self._open_nav_drawer)
-    self.nav_drawer_scrim.addEventListener('click', self._hide_nav_drawer)
+    self.nav_drawer_open_btn.addEventListener('click', self.open_nav_drawer)
+    self.nav_drawer_scrim.addEventListener('click', self.hide_nav_drawer)
     self.add_event_handler('x-anvil-page-added', self._on_page_added)
     self.add_event_handler('x-anvil-page-removed', self._on_page_removed)
 
@@ -40,10 +42,10 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
     if in_designer:
       # interactions are for when we are not the main form
       register_interaction(
-        self, self.nav_drawer_open_btn, 'dblclick', self._open_nav_drawer
+        self, self.nav_drawer_open_btn, 'dblclick', self.open_nav_drawer
       )
       register_interaction(
-        self, self.nav_drawer_scrim, 'dblclick', self._hide_nav_drawer
+        self, self.nav_drawer_scrim, 'dblclick', self.hide_nav_drawer
       )
 
   def _on_page_removed(self, **event_args):
@@ -55,28 +57,38 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
         'type': 'region',
         'bounds': self.nav_drawer_open_btn,
         'sensitivity': 0,
-        'callbacks': {'execute': self._open_nav_drawer},
+        'callbacks': {'execute': self.open_nav_drawer},
       },
       {
         'type': 'region',
         'bounds': self.nav_drawer_scrim,
         'sensitivity': 0,
-        'callbacks': {'execute': self._hide_nav_drawer},
+        'callbacks': {'execute': self.hide_nav_drawer},
       },
     ]
 
-  def _open_nav_drawer(self, e=None):
+  #!defMethod(_)!2: "Open the navigation drawer." ["open_nav_drawer"]
+  def open_nav_drawer(self, e=None):
+    window.clearTimeout(self.zero_width_timeout)
+    window.clearTimeout(self.shown_timeout)
     self.nav_drawer.style.width = '360px'
     self.nav_drawer.style.left = "0px"
     self.nav_drawer.classList.add('anvil-m3-shown')
     self.nav_drawer_scrim.animate(
       [{'opacity': '0'}, {'opacity': '1'}], {'duration': 250, 'iterations': 1}
     )
-
-  def _hide_nav_drawer(self, e=None):
+  
+  #!defMethod(_)!2: "Hide the navigation drawer." ["hide_nav_drawer"]
+  def hide_nav_drawer(self, e=None):
     self.nav_drawer.style.left = "-101%"
     animation = self.nav_drawer_scrim.animate(
       [{'opacity': '1'}, {'opacity': '0'}], {'duration': 250, 'iterations': 1}
+    )
+    self.zero_width_timeout = window.setTimeout(
+      lambda: self.nav_drawer.style.setProperty('width', '0px'), 250
+    )
+    self.shown_timeout = window.setTimeout(
+      lambda: self.nav_drawer.classList.remove('anvil-m3-shown'), 245
     )
 
     def on_finished(e):
