@@ -15,6 +15,7 @@ from ..._utils.properties import (
   italic_property,
   role_property,
   spacing_property,
+  simple_prop,
   style_property,
   tooltip_property,
   underline_property,
@@ -156,12 +157,14 @@ class FileLoader(FileLoaderTemplate):
   spacing = spacing_property('anvil-m3-fileloader-container')
   tooltip = tooltip_property('anvil-m3-fileloader-container')
   role = role_property('anvil-m3-fileloader-container')
-  show_state = anvil_prop("show_state")
-  file = anvil_prop("file")
-  files = anvil_prop("files")
+  show_state = simple_prop("show_state")
+  file = simple_prop("file")
+  files = simple_prop("files")
 
   @anvil_prop
-  def appearance(self, value):
+  @property
+  def appearance(self, value) -> str:
+    """A predefined style for this component."""
     file_loader = self.dom_nodes['anvil-m3-fileloader-container']
     file_loader.classList.remove('anvil-m3-elevated')
     file_loader.classList.remove('anvil-m3-filled')
@@ -171,7 +174,9 @@ class FileLoader(FileLoaderTemplate):
       file_loader.classList.add(f"anvil-m3-{value}")
 
   @anvil_prop(default_value="mi:file_upload")
-  def icon(self, value):
+  @property
+  def icon(self, value) -> str:
+    """The icon to display on this component."""
     if value:
       self.dom_nodes['anvil-m3-fileloader-icon'].style.marginRight = "8px"
     else:
@@ -179,11 +184,15 @@ class FileLoader(FileLoaderTemplate):
     self.dom_nodes['anvil-m3-fileloader-icon'].innerText = value[3:]
 
   @anvil_prop
-  def file_types(self, value):
+  @property
+  def file_types(self, value) -> str:
+    """Specify what type of file to upload. Can accept a MIME type (eg 'image/png' or 'image/*'), an extension (eg '.png'), or a comma-separated set of them (eg '.png,.jpg,.jpeg')."""
     self.dom_nodes['anvil-m3-fileloader-input'].accept = value
 
   @anvil_prop
-  def multiple(self, value):
+  @property
+  def multiple(self, value) -> bool:
+    """If True, this FileLoader can load multiple files at the same time."""
     self.dom_nodes['anvil-m3-fileloader-input'].multiple = value
 
 

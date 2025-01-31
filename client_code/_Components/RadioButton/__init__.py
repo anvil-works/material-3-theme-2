@@ -15,6 +15,7 @@ from ..._utils.properties import (
   inline_editing,
   italic_property,
   role_property,
+  simple_prop,
   spacing_property,
   style_property,
   theme_color_to_css,
@@ -85,7 +86,7 @@ class RadioButton(RadioButtonTemplate):
   # Properties
   enabled = enabled_property('anvil-m3-radiobutton-input')
   visible = HtmlTemplate.visible
-  value = anvil_prop('value')
+  value = simple_prop('value')
   underline = underline_property('anvil-m3-radiobutton-label')
   italic = italic_property('anvil-m3-radiobutton-label')
   bold = bold_property('anvil-m3-radiobutton-label')
@@ -105,12 +106,16 @@ class RadioButton(RadioButtonTemplate):
     self.dom_nodes['anvil-m3-radiobutton-label'].innerText = value
 
   @anvil_prop
-  def text(self, value):
+  @property
+  def text(self, value) -> str:
+    """The text displayed on this component"""
     self._set_text(value)
     self._set_designer_text_placeholder()
 
   @anvil_prop
-  def radio_color(self, value):
+  @property
+  def radio_color(self, value) -> str:
+    """The color of the radio button."""
     if value:
       value = theme_color_to_css(value)
     self.dom_nodes['anvil-m3-radiobutton-checked'].style['color'] = value

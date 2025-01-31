@@ -100,7 +100,9 @@ class Heading(HeadingTemplate):
   role = role_property('anvil-m3-heading-container')
 
   @anvil_prop
-  def align(self, value):
+  @property
+  def align(self, value) -> str:
+    """The position of this component in the available space."""
     if value == 'justify':
       self.dom_nodes['anvil-m3-heading-container'].style.justifyContent = 'left'
     else:
@@ -108,7 +110,9 @@ class Heading(HeadingTemplate):
     self.dom_nodes['anvil-m3-heading-container'].style.textAlign = value
 
   @anvil_prop
-  def font_size(self, value):
+  @property
+  def font_size(self, value) -> int:
+    """The font size of text displayed on this component."""
     if value:
       self.dom_nodes['anvil-m3-heading-display'].style.fontSize = f'{value}px'
       self.dom_nodes['anvil-m3-heading-headline'].style.fontSize = f'{value}px'
@@ -121,13 +125,17 @@ class Heading(HeadingTemplate):
       self.dom_nodes['anvil-m3-heading-container'].style.fontSize = ''
 
   @anvil_prop
-  def icon_size(self, value):
+  @property
+  def icon_size(self, value) -> float:
+    """The size (pixels) of the icon displayed on this component."""
     if value:
       value = f'{value}px'
     self.dom_nodes['anvil-m3-heading-icon'].style.fontSize = value
 
   @anvil_prop
-  def underline(self, value):
+  @property
+  def underline(self, value) -> bool:
+    """If True, this component’s text will be underlined."""
     if value:
       self.dom_nodes['anvil-m3-heading-display'].style.textDecoration = 'underline'
       self.dom_nodes['anvil-m3-heading-headline'].style.textDecoration = 'underline'
@@ -138,7 +146,9 @@ class Heading(HeadingTemplate):
       self.dom_nodes['anvil-m3-heading-title'].style.textDecoration = 'none'
 
   @anvil_prop
-  def bold(self, value):
+  @property
+  def bold(self, value) -> bool:
+    """If True, this component’s text will be bold."""
     if value:
       self.dom_nodes['anvil-m3-heading-display'].style.fontWeight = 'bold'
       self.dom_nodes['anvil-m3-heading-headline'].style.fontWeight = 'bold'
@@ -149,12 +159,16 @@ class Heading(HeadingTemplate):
       self.dom_nodes['anvil-m3-heading-title'].style.fontWeight = 'normal'
 
   @anvil_prop
-  def text(self, value):
+  @property
+  def text(self, value) -> str:
+    """The text displayed on this component"""
     self._set_text(value)
     self._set_designer_text_placeholder()
 
   @anvil_prop
-  def icon(self, value):
+  @property
+  def icon(self, value) -> str:
+    """The icon to display on this component."""
     if value:
       self.dom_nodes['anvil-m3-heading-icon'].style.marginRight = "8px"
     else:
@@ -162,7 +176,9 @@ class Heading(HeadingTemplate):
     self.dom_nodes['anvil-m3-heading-icon'].innerText = value[3:]
 
   @anvil_prop
-  def style(self, value):
+  @property
+  def style(self, value) -> str:
+    """Role of the heading component: display, headline or title."""
     display = self.dom_nodes['anvil-m3-heading-display']
     headline = self.dom_nodes['anvil-m3-heading-headline']
     title = self.dom_nodes['anvil-m3-heading-title']
@@ -186,6 +202,7 @@ class Heading(HeadingTemplate):
       title.style.display = 'block'
 
   @anvil_prop
+  @property
   def scale(self, value):
     self.dom_nodes['anvil-m3-heading-display'].classList.remove(
       'anvil-m3-heading-large', 'anvil-m3-heading-medium', 'anvil-m3-heading-small'
@@ -211,10 +228,12 @@ class Heading(HeadingTemplate):
     )
 
   @anvil_prop
+  @property
   def spacing(self, value):
     set_element_spacing(self.dom_nodes['anvil-m3-heading-container'], value)
 
   @anvil_prop
+  @property
   def line_height(self, value):
     self.dom_nodes['anvil-m3-heading-display'].style.lineHeight = value
     self.dom_nodes['anvil-m3-heading-headline'].style.lineHeight = value

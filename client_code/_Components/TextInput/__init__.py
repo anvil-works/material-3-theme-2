@@ -91,9 +91,7 @@ class TextInput(TextInputTemplate):
   label_color = color_property('anvil-m3-label-text', 'color', 'label_color')
   margin = margin_property('anvil-m3-textinput')
   tooltip = tooltip_property('anvil-m3-textinput')
-  subcontent_color = color_property(
-    'anvil-m3-subcontent', 'color', 'subcontent_color'
-  )
+  subcontent_color = color_property('anvil-m3-subcontent', 'color', 'subcontent_color')
   subcontent_font_family = font_family_property(
     'anvil-m3-subcontent', 'subcontent_font_family'
   )
@@ -102,6 +100,7 @@ class TextInput(TextInputTemplate):
   )
 
   @anvil_prop
+  @property
   def appearance(self, value):
     if value == 'outlined':
       self.dom_nodes['anvil-m3-textinput'].classList.toggle('outlined', True)
@@ -109,6 +108,7 @@ class TextInput(TextInputTemplate):
       self.dom_nodes['anvil-m3-textinput'].classList.toggle('outlined', False)
 
   @anvil_prop
+  @property
   def supporting_text(self, value):
     self.dom_nodes['anvil-m3-supporting-text'].innerHTML = value
 
@@ -122,6 +122,7 @@ class TextInput(TextInputTemplate):
   error = property_with_callback('error', _set_error)
 
   @anvil_prop
+  @property
   def border_color(self, value):
     if self.border_color:
       self.dom_nodes["anvil-m3-textinput"].style.setProperty(

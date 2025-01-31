@@ -73,11 +73,15 @@ class IconButton(IconButtonTemplate):
   tooltip = tooltip_property('anvil-m3-iconbutton-component')
 
   @anvil_prop
-  def icon(self, value):
+  @property
+  def icon(self, value) -> str:
+    """The icon to display on this component."""
     self.dom_nodes['anvil-m3-iconbutton-icon'].innerText = value[3:]
 
   @anvil_prop
-  def appearance(self, value):
+  @property
+  def appearance(self, value) -> str:
+    """A predefined style for this component."""
     self.dom_nodes['anvil-m3-iconbutton-container'].classList.toggle(
       "anvil-m3-filled", False
     )

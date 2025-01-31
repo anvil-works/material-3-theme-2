@@ -137,7 +137,9 @@ class Button(ButtonTemplate):
   visible = HtmlTemplate.visible
 
   @anvil_prop
-  def align(self, value):
+  @property
+  def align(self, value) -> str:
+    """The position of this component in the available space."""
     self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', False)
     if value == 'full':
       self.dom_nodes['anvil-m3-button'].classList.toggle('anvil-m3-full-width', True)
@@ -145,20 +147,26 @@ class Button(ButtonTemplate):
       self.dom_nodes['anvil-m3-button-component'].style.justifyContent = value
 
   @anvil_prop
-  def icon_align(self, value):
+  @property
+  def icon_align(self, value) -> str:
+    """The alignment of the icon on this component."""
     self.dom_nodes['anvil-m3-button'].classList.toggle(
       'anvil-m3-right-icon', value == 'right'
     )
 
   @anvil_prop
-  def enabled(self, value):
+  @property
+  def enabled(self, value) -> bool:
+    """If True, this component allows user interaction."""
     if value:
       self.dom_nodes['anvil-m3-button'].removeAttribute("disabled")
     else:
       self.dom_nodes['anvil-m3-button'].setAttribute("disabled", " ")
 
   @anvil_prop
-  def appearance(self, value):
+  @property
+  def appearance(self, value) -> str:
+    """A predefined style for this component."""
     button = self.dom_nodes['anvil-m3-button']
     button.classList.remove('anvil-m3-elevated')
     button.classList.remove('anvil-m3-filled')

@@ -34,13 +34,17 @@ class Card(CardTemplate):
     self.dom_nodes['content'].classList.toggle(f'anvil-m3-{appearance}', val)
 
   @anvil_prop
-  def appearance(self, value):
+  @property
+  def appearance(self, value) -> str:
+    """A predefined style for this component."""
     for appearance in ['outlined', 'filled', 'elevated']:
       self._set_class_of_nodes(appearance, False)
     self._set_class_of_nodes(value, True)
 
   @anvil_prop
-  def orientation(self, value):
+  @property
+  def orientation(self, value) -> str:
+    """The orientation of the content in this Card"""
     for c in ['anvil-m3-card-direction-column', 'anvil-m3-card-direction-row']:
       self.dom_nodes['anvil-m3-card'].classList.remove(c)
     self.dom_nodes['anvil-m3-card'].classList.add(f'anvil-m3-card-direction-{value}')

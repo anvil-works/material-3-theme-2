@@ -36,7 +36,9 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
   role = role_property('anvil-m3-progressindicator')
 
   @anvil_prop
-  def color(self, value):
+  @property
+  def color(self, value) -> str:
+    """The colour of the progress bar"""
     if value:
       value = theme_color_to_css(value)
     self.dom_nodes['anvil-m3-progressindicator-arc'].style['stroke'] = value
@@ -45,7 +47,9 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
     )
 
   @anvil_prop
-  def type(self, value):
+  @property
+  def type(self, value) -> str:
+    """Display a determinate or indeterminate progress indicator. Use determinate to set the progress with the progress property. Use indeterminate to express an unspecified amount of wait time."""
     v = value == "determinate"
     self.dom_nodes['anvil-m3-progressindicator-indeterminate'].classList.toggle(
       'anvil-m3-progressindicator-hidden', v
@@ -55,7 +59,9 @@ class CircularProgressIndicator(CircularProgressIndicatorTemplate):
     )
 
   @anvil_prop
-  def progress(self, value):
+  @property
+  def progress(self, value) -> float:
+    """The progress of the CircularProgressIndicator."""
     v = max(min(value or 0, 100), 0)
     self._draw_path(v)
 

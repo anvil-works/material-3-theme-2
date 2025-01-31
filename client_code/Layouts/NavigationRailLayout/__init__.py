@@ -123,19 +123,25 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
   content_padding = padding_property('anvil-m3-content')
 
   @anvil_prop
-  def background_color(self, value):
+  @property
+  def background_color(self, value) -> str:
+    """The background color of Forms using this Layout."""
     if value:
       value = theme_color_to_css(value)
     window.document.body.style.backgroundColor = value
 
   @anvil_prop
-  def text_color(self, value):
+  @property
+  def text_color(self, value) -> str:
+    """The default color of the text on Forms using this Layout."""
     if value:
       value = theme_color_to_css(value)
     window.document.body.style.color = value
 
   @anvil_prop
-  def navigation_rail_collapse_to(self, value):
+  @property
+  def navigation_rail_collapse_to(self, value) -> str:
+    """The way the side navigation will collapse on mobile."""
     value = value.lower().replace('_', '-')
     for c in ['anvil-m3-bottom-app-bar', 'anvil-m3-modal-navigation-drawer']:
       self.nav_rail.classList.remove(c)
@@ -144,7 +150,9 @@ class NavigationRailLayout(NavigationRailLayoutTemplate):
     self.content.classList.add(f"anvil-m3-{value}")
 
   @anvil_prop
-  def navigation_rail_vertical_align(self, value):
+  @property
+  def navigation_rail_vertical_align(self, value) -> str:
+    """The vertical position of the content in the navigation rail."""
     value = value.lower()
     for c in ['anvil-m3-align-top', 'anvil-m3-align-center', 'anvil-m3-align-bottom']:
       self.nav_rail.classList.remove(c)

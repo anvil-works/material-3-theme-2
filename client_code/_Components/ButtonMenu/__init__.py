@@ -98,7 +98,9 @@ class ButtonMenu(ButtonMenuTemplate):
   visible = HtmlTemplate.visible
 
   @anvil_prop
-  def text(self, value):
+  @property
+  def text(self, value) -> str:
+    """The text displayed on the Button"""
     v = value
     self.menu_button.dom_nodes['anvil-m3-button-text'].classList.toggle(
       'anvil-m3-textlessComponentText', False
@@ -111,67 +113,99 @@ class ButtonMenu(ButtonMenuTemplate):
     self.menu_button.text = v
 
   @anvil_prop
-  def appearance(self, value):
+  @property
+  def appearance(self, value) -> str:
+    """A predefined style for the Button."""
     self.menu_button.appearance = value
 
   @anvil_prop
-  def tooltip(self, value):
+  @property
+  def tooltip(self, value) -> str:
+    """The text to display when the mouse is hovered over this component."""
     self.menu_button.tooltip = value
 
   @anvil_prop
-  def enabled(self, value):
+  @property
+  def enabled(self, value) -> bool:
+    """If True, this component allows user interaction."""
     self.menu_button.enabled = value
 
   @anvil_prop
-  def bold(self, value):
+  @property
+  def bold(self, value) -> bool:
+    """If True, the Button’s text will be bold."""
     self.menu_button.bold = value
 
   @anvil_prop
-  def italic(self, value):
+  @property
+  def italic(self, value) -> bool:
+    """If True, the Button’s text will be italic."""
     self.menu_button.italic = value
 
   @anvil_prop
-  def underline(self, value):
+  @property
+  def underline(self, value) -> bool:
+    """If True, the Button’s text will be underlined."""
     self.menu_button.underline = value
 
   @anvil_prop
-  def button_border(self, value):
+  @property
+  def button_border(self, value) -> str:
+    """The border of the Button. Can take any valid CSS border value."""
     self.menu_button.border = value
 
   @anvil_prop
-  def button_background_color(self, value):
+  @property
+  def button_background_color(self, value) -> str:
+    """The colour of the background of the Button."""
     self.menu_button.background_color = value
 
   @anvil_prop
-  def button_text_color(self, value):
+  @property
+  def button_text_color(self, value) -> str:
+    """The colour of the text on the Button."""
     self.menu_button.text_color = value
 
   @anvil_prop
-  def button_font_size(self, value):
+  @property
+  def button_font_size(self, value) -> int:
+    """The font size of the text displayed on the Button."""
     self.menu_button.font_size = value
 
   @anvil_prop
-  def icon(self, value):
+  @property
+  def icon(self, value) -> str:
+    """The icon to display on the Button."""
     self.menu_button.icon = value
 
   @anvil_prop
-  def icon_color(self, value):
+  @property
+  def icon_color(self, value) -> str:
+    """The colour of the icon displayed on the Button."""
     self.menu_button.icon_color = value
 
   @anvil_prop
-  def icon_size(self, value):
+  @property
+  def icon_size(self, value) -> int:
+    """The size (pixels) of the icon displayed on this component."""
     self.menu_button.icon_size = value
 
   @anvil_prop
-  def icon_position(self, value):
+  @property
+  def icon_position(self, value) -> str:
+    """The alignment of the icon on this component."""
     self.menu_button.icon_position = value
 
   @anvil_prop
-  def spacing(self, value):
+  @property
+  def spacing(self, value) -> list:
+    """The margin and padding (pixels) of the component."""
     self.menu_button.spacing = value
 
   @anvil_prop
-  def align(self, value):
+  @property
+  def align(self, value) -> str:
+    """The position of this component in the available space."""
     self.menu_button.dom_nodes['anvil-m3-button'].classList.toggle(
       'anvil-m3-full-width', False
     )
@@ -189,15 +223,21 @@ class ButtonMenu(ButtonMenuTemplate):
     self._setup_fui()
 
   @anvil_prop
-  def button_font_family(self, value):
+  @property
+  def button_font_family(self, value) -> str:
+    """The font family to use for the Button"""
     self.menu_button.font_family = value
 
   @anvil_prop
-  def role(self, value):
+  @property
+  def role(self, value) -> str:
+    """A style for this component defined in CSS and added to Roles"""
     self.menu_button.role = value
 
   @anvil_prop
-  def menu_items(self, value=[]):
+  @property
+  def menu_items(self, value=[]) -> list:
+    """A list of components to be added to the menu."""
     for i in value:
       self.add_component(i, slot='anvil-m3-buttonMenu-slot')
 

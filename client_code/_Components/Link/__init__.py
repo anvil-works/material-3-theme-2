@@ -117,12 +117,16 @@ class Link(LinkTemplate):
   )
 
   @anvil_prop(default_value='left')
-  def align(self, value):
+  @property
+  def align(self, value) -> str:
+    """The position of this component in the available space."""
     self.dom_nodes['anvil-m3-link'].style.textAlign = value
     self.dom_nodes['anvil-m3-link-icon-container'].style.justifyContent = value
 
   @anvil_prop
-  def url(self, value):
+  @property
+  def url(self, value) -> str:
+    """TThe target URL of the link. Can be set to a URL string or to a Media object."""
     self.dom_nodes['anvil-m3-link'].removeAttribute("download")
     self.dom_nodes['anvil-m3-link'].removeAttribute("target")
     self._revoke_tmp_url()
@@ -139,13 +143,17 @@ class Link(LinkTemplate):
       self.dom_nodes['anvil-m3-link'].href = 'javascript:void(0)'
 
   @anvil_prop
-  def icon_size(self, value):
+  @property
+  def icon_size(self, value) -> str:
+    """The icon to display on this component."""
     if value:
       value = f'{value}px'
     self.dom_nodes['anvil-m3-link-icon'].style.fontSize = value
 
   @anvil_prop
-  def icon(self, value):
+  @property
+  def icon(self, value) -> str:
+    """The icon to display on this component."""
     if value and self.text:
       self.dom_nodes['anvil-m3-link-icon'].style.marginRight = "8px"
     else:
@@ -161,7 +169,9 @@ class Link(LinkTemplate):
       self.dom_nodes['anvil-m3-link-text'].style.display = 'none'
 
   @anvil_prop
-  def text(self, value):
+  @property
+  def text(self, value) -> str:
+    """The text displayed on this component."""
     self._set_text(value)
     self._set_designer_text_placeholder()
 

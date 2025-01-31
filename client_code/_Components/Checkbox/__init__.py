@@ -16,6 +16,7 @@ from ..._utils.properties import (
   italic_property,
   role_property,
   spacing_property,
+  simple_prop,
   style_property,
   theme_color_to_css,
   tooltip_property,
@@ -130,10 +131,12 @@ class Checkbox(CheckboxTemplate):
   spacing = spacing_property('anvil-m3-checkbox-component')
   tooltip = tooltip_property('anvil-m3-checkbox-container')
   role = role_property('anvil-m3-checkbox-container')
-  allow_indeterminate = anvil_prop('allow_indeterminate')
+  allow_indeterminate = simple_prop('allow_indeterminate')
 
   @anvil_prop
-  def text(self, value):
+  @property
+  def text(self, value) -> str:
+    """The text displayed on this component"""
     if value:
       self.dom_nodes['anvil-m3-checkbox-label'].innerText = value
       self.dom_nodes['anvil-m3-checkbox-label'].style.display = 'block'
@@ -141,7 +144,9 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox-label'].style.display = 'none'
 
   @anvil_prop
-  def checkbox_color(self, value):
+  @property
+  def checkbox_color(self, value) -> str:
+    """The color of the checkbox."""
     if value:
       value = theme_color_to_css(value)
     self.dom_nodes['anvil-m3-checkbox-unchecked'].style.color = value
@@ -149,7 +154,9 @@ class Checkbox(CheckboxTemplate):
     self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.color = value
 
   @anvil_prop
-  def checked(self, value):
+  @property
+  def checked(self, value) -> bool:
+    """If True, the checkbox is checked."""
     if value is None and self.allow_indeterminate:
       self.dom_nodes['anvil-m3-checkbox'].indeterminate = True
       self.dom_nodes['anvil-m3-checkbox-unchecked'].style.display = 'none'
@@ -167,7 +174,9 @@ class Checkbox(CheckboxTemplate):
       self.dom_nodes['anvil-m3-checkbox-indeterminate'].style.display = 'none'
 
   @anvil_prop
-  def error(self, value):
+  @property
+  def error(self, value) -> bool:
+    """If True, the checkbox is in an error state."""
     self.dom_nodes['anvil-m3-checkbox-container'].classList.remove(
       'anvil-m3-checkbox-error'
     )

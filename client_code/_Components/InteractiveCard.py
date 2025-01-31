@@ -29,7 +29,9 @@ class InteractiveCard(Card):
     self.dom_nodes['anvil-m3-card'].addEventListener("click", self._handle_click)
 
   @anvil_prop
-  def enabled(self, value):
+  @property
+  def enabled(self, value) -> bool:
+    """If True, this component allows user interaction."""
     self.dom_nodes['anvil-m3-card'].classList.toggle('anvil-m3-disabled', not value)
 
   def _handle_click(self, event):
