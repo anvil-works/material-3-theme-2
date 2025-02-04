@@ -972,11 +972,13 @@ th.month select.monthselect::after {
 .anvil-data-grid .anvil-data-grid-child-panel .anvil-data-row-panel div.anvil-data-row-col:not(.anvil-extra-column) {
   border-right: 1px solid %color:Outline Variant%;
   border-bottom: 1px solid %color:Outline Variant%;
+  padding: 16px 24px;
 }
 
 .anvil-data-grid .anvil-data-grid-child-panel .anvil-design-data-row-panel div.anvil-data-row-col:not(.anvil-extra-column) {
   border-right: 1px solid %color:Outline Variant%;
   border-bottom: 1px solid %color:Outline Variant%;
+  padding: 16px 24px;
 }
 
 .anvil-data-grid .anvil-data-grid-child-panel .anvil-data-row-panel div.anvil-data-row-col:not(.anvil-extra-column) > * {
