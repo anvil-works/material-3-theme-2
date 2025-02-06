@@ -1,3 +1,22 @@
+## Version 1.2.2
+_Release date: 6 February 2025_
+
+**Updates**
+* The NavigationDrawerLayout now has methods to open and close the navigation drawer from code
+* The modal navigation drawer now has a `max-width` so it will never take up the whole screen, making it difficult to close 
+
+**Fixes**
+* Fixed an issue where clicking the Dropdown icon could cause the space bar to open and close the menu even when the Dropdown doesn't have focus
+* Fixed an AttributeError when autofilling TextBoxes and TextAreas
+* The bottom app bar on mobile layouts no longer overlays the content on the page
+* Fixed a styling issue with Notifications
+* The ButtonMenu now works in the old M3 navigation drawer
+* Fixed an issue with importing the TextArea and TextBox components
+* Fixed the sliding animation on the NavigationDrawerLayout's navigation drawer
+* Fixed a styling issue with the borders of DataRowPanels when added to a DataGrid
+* The RadioButton no longer squishes when there is a lot of label text
+* Fixed an issue where the autocompleter considered properties to be methods
+
 ## Version 1.2.1
 _Release date: 19 November 2024_
 
