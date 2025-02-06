@@ -154,13 +154,17 @@ class NavigationDrawerLayout(NavigationDrawerLayoutTemplate):
   )
 
   @anvil_prop
-  def background_color(self, value):
+  @property
+  def background_color(self, value) -> str:
+    """The background color of Forms using this Layout."""
     if value:
       value = theme_color_to_css(value)
     window.document.body.style.backgroundColor = value
 
   @anvil_prop
-  def text_color(self, value):
+  @property
+  def text_color(self, value) -> str:
+    """The default color of the text on Forms using this Layout."""
     if value:
       value = theme_color_to_css(value)
     window.document.body.style.color = value

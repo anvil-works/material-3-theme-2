@@ -130,7 +130,9 @@ class TextArea(TextInput):
   align = style_property('anvil-m3-textarea', 'textAlign', 'align')
 
   @anvil_prop
-  def placeholder(self, value):
+  @property
+  def placeholder(self, value) -> str:
+    """The text to be displayed when the component is empty"""
     input = self.dom_nodes['anvil-m3-textarea']
     if value:
       input.placeholder = value
@@ -140,7 +142,9 @@ class TextArea(TextInput):
       input.classList.remove('anvil-m3-has-placeholder')
 
   @anvil_prop
-  def label(self, value):
+  @property
+  def label(self, value) -> str:
+    """The label text of the component."""
     self.dom_nodes['anvil-m3-label-text'].innerText = value or ""
     if value:
       self.dom_nodes['anvil-m3-textarea'].classList.toggle('has_label_text', True)
@@ -158,7 +162,9 @@ class TextArea(TextInput):
     self.dom_nodes['anvil-m3-textarea'].value = value
 
   @anvil_prop
-  def enabled(self, value):
+  @property
+  def enabled(self, value) -> bool:
+    """If True, this component allows user interaction."""
     supporting_text = self.dom_nodes['anvil-m3-subcontent']
     if value:
       self.dom_nodes['anvil-m3-textarea'].removeAttribute("disabled")
@@ -176,7 +182,9 @@ class TextArea(TextInput):
     self._set_height(value)
 
   @anvil_prop
-  def character_limit(self, value):
+  @property
+  def character_limit(self, value) -> float:
+    """The max number of characters a user can enter into this component. The limit is displayed below the component."""
     if value is None or value < 1:
       text_area_input = self.dom_nodes['anvil-m3-textarea'].removeAttribute("maxlength")
       self.dom_nodes['anvil-m3-character-counter'].style = "display: none"

@@ -11,7 +11,7 @@ from ..._utils.properties import (
   italic_property,
   property_with_callback,
   underline_property,
-  style_property
+  style_property,
 )
 from . import TextInput
 
@@ -197,7 +197,9 @@ class TextBox(TextInput):
   )
 
   @anvil_prop
-  def placeholder(self, value):
+  @property
+  def placeholder(self, value) -> str:
+    """The text to be displayed when the component is empty"""
     input = self.dom_nodes['anvil-m3-textbox']
     if value:
       input.placeholder = value
@@ -218,7 +220,9 @@ class TextBox(TextInput):
     self.dom_nodes['anvil-m3-textbox'].value = value
 
   @anvil_prop
-  def label(self, value):
+  @property
+  def label(self, value) -> str:
+    """The label text of the component."""
     self.dom_nodes['anvil-m3-label-text'].innerText = value or ""
     if value:
       self.dom_nodes['anvil-m3-textbox'].classList.toggle('has_label_text', True)
@@ -228,7 +232,9 @@ class TextBox(TextInput):
       )
 
   @anvil_prop
-  def enabled(self, value):
+  @property
+  def enabled(self, value) -> bool:
+    """If True, this component allows user interaction."""
     supporting_text = self.dom_nodes['anvil-m3-subcontent']
     trailing_icon = self.dom_nodes['anvil-m3-trailing-icon']
     if value:
@@ -241,7 +247,9 @@ class TextBox(TextInput):
       trailing_icon.classList.add("anvil-m3-disable-icon")
 
   @anvil_prop
-  def error(self, value):
+  @property
+  def error(self, value) -> bool:
+    """If True, this component is in an error state."""
     super()._set_error(value)
     if value:
       icon = "mi:error"
@@ -253,7 +261,9 @@ class TextBox(TextInput):
       self.dom_nodes["anvil-m3-trailing-icon"].classList.remove("anvil-m3-error-icon")
 
   @anvil_prop
-  def leading_icon(self, value):
+  @property
+  def leading_icon(self, value) -> str:
+    """The leading icon to display on this component."""
     icon_container = self.dom_nodes['anvil-m3-icon-container']
     leading_icon = self.dom_nodes['anvil-m3-leading-icon']
     text_box_input = self.dom_nodes['anvil-m3-textbox']
@@ -286,7 +296,9 @@ class TextBox(TextInput):
   trailing_icon = property_with_callback('trailing_icon', _set_trailing_icon)
 
   @anvil_prop
-  def character_limit(self, value):
+  @property
+  def character_limit(self, value) -> float:
+    """The max number of characters a user can enter into this component. The limit is displayed below the component."""
     if value is None or value < 1:
       text_box_input = self.dom_nodes['anvil-m3-textbox'].removeAttribute("maxlength")
       self.dom_nodes['anvil-m3-character-counter'].style = "display: none"
@@ -298,11 +310,15 @@ class TextBox(TextInput):
       self.dom_nodes['anvil-m3-character-limit'].innerText = int(value)
 
   @anvil_prop
-  def type(self, value):
+  @property
+  def type(self, value) -> str:
+    """The type of data that the user can enter into this box."""
     self.dom_nodes['anvil-m3-textbox'].setAttribute("type", value)
 
   @anvil_prop
-  def hide_text(self, value):
+  @property
+  def hide_text(self, value) -> bool:
+    """If True, display stars instead of text when the user types input into this component."""
     self.dom_nodes['anvil-m3-textbox'].setAttribute(
       "type", "password" if value else self.type
     )

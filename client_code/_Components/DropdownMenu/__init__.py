@@ -301,115 +301,168 @@ class DropdownMenu(DropdownMenuTemplate):
   margin = margin_property('anvil-m3-dropdownMenu-textbox')
 
   @anvil_prop
-  def allow_none(self, value):
+  @property
+  def allow_none(self, value) -> bool:
+    """If True, a placeholder item is added to the menu with value None"""
     self._recreate_items()
 
   @anvil_prop
-  def background_color(self, value):
+  @property
+  def background_color(self, value) -> str:
+    """The colour of the background of this component."""
     self.selection_field.background_color = value
 
   @anvil_prop
-  def label_bold(self, value):
+  @property
+  def label_bold(self, value) -> bool:
+    """If True, the label text will be bold."""
     self.selection_field.label_bold = value
 
   @anvil_prop
-  def label_font(self, value):
+  @property
+  def label_font(self, value) -> str:
+    """The label text of the component."""
     self.selection_field.label_font = value
 
   @anvil_prop
-  def label_font_size(self, value):
+  @property
+  def label_font_size(self, value) -> float:
+    """The font size of the label text on this component."""
     self.selection_field.label_font_size = value
 
   @anvil_prop
-  def label_color(self, value):
+  @property
+  def label_color(self, value) -> str:
+    """The colour of the label text on the component."""
     self.selection_field.label_color = value
 
   @anvil_prop
-  def label_italic(self, value):
+  @property
+  def label_italic(self, value) -> bool:
+    """If True, the label text will be italic."""
     self.selection_field.label_italic = value
 
   @anvil_prop
-  def label_underline(self, value):
+  @property
+  def label_underline(self, value) -> bool:
+    """If True, the label text will be underlined."""
     self.selection_field.label_underline = value
 
   @anvil_prop
-  def enabled(self, value):
+  @property
+  def enabled(self, value) -> bool:
+    """If True, this component allows user interaction."""
     self.selection_field.enabled = value
 
   @anvil_prop
-  def appearance(self, value):
+  @property
+  def appearance(self, value) -> str:
+    """A predefined style for this component."""
     self.selection_field.appearance = value
-  
+
   @anvil_prop
-  def align(self, value):
+  @property
+  def align(self, value) -> str:
+    """The position of this component in the available space."""
     self.selection_field.align = value
 
   @anvil_prop
-  def role(self, value):
+  @property
+  def role(self, value) -> str:
+    """A style for this component defined in CSS and added to Roles"""
     self.selection_field.role = value
 
   @anvil_prop
-  def selected_italic(self, value):
+  @property
+  def selected_italic(self, value) -> bool:
+    """If True and there is a selected item, the displayed text in italic."""
     self.selection_field.display_italic = value
 
   @anvil_prop
-  def selected_bold(self, value):
+  @property
+  def selected_bold(self, value) -> bool:
+    """If True and there is a selected item, the displayed text is bold."""
     self.selection_field.display_bold = value
 
   @anvil_prop
-  def selected_underline(self, value):
+  @property
+  def selected_underline(self, value) -> bool:
+    """If True and there is a selected item, the displayed text is underlined"""
     self.selection_field.display_underline = value
 
   @anvil_prop
+  @property
   def selected_font(self, value):
     self.selection_field.selected_font = value
 
   @anvil_prop
-  def selected_font_size(self, value):
+  @property
+  def selected_font_size(self, value) -> int:
+    """The font size (pixels) of the displayed text if there is a selected item."""
     self.selection_field.selected_font_size = value
 
   @anvil_prop
-  def selected_text_color(self, value):
+  @property
+  def selected_text_color(self, value) -> str:
+    """The colour of the displayed text if there is a selected item."""
     self.selection_field.selected_text_color = value
 
   @anvil_prop
-  def icon(self, value):
+  @property
+  def icon(self, value) -> str:
     self.selection_field.leading_icon = value
 
   @anvil_prop
-  def icon_color(self, value):
+  @property
+  def icon_color(self, value) -> str:
     self.selection_field.leading_icon_color = value
 
   @anvil_prop
-  def tooltip(self, value):
+  @property
+  def tooltip(self, value) -> str:
+    """The text to display when the mouse is hovered over this component."""
     self.selection_field.tooltip = value
 
   @anvil_prop
-  def supporting_text(self, value):
+  @property
+  def supporting_text(self, value) -> str:
+    """The supporting text displayed below this component"""
     self.selection_field.supporting_text = value
 
   @anvil_prop
-  def supporting_text_color(self, value):
+  @property
+  def supporting_text_color(self, value) -> str:
+    """The colour of the supporting text below this component."""
     self.selection_field.subcontent_color = value
 
   @anvil_prop
-  def supporting_text_font_family(self, value):
+  @property
+  def supporting_text_font_family(self, value) -> str:
+    """The font family to use for the supporting text below this component."""
     self.selection_field.subcontent_font_family = value
 
   @anvil_prop
-  def supporting_text_font_size(self, value):
+  @property
+  def supporting_text_font_size(self, value) -> str:
+    """The font size of the supporting text displayed below this component."""
     self.selection_field.subcontent_font_size = value
 
   @anvil_prop
-  def border_color(self, value):
+  @property
+  def border_color(self, value) -> str:
+    """The colour of the border of this component."""
     self.selection_field.border_color = value
 
   @anvil_prop
-  def menu_background_color(self, value):
+  @property
+  def menu_background_color(self, value) -> str:
+    """The background color of the menu."""
     self.menu.background_color = value
 
   @anvil_prop
-  def error(self, value):
+  @property
+  def error(self, value) -> bool:
+    """If True, this component is in an error state."""
     if value:
       self.dom_nodes['anvil-m3-dropdownMenu-textbox'].classList.add(
         'anvil-m3-dropdown-error'
@@ -423,12 +476,16 @@ class DropdownMenu(DropdownMenuTemplate):
     self.selection_field.label = value
 
   @anvil_prop
-  def label(self, value):
+  @property
+  def label(self, value) -> str:
+    """The label text of the component."""
     self._set_label(value)
     self._set_designer_text_placeholder()
 
   @anvil_prop
+  @property
   def selected_value(self, value):
+    """The value of the currently selected item. Can only be set at runtime."""
     if anvil.designer.in_designer:
       return
 
@@ -443,7 +500,9 @@ class DropdownMenu(DropdownMenuTemplate):
         self.selection_field.text = ""
 
   @anvil_prop
-  def placeholder(self, value):
+  @property
+  def placeholder(self, value) -> str:
+    """The text to be displayed when the component is empty"""
     self.selection_field.placeholder = value
     self._recreate_items()
 
@@ -452,6 +511,7 @@ class DropdownMenu(DropdownMenuTemplate):
       self._create_menu_items()
 
   @anvil_prop
+  @property
   def items(self, value):
     items = value
     clean_items = self._clean_items = []
@@ -473,27 +533,39 @@ class DropdownMenu(DropdownMenuTemplate):
     self._recreate_items()
 
   @anvil_prop
-  def items_italic(self, value):
+  @property
+  def items_italic(self, value) -> bool:
+    """If True, the menu items will be italic."""
     self._recreate_items()
 
   @anvil_prop
-  def items_underline(self, value):
+  @property
+  def items_underline(self, value) -> bool:
+    """If True, the menu items will be underlined."""
     self._recreate_items()
 
   @anvil_prop
-  def items_text_color(self, value):
+  @property
+  def items_text_color(self, value) -> str:
+    """The colour of the menu items' text."""
     self._recreate_items()
 
   @anvil_prop
-  def items_bold(self, value):
+  @property
+  def items_bold(self, value) -> bool:
+    """If True, the menu items will be bold."""
     self._recreate_items()
 
   @anvil_prop
-  def items_font_family(self, value):
+  @property
+  def items_font_family(self, value) -> str:
+    """The font family to use for the menu items."""
     self._recreate_items()
 
   @anvil_prop
-  def items_font_size(self, value):
+  @property
+  def items_font_size(self, value) -> int:
+    """The font size of the menu items."""
     self._recreate_items()
 
   #!componentProp(m3.DropdownMenu)!1: {name:"align",type:"enum",options:["left", "right", "center"],description:"The position of this component in the available space."}

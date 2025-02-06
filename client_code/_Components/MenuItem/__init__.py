@@ -54,11 +54,15 @@ class MenuItem(MenuItemTemplate):
   tooltip = tooltip_property('anvil-m3-menuItem-container')
 
   @anvil_prop
-  def text(self, value):
+  @property
+  def text(self, value) -> str:
+    """The text displayed on this component."""
     self.dom_nodes['anvil-m3-menuItem-labelText'].innerText = value
 
   @anvil_prop
-  def leading_icon(self, value):
+  @property
+  def leading_icon(self, value) -> str:
+    """The icon to display on this component."""
     self.dom_nodes["anvil-m3-menuItem-leadingIcon"].innerHTML = value[3:] or " "
     if value:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add(
@@ -70,15 +74,21 @@ class MenuItem(MenuItemTemplate):
       )
 
   @anvil_prop
-  def trailing_icon(self, value):
+  @property
+  def trailing_icon(self, value) -> str:
+    """The icon to display on this component."""
     self.dom_nodes["anvil-m3-menuItem-trailingIcon"].innerText = value[3:]
 
   @anvil_prop
-  def trailing_text(self, value):
+  @property
+  def trailing_text(self, value) -> str:
+    """The text to be displayed on the right side of the component. Will be to the left of the trailing icon if both exist."""
     self.dom_nodes["anvil-m3-menuItem-trailingText"].innerText = value
 
   @anvil_prop
-  def add_icon_space(self, value):
+  @property
+  def add_icon_space(self, value) -> bool:
+    """If True, add a space where the leading_icon would be so that this MenuItem is aligned with MenuItems with leading_icons."""
     if value:
       self.dom_nodes["anvil-m3-menuItem-leadingIcon"].classList.add(
         "anvil-m3-menuItem-showLeadingIcon"
@@ -89,7 +99,9 @@ class MenuItem(MenuItemTemplate):
       )
 
   @anvil_prop
-  def enabled(self, value):
+  @property
+  def enabled(self, value) -> bool:
+    """If True, this component allows user interaction."""
     self.dom_nodes["anvil-m3-menuItem-container"].classList.toggle(
       "anvil-m3-menuItem-disabled", not value
     )
