@@ -125,6 +125,7 @@ body {
     background: linear-gradient(0deg, %color:Primary Overlay 2%, %color:Primary Overlay 2%), %color:Background%; 
     width: 80px !important;
     height: 100%;
+    height: calc(100% - %anvil-banner-height%)
   }
 }
 
