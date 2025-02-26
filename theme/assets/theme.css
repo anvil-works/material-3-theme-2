@@ -72,6 +72,11 @@ body {
     outline-color: var(--anvil-m3-primary);
 }
 
+.anvil-m3-structure {
+  min-height: 100vh;
+  min-height: calc(100vh - %anvil-banner-height%);
+}
+
 /*NAVIGATION: RAIL, DRAWER, APP BAR*/
 @media(min-width: 980px) {
   .anvil-m3-navigation-drawer.anvil-m3-navigation-drawer-out-designer {
