@@ -91,7 +91,7 @@ body {
     position: fixed;
     overflow-y: auto;
     z-index:8;
-    top: 0;
+    /* top: 0; */
     left: 0px !important;
   }
 }
